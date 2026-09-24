@@ -1,0 +1,47 @@
+{
+  "figure_id": "Q1-FIG-01-NATURE-V2",
+  "run_id": "q1-critic-topsis-20260924-r01",
+  "model": "TOPSIS_CRITIC",
+  "input_sha256": "f7148769aac33e8e4e70662e6468f2fb7e05b85dc69901c4b2e33d2ad2b75c22",
+  "unique_records": 261086,
+  "dropped_by_plot": 0,
+  "domain_counts": {
+    "arxiv": 17523,
+    "book": 171,
+    "c4": 10000,
+    "commoncrawl": 9640,
+    "github": 203752,
+    "stackexchange": 10000,
+    "wikipedia": 10000
+  },
+  "order": [
+    "c4",
+    "commoncrawl",
+    "arxiv",
+    "stackexchange",
+    "wikipedia",
+    "book",
+    "github"
+  ],
+  "descriptive_statistics": "Unchanged from original figure",
+  "density_method": "Full-data Gaussian KDE; absolute bandwidth 1.2 score units; 400 points within observed range; each domain peak normalized",
+  "box_definition": "Q1-Q3, median, mean diamond, 1.5-IQR observed whiskers, every flier",
+  "outside_1_5_iqr_total": 6685,
+  "size_mm": [
+    183,
+    114
+  ],
+  "minimum_source_font_pt": 7,
+  "dpi": 600,
+  "clipped_labels": [],
+  "backend": "Python / matplotlib / scipy",
+  "inference": "Descriptive only; no significance, confidence intervals or intrinsic-quality claim",
+  "outputs": {
+    "density_curves.csv": "ea6e311bc6286da0c5893220f6fe90b13efa3655a4bd654f54a81489cf2aa2e9",
+    "domain_distribution_summary.csv": "45e557bf9670ee23db5e4066caa4a98a4051d15bf1b74d4d0b05d516ec44e4cd",
+    "figure01_domain_distribution_nature.pdf": "14ae3fd6b24ced7930420bf15bd6fe41dcdd1d6baf76d48210aa36a59ff17ea9",
+    "figure01_domain_distribution_nature.png": "9274412b62ef17f011c583ac99047dc0f5c2fc76484a642183476ea2a4f83ea4",
+    "figure01_domain_distribution_nature.svg": "d64414d8b6e7ff98689674d86187d8bb50e73c6f1d2f847bed79df8e6cbc68a0",
+    "figure01_domain_distribution_nature.tiff": "04f8806bafd1192d1905502128fa51834090dd379a9117c83dbc48fd56c0d1ca"
+  }
+}

@@ -28,3 +28,7 @@ latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 提交前请在 `main.tex` 中填写队伍编号、学校和三名成员信息，并根据当届组委会要求复核封面、摘要、页码、篇幅和匿名规则。论文中的数字应能追溯到 `experiments/runs/` 中的 `run_id`。
+
+## Q1 质量评价图组
+
+[六张 Nature 风格图、中文图注及 LaTeX 引图片段](figures/q1-critic-topsis/nature-v1/README.md)。图表来源、复现脚本和审核状态均已回链；当前为写作候选素材，正式纳入正文按团队验收流程处理。

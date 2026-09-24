@@ -1,0 +1,17 @@
+indicator,distance_or_sum_weight,label,weight_percent
+rps_lines_ending_with_terminal_punctution_mark,0.0890925432179,句末标点行比例,8.90925432179
+modernbert_cleanliness_expected,0.080007598098,整洁度,8.0007598098
+ad_en_no_ad_margin,0.0775297245088,无广告倾向,7.75297245088
+modernbert_readability_expected,0.0764013137202,可读性,7.64013137202
+fluency_en_fluent_margin,0.0689282534815,流畅性,6.89282534815
+rps_doc_frac_unique_words,0.0686191231695,独特词比例,6.86191231695
+qurater_educational_value,0.0637026243145,教育价值 · QuRating,6.37026243145
+qurater_writing_style,0.0629386244071,写作风格 · QuRating,6.29386244071
+fineweb_edu,0.0614866650681,教育价值 · FineWeb,6.14866650681
+rps_doc_frac_chars_top_2gram,0.0586236872542,高频二元组占比（逆向）,5.86236872542
+qurater_facts_trivia,0.058322398171,事实常识 · QuRating,5.8322398171
+rps_doc_frac_chars_top_3gram,0.0577623490024,高频三元组占比（逆向）,5.77623490024
+rps_doc_frac_no_alph_words,0.049397569275,无字母词比例（逆向）,4.9397569275
+dsir_math,0.042954075449,目标亲和度 · Math,4.2954075449
+dsir_books,0.0425636703713,目标亲和度 · Books,4.25636703713
+dsir_wiki,0.0416697804915,目标亲和度 · Wikipedia,4.16697804915

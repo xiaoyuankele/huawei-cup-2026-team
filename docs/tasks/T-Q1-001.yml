@@ -1,6 +1,9 @@
 # 问题一原始数据契约与实验治理任务卡
 task_id: T-Q1-001
 title: "问题一原始数据契约与实验治理"
+problem_id: Q1
+subproblem_id: Q1-S00
+problem_scope: "问题一整体数据与证据边界"
 status: PEER_REVIEW # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
 work_package: WP-A
 owner_actor: ACTOR-1
@@ -18,6 +21,16 @@ review:
 priority: P1
 issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/8"
 pr: "https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/3"
+announcement:
+  mode: oral
+  announced_by_actor: ACTOR-1
+  announced_at: 2026-09-23T12:00:00+08:00
+  announcement_ref: "docs/decisions/q1-data-contract.md"
+  summary: "口头发布问题一原始数据只读审计和验证角色冻结任务"
+  acknowledged_by_actor: ACTOR-1
+  acknowledged_at: 2026-09-23T12:05:00+08:00
+feedback_required: true
+feedback_ids: []
 branch: "feature/B/T-Q1-001"
 branch_owner_actor: ACTOR-1
 gate: G0

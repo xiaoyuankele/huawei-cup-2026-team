@@ -2,6 +2,35 @@
 
 失败的 AI 输出、不可复现实验、数据矛盾、证据不足和暂时无法解决的问题都是科研过程的一部分。它们使用 `feedback_id` 单独记录，不通过删除聊天或覆盖旧结论来处理。
 
+## 口头发布与题目分解
+
+任务可以在会议、语音或面对面交流中口头发布。口头发布只是启动方式，不能替代仓库记录。执行前，协调人或任务 Owner 必须在 `docs/tasks/` 创建任务卡，并填写 `problem_id`、`subproblem_id`、Owner、Reviewer、交付物、验收条件和 `announcement_ref`。接收任务的队友确认后，其他设备只依据任务卡执行。
+
+任务按题目树划分：
+
+```text
+problem_id: Q1
+└── subproblem_id: Q1-S03
+    └── task_id: T-Q1-S03-001
+```
+
+工作包、分支和 AI 工具属于执行细节，不能代替题目或子问题编号。新任务建议使用 `T-Q1-S03-001`；已有 `T-Q1-003` 等编号继续有效。
+
+## 回馈提交规则
+
+每次回馈的第一行必须写 `task_id`。如果内容涉及失败、风险、阻塞、返工、证据不足或无法判断，必须同时创建 `feedback_id`，并填写 `problem_id`、`subproblem_id`、提交人、证据、响应负责人和下一步。没有 `task_id` 的口头回馈只能作为通知，不能作为验收依据。
+
+最小回馈格式：
+
+```text
+task_id: T-Q1-S03-001
+feedback_id: FB-20260924-Q1-S03-001 | NONE
+status: CAPTURED | RESPONDED | CLOSED | BLOCKED
+summary: <脱敏的一句话反馈>
+evidence_ref: <run_id、PR、日志或文件>
+next_action: <下一步动作>
+```
+
 ## 公开边界
 
 本仓库是公开仓库。公开案例只能包含脱敏摘要、错误类型、状态、必要的输入引用和哈希。完整 AI 对话、未公开题目、原始数据片段、账号信息和内部上下文放在本地加密目录，例如 `local/ai-transcripts/`；`local/` 已加入 `.gitignore`，只保留说明文件。
