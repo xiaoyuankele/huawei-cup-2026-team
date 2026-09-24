@@ -1,0 +1,22 @@
+schema_version: q1.same-scale-protocol.v1
+task_id: T-Q1-003-MIXTURE
+status: CANDIDATE_PROTOCOL_REVIEW
+fit:
+  mixture_loss_pair: [A4, A5]
+  coordinate_basis: helmert_ilr
+  zero_replacement: multiplicative
+  zero_replacement_epsilon_candidate: 0.0001
+  model: linear_ridge
+  alpha_selection: five_fold_cv_on_A4_only
+validation:
+  same_scale_external_pair: [A6, A7]
+  cross_scale_absolute_metrics: prohibited_in_this_track
+  extrapolation_pairs: [A12, A13, A14, A15]
+report:
+  per_target_metrics: [MAE, RMSE, R2, Spearman]
+  design_diagnostics: [rank, standardized_condition_number, zero_sensitivity]
+  support_diagnostics: required
+governance:
+  candidate_not_final_model: true
+  no_optimum_mixture_claim: true
+  no_causal_domain_effect_claim: true

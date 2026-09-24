@@ -1,0 +1,21 @@
+schema_version: q1.scale-feature-table.v1
+run_id: q1-scale-feature-table-20260924-r01
+task_id: T-Q1-003-MIXTURE
+source_root: data/origin/real_attachments/A_data_value/regmix_tables
+datasets:
+  A4_A5_train_1m: {file: train_mixture_1m.csv, role: fit, scale_tokens: 1000000}
+  A6_A7_validation_1m: {file: test_mixture_1m.csv, role: validation, scale_tokens: 1000000}
+  A8_A9_validation_60m: {file: test_mixture_60m.csv, role: validation, scale_tokens: 60000000}
+  A10_A11_validation_1b: {file: test_mixture_1B.csv, role: validation, scale_tokens: 1000000000}
+  A12_A13_extrapolation_10b: {file: est_mixture_10b.csv, role: extrapolation, scale_tokens: 10000000000}
+  A14_A15_extrapolation_70b: {file: est_mixture_70b.csv, role: extrapolation, scale_tokens: 70000000000}
+derived_columns:
+  - total_scale_tokens
+  - log10_scale
+  - p_domain_normalized
+  - expected_tokens_domain
+governance:
+  source_files_read_only: true
+  output_under_experiment_run: true
+  no_loss_fit: true
+  no_data_role_change: true

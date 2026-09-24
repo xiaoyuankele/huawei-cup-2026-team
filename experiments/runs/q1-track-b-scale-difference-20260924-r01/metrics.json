@@ -1,0 +1,94 @@
+{
+  "schema_version": "q1.track-b-scale-difference.v1",
+  "run_id": "q1-track-b-scale-difference-20260924-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "d962ebbbf2187489a54f39b7618d893030a09be0",
+  "analysis": "paired low-scale minus high-scale Loss differences for exact duplicate mixture designs",
+  "source_records": {
+    "A6_A8_1m_vs_60m": {
+      "mixture_low": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/test_mixture_1m.csv",
+        "sha256": "197267b7d6f15367e2f46c881e564c35b0d34e51b1754bb09d07e650cf8e1ce8"
+      },
+      "mixture_high": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/test_mixture_60m.csv",
+        "sha256": "197267b7d6f15367e2f46c881e564c35b0d34e51b1754bb09d07e650cf8e1ce8"
+      },
+      "loss_low": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/test_pile_loss_1m.csv",
+        "sha256": "e027b1674f60140a65a87b5e4a59ab5f09dc33e8fd02c080682678074b160f53"
+      },
+      "loss_high": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/test_pile_loss_60m.csv",
+        "sha256": "8fe69d59ab7dd4fae4736459f4265ec93c7ed1ad1eca407346052560edc72b5b"
+      },
+      "rows": 256,
+      "target_count": 13
+    },
+    "A12_A14_10b_vs_70b": {
+      "mixture_low": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/est_mixture_10b.csv",
+        "sha256": "7561999cb5d9e604e8be3873b18b93d92881fa2ae70f5f29ebc65a80cc6c2797"
+      },
+      "mixture_high": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/est_mixture_70b.csv",
+        "sha256": "880c7ca1ebef470422e2b93d9bfcd0976db7db4e34ea57047518d95fe43327d1"
+      },
+      "loss_low": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/est_pile_loss_10b.csv",
+        "sha256": "226457581f3f59e15e44d8f72dee31fa7492c821699725fef47627d82cf34c0d"
+      },
+      "loss_high": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/est_pile_loss_70b.csv",
+        "sha256": "d0883b2d1a44da9386a6d629a3623c724ee291cba1ac87b6d1079e5377307682"
+      },
+      "rows": 63,
+      "target_count": 13
+    }
+  },
+  "outputs": {
+    "summary": {
+      "path": "experiments/runs/q1-track-b-scale-difference-20260924-r01/scale_difference_summary.csv",
+      "sha256": "3e8137cf7f99ba1eb38adc7faa8042041299ecce82c2e1ccb2b55a41b1c1940a",
+      "rows": 26
+    },
+    "differences_long": {
+      "path": "experiments/runs/q1-track-b-scale-difference-20260924-r01/scale_differences_long.csv",
+      "sha256": "6e6494749773bcd86e7c464830e0c4689d646c6991c725fd935a2baa2b63e1f3",
+      "rows": 4147
+    }
+  },
+  "overall": {
+    "A12_A14_10b_vs_70b": {
+      "mean_delta_low_minus_high": 0.38291306471306474,
+      "mean_loss_drop_per_log10_scale": 0.45309898565923173,
+      "mean_delta_cv": 0.13593992731219723,
+      "mean_max_absolute_corr_with_ilr": 0.7939457456175163,
+      "mean_positive_fraction": 1.0,
+      "mean_shared_prediction_mae_lower_bound": 0.19145653235653237,
+      "mean_shared_prediction_rmse_lower_bound": 0.19353970927232847
+    },
+    "A6_A8_1m_vs_60m": {
+      "mean_delta_low_minus_high": 1.4593707886882699,
+      "mean_loss_drop_per_log10_scale": 0.8207236523740062,
+      "mean_delta_cv": 0.12860167111141588,
+      "mean_max_absolute_corr_with_ilr": 0.6670832958882605,
+      "mean_positive_fraction": 1.0,
+      "mean_shared_prediction_mae_lower_bound": 0.7296853943441349,
+      "mean_shared_prediction_rmse_lower_bound": 0.7421269548761529
+    }
+  },
+  "interval_consistency": {
+    "target_slope_pearson_correlation": 0.19256201081460117,
+    "mean_high_interval_to_low_interval_ratio": 0.5864190885046043,
+    "low_interval_slope_min": 0.5448691854596779,
+    "low_interval_slope_max": 1.371989410414592,
+    "high_interval_slope_min": 0.3452684782948874,
+    "high_interval_slope_max": 0.569226714742192
+  },
+  "limitations": [
+    "No Loss model is fitted; paired differences are descriptive scale evidence only.",
+    "A12/A14 are extrapolation sensitivity data, not independent validation.",
+    "A positive low-minus-high difference indicates lower Loss at the higher scale for that paired target row."
+  ]
+}

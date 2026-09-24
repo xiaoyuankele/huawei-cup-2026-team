@@ -1,0 +1,279 @@
+{
+  "schema_version": "q1.track-b-interaction-screen.v1",
+  "run_id": "q1-track-b-interaction-screen-20260924-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "d962ebbbf2187489a54f39b7618d893030a09be0",
+  "zero_replacement": {
+    "method": "multiplicative",
+    "epsilon": 0.0001
+  },
+  "bootstrap": {
+    "reps": 1000,
+    "seed": 20260924,
+    "interval": "percentile_95"
+  },
+  "source_records": {
+    "A6_A8_1m_vs_60m": {
+      "mixture": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/test_mixture_1m.csv",
+        "sha256": "197267b7d6f15367e2f46c881e564c35b0d34e51b1754bb09d07e650cf8e1ce8"
+      },
+      "low_target": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/test_pile_loss_1m.csv",
+        "sha256": "e027b1674f60140a65a87b5e4a59ab5f09dc33e8fd02c080682678074b160f53"
+      },
+      "high_target": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/test_pile_loss_60m.csv",
+        "sha256": "8fe69d59ab7dd4fae4736459f4265ec93c7ed1ad1eca407346052560edc72b5b"
+      },
+      "rows": 256
+    },
+    "A12_A14_10b_vs_70b": {
+      "mixture": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/est_mixture_10b.csv",
+        "sha256": "7561999cb5d9e604e8be3873b18b93d92881fa2ae70f5f29ebc65a80cc6c2797"
+      },
+      "low_target": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/est_pile_loss_10b.csv",
+        "sha256": "226457581f3f59e15e44d8f72dee31fa7492c821699725fef47627d82cf34c0d"
+      },
+      "high_target": {
+        "path": "data/origin/real_attachments/A_data_value/regmix_tables/est_pile_loss_70b.csv",
+        "sha256": "d0883b2d1a44da9386a6d629a3623c724ee291cba1ac87b6d1079e5377307682"
+      },
+      "rows": 63
+    }
+  },
+  "output": {
+    "path": "experiments/runs/q1-track-b-interaction-screen-20260924-r01/interaction_screen.csv",
+    "sha256": "edb409e3d1d4368778367654d855d81bec7cc9b8c77e2d96d76506c739dca8b6",
+    "rows": 416
+  },
+  "top_absolute_correlations": [
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_uspto_backgrounds_val_loss",
+      "ilr_coordinate": "ilr_16",
+      "pearson_r": 0.9187161084082137,
+      "absolute_r": 0.9187161084082137,
+      "bootstrap_ci95_low": 0.8876158883103016,
+      "bootstrap_ci95_high": 0.9441873661620551,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_ubuntu_irc_val_loss",
+      "ilr_coordinate": "ilr_12",
+      "pearson_r": 0.9109545674472229,
+      "absolute_r": 0.9109545674472229,
+      "bootstrap_ci95_low": 0.866321168795001,
+      "bootstrap_ci95_high": 0.9442613322798901,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A6_A8_1m_vs_60m",
+      "role": "validation",
+      "target": "metric/the_pile_ubuntu_irc_val_loss",
+      "ilr_coordinate": "ilr_12",
+      "pearson_r": 0.8865349790391123,
+      "absolute_r": 0.8865349790391123,
+      "bootstrap_ci95_low": 0.857944039657508,
+      "bootstrap_ci95_high": 0.9106353141583945,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A6_A8_1m_vs_60m",
+      "role": "validation",
+      "target": "metric/the_pile_dm_mathematics_val_loss",
+      "ilr_coordinate": "ilr_5",
+      "pearson_r": 0.8639560670276549,
+      "absolute_r": 0.8639560670276549,
+      "bootstrap_ci95_low": 0.8406703166467375,
+      "bootstrap_ci95_high": 0.8857326347823506,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A6_A8_1m_vs_60m",
+      "role": "validation",
+      "target": "metric/the_pile_pubmed_central_val_loss",
+      "ilr_coordinate": "ilr_3",
+      "pearson_r": 0.8568561911649774,
+      "absolute_r": 0.8568561911649774,
+      "bootstrap_ci95_low": 0.8334077384861032,
+      "bootstrap_ci95_high": 0.8814055326747577,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A6_A8_1m_vs_60m",
+      "role": "validation",
+      "target": "metric/the_pile_uspto_backgrounds_val_loss",
+      "ilr_coordinate": "ilr_16",
+      "pearson_r": 0.8289384455955989,
+      "absolute_r": 0.8289384455955989,
+      "bootstrap_ci95_low": 0.7897704823865594,
+      "bootstrap_ci95_high": 0.8611458459487864,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_pubmed_central_val_loss",
+      "ilr_coordinate": "ilr_3",
+      "pearson_r": 0.8261936904989583,
+      "absolute_r": 0.8261936904989583,
+      "bootstrap_ci95_low": 0.755745481806237,
+      "bootstrap_ci95_high": 0.8888925596563219,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_wikipedia_en_val_loss",
+      "ilr_coordinate": "ilr_4",
+      "pearson_r": 0.8243322629115356,
+      "absolute_r": 0.8243322629115356,
+      "bootstrap_ci95_low": 0.7294780795101145,
+      "bootstrap_ci95_high": 0.8904275897253198,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A6_A8_1m_vs_60m",
+      "role": "validation",
+      "target": "metric/the_pile_github_val_loss",
+      "ilr_coordinate": "ilr_6",
+      "pearson_r": 0.8139674518563784,
+      "absolute_r": 0.8139674518563784,
+      "bootstrap_ci95_low": 0.76442540971177,
+      "bootstrap_ci95_high": 0.8554102969315265,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_gutenberg_pg_19_val_loss",
+      "ilr_coordinate": "ilr_10",
+      "pearson_r": 0.8139253208973485,
+      "absolute_r": 0.8139253208973485,
+      "bootstrap_ci95_low": 0.7173639167111303,
+      "bootstrap_ci95_high": 0.8829086743001784,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_pubmed_abstracts_val_loss",
+      "ilr_coordinate": "ilr_15",
+      "pearson_r": 0.7953594058470891,
+      "absolute_r": 0.7953594058470891,
+      "bootstrap_ci95_low": 0.6833013657289435,
+      "bootstrap_ci95_high": 0.8795453192050435,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_pile_cc_val_loss",
+      "ilr_coordinate": "ilr_11",
+      "pearson_r": 0.7933734828535791,
+      "absolute_r": 0.7933734828535791,
+      "bootstrap_ci95_low": 0.6882739731588247,
+      "bootstrap_ci95_high": 0.8743393450007226,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_dm_mathematics_val_loss",
+      "ilr_coordinate": "ilr_5",
+      "pearson_r": 0.7896160854477109,
+      "absolute_r": 0.7896160854477109,
+      "bootstrap_ci95_low": 0.6938005793171276,
+      "bootstrap_ci95_high": 0.8709880474011006,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_hackernews_val_loss",
+      "ilr_coordinate": "ilr_14",
+      "pearson_r": 0.7753755390878702,
+      "absolute_r": 0.7753755390878702,
+      "bootstrap_ci95_low": 0.6693068172425112,
+      "bootstrap_ci95_high": 0.8642423635489859,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_freelaw_val_loss",
+      "ilr_coordinate": "ilr_1",
+      "pearson_r": 0.7528593607200388,
+      "absolute_r": 0.7528593607200388,
+      "bootstrap_ci95_low": 0.6321680565990646,
+      "bootstrap_ci95_high": 0.8417551217196126,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_stackexchange_val_loss",
+      "ilr_coordinate": "ilr_8",
+      "pearson_r": 0.734317511185915,
+      "absolute_r": 0.734317511185915,
+      "bootstrap_ci95_low": 0.6190068873026475,
+      "bootstrap_ci95_high": 0.8374806862656962,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_github_val_loss",
+      "ilr_coordinate": "ilr_6",
+      "pearson_r": 0.7092415206571346,
+      "absolute_r": 0.7092415206571346,
+      "bootstrap_ci95_low": 0.5790438440440651,
+      "bootstrap_ci95_high": 0.8121358898927982,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A12_A14_10b_vs_70b",
+      "role": "extrapolation",
+      "target": "metric/the_pile_arxiv_val_loss",
+      "ilr_coordinate": "ilr_1",
+      "pearson_r": -0.6770298370650948,
+      "absolute_r": 0.6770298370650948,
+      "bootstrap_ci95_low": -0.8021588599169359,
+      "bootstrap_ci95_high": -0.5267677901400851,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A6_A8_1m_vs_60m",
+      "role": "validation",
+      "target": "metric/the_pile_wikipedia_en_val_loss",
+      "ilr_coordinate": "ilr_4",
+      "pearson_r": 0.6767550025686144,
+      "absolute_r": 0.6767550025686144,
+      "bootstrap_ci95_low": 0.6069494972539865,
+      "bootstrap_ci95_high": 0.7445072615468168,
+      "bootstrap_reps": 1000
+    },
+    {
+      "pair": "A6_A8_1m_vs_60m",
+      "role": "validation",
+      "target": "metric/the_pile_stackexchange_val_loss",
+      "ilr_coordinate": "ilr_8",
+      "pearson_r": 0.6573374407575695,
+      "absolute_r": 0.6573374407575695,
+      "bootstrap_ci95_low": 0.5930995861813767,
+      "bootstrap_ci95_high": 0.7180416092446926,
+      "bootstrap_reps": 1000
+    }
+  ],
+  "limitations": [
+    "This is a descriptive hypothesis screen; no interaction model is fitted.",
+    "The maximum over many target-coordinate pairs is selection-sensitive; bootstrap intervals are not multiplicity-adjusted.",
+    "A12/A14 remain extrapolation sensitivity data and cannot be treated as independent validation."
+  ]
+}

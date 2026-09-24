@@ -1,0 +1,28 @@
+{
+  "schema_version": "q1.scale-domain-summary.v1",
+  "run_id": "q1-scale-domain-summary-20260924-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "d962ebbbf2187489a54f39b7618d893030a09be0",
+  "input": {
+    "path": "experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_long.csv",
+    "sha256": "cc9617805819eb40c8344917289895a1e3405a503916a8f1a72e498ff621632a",
+    "rows": 20638
+  },
+  "output": {
+    "path": "experiments/runs/q1-scale-domain-summary-20260924-r01/q1_scale_domain_summary.csv",
+    "sha256": "cb11ca5ce3c987e227f1555d1d323ade051edd179c47ff8aa8cd433b87424b0f",
+    "rows": 102
+  },
+  "grouping": [
+    "dataset",
+    "role",
+    "scale_label",
+    "total_scale_tokens",
+    "log10_scale",
+    "domain"
+  ],
+  "interpretation_limits": [
+    "Expected token counts are derived allocations from proportions and total scale, not independently observed integer counts.",
+    "The summary describes input support only and does not use Loss targets or estimate scale effects."
+  ]
+}

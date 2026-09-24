@@ -1,0 +1,50 @@
+{
+  "schema_version": "q1.track-c-reduced-interactions.v1",
+  "run_id": "q1-track-c-reduced-interactions-20260924-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "d962ebbbf2187489a54f39b7618d893030a09be0",
+  "status": "ROLE_CHANGE_EXPLORATORY",
+  "adaptation_data": [
+    "A4_A5_train_1m",
+    "A6_A7_validation_1m",
+    "A8_A9_validation_60m"
+  ],
+  "unseen_scale_holdout": [
+    "A10_A11_validation_1b"
+  ],
+  "diagnostic_data": [
+    "A12_A13_extrapolation_10b",
+    "A14_A15_extrapolation_70b"
+  ],
+  "blocks": {
+    "shared_ilr_plus_scale": 17,
+    "scale_plus_top1_interactions": 18,
+    "scale_plus_top3_interactions": 20,
+    "scale_plus_top5_interactions": 22,
+    "full_interaction": 33
+  },
+  "top_ilr_from_track_b_a6_a8_screen": [
+    12,
+    5,
+    3,
+    16,
+    6
+  ],
+  "outputs": {
+    "metrics": {
+      "path": "experiments/runs/q1-track-c-reduced-interactions-20260924-r01/reduced_interaction_metrics.csv",
+      "sha256": "898a2c00d4fcbbc2ac56e5ff4c18e336e886e00082b1648415a1103b26fb6251",
+      "rows": 30
+    },
+    "alpha_selection": {
+      "path": "experiments/runs/q1-track-c-reduced-interactions-20260924-r01/selected_alpha_logo.csv",
+      "sha256": "c70e7bf9c7e22aa73dc2b7cac7baa23b45ef506ecf37d3dc8d655d166ca0744b",
+      "rows": 5
+    }
+  },
+  "limitations": [
+    "A6/A7 and A8/A9 are adaptation data and are not official validation in this role-change run.",
+    "The top ilr set is a Track-B hypothesis screen and must not be treated as confirmatory feature selection.",
+    "A12/A14 are diagnostic extrapolation data only and do not select hyperparameters."
+  ]
+}

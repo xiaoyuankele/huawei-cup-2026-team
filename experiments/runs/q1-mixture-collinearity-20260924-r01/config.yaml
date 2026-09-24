@@ -1,0 +1,31 @@
+schema_version: q1.mixture-collinearity.v1
+run_id: q1-mixture-collinearity-20260924-r01
+task_id: T-Q1-003-MIXTURE
+source:
+  raw_root: data/origin/real_attachments/A_data_value/regmix_tables
+  fit_reference: A4_A5
+  validation: [A6_A7, A8_A9, A10_A11]
+  extrapolation_only: [A12_A13, A14_A15]
+preprocessing:
+  row_normalize: true
+  raw_composition: retain_zero
+  reference_basis: drop_one_component
+  reference_component_current_run: train_the_pile_uspto_backgrounds
+  reference_sensitivity: drop_each_of_all_17_components
+  aitchison_basis: orthonormal_helmert_ilr
+  zero_replacement: multiplicative
+  zero_replacement_epsilons: [0.000001, 0.0001, 0.001]
+diagnostics:
+  closure: [row_sum_deviation, zero_cell_fraction, full_simplex_rank]
+  linear: [rank, raw_condition_number, standardized_condition_number, singular_values, correlation, eigenvalues, vif]
+  quadratic: [feature_count, rank, raw_condition_number, standardized_condition_number, singular_values]
+  drift: compare_pairwise_correlation_matrices_to_A4
+interpretation:
+  raw_correlation: descriptive_only_under_simplex_closure
+  vif: basis_dependent_screening_indicator
+  condition_number: use_standardized_version_for_near_collinearity
+  ridge: stabilizes_estimation_but_does_not_add_information
+governance:
+  source_files_read_only: true
+  no_paper_claim: true
+  no_hidden_precomputed_statistics: true

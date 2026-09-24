@@ -1,0 +1,15 @@
+schema_version: q1.mixture-basis-sensitivity.v1
+run_id: q1-mixture-basis-sensitivity-20260924-r01
+task_id: T-Q1-003-MIXTURE
+fit_pair: [A4, A5]
+external_checks: [A6, A7, A8, A9]
+bases:
+  - reference_drop_last_component
+  - helmert_ilr_with_multiplicative_zero_replacement
+zero_replacement_epsilons: [0.000001, 0.0001, 0.001]
+ridge_alphas: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0]
+preprocessing: standardize_within_cv_pipeline
+governance:
+  scale_conditioned_model: false
+  exploratory_only: true
+  source_files_read_only: true

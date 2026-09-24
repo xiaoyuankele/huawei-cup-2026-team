@@ -1,0 +1,1 @@
+python -X utf8 scripts/q1_scale_design_rank.py > experiments/runs/q1-scale-design-rank-20260924-r01/metrics.json

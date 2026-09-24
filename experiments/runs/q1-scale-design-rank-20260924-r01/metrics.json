@@ -1,0 +1,274 @@
+{
+  "schema_version": "q1.scale-design-rank.v1",
+  "run_id": "q1-scale-design-rank-20260924-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "d962ebbbf2187489a54f39b7618d893030a09be0",
+  "design": "[1, ilr(p), log10(scale), ilr(p)*log10(scale)]",
+  "blocks": {
+    "A4_train_1m": {
+      "scale": 1000000.0,
+      "log10_scale": 6.0,
+      "rows": 512,
+      "role": "fit"
+    },
+    "A6_validation_1m": {
+      "scale": 1000000.0,
+      "log10_scale": 6.0,
+      "rows": 256,
+      "role": "validation"
+    },
+    "A8_validation_60m": {
+      "scale": 60000000.0,
+      "log10_scale": 7.778151250383644,
+      "rows": 256,
+      "role": "validation"
+    },
+    "A10_validation_1b": {
+      "scale": 1000000000.0,
+      "log10_scale": 9.0,
+      "rows": 64,
+      "role": "validation"
+    },
+    "A12_extrapolation_10b": {
+      "scale": 10000000000.0,
+      "log10_scale": 10.0,
+      "rows": 63,
+      "role": "extrapolation"
+    },
+    "A14_extrapolation_70b": {
+      "scale": 70000000000.0,
+      "log10_scale": 10.845098040014257,
+      "rows": 63,
+      "role": "extrapolation"
+    }
+  },
+  "by_zero_replacement": {
+    "1e-06": {
+      "pooled": {
+        "rows": 1214,
+        "columns": 34,
+        "rank_raw": 34,
+        "rank_standardized": 34,
+        "raw_condition_number": 533.4103129603994,
+        "standardized_condition_number": 16.014642162054304,
+        "minimum_raw_singular_value": 4.027942178734967,
+        "minimum_standardized_singular_value": 3.7351855882879508
+      },
+      "by_block": {
+        "A4_train_1m": {
+          "rows": 512,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 5.813058385767289e+16,
+          "standardized_condition_number": 1.487456068054834e+16,
+          "minimum_raw_singular_value": 1.7309078079129735e-14,
+          "minimum_standardized_singular_value": 2.5355541255125245e-15
+        },
+        "A6_validation_1m": {
+          "rows": 256,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 1.1430841755534882e+17,
+          "standardized_condition_number": 1.8258050471119656e+16,
+          "minimum_raw_singular_value": 6.190498623086661e-15,
+          "minimum_standardized_singular_value": 1.5074478252130712e-15
+        },
+        "A8_validation_60m": {
+          "rows": 256,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 6.886899376200229e+18,
+          "standardized_condition_number": 1.8560563107273076e+16,
+          "minimum_raw_singular_value": 1.324693849846668e-16,
+          "minimum_standardized_singular_value": 1.482878418949193e-15
+        },
+        "A10_validation_1b": {
+          "rows": 64,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 2.42399361987503e+18,
+          "standardized_condition_number": 4.7439413660258776e+16,
+          "minimum_raw_singular_value": 5.027637140536191e-16,
+          "minimum_standardized_singular_value": 4.0630107926143245e-16
+        },
+        "A12_extrapolation_10b": {
+          "rows": 63,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 4.1113150332463596e+18,
+          "standardized_condition_number": 3.327417789825216e+16,
+          "minimum_raw_singular_value": 1.5921831709554649e-16,
+          "minimum_standardized_singular_value": 4.64170937640537e-16
+        },
+        "A14_extrapolation_70b": {
+          "rows": 63,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 1.4533665243933494e+18,
+          "standardized_condition_number": 3.0349309635615468e+16,
+          "minimum_raw_singular_value": 4.8810118316324355e-16,
+          "minimum_standardized_singular_value": 5.089047012827225e-16
+        }
+      }
+    },
+    "0.0001": {
+      "pooled": {
+        "rows": 1214,
+        "columns": 34,
+        "rank_raw": 34,
+        "rank_standardized": 34,
+        "raw_condition_number": 394.8199651968061,
+        "standardized_condition_number": 17.049219035731888,
+        "minimum_raw_singular_value": 3.3680119293067006,
+        "minimum_standardized_singular_value": 3.6566963975156557
+      },
+      "by_block": {
+        "A4_train_1m": {
+          "rows": 512,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 7.349943547415179e+16,
+          "standardized_condition_number": 1.704063321723782e+16,
+          "minimum_raw_singular_value": 8.52674805972466e-15,
+          "minimum_standardized_singular_value": 2.3517128290815987e-15
+        },
+        "A6_validation_1m": {
+          "rows": 256,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 7.906587052881746e+16,
+          "standardized_condition_number": 2.2647851096414148e+16,
+          "minimum_raw_singular_value": 5.668399021026876e-15,
+          "minimum_standardized_singular_value": 1.2334818670125504e-15
+        },
+        "A8_validation_60m": {
+          "rows": 256,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 5.536453274758621e+18,
+          "standardized_condition_number": 1.6804441867648098e+16,
+          "minimum_raw_singular_value": 1.04364607950689e-16,
+          "minimum_standardized_singular_value": 1.6624005649368795e-15
+        },
+        "A10_validation_1b": {
+          "rows": 64,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 3.2092048695307366e+18,
+          "standardized_condition_number": 3.618069686919516e+16,
+          "minimum_raw_singular_value": 2.3278311968744995e-16,
+          "minimum_standardized_singular_value": 4.633684634328801e-16
+        },
+        "A12_extrapolation_10b": {
+          "rows": 63,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 2.5290853503346985e+18,
+          "standardized_condition_number": 3.722062249355834e+16,
+          "minimum_raw_singular_value": 1.5686577084703173e-16,
+          "minimum_standardized_singular_value": 4.202871235536178e-16
+        },
+        "A14_extrapolation_70b": {
+          "rows": 63,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 5.686280982290491e+17,
+          "standardized_condition_number": 3.644049174375092e+16,
+          "minimum_raw_singular_value": 7.560919000351792e-16,
+          "minimum_standardized_singular_value": 4.292847767998451e-16
+        }
+      }
+    },
+    "0.001": {
+      "pooled": {
+        "rows": 1214,
+        "columns": 34,
+        "rank_raw": 34,
+        "rank_standardized": 34,
+        "raw_condition_number": 360.48870436692334,
+        "standardized_condition_number": 20.15676897855793,
+        "minimum_raw_singular_value": 2.631403480782804,
+        "minimum_standardized_singular_value": 3.286555391119476
+      },
+      "by_block": {
+        "A4_train_1m": {
+          "rows": 512,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 7.363195034410085e+16,
+          "standardized_condition_number": 1.901746424623559e+16,
+          "minimum_raw_singular_value": 6.176301156270311e-15,
+          "minimum_standardized_singular_value": 2.2685627957578613e-15
+        },
+        "A6_validation_1m": {
+          "rows": 256,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 1.0401255379223293e+17,
+          "standardized_condition_number": 1.924483422678303e+16,
+          "minimum_raw_singular_value": 3.1596467984352764e-15,
+          "minimum_standardized_singular_value": 1.481959207244445e-15
+        },
+        "A8_validation_60m": {
+          "rows": 256,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 3.4452692129687245e+18,
+          "standardized_condition_number": 1.6442129967909208e+16,
+          "minimum_raw_singular_value": 1.2298058304893473e-16,
+          "minimum_standardized_singular_value": 1.7345720615235335e-15
+        },
+        "A10_validation_1b": {
+          "rows": 64,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 1.2158047848233416e+18,
+          "standardized_condition_number": 2.6758950304906416e+16,
+          "minimum_raw_singular_value": 4.2734192289021646e-16,
+          "minimum_standardized_singular_value": 5.9611857252815215e-16
+        },
+        "A12_extrapolation_10b": {
+          "rows": 63,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 1.5246134905043712e+18,
+          "standardized_condition_number": 4.037051757084309e+16,
+          "minimum_raw_singular_value": 1.8562136347351293e-16,
+          "minimum_standardized_singular_value": 4.0991368789283307e-16
+        },
+        "A14_extrapolation_70b": {
+          "rows": 63,
+          "columns": 34,
+          "rank_raw": 17,
+          "rank_standardized": 17,
+          "raw_condition_number": 5.054364002449672e+17,
+          "standardized_condition_number": 3.336213327476295e+16,
+          "minimum_raw_singular_value": 6.067816365558063e-16,
+          "minimum_standardized_singular_value": 4.960242680921394e-16
+        }
+      }
+    }
+  },
+  "interpretation_limits": [
+    "This uses mixture inputs only and does not fit Loss targets.",
+    "A4 alone has one scale level, so scale main effects and interactions are not estimable under the current fit-only role.",
+    "The pooled rank result is a design feasibility audit, not permission to use validation or extrapolation targets for fitting."
+  ]
+}

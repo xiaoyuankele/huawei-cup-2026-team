@@ -1,0 +1,13 @@
+schema_version: q1.track-b-scale-difference.v1
+run_id: q1-track-b-scale-difference-20260924-r01
+task_id: T-Q1-003-MIXTURE
+pairs:
+  A6_A8_1m_vs_60m: {role: validation, low_scale: 1M, high_scale: 60M}
+  A12_A14_10b_vs_70b: {role: extrapolation, low_scale: 10B, high_scale: 70B}
+analysis: paired_target_difference
+delta_definition: loss_low_scale_minus_loss_high_scale
+outputs: [scale_difference_summary.csv, scale_differences_long.csv]
+governance:
+  model_fit: false
+  source_files_read_only: true
+  no_data_role_change: true

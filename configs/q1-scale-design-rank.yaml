@@ -1,0 +1,11 @@
+schema_version: q1.scale-design-rank.v1
+run_id: q1-scale-design-rank-20260924-r01
+task_id: T-Q1-003-MIXTURE
+design: '[1, ilr(p), log10(scale), ilr(p)*log10(scale)]'
+zero_replacement_epsilons: [0.000001, 0.0001, 0.001]
+purpose: input_design_audit_only
+target_usage: no_loss_targets_loaded
+governance:
+  A4_A5_fit_only: true
+  A6_A11_validation_only: true
+  A12_A15_extrapolation_only: true

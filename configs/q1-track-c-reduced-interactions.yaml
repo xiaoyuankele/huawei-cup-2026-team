@@ -1,0 +1,23 @@
+run_id: q1-track-c-reduced-interactions-20260924-r01
+task_id: T-Q1-003-MIXTURE
+status: ROLE_CHANGE_EXPLORATORY
+adaptation_datasets:
+  - A4_A5_train_1m
+  - A6_A7_validation_1m
+  - A8_A9_validation_60m
+unseen_scale_holdout:
+  - A10_A11_validation_1b
+diagnostic_extrapolation:
+  - A12_A13_extrapolation_10b
+  - A14_A15_extrapolation_70b
+feature_layout:
+  shared_ilr: 16
+  log10_scale: 1
+  interactions_total: 16
+  restricted_top_ilr_from_track_b_a6_a8: [12, 5, 3, 16, 6]
+alpha_grid: [0.1, 1.0, 10.0, 100.0]
+selection: LeaveOneGroupOut_on_adaptation_scales
+outputs:
+  metrics: experiments/runs/q1-track-c-reduced-interactions-20260924-r01/reduced_interaction_metrics.csv
+  alpha_selection: experiments/runs/q1-track-c-reduced-interactions-20260924-r01/selected_alpha_logo.csv
+  manifest: experiments/runs/q1-track-c-reduced-interactions-20260924-r01/metrics.json

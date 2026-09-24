@@ -1,0 +1,16 @@
+schema_version: q1.track-c-multiscale-exploratory.v1
+run_id: q1-track-c-multiscale-exploratory-20260924-r01
+task_id: T-Q1-003-MIXTURE
+status: ROLE_CHANGE_EXPLORATORY
+adaptation_data: [A4_A5, A6_A7, A8_A9]
+unseen_scale_holdout: [A10_A11]
+extrapolation_diagnostics: [A12_A13, A14_A15]
+features: [ilr_1_to_ilr_16, log10_scale, ilr_x_log10_scale]
+zero_replacement: {method: multiplicative, epsilon: 0.0001}
+model: multioutput_ridge
+alpha_selection: leave_one_scale_out_on_adaptation_scales
+alpha_grid: [0.1, 1.0, 10.0, 100.0]
+governance:
+  official_track_a_unchanged: true
+  validation_roles_reclassified_for_this_run: true
+  no_paper_claim: true
