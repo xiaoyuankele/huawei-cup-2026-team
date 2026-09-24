@@ -1,0 +1,42 @@
+{
+  "seed": 20260923,
+  "tail_probability": 0.2,
+  "tail_sensitivity": [
+    0.1,
+    0.15,
+    0.2,
+    0.25
+  ],
+  "lambda_reference": 0.25,
+  "lambda_sensitivity": [
+    0,
+    0.1,
+    0.25,
+    0.5
+  ],
+  "groups": {
+    "value": [
+      "fineweb_edu",
+      "qurater_facts_trivia",
+      "qurater_educational_value"
+    ],
+    "expression": [
+      "fluency_en_fluent_margin",
+      "modernbert_readability_expected",
+      "qurater_writing_style"
+    ],
+    "cleanliness": [
+      "modernbert_cleanliness_expected"
+    ],
+    "no_ads": [
+      "ad_en_no_ad_margin"
+    ],
+    "nonrepetition": [
+      "rps_doc_frac_unique_words",
+      "rps_doc_frac_chars_top_2gram",
+      "rps_doc_frac_chars_top_3gram"
+    ]
+  },
+  "status": "candidate_model_not_human_validated",
+  "rank_shift_cutoff": 0.1
+}

@@ -1,0 +1,57 @@
+{
+  "work_package": "WP-C",
+  "task_ids": [
+    "T-Q1-005",
+    "T-Q1-006",
+    "T-Q1-007",
+    "T-Q1-008"
+  ],
+  "owner_actor": "ACTOR-3",
+  "peer_reviewer_actor": "ACTOR-1",
+  "release_integrator_actor": "ACTOR-2",
+  "release_approver_actors": [
+    "ACTOR-1",
+    "ACTOR-2",
+    "ACTOR-3"
+  ],
+  "gate": "G2",
+  "gate_passed": false,
+  "prompt_ids": [
+    "P-CONFLICT-001@v1.0.0",
+    "P-VALID-001@v1.0.0",
+    "P-FIG-001@v1.0.0",
+    "P-PAPER-001@v1.0.0"
+  ],
+  "prompt_run_id": "PR-20260924-WPC-LOCAL-001",
+  "branch": "wp/ACTOR-3/WP-C",
+  "commit": null,
+  "pr": null,
+  "run_id": "q1-conflict-trial-20260924-r01",
+  "execution_status": "EXPLORATORY_RUN_COMPLETE",
+  "status": "REVIEW_BLOCKED",
+  "code_outputs": [
+    "scripts/q1_conflict_analysis.py",
+    "scripts/q1_conflict_validation.py",
+    "scripts/rebuild_q1_conflict_inputs.py",
+    "scripts/plot_q1_conflict.py"
+  ],
+  "paper_outputs": [
+    "paper/sections/drafts/q1-conflict-results.md",
+    "paper/sections/drafts/q1-conflict-results.tex"
+  ],
+  "claim_refs": "paper/claim-ledger-candidates.csv",
+  "feedback_ids": [
+    "FB-20260924-WPC-G2-001",
+    "FB-20260924-WPC-MODEL-002"
+  ],
+  "reviewer_decision": null,
+  "integrator_decision": null,
+  "release_council_decision": null,
+  "formal_bootstrap_status": "NOT_RUN_G2_MISSING",
+  "formal_weight_perturbation_status": "NOT_RUN_G2_MISSING",
+  "next_action": "ACTOR-3核验WP-B依赖记录；ACTOR-1独立复核本包；ACTOR-2审议模型建议并检查集成；G2后另立正式run_id。",
+  "source_commit": "1aab6ec52b291d4fb9a0af4005195caa3098772c",
+  "commit_reference": "git log -1 -- README-WP-C.md",
+  "local_git_submission": true,
+  "output_hashes": "docs/tasks/WP-C-file-manifest.json"
+}
