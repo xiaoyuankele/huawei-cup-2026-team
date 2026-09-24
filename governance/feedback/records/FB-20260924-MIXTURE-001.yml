@@ -19,7 +19,7 @@ related_run_ids:
   - q1-track-c-ablation-20260924-r01
   - q1-track-c-reduced-interactions-20260924-r01
 issue: null
-pr: null
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/18
 work_package: WP-B
 branch: feature/B/role-actor-separation
 owner_actor: ACTOR-2
