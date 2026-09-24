@@ -1,0 +1,12 @@
+{
+  "run_id": "q1-conflict-trial-20260924-r01",
+  "scope": "exploratory",
+  "n_records": 272505,
+  "n_unique": 261086,
+  "A1_conflict_rate": 0.29521764591059924,
+  "union_conflict_rate": 0.3459664631577335,
+  "Q_candidate_union_mean": 44.8249876607145,
+  "lambda_reference": 0.25,
+  "formal_bootstrap_executed": false,
+  "synthetic_script_tests_passed": true
+}

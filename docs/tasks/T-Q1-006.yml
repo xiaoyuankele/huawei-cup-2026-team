@@ -1,7 +1,7 @@
 # 问题一验证与稳健性
 task_id: T-Q1-006
 title: "问题一内部/外部验证与稳健性分析"
-status: DRAFT # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
+status: REVIEW_BLOCKED # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
 work_package: WP-C
 owner_actor: ACTOR-3
 peer_reviewer_actor: ACTOR-1
@@ -16,14 +16,14 @@ review:
   integrator_must_differ: true
   no_reviewer_status: REVIEW_BLOCKED
 priority: P1
-issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/9"
+issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/10"
 branch: "wp/ACTOR-3/WP-C"
 branch_owner_actor: ACTOR-3
 gate: G2
 prompt:
   prompt_id: P-VALID-001
   version: v1.0.0
-  prompt_run_id: ""
+  prompt_run_id: "PR-20260924-WPC-LOCAL-001"
 objective: "在固定模型和数据分层下评估内部留出、A2/A3 重叠子集、新增子集和方法稳定性。"
 inputs:
   - ref: docs/tasks/T-Q1-004.yml
@@ -47,3 +47,12 @@ acceptance_criteria:
 definition_of_done:
   - "ACTOR-1 完成 Peer Review，ACTOR-3 完成报告和可复核表格，ACTOR-2 完成 Release Integrator 检查"
 notes: "结果稳定性优先于追求单一最优数字。"
+
+local_delivery:
+  run_id: q1-conflict-trial-20260924-r01
+  execution_status: EXPLORATORY_RUN_COMPLETE
+  handoff: docs/tasks/WP-C-delivery.json
+  evidence_manifest: docs/tasks/WP-C-file-manifest.json
+  formal_gate_passed: false
+  peer_review_decision: null
+  integrator_decision: null

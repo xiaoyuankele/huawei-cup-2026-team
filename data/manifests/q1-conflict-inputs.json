@@ -1,0 +1,20 @@
+{
+  "run_id": "q1-conflict-trial-20260924-r01",
+  "normalized_input": "experiments/runs/q1-conflict-trial-20260924-r01/artifacts/normalized_records.csv.gz",
+  "n_records": 272505,
+  "n_unique": 261086,
+  "upstream_run_id": "q1-critic-topsis-20260924-r01",
+  "upstream_status": "not_accepted_in_available_snapshot",
+  "raw_source_directory": "data/origin/real_attachments/A_data_value",
+  "raw_source_sha256": {
+    "A1": "14a4eeec4c7d98efd78942ddd9c1329640527f2108e73227be449bc1a8dbe579",
+    "A2": "ae1e3399f84f605d994fc60b46984d742e14abb3355d8e7a91822eae1b99e16a",
+    "A3": "7af069c71c6027a10f2013cc14dd9d5d17855c264734f69c955544ff6cff7382"
+  },
+  "parameter_sources": {
+    "normalization": "reference/preprocessing_refresh_candidate/normalization_stats.json",
+    "model": "experiments/runs/q1-critic-topsis-20260924-r01/model_parameters.json"
+  },
+  "data_classification": "PRIVATE_ARTIFACTS_EXCLUDED_FROM_GIT",
+  "normalized_sha256": "896f1dc51ba62ba19fba8938f153859802a05ef95aecbd112eaf9f413cc9a989"
+}

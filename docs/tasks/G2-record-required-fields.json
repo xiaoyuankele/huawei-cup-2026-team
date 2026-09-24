@@ -1,0 +1,10 @@
+{
+  "gate": "G2",
+  "model_status": "PACKAGE_ACCEPTED",
+  "upstream_run_id": "q1-critic-topsis-20260924-r01",
+  "peer_reviewer_actor": "ACTOR-3",
+  "release_integrator_actor": "ACTOR-1",
+  "peer_review_evidence": null,
+  "integrator_evidence": null,
+  "note": "仅字段模板，不是通过记录。必须填写真实审核证据。"
+}

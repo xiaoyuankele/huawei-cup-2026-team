@@ -1,0 +1,36 @@
+{
+  "run_id": "q1-conflict-trial-20260924-r01",
+  "status": "EXPLORATORY_RUN_COMPLETE",
+  "formal_task_status": "REVIEW_BLOCKED",
+  "owner_actor": "ACTOR-3",
+  "upstream_model_run_id": "q1-critic-topsis-20260924-r01",
+  "upstream_package_accepted": false,
+  "input_manifest": "data/manifests/q1-conflict-inputs.json",
+  "commands": [
+    "python scripts/q1_conflict_analysis.py",
+    "python scripts/plot_q1_conflict.py",
+    "python scripts/q1_conflict_validation.py --self-test"
+  ],
+  "configured_branch": "wp/ACTOR-3/WP-C",
+  "actual_commit": null,
+  "pr": null,
+  "peer_reviewer_actor": "ACTOR-1",
+  "release_integrator_actor": "ACTOR-2",
+  "reviewer_decision": null,
+  "integrator_decision": null,
+  "output_manifest": "docs/tasks/WP-C-file-manifest.json",
+  "limitations": [
+    "真实数据bootstrap与权重扰动未运行",
+    "候选模型未被WP-B接受",
+    "并非人工真值验证",
+    "章节LaTeX未编译"
+  ],
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "source_commit": "1aab6ec52b291d4fb9a0af4005195caa3098772c",
+  "commit_reference": "git log -1 -- experiments/runs/q1-conflict-trial-20260924-r01/run_manifest.json",
+  "private_artifacts_dir": "experiments/runs/q1-conflict-trial-20260924-r01/artifacts"
+}

@@ -1,0 +1,8 @@
+{
+  "feedback_id": "FB-20260924-WPC-MODEL-002",
+  "target": "WP-B / ACTOR-2",
+  "finding": "第二小问综合评价采用五维有限补偿候选模型，指标集合与原16维TOPSIS不同；arxiv新增排序相关仅0.6105。",
+  "effect": "不能自动替换原质量接口，不能把分数下降解释为改进。",
+  "requested_action": "审议适用性、偏好参数与模型接口；有标签或下游收益再评价有效性。",
+  "status": "OPEN"
+}
