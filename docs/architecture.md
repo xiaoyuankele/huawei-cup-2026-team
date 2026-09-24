@@ -43,14 +43,28 @@ G4 三人 Release Council 签署
 
 因此，WP-C 可以提前写诊断脚本、图表模板、表结构和论文骨架；只有正式数字和技术主张受 G2 门控。WP-B 先完成规格和 smoke test，正式结果受 G1 门控。
 
-## 四个事实源
+## 题目优先的任务划分与口头发布
 
-1. **Task Card**：范围、Owner、依赖、门控和验收条件。
+任务不按电脑、编程语言或个人习惯拆分，而按题目树拆分。统一使用：
+
+```text
+problem_id → subproblem_id → task_id → work_package → run_id / PR → feedback_id
+Q1         → Q1-S03       → T-Q1-S03-001
+```
+
+负责人可以通过会议、语音或面对面交流口头发布任务。口头发布后，执行前必须在 `docs/tasks/` 创建任务卡，并写入 `announcement.mode`、发布人、时间、脱敏摘要和 `announcement_ref`。队友确认任务卡后才开始执行；没有任务卡 ID 的内容只属于通知，不属于可验收交付物。
+
+回馈时必须携带对应的 `task_id`。如果是失败、阻塞、风险、返工、证据不足或无法判断，还必须创建 `feedback_id`，回链题目/子问题、证据、响应负责人和下一步。反馈未关闭时，任务只能停留在 `REWORK` 或 `REVIEW_BLOCKED`，不能进入 `PACKAGE_ACCEPTED`。
+
+## 五个事实源
+
+1. **Task Card**：题目/子问题、口头发布留痕、范围、Owner、依赖、门控和验收条件。
 2. **Pull Request**：代码和文档变更、Peer Review 和 Integrator 决定。
 3. **Run Manifest**：配置、seed、输入 manifest、环境、指标、失败原因和输出哈希。
-4. **Claim Ledger**：论文主张、图表、数字、run_id、证据等级和限制。
+4. **Feedback Case**：反馈、失败、阻塞、不确定性、证据和处理决定。
+5. **Claim Ledger**：论文主张、图表、数字、run_id、证据等级和限制。
 
-只有四个事实源都能互相回链，工作包才能从 `RUN_COMPLETE` 进入 `PACKAGE_ACCEPTED`；聊天消息只负责通知。
+五个事实源都能互相回链，工作包才能从 `RUN_COMPLETE` 进入 `PACKAGE_ACCEPTED`；聊天消息只负责通知。
 
 ## 状态机
 
