@@ -1,0 +1,185 @@
+% T-Q1-008 / WP-C 独立审阅稿；状态 REVIEW_BLOCKED。
+% 从 paper/ 目录以 XeLaTeX 编译：xelatex sections/drafts/q1-conflict-resolution-standalone.tex
+% 正式主论文仍以 paper/main.tex 为唯一入口；本稿未经 Peer Review 和 G2 验收。
+\documentclass[UTF8,a4paper,12pt]{ctexart}
+\usepackage{amsmath,amssymb,booktabs,graphicx,geometry,hyperref}
+\geometry{margin=2.5cm}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
+\renewcommand{\theequation}{\thesection-\arabic{equation}}
+\renewcommand{\thetable}{\thesection-\arabic{table}}
+\renewcommand{\thefigure}{\thesection-\arabic{figure}}
+\graphicspath{{figures/q1-conflict-resolution/}}
+
+\begin{document}
+\setcounter{section}{2}
+\section{质量冲突消解与综合评价模型}
+\label{sec:q12}
+
+\subsection{文献依据与模型选择}
+
+多指标评价的冲突可能来自同一属性的测量分歧，也可能来自不同属性之间的取舍。群体偏好决策研究采用极小极大方法协调冲突\cite{yu2016}；大坝安全评价研究强调辨别冲突信息的来源，再确定融合权重\cite{wang2023}；应急资源调配研究将冲突测度与决策目标相联系\cite{chen2026}。这些研究对象不同于文本质量，但共同表明冲突分型应先于聚合规则的选择。
+
+第一小问采用的 CRITIC 权重由指标离散度及相关性确定\cite{diakoulaki1995}，其中的“指标冲突”描述的是样本间统计关系，不等于同一文本的质量信号相抵。加权平均允许高分弥补低分，其补偿程度需单独建模\cite{giarlotta2001}。FineWeb 和 DataComp-LM 的实验表明数据过滤方式会影响语言模型表现\cite{penedo2024,li2024}，但不能把单一代理指标解释为质量真值。因而保留原 CRITIC--TOPSIS 分数，另构造冲突标记与有限补偿评价分。
+
+\subsection{数据衔接与冲突定义}
+
+A1、A2、A3 分别有 51,230、17,523、203,752 条记录，合计 272,505 条；按文本 ID 去重后为 261,086 条，跨文件重复 11,419 条。A1 依既有 SHA256 规则分成拟合集 40,919 条与留出集 10,311 条。A2 和 A3 相对于 A1 分别新增 16,104 与 193,752 条。沿用第一小问冻结的指标方向、归一化和权重，先复算原分再扩展到新增记录；七个 A1 领域均分的最大复算误差小于 $10^{-12}$。新增记录来自同一数据体系，不能视为独立人工真值。
+
+设 $x_{ij}\in[0,1]$ 为方向统一后的第 $j$ 项指标，$w_j\geq0$ 为第一小问权重。把 11 项较通用指标归为五组 $G_g$：内容价值、表达质量、整洁度、无广告程度和非重复程度。组内均分与组权重定义为
+\begin{equation}
+z_{ig}=\frac{\sum_{j\in G_g}w_jx_{ij}}{\sum_{j\in G_g}w_j},\qquad
+v_g=\frac{\sum_{j\in G_g}w_j}{\sum_{h=1}^{5}\sum_{j\in G_h}w_j},
+\qquad \sum_{g=1}^{5}v_g=1.
+\label{eq:q12-group}
+\end{equation}
+
+内容价值包括 FineWeb 教育价值、QuRating 教育价值及事实与常识代理；表达质量包括英语流畅度、可读性及写作风格；非重复程度包括独特词比例及两项反向高频词组指标。DSIR 三项、无字母词比例和句末标点比例仍保留在第一小问原评分及全指标对照中。五维排除它们仅是适用性假设，不是其无效性的证据。事实与常识代理分也不等于事实准确率。
+
+在 A1 拟合集计算并冻结每组的 $20\%$ 与 $80\%$ 分位阈值 $l_g,h_g$。定义高低集合与候选冲突标记
+\begin{equation}
+H_i=\{g:z_{ig}>h_g\},\qquad
+L_i=\{g:z_{ig}<l_g\},\qquad
+I_i=\mathbf{1}\{|H_i|>0\ \land\ |L_i|>0\}.
+\label{eq:q12-conflict}
+\end{equation}
+
+严格不等号使处于阈值上的样本归入中间状态。$I_i=1$ 只表示同一文本至少有一组相对突出、另一组相对偏低，不是显著性检验结果，也不是质量缺陷真值。由 $H_i,L_i$ 是否为空，可得到候选冲突、仅优势、仅短板、中间状态四个互斥且穷尽的类别。冲突程度定义为
+\begin{equation}
+C_i=\max_g\left[\frac{z_{ig}-h_g}{1-h_g}\right]_+
+    \max_g\left[\frac{l_g-z_{ig}}{l_g}\right]_+,
+\qquad
+B_i=\frac{|H_i||L_i|}{\binom{5}{2}}.
+\label{eq:q12-strength}
+\end{equation}
+其中 $C_i$ 为跨阈幅度，$B_i$ 为高低组配对广度，二者都不是概率。阈值来自 A1 拟合集，数值见表~\ref{tab:q12-thresholds}。
+
+\begin{table}[htbp]
+\centering
+\caption{五维冲突判别阈值与权重}
+\label{tab:q12-thresholds}
+\begin{tabular}{lccc}
+\toprule
+维度 & 低阈值 $l_g$ & 高阈值 $h_g$ & 组权重 $v_g$ \\
+\midrule
+内容价值   & 0.2783 & 0.5613 & 0.2499 \\
+表达质量   & 0.3578 & 0.7702 & 0.2836 \\
+整洁度     & 0.2673 & 0.9884 & 0.1090 \\
+无广告程度 & 0.5244 & 0.9004 & 0.1056 \\
+非重复程度 & 0.6366 & 0.7838 & 0.2519 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{冲突成因与消解规则}
+
+不同类型冲突应采取不同处理。两种教育评分器对同一属性一高一低，属于\textbf{测量分歧}；应保留两项原值与原文复核标记。内容价值高而广告信号强、整洁度高而非重复程度低，属于\textbf{属性权衡候选}；通过限制不同维度的相互补偿表达决策偏好。代码、非英语和 LaTeX 文本的英语流畅度或格式分偏低，属于\textbf{适用性疑点}；应核对原文和适用领域。数据方向或尺度错误、重复 ID 通过预处理与去重消除，不交给综合分数处理。
+
+15 条定向原文案例揭示了上述可能机制，但不能估计总体误判率。A1 中两种教育评分器一高一低的样本为 415 条（$0.8101\%$），全量去重为 1,402 条（$0.5370\%$）；组内分歧可能被五维平均掩盖，需单列复核。以“内容价值高且无广告程度低”判别，A1 命中 1,884 条；换成原始广告 logit 大于无广告 logit，仅有 310 条。相对低分位与分类器广告判别是不同口径，后者也不是人工标签。
+
+\subsection{有限补偿综合评价模型}
+
+第一小问的原分 $Q_i^{(0)}$ 作为参照保留。为处理属性间权衡，先构造五维加权平均 $M_i=\sum_gv_gz_{ig}$，再允许组权重在名义权重 $v$ 附近变化。令 $\Delta_5=\{p:p_g\geq0,\sum_gp_g=1\}$，定义
+\begin{equation}
+\mathcal W_{\lambda}=\{(1-\lambda)v+\lambda p:p\in\Delta_5\},\qquad
+Q_i^{\mathrm{rob}}(\lambda)=100\min_{a\in\mathcal W_{\lambda}}\sum_{g=1}^{5}a_gz_{ig},
+\quad 0\leq\lambda\leq1.
+\label{eq:q12-robust}
+\end{equation}
+
+$\lambda$ 是对组权重不确定性的保守程度。内层目标关于 $p$ 为线性函数，在单纯形顶点取得最小值，因此若 $m_i=\min_g z_{ig}$，便有闭式解
+\begin{equation}
+Q_i^{\mathrm{rob}}(\lambda)=100\big[(1-\lambda)M_i+\lambda m_i\big],\qquad
+Q_i^{\mathrm{rob}}(\lambda)-100M_i=-100\lambda(M_i-m_i).
+\label{eq:q12-closed}
+\end{equation}
+
+模型以最弱维度限制优势维度的补偿，并不修改原始指标。$\lambda=0$ 是五维加权平均，$\lambda=1$ 是最弱维度；对任意 $0\leq\lambda\leq1$，有 $100m_i\leq Q_i^{\mathrm{rob}}\leq100M_i$。所有组值同为 $c$ 时，得分为 $100c$；任一组值上升而其余不变时，得分不会下降。连续评分避免样本刚跨过冲突阈值就突然扣分。取 $\lambda=0.25$ 作展示，该值未经人工标签拟合。与原 16 维 TOPSIS 的差别同时包含指标选择和聚合方式变化，只有相对于五维加权平均的式~\eqref{eq:q12-closed} 分差才能归于补偿规则。
+
+\subsection{A1 与扩展集结果}
+
+\begin{table}[htbp]
+\centering
+\caption{候选冲突覆盖情况}
+\label{tab:q12-coverage}
+\begin{tabular}{lrrr}
+\toprule
+分区 & 样本数 & 冲突数 & 冲突率（\%） \\
+\midrule
+A1 全量         & 51,230  & 15,124 & 29.5218 \\
+A1 留出集       & 10,311  & 3,039  & 29.4734 \\
+A2 新增         & 16,104  & 9,408  & 58.4203 \\
+A3 新增         & 193,752 & 65,795 & 33.9584 \\
+A1--A3 唯一 ID & 261,086 & 90,327 & 34.5966 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A1 四类样本数依次为 15,124、14,958、14,439、6,709，合计 51,230。拟合集冲突率 $29.5340\%$，留出集 $29.4734\%$；二者接近只说明本次划分下判别比例相近，不能解释为识别准确率。arxiv 域在 A1 和新增集的冲突率分别为 $56.24\%$ 和 $58.42\%$；github 域分别为 $33.47\%$ 和 $33.96\%$。A2 新增中“整洁度高、非重复程度低”占 $54.53\%$，A3 新增中反向组合占 $26.27\%$，表明主要冲突模式随域而变。其余五域没有扩展集可作同口径检验。把全量域级冲突率按 A1 领域比例重加权后为 $29.6680\%$，接近 A1 的 $29.5218\%$；总体率升至 $34.5966\%$ 主要与领域构成变化相关，不能据此断定每个领域都变差。图~\ref{fig:q12-pairs} 展示有向冲突组合，图~\ref{fig:q12-domain} 展示 A1 各领域差异。
+
+同一文本可能计入多个高低分配对，因此图~\ref{fig:q12-pairs} 中单元格比例不能相加为总体冲突率。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{fig3_1_conflict_pair_heatmap.pdf}
+\caption{A1 留出、A2 新增和 A3 新增的高低分信号配对比例。行表示高分维度，列表示低分维度；对角线无定义，三个面板共用 0--60\% 色标。}
+\label{fig:q12-pairs}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\linewidth]{fig3_2_domain_conflict.pdf}
+\caption{A1 各领域候选冲突率及样本量；阈值由 A1 拟合集冻结。}
+\label{fig:q12-domain}
+\end{figure}
+
+\begin{table}[htbp]
+\centering
+\caption{原评分、五维基线与有限补偿候选分的均值（分；$\lambda=0.25$）}
+\label{tab:q12-scores}
+\begin{tabular}{lrrrr}
+\toprule
+分区 & 原 TOPSIS & 五维加权平均 & 有限补偿分 & 相对五维基线变化 \\
+\midrule
+A1 全量         & 60.9471 & 58.6944 & 52.8212 & $-5.8733$ \\
+A1 留出集       & 61.0370 & 58.7548 & 52.8643 & $-5.8905$ \\
+A2 新增         & 63.4735 & 76.5370 & 72.2455 & $-4.2915$ \\
+A3 新增         & 51.6887 & 46.9338 & 40.4316 & $-6.5022$ \\
+A1--A3 唯一 ID & 54.2323 & 51.0674 & 44.8250 & $-6.2424$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+表~\ref{tab:q12-scores} 的下降量是模型规定的保守折减，不能等同于质量判断精度改善。A2 新增候选分与原 TOPSIS 分的 Spearman 相关为 0.6105，说明换指标与换聚合规则会明显改变排序；需要原文或下游 Loss 证据才能决定采用哪套分数。若将候选分作为后续配比或标度律输入，应将原分和候选分分别作为情景，报告后续结论是否改变。
+
+\subsection{灵敏度、核验与适用边界}
+
+把尾部分位从 $10\%$ 调至 $25\%$，A1 留出集冲突率由 $9.4074\%$ 升至 $41.4606\%$，A2 新增由 $3.8934\%$ 升至 $79.0673\%$，A3 新增由 $13.7919\%$ 升至 $44.2380\%$。冲突率高度依赖相对阈值，不应把某一固定比例解释成自然发生率。$\lambda$ 在 $0,0.1,0.25,0.5$ 上的变化影响候选均分；式~\eqref{eq:q12-closed} 还给出解析灵敏度 $\partial Q_i^{\mathrm{rob}}/\partial\lambda=-100(M_i-m_i)$。维度差距越大，保守程度的影响越强；最弱维度若受噪声或域失配影响，模型也会随之偏低。图~\ref{fig:q12-threshold} 与图~\ref{fig:q12-lambda} 分别展示两类敏感性。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\linewidth]{fig3_3_threshold_sensitivity.pdf}
+\caption{冲突率对分位阈值的敏感性；A1 拟合参照冻结后用于留出及新增集。}
+\label{fig:q12-threshold}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\linewidth]{fig3_4_compensation_sensitivity.pdf}
+\caption{$\lambda$ 对候选均分的影响；纵轴为得分而非预测准确率。}
+\label{fig:q12-lambda}
+\end{figure}
+
+原评分复算的七域均分最大误差小于 $10^{-12}$；重复 ID 的指标和领域一致，四类判别穷尽样本，式~\eqref{eq:q12-closed} 的闭式解与单调性可直接核对。评价准确性仍缺少人工质量真值或下游 Loss 验证，83 条分层复核样本没有人工标签。真实数据 bootstrap、权重扰动与文本对排名反转尚无结果，因此不报告置信区间或性能改善率。
+
+\paragraph{数据来源}附件 A1--A3 的质量信号，以及第一小问保存的归一化参数、CRITIC 权重和 TOPSIS 分数。图~\ref{fig:q12-pairs} 至图~\ref{fig:q12-lambda} 由同一批逐文本计算结果汇总。五维分组和式~\eqref{eq:q12-robust} 至式~\eqref{eq:q12-closed} 是针对本题提出的模型构造，不归属于下列文献。
+
+\begin{thebibliography}{99}
+\bibitem{diakoulaki1995} DIAKOULAKI D, MAVROTAS G, PAPAYANNAKIS L. Determining objective weights in multiple criteria problems: The CRITIC method[J]. Computers \& Operations Research, 1995, 22(7): 763--770. DOI: \href{https://doi.org/10.1016/0305-0548(94)00059-H}{10.1016/0305-0548(94)00059-H}.
+\bibitem{giarlotta2001} GIARLOTTA A. Multicriteria compensability analysis[J]. European Journal of Operational Research, 2001, 133(1): 190--209. DOI: \href{https://doi.org/10.1016/S0377-2217(00)00198-3}{10.1016/S0377-2217(00)00198-3}.
+\bibitem{yu2016} 余高锋, 李登峰, 邱锦明, 等. 考虑偏好冲突的多类评价信息群体决策方法[J]. 控制与决策, 2016, 31(11): 2013--2018. DOI: \href{https://doi.org/10.13195/j.kzyjc.2015.0948}{10.13195/j.kzyjc.2015.0948}.
+\bibitem{wang2023} 王雷, 王晓玲, 张君, 等. 考虑融合权重优化与冲突信息来源的大坝安全综合评价方法[J]. 清华大学学报(自然科学版), 2023, 63(10): 1566--1575. DOI: \href{https://doi.org/10.16511/j.cnki.qhdxxb.2023.22.039}{10.16511/j.cnki.qhdxxb.2023.22.039}.
+\bibitem{chen2026} 陈雪龙, 王子睿, 李苗苗. 多周期应急资源调配主体冲突消解方法研究[J]. 中国管理科学, 2026, 34(3): 226--241. DOI: \href{https://doi.org/10.16381/j.cnki.issn1003-207x.2023.2186}{10.16381/j.cnki.issn1003-207x.2023.2186}.
+\bibitem{penedo2024} PENEDO G, KYDLÍČEK H, BEN ALLAL L, et al. The FineWeb datasets: Decanting the web for the finest text data at scale[EB/OL]. 2024. \url{https://arxiv.org/abs/2406.17557}.
+\bibitem{li2024} LI J, FANG A, SMYRNIS G, et al. DataComp-LM: In search of the next generation of training sets for language models[C]//Advances in Neural Information Processing Systems. 2024. \url{https://arxiv.org/abs/2406.11794}.
+\end{thebibliography}
+
+\end{document}
