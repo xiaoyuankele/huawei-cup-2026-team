@@ -1,0 +1,487 @@
+schema_version: q1.indicator-catalog.v1
+task_id: T-Q1-002
+run_id: q1-indicator-normalization-20260924-r02
+prompt_run_id: PR-20260924-B-TOPSIS-001
+status: REVIEW
+needs_human_review: true
+scope: 22 raw quality fields; list fields may expand to multiple scalar output columns
+direction_policy: Selected proxy directions are assumptions for this experiment, not
+  universal cross-domain monotonic quality laws. Nine pending outputs remain withheld.
+direction_qualification: Non-alphabetic fraction and top word 2/3-gram concentration
+  are treated as costs in the baseline; code, math, tables and legitimate repetition
+  require domain checks. DSIR measures target affinity. confirmed retains the historical
+  operational flag only.
+sources:
+  problem_pdf: problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  quality_data_card: https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  qurater_definition: https://github.com/princeton-nlp/QuRating/blob/main/README.md
+normalization:
+  fit_dataset: A1
+  fit_partition: A1 fit only
+  primary: quantile_01_99
+  alternatives:
+  - min_max
+  - rank_ecdf
+  - robust_z_logistic
+  reuse:
+  - A1 holdout
+  - A2
+  - A3
+indicators:
+- indicator_id: I01
+  raw_field: fineweb_edu
+  meaning: FineWeb-Edu educational value
+  raw_scale: single-element model score in list
+  unit: score
+  list_compression: take element 0
+  outputs:
+  - name: fineweb_edu
+    direction: benefit
+    direction_status: confirmed
+    basis: source card calls it educational value
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I02
+  raw_field: fluency_en
+  meaning: English fluency classifier logits
+  raw_scale: '[not_fluent_logit, fluent_logit]'
+  unit: logit difference
+  list_compression: fluent_logit - not_fluent_logit
+  outputs:
+  - name: fluency_en_fluent_margin
+    direction: benefit
+    direction_status: confirmed
+    basis: class order and fluent label are documented
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I03
+  raw_field: modernbert_cleanliness
+  meaning: PRRC cleanliness rating over levels 0-5
+  raw_scale: six class logits
+  unit: expected level
+  list_compression: softmax expected level using classes 0..5
+  outputs:
+  - name: modernbert_cleanliness_expected
+    direction: benefit
+    direction_status: confirmed
+    basis: cleanliness is a positive formatting/completeness attribute
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I04
+  raw_field: modernbert_readability
+  meaning: PRRC readability rating over levels 0-5
+  raw_scale: six class logits
+  unit: expected level
+  list_compression: softmax expected level using classes 0..5
+  outputs:
+  - name: modernbert_readability_expected
+    direction: benefit
+    direction_status: confirmed
+    basis: readability is defined as clarity and ease of understanding
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I05
+  raw_field: modernbert_reasoning
+  meaning: PRRC reasoning complexity rating over levels 0-5
+  raw_scale: six class logits
+  unit: expected level
+  list_compression: softmax expected level using classes 0..5
+  outputs:
+  - name: modernbert_reasoning_expected
+    direction: pending_verification
+    direction_status: pending_verification
+    basis: higher logical complexity is not intrinsically higher data quality
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I06
+  raw_field: modernbert_professionalism
+  meaning: PRRC professionalism/expertise-related rating over levels 0-5
+  raw_scale: six class logits
+  unit: expected level
+  list_compression: softmax expected level using classes 0..5
+  outputs:
+  - name: modernbert_professionalism_expected
+    direction: pending_verification
+    direction_status: pending_verification
+    basis: source description links this dimension to expertise required; direction
+      for general quality is unresolved
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I07
+  raw_field: dsir_books
+  meaning: DSIR importance relative to Books domain
+  raw_scale: continuous importance score
+  unit: score
+  list_compression: retain scalar
+  outputs:
+  - name: dsir_books
+    direction: benefit
+    direction_status: confirmed
+    basis: higher importance means greater similarity/utility relative to the named
+      target domain; contextual, not universal quality
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I08
+  raw_field: dsir_wiki
+  meaning: DSIR importance relative to Wikipedia domain
+  raw_scale: continuous importance score
+  unit: score
+  list_compression: retain scalar
+  outputs:
+  - name: dsir_wiki
+    direction: benefit
+    direction_status: confirmed
+    basis: same contextual DSIR interpretation
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I09
+  raw_field: dsir_math
+  meaning: DSIR importance relative to AutoMathText domain
+  raw_scale: continuous importance score
+  unit: score
+  list_compression: retain scalar
+  outputs:
+  - name: dsir_math
+    direction: benefit
+    direction_status: confirmed
+    basis: same contextual DSIR interpretation
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I10
+  raw_field: qurater
+  meaning: QuRating multidimensional quality criteria
+  raw_scale: '[Writing Style, Required Expertise, Facts and Trivia, Educational Value]'
+  unit: criterion score
+  list_compression: componentwise; never merge criteria with weights
+  outputs:
+  - name: qurater_writing_style
+    direction: benefit
+    direction_status: confirmed
+    basis: official QuRating names it a quality criterion
+  - name: qurater_required_expertise
+    direction: pending_verification
+    direction_status: pending_verification
+    basis: official repository exposes both high-to-low and low-to-high curricula
+  - name: qurater_facts_trivia
+    direction: benefit
+    direction_status: confirmed
+    basis: official QuRating names it a quality criterion
+  - name: qurater_educational_value
+    direction: benefit
+    direction_status: confirmed
+    basis: official QuRating names it a quality criterion
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  - https://github.com/princeton-nlp/QuRating/blob/main/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I11
+  raw_field: ad_en
+  meaning: Advertisement detection logits
+  raw_scale: '[has_ad_logit, no_ad_logit]'
+  unit: logit difference
+  list_compression: no_ad_logit - has_ad_logit
+  outputs:
+  - name: ad_en_no_ad_margin
+    direction: benefit
+    direction_status: confirmed
+    basis: source card documents class order and no-ad label
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I12
+  raw_field: rps_doc_word_count
+  meaning: Number of normalized words in document
+  raw_scale: nonnegative count
+  unit: words
+  list_compression: retain scalar; no log transform in this contract
+  outputs:
+  - name: rps_doc_word_count
+    direction: pending_verification
+    direction_status: pending_verification
+    basis: length alone has no universal quality direction
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I13
+  raw_field: rps_doc_num_sentences
+  meaning: Number of detected sentences
+  raw_scale: nonnegative count
+  unit: sentences
+  list_compression: retain scalar
+  outputs:
+  - name: rps_doc_num_sentences
+    direction: pending_verification
+    direction_status: pending_verification
+    basis: document length/structure is task and domain dependent
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I14
+  raw_field: rps_doc_unigram_entropy
+  meaning: Entropy of the unigram distribution
+  raw_scale: nonnegative continuous
+  unit: entropy
+  list_compression: retain scalar
+  outputs:
+  - name: rps_doc_unigram_entropy
+    direction: pending_verification
+    direction_status: pending_verification
+    basis: higher lexical entropy is not universally better across domains
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I15
+  raw_field: rps_doc_frac_unique_words
+  meaning: Fraction of unique normalized words
+  raw_scale: fraction
+  unit: ratio
+  list_compression: retain scalar
+  outputs:
+  - name: rps_doc_frac_unique_words
+    direction: benefit
+    direction_status: confirmed
+    basis: source card identifies it as a degeneracy/diversity measure; more unique
+      words means less repetition under this proxy
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I16
+  raw_field: rps_doc_frac_no_alph_words
+  meaning: Fraction of words without alphabetic characters
+  raw_scale: fraction
+  unit: ratio
+  list_compression: retain scalar
+  outputs:
+  - name: rps_doc_frac_no_alph_words
+    direction: cost
+    direction_status: confirmed
+    basis: source card identifies non-alphabetic words as a noise signal
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I17
+  raw_field: rps_doc_frac_chars_top_2gram
+  meaning: Fraction of characters in the most frequent word 2-gram
+  raw_scale: fraction
+  unit: ratio
+  list_compression: retain scalar
+  outputs:
+  - name: rps_doc_frac_chars_top_2gram
+    direction: cost
+    direction_status: confirmed
+    basis: higher top n-gram concentration is a repetition proxy
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I18
+  raw_field: rps_doc_frac_chars_top_3gram
+  meaning: Fraction of characters in the most frequent word 3-gram
+  raw_scale: fraction
+  unit: ratio
+  list_compression: retain scalar
+  outputs:
+  - name: rps_doc_frac_chars_top_3gram
+    direction: cost
+    direction_status: confirmed
+    basis: higher top n-gram concentration is a repetition proxy
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I19
+  raw_field: rps_lines_uppercase_letter_fraction
+  meaning: Fraction of uppercase letters among characters
+  raw_scale: fraction
+  unit: ratio
+  list_compression: retain scalar
+  outputs:
+  - name: rps_lines_uppercase_letter_fraction
+    direction: pending_verification
+    direction_status: pending_verification
+    basis: uppercase usage differs by domain, code and document genre
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I20
+  raw_field: rps_lines_ending_with_terminal_punctution_mark
+  meaning: Fraction of lines ending with terminal punctuation
+  raw_scale: fraction
+  unit: ratio
+  list_compression: retain scalar
+  outputs:
+  - name: rps_lines_ending_with_terminal_punctution_mark
+    direction: benefit
+    direction_status: confirmed
+    basis: source card identifies terminal punctuation as a naturalness/structure
+      signal
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I21
+  raw_field: rps_lines_numerical_chars_fraction
+  meaning: Fraction of numerical characters
+  raw_scale: fraction
+  unit: ratio
+  list_compression: retain scalar
+  outputs:
+  - name: rps_lines_numerical_chars_fraction
+    direction: pending_verification
+    direction_status: pending_verification
+    basis: numeric-heavy text can be valid mathematics/code or noise
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only
+- indicator_id: I22
+  raw_field: rps_doc_mean_word_length
+  meaning: Mean normalized word length
+  raw_scale: nonnegative continuous
+  unit: characters per word
+  list_compression: retain scalar
+  outputs:
+  - name: rps_doc_mean_word_length
+    direction: pending_verification
+    direction_status: pending_verification
+    basis: word length is a complexity proxy without a universal quality direction
+  evidence:
+  - problem/数据说明_已清除隐藏误导文字.pdf#page=9
+  - https://huggingface.co/datasets/opendatalab/SlimPajama-Meta-rater/blob/1b31bb3/README.md
+  missing_nonfinite: retain row; set affected output null; report component and row
+    counts; no imputation
+  outlier_rule: audit A1 fit p01/p99 and MAD; primary quantile method clips only during
+    derived scaling
+  license_boundary: derived local matrix is not a substitute for redistributing raw
+    attachments; raw bytes remain local-only

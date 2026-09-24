@@ -1,0 +1,63 @@
+{
+  "archive_integrity": "PASS",
+  "all_extracted_files_match_delivery_manifest": true,
+  "independent_directory_rerun": "PASS",
+  "raw_files_not_required_for_scoring_from_delivered_matrix": true,
+  "external_historical_packages_not_required": true,
+  "score_and_weight_file_checks": [
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/artifacts/sample_scores.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/tables/model_weights.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/artifacts/sample_scores.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/artifacts/unique_sample_scores.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/model_weights.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/artifacts/sample_scores.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/tables/model_weights.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/artifacts/sample_scores.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/tables/model_weights.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/artifacts/sample_scores.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/tables/model_weights.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/artifacts/sample_scores.csv",
+      "identical_after_reproduction": true
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/tables/model_weights.csv",
+      "identical_after_reproduction": true
+    }
+  ],
+  "independent_validation_checks": 21,
+  "conclusion": "Both archives unpacked to a separate directory; scorer reran successfully; all seven sample-score files and six weight files were byte-identical."
+}

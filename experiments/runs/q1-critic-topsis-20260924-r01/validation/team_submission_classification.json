@@ -1,0 +1,31 @@
+{
+  "checks": {
+    "candidate_byte_match:indicator_catalog.yaml": true,
+    "official_WPA_preserved:indicator_catalog.yaml": true,
+    "candidate_byte_match:normalization_stats.json": true,
+    "official_WPA_preserved:normalization_stats.json": true,
+    "candidate_byte_match:indicator_audit.csv": true,
+    "official_WPA_preserved:indicator_audit.csv": true,
+    "candidate_byte_match:normalization_sensitivity.csv": true,
+    "official_WPA_preserved:normalization_sensitivity.csv": true,
+    "candidate_byte_match:data/manifests/q1_preprocessed.yaml": true,
+    "official_WPA_preserved:data/manifests/q1_preprocessed.yaml": true,
+    "candidate_byte_match:configs/q1-indicator-normalization.yaml": true,
+    "official_WPA_preserved:configs/q1-indicator-normalization.yaml": true,
+    "candidate_byte_match:scripts/q1_indicator_preprocess.py": true,
+    "official_WPA_preserved:scripts/q1_indicator_preprocess.py": true,
+    "official_WPA_preserved:docs/tasks/T-Q1-002.yml": true,
+    "official_WPA_preserved:docs/tasks/T-Q1-002-handoff.md": true,
+    "numerical_code_unchanged:src/models/q1_scoring.py": true,
+    "numerical_code_unchanged:scripts/q1_score_models.py": true,
+    "numerical_code_unchanged:scripts/verify_q1_delivery.py": true,
+    "numerical_code_unchanged:configs/q1-score-baselines.yaml": true,
+    "no_official_WPA_files_in_changes": true,
+    "no_private_files": true,
+    "isolated_workspace_independent_validation": true
+  },
+  "passed": 23,
+  "total": 23,
+  "verification_output": "{\n  \"passed\": true,\n  \"checks\": [\n    {\n      \"check\": \"CRITIC weights independently recomputed from covariance\",\n      \"passed\": true,\n      \"detail\": 3.191891195797325e-15\n    },\n    {\n      \"check\": \"All records and keys retained in source order\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"Every TOPSIS score independently recomputed\",\n      \"passed\": true,\n      \"detail\": 0.0\n    },\n    {\n      \"check\": \"All selected values and scores finite and bounded\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"Fit contains A1 fit only\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"Nine withheld directions stay empty\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"Unique sample coverage\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"Duplicate sample scores equal\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"Domain sample counts reconcile\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"Domain means match unique samples\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"Corpus equals sample-count-weighted domain means\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"Composition decomposition reconciles\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"All refreshed preprocessing outputs match manifest\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"Raw files unchanged during preprocessing\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"Rebuilt selected p01/p99 reproduce historical fit parameters\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"TOPSIS_CRITIC recorded output hashes match\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"CRITIC_SUM recorded output hashes match\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"EQUAL_SUM recorded output hashes match\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"TOPSIS_NO_3_COST recorded output hashes match\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"TOPSIS_NO_DSIR recorded output hashes match\",\n      \"passed\": true,\n      \"detail\": null\n    },\n    {\n      \"check\": \"TOPSIS_WEIGHT_SQUARED recorded output hashes match\",\n      \"passed\": true,\n      \"detail\": null\n    }\n  ],\n  \"count\": 21,\n  \"scope\": \"numerical and reproducibility checks, not quality-label validation\"\n}\n",
+  "verification_stderr": ""
+}

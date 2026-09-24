@@ -1,0 +1,52 @@
+{
+  "run_id": "q1-critic-topsis-20260924-r01",
+  "model": "TOPSIS_CRITIC",
+  "task_id": "T-Q1-004",
+  "status": "LOCAL_RESULT_PENDING_TEAM_REVIEW",
+  "needs_human_review": true,
+  "primary_model": true,
+  "preprocessing_run_id": "q1-indicator-normalization-20260924-r02",
+  "raw_sha256": {
+    "A1": "14a4eeec4c7d98efd78942ddd9c1329640527f2108e73227be449bc1a8dbe579",
+    "A2": "ae1e3399f84f605d994fc60b46984d742e14abb3355d8e7a91822eae1b99e16a",
+    "A3": "7af069c71c6027a10f2013cc14dd9d5d17855c264734f69c955544ff6cff7382"
+  },
+  "normalized_matrix_sha256": "0c61e680e0ea086976334670166cbccbdf9520541a9eb80aaf3b098a5cfb465a",
+  "config_sha256": "a95ae79e960b705512c7063addbe3f82f823fcba763cc59822ff4058c6f80328",
+  "source_commit": "3c7d3512301df6899d293e69a856027c7a4c530b",
+  "code_sha256": {
+    "scripts/q1_score_models.py": "0fc6130b495595fed4a8eca5185a96af0110a2b529a82403b2b17a6030e0c125",
+    "src/models/q1_scoring.py": "467657dde42172a19949a789e7c77451f0a51c2fa1d969912dafab3cdab14155",
+    "scripts/q1_indicator_preprocess.py": "b624788cbe4ea32d45ac636ae2feb5c74ff50c4b5bcdcbb931b4860245dddb27"
+  },
+  "n_file_records": 272505,
+  "n_unique_records": 261086,
+  "n_fit": 40919,
+  "counts": {
+    "A3": 203752,
+    "A1": 51230,
+    "A2": 17523
+  },
+  "scope": "Every A1/A2/A3 row scored; same-ID cross-file duplicates removed only in unique-union aggregation; no raw text output",
+  "output_sha256": {
+    "artifacts/sample_scores.csv": "66bea0fbb349a3e21c69737288bceab92fedb3f84631b0bc18288834547ea911",
+    "tables/domain_scores.csv": "09744c302b9061aa8eb6b5da3fa25a39fd6362ae4a04b8fa3d193875f251dfd2",
+    "tables/corpus_scores.csv": "1e6a454035ecbb83e4e4281ad1a594de5a3742d3b92549459c7706788719c71c",
+    "tables/model_weights.csv": "c406e1b5946f0833333a542c66f45ca120408d077bd428398222151f82d3b786",
+    "model_parameters.json": "7e01614bfd1e03915cd3b15fc715fdee4adc86164bafaebf83e256ad9074b201",
+    "config.yaml": "6892815e95fb314a7ac98408f0a269ff348157144a83bdc41d3fcd22b312b852",
+    "command.txt": "1cfeaa87274cd5d282166cdf541ffbf184785be58a2466ebdb6d3b74cba77943",
+    "git_commit.txt": "9b13812f4002e9e551ab8b17a6b0ae2d7eca147d3782cd127314ab6bea1b5424",
+    "environment.json": "61ad3ac52b6be641991244cfb9a1197b7350b63bc8157e0adb54c19a94c119ca",
+    "data_manifest.json": "a97b52732e107f9eb5e97b142f6aa3f87b2257b7f3bc7a5d60eff03725785552",
+    "metrics.json": "0dfaad3fecdc4523b07ea76c5f16f3711c28c67165bfb11eb109825fc3e1d220",
+    "artifacts/unique_sample_scores.csv": "f7148769aac33e8e4e70662e6468f2fb7e05b85dc69901c4b2e33d2ad2b75c22",
+    "tables/full_vs_A1.csv": "13dc67061137bbb9b03f71f82259311e7cc814413eb30ae4f5abe195088db4eb",
+    "tables/extended_vs_A1.csv": "dc7d4368b2443334a23125c0505cd5891e2676043fb64b8e14c40f2342d82764",
+    "tables/indicator_parameters.csv": "5f97e9730280fcb17439e0a123f84006d7e3265a9bc28175e43f409f0636b789",
+    "tables/fit_pearson_correlation.csv": "fd90a39e5c9b662c348f45c1928bbb06128b7e7e2d7550ddd7061099d610109e",
+    "tables/full_record_normalization_support.csv": "a1ff05d5033e13ba3fd36b44ced04103a4299b7900ba8afb444a47c2f7d0abd8",
+    "tables/model_sensitivity.csv": "d16fa59d45d577e5201842c73e0284313d2f2126cbff69d24a15027b1f0f269f",
+    "tables/all_models_cohort_domain.csv": "ad34dd15d4c3aeb8cd21d89bab485eee993a4c5b670df3c3fdd3b62a3b024b95"
+  }
+}

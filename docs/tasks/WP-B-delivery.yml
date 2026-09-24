@@ -1,0 +1,46 @@
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+release_approver_actors:
+- ACTOR-1
+- ACTOR-2
+- ACTOR-3
+task_ids:
+- T-Q1-003
+- T-Q1-004
+issue: https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/9
+branch: wp/ACTOR-2/WP-B
+team_base_commit: 1071d1ac655f50a526265bd64089e388e75a0929
+source_delivery_commit: f41c0c3a44a7956da060c97d95fbe4f2110f137f
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/12
+status: REVIEW_BLOCKED
+completeness: PARTIAL
+gate: G1
+gate_decision: PENDING
+peer_decision: PENDING
+integrator_decision: PENDING
+release_council_decision: PENDING
+needs_human_review: true
+assignment_note: 角色来自团队任务卡，仅用于路由职责；不据旧 B 标签断言提交人的受控 Actor 身份，不代替本人签署。
+historical_prompt_run_id: PR-20260924-B-TOPSIS-001
+submission_prompt_run_id: PR-20260924-WPB-SUBMIT-001
+primary_run_id: q1-critic-topsis-20260924-r01
+paper_outputs:
+- paper/sections/drafts/q1-critic-topsis-method.md
+claim_refs:
+- Q1-WPB-METHOD-001
+- Q1-WPB-COVERAGE-001
+feedback_ids:
+- FB-20260924-B-PREPROCESS-PROVENANCE
+- FB-20260924-WPB-GATE-001
+limitations:
+- 原模型规格任务仍 DRAFT，当前为既有用户授权本地实验的待审核交付，不追认 G1。
+- 本次主模型是 CRITIC–TOPSIS；PP-GA 仅历史归档，WP-B 全部候选范围尚未完成。
+- WP-A 原任务卡、交接及规范产物保持原样；候选修复单列，不替 WP-A Owner 修改结果。
+- 逐样本矩阵及分数仍须经受控团队渠道提供，Git 仅存公开元数据。
+next_action: ACTOR-3 独立复核模型提案，ACTOR-1 检查接口；WP-A Owner 决定是否采用候选预处理修复。
+
+head_repository: 2971793671-lgtm/huawei-cup-2026-team
+base_repository: xiaoyuankele/huawei-cup-2026-team
+base_branch: main

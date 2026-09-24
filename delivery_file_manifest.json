@@ -1,0 +1,873 @@
+{
+  "schema": "q1.delivery.files.v1",
+  "date": "2026-09-24",
+  "primary_run_id": "q1-critic-topsis-20260924-r01",
+  "status": "READY_FOR_TEAM_REVIEW_NOT_PUSHED",
+  "source_commit": "3c7d3512301df6899d293e69a856027c7a4c530b",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 1411,
+      "sha256": "0e1d1cd9081511b9e3f78110b511fd30b314edabe8778437c79375622adeffa5",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "configs/q1-indicator-normalization.yaml",
+      "bytes": 1324,
+      "sha256": "b01be78c221730cff5990f51f0f98442df7b5e0629f594709db418eb0e32a7ab",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "configs/q1-score-baselines.yaml",
+      "bytes": 2912,
+      "sha256": "a95ae79e960b705512c7063addbe3f82f823fcba763cc59822ff4058c6f80328",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "data/manifests/q1_preprocessed.yaml",
+      "bytes": 2356,
+      "sha256": "35251651d050db126fd4c45851545506b12409fd0ccf8bb0e33c20d49f0954c2",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "data/manifests/q1_scoring.json",
+      "bytes": 1144,
+      "sha256": "a498b82cdabefc24c76c7b9cc096f10f66bab4abe1ece17c4c87b39fb2c8e257",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "data/processed/q1_X_norm_v2.csv",
+      "bytes": 82849387,
+      "sha256": "0c61e680e0ea086976334670166cbccbdf9520541a9eb80aaf3b098a5cfb465a",
+      "delivery": "team_internal_data"
+    },
+    {
+      "path": "docs/decisions/q1-critic-topsis-model-spec.md",
+      "bytes": 1113,
+      "sha256": "7e043c04beb72388ec2d691195e48c0c0a05bcb18edb99d79c2ea476f11a6bc6",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "docs/decisions/q1-figure-contract.md",
+      "bytes": 1061,
+      "sha256": "66795c438bb548dd1a612b1b856c38ba021dce0e8c3ca167698eb55336749568",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "docs/decisions/q1-model-comparison-report.md",
+      "bytes": 1091,
+      "sha256": "c6bc08493d6907757ec0f0f537696cf3d052d177eea6c3f660fab8a06556ddb8",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "docs/decisions/q1-preprocessing-refresh-report.md",
+      "bytes": 1488,
+      "sha256": "b9854882cc30869f08f27f0b0c02a5cb01df6b188e083ec2caa2658063d473a9",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "docs/decisions/q1-quality-evaluation-report.md",
+      "bytes": 11255,
+      "sha256": "8009facbc10c6bd8cc10222de2f055c97409794b5853621fc619af45daf525f8",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "docs/tasks/T-Q1-002-handoff.md",
+      "bytes": 1181,
+      "sha256": "27981f8129bdd29e4af35c695b3cffa89c60d66829fc030bfd293bf0d0ad65ed",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "docs/tasks/T-Q1-002.yml",
+      "bytes": 4217,
+      "sha256": "e1d96e280e8fff0a1348d3365cd89548d4f19658593ffed8fde3e3c85f9db1cb",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "docs/tasks/T-Q1-004-handoff.md",
+      "bytes": 1171,
+      "sha256": "d374941e24890d881a878ace6da936efeb2bcecccd8a5732271eae4b1ff231c6",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "docs/tasks/T-Q1-004.yml",
+      "bytes": 2093,
+      "sha256": "25071ae387924272c438def27ceb04862139fe1aedb21b90032b5a6731bfe78f",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/index.csv",
+      "bytes": 2919,
+      "sha256": "7d38db883d459580126300d243b8689b878027c9eb03a6f882e9e69ceb867ba0",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/artifacts/sample_scores.csv",
+      "bytes": 21625402,
+      "sha256": "8c0c4a4f1f106ddb14597be3df8287a2a1aeb863e6c1350e0353a0098d992b4b",
+      "delivery": "team_internal_data"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/command.txt",
+      "bytes": 178,
+      "sha256": "1cfeaa87274cd5d282166cdf541ffbf184785be58a2466ebdb6d3b74cba77943",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/config.yaml",
+      "bytes": 2985,
+      "sha256": "d3aba9ac39dfa36826692bbf630f6b875b3e920ec8ef6380a32836068f6cd24d",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/data_manifest.json",
+      "bytes": 2815,
+      "sha256": "a97b52732e107f9eb5e97b142f6aa3f87b2257b7f3bc7a5d60eff03725785552",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/environment.json",
+      "bytes": 157,
+      "sha256": "61ad3ac52b6be641991244cfb9a1197b7350b63bc8157e0adb54c19a94c119ca",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/git_commit.txt",
+      "bytes": 128,
+      "sha256": "9b13812f4002e9e551ab8b17a6b0ae2d7eca147d3782cd127314ab6bea1b5424",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/metrics.json",
+      "bytes": 106,
+      "sha256": "c839c5def98f76579ffac545abb521af0e043c1e931fb41176f2370875918c15",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/model_parameters.json",
+      "bytes": 1125,
+      "sha256": "51465aae2f5825f1e0045ea586639c26eeaf2bc48caa9ca5ab13e71f0ce71403",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/README.md",
+      "bytes": 362,
+      "sha256": "5f91415d7a149bc464ff380c3ce2f1323c9e126e83e5051b31708c1b95d5cd80",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/run_manifest.json",
+      "bytes": 2492,
+      "sha256": "44f425fd78be59aca2bf58f24db0249e6ea5393ce000149476fd222797005127",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/tables/corpus_scores.csv",
+      "bytes": 1475,
+      "sha256": "b5f030cd03338369af0a77840d035bf9fa0aa00518b8d3e011f2a7132324978d",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/tables/domain_scores.csv",
+      "bytes": 5483,
+      "sha256": "8ff95c151569d241d0e01710daf2a9c6a865579a175b355e547752d12fc7c33d",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-sum-20260924-r02/tables/model_weights.csv",
+      "bytes": 764,
+      "sha256": "c406e1b5946f0833333a542c66f45ca120408d077bd428398222151f82d3b786",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/artifacts/sample_scores.csv",
+      "bytes": 32465320,
+      "sha256": "66bea0fbb349a3e21c69737288bceab92fedb3f84631b0bc18288834547ea911",
+      "delivery": "team_internal_data"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/artifacts/unique_sample_scores.csv",
+      "bytes": 20692131,
+      "sha256": "f7148769aac33e8e4e70662e6468f2fb7e05b85dc69901c4b2e33d2ad2b75c22",
+      "delivery": "team_internal_data"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/command.txt",
+      "bytes": 178,
+      "sha256": "1cfeaa87274cd5d282166cdf541ffbf184785be58a2466ebdb6d3b74cba77943",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/config.yaml",
+      "bytes": 2991,
+      "sha256": "6892815e95fb314a7ac98408f0a269ff348157144a83bdc41d3fcd22b312b852",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/data_manifest.json",
+      "bytes": 2815,
+      "sha256": "a97b52732e107f9eb5e97b142f6aa3f87b2257b7f3bc7a5d60eff03725785552",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/environment.json",
+      "bytes": 157,
+      "sha256": "61ad3ac52b6be641991244cfb9a1197b7350b63bc8157e0adb54c19a94c119ca",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/execution.log",
+      "bytes": 842,
+      "sha256": "05ec8f8fd84ec3e222c223243d30b315f016d7bbf80aa8a8611f799b3b76c5a1",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figures/domain_quality_comparison.pdf",
+      "bytes": 49219,
+      "sha256": "f3c88dcfcc756bc80a8763bbaed1c39791f7261723bf45670f9e4d2ac58cdf6a",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figures/domain_quality_comparison.png",
+      "bytes": 162668,
+      "sha256": "d953fe1b6431e2cd1ef537d549c9d73320d2b904e0f9e0b346bbb2a03a19ce8f",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figures/domain_quality_comparison.svg",
+      "bytes": 21880,
+      "sha256": "ecfb11cb7f8476d5a58452952d5a6befc73ddec0cc1db0d7c9af5151e74f82bf",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/git_commit.txt",
+      "bytes": 128,
+      "sha256": "9b13812f4002e9e551ab8b17a6b0ae2d7eca147d3782cd127314ab6bea1b5424",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/metrics.json",
+      "bytes": 517,
+      "sha256": "0dfaad3fecdc4523b07ea76c5f16f3711c28c67165bfb11eb109825fc3e1d220",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/model_parameters.json",
+      "bytes": 1212,
+      "sha256": "7e01614bfd1e03915cd3b15fc715fdee4adc86164bafaebf83e256ad9074b201",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/README.md",
+      "bytes": 378,
+      "sha256": "d517035d0258fb07e5725e875c700f21a963df1c5aa188e0ffafd064ff4e5a70",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/run_manifest.json",
+      "bytes": 3365,
+      "sha256": "976d011f9cfd60d9436f7d8f49555a7b5caa6d282d37b74869290d46802ab4b0",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/all_models_cohort_domain.csv",
+      "bytes": 54643,
+      "sha256": "ad34dd15d4c3aeb8cd21d89bab485eee993a4c5b670df3c3fdd3b62a3b024b95",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/corpus_scores.csv",
+      "bytes": 1480,
+      "sha256": "1e6a454035ecbb83e4e4281ad1a594de5a3742d3b92549459c7706788719c71c",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/domain_scores.csv",
+      "bytes": 5498,
+      "sha256": "09744c302b9061aa8eb6b5da3fa25a39fd6362ae4a04b8fa3d193875f251dfd2",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/extended_vs_A1.csv",
+      "bytes": 544,
+      "sha256": "dc7d4368b2443334a23125c0505cd5891e2676043fb64b8e14c40f2342d82764",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/fit_pearson_correlation.csv",
+      "bytes": 5771,
+      "sha256": "fd90a39e5c9b662c348f45c1928bbb06128b7e7e2d7550ddd7061099d610109e",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/full_record_normalization_support.csv",
+      "bytes": 15822,
+      "sha256": "a1ff05d5033e13ba3fd36b44ced04103a4299b7900ba8afb444a47c2f7d0abd8",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/full_vs_A1.csv",
+      "bytes": 571,
+      "sha256": "13dc67061137bbb9b03f71f82259311e7cc814413eb30ae4f5abe195088db4eb",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/indicator_parameters.csv",
+      "bytes": 2069,
+      "sha256": "5f97e9730280fcb17439e0a123f84006d7e3265a9bc28175e43f409f0636b789",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/model_sensitivity.csv",
+      "bytes": 1008,
+      "sha256": "d16fa59d45d577e5201842c73e0284313d2f2126cbff69d24a15027b1f0f269f",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/model_weights.csv",
+      "bytes": 764,
+      "sha256": "c406e1b5946f0833333a542c66f45ca120408d077bd428398222151f82d3b786",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/validation/figure_pdf_qa.json",
+      "bytes": 285,
+      "sha256": "eb95024ff0151962d0f6cc7041d21700db5b9d2b2c227feda2e8321660cfeae9",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/validation/figure_source_qa.json",
+      "bytes": 3753,
+      "sha256": "f28856e98cba592feceb64800cdfae8699bb8a7710bd2d3ecc1754da91062dd3",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/validation/figure_visual_qa.md",
+      "bytes": 791,
+      "sha256": "5fa8fa87203a976a4413847e31246e20dc6913bff50ef23af53bac9b946c14f7",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/validation/independent_validation.json",
+      "bytes": 3134,
+      "sha256": "60d87050afae7f79454433426a25ac6e7e67268923286137cc9af754f8a43299",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/validation/model_tests.txt",
+      "bytes": 262,
+      "sha256": "8ce3571d7bb5f3a52e54a05a0e475f5314f7c4e90437417a3268ba925249edcd",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/artifacts/sample_scores.csv",
+      "bytes": 21618554,
+      "sha256": "5da8b373d49857960c688bf199417abff2bf4015dfdb4b675eebb1af01a8c0fc",
+      "delivery": "team_internal_data"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/command.txt",
+      "bytes": 178,
+      "sha256": "1cfeaa87274cd5d282166cdf541ffbf184785be58a2466ebdb6d3b74cba77943",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/config.yaml",
+      "bytes": 2983,
+      "sha256": "ed1a7ae60f40f6a0c6cbb92eccb828684b1a6d99ac7d40f0fd13b6693c18eae7",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/data_manifest.json",
+      "bytes": 2815,
+      "sha256": "a97b52732e107f9eb5e97b142f6aa3f87b2257b7f3bc7a5d60eff03725785552",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/environment.json",
+      "bytes": 157,
+      "sha256": "61ad3ac52b6be641991244cfb9a1197b7350b63bc8157e0adb54c19a94c119ca",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/git_commit.txt",
+      "bytes": 128,
+      "sha256": "9b13812f4002e9e551ab8b17a6b0ae2d7eca147d3782cd127314ab6bea1b5424",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/metrics.json",
+      "bytes": 105,
+      "sha256": "9041ea9a8331002d76611b014105274fd557dcc971c25a5eed1e60eb3ccf6816",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/model_parameters.json",
+      "bytes": 914,
+      "sha256": "5f8a93e38f6fc499cdd59e96c2a296eea3e79562939997ea69c05fa65afd7eba",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/README.md",
+      "bytes": 369,
+      "sha256": "1633bc18a4fabd1dc446513310e0e0b0f58a0dc1d3677ea742568a80dd899c34",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/run_manifest.json",
+      "bytes": 2490,
+      "sha256": "80d7bae351ea783af99a88f0d352da7aece563ccfd41c7206f44ada9c680fee7",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/tables/corpus_scores.csv",
+      "bytes": 1477,
+      "sha256": "ea5462255645faa61fcdb3b4eee481831d956808192809c14aca2342260941ea",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/tables/domain_scores.csv",
+      "bytes": 5480,
+      "sha256": "8892b40bde208df4a27dd5a42720002ce6b064f1a627b41c66eddae2e8087be6",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-equal-sum-20260924-r02/tables/model_weights.csv",
+      "bytes": 543,
+      "sha256": "4b48323bc984ff32e3a03836aaa714a42f11ec00e877c1046c241496d9864ec2",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-historical-model-comparison-20260924-archive/archive_manifest.json",
+      "bytes": 1186,
+      "sha256": "8e8651a9ec9f097b369c595bf66a2ca5f2c21326d76819f6891ca92270b24afa",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-historical-model-comparison-20260924-archive/linear_model_weights.csv",
+      "bytes": 2707,
+      "sha256": "9b8833b92c4793be20a6a64d11b337c9d415bbd4937f15846bc8c71e8c8485d0",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-historical-model-comparison-20260924-archive/model_summary.csv",
+      "bytes": 3919,
+      "sha256": "7e1d9d54331875860256659dbbf49a61d0c714c88f1bb09598da43a8de1a5696",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-historical-model-comparison-20260924-archive/pairwise_comparison.csv",
+      "bytes": 76472,
+      "sha256": "550a8445ff4d061eaec31de833378e747d8e7901346b1bf74deb31c7a1b50f7f",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-historical-model-comparison-20260924-archive/ppga_weight_collapse.json",
+      "bytes": 238,
+      "sha256": "a33eb749e66a5bfd59134245cb963bf45987c7c6ad2ae19e328d85f0493a92b2",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-historical-model-comparison-20260924-archive/README.md",
+      "bytes": 241,
+      "sha256": "3efdfdade53a7b3ec3178ce1f51e6139e68c2c943eee88739ee2e18d7cece86f",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-indicator-normalization-20260924-r02/command.txt",
+      "bytes": 272,
+      "sha256": "739741c2003070eba9a6a212f71f65cf9f73fc04f919d8311eb30934fdd51d04",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-indicator-normalization-20260924-r02/config.yaml",
+      "bytes": 1324,
+      "sha256": "b01be78c221730cff5990f51f0f98442df7b5e0629f594709db418eb0e32a7ab",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-indicator-normalization-20260924-r02/data_manifest.yaml",
+      "bytes": 2356,
+      "sha256": "35251651d050db126fd4c45851545506b12409fd0ccf8bb0e33c20d49f0954c2",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-indicator-normalization-20260924-r02/environment.json",
+      "bytes": 157,
+      "sha256": "61ad3ac52b6be641991244cfb9a1197b7350b63bc8157e0adb54c19a94c119ca",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-indicator-normalization-20260924-r02/git_commit.txt",
+      "bytes": 128,
+      "sha256": "9b13812f4002e9e551ab8b17a6b0ae2d7eca147d3782cd127314ab6bea1b5424",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-indicator-normalization-20260924-r02/metrics.json",
+      "bytes": 151,
+      "sha256": "20a8a368de3308f5dd20fbb0d4470a380df284b773c03e2b2c3dc9000808d977",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-indicator-normalization-20260924-r02/README.md",
+      "bytes": 233,
+      "sha256": "d69473c8c32bc047b1f76161405444dcfb0c6144d2daa5dc9e5c927c74f2c323",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/artifacts/sample_scores.csv",
+      "bytes": 32464731,
+      "sha256": "71ef2bfd25a8e2fb952099a718174422dcfc4b2a9fcea7d34a9021027fda8de5",
+      "delivery": "team_internal_data"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/command.txt",
+      "bytes": 178,
+      "sha256": "1cfeaa87274cd5d282166cdf541ffbf184785be58a2466ebdb6d3b74cba77943",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/config.yaml",
+      "bytes": 2995,
+      "sha256": "ed49df31a388dde54155ddf4496b80f08921841ae6f0beaf4611007c2b9d4643",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/data_manifest.json",
+      "bytes": 2815,
+      "sha256": "a97b52732e107f9eb5e97b142f6aa3f87b2257b7f3bc7a5d60eff03725785552",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/environment.json",
+      "bytes": 157,
+      "sha256": "61ad3ac52b6be641991244cfb9a1197b7350b63bc8157e0adb54c19a94c119ca",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/git_commit.txt",
+      "bytes": 128,
+      "sha256": "9b13812f4002e9e551ab8b17a6b0ae2d7eca147d3782cd127314ab6bea1b5424",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/metrics.json",
+      "bytes": 111,
+      "sha256": "afdb001058a812ea6e8c684e436b9e9e7f936e0448e0abcbdbf4a6ac2e088f1d",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/model_parameters.json",
+      "bytes": 1165,
+      "sha256": "af4a0f9ce5a54169f84d4c42d42b94982455ca1d20f39c2f04a23bd49fedf7d2",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/README.md",
+      "bytes": 374,
+      "sha256": "fdc671acd3e6dd6814df19ef431c22679354d854a1e83d52a1cc58f094324fba",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/run_manifest.json",
+      "bytes": 2502,
+      "sha256": "0cd13f7657b3bff39706c062f48f8a313426793fbb9cc766811079c5a57baba9",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/tables/corpus_scores.csv",
+      "bytes": 1481,
+      "sha256": "90ed07852bd1a4bfa3f4606e2be9ff0aafe6b5e5fdc863a16cbf383b36097ed7",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/tables/domain_scores.csv",
+      "bytes": 5486,
+      "sha256": "1bdd617b5f89efb37c2e3c4ef6604ea5f5d17722c8c1d2faa664a29dc58c8d9f",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/tables/model_weights.csv",
+      "bytes": 709,
+      "sha256": "1cd69f54b6b451373fd6887d4c22f0856e11a878b82a66221e6b73f042fda03d",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/artifacts/sample_scores.csv",
+      "bytes": 32465288,
+      "sha256": "32f2e4279acb8106eefcc7caf4213884c8216c3627704105e9af763686c5bc3c",
+      "delivery": "team_internal_data"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/command.txt",
+      "bytes": 178,
+      "sha256": "1cfeaa87274cd5d282166cdf541ffbf184785be58a2466ebdb6d3b74cba77943",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/config.yaml",
+      "bytes": 2992,
+      "sha256": "c6836568c44b436e26be5ff7903e22f63adac7cf1bd6bfcb6702bc2a0a0dab62",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/data_manifest.json",
+      "bytes": 2815,
+      "sha256": "a97b52732e107f9eb5e97b142f6aa3f87b2257b7f3bc7a5d60eff03725785552",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/environment.json",
+      "bytes": 157,
+      "sha256": "61ad3ac52b6be641991244cfb9a1197b7350b63bc8157e0adb54c19a94c119ca",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/git_commit.txt",
+      "bytes": 128,
+      "sha256": "9b13812f4002e9e551ab8b17a6b0ae2d7eca147d3782cd127314ab6bea1b5424",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/metrics.json",
+      "bytes": 111,
+      "sha256": "a4fe00e156125cd7f224262fc63259f1e4eb9765f8afbef385bc4f1774831c3e",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/model_parameters.json",
+      "bytes": 1158,
+      "sha256": "7dd0af19c80e21e7776da5b40f32fbeeed4b0648abc567f53755e84004d84ac1",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/README.md",
+      "bytes": 373,
+      "sha256": "1005ed597eec96d8a3a7cfd3aba75f2dabaa1bed6551128d60fcad41909c263d",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/run_manifest.json",
+      "bytes": 2499,
+      "sha256": "fb2616ffc6d3cc788974244ce955cac78b7f01d891de7c59fe4998ceda6f048c",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/tables/corpus_scores.csv",
+      "bytes": 1479,
+      "sha256": "7dd324c55e78808b55eb2ba389e8a879fac0ddd946ac2944ce85f68cea451938",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/tables/domain_scores.csv",
+      "bytes": 5497,
+      "sha256": "6b251d3c3164981165c5d6caddc9f2cdc9425253b16ce6b8a8fe5a7342aeb614",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/tables/model_weights.csv",
+      "bytes": 709,
+      "sha256": "a7da71bd0b832bb43e78d5a9f26059de22dea9c07052c26cdb37bdb0bbbfc229",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/artifacts/sample_scores.csv",
+      "bytes": 32465649,
+      "sha256": "9f153f0ad911af38d71624bfcbd3a8c00f6d25304d82d8e098ce8244fe32e2d0",
+      "delivery": "team_internal_data"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/command.txt",
+      "bytes": 178,
+      "sha256": "1cfeaa87274cd5d282166cdf541ffbf184785be58a2466ebdb6d3b74cba77943",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/config.yaml",
+      "bytes": 3001,
+      "sha256": "825b760e63e36f6aca5f7f18993dba9facba781eb275e75114aab3c5d0dfac20",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/data_manifest.json",
+      "bytes": 2815,
+      "sha256": "a97b52732e107f9eb5e97b142f6aa3f87b2257b7f3bc7a5d60eff03725785552",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/environment.json",
+      "bytes": 157,
+      "sha256": "61ad3ac52b6be641991244cfb9a1197b7350b63bc8157e0adb54c19a94c119ca",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/git_commit.txt",
+      "bytes": 128,
+      "sha256": "9b13812f4002e9e551ab8b17a6b0ae2d7eca147d3782cd127314ab6bea1b5424",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/metrics.json",
+      "bytes": 118,
+      "sha256": "103e88a11b03b8940603739987f70fbb959aa5afa72654d4ff90dda7d75d7aa1",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/model_parameters.json",
+      "bytes": 1257,
+      "sha256": "ea69e56c0cdd1de5c109d5f9bf0f0f4fe380cd2aa5992215815d8d3891d78ebd",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/README.md",
+      "bytes": 378,
+      "sha256": "1da8a0893d0949106c684699e5183a8b22a90be60fe95a88444cda527d87ee64",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/run_manifest.json",
+      "bytes": 2508,
+      "sha256": "afbf3e979f8fbf0c2d79592b49e554e971954bd42d3ec328d0b9e44328e392e8",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/tables/corpus_scores.csv",
+      "bytes": 1481,
+      "sha256": "715d64843f7848c6ae1096413d428b6dd5aedb90653596cecca01c728e2159de",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/tables/domain_scores.csv",
+      "bytes": 5490,
+      "sha256": "833cf0bf582077975cd436cc8f0b3186620da54e377336f7411e8eced7ec7a75",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/tables/model_weights.csv",
+      "bytes": 765,
+      "sha256": "4630a19cb2457af627d77024e1afd638d23ee7883f6572ef98dbca565522ef50",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "governance/ai-use-log.csv",
+      "bytes": 2866,
+      "sha256": "e0aaf394d17bd23f8bbaac59fc6fb14bb104e67855657068ce383e42d9570f80",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "governance/feedback/records/FB-20260924-B-PREPROCESS-PROVENANCE.json",
+      "bytes": 1875,
+      "sha256": "0dc7e3c777189d01588df5daa4a4cf64e63750bc7c239c2ac0677cb9e8ff8f0d",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "governance/prompts/runs/PR-20260924-B-TOPSIS-001.yml",
+      "bytes": 1262,
+      "sha256": "d374c61b993fb15f6312dd68c3c516cc9fd2348799850a0716cca04e8b627c2c",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "indicator_audit.csv",
+      "bytes": 7513,
+      "sha256": "29f935b68093841cd0c8061e29760701d66afbf9325ca787681ffef209abc310",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "indicator_catalog.yaml",
+      "bytes": 22161,
+      "sha256": "1eaf3aedc644b318f4231e3fe7470ca0998c30f694ef584f334154cfc434f32f",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "normalization_sensitivity.csv",
+      "bytes": 19174,
+      "sha256": "854535096ebc4bb1bee5df897b794743bfa5e260f3cece8c911c68f5555e1f4c",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "normalization_stats.json",
+      "bytes": 17633,
+      "sha256": "d0ce72bfb931fd7414671262229284b104ffd60468e46c89115b78d608177077",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "README-delivery.md",
+      "bytes": 3214,
+      "sha256": "f725c054c9f2cf15bff24e5721c7075efc4053092d6b8b7c45e026d2d8693277",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "reference/preprocessing_before_refresh/indicator_audit.csv",
+      "bytes": 7487,
+      "sha256": "a83ba85bc15f581fe2988c9c2d554a908c62debddf1e209759e89b32dd99b1d8",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "reference/preprocessing_before_refresh/indicator_catalog.yaml",
+      "bytes": 21382,
+      "sha256": "2c66c7f5bcabaa276ae22c6c5445c9bda36091c77bbf20d12f585c075662a3c0",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "reference/preprocessing_before_refresh/normalization_sensitivity.csv",
+      "bytes": 19073,
+      "sha256": "356823b0aba30cfeee52e63c9bb566f29e1541425d05846d4b2cb72ad58822af",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "reference/preprocessing_before_refresh/normalization_stats.json",
+      "bytes": 16837,
+      "sha256": "f5fafa8a9ba2740599ac386d9daa9a36d37a3c28f38ba4eea087f361e96226a8",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "reference/preprocessing_before_refresh/q1_preprocessed.yaml",
+      "bytes": 2250,
+      "sha256": "75086894e94ab187c05271c41566ebdb41abeb871d6708ae7e25b1824329a40a",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "requirements-q1.txt",
+      "bytes": 78,
+      "sha256": "23488a4b4024ae1c71160ba3c4cea71cf750e821f0464039b72b8a650765db7e",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "scripts/plot_q1_topsis.py",
+      "bytes": 2896,
+      "sha256": "24f96ebe17c363e52c64dd06320d316d6ed9e767da95ed7c460c926ec661dcb5",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "scripts/q1_indicator_preprocess.py",
+      "bytes": 35067,
+      "sha256": "b624788cbe4ea32d45ac636ae2feb5c74ff50c4b5bcdcbb931b4860245dddb27",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "scripts/q1_score_models.py",
+      "bytes": 14401,
+      "sha256": "0fc6130b495595fed4a8eca5185a96af0110a2b529a82403b2b17a6030e0c125",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "scripts/verify_q1_delivery.py",
+      "bytes": 5886,
+      "sha256": "168e31e15c684e807eb168d61c953f1f6cb633e9c6b70da984deea6b6283a647",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "src/models/q1_scoring.py",
+      "bytes": 1786,
+      "sha256": "467657dde42172a19949a789e7c77451f0a51c2fa1d969912dafab3cdab14155",
+      "delivery": "git_candidate"
+    },
+    {
+      "path": "tests/test_q1_scoring.py",
+      "bytes": 1558,
+      "sha256": "61858ec9055b89e77ef4817400f8166b6d774bad2157921f2b78ce8fa93b28e6",
+      "delivery": "git_candidate"
+    }
+  ]
+}

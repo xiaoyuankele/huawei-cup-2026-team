@@ -1,0 +1,125 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "CRITIC weights independently recomputed from covariance",
+      "passed": true,
+      "detail": 3.191891195797325e-15
+    },
+    {
+      "check": "All records and keys retained in source order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Every TOPSIS score independently recomputed",
+      "passed": true,
+      "detail": 0.0
+    },
+    {
+      "check": "All selected values and scores finite and bounded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Fit contains A1 fit only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Nine withheld directions stay empty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Unique sample coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Duplicate sample scores equal",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Domain sample counts reconcile",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Domain means match unique samples",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Corpus equals sample-count-weighted domain means",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Composition decomposition reconciles",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "All refreshed preprocessing outputs match manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Raw files unchanged during preprocessing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Rebuilt selected p01/p99 reproduce historical fit parameters",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "TOPSIS_CRITIC recorded output hashes match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "CRITIC_SUM recorded output hashes match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "EQUAL_SUM recorded output hashes match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "TOPSIS_NO_3_COST recorded output hashes match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "TOPSIS_NO_DSIR recorded output hashes match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "TOPSIS_WEIGHT_SQUARED recorded output hashes match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Historical TOPSIS record alignment",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Rebuilt main scores agree with existing TOPSIS_CRITIC",
+      "passed": true,
+      "detail": {
+        "max_absolute_difference": 2.424151546165376e-09,
+        "reason_for_small_difference": "Old normalized export used 10 significant digits; refreshed preprocessing exports 12."
+      }
+    }
+  ],
+  "count": 23,
+  "scope": "numerical and reproducibility checks, not quality-label validation"
+}

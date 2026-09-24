@@ -1,0 +1,9 @@
+{
+  "python": "3.11.5",
+  "platform": "Windows",
+  "numpy": "1.26.4",
+  "pandas": "2.0.3",
+  "scipy": "1.11.1",
+  "PyYAML": "6.0",
+  "threads": 1
+}

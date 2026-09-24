@@ -1,0 +1,29 @@
+{
+  "schema_version": "q1.scoring.delivery.v1",
+  "task_id": "T-Q1-004",
+  "status": "LOCAL_RESULT_PENDING_TEAM_REVIEW",
+  "needs_human_review": true,
+  "primary_model": "TOPSIS_CRITIC",
+  "primary_run_id": "q1-critic-topsis-20260924-r01",
+  "preprocessing_manifest": "data/manifests/q1_preprocessed.yaml",
+  "preprocessing_run_id": "q1-indicator-normalization-20260924-r02",
+  "models": {
+    "TOPSIS_CRITIC": "q1-critic-topsis-20260924-r01",
+    "CRITIC_SUM": "q1-critic-sum-20260924-r02",
+    "EQUAL_SUM": "q1-equal-sum-20260924-r02",
+    "TOPSIS_NO_3_COST": "q1-topsis-no3cost-20260924-r01",
+    "TOPSIS_NO_DSIR": "q1-topsis-nodsir-20260924-r01",
+    "TOPSIS_WEIGHT_SQUARED": "q1-topsis-wsquared-20260924-r01"
+  },
+  "complete_data_files": {
+    "matrix": "data/processed/q1_X_norm_v2.csv",
+    "all_record_scores": "experiments/runs/q1-critic-topsis-20260924-r01/artifacts/sample_scores.csv",
+    "unique_sample_scores": "experiments/runs/q1-critic-topsis-20260924-r01/artifacts/unique_sample_scores.csv"
+  },
+  "record_counts": {
+    "A3": 203752,
+    "A1": 51230,
+    "A2": 17523
+  },
+  "n_unique": 261086
+}

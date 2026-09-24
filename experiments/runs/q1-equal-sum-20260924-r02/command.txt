@@ -1,0 +1,2 @@
+python -X utf8 scripts/q1_score_models.py --root . --config configs/q1-score-baselines.yaml
+# This command produces each separately identified model run from one common input.
