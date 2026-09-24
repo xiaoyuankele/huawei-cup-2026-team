@@ -1,0 +1,75 @@
+schema_version: q1.critic-topsis.delivery.v1
+task_id: T-Q1-004
+prompt_run_id: PR-20260924-B-TOPSIS-001
+source_repository_commit: 3c7d3512301df6899d293e69a856027c7a4c530b
+execution_authorization: User selected CRITIC + TOPSIS and requested rerun and delivery
+  on 2026-09-24; team ACCEPTED status is not implied
+status: LOCAL_RESULT_PENDING_TEAM_REVIEW
+primary_model: TOPSIS_CRITIC
+run_ids:
+  TOPSIS_CRITIC: q1-critic-topsis-20260924-r01
+  CRITIC_SUM: q1-critic-sum-20260924-r02
+  EQUAL_SUM: q1-equal-sum-20260924-r02
+  TOPSIS_NO_3_COST: q1-topsis-no3cost-20260924-r01
+  TOPSIS_NO_DSIR: q1-topsis-nodsir-20260924-r01
+  TOPSIS_WEIGHT_SQUARED: q1-topsis-wsquared-20260924-r01
+fit_dataset: A1
+fit_split: fit
+fit_seed: 20260923
+indicators:
+- fineweb_edu
+- fluency_en_fluent_margin
+- modernbert_cleanliness_expected
+- modernbert_readability_expected
+- dsir_books
+- dsir_wiki
+- dsir_math
+- qurater_writing_style
+- qurater_facts_trivia
+- qurater_educational_value
+- ad_en_no_ad_margin
+- rps_doc_frac_unique_words
+- rps_doc_frac_no_alph_words
+- rps_doc_frac_chars_top_2gram
+- rps_doc_frac_chars_top_3gram
+- rps_lines_ending_with_terminal_punctution_mark
+matrix: data/processed/q1_X_norm_v2.csv
+preprocessing_manifest: data/manifests/q1_preprocessed.yaml
+raw_inputs:
+- dataset_id: A1
+  relative_path: A_data_value/slimpajama_quality_signal_sample.jsonl.xz
+  sha256: 14a4eeec4c7d98efd78942ddd9c1329640527f2108e73227be449bc1a8dbe579
+  role: A1_fit_and_holdout
+- dataset_id: A2
+  relative_path: A_data_value/slimpajama_quality_extended/arxiv_part-6777d8857c6e-000486.jsonl.xz
+  sha256: ae1e3399f84f605d994fc60b46984d742e14abb3355d8e7a91822eae1b99e16a
+  role: external_validation_only
+- dataset_id: A3
+  relative_path: A_data_value/slimpajama_quality_extended/github_part-6777d8857c6e-000275.jsonl.xz
+  sha256: 7af069c71c6027a10f2013cc14dd9d5d17855c264734f69c955544ff6cff7382
+  role: external_validation_only
+expected_counts:
+  A1: 51230
+  A2: 17523
+  A3: 203752
+expected_unique: 261086
+expected_fit: 40919
+expected_holdout: 10311
+normalization: A1 fit oriented p01/p99 clip-scale; fixed for all records
+critic: sd(ddof=1) * sum_k(1-Pearson_r_jk); normalized to sum one
+topsis: 100*sqrt(sum(w*x^2))/(sqrt(sum(w*x^2))+sqrt(sum(w*(1-x)^2))); w is metric
+  weight, not squared
+ideals:
+  positive: 1.0
+  negative: 0.0
+missing_selected_policy: fail rather than silently drop or impute
+aggregation: arithmetic sample mean within domain; corpus weighted by unique domain
+  sample counts
+union_rule: deduplicate ID after confirming identical domain and all 16 normalized
+  values
+sensitivity_scope: No-three-cost and no-DSIR mask and renormalize primary weights
+  without refitting; weight-squared variant tests an alternative TOPSIS distance convention
+direction_status: historical selected proxy directions retained; cross-domain validity
+  remains qualified
+executed_model: TOPSIS_NO_3_COST
+executed_run_id: q1-topsis-no3cost-20260924-r01

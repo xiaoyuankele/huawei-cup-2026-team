@@ -1,0 +1,27 @@
+{
+  "model": "CRITIC_SUM",
+  "run_id": "q1-critic-sum-20260924-r02",
+  "fit_records": 40919,
+  "weights": {
+    "fineweb_edu": 0.06148666506811081,
+    "fluency_en_fluent_margin": 0.06892825348145404,
+    "modernbert_cleanliness_expected": 0.08000759809802988,
+    "modernbert_readability_expected": 0.07640131372016974,
+    "dsir_books": 0.042563670371297276,
+    "dsir_wiki": 0.041669780491548056,
+    "dsir_math": 0.0429540754490043,
+    "qurater_writing_style": 0.06293862440709724,
+    "qurater_facts_trivia": 0.058322398170958106,
+    "qurater_educational_value": 0.06370262431450868,
+    "ad_en_no_ad_margin": 0.07752972450882188,
+    "rps_doc_frac_unique_words": 0.06861912316946404,
+    "rps_doc_frac_no_alph_words": 0.04939756927499226,
+    "rps_doc_frac_chars_top_2gram": 0.05862368725424057,
+    "rps_doc_frac_chars_top_3gram": 0.057762349002360124,
+    "rps_lines_ending_with_terminal_punctution_mark": 0.089092543217943
+  },
+  "positive_ideal": 1.0,
+  "negative_ideal": 0.0,
+  "weight_convention": "100*sum(w*x)",
+  "note": "Main and controls use the same frozen normalized matrix"
+}

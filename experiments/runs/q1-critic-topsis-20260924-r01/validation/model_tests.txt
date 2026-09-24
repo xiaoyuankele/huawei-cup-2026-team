@@ -1,0 +1,3 @@
+Executed: python -X utf8 -m unittest discover -s tests -v
+Result: 5 tests passed. Test definitions: tests/test_q1_scoring.py
+Validated anchors, coordinate monotonicity, fixed-reference invariance, invalid-input rejection, and CRITIC constant-column behavior.

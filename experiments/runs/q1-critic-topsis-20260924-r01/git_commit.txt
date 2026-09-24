@@ -1,0 +1,2 @@
+3c7d3512301df6899d293e69a856027c7a4c530b
+# Base repository commit; new delivery code is uncommitted and identified by SHA256.

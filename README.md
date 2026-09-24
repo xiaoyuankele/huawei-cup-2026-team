@@ -50,3 +50,7 @@ deliverables/          封卷和提交材料
 先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)、[docs/architecture.md](docs/architecture.md)、[全流程架构图](docs/architecture-flow.md)、[governance/roles-and-raci.md](governance/roles-and-raci.md)、[governance/prompts/README.md](governance/prompts/README.md)、[paper/README.md](paper/README.md) 和 [governance/release-checklist.md](governance/release-checklist.md)。
 
 论文模板来源和本项目的路径适配记录见 [paper/TEMPLATE-SOURCE.md](paper/TEMPLATE-SOURCE.md)。
+
+## WP-B 模型交付候选
+
+[CRITIC–TOPSIS 报告、表图与复现入口](README-delivery.md)；[工作包交接](docs/tasks/WP-B-delivery.yml)。当前 PARTIAL / REVIEW_BLOCKED，尚未通过团队验收。

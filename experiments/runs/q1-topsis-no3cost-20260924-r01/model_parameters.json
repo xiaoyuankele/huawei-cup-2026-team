@@ -1,0 +1,27 @@
+{
+  "model": "TOPSIS_NO_3_COST",
+  "run_id": "q1-topsis-no3cost-20260924-r01",
+  "fit_records": 40919,
+  "weights": {
+    "fineweb_edu": 0.07370589390932833,
+    "fluency_en_fluent_margin": 0.08262634723856946,
+    "modernbert_cleanliness_expected": 0.09590748710832231,
+    "modernbert_readability_expected": 0.0915845267807946,
+    "dsir_books": 0.05102233743370674,
+    "dsir_wiki": 0.04995080505232884,
+    "dsir_math": 0.05149032761023139,
+    "qurater_writing_style": 0.07544640074737924,
+    "qurater_facts_trivia": 0.06991279308065296,
+    "qurater_educational_value": 0.07636223015624417,
+    "ad_en_no_ad_margin": 0.09293718634986385,
+    "rps_doc_frac_unique_words": 0.0822557835406611,
+    "rps_doc_frac_no_alph_words": 0.0,
+    "rps_doc_frac_chars_top_2gram": 0.0,
+    "rps_doc_frac_chars_top_3gram": 0.0,
+    "rps_lines_ending_with_terminal_punctution_mark": 0.10679788099191695
+  },
+  "positive_ideal": 1.0,
+  "negative_ideal": 0.0,
+  "weight_convention": "100*sqrt(sum(w*x^2))/(sqrt(sum(w*x^2))+sqrt(sum(w*(1-x)^2))); w is metric weight, not squared",
+  "note": "Main and controls use the same frozen normalized matrix"
+}

@@ -1,0 +1,26 @@
+feedback_id: FB-20260924-WPB-GATE-001
+type: evidence_gap
+severity: P1
+status: captured
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+release_approver_actors:
+- ACTOR-1
+- ACTOR-2
+- ACTOR-3
+task_id: T-Q1-004
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/12
+observed_behavior: User-authorized local CRITIC-TOPSIS runs exist but T-Q1-003 remains
+  DRAFT and G1 is not accepted
+expected_behavior: Only accepted interfaces and independent peer/integrator review
+  authorize formal model conclusions
+impact: Draft submission can be inspected; merge/publication acceptance remains blocked
+evidence:
+- docs/tasks/T-Q1-003.yml
+- docs/tasks/WP-B-delivery.yml
+resolution: null
+next_action: ACTOR-3 reviews proposed protocol; ACTOR-1 checks interfaces; record
+  actual decisions before acceptance
+sensitivity: public

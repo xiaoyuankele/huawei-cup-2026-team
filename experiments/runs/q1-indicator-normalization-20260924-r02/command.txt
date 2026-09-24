@@ -1,0 +1,2 @@
+python -X utf8 scripts/q1_indicator_preprocess.py --root . --config configs/q1-indicator-normalization.yaml --raw-root <LOCAL_RAW_ROOT>
+# LOCAL_RAW_ROOT is the folder containing A_data_value/. Omit --raw-root when raw files already occupy data/origin/real_attachments/.

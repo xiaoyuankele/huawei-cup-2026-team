@@ -1,0 +1,27 @@
+{
+  "model": "TOPSIS_WEIGHT_SQUARED",
+  "run_id": "q1-topsis-wsquared-20260924-r01",
+  "fit_records": 40919,
+  "weights": {
+    "fineweb_edu": 0.05775958360211966,
+    "fluency_en_fluent_margin": 0.07258664539547056,
+    "modernbert_cleanliness_expected": 0.09779679953854041,
+    "modernbert_readability_expected": 0.08917925290679501,
+    "dsir_books": 0.027678357819407477,
+    "dsir_wiki": 0.02652800571670912,
+    "dsir_math": 0.028188432632811074,
+    "qurater_writing_style": 0.060519686616200954,
+    "qurater_facts_trivia": 0.05196763155572287,
+    "qurater_educational_value": 0.06199787800235097,
+    "ad_en_no_ad_margin": 0.09183297601028828,
+    "rps_doc_frac_unique_words": 0.07193703034068968,
+    "rps_doc_frac_no_alph_words": 0.03727977950442843,
+    "rps_doc_frac_chars_top_2gram": 0.052505940086388446,
+    "rps_doc_frac_chars_top_3gram": 0.05097437030326532,
+    "rps_lines_ending_with_terminal_punctution_mark": 0.12126762996881167
+  },
+  "positive_ideal": 1.0,
+  "negative_ideal": 0.0,
+  "weight_convention": "100*sqrt(sum(w*x^2))/(sqrt(sum(w*x^2))+sqrt(sum(w*(1-x)^2))); w is metric weight, not squared",
+  "note": "TOPSIS_WEIGHT_SQUARED uses normalized squared original CRITIC weights; sensitivity only"
+}

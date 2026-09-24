@@ -1,0 +1,24 @@
+prompt_run_id: PR-20260924-WPB-SUBMIT-001
+date: '2026-09-24'
+prompt_id: P-EXP-002
+prompt_version: v1.0.0
+purpose: User requested submission to shared team repository in required categories
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+release_approver_actors:
+- ACTOR-1
+- ACTOR-2
+- ACTOR-3
+status: REVIEW_BLOCKED
+needs_human_review: true
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/12
+source_commit: 1071d1ac655f50a526265bd64089e388e75a0929
+historical_run: PR-20260924-B-TOPSIS-001
+output_ref: docs/tasks/WP-B-delivery.yml
+limitations:
+- 原模型规格任务仍 DRAFT，当前为既有用户授权本地实验的待审核交付，不追认 G1。
+- 本次主模型是 CRITIC–TOPSIS；PP-GA 仅历史归档，WP-B 全部候选范围尚未完成。
+- WP-A 原任务卡、交接及规范产物保持原样；候选修复单列，不替 WP-A Owner 修改结果。
+- 逐样本矩阵及分数仍须经受控团队渠道提供，Git 仅存公开元数据。

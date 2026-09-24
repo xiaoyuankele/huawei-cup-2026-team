@@ -1,0 +1,41 @@
+schema_version: q1.indicator-normalization.v1
+run_id: q1-indicator-normalization-20260924-r02
+task_id: T-Q1-002
+prompt_run_id: PR-20260924-B-TOPSIS-001
+raw_root: data/origin/real_attachments
+datasets:
+  A1: A_data_value/slimpajama_quality_signal_sample.jsonl.xz
+  A2: A_data_value/slimpajama_quality_extended/arxiv_part-6777d8857c6e-000486.jsonl.xz
+  A3: A_data_value/slimpajama_quality_extended/github_part-6777d8857c6e-000275.jsonl.xz
+fit:
+  dataset: A1
+  split_rule: first 8 bytes of SHA256(seed + | + id), big-endian integer modulo 100;
+    0-79 fit, 80-99 holdout
+  seed: 20260923
+  fit_percent: 80
+  holdout_percent: 20
+missing:
+  policy: retain_row_leave_indicator_null
+  nonfinite_policy: treat_as_missing_and_report_component
+  imputation: none
+outliers:
+  audit: p01_p99_and_mad
+  primary: clip_to_A1_fit_p01_p99_before_scaling
+normalization:
+  primary: quantile_01_99
+  compare:
+  - min_max
+  - quantile_01_99
+  - rank_ecdf
+  - robust_z_logistic
+  output_range:
+  - 0.0
+  - 1.0
+  direction_rule: confirmed benefit/cost only; pending directions are withheld from
+    final matrix
+outputs:
+  matrix: data/processed/q1_X_norm_v2.csv
+  catalog: indicator_catalog.yaml
+  stats: normalization_stats.json
+  audit: indicator_audit.csv
+  sensitivity: normalization_sensitivity.csv

@@ -1,52 +1,60 @@
-# 问题一基线、PP-GA 与对照模型实现
 task_id: T-Q1-004
-title: "问题一基线、PP-GA 与对照模型实现"
-status: DRAFT # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
+title: 问题一基线、PP-GA 与对照模型实现
+status: DRAFT
 work_package: WP-B
 owner_actor: ACTOR-2
 peer_reviewer_actor: ACTOR-3
 release_integrator_actor: ACTOR-1
 release_approver_actors:
-  - ACTOR-1
-  - ACTOR-2
-  - ACTOR-3
+- ACTOR-1
+- ACTOR-2
+- ACTOR-3
 review_domain: experiment
 review:
   peer_reviewer_must_differ: true
   integrator_must_differ: true
   no_reviewer_status: REVIEW_BLOCKED
 priority: P0
-issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/9"
-branch: "wp/ACTOR-2/WP-B"
+issue: https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/9
+branch: wp/ACTOR-2/WP-B
 branch_owner_actor: ACTOR-2
 gate: G1
 prompt:
   prompt_id: P-EXP-002
   version: v1.0.0
-  prompt_run_id: ""
-objective: "按已接受模型规格实现可复现基线、PP-GA 和对照模型，并以 run_id 保存全部指标和限制。"
+  prompt_run_id: ''
+objective: 按已接受模型规格实现可复现基线、PP-GA 和对照模型，并以 run_id 保存全部指标和限制。
 inputs:
-  - ref: docs/tasks/T-Q1-003.yml
-    purpose: "已接受模型规格和评价协议"
-  - ref: data/manifests/q1_preprocessed.yaml
-    purpose: "派生矩阵和 A1 fit 参数"
+- ref: docs/tasks/T-Q1-003.yml
+  purpose: 已接受模型规格和评价协议
+- ref: data/manifests/q1_preprocessed.yaml
+  purpose: 派生矩阵和 A1 fit 参数
 expected_outputs:
-  - path: src/models/q1_scoring.py
-    description: "基线、PP-GA 和对照模型实现"
-  - path: scripts/q1_score_models.py
-    description: "从仓库根目录运行的实验入口"
-  - path: configs/q1-score-baselines.yaml
-    description: "方法、seed、参数范围和输出目录"
-  - path: experiments/runs/<run_id>/
-    description: "配置、命令、commit、manifest、环境、指标、日志和结论"
-  - path: experiments/index.csv
-    description: "实验索引回链 task、prompt_run、manifest 和 reviewer"
+- path: src/models/q1_scoring.py
+  description: 基线、PP-GA 和对照模型实现
+- path: scripts/q1_score_models.py
+  description: 从仓库根目录运行的实验入口
+- path: configs/q1-score-baselines.yaml
+  description: 方法、seed、参数范围和输出目录
+- path: experiments/runs/<run_id>/
+  description: 配置、命令、commit、manifest、环境、指标、日志和结论
+- path: experiments/index.csv
+  description: 实验索引回链 task、prompt_run、manifest 和 reviewer
 acceptance_criteria:
-  - "先完成等权/稳健基线，再运行 PP-GA；所有方法使用相同数据分层和评价指标"
-  - "随机种子、初始化、停止条件、约束和失败原因完整记录"
-  - "A2/A3 不参与参数估计；外部结果按重叠与新增子集分层"
-  - "不输出未经验证的质量总分最优性或因果结论"
+- 先完成等权/稳健基线，再运行 PP-GA；所有方法使用相同数据分层和评价指标
+- 随机种子、初始化、停止条件、约束和失败原因完整记录
+- A2/A3 不参与参数估计；外部结果按重叠与新增子集分层
+- 不输出未经验证的质量总分最优性或因果结论
 definition_of_done:
-  - "ACTOR-3 完成 Peer Review，ACTOR-1 完成 Release Integrator 检查代码和运行记录"
-  - "所有候选方法拥有独立 run_id，失败运行不删除"
-notes: "如果 T-Q1-003 未 PACKAGE_ACCEPTED，本任务只能做接口 smoke test，不得产生正式模型结论。"
+- ACTOR-3 完成 Peer Review，ACTOR-1 完成 Release Integrator 检查代码和运行记录
+- 所有候选方法拥有独立 run_id，失败运行不删除
+notes: 如果 T-Q1-003 未 PACKAGE_ACCEPTED，本任务只能做接口 smoke test，不得产生正式模型结论。
+submission_candidate:
+  status: REVIEW_BLOCKED
+  completeness: PARTIAL
+  branch: wp/ACTOR-2/WP-B
+  pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/12
+  handoff: docs/tasks/WP-B-delivery.yml
+  paper_section: paper/sections/drafts/q1-critic-topsis-method.md
+  primary_run_id: q1-critic-topsis-20260924-r01
+  gate_status: PENDING; original task DRAFT preserved

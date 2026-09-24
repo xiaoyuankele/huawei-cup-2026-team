@@ -1,0 +1,44 @@
+{
+  "run_id": "q1-topsis-nodsir-20260924-r01",
+  "model": "TOPSIS_NO_DSIR",
+  "task_id": "T-Q1-004",
+  "status": "LOCAL_RESULT_PENDING_TEAM_REVIEW",
+  "needs_human_review": true,
+  "primary_model": false,
+  "preprocessing_run_id": "q1-indicator-normalization-20260924-r02",
+  "raw_sha256": {
+    "A1": "14a4eeec4c7d98efd78942ddd9c1329640527f2108e73227be449bc1a8dbe579",
+    "A2": "ae1e3399f84f605d994fc60b46984d742e14abb3355d8e7a91822eae1b99e16a",
+    "A3": "7af069c71c6027a10f2013cc14dd9d5d17855c264734f69c955544ff6cff7382"
+  },
+  "normalized_matrix_sha256": "0c61e680e0ea086976334670166cbccbdf9520541a9eb80aaf3b098a5cfb465a",
+  "config_sha256": "a95ae79e960b705512c7063addbe3f82f823fcba763cc59822ff4058c6f80328",
+  "source_commit": "3c7d3512301df6899d293e69a856027c7a4c530b",
+  "code_sha256": {
+    "scripts/q1_score_models.py": "0fc6130b495595fed4a8eca5185a96af0110a2b529a82403b2b17a6030e0c125",
+    "src/models/q1_scoring.py": "467657dde42172a19949a789e7c77451f0a51c2fa1d969912dafab3cdab14155",
+    "scripts/q1_indicator_preprocess.py": "b624788cbe4ea32d45ac636ae2feb5c74ff50c4b5bcdcbb931b4860245dddb27"
+  },
+  "n_file_records": 272505,
+  "n_unique_records": 261086,
+  "n_fit": 40919,
+  "counts": {
+    "A3": 203752,
+    "A1": 51230,
+    "A2": 17523
+  },
+  "scope": "Every A1/A2/A3 row scored; same-ID cross-file duplicates removed only in unique-union aggregation; no raw text output",
+  "output_sha256": {
+    "artifacts/sample_scores.csv": "32f2e4279acb8106eefcc7caf4213884c8216c3627704105e9af763686c5bc3c",
+    "tables/domain_scores.csv": "6b251d3c3164981165c5d6caddc9f2cdc9425253b16ce6b8a8fe5a7342aeb614",
+    "tables/corpus_scores.csv": "7dd324c55e78808b55eb2ba389e8a879fac0ddd946ac2944ce85f68cea451938",
+    "tables/model_weights.csv": "a7da71bd0b832bb43e78d5a9f26059de22dea9c07052c26cdb37bdb0bbbfc229",
+    "model_parameters.json": "7dd0af19c80e21e7776da5b40f32fbeeed4b0648abc567f53755e84004d84ac1",
+    "config.yaml": "c6836568c44b436e26be5ff7903e22f63adac7cf1bd6bfcb6702bc2a0a0dab62",
+    "command.txt": "1cfeaa87274cd5d282166cdf541ffbf184785be58a2466ebdb6d3b74cba77943",
+    "git_commit.txt": "9b13812f4002e9e551ab8b17a6b0ae2d7eca147d3782cd127314ab6bea1b5424",
+    "environment.json": "61ad3ac52b6be641991244cfb9a1197b7350b63bc8157e0adb54c19a94c119ca",
+    "data_manifest.json": "a97b52732e107f9eb5e97b142f6aa3f87b2257b7f3bc7a5d60eff03725785552",
+    "metrics.json": "a4fe00e156125cd7f224262fc63259f1e4eb9765f8afbef385bc4f1774831c3e"
+  }
+}

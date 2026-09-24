@@ -1,0 +1,102 @@
+{
+  "figure02_indicator_heatmap_nature.png": {
+    "pixels": [
+      4322,
+      3590
+    ],
+    "dpi": [
+      599.9988,
+      599.9988
+    ]
+  },
+  "figure02_indicator_heatmap_nature.tiff": {
+    "pixels": [
+      4322,
+      3590
+    ],
+    "dpi": [
+      600.0,
+      600.0
+    ]
+  },
+  "figure03_A1_full_comparison_nature.png": {
+    "pixels": [
+      4322,
+      2787
+    ],
+    "dpi": [
+      599.9988,
+      599.9988
+    ]
+  },
+  "figure03_A1_full_comparison_nature.tiff": {
+    "pixels": [
+      4322,
+      2787
+    ],
+    "dpi": [
+      600.0,
+      600.0
+    ]
+  },
+  "figure04_composition_decomposition_nature.png": {
+    "pixels": [
+      4322,
+      2952
+    ],
+    "dpi": [
+      599.9988,
+      599.9988
+    ]
+  },
+  "figure04_composition_decomposition_nature.tiff": {
+    "pixels": [
+      4322,
+      2952
+    ],
+    "dpi": [
+      600.0,
+      600.0
+    ]
+  },
+  "figure05_critic_weights_nature.png": {
+    "pixels": [
+      4322,
+      3377
+    ],
+    "dpi": [
+      599.9988,
+      599.9988
+    ]
+  },
+  "figure05_critic_weights_nature.tiff": {
+    "pixels": [
+      4322,
+      3377
+    ],
+    "dpi": [
+      600.0,
+      600.0
+    ]
+  },
+  "figure06_model_sensitivity_nature.png": {
+    "pixels": [
+      4322,
+      2834
+    ],
+    "dpi": [
+      599.9988,
+      599.9988
+    ]
+  },
+  "figure06_model_sensitivity_nature.tiff": {
+    "pixels": [
+      4322,
+      2834
+    ],
+    "dpi": [
+      600.0,
+      600.0
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "run_id": "q1-equal-sum-20260924-r02",
+  "model": "EQUAL_SUM",
+  "task_id": "T-Q1-004",
+  "status": "LOCAL_RESULT_PENDING_TEAM_REVIEW",
+  "needs_human_review": true,
+  "primary_model": false,
+  "preprocessing_run_id": "q1-indicator-normalization-20260924-r02",
+  "raw_sha256": {
+    "A1": "14a4eeec4c7d98efd78942ddd9c1329640527f2108e73227be449bc1a8dbe579",
+    "A2": "ae1e3399f84f605d994fc60b46984d742e14abb3355d8e7a91822eae1b99e16a",
+    "A3": "7af069c71c6027a10f2013cc14dd9d5d17855c264734f69c955544ff6cff7382"
+  },
+  "normalized_matrix_sha256": "0c61e680e0ea086976334670166cbccbdf9520541a9eb80aaf3b098a5cfb465a",
+  "config_sha256": "a95ae79e960b705512c7063addbe3f82f823fcba763cc59822ff4058c6f80328",
+  "source_commit": "3c7d3512301df6899d293e69a856027c7a4c530b",
+  "code_sha256": {
+    "scripts/q1_score_models.py": "0fc6130b495595fed4a8eca5185a96af0110a2b529a82403b2b17a6030e0c125",
+    "src/models/q1_scoring.py": "467657dde42172a19949a789e7c77451f0a51c2fa1d969912dafab3cdab14155",
+    "scripts/q1_indicator_preprocess.py": "b624788cbe4ea32d45ac636ae2feb5c74ff50c4b5bcdcbb931b4860245dddb27"
+  },
+  "n_file_records": 272505,
+  "n_unique_records": 261086,
+  "n_fit": 40919,
+  "counts": {
+    "A3": 203752,
+    "A1": 51230,
+    "A2": 17523
+  },
+  "scope": "Every A1/A2/A3 row scored; same-ID cross-file duplicates removed only in unique-union aggregation; no raw text output",
+  "output_sha256": {
+    "artifacts/sample_scores.csv": "5da8b373d49857960c688bf199417abff2bf4015dfdb4b675eebb1af01a8c0fc",
+    "tables/domain_scores.csv": "8892b40bde208df4a27dd5a42720002ce6b064f1a627b41c66eddae2e8087be6",
+    "tables/corpus_scores.csv": "ea5462255645faa61fcdb3b4eee481831d956808192809c14aca2342260941ea",
+    "tables/model_weights.csv": "4b48323bc984ff32e3a03836aaa714a42f11ec00e877c1046c241496d9864ec2",
+    "model_parameters.json": "5f8a93e38f6fc499cdd59e96c2a296eea3e79562939997ea69c05fa65afd7eba",
+    "config.yaml": "ed1a7ae60f40f6a0c6cbb92eccb828684b1a6d99ac7d40f0fd13b6693c18eae7",
+    "command.txt": "1cfeaa87274cd5d282166cdf541ffbf184785be58a2466ebdb6d3b74cba77943",
+    "git_commit.txt": "9b13812f4002e9e551ab8b17a6b0ae2d7eca147d3782cd127314ab6bea1b5424",
+    "environment.json": "61ad3ac52b6be641991244cfb9a1197b7350b63bc8157e0adb54c19a94c119ca",
+    "data_manifest.json": "a97b52732e107f9eb5e97b142f6aa3f87b2257b7f3bc7a5d60eff03725785552",
+    "metrics.json": "9041ea9a8331002d76611b014105274fd557dcc971c25a5eed1e60eb3ccf6816"
+  }
+}
