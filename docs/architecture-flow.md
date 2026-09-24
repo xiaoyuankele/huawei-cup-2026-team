@@ -1,6 +1,6 @@
 # 全流程架构图 v2
 
-本图描述三条纵向工作包、四个证据源、证据门和最终 Release Council。图源保存在 `architecture-flow.mmd`。
+本图描述题目/子问题拆分、口头发布、三条纵向工作包、反馈回链、证据门和最终 Release Council。图源保存在 `architecture-flow.mmd`。
 
 ```mermaid
 flowchart TB
@@ -9,6 +9,12 @@ flowchart TB
         P2[ACTOR-2\nWP-B Owner\nWP-C Integrator]
         P3[ACTOR-3\nWP-C Owner\nWP-A Integrator]
         COORD[协调对话\n任务图/门控/决策]
+    end
+
+    subgraph PROBLEM_TREE[题目分解与发布]
+        PROBLEM[Problem Qn]
+        SUBPROBLEM[Subproblem Qn-Sxx]
+        ANNOUNCE[口头/会议发布\nannouncement_ref]
     end
 
     subgraph WPS[纵向工作包]
@@ -26,10 +32,11 @@ flowchart TB
         G4[G4 Release Council 三人签署]
     end
 
-    subgraph SOURCES[四个事实源]
-        TASK[Task Card]
+    subgraph SOURCES[事实源]
+        TASK[Task Card\ntask_id + 题目/子问题]
         PR[Pull Request]
         RUN[Run Manifest]
+        FEEDBACK[Feedback Case\nfeedback_id + 证据/响应]
         CLAIM[Claim Ledger]
     end
 
@@ -40,6 +47,9 @@ flowchart TB
     P2 --> COORD
     P3 --> COORD
     COORD --> TASK
+    PROBLEM --> SUBPROBLEM
+    SUBPROBLEM --> ANNOUNCE
+    ANNOUNCE --> TASK
     TASK --> G0
     G0 --> WPA
     G0 --> WPB
@@ -57,6 +67,9 @@ flowchart TB
     TASK -.-> PR
     PR -.-> RUN
     RUN -.-> CLAIM
+    RUN -.-> FEEDBACK
+    FEEDBACK -.-> TASK
+    FEEDBACK -.-> PR
     CLAIM -.-> INT
     G4 --> RELEASE[集成分支/最终 PDF/附件]
 ```

@@ -5,6 +5,8 @@
 ```text
 [HANDOFF]
 task_id: T-Q1-001
+problem_id: Q1
+subproblem_id: Q1-S00
 work_package: WP-A
 owner_actor: ACTOR-1
 peer_reviewer_actor: ACTOR-2
@@ -27,6 +29,9 @@ command: <完整可复制命令>
 outputs: <指标、日志、图表和文件路径>
 status: RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | REWORK | REVIEW_BLOCKED
 feedback_id: <feedback_id 或 NONE>
+feedback_status: NONE | CAPTURED | RESPONDED | CLOSED | BLOCKED
+feedback_summary: <脱敏一句话>
+evidence_ref: <run、PR 或文件>
 limitations: <已知限制、失败实验或未验证假设>
 next_action: <下一步动作>
 [/HANDOFF]

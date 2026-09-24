@@ -10,6 +10,12 @@ assignees: ""
 
 - Work package：WP-A / WP-B / WP-C / Q1-INT
 - Task ID / checklist：
+- Problem ID：`Q1`
+- Subproblem ID：`Q1-S00`
+- Problem scope：
+- Announcement mode：oral / meeting / issue
+- Announcement ref：会议记录或 Issue 链接
+- Announcement summary：
 - Owner Actor：
 - Peer Reviewer Actor：
 - Release Integrator Actor：

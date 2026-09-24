@@ -28,11 +28,13 @@ paper: revise sensitivity analysis section
 
 ## 任务流程
 
-1. 在 Issue 或 `docs/tasks/` 中登记任务和验收条件。
-2. 创建任务分支，所有路径使用相对路径。
-3. 运行最小验证或实验，并保存 `run_id`、配置、数据版本和环境信息。
-4. 提交 Pull Request，由另一名成员复核。
-5. 合并后更新决策记录、实验索引和 `paper/claim-ledger.csv`（如涉及论文主张）。
+1. 负责人可以在会议或语音中口头发布任务，但执行前必须在 `docs/tasks/` 创建任务卡，填写题目/子问题编号和 `announcement_ref`。
+2. 任务按 `problem_id → subproblem_id` 划分，例如 `Q1 → Q1-S03`；工作包和设备只表示执行方式。
+3. 接收任务的队友确认任务卡后创建任务分支，所有路径使用相对路径。
+4. 运行最小验证或实验，并保存 `run_id`、配置、数据版本和环境信息。
+5. 回馈第一行必须包含 `task_id`；失败、风险、阻塞或证据不足必须同时登记 `feedback_id`。
+6. 提交 Pull Request，由另一名成员复核。
+7. 合并后更新决策记录、实验索引和 `paper/claim-ledger.csv`（如涉及论文主张）。
 
 ## 数据与密钥
 

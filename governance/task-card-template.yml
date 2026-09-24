@@ -2,6 +2,9 @@
 # A/B/C 只可作为可选 review_domain；实际协作以 Actor 字段为准。
 task_id: T-Q1-000
 title: "明确任务名称"
+problem_id: Q1
+subproblem_id: Q1-S00
+problem_scope: "题目或子问题名称"
 status: DRAFT # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
 work_package: WP-A
 owner_actor: ACTOR-1
@@ -18,6 +21,17 @@ review:
   no_reviewer_status: REVIEW_BLOCKED
 priority: P1 # P0 | P1 | P2
 issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/"
+announcement:
+  mode: oral # oral | meeting | issue
+  announced_by_actor: ACTOR-1
+  announced_at: 2026-09-24T12:00:00+08:00
+  announcement_ref: "docs/meeting_notes/YYYYMMDD-topic.md 或 Issue URL"
+  summary: "口头发布内容的脱敏摘要"
+  acknowledged_by_actor: ACTOR-2
+  acknowledged_at: 2026-09-24T12:05:00+08:00
+feedback_required: true
+feedback_ids: []
+# announcement_ref 为空时只能保持 DRAFT 或 REVIEW_BLOCKED，不能进入 RUNNING。
 branch: "wp/ACTOR-1/WP-A"
 branch_owner_actor: ACTOR-1
 gate: G0
