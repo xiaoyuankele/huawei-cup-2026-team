@@ -1,0 +1,313 @@
+{
+  "base_commit": "1aab6ec52b291d4fb9a0af4005195caa3098772c",
+  "run_id": "q1-critic-topsis-20260924-r01",
+  "figure_count": 6,
+  "formats": [
+    "png",
+    "pdf",
+    "svg"
+  ],
+  "sample_level_records_uploaded": false,
+  "files": [
+    {
+      "path": "docs/tasks/WP-B-figures-handoff.yml",
+      "bytes": 1729,
+      "sha256": "76d1e74792809619015c08559a9370ee468b9e2655a8a586653564820b6a7ddf",
+      "git_blob_sha": "a9ecd381f6bebd38b6a67badb30d73568063c264"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/README.md",
+      "bytes": 2198,
+      "sha256": "34274de2955a67d17ca1fcc734e5ad7ab3f02eaedf24fb95ad5c634a1e717ac8",
+      "git_blob_sha": "6ce505d143727ef94fb76409a5f6f6b51c462d62"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/tables/density_curves.csv",
+      "bytes": 110928,
+      "sha256": "ea6e311bc6286da0c5893220f6fe90b13efa3655a4bd654f54a81489cf2aa2e9",
+      "git_blob_sha": "4f5dec0029c937390e77233256e12be2aca2aa1b"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/tables/domain_distribution_summary.csv",
+      "bytes": 1389,
+      "sha256": "45e557bf9670ee23db5e4066caa4a98a4051d15bf1b74d4d0b05d516ec44e4cd",
+      "git_blob_sha": "e0797c95cceaab18c516ea4aabe8b099ac762fcd"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/tables/figure02_domain_indicator_means.csv",
+      "bytes": 2114,
+      "sha256": "79db796826e632f6b5968321e4c47a04be0ee916a7707fb0ee417e02ea873eab",
+      "git_blob_sha": "9b3cba66a2c12f77e9a51188072d9e12d5216e77"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/tables/figure03_04_domain_comparison_and_shares.csv",
+      "bytes": 918,
+      "sha256": "4cc6f0668e36e55092c2249e2f9e370d94f1390a63f572772a33dfa1e925464b",
+      "git_blob_sha": "0fc715c03c641fe439b95c8d2c3ca65aab7cf478"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/tables/figure04_decomposition.csv",
+      "bytes": 163,
+      "sha256": "426f6933cdfbe0023638517d4028867ef22aa7d4e5c7d448825c1298d96abb78",
+      "git_blob_sha": "bf7deedcb77479776ae6c66426b342654085b8ad"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/tables/figure05_weights.csv",
+      "bytes": 1281,
+      "sha256": "983bcd6c25e196da7bde89d556f5bb8b2238ea0b7a5a7bb675a81c982db06053",
+      "git_blob_sha": "56bd894f9dc63d537a5e6bfed0c69e82a475ce3d"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/tables/figure06_sensitivity.csv",
+      "bytes": 876,
+      "sha256": "d54592fc77782a788cb5a551f17892f963128526ab9bacedc3a5f30a44343ae8",
+      "git_blob_sha": "6b8e4d9316a79b3e7dc3ba6d0f9ec825ff0e06e2"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figure01_comparison_qa.json",
+      "bytes": 139,
+      "sha256": "402c9b0da5c47b6521e518b1105bd4a9c4ab32ce67a7e7629d746bcaec9237fb",
+      "git_blob_sha": "02a944d587580cda13c170bbf7c77ce846bf0f2f"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figure01_figure_contract.md",
+      "bytes": 1981,
+      "sha256": "203b35c0c3aa04b01a19ac02613cdccf6bf6faebdd8130be081ef436eaab6c6b",
+      "git_blob_sha": "fee5ad67c5f181fdc5ed066d429b332221abd81c"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figure01_figure_manifest.json",
+      "bytes": 1816,
+      "sha256": "96dc803db74e47e7a253e0afde2865df767bb6ba7908a502e9b093320a915ba5",
+      "git_blob_sha": "3295b25ed32311fca07a3c4fd166c589ca6fb109"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figure01_pdf_text_qa.json",
+      "bytes": 267,
+      "sha256": "ddfdefa1363509f03c92957caafa0d37ce30879ab1a5437b920b937145ac9cb5",
+      "git_blob_sha": "fcf81d3d0ec4abf6659db6a24e6447f14b012365"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figure01_source_qa.json",
+      "bytes": 3584,
+      "sha256": "8a103a72b13796204392f0815e26db9b140fcbfe9bfc86e79e424fb1740d0296",
+      "git_blob_sha": "80d348a33f0c9f451a0e8a9f336c3a517bb30fed"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figure01_visual_qa.md",
+      "bytes": 1362,
+      "sha256": "630b76bd49ab9f390dc5f3ec71864da65bc955303164a1a2ec3b226974f082c2",
+      "git_blob_sha": "3392a88e46b2dbe6a203cb6e96809564d1731e3e"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figure02_indicator_heatmap_nature_pdf_qa.json",
+      "bytes": 266,
+      "sha256": "bf235f34164aeafe2c8669d8154048b04ff4e340cc0173446d1b2dda5ddf0831",
+      "git_blob_sha": "8e55274a3c9282e8856181fe4b80e9c2eec2d559"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figure03_A1_full_comparison_nature_pdf_qa.json",
+      "bytes": 266,
+      "sha256": "8236a2b6d8409c452dbe70b60c227dc413681a5de39e2689d9a908e43de80358",
+      "git_blob_sha": "663353df846abf2999c37fe71fff59894fdb4769"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figure04_composition_decomposition_nature_pdf_qa.json",
+      "bytes": 273,
+      "sha256": "d08f6356b3dc69b3e0b2096954c3860973e25f54bd42fd1f6c2ed8c89250730e",
+      "git_blob_sha": "a993f1694e0226a48cdb67b4b3db1ae63f54e210"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figure05_critic_weights_nature_pdf_qa.json",
+      "bytes": 262,
+      "sha256": "9df5e484645f39102ffd59dc29fa7edab0d9c2c8fc6ad790e7ea088a3857f233",
+      "git_blob_sha": "cf5a1c04e7a4daf230c369a9e89b0cb8d72d24e1"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figure06_model_sensitivity_nature_pdf_qa.json",
+      "bytes": 265,
+      "sha256": "1dd31ac16db813800696f4018e6b7dd4a169a8ff7179bd0b12be1271742bc963",
+      "git_blob_sha": "9f95aeaab6dcce7f4b4de2fcf977dde830df4ee6"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figures02_06_figure_contract.md",
+      "bytes": 3326,
+      "sha256": "70073ff272c29196330855f084ad69f13cae0f7dda3e44e9538f74dce1b2271a",
+      "git_blob_sha": "05fc2931e7448e16fa483721b1ac97a5d5bae5a6"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figures02_06_figure_manifest.json",
+      "bytes": 5738,
+      "sha256": "47d5d42d73ca8ec022f7f25caf048d145b21a7549b1085dcd277e1d0c63be726",
+      "git_blob_sha": "7a2216f292af2932d255cddc5eab51c43c9c577d"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figures02_06_raster_qa.json",
+      "bytes": 1450,
+      "sha256": "63bca3f22e17e3989f57de411100160d8915b45c1e55bd24f0380196f2a326e4",
+      "git_blob_sha": "c66556ed8277ac71b59041ec5b191f4b29624c70"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figures02_06_source_qa.json",
+      "bytes": 3571,
+      "sha256": "19f37258e3efd5341c1724530d6440a2fd87b24b8324fd03a629e5b24a84a9ba",
+      "git_blob_sha": "f19a0224dd41e47c11d48cb2a6b1ab273e000c90"
+    },
+    {
+      "path": "experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1/validation/figures02_06_visual_qa.md",
+      "bytes": 2431,
+      "sha256": "2077388a4581c62e47a67f83da4958508e115feb83971d2e6fe4f714b69ab057",
+      "git_blob_sha": "7bf03cd1388c1762b9b84a3c62b765709d278782"
+    },
+    {
+      "path": "paper/claim-ledger.csv",
+      "bytes": 4812,
+      "sha256": "e86323d552f7a9e72cec547a2e285a318ad5584957d0ca9d2ced6e07bd2926e0",
+      "git_blob_sha": "2bb42f492b23fd647aba79b82a73f7351aee8afd"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/captions.md",
+      "bytes": 6841,
+      "sha256": "8c5315ae85ebccfe6caa62c5dbbeb69078a3ed4240ef9733af6de8083c62caba",
+      "git_blob_sha": "45ded1aa410a5e3304266d0ab9cef43121ba83f4"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure01_domain_distribution_nature.pdf",
+      "bytes": 135396,
+      "sha256": "14ae3fd6b24ced7930420bf15bd6fe41dcdd1d6baf76d48210aa36a59ff17ea9",
+      "git_blob_sha": "60f81bb05ae756ed73028f9262afdf6d85652c29"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure01_domain_distribution_nature.png",
+      "bytes": 548194,
+      "sha256": "9274412b62ef17f011c583ac99047dc0f5c2fc76484a642183476ea2a4f83ea4",
+      "git_blob_sha": "2d69210891a569de82b0333ad1c3db4fa52d352c"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure01_domain_distribution_nature.svg",
+      "bytes": 220795,
+      "sha256": "d64414d8b6e7ff98689674d86187d8bb50e73c6f1d2f847bed79df8e6cbc68a0",
+      "git_blob_sha": "b119d2b8dc397d7cccb76f17e5222dafcf6b112a"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure02_indicator_heatmap_nature.pdf",
+      "bytes": 139602,
+      "sha256": "1654be9fce0635cffb970b4afbb9560e78cff51ee3ee6b0318fa15851dd5cd27",
+      "git_blob_sha": "12da57ed50a9ae0821a1d7521ea0a28787ee5556"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure02_indicator_heatmap_nature.png",
+      "bytes": 922555,
+      "sha256": "522f7eb1dc1ecfb0db686bd16ae7b06fb82c89ba706aadb2a7461be806165475",
+      "git_blob_sha": "cce00c0bc9b52ffd2c1879dd34ebbc6050c0bf17"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure02_indicator_heatmap_nature.svg",
+      "bytes": 84304,
+      "sha256": "e2a3b0f262ad0431c60d96aaade26685028df7b63a5f146a266915fb49bdeae6",
+      "git_blob_sha": "289326f922e20d0da468af010e756cc4e684c962"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure03_A1_full_comparison_nature.pdf",
+      "bytes": 87105,
+      "sha256": "b540f8c3b08084de39bc18aa7605d5594f37501f2ce8018e9b4528eaa2797e36",
+      "git_blob_sha": "146b42b5c59421e0dee71142576fbb1b54684122"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure03_A1_full_comparison_nature.png",
+      "bytes": 539863,
+      "sha256": "934d4a041a93006d7bf1159e938887217b12df4653a29f24b4e1115bb254c9b0",
+      "git_blob_sha": "3709dbcfe908da69a9c840f4d22918f29999fd90"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure03_A1_full_comparison_nature.svg",
+      "bytes": 25608,
+      "sha256": "fdd4c08e208176bef0ba7925178da18fa6516dfba4a0260c494f695f2101312b",
+      "git_blob_sha": "696284c24a07954bdd62d7df13faaf5ccdada14f"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure04_composition_decomposition_nature.pdf",
+      "bytes": 85267,
+      "sha256": "d34b10256f0d596c9dd466c34127e192a521290f44d1db76f441cd1884708c37",
+      "git_blob_sha": "276f0fba3d4c07c3a8dfb43d88cf13c04ffbc138"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure04_composition_decomposition_nature.png",
+      "bytes": 537709,
+      "sha256": "9ded74af10ee2886996470f1d074f0bcc393687191279b838a761b33afdc3989",
+      "git_blob_sha": "52f38fafd3712cc9d6358361ef74e9e900beb629"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure04_composition_decomposition_nature.svg",
+      "bytes": 23690,
+      "sha256": "24eeedf821554f1fddb044a4dc0c0dd7a8d294f5545be5a20cf4d0c5b793fdda",
+      "git_blob_sha": "553265ff670d453220c7f050e261f5965e4d3077"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure05_critic_weights_nature.pdf",
+      "bytes": 99936,
+      "sha256": "353068b0fdec202a762ace3ad859553f345be49b23776c41fbc24b3c5515ed70",
+      "git_blob_sha": "cef6e844a72d3f0236af2caf4f3a30cb0dced409"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure05_critic_weights_nature.png",
+      "bytes": 611959,
+      "sha256": "2f187ddcbb41d10fd7a4b5adda82961e73a58489333c67dc7eb7dd6e69326b34",
+      "git_blob_sha": "99b0544a581ecf8894867097f1f8de2bb46ec7ed"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure05_critic_weights_nature.svg",
+      "bytes": 21904,
+      "sha256": "e7c22de66723ec26c20bd1b6618f0a1aec9f75cf3bbdfcd13306f636ed398714",
+      "git_blob_sha": "afbf7ffab099e3cea74bbcc5380950321e5fec5f"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure06_model_sensitivity_nature.pdf",
+      "bytes": 91891,
+      "sha256": "d2bbc09d6ec6f75d91d73b412ecc1d645255ed0a88feac859728abb6f3b347b3",
+      "git_blob_sha": "8f99fc8671294544c32179a262f65edbadada0b0"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure06_model_sensitivity_nature.png",
+      "bytes": 505958,
+      "sha256": "6603d7c04cf59fddb241176cdb06ea08dca314daea7b4dd7b0d49e1db5e210e1",
+      "git_blob_sha": "e6d162771a0ffae61f945e7ddd2e538be38c33ab"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/figure06_model_sensitivity_nature.svg",
+      "bytes": 23174,
+      "sha256": "9de07b58f1190304aa6bcb4e5694e8b11a4155544382ecd17f5226b9a6e85945",
+      "git_blob_sha": "4e13637f055ae280f43f38f7cb5b8f9eb1a3b612"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/include_figures.tex",
+      "bytes": 1896,
+      "sha256": "c7fb6baea3bd07bc5cf38d5b7c010953a360ba4d81b401b3d08a0a9b1d694ea1",
+      "git_blob_sha": "50eb8dab848e33753ce518725e6fb96811cf2520"
+    },
+    {
+      "path": "paper/figures/q1-critic-topsis/nature-v1/README.md",
+      "bytes": 3564,
+      "sha256": "2cb84394df7c4d2b69f1698b99166a16844b97a3f28d4cbfad6bf90827e596ba",
+      "git_blob_sha": "2efa67c9c8d43582cb9f9ee67c21da7d544b511a"
+    },
+    {
+      "path": "paper/README.md",
+      "bytes": 1695,
+      "sha256": "f34d8bc062d704e04d2662ad5b4528dd4f311d177f9c58437f5bb961c3880881",
+      "git_blob_sha": "d9d39ab3369527162164b99edda045531af1f121"
+    },
+    {
+      "path": "scripts/plot_q1_domain_distribution_nature.py",
+      "bytes": 10798,
+      "sha256": "c10f16bd35b4eed3e31b0f622a1aeada427a4ae66dd1c315a0d9330809f698af",
+      "git_blob_sha": "6805b3397171ce5654dd943c8ffdfff6375ca71a"
+    },
+    {
+      "path": "scripts/plot_q1_figures_02_06_nature.py",
+      "bytes": 23627,
+      "sha256": "51a367faf9a256cd7e7770962f76e1a09dda77a35d016fab7fe0c4722917e653",
+      "git_blob_sha": "7c2d5d0abcbecf56030480eb5476702735cf7245"
+    }
+  ]
+}

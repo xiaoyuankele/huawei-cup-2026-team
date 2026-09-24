@@ -1,0 +1,33 @@
+work_package: WP-B
+scope: supplement_to_merged_PR_12
+task_ids: [T-Q1-004]
+related_task_ids: [T-Q1-007, T-Q1-008]
+issue: https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/9
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+branch: wp/ACTOR-2/WP-B
+base_commit: 1aab6ec52b291d4fb9a0af4005195caa3098772c
+primary_run_id: q1-critic-topsis-20260924-r01
+status: REVIEW_BLOCKED
+asset_status: LOCAL_FIGURES_COMPLETE
+gate_decision: PENDING
+peer_decision: PENDING
+integrator_decision: PENDING
+prompt_source: user_direct_request_and_nature_figure_skill
+prompt_catalog_execution: none_for_this_upload
+historical_prompt_run_id: PR-20260924-B-TOPSIS-001
+figure_directory: paper/figures/q1-critic-topsis/nature-v1
+source_directory: experiments/runs/q1-critic-topsis-20260924-r01/figure_sources/nature-v1
+claim_refs: [Q1-WPB-FIG-01, Q1-WPB-FIG-02, Q1-WPB-FIG-03, Q1-WPB-FIG-04, Q1-WPB-FIG-05, Q1-WPB-FIG-06]
+feedback_ids: [FB-20260924-B-PREPROCESS-PROVENANCE, FB-20260924-WPB-GATE-001]
+assignment_note: 职责沿用 WP-B 任务卡，仅用于路由；不代签任何 Actor 的审核决定。
+acceptance_criteria:
+  - 六张图提供 PNG、PDF、SVG，图 3 使用重绘版。
+  - 图注、聚合数据、脚本、输入哈希、验证记录和 DRAFT 主张可回链。
+  - 远端文件 Git blob SHA 与本地提交清单一致。
+  - Peer Reviewer 和 Integrator 独立审核后再决定是否接入正式论文。
+limitations:
+  - 既有运行的 G1 与独立复核仍待签署；原 PR 合并不自动代表实验 PACKAGE_ACCEPTED。
+  - 图 6 是模型或指标集合的敏感性，不是质量指标冲突分析。
+  - Git 只保存图表和聚合数据；完整派生数据经受控渠道交接。

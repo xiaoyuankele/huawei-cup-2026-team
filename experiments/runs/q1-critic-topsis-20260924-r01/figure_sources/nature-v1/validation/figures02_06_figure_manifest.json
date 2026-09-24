@@ -1,0 +1,118 @@
+{
+  "input_sha256": {
+    "scores": "f7148769aac33e8e4e70662e6468f2fb7e05b85dc69901c4b2e33d2ad2b75c22",
+    "normalized": "0c61e680e0ea086976334670166cbccbdf9520541a9eb80aaf3b098a5cfb465a",
+    "comparison": "13dc67061137bbb9b03f71f82259311e7cc814413eb30ae4f5abe195088db4eb",
+    "weights": "c406e1b5946f0833333a542c66f45ca120408d077bd428398222151f82d3b786",
+    "sensitivity": "d16fa59d45d577e5201842c73e0284313d2f2126cbff69d24a15027b1f0f269f",
+    "metrics": "0dfaad3fecdc4523b07ea76c5f16f3711c28c67165bfb11eb109825fc3e1d220"
+  },
+  "source_paths": {
+    "scores": "experiments/runs/q1-critic-topsis-20260924-r01/artifacts/unique_sample_scores.csv",
+    "normalized": "data/processed/q1_X_norm_v2.csv",
+    "comparison": "experiments/runs/q1-critic-topsis-20260924-r01/tables/full_vs_A1.csv",
+    "weights": "experiments/runs/q1-critic-topsis-20260924-r01/tables/model_weights.csv",
+    "sensitivity": "experiments/runs/q1-critic-topsis-20260924-r01/tables/model_sensitivity.csv",
+    "metrics": "experiments/runs/q1-critic-topsis-20260924-r01/metrics.json"
+  },
+  "file_records": 272505,
+  "unique_records": 261086,
+  "duplicate_records_removed": 11419,
+  "duplicate_values_agree": true,
+  "unique_ids_and_domains_match_scores": true,
+  "finite_normalized_0_to_1": true,
+  "domain_counts": {
+    "c4": 10000,
+    "commoncrawl": 9640,
+    "arxiv": 17523,
+    "stackexchange": 10000,
+    "wikipedia": 10000,
+    "book": 171,
+    "github": 203752
+  },
+  "no_sampling": true,
+  "model_refitted": false,
+  "decomposition_matches_saved_metrics": true,
+  "self_comparison_omitted_from_figure06_only": "TOPSIS_CRITIC (1, 0, 0)",
+  "fit_n": 40919,
+  "figures": [
+    {
+      "file_stem": "figure02_indicator_heatmap_nature",
+      "size_mm": [
+        182.99999999876002,
+        151.9999999999
+      ],
+      "minimum_font_pt": 7.0,
+      "clipped_labels": [],
+      "dpi": 600
+    },
+    {
+      "file_stem": "figure03_A1_full_comparison_nature",
+      "size_mm": [
+        182.99999999876002,
+        117.99999999901999
+      ],
+      "minimum_font_pt": 7.0,
+      "clipped_labels": [],
+      "dpi": 600
+    },
+    {
+      "file_stem": "figure04_composition_decomposition_nature",
+      "size_mm": [
+        182.99999999876002,
+        124.9999999995
+      ],
+      "minimum_font_pt": 7.0,
+      "clipped_labels": [],
+      "dpi": 600
+    },
+    {
+      "file_stem": "figure05_critic_weights_nature",
+      "size_mm": [
+        182.99999999876002,
+        142.99999999891998
+      ],
+      "minimum_font_pt": 7.0,
+      "clipped_labels": [],
+      "dpi": 600
+    },
+    {
+      "file_stem": "figure06_model_sensitivity_nature",
+      "size_mm": [
+        182.99999999876002,
+        119.99999999951999
+      ],
+      "minimum_font_pt": 7.0,
+      "clipped_labels": [],
+      "dpi": 600
+    }
+  ],
+  "outputs_sha256": {
+    "figure02_domain_indicator_means.csv": "79db796826e632f6b5968321e4c47a04be0ee916a7707fb0ee417e02ea873eab",
+    "figure02_indicator_heatmap_nature.pdf": "1654be9fce0635cffb970b4afbb9560e78cff51ee3ee6b0318fa15851dd5cd27",
+    "figure02_indicator_heatmap_nature.png": "522f7eb1dc1ecfb0db686bd16ae7b06fb82c89ba706aadb2a7461be806165475",
+    "figure02_indicator_heatmap_nature.svg": "e2a3b0f262ad0431c60d96aaade26685028df7b63a5f146a266915fb49bdeae6",
+    "figure02_indicator_heatmap_nature.tiff": "7a64c8ab7a686ec10ddceab2aa93f0cbb1d6fd2b0bb2b07cb73775ed6d26ff90",
+    "figure03_04_domain_comparison_and_shares.csv": "4cc6f0668e36e55092c2249e2f9e370d94f1390a63f572772a33dfa1e925464b",
+    "figure03_A1_full_comparison_nature.pdf": "b540f8c3b08084de39bc18aa7605d5594f37501f2ce8018e9b4528eaa2797e36",
+    "figure03_A1_full_comparison_nature.png": "934d4a041a93006d7bf1159e938887217b12df4653a29f24b4e1115bb254c9b0",
+    "figure03_A1_full_comparison_nature.svg": "fdd4c08e208176bef0ba7925178da18fa6516dfba4a0260c494f695f2101312b",
+    "figure03_A1_full_comparison_nature.tiff": "260a270a5a4723a94c94db9c7fc26f4bf55b5d60ee77d3f7800a3033d08d7f1b",
+    "figure04_composition_decomposition_nature.pdf": "d34b10256f0d596c9dd466c34127e192a521290f44d1db76f441cd1884708c37",
+    "figure04_composition_decomposition_nature.png": "9ded74af10ee2886996470f1d074f0bcc393687191279b838a761b33afdc3989",
+    "figure04_composition_decomposition_nature.svg": "24eeedf821554f1fddb044a4dc0c0dd7a8d294f5545be5a20cf4d0c5b793fdda",
+    "figure04_composition_decomposition_nature.tiff": "530ea60b8ba223e4307a937baefd3206fb8d4bcab5de30e6bde7f612a209b1ad",
+    "figure04_decomposition.csv": "426f6933cdfbe0023638517d4028867ef22aa7d4e5c7d448825c1298d96abb78",
+    "figure05_critic_weights_nature.pdf": "353068b0fdec202a762ace3ad859553f345be49b23776c41fbc24b3c5515ed70",
+    "figure05_critic_weights_nature.png": "2f187ddcbb41d10fd7a4b5adda82961e73a58489333c67dc7eb7dd6e69326b34",
+    "figure05_critic_weights_nature.svg": "e7c22de66723ec26c20bd1b6618f0a1aec9f75cf3bbdfcd13306f636ed398714",
+    "figure05_critic_weights_nature.tiff": "0799dd411d5a4bd6bac33a73db1566f2330c0747597c886945f1c228fdf1a44a",
+    "figure05_weights.csv": "983bcd6c25e196da7bde89d556f5bb8b2238ea0b7a5a7bb675a81c982db06053",
+    "figure06_model_sensitivity_nature.pdf": "d2bbc09d6ec6f75d91d73b412ecc1d645255ed0a88feac859728abb6f3b347b3",
+    "figure06_model_sensitivity_nature.png": "6603d7c04cf59fddb241176cdb06ea08dca314daea7b4dd7b0d49e1db5e210e1",
+    "figure06_model_sensitivity_nature.svg": "9de07b58f1190304aa6bcb4e5694e8b11a4155544382ecd17f5226b9a6e85945",
+    "figure06_model_sensitivity_nature.tiff": "1effd1038e2267e03a5c2abf7bc28b952cbb314beef464ad45bedbc52e560184",
+    "figure06_sensitivity.csv": "d54592fc77782a788cb5a551f17892f963128526ab9bacedc3a5f30a44343ae8",
+    "figures02_06_nature.pdf": "4341ce989129ee50096443e52c9221a7506c7dcff47e5d015fb5a4b3491249b5"
+  }
+}
