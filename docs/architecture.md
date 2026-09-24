@@ -12,13 +12,31 @@ Owner、Peer Reviewer 和 Release Integrator 必须是三个不同的 Actor。�
 
 ## 三条纵向交付链
 
-| 工作包 | Owner | 代码 | 实验 | 论文 | Peer Reviewer | Release Integrator |
+| 工作包 | Owner | 代码 | 实验 | 论文交付内容（挂到对应 Qn） | Peer Reviewer | Release Integrator |
 |---|---|---|---|---|---|---|
-| WP-A 数据与证据 | ACTOR-1 | 原始数据审计、预处理、manifest、指标目录 | 数据角色、A1 fit/holdout、重叠、缺失、漂移和泄漏审计 | 数据方法、预处理和证据限制段 | ACTOR-2 | ACTOR-3 |
-| WP-B 模型与优化 | ACTOR-2 | 统一评分接口、基线、线性投影、PP-GA 和对照方法 | 分层模型比较、敏感性和失败运行记录 | 模型定义、目标函数和实验协议段 | ACTOR-3 | ACTOR-1 |
-| WP-C 验证与结果 | ACTOR-3 | 冲突诊断、验证、稳健性、图表和结果表脚本 | rank reversal、bootstrap、重复 seed、域分层和稳健性 | 结果、冲突解释、图表和限制段 | ACTOR-1 | ACTOR-2 |
+| WP-A 数据与证据 | ACTOR-1 | 原始数据审计、预处理、manifest、指标目录 | 数据角色、A1 fit/holdout、重叠、缺失、漂移和泄漏审计 | 对应问题的数据说明、预处理和证据限制 | ACTOR-2 | ACTOR-3 |
+| WP-B 模型与优化 | ACTOR-2 | 统一评分接口、基线、线性投影、PP-GA 和对照方法 | 分层模型比较、敏感性和失败运行记录 | 对应问题的模型、目标函数和求解过程 | ACTOR-3 | ACTOR-1 |
+| WP-C 验证与结果 | ACTOR-3 | 冲突诊断、验证、稳健性、图表和结果表脚本 | rank reversal、bootstrap、重复 seed、域分层和稳健性 | 对应问题的结果、图表、解释和限制 | ACTOR-1 | ACTOR-2 |
 
 每个工作包都必须形成 `code → run_id → paper_section` 闭环。T-Q1-008 不再由 WP-C 独占最终论文整合；它只负责结果段，跨包论文整合和发布检查由新增的 Q1-INT/T-Q1-009 完成。
+
+## 论文叙事层：严格按题目问题顺序
+
+工作包是研发执行结构，论文正文使用题目问题树作为叙事结构。`WP-A/WP-B/WP-C` 可以共同服务同一个问题，一个工作包也可以跨多个问题提供证据；它们不再直接对应论文的“数据、模型、结果”顶层章节。
+
+论文固定采用：
+
+```text
+总体问题说明与共用假设
+ → 问题一：分析 → 模型 → 求解 → 结果 → 局限
+ → 问题二：分析 → 模型 → 求解 → 结果 → 局限
+ → 问题三：分析 → 模型 → 求解 → 结果 → 局限
+ → 综合讨论与结论
+```
+
+每个 `Qn` 都是一个论文交付边界，必须有对应的 `problem_id`、输入输出契约、任务卡、运行证据、图表和 `claim_id`。若 `Qn+1` 使用 `Qn` 的输出，依赖关系、文件哈希和 manifest 必须显式记录。`paper/main.tex` 通过 `sections/problem-order.tex` 按编号装配 `sections/problems/problem-XX.tex`，从而把研发并行结构和论文阅读顺序分离。
+
+正式正文只能引用已经通过 `PACKAGE_ACCEPTED` 的问题交付包。草稿、待复核结果和无法判断的反馈继续保留在 claim ledger 或反馈记录中，不得因为已经写入某个章节而提升证据等级。
 
 ## 任务拓扑与并行边界
 

@@ -18,10 +18,18 @@ flowchart TB
     end
 
     subgraph WPS[纵向工作包]
-        WPA[WP-A 数据与证据\n代码 + run_id + 数据论文段]
-        WPB[WP-B 模型与优化\n代码 + run_id + 模型论文段]
-        WPC[WP-C 验证与结果\n代码 + run_id + 结果论文段]
+        WPA[WP-A 数据与证据\n代码 + run_id + 对应Qn证据]
+        WPB[WP-B 模型与优化\n代码 + run_id + 对应Qn模型]
+        WPC[WP-C 验证与结果\n代码 + run_id + 对应Qn结果]
         INT[Q1-INT / T-Q1-009\nclaim ledger + 论文整合 + 发布检查]
+    end
+
+    subgraph MANUSCRIPT[论文叙事层：按题目顺序]
+        M0[共用假设与符号]
+        M1[problem-01\n问题一：分析/模型/求解/结果]
+        M2[problem-02\n问题二：分析/模型/求解/结果]
+        M3[problem-03\n问题三：分析/模型/求解/结果]
+        MS[综合讨论与结论]
     end
 
     subgraph GATES[证据门]
@@ -64,6 +72,15 @@ flowchart TB
     WPC --> G3
     G3 --> INT
     INT --> G4
+    M0 --> M1
+    M1 --> M2
+    M2 --> M3
+    M3 --> MS
+    CLAIM -.-> M1
+    CLAIM -.-> M2
+    CLAIM -.-> M3
+    INT --> M0
+    INT --> MS
     TASK -.-> PR
     PR -.-> RUN
     RUN -.-> CLAIM
@@ -76,4 +93,4 @@ flowchart TB
 
 ## 阅读顺序
 
-先看 Owner—Peer Reviewer—Integrator 的环形分工，再看 G0–G4 门控。WP-B 的模型规格和 WP-C 的脚手架可以在 G0 后并行准备；正式分析结果必须等待 G2。只有三个工作包全部 `PACKAGE_ACCEPTED`，Q1-INT 才能整合 claim ledger 和最终论文。
+阅读或维护论文时，先看 `M0` 的共用假设与符号，再按 `M1 → M2 → M3` 的题目顺序阅读；每个问题内部使用“分析—模型—求解—结果—局限”的固定顺序。阅读协作流程时，再看 Owner—Peer Reviewer—Integrator 的环形分工和 G0–G4 门控。WP-B 的模型规格和 WP-C 的脚手架可以在 G0 后并行准备；正式分析结果必须等待相应证据门。只有交付包达到 `PACKAGE_ACCEPTED`，对应问题才可以进入正文；所有问题完成后，Q1-INT 才能整合 claim ledger 和最终论文。

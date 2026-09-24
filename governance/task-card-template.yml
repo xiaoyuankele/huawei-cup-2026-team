@@ -5,6 +5,7 @@ title: "明确任务名称"
 problem_id: Q1
 subproblem_id: Q1-S00
 problem_scope: "题目或子问题名称"
+manuscript_section: "paper/sections/problems/problem-01.tex"
 status: DRAFT # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
 work_package: WP-A
 owner_actor: ACTOR-1

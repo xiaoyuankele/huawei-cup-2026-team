@@ -4,6 +4,7 @@
 - Task ID / checklist：
 - Problem ID：`Q1`
 - Subproblem ID：`Q1-S00`
+- Manuscript Section：`paper/sections/problems/problem-01.tex`（如适用）
 - Owner Actor：
 - Peer Reviewer Actor：
 - Release Integrator Actor：
@@ -24,6 +25,7 @@
 - [ ] Owner 交付代码或脚本
 - [ ] 实验已记录配置、seed、命令、环境、run_id 和输出哈希
 - [ ] 论文段或 claim ledger 已回链运行证据
+- [ ] 论文正文仍按题目问题顺序组织；跨问题依赖已写明
 - [ ] Peer Reviewer 已独立检查并记录决定
 - [ ] Release Integrator 已检查接口、manifest 和证据完整性
 - [ ] 未提交原始数据、未公开题目、密钥或完整敏感 AI 对话
