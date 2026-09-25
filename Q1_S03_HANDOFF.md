@@ -2,7 +2,14 @@
 
 `task_id: T-Q1-S03-HANDOFF` · `parent: T-Q1-003-MIXTURE` · 状态：待团队复核
 
-本包汇总当前协作仓库的配比—Loss 研究资产，并补充可复现的质量基模型、配比增量与同配方规模校准审计。目标仓库为 **xiaoyuankele/huawei-cup-2026-team**；基于 main 提交 `57fc793e9692b49a60c33c6d99ec10c17ffd5d76`。本包不替换团队既有模型、数据契约或正式论文结论。
+本包汇总当前协作仓库的配比—Loss 研究资产。**第三问的主线是配比模型，质量是可选增量；补充校准审计中的 Q-only B1 不充当第三问的主基线。**目标仓库为 **xiaoyuankele/huawei-cup-2026-team**；基于 main 提交 `57fc793e9692b49a60c33c6d99ec10c17ffd5d76`。本包不替换团队既有模型、数据契约或正式论文结论。
+
+## 回答题目的模型顺序
+
+1. 以均值预测作简单参照，以 **纯配比 ilr-Ridge** 作主要基线，建立 `L_j=f_j(p)`；二阶 Ridge 和浅层 GBDT 是已有非线性候选。
+2. 跨规模评价使用 `L_j=f_j(p)+g_j(p,log10(S/1M))`，明确规模项的拟合数据与评价角色。规模修正不以质量分数为前提。
+3. 在相同数据角色、样本和评价口径下比较 `p` 与 `p+Q`，只有质量增量证据充分时才保留 Q。
+4. 本包的 B1/M1+C0/C1/C2 是前期质量与规模实验的**补充复核**，不是“先有质量才可建模配比”的研究顺序。其系数和指标不可直接移作纯配比模型的结果；主线已有证据见模型索引。
 
 ## 从哪里开始
 
@@ -10,7 +17,7 @@
 |---|---|
 | 数据角色、17 域/13 响应、公式、架构、指标口径 | [数据与模型指南](docs/problem/q1-s03-data-model-guide.md) |
 | 已有团队模型、实验、组合效应与对应证据 | [团队模型索引](docs/problem/q1-s03-team-model-inventory.md) · [CSV](docs/problem/q1-s03-team-model-inventory.csv) |
-| 本次校准模型复核、RMSE/MAE 与外推限制 | [新运行报告](experiments/runs/q1-s03-handoff-audit-20260925-r01/README.md) |
+| 补充质量模型的校准复核、RMSE/MAE 与外推限制 | [新运行报告](experiments/runs/q1-s03-handoff-audit-20260925-r01/README.md) |
 | 所有汇总指标／逐域指标 | [汇总表](experiments/runs/q1-s03-handoff-audit-20260925-r01/metrics_aggregate.csv) · [逐域表](experiments/runs/q1-s03-handoff-audit-20260925-r01/metrics_by_domain.csv) |
 | 可计算参数、规模系数及区间 | [参数 JSON](experiments/runs/q1-s03-handoff-audit-20260925-r01/model_parameters.json) · [系数表](experiments/runs/q1-s03-handoff-audit-20260925-r01/scale_coefficients.csv) |
 | 可直接复用的输入 | [已有 v1 hard 组合表](experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_wide_v1_hard.csv) |
