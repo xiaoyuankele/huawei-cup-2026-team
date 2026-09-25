@@ -1,0 +1,60 @@
+{
+  "schema_version": "q1.acceptance.checklist.v1",
+  "run_id": "q1-quality-mapping-gate-20250925-r01",
+  "status": "CANDIDATE_REVIEW_ONLY",
+  "reproducibility": {
+    "independent_validation_passed": true,
+    "independent_validation_check_count": 21,
+    "scope": "numerical and reproducibility checks, not quality-label validation"
+  },
+  "indicator_contract": {
+    "raw_indicator_rows": 25,
+    "final_matrix_eligible_count": 16,
+    "pending_direction_count": 9,
+    "pending_direction_indicators": [
+      "modernbert_reasoning_expected",
+      "modernbert_professionalism_expected",
+      "qurater_required_expertise",
+      "rps_doc_word_count",
+      "rps_doc_num_sentences",
+      "rps_doc_unigram_entropy",
+      "rps_lines_uppercase_letter_fraction",
+      "rps_lines_numerical_chars_fraction",
+      "rps_doc_mean_word_length"
+    ],
+    "no_imputation": true
+  },
+  "delivery": {
+    "preprocessing_status": "REVIEW",
+    "scoring_status": "LOCAL_RESULT_PENDING_TEAM_REVIEW",
+    "primary_model": "TOPSIS_CRITIC",
+    "candidate_score_accepted": false
+  },
+  "review_gates": [
+    {
+      "gate": "numerical_reproducibility",
+      "state": "PASS",
+      "evidence": "21 independent validation checks passed"
+    },
+    {
+      "gate": "semantic_direction_review",
+      "state": "OPEN",
+      "evidence": "9 indicators withheld pending direction review"
+    },
+    {
+      "gate": "team_score_and_weight_approval",
+      "state": "OPEN",
+      "evidence": "delivery status is LOCAL_RESULT_PENDING_TEAM_REVIEW"
+    },
+    {
+      "gate": "independent_truth_validation",
+      "state": "NOT_AVAILABLE",
+      "evidence": "A2/A3 overlap with A1 and are same-family migration checks"
+    },
+    {
+      "gate": "content_poisoning_audit",
+      "state": "OPEN",
+      "evidence": "structural checks completed; semantic malicious-content review remains separate"
+    }
+  ]
+}

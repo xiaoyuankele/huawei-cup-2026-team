@@ -1,0 +1,30 @@
+schema_version: q1.mixture-quality-baseline.v1
+run_id: q1-mixture-quality-baseline-20260925-r01
+task_id: T-Q1-003-MIXTURE
+status: LOCAL_RESULT_PENDING_TEAM_REVIEW
+input:
+  integration_run: experiments/runs/q1-mixture-quality-integration-20260925-r01
+  mapping_version: A16-domain_mapping_guide@0ae884c0d16d
+  quality_score_version: q1-scoring-20260925-r01
+fit:
+  datasets: [A4_A5_train_1m]
+  composition_basis: helmert_ilr
+  zero_replacement: multiplicative
+  epsilon: 0.0001
+  model: standardized_multioutput_ridge
+  alpha_selection: five_fold_cv_on_A4_A5
+  alpha_grid: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0]
+feature_blocks:
+  p_only: [helmert_ilr]
+  p_q_raw_coverage: [helmert_ilr, quality_mapped_raw_0_100, quality_mapped_mass]
+  p_q_renorm_coverage: [helmert_ilr, quality_mapped_renorm_0_100, quality_mapped_mass, quality_renorm_available]
+validation:
+  same_scale_external: [A6_A7_validation_1m]
+  cross_scale_diagnostics: [A8_A9_validation_60m, A10_A11_validation_1b]
+  extrapolation_diagnostics: [A12_A13_extrapolation_10b, A14_A15_extrapolation_70b]
+report_metrics: [MAE, RMSE, R2_per_target, centered_relative_R2_per_target, Spearman_per_target]
+governance:
+  unmapped_domains_retained_in_p: true
+  unmapped_quality_imputed_as_zero: false
+  causal_claim: false
+  optimum_mixture_claim: false

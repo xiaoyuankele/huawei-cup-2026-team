@@ -1,0 +1,7 @@
+mixture_domain,quality_domain,mapping_type,evidence_state,a1_full_records,a1_full_unique_ids,quality_mean_0_100,quality_median_0_100,quality_sd_0_100,mapping_note,required_review
+arxiv,arxiv,direct,candidate_review,1419,1419,63.862359595226806,64.40565373434062,5.602849485122005,�䷽�����������ź�����һ��,confirm semantic equivalence and downstream use
+github,github,direct,candidate_review,10000,10000,51.70140753241471,51.93806410287239,5.704735616022906,�䷽�����������ź�����һ��,confirm semantic equivalence and downstream use
+stackexchange,stackexchange,direct,candidate_review,10000,10000,61.38787333596658,61.41051031003891,5.964617000241868,�䷽�����������ź�����һ��,confirm semantic equivalence and downstream use
+wikipedia_en,wikipedia,near_direct,candidate_review,10000,10000,61.10090692042493,60.81823099028993,7.301006700973402,�������в��죬�����Ӧ,confirm semantic equivalence and downstream use
+gutenberg_pg_19,book,near_direct,candidate_review,171,171,56.03252048079162,55.47767573925225,4.793530056477265,�鼮���ı����ɲο� book �������ź�,confirm semantic equivalence and downstream use
+pile_cc,commoncrawl,near_direct,candidate_review,9640,9640,64.33570995356357,65.08416242550962,7.224190253595178,��ҳץȡ���ı����ɲο� commoncrawl �������ź�,confirm semantic equivalence and downstream use

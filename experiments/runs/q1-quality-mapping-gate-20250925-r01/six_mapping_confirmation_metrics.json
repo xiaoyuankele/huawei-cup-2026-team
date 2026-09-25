@@ -1,0 +1,17 @@
+{
+  "schema_version": "q1.mapping.confirmation.v1",
+  "run_id": "q1-quality-mapping-gate-20250925-r01",
+  "mapping_rows_total": 17,
+  "supported_mapping_rows": 6,
+  "inferred_mapping_rows": 11,
+  "mixture_domain_coverage_fraction": 0.35294117647058826,
+  "a1_full_record_coverage_fraction": 0.8048018739020105,
+  "a1_full_records_total": 51230,
+  "a1_full_records_on_supported_domains": 41230,
+  "status": "CANDIDATE_REVIEW_ONLY",
+  "limitations": [
+    "The table confirms sample support, not semantic equivalence or independent truth.",
+    "The six rows cover 6/17 mixture domains; the remaining 11 domains are not imputed.",
+    "Quality scores remain local candidates pending team review."
+  ]
+}
