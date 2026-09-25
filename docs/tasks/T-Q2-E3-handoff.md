@@ -37,3 +37,5 @@
 
 [报告](../../experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/report.md) · [复现命令](../../experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/README.md) · [任务卡](T-Q2-E3.yml)。
 E4待执行；不自动把草稿升级为PACKAGE_ACCEPTED。
+
+发布：[Draft PR #33](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/33)，分支 `wp/ACTOR-2/WP-B`。保持 REVIEW_BLOCKED，未合并。

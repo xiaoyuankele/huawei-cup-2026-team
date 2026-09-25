@@ -54,7 +54,7 @@ acceptance_criteria:
 - Inputs frozen and all CSVs reproducible
 - Independent Peer/Integrator review
 completed_at: '2026-09-25T14:31:02.171314+00:00'
-pr: PENDING_CREATION
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/33
 preregister_commit: 23dd6a3
 code_commit: 5c9f5c2be57aa6e627c6926bc81305937d53e964
 run_manifest: experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/manifest.json

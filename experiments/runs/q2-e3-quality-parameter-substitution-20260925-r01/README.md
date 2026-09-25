@@ -19,3 +19,5 @@ task_id: T-Q2-E3。计算 RUN_COMPLETE；交付 REVIEW_BLOCKED。
 ![等Loss替代](figures/E3_quality_scale_tradeoff.png)
 
 ![配方反例](figures/E3_recipe_counterexamples.png)
+
+发布：[Draft PR #33](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/33)，分支 `wp/ACTOR-2/WP-B`。保持 REVIEW_BLOCKED，未合并。
