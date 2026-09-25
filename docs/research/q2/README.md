@@ -4,6 +4,8 @@
 
 入口：[研究过程](process.md) · [结果与证据](results.md) · [数据说明](data.md) · [复现说明](reproduce.md) · [交接与待办](handoff.md) · [文件级目录](file_inventory.csv)
 
+后续题目覆盖实验：**E1边际效用与弹性已完成条件分析，待独立评审。** 见[执行方案](E1-plan.md)、[结果报告](../../../experiments/runs/q2-e1-marginal-elasticity-20260925-r01/report.md)及[图表与复现入口](../../../experiments/runs/q2-e1-marginal-elasticity-20260925-r01/README.md)。E2—E4尚未因本轮而宣称完成；原研究归档PR #28已合并，E1单独提交后续PR。
+
 ## 当前回答
 
 我们建立了一个包含规模 N、训练量 D、质量 Q 和配比 p 的**条件模型**：B1 估计规模项，B6/B7 估计质量项，Q1 导出的 A 配方表估计配比响应，再通过显式映射假设组合。桥接表不是 A、B 同一实验的联合观测表；模型预测没有回填为真实 Loss。
