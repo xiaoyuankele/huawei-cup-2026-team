@@ -1,0 +1,24 @@
+schema_version: q1.factor-sufficiency.v1
+run_id: q1-factor-sufficiency-20260925-r01
+task_id: T-Q1-003-MIXTURE
+status: role_change_exploratory
+adaptation_data: [A4_A5_train_1m, A6_A7_validation_1m, A8_A9_validation_60m]
+unseen_scale_holdout: [A10_A11_validation_1b]
+extrapolation_diagnostics: [A12_A13_extrapolation_10b, A14_A15_extrapolation_70b]
+representation:
+  composition: Helmert-ilr
+  epsilon: 1.0e-4
+feature_blocks:
+  p_only: [ilr]
+  p_scale_linear: [ilr, log10_scale]
+  p_scale_quadratic: [ilr, log10_scale, log10_scale_squared]
+  p_scale_interaction: [ilr, log10_scale, ilr_x_log10_scale]
+  p_scale_diversity: [ilr, log10_scale, log10_scale_squared, entropy, concentration, active_domain_count]
+  p_scale_diversity_interaction: [ilr, log10_scale, log10_scale_squared, ilr_x_log10_scale, entropy, concentration, active_domain_count, entropy_x_scale, concentration_x_scale]
+alpha_grid: [0.1, 1.0, 10.0, 100.0]
+selection: leave_one_dataset_out_on_adaptation_data
+claim_ceiling:
+  - factor_sufficiency_diagnostic
+  - no_official_external_validation_after_role_change
+  - no_causal_domain_effect
+  - no_extrapolation_success_claim

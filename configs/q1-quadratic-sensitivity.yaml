@@ -1,0 +1,23 @@
+schema_version: q1.quadratic-sensitivity.v1
+run_id: q1-quadratic-sensitivity-20260925-r01
+task_id: T-Q1-003-MIXTURE
+status: exploratory
+fit_data: A4_A5_train_1m
+external_validation: A6_A7_validation_1m
+cross_scale_diagnostic: A8_A9_validation_60m
+representations:
+  - name: reference_drop_last
+    zero_replacement: none
+  - name: Helmert-ilr
+    epsilon_grid: [1.0e-6, 1.0e-4, 1.0e-3]
+models:
+  - linear_ridge
+  - quadratic_ridge
+alpha_grid: [0.1, 1.0, 10.0, 100.0]
+cv:
+  splits: 5
+  seeds: [20260924, 20260925, 20260926]
+claim_ceiling:
+  - coordinate_and_zero_replacement_sensitivity
+  - no_causal_domain_effect
+  - no_cross_scale_absolute_success_claim

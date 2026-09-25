@@ -1,0 +1,119 @@
+{
+  "schema_version": "q1.quality_mapping.v2",
+  "run_id": "quality-mapping-20260925-r02-soft-handoff",
+  "task_id": "T-Q1-004",
+  "owner": "B",
+  "reviewer": "A",
+  "status": "REVIEW",
+  "needs_human_review": true,
+  "base_git_ref": "github/wp/ACTOR-2/WP-B",
+  "raw_root": "data/origin/real_attachments",
+  "raw_inputs": [
+    {
+      "dataset_id": "A1",
+      "relative_path": "A_data_value/slimpajama_quality_signal_sample.jsonl.xz",
+      "sha256": "14a4eeec4c7d98efd78942ddd9c1329640527f2108e73227be449bc1a8dbe579",
+      "record_count": 51230
+    },
+    {
+      "dataset_id": "A2",
+      "relative_path": "A_data_value/slimpajama_quality_extended/arxiv_part-6777d8857c6e-000486.jsonl.xz",
+      "sha256": "ae1e3399f84f605d994fc60b46984d742e14abb3355d8e7a91822eae1b99e16a",
+      "record_count": 17523
+    },
+    {
+      "dataset_id": "A3",
+      "relative_path": "A_data_value/slimpajama_quality_extended/github_part-6777d8857c6e-000275.jsonl.xz",
+      "sha256": "7af069c71c6027a10f2013cc14dd9d5d17855c264734f69c955544ff6cff7382",
+      "record_count": 203752
+    },
+    {
+      "dataset_id": "A4",
+      "relative_path": "A_data_value/regmix_tables/train_mixture_1m.csv",
+      "sha256": "04a32ef4ab594376bf90e11404c033668f887c351d6a03ad3744824c7296a2d8",
+      "record_count": 512
+    },
+    {
+      "dataset_id": "A5",
+      "relative_path": "A_data_value/regmix_tables/train_pile_loss_1m.csv",
+      "sha256": "49a959aa07ce5c20831d5abe3a7896ff0cd90a398bd407c8913fd5588be0465a",
+      "record_count": 512
+    },
+    {
+      "dataset_id": "A6",
+      "relative_path": "A_data_value/regmix_tables/test_mixture_1m.csv",
+      "sha256": "197267b7d6f15367e2f46c881e564c35b0d34e51b1754bb09d07e650cf8e1ce8",
+      "record_count": 256
+    },
+    {
+      "dataset_id": "A7",
+      "relative_path": "A_data_value/regmix_tables/test_pile_loss_1m.csv",
+      "sha256": "e027b1674f60140a65a87b5e4a59ab5f09dc33e8fd02c080682678074b160f53",
+      "record_count": 256
+    },
+    {
+      "dataset_id": "A8",
+      "relative_path": "A_data_value/regmix_tables/test_mixture_60m.csv",
+      "sha256": "197267b7d6f15367e2f46c881e564c35b0d34e51b1754bb09d07e650cf8e1ce8",
+      "record_count": 256
+    },
+    {
+      "dataset_id": "A9",
+      "relative_path": "A_data_value/regmix_tables/test_pile_loss_60m.csv",
+      "sha256": "8fe69d59ab7dd4fae4736459f4265ec93c7ed1ad1eca407346052560edc72b5b",
+      "record_count": 256
+    },
+    {
+      "dataset_id": "A10",
+      "relative_path": "A_data_value/regmix_tables/test_mixture_1B.csv",
+      "sha256": "dd38052949c0a5f84165bdcb3ae3a331c7f07efd9bb83848bd579dfc4ce75a2c",
+      "record_count": 64
+    },
+    {
+      "dataset_id": "A11",
+      "relative_path": "A_data_value/regmix_tables/test_pile_loss_1B.csv",
+      "sha256": "b2451e2b7fa15400688edc39e4d32f21ccbe0fb356e07d62a0e9ccddf247114f",
+      "record_count": 64
+    },
+    {
+      "dataset_id": "A12",
+      "relative_path": "A_data_value/regmix_tables/est_mixture_10b.csv",
+      "sha256": "880c7ca1ebef470422e2b93d9bfcd0976db7db4e34ea57047518d95fe43327d1",
+      "record_count": 63
+    },
+    {
+      "dataset_id": "A13",
+      "relative_path": "A_data_value/regmix_tables/est_pile_loss_10b.csv",
+      "sha256": "226457581f3f59e15e44d8f72dee31fa7492c821699725fef47627d82cf34c0d",
+      "record_count": 63
+    },
+    {
+      "dataset_id": "A14",
+      "relative_path": "A_data_value/regmix_tables/est_mixture_70b.csv",
+      "sha256": "880c7ca1ebef470422e2b93d9bfcd0976db7db4e34ea57047518d95fe43327d1",
+      "record_count": 63
+    },
+    {
+      "dataset_id": "A15",
+      "relative_path": "A_data_value/regmix_tables/est_pile_loss_70b.csv",
+      "sha256": "d0883b2d1a44da9386a6d629a3623c724ee291cba1ac87b6d1079e5377307682",
+      "record_count": 63
+    },
+    {
+      "dataset_id": "A16",
+      "relative_path": "A_data_value/domain_mapping_guide.csv",
+      "sha256": "4a4479f41b9f46116e688cd0c13ccdad4e687192fc1a38c4add690771ebff480",
+      "record_count": 17
+    }
+  ],
+  "derived_outputs": {
+    "wide_v2": "experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_wide_v2_soft.csv",
+    "long_v2": "experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_long_v2_soft.csv",
+    "mapping_v2": "experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/mapping_v2_soft.csv"
+  },
+  "policy": [
+    "raw attachments are not committed",
+    "A12-A15 are extrapolation-only",
+    "v1 and v2 must not be mixed silently"
+  ]
+}

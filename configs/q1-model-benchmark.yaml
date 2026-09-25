@@ -1,0 +1,57 @@
+schema_version: q1.model-benchmark.v1
+run_id: q1-model-benchmark-20260924-r01
+task_id: T-Q1-003-MIXTURE
+status: exploratory
+fit_data: A4_A5_train_1m
+external_validation: A6_A7_validation_1m
+cross_scale_diagnostics:
+  - A8_A9_validation_60m
+  - A10_A11_validation_1b
+extrapolation_scenarios:
+  - A12_A13_extrapolation_10b
+  - A14_A15_extrapolation_70b
+feature_contract:
+  source: experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_wide.csv
+  representation: Helmert-ilr
+  zero_replacement: multiplicative
+  epsilon: 1.0e-4
+  predictor_count: 16
+model_families:
+  mean_baseline:
+    role: mandatory_baseline
+  ilr_ols:
+    role: linear_unregularized_reference
+  ilr_ridge:
+    role: primary_candidate
+    alpha_grid: [0.01, 0.1, 1.0, 10.0, 100.0]
+  pls:
+    role: joint_multitarget_candidate
+    n_components_grid: [1, 2, 4, 6, 8]
+  quadratic_ridge:
+    role: interaction_sensitivity
+    alpha_grid: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0]
+  shallow_gbdt:
+    role: nonlinear_reference_only
+    fixed_configuration:
+      n_estimators: 100
+      learning_rate: 0.03
+      max_depth: 2
+      min_samples_leaf: 10
+      random_state: 20260924
+validation:
+  cv_splits: 5
+  cv_seeds: [20260924, 20260925, 20260926]
+  selection_metric: mean_target_r2
+  secondary_metrics: [mae, rmse, mean_target_spearman]
+  bootstrap_replicates: 100
+  bootstrap_seed: 20260924
+quality_score:
+  status: excluded_until_domain_quality_q_is_frozen
+scale_conditioned_model:
+  status: separate_role_change_exploration
+claim_ceiling:
+  - same_scale_composition_association
+  - external_validation_on_A6_A7
+  - scale_bias_and_p_only_identifiability_diagnostics
+  - no_causal_domain_effect
+  - no_cross_scale_absolute_success_claim

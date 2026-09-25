@@ -1,0 +1,21 @@
+schema_version: q1.quality_mapping.v2
+run_id: quality-mapping-20260925-r02-soft-handoff
+task_id: T-Q1-004
+status: REVIEW
+needs_human_review: true
+quality_sources: [A1, A2, A3]
+mapping_source: A16
+mixture_loss_sources: [A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15]
+list_reduction: arithmetic_mean
+feature_transform: rank_percentile_global
+quality_strata:
+  method: numpy_kmeans
+  n_clusters: 3
+  random_state: 42
+  labels: [low, middle, high]
+version_boundary:
+  v1: hard single-proxy mapping retained for compatibility
+  v2: soft candidate-domain mapping for inferred rows
+inferred_mapping_weights: semantic_prior
+range_definition: candidate_domain_score_min_to_max
+raw_policy: raw attachments remain in controlled local storage and are not committed
