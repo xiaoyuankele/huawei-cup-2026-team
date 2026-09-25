@@ -1,0 +1,27 @@
+prompt_run_id: PR-Q2-E3-20260925
+prompt_id: P-Q2-E3-SUBSTITUTION
+prompt_version: v1.0.0
+task_id: T-Q2-E3
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+registered_at: '2026-09-25T14:23:30+00:00'
+date: '2026-09-25'
+device_id: DEVICE-LOCAL-CODEX
+tool: Codex desktop
+model: GPT-6
+provider: OpenAI
+input_summary: Frozen v1 and A4 feature columns; no observed Loss
+output_ref: docs/research/q2/E3-plan.md
+output_sha256: d04f03607c45c1c0415008f96533f314c997df84ea6b145eaebb574e1fca26da
+git_commit: f36afef332ed160146c548551d6cf09488cfd312
+git_commit_role: Baseline before numerical implementation
+run_id: q2-e3-quality-parameter-substitution-20260925-r01
+branch: wp/ACTOR-2/WP-B
+status: REVIEW_BLOCKED
+execution_status: SPEC_READY
+needs_human_review: true
+peer_decision: PENDING
+integrator_decision: PENDING
+registration: PRE_EXECUTION_TASK_LEVEL
