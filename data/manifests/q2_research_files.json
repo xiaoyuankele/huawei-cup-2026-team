@@ -5,13 +5,13 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 14848,
-      "sha256": "2bcc5eff1a2a6c6f2975868d908ea106daa4de32d0a844f6873231c94fa3b942"
+      "bytes": 14989,
+      "sha256": "a2f345c5160046beca9ad22a21d17d43122950ccf4ba6e8e92f3fb024c3ca25c"
     },
     {
       "path": "README.md",
-      "bytes": 3135,
-      "sha256": "548052bd1d16e5d3a229d2964e18604f9375016c42631740d47c262afbd6ea60"
+      "bytes": 3345,
+      "sha256": "5b937d76b70616088a6e9e437d9be15c2dc95fde0f8651cef72fe42ab8408fce"
     },
     {
       "path": "configs/q2-e1-marginal-elasticity.json",
@@ -72,6 +72,16 @@
       "path": "docs/research/q2/E2-announcement.md",
       "bytes": 524,
       "sha256": "c5de5d6f538a03014a0a94975cd8630626bd9182d3999faa1261f9f0b6993bb0"
+    },
+    {
+      "path": "docs/research/q2/E2-main-merge-audit.json",
+      "bytes": 3444,
+      "sha256": "22948946a0d1b23a4bcfa054a955940b01a0052211d5afce76281aae34f1a09d"
+    },
+    {
+      "path": "docs/research/q2/E2-main-merge-audit.md",
+      "bytes": 1657,
+      "sha256": "782907fe79d66bf5e4bc54e6ff9839743c3c83655107d35d27839c2a655ee8bb"
     },
     {
       "path": "docs/research/q2/E2-plan.md",
@@ -150,8 +160,8 @@
     },
     {
       "path": "experiments/index.csv",
-      "bytes": 19507,
-      "sha256": "0bdba48883bbfdf6eb192e821973aa291fae23a47fe2c8294c6abe32d459a326"
+      "bytes": 20035,
+      "sha256": "e7302d0343b47f79a97947b3e80d1b84efed9282565819019cce46cca40d5997"
     },
     {
       "path": "experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv",
@@ -700,13 +710,13 @@
     },
     {
       "path": "governance/ai-use-log.csv",
-      "bytes": 7898,
-      "sha256": "6ac0b4dddca689c35e288086f72fa442441e9e1495714dc00465e10c4e695f5a"
+      "bytes": 8580,
+      "sha256": "84ba5410d52485e4f11bb7908e0bd0aee6feecd6994116a3cfaee2e6153939b8"
     },
     {
       "path": "governance/feedback/index.csv",
-      "bytes": 5035,
-      "sha256": "98ece3d31ae1b9ebb05748b284e026231d4cca3ddf58a820af23e791a7ec2cb0"
+      "bytes": 6416,
+      "sha256": "8e9c967dfc7e1cb2751524860cb13d079480e94c67a5e70334373b0a96f336df"
     },
     {
       "path": "governance/feedback/records/FB-Q2-E1-01.yml",
@@ -750,8 +760,8 @@
     },
     {
       "path": "governance/prompts/registry.csv",
-      "bytes": 2565,
-      "sha256": "24a2ff00a0a00c269eab5cb3af7dace534e49b83d7bb3b8c2387fa778a746be7"
+      "bytes": 2818,
+      "sha256": "01e929fe798f5b21da68b330744ecc15d53c664d6ab785f9cfc49e02638338b4"
     },
     {
       "path": "governance/prompts/runs/PR-Q2-E1-20260925.yml",
@@ -770,8 +780,8 @@
     },
     {
       "path": "paper/claim-ledger.csv",
-      "bytes": 11422,
-      "sha256": "0c7f0a8b9a572e5c00cbcd43cee83172a099c442c5121bbd16d0c71639605534"
+      "bytes": 13018,
+      "sha256": "880db95865088292c2697a55452e6c6164b7f246aeb15cc68eb3260296a5c2bc"
     },
     {
       "path": "paper/sections/drafts/q2-e1-marginal-elasticity.md",

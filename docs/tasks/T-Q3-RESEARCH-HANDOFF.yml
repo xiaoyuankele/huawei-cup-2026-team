@@ -1,0 +1,76 @@
+{
+  "task_id": "T-Q3-RESEARCH-HANDOFF",
+  "title": "问题三冻结模型资源优化阶段性研究归档",
+  "problem_id": "Q3",
+  "subproblem_id": "Q3-RESEARCH",
+  "problem_scope": "条件资源配置、成本转折和模型决策诊断",
+  "status": "REVIEW_BLOCKED",
+  "work_package": "WP-B",
+  "owner_actor": "ACTOR-2",
+  "peer_reviewer_actor": "ACTOR-3",
+  "release_integrator_actor": "ACTOR-1",
+  "release_approver_actors": [
+    "ACTOR-1",
+    "ACTOR-2",
+    "ACTOR-3"
+  ],
+  "review_domain": "experiment",
+  "review": {
+    "peer_reviewer_must_differ": true,
+    "integrator_must_differ": true,
+    "peer_decision": "PENDING",
+    "integrator_decision": "PENDING"
+  },
+  "priority": "P1",
+  "announcement": {
+    "mode": "user_request",
+    "announcement_ref": "docs/research/q3/handoff.md",
+    "summary": "用户授权将问题三阶段性研究按团队仓库规范推送；不代填人工确认"
+  },
+  "feedback_required": true,
+  "feedback_ids": [
+    "FB-Q3-RH-01",
+    "FB-Q3-RH-02",
+    "FB-Q3-RH-03"
+  ],
+  "branch": "codex/q3-research-handoff",
+  "branch_owner_actor": "ACTOR-2",
+  "gate": "G0",
+  "prompt": {
+    "prompt_id": "P-Q3-RESEARCH-HANDOFF",
+    "version": "v1.0.0",
+    "prompt_run_id": "PR-Q3-RESEARCH-HANDOFF-20260925"
+  },
+  "objective": "交付可复现代码、实验、候选论文段及失败反馈",
+  "inputs": [
+    {
+      "ref": "data/manifests/q3_research_inputs.json",
+      "purpose": "冻结输入与受控原始来源哈希"
+    }
+  ],
+  "expected_outputs": [
+    {
+      "path": "scripts/q3_run_experiments.py",
+      "description": "数值实验"
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01",
+      "description": "派生结果"
+    },
+    {
+      "path": "paper/sections/drafts/q3-exploratory-results.md",
+      "description": "待审论文候选段"
+    }
+  ],
+  "acceptance_criteria": [
+    "便携脚本重跑与历史表数值一致",
+    "不发布原始题目、附件、密钥或个人路径",
+    "完整登记失败和假设边界",
+    "独立 Peer 和 Integrator 确认后才可验收"
+  ],
+  "definition_of_done": [
+    "代码、run、候选主张、提示词及反馈互相回链",
+    "未完成人工评审保持 REVIEW_BLOCKED"
+  ],
+  "notes": "角色为治理路由，不表示真实人员已确认；阶段性归档不等于科学任务全部完成"
+}
