@@ -1,6 +1,6 @@
 # E1：边际效用与弹性
 
-状态：**RUN_COMPLETE / REVIEW_REQUIRED**。这是冻结v1的解析、数值及结构敏感性分析，不增加真实实验观测，也不构成完整A—B联合验证。
+交付状态：**REVIEW_BLOCKED**；计算状态：**RUN_COMPLETE**。这是冻结v1的解析、数值及结构敏感性分析，不增加真实实验观测，也不构成完整A—B联合验证。
 
 入口：[完整结果报告](report.md) · [执行方案](../../../docs/research/q2/E1-plan.md) · [机器指标](metrics.json) · [输入与环境](manifest.json) · [数值核验](verification_checks.csv) · [图形QA](figures/QA.md)
 
@@ -28,3 +28,5 @@ python scripts/q2_verify_e1.py --rerun-dir "../q2-e1-rerun"
 ![质量映射与配比方向](figures/E1_quality_mixture_sensitivity.png)
 
 发布：实验提交 `d58e4a1de3f9bac16bbfbc6bf75cfa5c24a322d0`，对应 [待审 PR #29](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/29)。基于已合并PR #28，E1独立提交，尚未合并main。
+
+治理：[交接记录](../../../docs/tasks/T-Q2-E1-MARGINAL-handoff.md) · [规范审计](../../../docs/research/q2/E1-governance-audit.md) · [运行治理补充](governance.yml)。未获 G1 和独立评审批准，不得视为验收通过。

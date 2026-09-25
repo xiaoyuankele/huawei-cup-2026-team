@@ -54,6 +54,11 @@
       "sha256": "48fbae2635d7a9e307d712709afe979ad1a35bdcc5bba5b8eed1cc41bdc58761"
     },
     {
+      "path": "docs/research/q2/E1-governance-audit.md",
+      "bytes": 3295,
+      "sha256": "5851f9774de3a74423f69e83caa99a0fb61809009ab7da676f282f601cf5c91b"
+    },
+    {
       "path": "docs/research/q2/E1-plan.md",
       "bytes": 2913,
       "sha256": "49da51c61787cdb0765c045e61154e8eb945c7d3376f492000f5ca606a2b0e73"
@@ -104,9 +109,14 @@
       "sha256": "acb1584017ccbd11a01366c3b572a96db5a7f6fa0c52baa0eb82fb0ae0279092"
     },
     {
+      "path": "docs/tasks/T-Q2-E1-MARGINAL-handoff.md",
+      "bytes": 2839,
+      "sha256": "c366a1abc92a4eeb02e6b881462e527396d1c9712bf994f9bb77c90df52de371"
+    },
+    {
       "path": "docs/tasks/T-Q2-E1-MARGINAL.yml",
-      "bytes": 1827,
-      "sha256": "b35b9dceca3c27f22ff7f1ef92885d894afb88900645365afd264dd6fb214903"
+      "bytes": 2969,
+      "sha256": "d9f9ae21de2e66728492617b4585949159d5707a9c4d0f00f30151e6aae72a58"
     },
     {
       "path": "docs/tasks/T-Q2-RESEARCH-HANDOFF.yml",
@@ -115,8 +125,8 @@
     },
     {
       "path": "experiments/index.csv",
-      "bytes": 18947,
-      "sha256": "1d29dc6752143ce7d544e65ffc87f12c132caa40e42c1ace0dff499012721efa"
+      "bytes": 18955,
+      "sha256": "9393f037d31bc3f99c0a7349c810fa86b8a5bdea0271195d527e4d83001ddabf"
     },
     {
       "path": "experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv",
@@ -175,8 +185,8 @@
     },
     {
       "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/README.md",
-      "bytes": 1776,
-      "sha256": "64cc44abe706389163e76851081d98de3b6b9de8fcc07dfcc03fdb0df2d531cf"
+      "bytes": 2046,
+      "sha256": "7dcf40fcdc10ded1e38ee26eb45e3ebf7f507e39762ffc89574e858e9d7508e2"
     },
     {
       "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/assumption_sensitivity.csv",
@@ -232,6 +242,11 @@
       "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/figures/export_manifest.json",
       "bytes": 588,
       "sha256": "81e533fd9a33af6e4dd09ffeed6449e9ae7852db8422d011bc0b762c95fdb022"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/governance.yml",
+      "bytes": 1103,
+      "sha256": "0c5c0435e46e3dfe8482f25bcd0a09bab6c8838c1d0e822e766cce01f56c447e"
     },
     {
       "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/manifest.json",
@@ -525,13 +540,63 @@
     },
     {
       "path": "governance/ai-use-log.csv",
-      "bytes": 6546,
-      "sha256": "426c9ac1674e4c3a46c6fb351a0dd2e6e4e60cbe5fc5b9d6d32e054b47fead6f"
+      "bytes": 7247,
+      "sha256": "39b362ce6626bf41a4cd4181b6d64625a2b5136bbf23d1ab4f49400347e00174"
+    },
+    {
+      "path": "governance/feedback/index.csv",
+      "bytes": 4014,
+      "sha256": "fd02a406bffc3451902edb2c769b05e32fcceeffacc84268fff2de6e97a4f4c9"
+    },
+    {
+      "path": "governance/feedback/records/FB-Q2-E1-01.yml",
+      "bytes": 1832,
+      "sha256": "d31daf64d7761d0355c37705988bf8c258840781db1021540bc211d47e6beeeb"
+    },
+    {
+      "path": "governance/feedback/records/FB-Q2-E1-02.yml",
+      "bytes": 1814,
+      "sha256": "ae6e305b0bdc14e4d556fd30303592476be1aa916170ff5d5ba920cf2a862449"
+    },
+    {
+      "path": "governance/feedback/records/FB-Q2-E1-GOV-20260925.yml",
+      "bytes": 1879,
+      "sha256": "11e2af83799aec220ecacc82395be4b115ff44037e21293097c01236c91f8cf0"
+    },
+    {
+      "path": "governance/prompts/catalog/P-Q2-E1-GOV.md",
+      "bytes": 620,
+      "sha256": "13995dd8eb5152c261235b483c00a53200ea52926a23da34370e04d5e1c6612a"
+    },
+    {
+      "path": "governance/prompts/catalog/P-Q2-E1-MARGINAL.md",
+      "bytes": 667,
+      "sha256": "dc428f41e656c52d51f4b791651843f2ec6f25f84a929304c478727d8d9e89bc"
+    },
+    {
+      "path": "governance/prompts/registry.csv",
+      "bytes": 2308,
+      "sha256": "add94dce71f7d2b8884a90538ca9aee927937f2417b215edfa1137f86d297929"
+    },
+    {
+      "path": "governance/prompts/runs/PR-Q2-E1-20260925.yml",
+      "bytes": 1346,
+      "sha256": "2c72a0114831f61c4deb7e3fe8ac1a65ee3b93ebee8540c8afc6c522547eae29"
+    },
+    {
+      "path": "governance/prompts/runs/PR-Q2-E1-GOV-20260925.yml",
+      "bytes": 1319,
+      "sha256": "4017d86723904191fee5d575dee52d28615d71f7acc5750329eae68fd15bb2ff"
     },
     {
       "path": "paper/claim-ledger.csv",
-      "bytes": 9106,
-      "sha256": "dbecac1243e7966bada28dc577070c0c365625b37317fff043e752c232a476a0"
+      "bytes": 9322,
+      "sha256": "316b18725ee0d888cbc3f03b169a7f9912a9c2668dd3c60b4fa0da87f0e4b5f3"
+    },
+    {
+      "path": "paper/sections/drafts/q2-e1-marginal-elasticity.md",
+      "bytes": 1904,
+      "sha256": "793a58d4d646cc79f53bd08a4a4d83752f036b97bd2e7b94098aa4eef50ea0eb"
     },
     {
       "path": "requirements-q2-e1.txt",
