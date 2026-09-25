@@ -1,0 +1,197 @@
+{
+  "run_id": "q1-mixture-scale-ablation-20260925-r01",
+  "task_id": "T-Q1-S03-ABLATION",
+  "status": "PEER_REVIEW",
+  "team_base_commit": "33d1a0cb4f289102c58ac4066e3847243e0bf4ee",
+  "repository": "xiaoyuankele/huawei-cup-2026-team",
+  "input": {
+    "path": "experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_wide_v1_hard.csv",
+    "bytes": 682103,
+    "sha256": "c0714f8594ea8e9e0072b80ab156dd71293489ac436a9856f81dd64d9eb5d44b"
+  },
+  "sources": [
+    {
+      "path": "configs/q1-mixture-scale-ablation.json",
+      "bytes": 1406,
+      "sha256": "2cad3b2be6f8f4e5bfaf9e16a328911e7a1b8ff78c9f88ae7d71ffa6b4beb0c4"
+    },
+    {
+      "path": "scripts/q1_s03/mixture_scale_ablation.py",
+      "bytes": 13883,
+      "sha256": "910a650b67d8f57b9b41524b7bc6a4743f73aca4978a5627d31988528e47db0d"
+    },
+    {
+      "path": "scripts/q1_s03/plot_mixture_scale_ablation.py",
+      "bytes": 8218,
+      "sha256": "252ac9fd7262cb4cd7fe501e6d1d80351e0aa04b69c9c88383ec500b62f5b112"
+    },
+    {
+      "path": "scripts/q1_s03/package_mixture_scale_ablation.py",
+      "bytes": 4583,
+      "sha256": "855696423cf75749f9a74a27ea039f091cf47c1ec8243eaae3b61beaadf664b0"
+    },
+    {
+      "path": "scripts/q1_s03/reproduce.py",
+      "bytes": 21736,
+      "sha256": "8d6b737c4b7b0d6d72251c24c9dba7c2d37eff5275c9e67270ef9a64f33875fa"
+    },
+    {
+      "path": "scripts/q1_mixture_collinearity.py",
+      "bytes": 17052,
+      "sha256": "fc1cf059ab8ee137b5e5f5c9fcab473132c045c8368853a4ffe41e72f01f8991"
+    },
+    {
+      "path": "tests/test_q1_mixture_scale_ablation.py",
+      "bytes": 2391,
+      "sha256": "64bd65a553349106d0110f23f649e4015060aeefdc301373389c4e978847b39d"
+    },
+    {
+      "path": "requirements-q1-mixture-scale-ablation.txt",
+      "bytes": 81,
+      "sha256": "b47af0cc0d12c49821740d4ec96c2602ecf2e492137f0a83438a63db69a83fda"
+    },
+    {
+      "path": "docs/decisions/q1-mixture-scale-ablation-results.md",
+      "bytes": 16218,
+      "sha256": "5cf7b4cf0a1223334230f2f9f8b24c3d2799723b86d53ff599cba9e3784be82e"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/.gitattributes",
+      "bytes": 59,
+      "sha256": "0450f8fda8be2cf20ac7f0f5da7646c20ea9b4d85852e548a349760a58fd3925"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/audit.json",
+      "bytes": 1794,
+      "sha256": "72f3617013914e297b395029d9e0d9912c98ed1d2ca945f21dacaf7289a2a615"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/figures/backend_preference.json",
+      "bytes": 29,
+      "sha256": "dad100bf58fece91f6d9ce9ef861408b330aea06bb703ea8229bf8d464754a8b"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/figures/Figure1_full_mixture_scale_ablation.pdf",
+      "bytes": 44058,
+      "sha256": "77bb68bfd6735df963ff561c6abc9a272868e58d04e2be2c53e4c9e26f390b82"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/figures/Figure1_full_mixture_scale_ablation.png",
+      "bytes": 291449,
+      "sha256": "006729bee70392c92ac7dc192729b274f26c6c023d4910f0f9a4ec7ce126654c"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/figures/Figure1_full_mixture_scale_ablation.svg",
+      "bytes": 29513,
+      "sha256": "2974dc01c48065c9fb7b8c0db71f13c2523e2c1fd04f912ab4e7aa9bc3cb21ae"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/figures/Figure1_full_mixture_scale_ablation.tiff",
+      "bytes": 811500,
+      "sha256": "f68019cd576f6104845a44c17c3922cdca8a2f902be38e695e36422ff31a62b5"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/figures/figure_manifest.json",
+      "bytes": 2089,
+      "sha256": "91d0ac458bb918d0de6a106549413af6acc9e167802582cf96a8a4665b0207e4"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/figures/pdf_text_audit.json",
+      "bytes": 304,
+      "sha256": "0a6a698437e2013e67187e113526beecef530af95cb425499bc92e2b71f3579a"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/figures/QA_notes.md",
+      "bytes": 3289,
+      "sha256": "4e7dd60cbf49c6548a54fbcf1a3b9127f1e216c508a7aa39169d11fc4e7adc4b"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/figures/README.md",
+      "bytes": 3021,
+      "sha256": "c148cf6db5b5e382e73dbad5352b7e7f487e0b9c7b56067dfc398287b4e86b98"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/figures/source_data.csv",
+      "bytes": 4056,
+      "sha256": "8bf0257d40a855fd99895b7dfd27b8f4e395e26751983ee462246fe5edc9eeaa"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/figures/source_validation.json",
+      "bytes": 3800,
+      "sha256": "76f54353b0eb81671fd6f3f8bd84437c2a5a1cb729b1341785164820fff1fc1f"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/high_scale_shift.csv",
+      "bytes": 1404,
+      "sha256": "6c27b7fb23181cb26d532257d8d4a718177ae5c0dae97c60ef215c2b38549b1e"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/metrics_aggregate.csv",
+      "bytes": 33089,
+      "sha256": "24cae7fe7bd16bf3313b2e3aa1ae95cc580f865a7c499593bd3ff84a5e69f9e9"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/metrics_by_domain.csv",
+      "bytes": 333709,
+      "sha256": "075d7b3931da2778631286a8c815bd9664a05e6b8e4585263b6aadfc7d5bcb29"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/metrics_calibration_oof.csv",
+      "bytes": 6675,
+      "sha256": "6c7a251d1bf8307f05e0802ebdd97b63d796d1b2a7b9553862372a8f6b515369"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/model_parameters.json",
+      "bytes": 211942,
+      "sha256": "79594aea9ec9c314cd1ff939e0f6990cf7b66a366c16261213a615d53e5a2283"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/paired_error_comparisons.csv",
+      "bytes": 47608,
+      "sha256": "886409f12409a8b64e3fe018c244f6c7410c6bffe25c8e0c4d7b99bbdd20d0b1"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/README.md",
+      "bytes": 4914,
+      "sha256": "285d5ff1281168c62edff7363beaf08858bd3f0facaa2aa19878b80bbba95d88"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/table_optional_quality.csv",
+      "bytes": 15446,
+      "sha256": "b97cb2bcc771ab57740d4152f8f425ae702b67c733d44ac4433e8eb126b5f2f5"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/table_pure_mixture_scale.csv",
+      "bytes": 7212,
+      "sha256": "53e62633af06c938d9e1ab4ed023850b300f53bd9ebf343ee5beb356aebef3ae"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/table_quality_increment.tex",
+      "bytes": 1322,
+      "sha256": "f2a04bf81cbb729f3baea898f013badbd2b3206f4e2a538dc6d8a8dc30878c99"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/table_scale_transfer.tex",
+      "bytes": 1012,
+      "sha256": "c9f1f6b1b021cff3e7ec2720a829434c405b51fe24286b824c4ba0ebd381eb8a"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/validation.json",
+      "bytes": 597,
+      "sha256": "7258b4e3414c14ca277b96d95d02b5a9ab199212fe2b9503057182e29155597c"
+    },
+    {
+      "path": "experiments/runs/q1-mixture-scale-ablation-20260925-r01/verification.json",
+      "bytes": 1034,
+      "sha256": "2b0d20a48837733860a7cc822879ccdb864b2ff77597c9ad80baf79b5456a19a"
+    }
+  ],
+  "reproduce": [
+    "python scripts/q1_s03/mixture_scale_ablation.py",
+    "python scripts/q1_s03/plot_mixture_scale_ablation.py --run experiments/runs/q1-mixture-scale-ablation-20260925-r01",
+    "python scripts/q1_s03/package_mixture_scale_ablation.py"
+  ],
+  "human_review": "PENDING; internal automated/AI checks do not replace team review"
+}

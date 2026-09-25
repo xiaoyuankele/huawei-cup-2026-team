@@ -1,0 +1,25 @@
+task_id: T-Q1-S03-ABLATION
+parent_task_id: T-Q1-003-MIXTURE
+problem_id: Q1
+subproblem_id: Q1-S03
+title: "纯配比、可选质量增量与配对规模修正的受控比较"
+status: PEER_REVIEW
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+actor_assignment_source: docs/tasks/T-Q1-003-MIXTURE.yml
+peer_decision: PENDING
+integrator_decision: PENDING
+announcement_ref: docs/tasks/T-Q1-S03-ABLATION.md
+branch: codex/q1-s03-mixture-scale-ablation-20260925
+prompt_id: P-Q1-S03-ABLATION
+prompt_version: v1
+run_id: q1-mixture-scale-ablation-20260925-r01
+protocol: configs/q1-mixture-scale-ablation.json
+feedback_ids: [FB-Q1-S03-ABLATION-20260925]
+acceptance_criteria:
+  - "纯配比模型只用 p，质量列为可选增量；所有基模型使用同样512行"
+  - "历史 ilr/二阶基线在同一输入上复现，规模修正重新评价"
+  - "pooled/逐域/平均Loss指标并列；校准内、条件OOF、回顾评价、估算外推分开"
+  - "可复现参数、差值区间、论文中文素材和图表随run保存"
+  - "团队人工复核前不声明论文主张已接受"

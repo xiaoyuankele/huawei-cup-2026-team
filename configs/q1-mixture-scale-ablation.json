@@ -1,0 +1,20 @@
+{
+  "run_id": "q1-mixture-scale-ablation-20260925-r01",
+  "input": "experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_wide_v1_hard.csv",
+  "input_sha256": "c0714f8594ea8e9e0072b80ab156dd71293489ac436a9856f81dd64d9eb5d44b",
+  "base_models": ["ilr_ridge", "quadratic_ridge", "ilr_ridge_qproxy", "quadratic_ridge_qproxy", "qproxy_only"],
+  "corrections": ["C0_none", "C1_global", "C1_domain", "C2_mixture_conditioned"],
+  "epsilon": 0.0001,
+  "base_ridge_alpha": 10.0,
+  "c2_ridge_alpha": 10.0,
+  "bootstrap_repetitions": 5000,
+  "bootstrap_seed": 20260925,
+  "base_fit": "A4/A5 only, all 512 rows",
+  "scale_fit": "A6/A8 matched differences, 256 pairs",
+  "quality_axis": "v1 Q_proxy; one appended scalar, no Q polynomial interactions",
+  "parameter_choice": "historically selected alpha=10; fixed for this controlled retrospective ablation, no retuning on evaluation tables",
+  "calibration_oof": "sorted pair position modulo 5; all delta fit statistics restricted to training folds; conditional on historical hyperparameter choice",
+  "primary_metrics": ["rmse_pooled_all_domains", "mae_domain_macro"],
+  "bootstrap_scope": "paired evaluation rows, 13 responses kept together, frozen predictions; excludes model-fit/calibration/functional-form uncertainty",
+  "scope": "retrospective controlled comparison, not a preregistered independent confirmation; A12-A15 supplied estimates"
+}

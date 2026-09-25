@@ -1,0 +1,18 @@
+feedback_id: FB-Q1-S03-ABLATION-20260925
+task_id: T-Q1-S03-ABLATION
+run_id: q1-mixture-scale-ablation-20260925-r01
+priority: P2
+status: RESPONDED_PENDING_REVIEW
+category: EVIDENCE_BOUNDARY
+summary: "尺度修正存在指标与迁移区间取舍，当前质量代理未提供稳定增益"
+evidence:
+  - experiments/runs/q1-mixture-scale-ablation-20260925-r01/metrics_aggregate.csv
+  - experiments/runs/q1-mixture-scale-ablation-20260925-r01/table_optional_quality.csv
+  - experiments/runs/q1-mixture-scale-ablation-20260925-r01/high_scale_shift.csv
+response:
+  - "纯配比为主线，Q仅作可选受控消融；保留全部模型与负R2结果"
+  - "区分A8校准内/条件OOF、A10回顾评价、A12-A15给定估算审计"
+  - "bootstrap区间仅含固定预测下配方行抽样变异，不代表尺度规律已验证"
+  - "论文结论限定于当前固定参数、质量版本和表格，未宣称全面最优"
+unresolved: "真实高规模性能和新的独立配方验证仍需额外实测；不妨碍当前回顾性实验交付"
+human_decision: PENDING
