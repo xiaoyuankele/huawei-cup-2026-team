@@ -12,11 +12,12 @@
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.65\textheight,keepaspectratio]{Fig01_recipe_structure.pdf}
-  \caption{17 个训练领域的平均配比及配方分布范围。右图线段为 P5--P95 分位区间，并非均值置信区间；10B、70B 表中的 Loss 为给定估算值。}
+  \caption{训练领域配比图}
   \label{fig:q13-structure}
 \end{figure}
 
-考虑到配比的闭合约束，模型对配比作等距对数比（ilr）变换，并以多响应 Ridge 回归刻画 13 个目标的 Loss。线性模型提供可解释基线，二阶模型容纳配比之间的非线性关系。为解释替代而非单独改变某一领域，固定从领域 $j$ 向领域 $i$ 转移一个百分点的配比，对合法配方计算模型预测差：
+考虑到配比的闭合约束，模型对配比作等距对数比（ilr）变换，并以多响应 Ridge 回归刻画 13 个目标的 Loss。线性模型提供可解释基线，二阶模型容纳配比之间的非线性关系。为解释替代而非单独改变某一领域，固定从领域 $j$ 向领域 $i$ 转移一个百分点的配比，对合法配方计算模型预测差。
+\formulaname{领域配比替代效应公式}
 
 \begin{equation}
 \Delta_{i\leftarrow j,k}(\boldsymbol p)=\hat L_k(\boldsymbol p+0.01\boldsymbol e_i-0.01\boldsymbol e_j)-\hat L_k(\boldsymbol p).\label{eq:q13-transfer}
@@ -27,7 +28,7 @@
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.58\textheight,keepaspectratio]{Fig02_domain_transfer.pdf}
-  \caption{A6/A7 上线性与二阶 ilr-Ridge 的领域间有限替代效应。行表示增加配比的领域，列表示减少配比的领域；每格为 13 个目标预测变化的等权均值。}
+  \caption{领域配比替代效应图}
   \label{fig:q13-transfer}
 \end{figure}
 
@@ -36,16 +37,21 @@
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.56\textheight,keepaspectratio]{Fig03_prediction_and_stability.pdf}
-  \caption{二阶模型相对线性模型的同尺度误差收益，以及独立历史运行中的领域替代方向一致率。区间仅反映固定模型下的配方重采样波动。}
+  \caption{同尺度预测与稳定性图}
   \label{fig:q13-stability}
 \end{figure}
 
 \subsection{规模偏差的识别与修正收益}
 
-仅以配比预测跨规模绝对 Loss 存在结构性遗漏：A6 与 A8 的配比逐行相同，而两表平均 Loss 相差 1.4594；同一配比的纯配比预测器只能给出同一个预测值。由此，将模型写为配比项与规模修正项之和，并要求修正项在 1M 基准尺度为零：
+仅以配比预测跨规模绝对 Loss 存在结构性遗漏：A6 与 A8 的配比逐行相同，而两表平均 Loss 相差 1.4594；同一配比的纯配比预测器只能给出同一个预测值。由此，将模型写为配比项与规模修正项之和，并要求修正项在 1M 基准尺度为零。
+\formulaname{配比与规模联合预测公式}
 
 \begin{equation}
-\hat L_k(\boldsymbol p,S)=f_k\!\left[\operatorname{ilr}(\boldsymbol p)\right]+c_k(\boldsymbol p,S),\qquad c_k(\boldsymbol p,1\mathrm M)=0.\label{eq:q13-scale}
+\hat L_k(\boldsymbol p,S)=f_k\!\left[\operatorname{ilr}(\boldsymbol p)\right]+c_k(\boldsymbol p,S).\label{eq:q13-scale}
+\end{equation}
+\formulaname{基准规模约束公式}
+\begin{equation}
+c_k(\boldsymbol p,1\mathrm M)=0.\label{eq:q13-scale-baseline}
 \end{equation}
 
 比较的四种设置分别为无修正、全局修正、逐目标领域修正和配方条件修正。其共同依据是 A6/A7 与 A8/A9 的同配方跨规模差分；配方基础模型保持冻结，避免把规模偏移错误归入某个训练领域的系数。图~\ref{fig:q13-scale} 显示，二阶纯配比模型在 60M 表 A8/A9 的 pooled RMSE 为 1.5993，配方条件修正后为 0.3017；在 1B 表 A10/A11，该指标由 2.6963 降至 0.6252，降幅为 76.8\%。对应的 1B 逐目标平均 MAE 由 2.6203 降至 0.5207，降幅为 80.1\%。这说明显式处理规模偏差是跨尺度绝对误差下降的主要来源。然而，A8/A9 参与修正校准，A10/A11 也已多次用于回顾性比较；这些数字不构成独立的最终泛化精度。1B 的全局修正 MAE 为 0.4256，反而低于配方条件修正的 0.5207，说明更复杂的修正并非在所有指标上占优。
@@ -53,11 +59,12 @@
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.65\textheight,keepaspectratio]{Fig04_scale_correction.pdf}
-  \caption{两类配比模型在五组评价表上的 pooled RMSE 与逐目标平均 MAE。灰色区域的 10B、70B 结果依据给定估算 Loss，仅作外推情景诊断。}
+  \caption{规模修正误差图}
   \label{fig:q13-scale}
 \end{figure}
 
-为避免总体指标掩盖目标差异，图~\ref{fig:q13-targets}a、b 给出 1B 表中全部 13 个目标的 MAE 相对降幅。降幅按式~\eqref{eq:q13-reduction}计算，正值表示改善：
+为避免总体指标掩盖目标差异，图~\ref{fig:q13-targets}a、b 给出 1B 表中全部 13 个目标的 MAE 相对降幅。降幅按式~\eqref{eq:q13-reduction}计算，正值表示改善。
+\formulaname{目标误差降幅公式}
 
 \begin{equation}
 R_{k,c}=\frac{\operatorname{MAE}_{k,0}-\operatorname{MAE}_{k,c}}{\operatorname{MAE}_{k,0}}\times100\%.\label{eq:q13-reduction}
@@ -68,7 +75,7 @@ R_{k,c}=\frac{\operatorname{MAE}_{k,0}-\operatorname{MAE}_{k,c}}{\operatorname{M
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{Fig05_domain_errors_and_extrapolation.pdf}
-  \caption{A10/A11 上三类修正相对于无修正的逐目标 MAE 降幅，以及 10B 到 70B 的给定与预测 Loss 降幅。高规模比较不是实测训练验证。}
+  \caption{目标误差与外推图}
   \label{fig:q13-targets}
 \end{figure}
 
@@ -83,7 +90,7 @@ R_{k,c}=\frac{\operatorname{MAE}_{k,0}-\operatorname{MAE}_{k,c}}{\operatorname{M
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.82\textheight,keepaspectratio]{FigS01_optional_quality.pdf}
-  \caption{加入 $Q_{\mathrm{proxy}}$ 后的 RMSE、MAE 差值及配方成对重采样的 95\% 描述性区间。负值表示误差下降；重复的 1M 点不计为独立验证。}
+  \caption{质量代理增量图}
   \label{fig:q13-quality}
 \end{figure}
 
@@ -92,7 +99,7 @@ R_{k,c}=\frac{\operatorname{MAE}_{k,0}-\operatorname{MAE}_{k,c}}{\operatorname{M
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.62\textheight,keepaspectratio]{FigS02_calibration_oof.pdf}
-  \caption{A8/A9 的五折校准内与折外误差对照。图中的点是全表汇总误差，不是五折均值及标准差。}
+  \caption{规模修正折外检验图}
   \label{fig:q13-oof}
 \end{figure}
 

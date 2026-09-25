@@ -8,27 +8,31 @@
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure01_domain_distribution_nature.pdf}
-  \caption{各领域样本质量评分分布。轮廓表示按域峰值归一化的密度，箱体表示第 25--75 百分位数，竖线为中位数，菱形为均值，空心圆为箱须界限外观测；密度高度不表示样本量。}
+  \caption{领域质量分布图}
   \label{fig:q1-nature-01}
 \end{figure}
 
 \subsection{数据对象与预处理}
-设第 $i$ 条记录的原始质量指标向量为 $\boldsymbol{x}_i=(x_{i1},\ldots,x_{i16})$。16 个指标覆盖语言形式、可读性、内容质量、教育性、事实性、知识覆盖与重复性等维度，其中句末标点率、cleanliness、no-ad、readability、fluency、unique words、QuRating education、writing、FineWeb education、factual、Books、Math 和 Wikipedia 为正向指标；无字母词比例、最高频二元词组占比和最高频三元词组占比为负向指标。负向指标较大时通常意味着文本更可能由符号、模板或高频短语主导，因此需要反向处理。
+第 $i$ 条记录具有 16 维原始质量指标向量。指标覆盖语言形式、可读性、内容质量、教育性、事实性、知识覆盖与重复性等维度，其中句末标点率、cleanliness、no-ad、readability、fluency、unique words、QuRating education、writing、FineWeb education、factual、Books、Math 和 Wikipedia 为正向指标；无字母词比例、最高频二元词组占比和最高频三元词组占比为负向指标。负向指标较大时通常意味着文本更可能由符号、模板或高频短语主导，因此需要反向处理。
+\formulaname{原始质量指标向量公式}
+\begin{equation}
+ \boldsymbol{x}_i=(x_{i1},\ldots,x_{i16}).
+ \label{eq:q1-indicator-vector}
+\end{equation}
 
-记方向统一后的指标为
+正向与负向指标集合分别记为 $\mathcal P$、$\mathcal N$，两者互不相交且覆盖全部 16 个指标。方向统一后的指标定义如下。
+\formulaname{指标方向统一公式}
 \begin{equation}
  \widetilde{x}_{ij}=\begin{cases}
  x_{ij}, & j\in\mathcal{P},\\
- -x_{ij}, & j\in\mathcal{N},
+ -x_{ij}, & j\in\mathcal{N}
  \end{cases}
- \qquad \mathcal{P}\cup\mathcal{N}=\{1,\ldots,16\},\quad \mathcal{P}\cap\mathcal{N}=\varnothing,
  \label{eq:q1-direction-unification}
 \end{equation}
-其中 $\mathcal{P}$ 和 $\mathcal{N}$ 分别为正向、负向指标集合。随后使用方向统一值的 $A_1$ 拟合 $1\%$ 和 $99\%$ 分位点作为稳健边界；记边界为 $l_j$ 和 $u_j$，则统一为“越高越好”的稳健归一化形式
+随后使用方向统一值的 $A_1$ 拟合 $1\%$ 和 $99\%$ 分位点作为稳健边界；记边界为 $l_j$ 和 $u_j$，则统一为“越高越好”的稳健归一化形式。这里 $\operatorname{clip}(t,0,1)$ 表示将 $t$ 截断至 $[0,1]$。
+\formulaname{稳健归一化公式}
 \begin{equation}
- z_{ij}=\operatorname{clip}\left(\frac{\widetilde{x}_{ij}-l_j}{u_j-l_j},0,1\right),
- \qquad
- \operatorname{clip}(t,0,1)=\min\{1,\max\{0,t\}\}.
+ z_{ij}=\operatorname{clip}\left(\frac{\widetilde{x}_{ij}-l_j}{u_j-l_j},0,1\right).
  \label{eq:q1-robust-normalization}
 \end{equation}
 扩展集只使用 $A_1$ 的边界，不重新拟合分位点，从而保证 $A_1$、$A_2$ 和 $A_3$ 的分数具有可比性。归一化后检查缺失值、无穷值、越界值和重复指纹，并保留每条记录的来源集、领域标签和质量分数，供后续聚合与审计。
@@ -36,16 +40,20 @@
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure02_indicator_heatmap_nature.pdf}
-  \caption{各领域的质量指标画像。单元格为全量去重样本在相应领域、指标上的归一化均值，全图共用 0--1 色标；三项负向指标已逆向。}
+  \caption{领域质量指标画像图}
   \label{fig:q1-nature-02}
 \end{figure}
 
 \subsection{CRITIC 客观赋权}
-为避免人为指定权重，采用 CRITIC 方法同时利用指标的离散程度和冲突程度。设归一化矩阵为 $Z=(z_{ij})$，第 $j$ 个指标的标准差为 $\sigma_j$，与第 $k$ 个指标的 Pearson 相关系数为 $r_{jk}$，则信息量为
+为避免人为指定权重，采用 CRITIC 方法同时利用指标的离散程度和冲突程度。设归一化矩阵为 $Z$，其元素为 $z_{ij}$；第 $j$ 个指标的标准差为 $\sigma_j$，与第 $k$ 个指标的 Pearson 相关系数为 $r_{jk}$。
+\formulaname{CRITIC 信息量公式}
 \begin{equation}
- I_j=\sigma_j\sum_{k=1}^{16}(1-r_{jk}),\qquad
- w_j=\frac{I_j}{\sum_{m=1}^{16}I_m},\qquad
- \sum_{j=1}^{16}w_j=1.
+ I_j=\sigma_j\sum_{k=1}^{16}(1-r_{jk}).
+ \label{eq:q1-critic-information}
+\end{equation}
+\formulaname{CRITIC 权重公式}
+\begin{equation}
+ w_j=\frac{I_j}{\sum_{m=1}^{16}I_m}.
  \label{eq:q1-critic}
 \end{equation}
 其中，$\sigma_j$ 反映指标对样本的区分能力，$1-r_{jk}$ 反映该指标与其他指标的信息差异。由 $A_1$ 的拟合集计算权重并固定应用于 $A_1$ 留出集及 $A_2$、$A_3$，既防止扩展集的分布变化改变权重，又保证外推比较的可重复性。最终权重最高的指标为句末标点率（$8.9093\%$）、cleanliness（$8.0008\%$）和 no-ad（$7.7530\%$）；三个负向词组指标合计权重为 $16.5784\%$。
@@ -53,20 +61,26 @@
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure05_critic_weights_nature.pdf}
-  \caption{CRITIC 方法得到的 16 个质量指标权重。权重由 $A_1$ 拟合集估计，并固定用于全部样本。}
+  \caption{质量指标权重图}
   \label{fig:q1-nature-05}
 \end{figure}
 
 \subsection{加权距离 TOPSIS 评分}
-以全正向理想点 $\boldsymbol{z}^{+}=\boldsymbol{1}$ 和全负向理想点 $\boldsymbol{z}^{-}=\boldsymbol{0}$ 为参照，计算第 $i$ 条记录到两类理想点的加权欧氏距离：
+以取值全为 1 的正向理想点 $\boldsymbol{z}^{+}$ 和取值全为 0 的负向理想点 $\boldsymbol{z}^{-}$ 为参照，计算第 $i$ 条记录到两类理想点的加权欧氏距离。
+\formulaname{正理想点距离公式}
 \begin{equation}
- D_i^{+}=\sqrt{\sum_{j=1}^{16}w_j(1-z_{ij})^2},\qquad
+ D_i^{+}=\sqrt{\sum_{j=1}^{16}w_j(1-z_{ij})^2}.
+ \label{eq:q1-topsis-positive-distance}
+\end{equation}
+\formulaname{负理想点距离公式}
+\begin{equation}
  D_i^{-}=\sqrt{\sum_{j=1}^{16}w_jz_{ij}^2}.
  \label{eq:q1-topsis-distance}
 \end{equation}
-定义样本级质量分数为
+样本级质量分数定义如下，其取值在 $[0,100]$。
+\formulaname{样本质量分数公式}
 \begin{equation}
- Q_i=100\times\frac{D_i^{-}}{D_i^{+}+D_i^{-}},\qquad 0\le Q_i\le100.
+ Q_i=100\times\frac{D_i^{-}}{D_i^{+}+D_i^{-}}.
  \label{eq:q1-topsis-score}
 \end{equation}
 因此，$Q_i$ 越大表示该记录越接近理想高质量点。该分数回答的是“单条文本在 16 个统一方向质量信号下的综合质量水平”，而非某个单一指标的原始测量值。
@@ -74,22 +88,28 @@
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure03_A1_full_comparison_nature.pdf}
-  \caption{$A_1$ 与全量去重语料的领域均分对照。左图中空心圆为 $A_1$，实心菱形为全量均分，并标注样本量变化；右图为全量减 $A_1$ 的均分差值。}
+  \caption{领域均分对照图}
   \label{fig:q1-nature-03}
 \end{figure}
 
 \subsection{从样本级到领域级和语料级的聚合}
-对领域 $g$ 的记录集合 $\mathcal{I}_g$，采用样本数加权的均值聚合：
+对领域 $g$ 的记录集合 $\mathcal{I}_g$，采用样本数加权的均值聚合。
+\formulaname{领域质量均值公式}
 \begin{equation}
  Q_g=\frac{1}{|\mathcal{I}_g|}\sum_{i\in\mathcal{I}_g}Q_i.
  \label{eq:q1-domain-aggregation}
 \end{equation}
-语料级分数同样由全体记录的样本均值给出，即 $Q_{\mathrm{corpus}}=N^{-1}\sum_iQ_i$。这种聚合保留了每条记录的等贡献原则，并能将域级差异与域规模分离：域均值反映质量，域记录数反映组成。若需降低极端值影响，可在附录中同时报告中位数和四分位距，但主结果使用均值以便与全量语料平均质量一致。
+语料级分数同样由全体记录的样本均值给出。这种聚合保留了每条记录的等贡献原则，并能将域级差异与域规模分离：域均值反映质量，域记录数反映组成。若需降低极端值影响，可在附录中同时报告中位数和四分位距，但主结果使用均值以便与全量语料平均质量一致。
+\formulaname{语料质量均值公式}
+\begin{equation}
+ Q_{\mathrm{corpus}}=\frac{1}{N}\sum_{i=1}^{N}Q_i.
+ \label{eq:q1-corpus-aggregation}
+\end{equation}
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure04_composition_decomposition_nature.pdf}
-  \caption{领域构成变化与总体均分分解。左图为 $A_1$ 与全量语料的领域占比；右图按先替换领域均分、再替换领域占比的顺序，将总变化分为域内变化与构成变化。}
+  \caption{领域构成分解图}
   \label{fig:q1-nature-04}
 \end{figure}
 
@@ -125,7 +145,7 @@ $A_1$ 语料级平均分为 $60.9471$，全量去重语料平均分为 $54.2323$
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure06_model_sensitivity_nature.pdf}
-  \caption{不同评价方案的排序敏感性。三个面板依次展示与主模型的 Spearman 相关系数、平均绝对百分位排名变化，以及排名变化至少 20 个百分点的样本比例。}
+  \caption{评分排序敏感性图}
   \label{fig:q1-nature-06}
 \end{figure}
 
