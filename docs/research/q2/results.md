@@ -2,6 +2,8 @@
 
 所有结果仍待团队独立评审。历史探索和当前验证分开，不以发布动作替代科学验证。
 
+新增E1：[边际效用与弹性实验报告](../../../experiments/runs/q2-e1-marginal-elasticity-20260925-r01/report.md)。参考点的N/D完整Loss弹性约−0.050447/−0.040100；边际收益递减、质量截断与配比方向均已核验。以上属于冻结公式的条件分析，不是新的观测性能结果。
+
 ## 当前模型及局部证据
 
 规模项为 L = E + A N^(-α) + B D^(-β)，其中 N、D 均以十亿为单位。质量项以B7参考质量0.55为中心；配比项剔除与 Q_A 线性相关的方向，避免将同一代理信号直接相加两次。具体公式与完整参数见 [v1说明](../../problem/q2-generalized-scaling-model-v1.md) 和 [冻结参数](../../../experiments/runs/q2-model-finalization-20260925/model_parameters.json)。

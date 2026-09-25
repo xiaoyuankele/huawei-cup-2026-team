@@ -1,6 +1,6 @@
 {
   "status": "REVIEW_REQUIRED",
-  "scope": "Publication file hashes; manifest excludes itself to avoid circular hashing.",
+  "scope": "Publication file hashes including E1; manifest excludes itself. Historical import hashes remain separately archived.",
   "historical_import": "data/manifests/q2_research_import.json",
   "files": [
     {
@@ -12,6 +12,11 @@
       "path": "README.md",
       "bytes": 3135,
       "sha256": "548052bd1d16e5d3a229d2964e18604f9375016c42631740d47c262afbd6ea60"
+    },
+    {
+      "path": "configs/q2-e1-marginal-elasticity.json",
+      "bytes": 1637,
+      "sha256": "be786790b1e4145579f8c1732d0a1dec3dc20fb37476939ede1ff66d74faef98"
     },
     {
       "path": "data/manifests/q2_research_import.json",
@@ -49,9 +54,19 @@
       "sha256": "48fbae2635d7a9e307d712709afe979ad1a35bdcc5bba5b8eed1cc41bdc58761"
     },
     {
+      "path": "docs/research/q2/E1-governance-audit.md",
+      "bytes": 3295,
+      "sha256": "5851f9774de3a74423f69e83caa99a0fb61809009ab7da676f282f601cf5c91b"
+    },
+    {
+      "path": "docs/research/q2/E1-plan.md",
+      "bytes": 2913,
+      "sha256": "49da51c61787cdb0765c045e61154e8eb945c7d3376f492000f5ca606a2b0e73"
+    },
+    {
       "path": "docs/research/q2/README.md",
-      "bytes": 3756,
-      "sha256": "b7d3807a1c8763af19be1856bda607f3cef471740059cf75a7540bde103ac694"
+      "bytes": 4180,
+      "sha256": "8151a019b56ec84ebe9260df91825209aa6e280bc6f922c3c511769026e01e79"
     },
     {
       "path": "docs/research/q2/column_dictionary.csv",
@@ -70,8 +85,8 @@
     },
     {
       "path": "docs/research/q2/handoff.md",
-      "bytes": 3102,
-      "sha256": "83bd026ee8203869ba1247b09c8e391cb6786f7504d3bbfd7ed9aa018351beef"
+      "bytes": 3485,
+      "sha256": "787d9e632a0fcd270d5bad6e9375cbdaab24b84fa28ca731f70e96e1bde296e9"
     },
     {
       "path": "docs/research/q2/process.md",
@@ -90,8 +105,18 @@
     },
     {
       "path": "docs/research/q2/results.md",
-      "bytes": 4341,
-      "sha256": "f713680bbdbe1c1b4bee2030d435e65ad06286735795959d274b63f50b29960a"
+      "bytes": 4666,
+      "sha256": "acb1584017ccbd11a01366c3b572a96db5a7f6fa0c52baa0eb82fb0ae0279092"
+    },
+    {
+      "path": "docs/tasks/T-Q2-E1-MARGINAL-handoff.md",
+      "bytes": 2839,
+      "sha256": "c366a1abc92a4eeb02e6b881462e527396d1c9712bf994f9bb77c90df52de371"
+    },
+    {
+      "path": "docs/tasks/T-Q2-E1-MARGINAL.yml",
+      "bytes": 2969,
+      "sha256": "d9f9ae21de2e66728492617b4585949159d5707a9c4d0f00f30151e6aae72a58"
     },
     {
       "path": "docs/tasks/T-Q2-RESEARCH-HANDOFF.yml",
@@ -100,8 +125,8 @@
     },
     {
       "path": "experiments/index.csv",
-      "bytes": 18382,
-      "sha256": "1258e0110ca99ba10772cd73888dc6114521a061993acaa40e74d3dd84b10745"
+      "bytes": 18955,
+      "sha256": "9393f037d31bc3f99c0a7349c810fa86b8a5bdea0271195d527e4d83001ddabf"
     },
     {
       "path": "experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv",
@@ -157,6 +182,136 @@
       "path": "experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv",
       "bytes": 1049,
       "sha256": "b0bb6e8d841e59e6007555e0af3e2913054a830dcb633ced74d6440f373f073d"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/README.md",
+      "bytes": 2046,
+      "sha256": "7dcf40fcdc10ded1e38ee26eb45e3ebf7f507e39762ffc89574e858e9d7508e2"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/assumption_sensitivity.csv",
+      "bytes": 1687352,
+      "sha256": "35a163919d0ebab76180444584fc4670faa14e72b71728e9821c74cd48a615c2"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/assumption_sensitivity_summary.csv",
+      "bytes": 2930,
+      "sha256": "81a12cddc7e7de7e43ea39393f1bca6b8aed8e819d9d9d04836d2329c4400c76"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/figures/E1_quality_mixture_sensitivity.pdf",
+      "bytes": 46682,
+      "sha256": "ed8d576e5c06207168a022249e123de49a954de0f27c7eba9d0cb90723f1a5e3"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/figures/E1_quality_mixture_sensitivity.png",
+      "bytes": 238145,
+      "sha256": "8ba59a27a3333aeb26611324513ded092180aed28afe2502552ff10a614766dd"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/figures/E1_quality_mixture_sensitivity.svg",
+      "bytes": 45908,
+      "sha256": "eb9cde631180b79807418129929e267ad1b57883b416fa10056f35f961d7c51a"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/figures/E1_scale_sensitivity.pdf",
+      "bytes": 47392,
+      "sha256": "635f256e9ab4756ef0e0a1e50ed8bf6eb062c718550e3415e2466b55714d2a2f"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/figures/E1_scale_sensitivity.png",
+      "bytes": 304332,
+      "sha256": "a6bc71e14387f7ea53f0f8a76415e9761e27636feddd3ae3d7f217c3ea590958"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/figures/E1_scale_sensitivity.svg",
+      "bytes": 68089,
+      "sha256": "992971b90df2ae6405157a7aea3ec09554602db57b76eeb7f8952abe5acd832f"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/figures/QA.md",
+      "bytes": 2080,
+      "sha256": "5645200fc94031b1edb035dc19b6c6255a04aeb121efd69845a5afb775bbe99b"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/figures/automated_QA.json",
+      "bytes": 4952,
+      "sha256": "46d62b5a6b302f1fb33ddf556c3120f21038b4584058560ce9814ddfbf592be5"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/figures/export_manifest.json",
+      "bytes": 588,
+      "sha256": "81e533fd9a33af6e4dd09ffeed6449e9ae7852db8422d011bc0b762c95fdb022"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/governance.yml",
+      "bytes": 1103,
+      "sha256": "0c5c0435e46e3dfe8482f25bcd0a09bab6c8838c1d0e822e766cce01f56c447e"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/manifest.json",
+      "bytes": 4088,
+      "sha256": "5aca76bd3f1e1d740d54b802027caaeab8393173a93a76ffe10746b057199cc1"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/metrics.json",
+      "bytes": 1441,
+      "sha256": "b88a2909432984429ffc062298610c859556de0bba18985fc89414f8e5b44a44"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/quality_feasible_path_checks.csv",
+      "bytes": 318,
+      "sha256": "cdafdb8098dfdbf83e693d8c8855e89090bbc50dcf570fc4ef3ed489f86b5e69"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/quality_origin_sensitivity.csv",
+      "bytes": 471,
+      "sha256": "a6842722c6a3f0a36f2f6cb14e0d6420ad4c6c3fef1101bdae779e81b8e9e469"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/quality_piecewise.csv",
+      "bytes": 168633,
+      "sha256": "b63a46ad98537f2386a12a2f6157f2066a4978095d70ee83142557283d5fddc5"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/report.md",
+      "bytes": 8063,
+      "sha256": "b3e27b646c05f79416a4b8d8e66d480d9dbb99888416856838df48355f95456b"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/reproduction_verification.json",
+      "bytes": 2630,
+      "sha256": "1218f9ed17c793603a321fb6af42d7b87031c4d4c5fcc5f9d2ded65c4aec9c13"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/scale_anchors.csv",
+      "bytes": 2704,
+      "sha256": "da7ac44eb7c6d3282a2f305f4c452ad0d37894963e9bd844bfeb55e70fa82e8e"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/scale_curves.csv",
+      "bytes": 72485,
+      "sha256": "296b0415243f93d1d2e54fec47d0e37a9cd27dc5e6b4508f40071aff38928fc5"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/scale_fold_sensitivity.csv",
+      "bytes": 24043,
+      "sha256": "b652d888d0f990878c13824efe94fdbaa02b5d96db3617eb107ae9b0b5ff14d8"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/scale_grid.csv",
+      "bytes": 650733,
+      "sha256": "5c3b77440b78f524e1304eba09329b9f7971ed70038bc0271a97a7acccb5d26f"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/simplex_directional_derivatives.csv",
+      "bytes": 118787,
+      "sha256": "5261e88ebee9799c41d4b4488cdd21e0dfcfa7e5d9fadfe8ea532eb75d1ed672"
+    },
+    {
+      "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/verification_checks.csv",
+      "bytes": 276176,
+      "sha256": "1de50f4c1ac90b1ed7913ff96879719b59af0f524e27e8dfc07c134fa9ba5ad3"
     },
     {
       "path": "experiments/runs/q2-local-model-validation-20260925/README.md",
@@ -385,18 +540,78 @@
     },
     {
       "path": "governance/ai-use-log.csv",
-      "bytes": 5870,
-      "sha256": "991ee3cbe26d43449c5813aa2a78c9f033ba09f2c35ce7763070ab7d3e8ad000"
+      "bytes": 7247,
+      "sha256": "39b362ce6626bf41a4cd4181b6d64625a2b5136bbf23d1ab4f49400347e00174"
+    },
+    {
+      "path": "governance/feedback/index.csv",
+      "bytes": 4014,
+      "sha256": "fd02a406bffc3451902edb2c769b05e32fcceeffacc84268fff2de6e97a4f4c9"
+    },
+    {
+      "path": "governance/feedback/records/FB-Q2-E1-01.yml",
+      "bytes": 1832,
+      "sha256": "d31daf64d7761d0355c37705988bf8c258840781db1021540bc211d47e6beeeb"
+    },
+    {
+      "path": "governance/feedback/records/FB-Q2-E1-02.yml",
+      "bytes": 1814,
+      "sha256": "ae6e305b0bdc14e4d556fd30303592476be1aa916170ff5d5ba920cf2a862449"
+    },
+    {
+      "path": "governance/feedback/records/FB-Q2-E1-GOV-20260925.yml",
+      "bytes": 1879,
+      "sha256": "11e2af83799aec220ecacc82395be4b115ff44037e21293097c01236c91f8cf0"
+    },
+    {
+      "path": "governance/prompts/catalog/P-Q2-E1-GOV.md",
+      "bytes": 620,
+      "sha256": "13995dd8eb5152c261235b483c00a53200ea52926a23da34370e04d5e1c6612a"
+    },
+    {
+      "path": "governance/prompts/catalog/P-Q2-E1-MARGINAL.md",
+      "bytes": 667,
+      "sha256": "dc428f41e656c52d51f4b791651843f2ec6f25f84a929304c478727d8d9e89bc"
+    },
+    {
+      "path": "governance/prompts/registry.csv",
+      "bytes": 2308,
+      "sha256": "add94dce71f7d2b8884a90538ca9aee927937f2417b215edfa1137f86d297929"
+    },
+    {
+      "path": "governance/prompts/runs/PR-Q2-E1-20260925.yml",
+      "bytes": 1346,
+      "sha256": "2c72a0114831f61c4deb7e3fe8ac1a65ee3b93ebee8540c8afc6c522547eae29"
+    },
+    {
+      "path": "governance/prompts/runs/PR-Q2-E1-GOV-20260925.yml",
+      "bytes": 1319,
+      "sha256": "4017d86723904191fee5d575dee52d28615d71f7acc5750329eae68fd15bb2ff"
     },
     {
       "path": "paper/claim-ledger.csv",
-      "bytes": 6742,
-      "sha256": "d1e8fda7465aa0133657d7300cc9e7398f95d1d53f4a5607caf405e9ced3b8e4"
+      "bytes": 9322,
+      "sha256": "316b18725ee0d888cbc3f03b169a7f9912a9c2668dd3c60b4fa0da87f0e4b5f3"
+    },
+    {
+      "path": "paper/sections/drafts/q2-e1-marginal-elasticity.md",
+      "bytes": 1904,
+      "sha256": "793a58d4d646cc79f53bd08a4a4d83752f036b97bd2e7b94098aa4eef50ea0eb"
+    },
+    {
+      "path": "requirements-q2-e1.txt",
+      "bytes": 50,
+      "sha256": "19b0413a9102db0a52666ceb97a781e646aaac781398c64552bd42722bb72796"
     },
     {
       "path": "requirements-q2-research.txt",
       "bytes": 94,
       "sha256": "88611a3396e64a62a543022b3d3453d389340bdcf983cf04685ddc5f895b1917"
+    },
+    {
+      "path": "scripts/plot_q2_e1.py",
+      "bytes": 8026,
+      "sha256": "6703632726ff33764af61f4d36a1fe2591bb6a69931d082d5bae878564ef51d6"
     },
     {
       "path": "scripts/q2_calibration_sensitivity.py",
@@ -407,6 +622,11 @@
       "path": "scripts/q2_combined_scenario_prototype.py",
       "bytes": 8613,
       "sha256": "08c11a75c4c77d2dd90a363093dbadc2fb2a923fb82a61ae43ab2985261565e3"
+    },
+    {
+      "path": "scripts/q2_e1_marginal_elasticity.py",
+      "bytes": 18932,
+      "sha256": "ab07be4c3bb1edfb6433b1aa7a3dd002e2ace6707af3d920e63fea5149ff06f4"
     },
     {
       "path": "scripts/q2_finalize_model.py",
@@ -440,8 +660,13 @@
     },
     {
       "path": "scripts/q2_verify_delivery.py",
-      "bytes": 1868,
-      "sha256": "d62eff8525e61dcb276e065d0be39f6e0181abd72369bedd827621e0b0d981ba"
+      "bytes": 1891,
+      "sha256": "dcc7eba5c9f2ae2af2c50f3315aed37bb1a4b2e071dc2f90c0b3abfe08132fc9"
+    },
+    {
+      "path": "scripts/q2_verify_e1.py",
+      "bytes": 4330,
+      "sha256": "1f32b7136f17a205bd10b681a0c30474d7be56112feabcb1f9846151504baca7"
     },
     {
       "path": "scripts/q2_verify_reproduction.py",

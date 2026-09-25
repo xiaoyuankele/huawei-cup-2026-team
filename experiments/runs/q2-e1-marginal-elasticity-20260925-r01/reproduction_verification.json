@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "frozen_input_hashes_unchanged": true,
+  "exported_csv_checks_pass": true,
+  "rerun_compared": true,
+  "compared_csvs": 11,
+  "derivative_check_groups": 3371,
+  "scalar_comparisons": 39121,
+  "note": "Calculation checks and repeat execution are not independent empirical experiments.",
+  "tables": [
+    {
+      "file": "assumption_sensitivity.csv",
+      "rows": 9216,
+      "columns": 13,
+      "sha256": "35a163919d0ebab76180444584fc4670faa14e72b71728e9821c74cd48a615c2",
+      "rerun_identical": true
+    },
+    {
+      "file": "assumption_sensitivity_summary.csv",
+      "rows": 18,
+      "columns": 10,
+      "sha256": "81a12cddc7e7de7e43ea39393f1bca6b8aed8e819d9d9d04836d2329c4400c76",
+      "rerun_identical": true
+    },
+    {
+      "file": "quality_feasible_path_checks.csv",
+      "rows": 2,
+      "columns": 6,
+      "sha256": "cdafdb8098dfdbf83e693d8c8855e89090bbc50dcf570fc4ef3ed489f86b5e69",
+      "rerun_identical": true
+    },
+    {
+      "file": "quality_origin_sensitivity.csv",
+      "rows": 4,
+      "columns": 6,
+      "sha256": "a6842722c6a3f0a36f2f6cb14e0d6420ad4c6c3fef1101bdae779e81b8e9e469",
+      "rerun_identical": true
+    },
+    {
+      "file": "quality_piecewise.csv",
+      "rows": 726,
+      "columns": 18,
+      "sha256": "b63a46ad98537f2386a12a2f6157f2066a4978095d70ee83142557283d5fddc5",
+      "rerun_identical": true
+    },
+    {
+      "file": "scale_anchors.csv",
+      "rows": 9,
+      "columns": 15,
+      "sha256": "da7ac44eb7c6d3282a2f305f4c452ad0d37894963e9bd844bfeb55e70fa82e8e",
+      "rerun_identical": true
+    },
+    {
+      "file": "scale_curves.csv",
+      "rows": 246,
+      "columns": 16,
+      "sha256": "296b0415243f93d1d2e54fec47d0e37a9cd27dc5e6b4508f40071aff38928fc5",
+      "rerun_identical": true
+    },
+    {
+      "file": "scale_fold_sensitivity.csv",
+      "rows": 81,
+      "columns": 16,
+      "sha256": "b652d888d0f990878c13824efe94fdbaa02b5d96db3617eb107ae9b0b5ff14d8",
+      "rerun_identical": true
+    },
+    {
+      "file": "scale_grid.csv",
+      "rows": 1681,
+      "columns": 19,
+      "sha256": "5c3b77440b78f524e1304eba09329b9f7971ed70038bc0271a97a7acccb5d26f",
+      "rerun_identical": true
+    },
+    {
+      "file": "simplex_directional_derivatives.csv",
+      "rows": 544,
+      "columns": 15,
+      "sha256": "5261e88ebee9799c41d4b4488cdd21e0dfcfa7e5d9fadfe8ea532eb75d1ed672",
+      "rerun_identical": true
+    },
+    {
+      "file": "verification_checks.csv",
+      "rows": 3371,
+      "columns": 5,
+      "sha256": "1de50f4c1ac90b1ed7913ff96879719b59af0f524e27e8dfc07c134fa9ba5ad3",
+      "rerun_identical": true
+    }
+  ]
+}
