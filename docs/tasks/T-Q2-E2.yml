@@ -1,0 +1,58 @@
+task_id: T-Q2-E2
+title: E2 领域可行替代与互补识别边界
+problem_id: Q2
+subproblem_id: Q2-E2
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+role_assignment_status: ROUTING_PENDING_HUMAN_CONFIRMATION
+release_approver_actors:
+- ACTOR-1
+- ACTOR-2
+- ACTOR-3
+status: REVIEW_BLOCKED
+execution_status: SPEC_READY
+execution_class: USER_AUTHORIZED_CONDITIONAL_EXPLORATION
+registered_at: '2026-09-25T14:00:45+00:00'
+registered_before_execution: true
+branch: wp/ACTOR-2/WP-B
+gate: G1
+gate_status: NOT_EVIDENCED
+announcement:
+  mode: user_request
+  announcement_ref: docs/research/q2/E2-announcement.md
+  recorded_at: '2026-09-25T14:00:45+00:00'
+  announced_by_actor: null
+  acknowledged_by_actor: null
+  assistant_acknowledged: true
+review:
+  peer_decision: PENDING
+  integrator_decision: PENDING
+issue: https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/9
+issue_scope: WP-B routing reference; Q2 scope confirmation pending
+prompt:
+  prompt_id: P-Q2-E2-DOMAIN
+  version: v1.0.0
+  prompt_run_id: PR-Q2-E2-20260925
+feedback_required: true
+feedback_ids:
+- FB-Q2-E2-GOV-20260925
+- FB-Q2-E2-STRUCTURE
+inputs:
+- ref: experiments/runs/q2-model-finalization-20260925/model_parameters.json
+- ref: experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv
+- ref: configs/q2-e2-domain-substitution.json
+expected_outputs:
+- path: experiments/runs/q2-e2-domain-substitution-20260925-r01
+  description: tables, witnesses, report, figures and manifests
+- path: paper/sections/drafts/q2-e2-domain-substitution.md
+  description: unaccepted draft
+- path: docs/tasks/T-Q2-E2-handoff.md
+  description: independent review handoff
+acceptance_criteria:
+- All directions retained, infeasible/unsupported explicit
+- LP witnesses and finite effects independently verified
+- Interaction zero distinguished from real absence of complementarity
+- Frozen hashes unchanged; all CSV reruns identical
+- Independent Peer/Integrator review before acceptance

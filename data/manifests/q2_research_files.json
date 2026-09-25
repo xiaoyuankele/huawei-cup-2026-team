@@ -1,6 +1,6 @@
 {
   "status": "REVIEW_REQUIRED",
-  "scope": "Publication file hashes including E1; manifest excludes itself. Historical import hashes remain separately archived.",
+  "scope": "Published Q2 research plus E1/E2 files; excludes this manifest; historical manifests retained.",
   "historical_import": "data/manifests/q2_research_import.json",
   "files": [
     {
@@ -17,6 +17,11 @@
       "path": "configs/q2-e1-marginal-elasticity.json",
       "bytes": 1637,
       "sha256": "be786790b1e4145579f8c1732d0a1dec3dc20fb37476939ede1ff66d74faef98"
+    },
+    {
+      "path": "configs/q2-e2-domain-substitution.json",
+      "bytes": 983,
+      "sha256": "fdc44db8eface94d0e8e60473a8295db44edbdd1bf7afb0690d33d86039e9d7d"
     },
     {
       "path": "data/manifests/q2_research_import.json",
@@ -62,6 +67,16 @@
       "path": "docs/research/q2/E1-plan.md",
       "bytes": 2913,
       "sha256": "49da51c61787cdb0765c045e61154e8eb945c7d3376f492000f5ca606a2b0e73"
+    },
+    {
+      "path": "docs/research/q2/E2-announcement.md",
+      "bytes": 524,
+      "sha256": "c5de5d6f538a03014a0a94975cd8630626bd9182d3999faa1261f9f0b6993bb0"
+    },
+    {
+      "path": "docs/research/q2/E2-plan.md",
+      "bytes": 3466,
+      "sha256": "597c281385aca38d64972e6f74ca24cf9256325b6407323e5b5da9c9aecf427a"
     },
     {
       "path": "docs/research/q2/README.md",
@@ -117,6 +132,11 @@
       "path": "docs/tasks/T-Q2-E1-MARGINAL.yml",
       "bytes": 2969,
       "sha256": "d9f9ae21de2e66728492617b4585949159d5707a9c4d0f00f30151e6aae72a58"
+    },
+    {
+      "path": "docs/tasks/T-Q2-E2.yml",
+      "bytes": 2011,
+      "sha256": "95ce79b26bceacbea7477ab0bef4a5fcadd579a3baa398bd8748c0b7fd9348b3"
     },
     {
       "path": "docs/tasks/T-Q2-RESEARCH-HANDOFF.yml",
@@ -545,8 +565,8 @@
     },
     {
       "path": "governance/feedback/index.csv",
-      "bytes": 4014,
-      "sha256": "fd02a406bffc3451902edb2c769b05e32fcceeffacc84268fff2de6e97a4f4c9"
+      "bytes": 4908,
+      "sha256": "8b01b6b8df5f28a4d7733c1cc56fbc026a04988ba6195f5a01ae92e5ec55cfc0"
     },
     {
       "path": "governance/feedback/records/FB-Q2-E1-01.yml",
@@ -564,6 +584,16 @@
       "sha256": "11e2af83799aec220ecacc82395be4b115ff44037e21293097c01236c91f8cf0"
     },
     {
+      "path": "governance/feedback/records/FB-Q2-E2-GOV-20260925.yml",
+      "bytes": 1031,
+      "sha256": "80bbf11e37e5744d8a04d505316618d405ec607e53196e0e35c617a077e12dee"
+    },
+    {
+      "path": "governance/feedback/records/FB-Q2-E2-STRUCTURE.yml",
+      "bytes": 1037,
+      "sha256": "cd0c4cafe5d207e7bbe963cb5710795f705f8df851795808c52f184627a7f656"
+    },
+    {
       "path": "governance/prompts/catalog/P-Q2-E1-GOV.md",
       "bytes": 620,
       "sha256": "13995dd8eb5152c261235b483c00a53200ea52926a23da34370e04d5e1c6612a"
@@ -574,9 +604,14 @@
       "sha256": "dc428f41e656c52d51f4b791651843f2ec6f25f84a929304c478727d8d9e89bc"
     },
     {
+      "path": "governance/prompts/catalog/P-Q2-E2-DOMAIN.md",
+      "bytes": 562,
+      "sha256": "40b13d30697852a270ba322eba5c92552240f99a766015c662440d3ac715b5e4"
+    },
+    {
       "path": "governance/prompts/registry.csv",
-      "bytes": 2308,
-      "sha256": "add94dce71f7d2b8884a90538ca9aee927937f2417b215edfa1137f86d297929"
+      "bytes": 2565,
+      "sha256": "24a2ff00a0a00c269eab5cb3af7dace534e49b83d7bb3b8c2387fa778a746be7"
     },
     {
       "path": "governance/prompts/runs/PR-Q2-E1-20260925.yml",
@@ -587,6 +622,11 @@
       "path": "governance/prompts/runs/PR-Q2-E1-GOV-20260925.yml",
       "bytes": 1319,
       "sha256": "4017d86723904191fee5d575dee52d28615d71f7acc5750329eae68fd15bb2ff"
+    },
+    {
+      "path": "governance/prompts/runs/PR-Q2-E2-20260925.yml",
+      "bytes": 1021,
+      "sha256": "bba7717ceeee16e684983687857926599e2caf446f0dea8add71bcd140a9f183"
     },
     {
       "path": "paper/claim-ledger.csv",
@@ -602,6 +642,11 @@
       "path": "requirements-q2-e1.txt",
       "bytes": 50,
       "sha256": "19b0413a9102db0a52666ceb97a781e646aaac781398c64552bd42722bb72796"
+    },
+    {
+      "path": "requirements-q2-e2.txt",
+      "bytes": 38,
+      "sha256": "58e1524f55ce27ecf4de60402a7af7b3f7e4dc2c3ba0edb24e8935c165dc94b8"
     },
     {
       "path": "requirements-q2-research.txt",

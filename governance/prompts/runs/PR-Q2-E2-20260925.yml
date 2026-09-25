@@ -1,0 +1,30 @@
+prompt_run_id: PR-Q2-E2-20260925
+prompt_id: P-Q2-E2-DOMAIN
+prompt_version: v1.0.0
+task_id: T-Q2-E2
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+device_id: DEVICE-LOCAL-CODEX
+registered_at: '2026-09-25T14:00:45+00:00'
+date: '2026-09-25'
+tool: Codex desktop
+model: GPT-6
+provider: OpenAI
+input_summary: Frozen parameters, published A4 recipe features and E2 preregistered
+  plan
+output_ref: docs/research/q2/E2-plan.md
+output_sha256: 597c281385aca38d64972e6f74ca24cf9256325b6407323e5b5da9c9aecf427a
+git_commit: cf268d441568d5aecf7c9de4a5cb8f1c982c4adc
+git_commit_role: baseline; final code commit registered after implementation
+run_id: q2-e2-domain-substitution-20260925-r01
+branch: wp/ACTOR-2/WP-B
+status: REVIEW_BLOCKED
+execution_status: SPEC_READY
+needs_human_review: true
+peer_decision: PENDING
+integrator_decision: PENDING
+registration: PRE_EXECUTION_TASK_LEVEL
+next_action: Execute conditional plan; record exact output provenance; independent
+  team review
