@@ -1,22 +1,27 @@
 {
   "status": "REVIEW_REQUIRED",
-  "scope": "Publication file hashes including E1; manifest excludes itself. Historical import hashes remain separately archived.",
+  "scope": "Published Q2 research plus E1/E2 files; excludes this manifest; historical manifests retained.",
   "historical_import": "data/manifests/q2_research_import.json",
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 14848,
-      "sha256": "2bcc5eff1a2a6c6f2975868d908ea106daa4de32d0a844f6873231c94fa3b942"
+      "bytes": 14989,
+      "sha256": "a2f345c5160046beca9ad22a21d17d43122950ccf4ba6e8e92f3fb024c3ca25c"
     },
     {
       "path": "README.md",
-      "bytes": 3135,
-      "sha256": "548052bd1d16e5d3a229d2964e18604f9375016c42631740d47c262afbd6ea60"
+      "bytes": 3345,
+      "sha256": "5b937d76b70616088a6e9e437d9be15c2dc95fde0f8651cef72fe42ab8408fce"
     },
     {
       "path": "configs/q2-e1-marginal-elasticity.json",
       "bytes": 1637,
       "sha256": "be786790b1e4145579f8c1732d0a1dec3dc20fb37476939ede1ff66d74faef98"
+    },
+    {
+      "path": "configs/q2-e2-domain-substitution.json",
+      "bytes": 983,
+      "sha256": "fdc44db8eface94d0e8e60473a8295db44edbdd1bf7afb0690d33d86039e9d7d"
     },
     {
       "path": "data/manifests/q2_research_import.json",
@@ -64,9 +69,29 @@
       "sha256": "49da51c61787cdb0765c045e61154e8eb945c7d3376f492000f5ca606a2b0e73"
     },
     {
+      "path": "docs/research/q2/E2-announcement.md",
+      "bytes": 524,
+      "sha256": "c5de5d6f538a03014a0a94975cd8630626bd9182d3999faa1261f9f0b6993bb0"
+    },
+    {
+      "path": "docs/research/q2/E2-main-merge-audit.json",
+      "bytes": 3444,
+      "sha256": "22948946a0d1b23a4bcfa054a955940b01a0052211d5afce76281aae34f1a09d"
+    },
+    {
+      "path": "docs/research/q2/E2-main-merge-audit.md",
+      "bytes": 1657,
+      "sha256": "782907fe79d66bf5e4bc54e6ff9839743c3c83655107d35d27839c2a655ee8bb"
+    },
+    {
+      "path": "docs/research/q2/E2-plan.md",
+      "bytes": 3466,
+      "sha256": "597c281385aca38d64972e6f74ca24cf9256325b6407323e5b5da9c9aecf427a"
+    },
+    {
       "path": "docs/research/q2/README.md",
-      "bytes": 4180,
-      "sha256": "8151a019b56ec84ebe9260df91825209aa6e280bc6f922c3c511769026e01e79"
+      "bytes": 4602,
+      "sha256": "cecb1d29a7af988b1866d7f99e350b1fc682f4bf19f690431a76e8474e6207c4"
     },
     {
       "path": "docs/research/q2/column_dictionary.csv",
@@ -119,14 +144,24 @@
       "sha256": "d9f9ae21de2e66728492617b4585949159d5707a9c4d0f00f30151e6aae72a58"
     },
     {
+      "path": "docs/tasks/T-Q2-E2-handoff.md",
+      "bytes": 2299,
+      "sha256": "77514c4db869790da47955b5182886cd17e0fbc8bed3799a72bc54bb1d6b1168"
+    },
+    {
+      "path": "docs/tasks/T-Q2-E2.yml",
+      "bytes": 2325,
+      "sha256": "bc6e1b8b03401ee3d7f051c5a5bdb218c744e4a89dc9d6c9886c5222060d4c33"
+    },
+    {
       "path": "docs/tasks/T-Q2-RESEARCH-HANDOFF.yml",
       "bytes": 2146,
       "sha256": "4315faec1a272d1ed0e292d55807cb1b1f28ff52e099e15e8a065c2fcf8aa4c2"
     },
     {
       "path": "experiments/index.csv",
-      "bytes": 18955,
-      "sha256": "9393f037d31bc3f99c0a7349c810fa86b8a5bdea0271195d527e4d83001ddabf"
+      "bytes": 20035,
+      "sha256": "e7302d0343b47f79a97947b3e80d1b84efed9282565819019cce46cca40d5997"
     },
     {
       "path": "experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv",
@@ -312,6 +347,141 @@
       "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/verification_checks.csv",
       "bytes": 276176,
       "sha256": "1de50f4c1ac90b1ed7913ff96879719b59af0f524e27e8dfc07c134fa9ba5ad3"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/README.md",
+      "bytes": 1222,
+      "sha256": "120bc888d1613cf829be1251dfcf02bd0b170034dee8a15ffd750aa3f1e7da6d"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/assumption_sensitivity.csv",
+      "bytes": 353745,
+      "sha256": "d7d2183073df8a61b0614107b014efd445ae15d7ce92b89d4dbd7cf53a8f71d7"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/clipping_stress_interactions.csv",
+      "bytes": 1350685,
+      "sha256": "64017ef1772cc9316abc8f3ebd9890ef3425c435b27c2576996864eed0b7368b"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/data_dictionary.md",
+      "bytes": 1812,
+      "sha256": "5d97abedfa9a3737a9888faab0e11e7e9764434aef1bcc60babaf0dedf9b901b"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/direction_stability.csv",
+      "bytes": 12897,
+      "sha256": "0516afe883e4f253f722bb07fd20b3c437225767a3df9940e7341108cb676cc7"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/figures/E2_direction_interaction.pdf",
+      "bytes": 45081,
+      "sha256": "5416f101f6d99f44aabd0b58989637dd9424282118a56297e22903ff83111eb0"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/figures/E2_direction_interaction.png",
+      "bytes": 229205,
+      "sha256": "ab5523f58979809cb62ca978fa4c78211b245f1abf832599401b6ef41cd40e9d"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/figures/E2_direction_interaction.svg",
+      "bytes": 37717,
+      "sha256": "1a4c2ffbeba1bc0ed145a2a419271ba889470fddedf31548fe0ec445a3f5826f"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/figures/E2_substitution_support.pdf",
+      "bytes": 41651,
+      "sha256": "50da5346286c2b770437d2b51f4a84a7f41674985c48d447d4f27c7e3a946bab"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/figures/E2_substitution_support.png",
+      "bytes": 238972,
+      "sha256": "9f741f9ee5aed948d7a7d121d37f3505c3c2b6360772894ce3866c7da2bcb71f"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/figures/E2_substitution_support.svg",
+      "bytes": 29126,
+      "sha256": "ce6fec0e2324c746375036dc65b24245f9668be58f18a47c5bb7244f282f0b5a"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/figures/QA.md",
+      "bytes": 1478,
+      "sha256": "6b97b9bfada03b2f7b94e64baf0a7a70986528cdc576c8b2228ed54dfc84d74d"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/figures/automated_QA.json",
+      "bytes": 4894,
+      "sha256": "66ae25ac9f0f80c59d19b99e01fc431f3151f9b4b5aa6b850725077d7d10a3a0"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/figures/export_manifest.json",
+      "bytes": 1499,
+      "sha256": "aa5a314390ab76102cca3eedf1e97f9d9459bac0b7c2b9119f1938450d3a18ff"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/finite_substitution.csv",
+      "bytes": 1117150,
+      "sha256": "0219164681392bcc8571de68fbeb34da7999fed450ba631bbc66c0e57999ca27"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/governance.yml",
+      "bytes": 900,
+      "sha256": "dd1fbc4a5fe14584cbf3db9777608e3fbb14589722d49618c05eb4e138455ba3"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/input_unchanged.json",
+      "bytes": 677,
+      "sha256": "1111d41bd298ee0b3bb92dc0aea8784d6a02c25e6a73fa67d6d0b79568969ec5"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/interaction_witness_basis.csv",
+      "bytes": 187510,
+      "sha256": "9eb9ec70dc4a61021a9681e9e532f20ba844ab4edb0b2d7de2a746e60b41111f"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/interior_interactions.csv",
+      "bytes": 710724,
+      "sha256": "0539c57335737358e851e59ec39b2959243dd29d63b311ee253ec8c3fe691a8b"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/manifest.json",
+      "bytes": 4144,
+      "sha256": "7cba385f275af43f39a02a9aa6bbd7c96de0db12f5878b41bebf3450b5bcf36c"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/metrics.json",
+      "bytes": 1075,
+      "sha256": "e46f713f68e56334f4afacaa4fc46d07351d8688a727e53d9c9d3e4198865456"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/report.md",
+      "bytes": 6728,
+      "sha256": "45444788e44577350c2ca7c7a78d21c881260b30cf81f4d66c673bd939f5fd8f"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/reproduction_verification.json",
+      "bytes": 395,
+      "sha256": "c9d056d182b7e7b9147222955764f3417d6c7487569f5c2c9d096dc05ced5fac"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/substitution_support.csv",
+      "bytes": 55967,
+      "sha256": "64ad3a3e34a998c5a38956eb9a05a1a7900895aee5a8e1dd14019c6266a0b799"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/support_duals.csv",
+      "bytes": 41815,
+      "sha256": "b8d525987b1748cbc12e57a4b7ef778479e69ec57c728f433bbc3b3e9e74c5c6"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/support_weights.csv",
+      "bytes": 169011,
+      "sha256": "f21cacff9e8c73b489dc7bba1310d45474d6886c85cea29c1f9e6bdca569edf0"
+    },
+    {
+      "path": "experiments/runs/q2-e2-domain-substitution-20260925-r01/verification_checks.csv",
+      "bytes": 940363,
+      "sha256": "91ef8e96fe955e06151c80bddc3f4bb25ef2752d0d9db5dbe8f3ab7196b382be"
     },
     {
       "path": "experiments/runs/q2-local-model-validation-20260925/README.md",
@@ -540,13 +710,13 @@
     },
     {
       "path": "governance/ai-use-log.csv",
-      "bytes": 7247,
-      "sha256": "39b362ce6626bf41a4cd4181b6d64625a2b5136bbf23d1ab4f49400347e00174"
+      "bytes": 8580,
+      "sha256": "84ba5410d52485e4f11bb7908e0bd0aee6feecd6994116a3cfaee2e6153939b8"
     },
     {
       "path": "governance/feedback/index.csv",
-      "bytes": 4014,
-      "sha256": "fd02a406bffc3451902edb2c769b05e32fcceeffacc84268fff2de6e97a4f4c9"
+      "bytes": 6416,
+      "sha256": "8e9c967dfc7e1cb2751524860cb13d079480e94c67a5e70334373b0a96f336df"
     },
     {
       "path": "governance/feedback/records/FB-Q2-E1-01.yml",
@@ -564,6 +734,16 @@
       "sha256": "11e2af83799aec220ecacc82395be4b115ff44037e21293097c01236c91f8cf0"
     },
     {
+      "path": "governance/feedback/records/FB-Q2-E2-GOV-20260925.yml",
+      "bytes": 1253,
+      "sha256": "cabbeec09223a3712575499909d1a8b572809918c1976524d672f558c145c468"
+    },
+    {
+      "path": "governance/feedback/records/FB-Q2-E2-STRUCTURE.yml",
+      "bytes": 1310,
+      "sha256": "b0ed64c2d7858c3507ee6d1b3b4bdced00c944f89105feadfaad60996695c647"
+    },
+    {
       "path": "governance/prompts/catalog/P-Q2-E1-GOV.md",
       "bytes": 620,
       "sha256": "13995dd8eb5152c261235b483c00a53200ea52926a23da34370e04d5e1c6612a"
@@ -574,9 +754,14 @@
       "sha256": "dc428f41e656c52d51f4b791651843f2ec6f25f84a929304c478727d8d9e89bc"
     },
     {
+      "path": "governance/prompts/catalog/P-Q2-E2-DOMAIN.md",
+      "bytes": 562,
+      "sha256": "40b13d30697852a270ba322eba5c92552240f99a766015c662440d3ac715b5e4"
+    },
+    {
       "path": "governance/prompts/registry.csv",
-      "bytes": 2308,
-      "sha256": "add94dce71f7d2b8884a90538ca9aee927937f2417b215edfa1137f86d297929"
+      "bytes": 2818,
+      "sha256": "01e929fe798f5b21da68b330744ecc15d53c664d6ab785f9cfc49e02638338b4"
     },
     {
       "path": "governance/prompts/runs/PR-Q2-E1-20260925.yml",
@@ -589,9 +774,14 @@
       "sha256": "4017d86723904191fee5d575dee52d28615d71f7acc5750329eae68fd15bb2ff"
     },
     {
+      "path": "governance/prompts/runs/PR-Q2-E2-20260925.yml",
+      "bytes": 1197,
+      "sha256": "a6d2f74652a300cd39a3a1219f5d6136811738b8956947b688309569748e35f8"
+    },
+    {
       "path": "paper/claim-ledger.csv",
-      "bytes": 9322,
-      "sha256": "316b18725ee0d888cbc3f03b169a7f9912a9c2668dd3c60b4fa0da87f0e4b5f3"
+      "bytes": 13018,
+      "sha256": "880db95865088292c2697a55452e6c6164b7f246aeb15cc68eb3260296a5c2bc"
     },
     {
       "path": "paper/sections/drafts/q2-e1-marginal-elasticity.md",
@@ -599,9 +789,19 @@
       "sha256": "793a58d4d646cc79f53bd08a4a4d83752f036b97bd2e7b94098aa4eef50ea0eb"
     },
     {
+      "path": "paper/sections/drafts/q2-e2-domain-substitution.md",
+      "bytes": 3168,
+      "sha256": "e01dd3fb72c07b4e28fed2b1121400cbebd3551a13cccd715e45a2bc6d4680ba"
+    },
+    {
       "path": "requirements-q2-e1.txt",
       "bytes": 50,
       "sha256": "19b0413a9102db0a52666ceb97a781e646aaac781398c64552bd42722bb72796"
+    },
+    {
+      "path": "requirements-q2-e2.txt",
+      "bytes": 38,
+      "sha256": "58e1524f55ce27ecf4de60402a7af7b3f7e4dc2c3ba0edb24e8935c165dc94b8"
     },
     {
       "path": "requirements-q2-research.txt",
@@ -612,6 +812,11 @@
       "path": "scripts/plot_q2_e1.py",
       "bytes": 8026,
       "sha256": "6703632726ff33764af61f4d36a1fe2591bb6a69931d082d5bae878564ef51d6"
+    },
+    {
+      "path": "scripts/plot_q2_e2.py",
+      "bytes": 7068,
+      "sha256": "81ebb210b73504a70c4073a4119ccbbb975f71e593cb456ca1f8cf5926f25250"
     },
     {
       "path": "scripts/q2_calibration_sensitivity.py",
@@ -627,6 +832,11 @@
       "path": "scripts/q2_e1_marginal_elasticity.py",
       "bytes": 18932,
       "sha256": "ab07be4c3bb1edfb6433b1aa7a3dd002e2ace6707af3d920e63fea5149ff06f4"
+    },
+    {
+      "path": "scripts/q2_e2_domain_substitution.py",
+      "bytes": 17352,
+      "sha256": "07939ce623040d6397ffc50ec10ded575bdd481139a15f1e75547707acf5398d"
     },
     {
       "path": "scripts/q2_finalize_model.py",
@@ -660,13 +870,18 @@
     },
     {
       "path": "scripts/q2_verify_delivery.py",
-      "bytes": 1891,
-      "sha256": "dcc7eba5c9f2ae2af2c50f3315aed37bb1a4b2e071dc2f90c0b3abfe08132fc9"
+      "bytes": 1914,
+      "sha256": "9a6483d012e09e037a466c25885d749cdad589c63e1b39b0144fd2ac9361c54c"
     },
     {
       "path": "scripts/q2_verify_e1.py",
       "bytes": 4330,
       "sha256": "1f32b7136f17a205bd10b681a0c30474d7be56112feabcb1f9846151504baca7"
+    },
+    {
+      "path": "scripts/q2_verify_e2.py",
+      "bytes": 6705,
+      "sha256": "7bda1a23af42f83af6db139895dab6847a1fd75ea64b1b877275b385dd88e07c"
     },
     {
       "path": "scripts/q2_verify_reproduction.py",

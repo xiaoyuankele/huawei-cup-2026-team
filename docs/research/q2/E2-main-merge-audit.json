@@ -1,0 +1,150 @@
+{
+  "task_id": "T-Q2-E2",
+  "recorded_at": "2026-09-25T14:17:23+00:00",
+  "E2_parent": "416bc085f4e730313e0738fe57db6f6bb1bcf30f",
+  "main_parent": "13b1a1aede946029e21aa70d6ec1bfb44644a717",
+  "merge_base": "cf268d441568d5aecf7c9de4a5cb8f1c982c4adc",
+  "cause": "Concurrent append-only Q2/E2 and Q3 shared-ledger additions",
+  "resolution": "Preserve main order and append E2-only keys; reject same-key edits or deletions; retain parent row bytes",
+  "ledgers": [
+    {
+      "path": "experiments/index.csv",
+      "key": [
+        "run_id"
+      ],
+      "base_records": 43,
+      "E2_records": 44,
+      "main_records": 44,
+      "merged_records": 45,
+      "E2_added_keys": [
+        [
+          "q2-e2-domain-substitution-20260925-r01"
+        ]
+      ],
+      "main_added_keys": [
+        [
+          "q3-frozen-q2-exploration-20260925-r01"
+        ]
+      ],
+      "shared_record_disagreements": 0,
+      "all_parent_records_preserved": true
+    },
+    {
+      "path": "governance/ai-use-log.csv",
+      "key": [
+        "prompt_run_id"
+      ],
+      "base_records": 9,
+      "E2_records": 10,
+      "main_records": 10,
+      "merged_records": 11,
+      "E2_added_keys": [
+        [
+          "PR-Q2-E2-20260925"
+        ]
+      ],
+      "main_added_keys": [
+        [
+          "PR-Q3-RESEARCH-HANDOFF-20260925"
+        ]
+      ],
+      "shared_record_disagreements": 0,
+      "all_parent_records_preserved": true
+    },
+    {
+      "path": "governance/feedback/index.csv",
+      "key": [
+        "feedback_id"
+      ],
+      "base_records": 8,
+      "E2_records": 10,
+      "main_records": 11,
+      "merged_records": 13,
+      "E2_added_keys": [
+        [
+          "FB-Q2-E2-GOV-20260925"
+        ],
+        [
+          "FB-Q2-E2-STRUCTURE"
+        ]
+      ],
+      "main_added_keys": [
+        [
+          "FB-Q3-RH-01"
+        ],
+        [
+          "FB-Q3-RH-02"
+        ],
+        [
+          "FB-Q3-RH-03"
+        ]
+      ],
+      "shared_record_disagreements": 0,
+      "all_parent_records_preserved": true
+    },
+    {
+      "path": "governance/prompts/registry.csv",
+      "key": [
+        "prompt_id",
+        "version"
+      ],
+      "base_records": 12,
+      "E2_records": 13,
+      "main_records": 13,
+      "merged_records": 14,
+      "E2_added_keys": [
+        [
+          "P-Q2-E2-DOMAIN",
+          "v1.0.0"
+        ]
+      ],
+      "main_added_keys": [
+        [
+          "P-Q3-RESEARCH-HANDOFF",
+          "v1.0.0"
+        ]
+      ],
+      "shared_record_disagreements": 0,
+      "all_parent_records_preserved": true
+    },
+    {
+      "path": "paper/claim-ledger.csv",
+      "key": [
+        "claim_id"
+      ],
+      "base_records": 16,
+      "E2_records": 19,
+      "main_records": 19,
+      "merged_records": 22,
+      "E2_added_keys": [
+        [
+          "Q2-E2-SUPPORT"
+        ],
+        [
+          "Q2-E2-SENSITIVITY"
+        ],
+        [
+          "Q2-E2-INTERACTION"
+        ]
+      ],
+      "main_added_keys": [
+        [
+          "Q3-RH-001"
+        ],
+        [
+          "Q3-RH-002"
+        ],
+        [
+          "Q3-RH-003"
+        ]
+      ],
+      "shared_record_disagreements": 0,
+      "all_parent_records_preserved": true
+    }
+  ],
+  "Q3_payload_files_unchanged": 36,
+  "E2_numerical_CSVs_unchanged": 10,
+  "E2_entire_archived_run_unchanged": true,
+  "experimental_results_modified": false,
+  "scope": "Technical merge verification, not scientific peer review; REVIEW_BLOCKED retained"
+}
