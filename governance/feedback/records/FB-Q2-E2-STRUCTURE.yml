@@ -34,3 +34,4 @@ next_action: Complete conditional analysis; actual team reviewers confirm scope 
   evidence before acceptance
 acceptance_test: Independent recorded review with limitations retained
 sensitivity: public
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/32

@@ -19,3 +19,5 @@ python scripts/q2_verify_delivery.py
 ![方向与互补诊断](figures/E2_direction_interaction.png)
 
 10张数值CSV与第二次运行字节相同；绘图文件中的时间元数据可能不同。原始附件不需要，观测Loss列不读取。
+
+发布：[Draft PR #32](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/32)，分支 `wp/ACTOR-2/WP-B`。保持 REVIEW_BLOCKED，未合并。

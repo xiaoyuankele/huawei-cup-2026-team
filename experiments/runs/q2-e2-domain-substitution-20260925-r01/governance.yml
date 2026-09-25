@@ -13,7 +13,7 @@ feedback_ids:
 - FB-Q2-E2-STRUCTURE
 preregister_commit: 7dee3f3
 code_commit: 2b37ac0ab9fc90624daba6635dfba17c86e6a808
-pr: PENDING_CREATION
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/32
 run_id: q2-e2-domain-substitution-20260925-r01
 prompt_run_id: PR-Q2-E2-20260925
 manifest_ref: experiments/runs/q2-e2-domain-substitution-20260925-r01/manifest.json

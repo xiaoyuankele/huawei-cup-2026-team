@@ -57,7 +57,7 @@ acceptance_criteria:
 - Frozen hashes unchanged; all CSV reruns identical
 - Independent Peer/Integrator review before acceptance
 completed_at: '2026-09-25T14:08:23+00:00'
-pr: PENDING_CREATION
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/32
 preregister_commit: 7dee3f3
 code_commit: 2b37ac0ab9fc90624daba6635dfba17c86e6a808
 run_manifest: experiments/runs/q2-e2-domain-substitution-20260925-r01/manifest.json

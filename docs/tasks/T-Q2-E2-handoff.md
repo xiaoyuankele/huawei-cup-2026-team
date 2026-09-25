@@ -40,3 +40,5 @@ next_action: Peer reviews formulas and support certificates; Integrator confirms
 数值复现10CSV字节一致；LP证书272个、四角设计2040个、E1导数544行核验通过。
 图形自查与数值检查均非独立科学评审。保留P1反馈，未经正式验收不合并为论文主张。
 [复现命令](../../experiments/runs/q2-e2-domain-substitution-20260925-r01/README.md)、[结果报告](../../experiments/runs/q2-e2-domain-substitution-20260925-r01/report.md)、[任务卡](T-Q2-E2.yml)。
+
+发布：[Draft PR #32](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/32)，分支 `wp/ACTOR-2/WP-B`。保持 REVIEW_BLOCKED，未合并。
