@@ -11,3 +11,4 @@ P-FIG-001,论文图表生成与审查,figure,v1.0.0,draft,work_package_owner,pee
 P-INT-001,问题一跨包整合与发布检查,integration,v1.0.0,draft,release_council,release_council,governance/prompts/catalog/P-INT-001.md,T-Q1-009,三人 Release Council 共同签署；只整合 PACKAGE_ACCEPTED 产物
 P-Q2-E1-MARGINAL,E1 冻结模型边际效用与弹性,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q2-E1-MARGINAL.md,T-Q2-E1-MARGINAL,Retrospective sanitized reconstruction; exact per-call prompts unavailable; no preregistration claim
 P-Q2-E1-GOV,E1 仓库规范自查与补登记,governance,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q2-E1-GOV.md,T-Q2-E1-MARGINAL,Retrospective sanitized reconstruction; exact per-call prompts unavailable; no preregistration claim
+P-Q3-RESEARCH-HANDOFF,Q3冻结模型探索研究归档,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q3-RESEARCH-HANDOFF.md,T-Q3-RESEARCH-HANDOFF,Sanitized reconstruction of authorized task; no private transcript

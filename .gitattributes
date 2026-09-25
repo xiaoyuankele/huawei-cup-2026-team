@@ -201,3 +201,6 @@
 /experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv -text whitespace=cr-at-eol
 /experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv -text whitespace=cr-at-eol
 /experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv -text whitespace=cr-at-eol
+
+# Preserve the audited historical Q3 result bytes.
+/experiments/runs/q3-frozen-q2-exploration-20260925-r01/*.csv -text whitespace=cr-at-eol

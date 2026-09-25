@@ -1,0 +1,7 @@
+{
+  "cases": 48,
+  "max_full_difference": 5.225597732305687e-12,
+  "max_grid_difference": 4.440892098500626e-16,
+  "successful_starts": 138,
+  "attempted_starts": 144
+}
