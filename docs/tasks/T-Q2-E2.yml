@@ -12,7 +12,7 @@ release_approver_actors:
 - ACTOR-2
 - ACTOR-3
 status: REVIEW_BLOCKED
-execution_status: SPEC_READY
+execution_status: RUN_COMPLETE
 execution_class: USER_AUTHORIZED_CONDITIONAL_EXPLORATION
 registered_at: '2026-09-25T14:00:45+00:00'
 registered_before_execution: true
@@ -56,3 +56,9 @@ acceptance_criteria:
 - Interaction zero distinguished from real absence of complementarity
 - Frozen hashes unchanged; all CSV reruns identical
 - Independent Peer/Integrator review before acceptance
+completed_at: '2026-09-25T14:08:23+00:00'
+pr: PENDING_CREATION
+preregister_commit: 7dee3f3
+code_commit: 2b37ac0ab9fc90624daba6635dfba17c86e6a808
+run_manifest: experiments/runs/q2-e2-domain-substitution-20260925-r01/manifest.json
+handoff: docs/tasks/T-Q2-E2-handoff.md

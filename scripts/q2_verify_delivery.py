@@ -32,7 +32,7 @@ def main():
                 links += 1
     for name,key in [('experiments/index.csv','run_id'),('paper/claim-ledger.csv','claim_id'),('governance/ai-use-log.csv','prompt_run_id')]:
         rows = list(csv.DictReader(io.StringIO((root/name).read_text(encoding='utf-8-sig'))))
-        ids = [r[key] for r in rows if r[key].startswith(('q2-', 'Q2-RH-', 'Q2-E1-', 'PR-Q2-E1-', 'PR-Q2-RESEARCH-HANDOFF-'))]
+        ids = [r[key] for r in rows if r[key].startswith(('q2-', 'Q2-RH-', 'Q2-E1-', 'Q2-E2-', 'PR-Q2-E1-', 'PR-Q2-E2-', 'PR-Q2-RESEARCH-HANDOFF-'))]
         assert len(ids)==len(set(ids)), (name,'duplicate IDs')
     print(json.dumps(dict(status='PASS',files=len(manifest['files']),local_links=links),indent=2))
 

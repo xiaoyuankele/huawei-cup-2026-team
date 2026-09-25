@@ -14,17 +14,19 @@ model: GPT-6
 provider: OpenAI
 input_summary: Frozen parameters, published A4 recipe features and E2 preregistered
   plan
-output_ref: docs/research/q2/E2-plan.md
-output_sha256: 597c281385aca38d64972e6f74ca24cf9256325b6407323e5b5da9c9aecf427a
-git_commit: cf268d441568d5aecf7c9de4a5cb8f1c982c4adc
-git_commit_role: baseline; final code commit registered after implementation
+output_ref: experiments/runs/q2-e2-domain-substitution-20260925-r01/report.md
+output_sha256: 45444788e44577350c2ca7c7a78d21c881260b30cf81f4d66c673bd939f5fd8f
+git_commit: 2b37ac0ab9fc90624daba6635dfba17c86e6a808
+git_commit_role: Frozen numerical analysis code at both executions
 run_id: q2-e2-domain-substitution-20260925-r01
 branch: wp/ACTOR-2/WP-B
 status: REVIEW_BLOCKED
-execution_status: SPEC_READY
+execution_status: RUN_COMPLETE
 needs_human_review: true
 peer_decision: PENDING
 integrator_decision: PENDING
 registration: PRE_EXECUTION_TASK_LEVEL
-next_action: Execute conditional plan; record exact output provenance; independent
-  team review
+next_action: Actual Peer/Integrator review and work-package/G1 confirmation; numerical
+  execution complete
+completed_at: '2026-09-25T14:08:23+00:00'
+preregister_commit: 7dee3f3

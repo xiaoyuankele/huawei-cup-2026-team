@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "input_sha256": {
+    "experiments/runs/q2-model-finalization-20260925/model_parameters.json": "46c94c6343e7bc023cf7347467d50c4e834fa50828e1e6a18c6a3b556dde7000",
+    "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09",
+    "configs/q2-e2-domain-substitution.json": "fdc44db8eface94d0e8e60473a8295db44edbdd1bf7afb0690d33d86039e9d7d",
+    "scripts/q2_e2_domain_substitution.py": "07939ce623040d6397ffc50ec10ded575bdd481139a15f1e75547707acf5398d",
+    "scripts/q2_finalize_model.py": "e7358e3b1dbe05c821048a9ecda294199804a9714558ede83edbdca8bed4c7b0"
+  }
+}

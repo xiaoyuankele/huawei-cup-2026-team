@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "input_hashes_unchanged": true,
+  "lp_primal_and_dual_certificates": 272,
+  "independently_reconstructed_corner_designs": 2040,
+  "e1_derivative_matches": 544,
+  "csv_files": 10,
+  "positive_strength_subset_flipped_pairs": 19,
+  "wide_assumption_flipped_pairs": 107,
+  "rerun_byte_identical": true,
+  "package_status": "REVIEW_BLOCKED",
+  "empirical_validation": false
+}
