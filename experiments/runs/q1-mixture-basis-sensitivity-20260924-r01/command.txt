@@ -1,0 +1,1 @@
+python -X utf8 scripts/q1_mixture_basis_sensitivity.py > experiments/runs/q1-mixture-basis-sensitivity-20260924-r01/metrics.json

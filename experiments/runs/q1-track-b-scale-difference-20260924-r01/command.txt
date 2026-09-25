@@ -1,0 +1,1 @@
+python -X utf8 scripts/q1_track_b_scale_difference.py --output-dir experiments/runs/q1-track-b-scale-difference-20260924-r01 > experiments/runs/q1-track-b-scale-difference-20260924-r01/metrics.json

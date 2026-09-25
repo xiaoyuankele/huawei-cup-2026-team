@@ -1,0 +1,43 @@
+schema_version: q1.mixture-model.v1
+task_id: T-Q1-003-MIXTURE
+status: SPEC_ONLY
+source:
+  mixture_loss_pairs:
+    fit: [A4, A5]
+    validation: [A6, A7, A8, A9, A10, A11]
+    extrapolation_only: [A12, A13, A14, A15]
+  mapping_reference: A16
+  raw_root: data/origin/real_attachments
+response:
+  target_columns: 13
+  primary_direction: lower_loss_is_better
+  aggregate_policy: report_each_target; any aggregate must declare weights
+predictors:
+  mixture_columns: 17
+  simplex: p_i >= 0 and sum(p_i) == 1 after row renormalization
+  zero_policy: retain_zero_for_raw_composition; do_not_apply_clr_without_zero_sensitivity
+  baseline_design: row_normalize_then_drop_one_reference_component
+  reference_component_current_run: train_the_pile_uspto_backgrounds
+model:
+  primary: regularized_compositional_regression
+  comparison: linear_baseline_and_hierarchical_quadratic_interactions
+  scale_policy: formal_model_must_condition_on_scale; current_run_is_p_only_scale_audit
+  diagnostics: [design_matrix_rank, condition_number, singular_values, coefficient_stability]
+  scale_candidate: log10_scale_main_effect_and_interaction
+  scale_identifiability: A4_A5_fit_contains_only_1m; do_not_estimate_scale_slope_from_fit_only
+quality_integration:
+  default: excluded_until_domain_quality_q_is_frozen
+  candidate: nested_sensitivity_with_domain_quality_interactions
+  collinearity_rule: do_not_add Q(p)=p^T q alongside all p_i main effects in a linear model
+validation:
+  fit_only: A4_A5
+  absolute_validation: A6_A7
+  cross_scale_validation: A8_A11_report_scale_conditioned_or_relative_metrics
+  extrapolation: A12_A15_scenario_sensitivity_only
+  metrics: [MAE, RMSE, R2_per_target, Spearman_per_target, coefficient_stability]
+support:
+  rule: constrain_optimization_to_observed_design_support_or_flag_out_of_support
+  interpretation: use_pairwise_substitution_effects_under_simplex
+governance:
+  hidden_text_policy: reject_unverified_precomputed_coefficients_and_fit_statistics
+  paper_policy: no_claim_without_run_id_and_review

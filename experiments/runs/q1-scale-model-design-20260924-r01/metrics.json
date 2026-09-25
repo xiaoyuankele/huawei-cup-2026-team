@@ -1,0 +1,37 @@
+{
+  "schema_version": "q1.scale-model-design.v1",
+  "run_id": "q1-scale-model-design-20260924-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "d962ebbbf2187489a54f39b7618d893030a09be0",
+  "input": {
+    "path": "experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_wide.csv",
+    "sha256": "9c9ca86b53440e118d7bae29f5d261121888ed5068c2044566dbdfecdc700250",
+    "rows": 1214
+  },
+  "output": {
+    "path": "experiments/runs/q1-scale-model-design-20260924-r01/q1_scale_model_design_epsilon_1e-4.csv",
+    "sha256": "63833d184cd7227693b0fcb5ade1163e2b665c6d9519fd3182f8b59014e79c9e",
+    "rows": 1214,
+    "columns": 38
+  },
+  "basis": "Helmert ilr",
+  "zero_replacement": {
+    "method": "multiplicative",
+    "epsilon": 0.0001
+  },
+  "features": [
+    "16 ilr coordinates",
+    "log10_scale",
+    "16 ilr_x_log10_scale interactions"
+  ],
+  "design_diagnostics": {
+    "predictor_count_without_intercept": 33,
+    "rank_with_intercept": 34,
+    "standardized_condition_number_with_intercept": 17.04921903573192
+  },
+  "limitations": [
+    "This is an input-only candidate design; no Loss target is loaded.",
+    "The epsilon choice is a candidate and remains subject to zero-replacement sensitivity review.",
+    "The design does not authorize fitting scale effects under the current A4-only fit protocol."
+  ]
+}

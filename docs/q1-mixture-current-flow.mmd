@@ -1,0 +1,58 @@
+flowchart TD
+    subgraph INPUT[受控输入与污染隔离]
+        DOCX[题目正文 DOCX]
+        PDF[数据说明 PDF]
+        RAW[本地原始附件 A1-A16]
+        HIDDEN[隐藏文字审计\n拒绝预置系数、R²、分类方案]
+        DOCX --> CONTRACT[题意与数据契约]
+        PDF --> HIDDEN --> CONTRACT
+        RAW --> CONTRACT
+    end
+
+    subgraph DATA[Q1 数据层]
+        CONTRACT --> READONLY[只读流式审计]
+        READONLY --> JOIN[index 对齐与字段检查]
+        JOIN --> ROLES{数据角色冻结}
+        ROLES --> FIT[A4/A5\n唯一拟合对]
+        ROLES --> VAL[A6-A11\n外部验证]
+        ROLES --> EXT[A12-A15\n外推/情景，不是独立验证]
+        FIT --> SIMPLEX[行和审计\n归一化到 simplex]
+        SIMPLEX --> SUPPORT[支持范围与最近设计距离]
+    end
+
+    subgraph MODEL[当前模型层：p-only 探索]
+        SIMPLEX --> BASE[线性成分基线\n删去一个参考域]
+        SIMPLEX --> RIDGE[二阶 Ridge\nA4/A5 内部五折 CV]
+        BASE --> DIAG[13 个 Loss 逐目标诊断]
+        RIDGE --> DIAG
+        DIAG --> ABS[绝对指标\nMAE / RMSE / R²]
+        DIAG --> REL[中心化相对指标\nR² / Spearman]
+        SUPPORT --> DIAG
+    end
+
+    subgraph GATE[审查与升级门]
+        ABS --> REVIEW[Peer Review\n当前：PEER_REVIEW]
+        REL --> REVIEW
+        REVIEW -->|证据不足/冲突| FB[Feedback\nREWORK 或 REVIEW_BLOCKED]
+        REVIEW -->|通过后| SCALE[正式模型候选\n必须显式条件化规模]
+        SCALE --> QG{质量评分 Q 是否冻结?}
+        QG -->|否| PONLY[p-only 结果保持探索性]
+        QG -->|是| QMODEL[质量交互/偏置敏感性\n避免 Q(p)=pᵀq 与全部 p 共线]
+    end
+
+    subgraph RELEASE[论文与发布层]
+        PONLY --> CLAIM[Claim Ledger\n仅接受 PACKAGE_ACCEPTED run_id]
+        QMODEL --> CLAIM
+        CLAIM --> PAPER[论文段落、图表和限制]
+        PAPER --> COUNCIL[三人 Release Council]
+        COUNCIL --> RELEASED[集成分支与发布封卷]
+    end
+
+    classDef locked fill:#fff1f0,stroke:#cf1322,color:#820014;
+    classDef active fill:#e6f4ff,stroke:#1677ff,color:#003a8c;
+    classDef gate fill:#fff7e6,stroke:#d46b08,color:#873800;
+    classDef output fill:#f6ffed,stroke:#389e0d,color:#135200;
+    class HIDDEN,FB,PAPER locked;
+    class READONLY,JOIN,ROLES,SIMPLEX,SUPPORT,BASE,RIDGE,DIAG,ABS,REL active;
+    class REVIEW,SCALE,QG,COUNCIL gate;
+    class CLAIM,RELEASED output;

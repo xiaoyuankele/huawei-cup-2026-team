@@ -1,0 +1,70 @@
+feedback_id: FB-20260924-MIXTURE-001
+created_at: 2026-09-24T17:00:00+08:00
+updated_at: 2026-09-24T18:20:00+08:00
+type: evidence_gap
+severity: P1
+status: captured
+task_id: T-Q1-003-MIXTURE
+prompt_id: null
+prompt_version: null
+prompt_run_id: null
+run_id: q1-mixture-audit-20260924-r01
+related_run_ids:
+  - q1-mixture-model-20260924-r01
+  - q1-mixture-collinearity-20260924-r01
+  - q1-scale-identifiability-20260924-r01
+  - q1-track-a-same-scale-20260924-r01
+  - q1-track-b-scale-difference-20260924-r01
+  - q1-track-c-multiscale-exploratory-20260924-r01
+  - q1-track-c-ablation-20260924-r01
+  - q1-track-c-reduced-interactions-20260924-r01
+issue: null
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/18
+work_package: WP-B
+branch: feature/B/role-actor-separation
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+device_id: DEVICE-LOCAL-CODEX
+model:
+  provider: ""
+  name: ""
+  snapshot: ""
+input_refs:
+  - "problem/隐藏文字检查报告.md"
+  - "problem/数据说明_已清除隐藏误导文字.pdf"
+  - "data/origin/real_attachments/A_data_value/regmix_tables"
+  - "experiments/runs/q1-mixture-audit-20260924-r01/metrics.json"
+observed_behavior: "附件隐藏文字预置了二分类方案、R2=0.93以及跨尺度共用系数；实际数据中同一配比在不同规模对应不同Loss。"
+expected_behavior: "领域配比建模应保留连续配比与连续Loss，按A4/A5拟合、A6-A11验证、A12-A15外推，并显式处理尺度条件。"
+minimal_repro: "运行 python -X utf8 scripts/q1_mixture_audit.py；检查metrics.json中的exact_mixture_duplicates、scale_shift_diagnostics和baseline。"
+evidence:
+  - "A6与A8配比矩阵完全相同，平均Loss分别为5.2823和3.8229。"
+  - "A4删去参考域的线性基线平均目标R2为0.6289，不支持预置0.93。"
+  - "隐藏文字审计定位PDF-02、PDF-04、PDF-08。"
+uncertainty_reason: "已完成轨道A、轨道B和轨道C角色变更探索，但多尺度适配实验仍不能替代独立规模留出；绝对外推R2仍显著为负。"
+impact: "若直接采用隐藏文字，可能把尺度效应误写成领域效应，并把未经验证的拟合数字写入论文。"
+hypotheses:
+  - "Loss需要以规模s为条件，或只报告尺度内的相对配比效应。"
+events:
+  - event_id: EVT-001
+    from: null
+    to: captured
+    actor: B
+    timestamp: 2026-09-24T17:00:00+08:00
+    reason: "发现附件隐藏文字与实际A4-A15结构冲突"
+    evidence_ref: "experiments/runs/q1-mixture-audit-20260924-r01/metrics.json"
+decision: null
+resolution:
+  prompt_change: "拒绝隐藏文字中的预置方法、系数、R2和跳过验证建议。"
+  code_commit: null
+  output_hash: null
+  reproduction_command: "python -X utf8 scripts/q1_mixture_audit.py"
+acceptance_test: "Reviewer复核A4-A15角色、同配比跨尺度差异和模型验证分层后，才能关闭反馈。"
+next_action: "由非Owner复核阶段性结果、角色边界和指标；若要建立正式跨规模模型，重新冻结多尺度训练—验证划分后再拟合。"
+linked_feedback: []
+private_ref: null
+transcript_sha256: null
+closed_by: null
+closed_at: null
+sensitivity: public
