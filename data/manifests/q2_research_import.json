@@ -1,0 +1,341 @@
+{
+  "source_commit": "f5de761",
+  "note": "Original file hashes retained; public paths are sanitized and scripts made portable. Current hashes in q2_research_files.json.",
+  "files": [
+    {
+      "path": "docs/problem/q2-generalized-scaling-model-v1.md",
+      "original_sha256": "441f6226f3473de64863099ac327c7da2ab17754ec98688d9e3c57a17785d162",
+      "original_bytes": 8363
+    },
+    {
+      "path": "docs/problem/q2-modeling-status-20260925.md",
+      "original_sha256": "b5d768f40dcef6092437a3c0dae87a51a4b92490515002995655ecc14f5dae9b",
+      "original_bytes": 5508
+    },
+    {
+      "path": "docs/problem/q2-quality-scaling-linkage-plan.md",
+      "original_sha256": "5e23e7f1fd5d4a37fc410fa9d6b151459d31a5f636c1072aec87f78cdaf33a47",
+      "original_bytes": 10255
+    },
+    {
+      "path": "docs/problem/q2-transfer-improvement-experiment-plan.md",
+      "original_sha256": "12873d7a5d584bf02372d02da901a5dfc160d6d08a86fc3df705cfdcd716a282",
+      "original_bytes": 9313
+    },
+    {
+      "path": "docs/problem/q2-workflow-requirements-coverage.md",
+      "original_sha256": "36382e869ccd9b7de0b920ab717995019c688be710e867bcd3f3111edc8490ca",
+      "original_bytes": 7302
+    },
+    {
+      "path": "scripts/q2_calibration_sensitivity.py",
+      "original_sha256": "0b11904ff7ec9d8d04a6b64b3575926a40b55595d9edf0746bbc8211fc82ab77",
+      "original_bytes": 8010
+    },
+    {
+      "path": "scripts/q2_combined_scenario_prototype.py",
+      "original_sha256": "22137c75b11c17b331ad54d3394516f210d81f30a8f5a124b0047b21d2220a13",
+      "original_bytes": 8739
+    },
+    {
+      "path": "scripts/q2_finalize_model.py",
+      "original_sha256": "5db665c9d8907878be5b5007d6444a3c675049a23b3ef23e672101ea860bda9a",
+      "original_bytes": 18046
+    },
+    {
+      "path": "scripts/q2_local_model_validation.py",
+      "original_sha256": "ef739e76fed84488645a806d2cf54cdbca0afd3d0b460f7a20ef5747a10ae032",
+      "original_bytes": 13199
+    },
+    {
+      "path": "scripts/q2_quality_scaling_link.py",
+      "original_sha256": "743972a96a1ae7a3d3454661b2920be6d8b579cf9c79a1b39d34aaa99947eeef",
+      "original_bytes": 4812
+    },
+    {
+      "path": "scripts/q2_transfer_improvement.py",
+      "original_sha256": "41492f025cca21b2bf82cf76f1e8faaa3d27d1eaa60987e996592d2b114fc90d",
+      "original_bytes": 17822
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv",
+      "original_sha256": "78729ea21bc8f7246a66ce1dbfe3544b2a2480980658f80f6c077dbc28258beb",
+      "original_bytes": 5406
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/B_source_offset_audit.csv",
+      "original_sha256": "3a452ddfcef90feff01a8a7832d0020eb61c51184b4486abfbb0bac606eea5eb",
+      "original_bytes": 1233
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/calibration_sensitivity_report.md",
+      "original_sha256": "6de211cb5f88b9a8c3da2a37645e43127da3a3573d448c153d284b8b43b8d1f1",
+      "original_bytes": 1330
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/Q_axis_sensitivity.csv",
+      "original_sha256": "044b8c5d61c57651224da7225a5a241d3db3db0db4fee3eccbf1fd6340c51ff7",
+      "original_bytes": 362
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/sensitivity_manifest.json",
+      "original_sha256": "48ce5af023bc63e5ad38eeeba1d638c52761b617399bdc448f2cfc54d7c7ad75",
+      "original_bytes": 697
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv",
+      "original_sha256": "790c64ac2978ab0ad65f507bbb4105aebbc918a6dc0379769052e3dc5ff3ca9e",
+      "original_bytes": 628022
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/q1_support_effects_for_combination.csv",
+      "original_sha256": "e8648d376eeb5456396367470c96800ef9adf8dbb90e0f1a904710e704811ce4",
+      "original_bytes": 262152
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/README.md",
+      "original_sha256": "30e9233f1e1ea34c20de931ec9790573e09317d4a0868315c3b1be51ce8a87a2",
+      "original_bytes": 297
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/scenario_manifest.json",
+      "original_sha256": "4dbdfbdd1ee5170bc26689ae7ba4e6bcc17ff8b20ff4a12e1a45b096c5d67b93",
+      "original_bytes": 1523
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/scenario_report.md",
+      "original_sha256": "48701079ada09c3e520b06b2050bd2577d6e695b107737294b8facac3e528613",
+      "original_bytes": 570
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv",
+      "original_sha256": "b0bb6e8d841e59e6007555e0af3e2913054a830dcb633ced74d6440f373f073d",
+      "original_bytes": 1049
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv",
+      "original_sha256": "0dcd13565e0b03ab50fa65a186ba3c5f778ada9e920437a2fb15a6488e201246",
+      "original_bytes": 28902
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv",
+      "original_sha256": "bbc9c4d9afd09ed9fbd764554a220ccdf9cc411eb4d30f42d9ef131e8d561039",
+      "original_bytes": 1878
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv",
+      "original_sha256": "d3151014efc30b041bac53631b5a46eac9e873cc7ea18a4630b20318aef4cf89",
+      "original_bytes": 3704
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/README.md",
+      "original_sha256": "cf4ba9072dce073c8140c2df4298817d6ac38f4bb9ad1df1cc0e752faac02b2f",
+      "original_bytes": 582
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv",
+      "original_sha256": "6bd3f9120f642426e23a87596d25ba8b619ad61feb4b0c778698c5153bddfcc0",
+      "original_bytes": 1101
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv",
+      "original_sha256": "49b004c3fe7716e9ad3defc21b7d9652fcc00fd32cbe3c984a6a9efd0c9f3f33",
+      "original_bytes": 1217
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/validation_manifest.json",
+      "original_sha256": "1882b7f96b354bc8ea0cf7e5d5d305e84001df93b767b6275d69c04530d0dbc3",
+      "original_bytes": 1642
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/validation_report.md",
+      "original_sha256": "fa74b4cc807ac6e9a750b1cb41e520056a06abbd2e495652d9885b0b22c19d7c",
+      "original_bytes": 5098
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/manifest.json",
+      "original_sha256": "926af5819a742d0deb1dfaf5f3ff44a5856b718cafcf7f7f969b8a9e32079801",
+      "original_bytes": 1688
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/mixture_coefficients.csv",
+      "original_sha256": "c9a39da8e607e1f0351cbad2f1390f1ed892eb3d91afec321a533e7487a41060",
+      "original_bytes": 3208
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/mixture_transfer.csv",
+      "original_sha256": "c2399263a07979926147b2187faa5aee77f40835670aa28877203628a8eb1ae3",
+      "original_bytes": 126
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/mixture_validation.csv",
+      "original_sha256": "02ee17a08394943b09cdc2946827e4f3210a3dd3fabc5df28fca1797bed18069",
+      "original_bytes": 5827
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/model_parameters.json",
+      "original_sha256": "1dc7248f948bd7961db53e6c10e987dd0d2c1239e1e1543f6297470d1e44d6d6",
+      "original_bytes": 6946
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv",
+      "original_sha256": "15983c0e0c4b9f93a9bcac36898a4858ce1c232244aa9c3c600fdc9209088d54",
+      "original_bytes": 1254
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv",
+      "original_sha256": "0335ff1f9cceaef8d61c2c074abc0762f925a3e7ca67a2c2d0a9f48f847ea52d",
+      "original_bytes": 6935
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/README.md",
+      "original_sha256": "9864b7807098c5965c068771e0b2fcd97092ffa0e3fee2d081caa9ec1156e557",
+      "original_bytes": 653
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_external.csv",
+      "original_sha256": "61a464fcf05c774bf6334f54bded09bc07b3bdcd1d571475ebe67fee9f10e613",
+      "original_bytes": 283
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_oof_predictions.csv",
+      "original_sha256": "9a7bb787bab0ae61d11ddcd3a956fdbbb47b630ee814b2177ba4ac7f04e5c190",
+      "original_bytes": 131613
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_oof_summary.csv",
+      "original_sha256": "90a197dbeac354e22351f7a2a8ca772224067c94e07a5b78b7d9c5f1557ab88c",
+      "original_bytes": 173
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv",
+      "original_sha256": "e41905251cf9eacf3fb81cc31b0a8cdf9e6c461dc4c157265869808dae16721d",
+      "original_bytes": 1041
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_validation.csv",
+      "original_sha256": "79e9784561c524c9e373d95c4c267e163b8a601c81e87b9f586751a8011e91f6",
+      "original_bytes": 1657
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv",
+      "original_sha256": "28506e67f58d5dc631dc32e96210f6a6a24f8ac79917d0b3f179cb0ee0c8a397",
+      "original_bytes": 1573072
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scenario_summary.csv",
+      "original_sha256": "164e2a106edb41ff237bb15ac80acf987ff24b065cc0c605e18581ff3bac85d9",
+      "original_bytes": 992
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/verification.json",
+      "original_sha256": "7a09ecfb04e6522768a80ab2ddced261c20deef34eb6680199c869783e3c7689",
+      "original_bytes": 509
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/linkage_manifest.json",
+      "original_sha256": "ed0dac213e249a5a0a4df8fa6f7ea6611a00bf1db161839c8875baa565603f1f",
+      "original_bytes": 730
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv",
+      "original_sha256": "1ff0de71501df8b4a7616e7242a5a4644a43eef7ac4b011946521012804f4f80",
+      "original_bytes": 4052
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv",
+      "original_sha256": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09",
+      "original_bytes": 525890
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv",
+      "original_sha256": "72a864fc997e227d61a56fc6eafa7c2ecc475e7882939197f9768f339ec4e589",
+      "original_bytes": 496
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/README.md",
+      "original_sha256": "ce41fb6a28f793ce2276eb1302e173b16192c405527b2a79514072df2f130a11",
+      "original_bytes": 955
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/A_recipe_fold_assignments.csv",
+      "original_sha256": "84138df103ebc9231f5bdb4d7516f46487ecc8e6922bc10c6e4540f5942703b4",
+      "original_bytes": 34492
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/B2_residual_diagnostics.csv",
+      "original_sha256": "ed04326b08091c41667fd336e239807ad16e815e6e5fcb3526e530d44374d751",
+      "original_bytes": 2230
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv",
+      "original_sha256": "6c6714bbb723dbdca650cea878b459999d0ab2246f52967f8b46afe73d474990",
+      "original_bytes": 14958
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/decisions.csv",
+      "original_sha256": "91ba80af745eaf1ecfca42dcf1b50dabb8ff8ca15a32bfc497d48be424860893",
+      "original_bytes": 918
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv",
+      "original_sha256": "0329cb2331f5e7ce58b9ba2d1b257335c171faf906668c28eab3a243385fff57",
+      "original_bytes": 3215
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv",
+      "original_sha256": "6ab007cd8c542b78917df3e86a001f592f0010a04b67640541a541b37ef7a176",
+      "original_bytes": 77973
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/manifest.json",
+      "original_sha256": "7d5167f4bc898db642ce2694d4b30ea3be0312a2eacf8b43fa5fe342c8081713",
+      "original_bytes": 1760
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/model_selection.csv",
+      "original_sha256": "8a2db449fe18123942a3a813304319ad3d04eba3eb704b90a120887265e99107",
+      "original_bytes": 1454
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv",
+      "original_sha256": "423b7aa743db4efcf132964342249d45d3f751a8b2d20d2dfa1f59a6c056d0d1",
+      "original_bytes": 25740
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv",
+      "original_sha256": "1f1569206555bddaa1bf1d744112aee95f28f3e6c5fd54d590e3143d0c0bba68",
+      "original_bytes": 1416103
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv",
+      "original_sha256": "e3af117fa7aeb2bfe54ba77e29db615b7f4db3b34a52efe4fdcfa2a0adf75b22",
+      "original_bytes": 7095
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/README.md",
+      "original_sha256": "64a4b136d0bd83f4fb99806292829ace98d4ff1a5262d82ce7678ef1aa87d32d",
+      "original_bytes": 626
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/report.md",
+      "original_sha256": "ef437c4c90717f47a336a7e6a0a52ad2f0858c69890e14d8efb0650c97e3f1dc",
+      "original_bytes": 8976
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv",
+      "original_sha256": "c56a455dec659c1c09d63095e7229855d4abc715679c9ada9582b16e992b3f70",
+      "original_bytes": 375137
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv",
+      "original_sha256": "01d1483abc76fa5d49b999d67e95fe2968bc8e1fb94b31fcec657d7f0a1114f6",
+      "original_bytes": 3164
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv",
+      "original_sha256": "4768419666e4675d7dac8003b4d87f04630f5c120b593fde8c2d9575179906fb",
+      "original_bytes": 840775
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+task,branch,axis,mae_reduction_vs_raw,improved_folds,practical_calibration_pass,beats_mean_or_quality_only,mae_reduction_vs_mean_or_quality_only,interpretation
+A1B,connection,Q_A_topsis_0_1,0.9826732384276533,5,True,False,-0.05022116545535571,calibration_only
+A1B,connection,quality_score_soft_proxy_0_1,0.9871768450745038,5,True,False,-0.07102759031433825,calibration_only
+A1B,full_mixture,none,0.9871867115201501,5,True,False,-0.033241943182370726,calibration_only
+A60M,connection,Q_A_topsis_0_1,0.9040915317902624,5,True,True,0.1267251354061566,calibration_and_shape_supported
+A60M,connection,quality_score_soft_proxy_0_1,0.8950696549664221,5,True,True,0.13305219585617722,calibration_and_shape_supported
+A60M,full_mixture,none,0.9030943401164414,5,True,True,0.12651903814080168,calibration_and_shape_supported
+B2,scale,none,0.7742589422014696,7,True,True,0.2855202796730021,calibration_and_shape_supported

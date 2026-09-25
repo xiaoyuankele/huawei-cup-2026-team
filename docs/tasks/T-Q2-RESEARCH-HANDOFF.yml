@@ -1,0 +1,51 @@
+task_id: T-Q2-RESEARCH-HANDOFF
+title: "问题二条件模型与迁移探索研究归档"
+problem_id: Q2
+subproblem_id: Q2-RESEARCH
+problem_scope: "归档研究过程、派生数据、模型结果与复现证据"
+status: RUN_COMPLETE
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+release_approver_actors: [ACTOR-1, ACTOR-2, ACTOR-3]
+review_domain: experiment
+review:
+  peer_reviewer_must_differ: true
+  integrator_must_differ: true
+  peer_decision: PENDING
+  integrator_decision: PENDING
+priority: P1
+announcement:
+  mode: user_request
+  announcement_ref: docs/research/q2/handoff.md
+  summary: "用户明确要求系统整理并提交团队大仓库；此为脱敏记录，未代填人工确认。"
+feedback_required: true
+feedback_ids: [FB-Q2-RH-01, FB-Q2-RH-02, FB-Q2-RH-03, FB-Q2-RH-04, FB-Q2-RH-05, FB-Q2-RH-06]
+branch: codex/q2-research-handoff
+branch_owner_actor: ACTOR-2
+gate: G0
+prompt:
+  prompt_id: P-Q2-RESEARCH-HANDOFF
+  version: v1.0.0
+  prompt_run_id: PR-Q2-RESEARCH-HANDOFF-20260925
+objective: "让研究过程、数据、代码、结果与限制可检索、可复核、可接续"
+inputs:
+  - ref: data/manifests/q2_research_inputs.json
+    purpose: "数值输入和Q1依赖版本"
+  - ref: data/manifests/q2_research_import.json
+    purpose: "历史工作树研究文件及原始哈希"
+expected_outputs:
+  - path: docs/research/q2/README.md
+    description: "统一研究入口、结果证据及交接"
+  - path: scripts/q2_reproduce_research.py
+    description: "不覆盖归档的数值重跑入口"
+acceptance_criteria:
+  - "六阶段脚本运行完成，38张CSV及冻结参数核对通过"
+  - "原始数据不上传，历史数值与来源角色保留"
+  - "失败结果、连接假设、半合成限制明确记录"
+  - "独立Peer Review及Integrator确认后才可验收"
+definition_of_done:
+  - "研究文件、run索引、候选主张、AI使用日志已提交"
+  - "PR中保留待审状态，不由归档过程宣布PACKAGE_ACCEPTED"
+notes: "数值复现完成；科学评审与问题二全部要求仍未完成。责任接口登记不代表人工已确认。"

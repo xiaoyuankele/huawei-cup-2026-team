@@ -1,0 +1,21 @@
+{
+  "run_id": "q2-quality-scaling-linkage-20260925",
+  "status": "PLAN / REVIEW_REQUIRED",
+  "row_count": 1214,
+  "q1_topsis_domain_range": [
+    0.5170140753241471,
+    0.6433570995356357
+  ],
+  "q1_topsis_row_range": [
+    0.5181511625420505,
+    0.6431939714590791
+  ],
+  "soft_v2_row_range": [
+    0.0105430287464549,
+    0.4992687905775103
+  ],
+  "q1_topsis_vs_soft_v2_corr": -0.6516090945371421,
+  "q1_primary_source": "experiments/runs/q1-critic-topsis-20260924-r01/tables/domain_scores.csv",
+  "q1_soft_source": "experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_wide_v2_soft.csv",
+  "note": "This table is a feature bridge; it does not claim an observed Q1-Q2 row-level join."
+}

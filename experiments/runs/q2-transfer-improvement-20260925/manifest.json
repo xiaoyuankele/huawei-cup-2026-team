@@ -1,0 +1,31 @@
+{
+  "status": "EXPLORATORY_NESTED_GROUP_VALIDATION",
+  "seed": 20260925,
+  "input_sha256": {
+    "${REPO}\\experiments\\runs\\q2-model-finalization-20260925\\model_parameters.json": "1dc7248f948bd7961db53e6c10e987dd0d2c1239e1e1543f6297470d1e44d6d6",
+    "${REPO}\\experiments\\runs\\q2-quality-scaling-linkage-20260925\\q1_to_q2_quality_linkage.csv": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09",
+    "${Q2_RAW_ROOT}\\B_scaling_laws\\cerebras_training_log.csv": "178f878cad2cb31e4ec104c670553de23818197876d824a113fdb911125951a6",
+    "${REPO}\\docs\\problem\\q2-transfer-improvement-experiment-plan.md": "12873d7a5d584bf02372d02da901a5dfc160d6d08a86fc3df705cfdcd716a282"
+  },
+  "script_sha256": "41492f025cca21b2bf82cf76f1e8faaa3d27d1eaa60987e996592d2b114fc90d",
+  "minimum_distinct_recipe_chebyshev_distance": 0.006988011988012022,
+  "selected_model_rule": "inner macro MAE; within 5 percent select fewer free parameters",
+  "candidates": [
+    "raw",
+    "offset",
+    "affine",
+    "mean"
+  ],
+  "nonnegative_slopes": true,
+  "sensitivity_repeats_are_independent_experiments": false,
+  "limitation": "Previously examined data, not a pristine final test; B2 is semi-synthetic; no joint A-B validation",
+  "checks": {
+    "input_and_v1_unchanged": true,
+    "group_disjoint": true,
+    "all_rows_have_one_oof_prediction_per_model": true,
+    "parameter_prediction_reconstruction": true,
+    "finite_predictions": true,
+    "selection_recovered_from_inner_evidence": true
+  },
+  "outer_prediction_rows": 9945
+}

@@ -1,0 +1,51 @@
+{
+  "run_id": "q2-local-model-validation-20260925",
+  "status": "REVIEW_REQUIRED",
+  "raw_attachment_root": "${Q2_RAW_ROOT}",
+  "scale_fit": "B1 pythia_training_log_existing.csv only",
+  "mixture_fit": "A4/A5 train_mixture_1m.csv + train_pile_loss_1m.csv only",
+  "quality_fit": "B6 predicts non-overlapping B7 rows and B7 Q-level leave-out checks; B8 direction audit only",
+  "excluded_from_fit": [
+    "A12-A15 estimated Loss",
+    "B8 main quality fit",
+    "B10 estimated Loss"
+  ],
+  "scale_model": {
+    "intercept": 3.3009533621027876,
+    "coef_log_N": -0.13585918171302988,
+    "coef_log_D": -0.178551157163069,
+    "n_rows": 1176,
+    "n_parameter_sizes": 8
+  },
+  "quality_meta": {
+    "direction_audit": [
+      {
+        "dataset": "B6",
+        "n_ND_groups": 45,
+        "share_negative_Q_slope": 1.0,
+        "share_positive_Q_slope": 0.0,
+        "median_Q_slope": -0.34086071987480304
+      },
+      {
+        "dataset": "B7",
+        "n_ND_groups": 45,
+        "share_negative_Q_slope": 1.0,
+        "share_positive_Q_slope": 0.0,
+        "median_Q_slope": -0.33928484848485047
+      },
+      {
+        "dataset": "B8",
+        "n_ND_groups": 150,
+        "share_negative_Q_slope": 0.0,
+        "share_positive_Q_slope": 1.0,
+        "median_Q_slope": 1.972025320729237
+      }
+    ],
+    "B6_rows": 360,
+    "B7_rows": 450,
+    "B8_rows": 1704,
+    "B6_rows_overlapping_B7": 360,
+    "B7_new_nonoverlap_rows": 90
+  },
+  "note": "These are component validations. They do not establish empirical identification of a complete observed (N,D,Q,p,Loss) joint law."
+}
