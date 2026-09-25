@@ -1,0 +1,25 @@
+task_id: T-Q2-E3
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+status: REVIEW_BLOCKED
+execution_status: RUN_COMPLETE
+branch: wp/ACTOR-2/WP-B
+gate: G1
+gate_status: NOT_EVIDENCED
+feedback_ids:
+- FB-Q2-E3-GOV
+- FB-Q2-E3-IDENTIFIABILITY
+preregister_commit: 23dd6a3
+code_commit: 5c9f5c2be57aa6e627c6926bc81305937d53e964
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/33
+run_id: q2-e3-quality-parameter-substitution-20260925-r01
+prompt_run_id: PR-Q2-E3-20260925
+manifest_ref: experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/manifest.json
+manifest_sha256: c50f5d7e24d6cc25eb8c5d1343f22b90682a5e9666bf1cdc55a94decb16c331d
+paper_draft: paper/sections/drafts/q2-e3-quality-parameter-substitution.md
+handoff: docs/tasks/T-Q2-E3-handoff.md
+peer_decision: PENDING
+integrator_decision: PENDING
+role_assignment_status: ROUTING_PENDING_HUMAN_CONFIRMATION

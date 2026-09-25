@@ -1,0 +1,17 @@
+{
+  "source_script_sha256": "2fa7f4c8e89d31c0d41109ee9baa667b81580bae4d72fa6e5eb2d08045b4f3fd",
+  "source_csvs": {
+    "quality_path_curves.csv": "1307c031f95ed3fcb2cc30fc4167aaf850690c949a80b0d3e636517c801dafe3",
+    "quality_capacity.csv": "4765f7d2e9e0f778cfe5bfcd61893f3426024ab805b4fb6e7b1a5ef656f0a63f",
+    "recipe_substitution.csv": "405670b4c1b10efa5d6043b4b5824cd0a944282c25be1c4a9d846af546324a34"
+  },
+  "exports": {
+    "E3_quality_scale_tradeoff.svg": "6b85207473e74e9ad4f18589cc84f68dc8256a3ae2b3862974d4a67acefb8420",
+    "E3_quality_scale_tradeoff.pdf": "cc55cfa208789b52e2e7eb0e399267953bfa1cb27ba9fd21e35623a9b78c7ca7",
+    "E3_quality_scale_tradeoff.png": "6eca4c4e413b0a4d0a5a216c26fcad0b92af631d807ad971334e5c6dddde5b4e",
+    "E3_recipe_counterexamples.svg": "f2ca901e6e497350e1177fbe28cdf222a842f6f99c0583d6c317f1493926f377",
+    "E3_recipe_counterexamples.pdf": "90f4c26c5ea753b13e3641b2a5150d95cde83fa4e306c79713476d382f5b3f89",
+    "E3_recipe_counterexamples.png": "9f1a11ce703530c1844771e88061fe09aed144ceb48f3556324c6f3a35f61335"
+  },
+  "status": "SELF_CHECK_NOT_PEER_REVIEW"
+}
