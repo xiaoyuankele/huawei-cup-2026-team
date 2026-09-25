@@ -2,6 +2,8 @@
 
 分支`wp/ACTOR-3/WP-C`；状态REVIEW_BLOCKED。原始数据不进入Git。
 
+后续公开的逐条候选综合评分表位于`experiments/runs/q1-conflict-trial-20260924-r01/results/q1_candidate_scores.csv`，含261086个唯一ID及`Q_candidate`分数。只公开评分所需五列；导出清单位于同目录的`q1_candidate_scores.manifest.json`，脚本为`scripts/export_q1_candidate_scores.py`。评分状态为`candidate_not_validated`，不代表正式模型采纳。
+
 ## 纳入本地提交
 
 ```text

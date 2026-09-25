@@ -1,6 +1,6 @@
-# WP-C 问题一第二小问本地交付
+# WP-C 问题一第二小问交付
 
-Owner：ACTOR-3；Peer Reviewer：ACTOR-1；Release Integrator：ACTOR-2。分支`wp/ACTOR-3/WP-C`，对应T-Q1-005～008。本次是本地Git提交，不推送远端，不合并main。
+Owner：ACTOR-3；Peer Reviewer：ACTOR-1；Release Integrator：ACTOR-2。原交付分支为`wp/ACTOR-3/WP-C`，对应T-Q1-005～008；逐条候选综合评分表由后续分支`wp/ACTOR-3/WP-C-scores`补充。
 
 ## 文件入口
 
@@ -11,8 +11,9 @@ Owner：ACTOR-3；Peer Reviewer：ACTOR-1；Release Integrator：ACTOR-2。分�
 - [角色交接](docs/tasks/WP-C-delivery.json)
 - [Markdown和LaTeX草稿](paper/sections/drafts/)
 - [中文图表](paper/figures/)
+- [逐条候选综合评分表](experiments/runs/q1-conflict-trial-20260924-r01/results/q1_candidate_scores.csv)
 
-代码、汇总表、配置、图表、文稿和证据记录进入Git。逐样本数据、输入矩阵、案例正文及人工核验清单存放在`experiments/runs/q1-conflict-trial-20260924-r01/artifacts/`，由已有.gitignore忽略。原始附件不复制进Git。
+代码、汇总表、配置、图表、文稿和证据记录进入Git。按后续交付需求，另公开只含`id`、`dataset`、`domain`、`Q_candidate`和`score_status`的逐条候选评分表；其[导出清单](experiments/runs/q1-conflict-trial-20260924-r01/results/q1_candidate_scores.manifest.json)记录源文件及输出哈希。完整逐样本诊断表、输入矩阵、案例正文及人工核验清单仍存放在`experiments/runs/q1-conflict-trial-20260924-r01/artifacts/`，由已有.gitignore忽略。原始附件不复制进Git。
 
 ## 核验和复现
 
