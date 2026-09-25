@@ -21,5 +21,6 @@
   "run_id": "q3-frozen-q2-exploration-20260925-r01",
   "peer_decision": "PENDING",
   "integrator_decision": "PENDING",
-  "status": "REVIEW_BLOCKED"
+  "status": "REVIEW_BLOCKED",
+  "pr": "https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/30"
 }
