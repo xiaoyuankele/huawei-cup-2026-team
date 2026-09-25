@@ -674,6 +674,11 @@
       "sha256": "ab07be4c3bb1edfb6433b1aa7a3dd002e2ace6707af3d920e63fea5149ff06f4"
     },
     {
+      "path": "scripts/q2_e2_domain_substitution.py",
+      "bytes": 17352,
+      "sha256": "07939ce623040d6397ffc50ec10ded575bdd481139a15f1e75547707acf5398d"
+    },
+    {
       "path": "scripts/q2_finalize_model.py",
       "bytes": 18019,
       "sha256": "e7358e3b1dbe05c821048a9ecda294199804a9714558ede83edbdca8bed4c7b0"
