@@ -1,0 +1,89 @@
+{
+  "run_id": "q2-e1-marginal-elasticity-20260925-r01",
+  "input_sha256": {
+    "experiments/runs/q2-model-finalization-20260925/model_parameters.json": "46c94c6343e7bc023cf7347467d50c4e834fa50828e1e6a18c6a3b556dde7000",
+    "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09",
+    "experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv": "e41905251cf9eacf3fb81cc31b0a8cdf9e6c461dc4c157265869808dae16721d",
+    "configs/q2-e1-marginal-elasticity.json": "be786790b1e4145579f8c1732d0a1dec3dc20fb37476939ede1ff66d74faef98",
+    "scripts/q2_e1_marginal_elasticity.py": "ab07be4c3bb1edfb6433b1aa7a3dd002e2ace6707af3d920e63fea5149ff06f4",
+    "scripts/q2_finalize_model.py": "e7358e3b1dbe05c821048a9ecda294199804a9714558ede83edbdca8bed4c7b0"
+  },
+  "config": {
+    "run_id": "q2-e1-marginal-elasticity-20260925-r01",
+    "status": "CONDITIONAL_MODEL_ANALYSIS",
+    "model": "experiments/runs/q2-model-finalization-20260925/model_parameters.json",
+    "bridge": "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv",
+    "scale_folds": "experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv",
+    "grid_points_per_dimension": 41,
+    "anchor_N_B": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "anchor_D_B": [
+      1.0,
+      10.0,
+      100.0
+    ],
+    "reference_N_B": 1.0,
+    "reference_D_B": 100.0,
+    "lambda_Q_sensitivity": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "lambda_p_sensitivity": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "quality_normalized_positions": {
+      "start": -0.1,
+      "stop": 1.1,
+      "count": 121
+    },
+    "finite_difference_relative_steps": [
+      0.0001,
+      1e-05
+    ],
+    "first_derivative_rtol": 2e-06,
+    "first_derivative_atol": 2e-08,
+    "curvature_rtol": 0.002,
+    "curvature_atol": 1e-05,
+    "mixture_max_step": 0.0001,
+    "convex_witness_safety_fraction": 0.2,
+    "fit_new_parameters": false,
+    "generated_rows_are_observations": false,
+    "notes": [
+      "N and D are in billions; marginal benefits are Loss reduction per additional billion units.",
+      "Grid support is a marginal B1 bounding box, not verified joint support.",
+      "Quality partials hold the residual mixture term fixed; no independent causal Q intervention is identified.",
+      "Mixture derivatives are verified using simplex directions with explicit convex-combination witnesses in the A4 training hull.",
+      "Lambda values are assumptions, not estimates or confidence limits.",
+      "Scale-fold parameter spread is development sensitivity, not a confidence interval."
+    ]
+  },
+  "environment": {
+    "python": "3.11.5",
+    "numpy": "1.26.4",
+    "pandas": "2.0.3",
+    "scipy": "1.11.1",
+    "scikit_learn": "1.3.0"
+  },
+  "fit_new_parameters": false,
+  "raw_attachments_accessed": false,
+  "observed_labels_used": false,
+  "output_csv_sha256": {
+    "assumption_sensitivity.csv": "35a163919d0ebab76180444584fc4670faa14e72b71728e9821c74cd48a615c2",
+    "assumption_sensitivity_summary.csv": "81a12cddc7e7de7e43ea39393f1bca6b8aed8e819d9d9d04836d2329c4400c76",
+    "quality_feasible_path_checks.csv": "cdafdb8098dfdbf83e693d8c8855e89090bbc50dcf570fc4ef3ed489f86b5e69",
+    "quality_origin_sensitivity.csv": "a6842722c6a3f0a36f2f6cb14e0d6420ad4c6c3fef1101bdae779e81b8e9e469",
+    "quality_piecewise.csv": "b63a46ad98537f2386a12a2f6157f2066a4978095d70ee83142557283d5fddc5",
+    "scale_anchors.csv": "da7ac44eb7c6d3282a2f305f4c452ad0d37894963e9bd844bfeb55e70fa82e8e",
+    "scale_curves.csv": "296b0415243f93d1d2e54fec47d0e37a9cd27dc5e6b4508f40071aff38928fc5",
+    "scale_fold_sensitivity.csv": "b652d888d0f990878c13824efe94fdbaa02b5d96db3617eb107ae9b0b5ff14d8",
+    "scale_grid.csv": "5c3b77440b78f524e1304eba09329b9f7971ed70038bc0271a97a7acccb5d26f",
+    "simplex_directional_derivatives.csv": "5261e88ebee9799c41d4b4488cdd21e0dfcfa7e5d9fadfe8ea532eb75d1ed672",
+    "verification_checks.csv": "1de50f4c1ac90b1ed7913ff96879719b59af0f524e27e8dfc07c134fa9ba5ad3"
+  }
+}

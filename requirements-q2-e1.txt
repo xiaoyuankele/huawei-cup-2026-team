@@ -1,0 +1,2 @@
+-r requirements-q2-research.txt
+matplotlib==3.7.2

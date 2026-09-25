@@ -1,0 +1,22 @@
+[
+  {
+    "figure": "E1_scale_sensitivity",
+    "width_mm": 179.99999999928,
+    "height_mm": 142.99999999891998,
+    "backend": "matplotlib",
+    "png_dpi": 300,
+    "editable_vector_text": true,
+    "source": "deterministic frozen-model scenarios",
+    "confidence_intervals": false
+  },
+  {
+    "figure": "E1_quality_mixture_sensitivity",
+    "width_mm": 179.99999999928,
+    "height_mm": 91.00000000115999,
+    "backend": "matplotlib",
+    "png_dpi": 300,
+    "editable_vector_text": true,
+    "source": "deterministic frozen-model scenarios",
+    "confidence_intervals": false
+  }
+]
