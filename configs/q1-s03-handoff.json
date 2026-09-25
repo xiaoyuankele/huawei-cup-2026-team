@@ -1,0 +1,20 @@
+{
+  "schema_version": "q1.s03.handoff.v1",
+  "run_id": "q1-s03-handoff-audit-20260925-r01",
+  "task_id": "T-Q1-S03-HANDOFF",
+  "input": "experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_wide_v1_hard.csv",
+  "input_sha256": "c0714f8594ea8e9e0072b80ab156dd71293489ac436a9856f81dd64d9eb5d44b",
+  "base_fit": ["A4_A5_train_1m"],
+  "calibration_pairs": [["A6_A7_test_1m", "A8_A9_test_60m"]],
+  "retrospective_evaluation": ["A10_A11_test_1b"],
+  "estimated_extrapolation_audit": ["A12_A13_est_10b", "A14_A15_est_70b"],
+  "quality_version": "v1_hard_proxy_and_mapped_0_1_not_canonical_topsis",
+  "base_regularization_fixed": {"B1": 0, "M1_Q_proxy": 100, "M1_Q_mapped": 10},
+  "C2_tuning": "five paired folds; fit standardization inside train fold; selected score is not nested CV",
+  "C2_units": "full fitted delta multiplied by log10(S/1M)/log10(60)",
+  "bootstrap": {"unit": "paired recipe", "repetitions": 5000, "seed": 20260925},
+  "primary_metrics": ["rmse_mean_loss", "mae_mean_loss", "rmse_pooled_all_domains", "mae_domain_macro"],
+  "diagnostic_metrics": ["rmse_domain_macro", "r2_mean_loss", "spearman_mean_loss", "bias_observed_minus_pred_mean_loss"],
+  "export_individual_predictions": false,
+  "configuration_role": "run record; reproduction command parameters must match this file"
+}

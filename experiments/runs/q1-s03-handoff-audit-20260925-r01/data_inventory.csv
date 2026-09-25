@@ -1,0 +1,7 @@
+dataset,n,scale,loss_observed,quality_proxy_missing,quality_mapped_missing,p_columns,loss_columns,train_composition_overlap
+A4_A5_train_1m,512,1m,True,0,5,17,13,
+A6_A7_test_1m,256,1m,True,0,0,17,13,
+A8_A9_test_60m,256,60m,True,0,0,17,13,
+A10_A11_test_1b,64,1b,True,0,0,17,13,
+A12_A13_est_10b,63,10b,False,0,0,17,13,63.0
+A14_A15_est_70b,63,70b,False,0,0,17,13,63.0
