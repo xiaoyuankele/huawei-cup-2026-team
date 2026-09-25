@@ -1,0 +1,27 @@
+{
+  "schema": "q1-candidate-score-export.v1",
+  "run_id": "q1-conflict-trial-20260924-r01",
+  "source": "private artifacts/sample_results.csv.gz",
+  "source_sha256": "2790df031fec00635a7e00aae980e346aa1aeb994f64849e87937738adcd889e",
+  "public_file": "q1_candidate_scores.csv",
+  "public_sha256": "af8ddfe06823fd6e84755b6160bdb6e6516fc3f7b5009dc0d085958f65855303",
+  "rows": 261086,
+  "columns": [
+    "id",
+    "dataset",
+    "domain",
+    "Q_candidate",
+    "score_status"
+  ],
+  "dataset_counts": {
+    "A1": 51230,
+    "A2": 16104,
+    "A3": 193752
+  },
+  "score_status_counts": {
+    "candidate_not_validated": 261086
+  },
+  "score_min": 2.381811065,
+  "score_max": 90.15098394,
+  "interpretation": "Exploratory candidate scores; not a validated replacement for Q1.1 scores."
+}
