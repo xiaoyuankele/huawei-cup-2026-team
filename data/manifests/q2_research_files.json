@@ -115,8 +115,8 @@
     },
     {
       "path": "experiments/index.csv",
-      "bytes": 18876,
-      "sha256": "7289a94727d2db5476d408fa94ccb9b6b3eecd193534f1cacb43c6794426db2f"
+      "bytes": 18947,
+      "sha256": "1d29dc6752143ce7d544e65ffc87f12c132caa40e42c1ace0dff499012721efa"
     },
     {
       "path": "experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv",
@@ -175,8 +175,8 @@
     },
     {
       "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/README.md",
-      "bytes": 1560,
-      "sha256": "bc37b73b3a4986d6fdc8e8faaa1f107f353c5665001fa29ba7fd51aaa3aa8654"
+      "bytes": 1776,
+      "sha256": "64cc44abe706389163e76851081d98de3b6b9de8fcc07dfcc03fdb0df2d531cf"
     },
     {
       "path": "experiments/runs/q2-e1-marginal-elasticity-20260925-r01/assumption_sensitivity.csv",
@@ -525,13 +525,13 @@
     },
     {
       "path": "governance/ai-use-log.csv",
-      "bytes": 6528,
-      "sha256": "30a80215f6ef390818743814f901fe271fb574153fed7be4dd7346adcd3084c5"
+      "bytes": 6546,
+      "sha256": "426c9ac1674e4c3a46c6fb351a0dd2e6e4e60cbe5fc5b9d6d32e054b47fead6f"
     },
     {
       "path": "paper/claim-ledger.csv",
-      "bytes": 9034,
-      "sha256": "31a926ada540fc54f9c96066f5a34fb2b6df6ad6712730911779c7336baa0566"
+      "bytes": 9106,
+      "sha256": "dbecac1243e7966bada28dc577070c0c365625b37317fff043e752c232a476a0"
     },
     {
       "path": "requirements-q2-e1.txt",

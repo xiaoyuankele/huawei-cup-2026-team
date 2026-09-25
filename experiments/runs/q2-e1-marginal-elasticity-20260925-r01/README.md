@@ -26,3 +26,5 @@ python scripts/q2_verify_e1.py --rerun-dir "../q2-e1-rerun"
 ![规模收益与弹性](figures/E1_scale_sensitivity.png)
 
 ![质量映射与配比方向](figures/E1_quality_mixture_sensitivity.png)
+
+发布：实验提交 `d58e4a1de3f9bac16bbfbc6bf75cfa5c24a322d0`，对应 [待审 PR #29](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/29)。基于已合并PR #28，E1独立提交，尚未合并main。
