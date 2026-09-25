@@ -1,0 +1,41 @@
+{
+  "run_id": "q2-m3-preflight-20250925-r01",
+  "status": "BLOCKED_NO_FIT_STARTED",
+  "fit_started": false,
+  "checks": {
+    "q1_scalar_or_domain_scores_accepted": false,
+    "all_17_mixture_domains_have_validated_mapping": false,
+    "a_to_b_row_join_key_documented": false,
+    "b8_provenance_and_direction_unblocked": false,
+    "validation_roles_and_holdouts_frozen": true,
+    "poisoning_quarantine_and_raw_read_only_contract": true
+  },
+  "missing_gates": [
+    "q1_scalar_or_domain_scores_accepted",
+    "all_17_mixture_domains_have_validated_mapping",
+    "a_to_b_row_join_key_documented",
+    "b8_provenance_and_direction_unblocked"
+  ],
+  "required_input_contract": {
+    "q1": [
+      "accepted q_i definition",
+      "accepted p_i or recipe-level quality interface",
+      "direction and normalization record"
+    ],
+    "bridge": [
+      "direct/near_direct/inferred mapping for all used domains",
+      "uncertainty bounds",
+      "versioned bridge_id"
+    ],
+    "b": [
+      "B table Q/p semantics",
+      "frozen train/validation/extrapolation roles",
+      "B8 provenance or explicit scope exclusion"
+    ],
+    "join": [
+      "shared row-level key or explicit conditional-migration declaration"
+    ]
+  },
+  "source_gate_run": "q2-migration-gate-20250925-r01",
+  "no_silent_repairs": true
+}

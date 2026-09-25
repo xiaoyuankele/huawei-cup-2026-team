@@ -1,0 +1,15 @@
+run_id: q2-bridge-interface-20250925-r01
+status: blocked_conditional_interface
+scope: problem_2_migration_p1_p3
+inputs:
+  mapping: A16 domain_mapping_guide.csv
+  candidate_scores: q1-critic-topsis-20260924-r01/tables/domain_scores.csv
+  mixture_roles: A4/A6/A8/A10/A12/A14 mixture tables
+rules:
+  use_candidate_scores_as_official_q: false
+  impute_inferred_domains: false
+  renormalize_partial_q_for_modeling: false
+  row_join_A_to_B: false
+outputs:
+  domain_mapping: tables/domain_mapping_with_candidate_q.csv
+  recipe_summary: tables/recipe_partial_q_summary.csv

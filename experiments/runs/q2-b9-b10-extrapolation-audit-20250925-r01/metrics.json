@@ -1,0 +1,57 @@
+{
+  "run_id": "q2-b9-b10-extrapolation-audit-20250925-r01",
+  "status": "B9_B10_EXTRAPOLATION_ONLY",
+  "files": {
+    "B9": {
+      "file": "supplementary_large_models.csv",
+      "rows": 132,
+      "sha256": "ee794c1c586ed33c485a9eb9a2a3d993790402b63297e9b2765a1387930e940e",
+      "n_min": 100.0,
+      "n_max": 10000.0,
+      "d_min": 0.0,
+      "d_max": 36000.0,
+      "duplicate_name_count": 0,
+      "missing_cells": 15
+    },
+    "B10": {
+      "file": "supplementary_large_baseline.csv",
+      "rows": 128,
+      "sha256": "a240e210c5b37444356c28eea96c6cc36be79c29baae1621c2e08aff727ccfeb",
+      "n_min": 100.0,
+      "n_max": 10000.0,
+      "d_min": 0.1,
+      "d_max": 36000.0,
+      "duplicate_name_count": 0,
+      "missing_cells": 0
+    }
+  },
+  "overlap": {
+    "metadata_names": 132,
+    "baseline_names": 128,
+    "baseline_names_in_metadata": 128,
+    "baseline_only_names": []
+  },
+  "manifest_provenance": {
+    "B9": {
+      "problem": "B",
+      "file": "B_scaling_laws/supplementary_large_models.csv",
+      "bytes": 13400
+    },
+    "B10": {
+      "problem": "B",
+      "file": "B_scaling_laws/supplementary_large_baseline.csv",
+      "bytes": 4744
+    }
+  },
+  "checks": {
+    "fit_or_refit": false,
+    "used_as_true_validation": false,
+    "estimated_extrapolation_label_preserved": true,
+    "source_metadata_complete": false
+  },
+  "interpretation": [
+    "B9/B10 are large-model metadata and estimated baseline inputs for range/extrapolation checks.",
+    "They do not enter B1 fitting or serve as true held-out validation.",
+    "Missing manifest source fields remain a provenance limitation."
+  ]
+}

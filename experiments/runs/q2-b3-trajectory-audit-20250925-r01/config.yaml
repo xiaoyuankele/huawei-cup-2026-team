@@ -1,0 +1,4 @@
+run_id: q2-b3-trajectory-audit-20250925-r01
+status: b3_external_trajectory_diagnostic
+source_model_run: q2-m0-m1-20260925-r01
+refit: false

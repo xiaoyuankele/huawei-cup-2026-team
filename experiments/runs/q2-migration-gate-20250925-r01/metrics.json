@@ -1,0 +1,35 @@
+{
+  "run_id": "q2-migration-gate-20250925-r01",
+  "status": "BLOCKED_FORMAL_JOINT_MIGRATION",
+  "completed": [
+    "P0 poisoning-aware problem review and raw-data quarantine",
+    "M0 B1 classical N-D baseline",
+    "M1 B6/B7 semi-synthetic sensitivity with nested-extension handling",
+    "P1/P3 A16 mapping and Q1 candidate interface audit",
+    "M2 unmapped-domain conditional scenario envelope",
+    "P5 B8 provenance and direction audit"
+  ],
+  "checks": {
+    "m0_m1_reproducible_exploration": true,
+    "p1_p3_bridge_interface_audited": true,
+    "m2_sensitivity_only": true,
+    "b8_provenance_audited": true,
+    "q1_candidate_accepted": false,
+    "all_mixture_domains_mapped": false,
+    "b8_unblocked": false,
+    "row_level_join_available": false
+  },
+  "blockers": [
+    "Q1 candidate domain scores are pending review, not accepted quality truth.",
+    "Only 6/17 mixture domains have candidate mappings.",
+    "No A-to-B row-level join key exists.",
+    "B8 provenance and quality-direction gate remains blocked."
+  ],
+  "release_rule": "Do not fit or publish a formal A-B joint model until all required checks are true, or the paper explicitly narrows the claim to conditional sensitivity with these blockers disclosed.",
+  "source_run_ids": [
+    "q2-m0-m1-20250925-r01",
+    "q2-bridge-interface-20250925-r01",
+    "q2-m2-sensitivity-20250925-r01",
+    "q2-b8-provenance-20250925-r01"
+  ]
+}

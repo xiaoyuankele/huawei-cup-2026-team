@@ -1,0 +1,1 @@
+python -X utf8 scripts/q2_m2_bridge_sensitivity.py --out experiments/runs/q2-m2-sensitivity-20250925-r01

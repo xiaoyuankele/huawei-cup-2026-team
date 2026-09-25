@@ -1,0 +1,127 @@
+{
+  "run_id": "q2-b3-trajectory-audit-20250925-r01",
+  "status": "B3_EXTERNAL_TRAJECTORY_DIAGNOSTIC",
+  "source_model_run": "q2-m0-m1-20260925-r01",
+  "model_parameters": {
+    "E": 1.6897975629375732,
+    "A": 0.353980320647387,
+    "B": 1.2403055835489103,
+    "alpha": 0.3399765819095136,
+    "beta": 0.2798781285449292
+  },
+  "files": [
+    {
+      "file": "pythia_0.070542B_trajectory.csv",
+      "sha256": "19663f2f14d62af377377962ec8f794148450bfb278fdbeb2452f4641fe6a440",
+      "rows": 500,
+      "n_unique_N": 1,
+      "interpolated_count": 500,
+      "duplicate_key_count": 0,
+      "n": 500,
+      "mae": 0.002861959115841189,
+      "rmse": 0.003822915668090977,
+      "r2": 0.999949817593644
+    },
+    {
+      "file": "pythia_0.162405B_trajectory.csv",
+      "sha256": "8e2b78cde966b0a3e8b6272935c3f3dcccc5a54e94bb7db79ded2fd8fdf5a124",
+      "rows": 500,
+      "n_unique_N": 1,
+      "interpolated_count": 500,
+      "duplicate_key_count": 0,
+      "n": 500,
+      "mae": 0.002956554805766949,
+      "rmse": 0.003925746381382526,
+      "r2": 0.9999470681625632
+    },
+    {
+      "file": "pythia_0.409009B_trajectory.csv",
+      "sha256": "8c803195d475d8ff320afd90887ae48cec6463f4d01a2264c6680611ed9db170",
+      "rows": 500,
+      "n_unique_N": 1,
+      "interpolated_count": 500,
+      "duplicate_key_count": 0,
+      "n": 500,
+      "mae": 0.0028855038364994103,
+      "rmse": 0.0038464967454359665,
+      "r2": 0.99994920347174
+    },
+    {
+      "file": "pythia_1.040867B_trajectory.csv",
+      "sha256": "bb73b2852db183bee3d76c76f55e2bdcc292d7ed0881cb27966525b56afcafc0",
+      "rows": 500,
+      "n_unique_N": 1,
+      "interpolated_count": 500,
+      "duplicate_key_count": 0,
+      "n": 500,
+      "mae": 0.0027085501761713563,
+      "rmse": 0.0035553895654431597,
+      "r2": 0.9999565481824616
+    },
+    {
+      "file": "pythia_1.416184B_trajectory.csv",
+      "sha256": "cd0d718747fb6048cb474066dbf35f64ef852f59cba2886484cbdf14bc68a02f",
+      "rows": 500,
+      "n_unique_N": 1,
+      "interpolated_count": 500,
+      "duplicate_key_count": 0,
+      "n": 500,
+      "mae": 0.0029903138482689348,
+      "rmse": 0.003960358536366506,
+      "r2": 0.9999461568112425
+    },
+    {
+      "file": "pythia_11.965825B_trajectory.csv",
+      "sha256": "e223b3d48bc4fef3cbc03fd583ff7aef87e474903d829f6c417310cb99fa7b5e",
+      "rows": 500,
+      "n_unique_N": 1,
+      "interpolated_count": 500,
+      "duplicate_key_count": 0,
+      "n": 500,
+      "mae": 0.0029850398077369187,
+      "rmse": 0.0038887394048650794,
+      "r2": 0.9999480482247064
+    },
+    {
+      "file": "pythia_2.782831B_trajectory.csv",
+      "sha256": "552f03249b69234009eb028b3296d6bd1b1cb3a52c0d3a84a669baa0e3179482",
+      "rows": 500,
+      "n_unique_N": 1,
+      "interpolated_count": 500,
+      "duplicate_key_count": 0,
+      "n": 500,
+      "mae": 0.00285397416828251,
+      "rmse": 0.0037673049562315613,
+      "r2": 0.9999512487398611
+    },
+    {
+      "file": "pythia_6.86104B_trajectory.csv",
+      "sha256": "8814c8414fddc914444c74e6cf8da02e3e156a0d7fb8acea6c5da05e438bf054",
+      "rows": 500,
+      "n_unique_N": 1,
+      "interpolated_count": 500,
+      "duplicate_key_count": 0,
+      "n": 500,
+      "mae": 0.0029017149243638495,
+      "rmse": 0.003788898594411735,
+      "r2": 0.9999506944714166
+    }
+  ],
+  "overall": {
+    "n": 4000,
+    "mae": 0.0028929513353663895,
+    "rmse": 0.003821282083909938,
+    "r2": 0.9999577401374022
+  },
+  "checks": {
+    "all_rows_interpolated": true,
+    "duplicate_keys_absent": true,
+    "refit_on_B3": false,
+    "B3_used_to_select_M0": false
+  },
+  "interpretation": [
+    "B3 is a same-family Pythia interpolated-trajectory diagnostic, not an independent source truth.",
+    "Predictions use frozen B1 M0 parameters; no B3 refit or model selection was performed.",
+    "The diagnostic does not establish cross-family generalization or a universal scaling law."
+  ]
+}

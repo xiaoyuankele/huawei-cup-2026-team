@@ -1,0 +1,7 @@
+run_id: q2-b8-provenance-20250925-r01
+status: blocked_b8_provenance_and_direction
+scope: problem_2_migration_p5_b8_gate
+operations: [hash, schema, manifest_provenance, nested_relation, q_direction_by_cell]
+mutations: false
+repair_or_reverse_q: false
+fit_b8: false

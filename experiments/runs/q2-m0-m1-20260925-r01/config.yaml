@@ -1,0 +1,21 @@
+run_id: q2-m0-m1-20260925-r01
+status: exploratory_review
+scope: problem_2_migration_first_execution
+raw_root: data/origin/real_attachments/B_scaling_laws
+models:
+  M0:
+    formula: L = E + A*N^(-alpha) + B*D^(-beta)
+    fit: B1 pythia_training_log_existing.csv
+    split: leave_one_N_params_B_value_out
+  M1:
+    formula: L = E + A*N^(-alpha) + B*D^(-beta) + G*(1-Q_score)
+    fit: B6 supplementary_NQ_experiment.csv
+    split: five_fold_leave_one_D_cell_out_within_B6
+    nested_extension: B7 rows whose experiment_id is absent from B6
+exclusions:
+  B8: q_direction_conflict_and_provenance_incomplete
+  B9_B10: metadata_or_estimated_extrapolation_only
+validation:
+  metrics: [MAE, RMSE, R2, residual_median, residual_p95_abs]
+  random_split: false
+  final_claim: false
