@@ -1,0 +1,293 @@
+{
+  "input": "experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_wide_v1_hard.csv",
+  "input_sha256": "c0714f8594ea8e9e0072b80ab156dd71293489ac436a9856f81dd64d9eb5d44b",
+  "raw_manifest": "data/manifests/q1_raw.yaml",
+  "quality_version": "v1_hard",
+  "soft_v2_used": false,
+  "new_raw_data_uploaded": false,
+  "columns": [
+    {
+      "field": "dataset",
+      "group": "metadata_or_quality",
+      "description": "Original A-table pair identifier"
+    },
+    {
+      "field": "role",
+      "group": "metadata_or_quality",
+      "description": "Original source role label"
+    },
+    {
+      "field": "scale",
+      "group": "metadata_or_quality",
+      "description": "Provided scale label; x_scale = log10(scale/1M)"
+    },
+    {
+      "field": "loss_observed",
+      "group": "metadata_or_quality",
+      "description": "True for A4-A11 observations; False for supplied A12-A15 estimates"
+    },
+    {
+      "field": "index",
+      "group": "metadata_or_quality",
+      "description": "Original within-table row ID; combined key is dataset/index"
+    },
+    {
+      "field": "mixture_sum_raw",
+      "group": "metadata_or_quality",
+      "description": "Mixture row sum before upstream normalization"
+    },
+    {
+      "field": "mapped_share_direct_near_direct",
+      "group": "metadata_or_quality",
+      "description": "Share covered by direct or near-direct quality mapping"
+    },
+    {
+      "field": "quality_score_mapped_0_1",
+      "group": "metadata_or_quality",
+      "description": "Existing mapped quality score; five unmapped training rows excluded, never imputed"
+    },
+    {
+      "field": "quality_score_proxy_0_1",
+      "group": "metadata_or_quality",
+      "description": "Existing composition-derived quality proxy; not an independent causal variable"
+    },
+    {
+      "field": "proxy_low_share",
+      "group": "metadata_or_quality",
+      "description": "Existing quality-proxy component share"
+    },
+    {
+      "field": "proxy_middle_share",
+      "group": "metadata_or_quality",
+      "description": "Existing quality-proxy component share"
+    },
+    {
+      "field": "proxy_high_share",
+      "group": "metadata_or_quality",
+      "description": "Existing quality-proxy component share"
+    },
+    {
+      "field": "loss_mean_13_domains",
+      "group": "metadata_or_quality",
+      "description": "Supplied equal-weight mean of the 13 named Loss columns; recomputed for metrics"
+    },
+    {
+      "field": "p_arxiv",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_freelaw",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_nih_exporter",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_pubmed_central",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_wikipedia_en",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_dm_mathematics",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_github",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_philpapers",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_stackexchange",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_enron_emails",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_gutenberg_pg_19",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_pile_cc",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_ubuntu_irc",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_europarl",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_hackernews",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_pubmed_abstracts",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "p_uspto_backgrounds",
+      "group": "mixture",
+      "description": "Normalized mixture share; nonnegative; the 17 shares sum to one"
+    },
+    {
+      "field": "metric/the_pile_arxiv_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_freelaw_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_pubmed_central_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_wikipedia_en_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_dm_mathematics_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_github_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_stackexchange_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_gutenberg_pg_19_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_pile_cc_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_ubuntu_irc_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_hackernews_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_pubmed_abstracts_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    },
+    {
+      "field": "metric/the_pile_uspto_backgrounds_val_loss",
+      "group": "response",
+      "description": "Supplied cross-entropy Loss for the named evaluation domain"
+    }
+  ],
+  "datasets": [
+    {
+      "dataset": "A4_A5_train_1m",
+      "n": 512,
+      "scale": "1m",
+      "loss_observed": true,
+      "quality_proxy_missing": 0,
+      "quality_mapped_missing": 5,
+      "p_columns": 17,
+      "loss_columns": 13,
+      "train_composition_overlap": ""
+    },
+    {
+      "dataset": "A6_A7_test_1m",
+      "n": 256,
+      "scale": "1m",
+      "loss_observed": true,
+      "quality_proxy_missing": 0,
+      "quality_mapped_missing": 0,
+      "p_columns": 17,
+      "loss_columns": 13,
+      "train_composition_overlap": ""
+    },
+    {
+      "dataset": "A8_A9_test_60m",
+      "n": 256,
+      "scale": "60m",
+      "loss_observed": true,
+      "quality_proxy_missing": 0,
+      "quality_mapped_missing": 0,
+      "p_columns": 17,
+      "loss_columns": 13,
+      "train_composition_overlap": ""
+    },
+    {
+      "dataset": "A10_A11_test_1b",
+      "n": 64,
+      "scale": "1b",
+      "loss_observed": true,
+      "quality_proxy_missing": 0,
+      "quality_mapped_missing": 0,
+      "p_columns": 17,
+      "loss_columns": 13,
+      "train_composition_overlap": ""
+    },
+    {
+      "dataset": "A12_A13_est_10b",
+      "n": 63,
+      "scale": "10b",
+      "loss_observed": false,
+      "quality_proxy_missing": 0,
+      "quality_mapped_missing": 0,
+      "p_columns": 17,
+      "loss_columns": 13,
+      "train_composition_overlap": 63.0
+    },
+    {
+      "dataset": "A14_A15_est_70b",
+      "n": 63,
+      "scale": "70b",
+      "loss_observed": false,
+      "quality_proxy_missing": 0,
+      "quality_mapped_missing": 0,
+      "p_columns": 17,
+      "loss_columns": 13,
+      "train_composition_overlap": 63.0
+    }
+  ]
+}

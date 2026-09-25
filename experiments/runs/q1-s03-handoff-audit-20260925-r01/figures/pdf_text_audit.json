@@ -1,0 +1,10 @@
+{
+  "pdf": "experiments\\runs\\q1-s03-handoff-audit-20260925-r01\\figures\\Figure1_scale_correction_audit.pdf",
+  "auditable": true,
+  "minimum_required_pt": 6.0,
+  "minimum_found_pt": 6.0,
+  "text_run_count": 71,
+  "below_minimum_count": 0,
+  "below_minimum": [],
+  "warnings": []
+}

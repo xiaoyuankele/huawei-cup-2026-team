@@ -1,0 +1,14 @@
+{
+  "historical_C0_C1_metric_values_checked": 40,
+  "max_absolute_difference": 1.7763568394002505e-15,
+  "tolerance": 1e-12,
+  "regression_passed": true,
+  "focused_tests": {
+    "command": "python -m unittest discover -s tests -p test_q1_s03.py -v",
+    "passed": 3,
+    "failed": 0
+  },
+  "input_rows": 1214,
+  "output_aggregate_rows": 96,
+  "output_domain_rows": 1248
+}

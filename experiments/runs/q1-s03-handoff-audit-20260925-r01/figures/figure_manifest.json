@@ -1,0 +1,21 @@
+{
+  "backend": "python",
+  "width_mm": 180,
+  "height_mm": 157,
+  "sources": [
+    "metrics_aggregate.csv",
+    "paired_shift_transfer.csv",
+    "scale_coefficients.csv"
+  ],
+  "base_model": "B1_Q_proxy",
+  "metrics_rows_displayed": 20,
+  "slope_rows": 14,
+  "paired_shift_rows": 14,
+  "bootstrap": {
+    "seed": 20260925,
+    "replicates": 5000,
+    "unit": "matched mixture row; 13 responses resampled together"
+  },
+  "exclusions": "Base-model sensitivity omitted from figure only; all source rows retained in CSV. No recipe exclusion.",
+  "mean_C1_curves": "Global and domain-specific values checked equal; one curve shown in panel a."
+}

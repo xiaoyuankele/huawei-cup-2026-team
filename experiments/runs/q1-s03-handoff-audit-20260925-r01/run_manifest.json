@@ -1,0 +1,156 @@
+{
+  "schema_version": "q1.s03.handoff.v1",
+  "run_id": "q1-s03-handoff-audit-20260925-r01",
+  "task_id": "T-Q1-S03-HANDOFF",
+  "repository": "xiaoyuankele/huawei-cup-2026-team",
+  "team_base_commit": "57fc793e9692b49a60c33c6d99ec10c17ffd5d76",
+  "status": "PEER_REVIEW",
+  "human_review_decisions": "PENDING",
+  "input": "experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_wide_v1_hard.csv",
+  "input_sha256": "c0714f8594ea8e9e0072b80ab156dd71293489ac436a9856f81dd64d9eb5d44b",
+  "historical_local_input_sha256": "fe449de9cf3245955f8896dbdde7ee161bbf8708e140e52c5dd8dd9358632c42",
+  "input_byte_difference": "Historical local file and team v1 have identical parsed cells; LF/CRLF byte difference only.",
+  "source_refs": [
+    {
+      "path": "experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_wide_v1_hard.csv",
+      "sha256": "c0714f8594ea8e9e0072b80ab156dd71293489ac436a9856f81dd64d9eb5d44b"
+    },
+    {
+      "path": "data/manifests/q1_raw.yaml",
+      "sha256": "1eb2b85ddfe5c5a7f0c3cd13ac8bdb780d91b6dfa9c97fff2b461aa5d131455c"
+    },
+    {
+      "path": "docs/tasks/T-Q1-003-MIXTURE.yml",
+      "sha256": "898f53bef98a386bf4525d4c91ef21fb25b98c26feda78f9a8b3bb1340ae029b"
+    },
+    {
+      "path": "docs/decisions/q1-scale-shift-transfer-results.md",
+      "sha256": "00d723ea69518f5e3863955a1744ddf642db3efea7db2ea8361ec0570513be20"
+    },
+    {
+      "path": "docs/decisions/q1-paper-model-comparison.md",
+      "sha256": "422be32683c9b5c4c956f9f86fa1078c13b449b6dd8045ea0c1a5128d20a1d0b"
+    }
+  ],
+  "command": "python scripts/q1_s03/reproduce.py --input experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_wide_v1_hard.csv --output data/processed/q1-s03-reproduction --bootstrap 5000 --seed 20260925",
+  "config": "configs/q1-s03-handoff.json",
+  "code": "scripts/q1_s03/reproduce.py",
+  "metrics": "experiments/runs/q1-s03-handoff-audit-20260925-r01/metrics_aggregate.csv",
+  "outputs": [
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/.gitattributes",
+      "bytes": 74,
+      "sha256": "4f0e1d13fa2d71b689d340edd984fab2f5246c34232b88d4c3c6538028778eae"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/audit.json",
+      "bytes": 2372,
+      "sha256": "f07de0aae024252573d6d1c4e59910599db83bc6c60ff8e1cc6a10d465d54bbb"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/data_inventory.csv",
+      "bytes": 371,
+      "sha256": "cf8616d002e89470517c1f6edffeb0107dff755f02555fd2049e23a02f0fcb13"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/field_dictionary.csv",
+      "bytes": 4078,
+      "sha256": "957f2ed36988ec2770535b397740cad62fdf3f38b04e9a1eaafb5a58045e2b37"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/figures/Figure1_scale_correction_audit.pdf",
+      "bytes": 54279,
+      "sha256": "83b0ec4471091f7706ffedfdc67646fa9791905dbae3c408fc7b873cf30ba2c8"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/figures/Figure1_scale_correction_audit.png",
+      "bytes": 285112,
+      "sha256": "d0be78c7ebeab64f9ac2e902adcb2809a2132c63748da02135508dbc66412bba"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/figures/Figure1_scale_correction_audit.svg",
+      "bytes": 58383,
+      "sha256": "8ecdb12ab44a393f39848b067ae8f26af9059d68b165f249f0e92d83093e4915"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/figures/Figure1_scale_correction_audit.tiff",
+      "bytes": 1138880,
+      "sha256": "4860b89bb041a9a3c228fad1e2be87cc0de20701ab807ea80edff7bc51c86ae9"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/figures/figure_manifest.json",
+      "bytes": 663,
+      "sha256": "4a52c1d2a9d12fadbe1ed3d29c020aab46d14592629e4e1412a7ece7c896e6c3"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/figures/pdf_text_audit.json",
+      "bytes": 294,
+      "sha256": "7a253757d427c59d952bdcc926d605686a599e1639531144dc29868a3767e47d"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/figures/QA_notes.md",
+      "bytes": 3651,
+      "sha256": "c8a77a1fe76ecc558ccf90d4d183faebaac983b115d50c1381c51279586c2470"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/figures/README.md",
+      "bytes": 3470,
+      "sha256": "0863b5d23b7d8b45b96c775fbfc50de8dcb1bd81cafb5ae77342a1a8fe1d1f41"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/figures/source_validation.json",
+      "bytes": 3728,
+      "sha256": "ceb5dfda80f3d4edc241f65c336940faaf1c63ef667fddc866f39f15baef1943"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/metrics_aggregate.csv",
+      "bytes": 22235,
+      "sha256": "5527b337e493fe74baa025166b63034ce0fe467ac1c522be0c1f73b0f8241d3d"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/metrics_by_domain.csv",
+      "bytes": 260373,
+      "sha256": "4f0dd71d87dee00c05edca8946db66b7aca11e16e86623aed6b7e82b7257e8f3"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/model_parameters.json",
+      "bytes": 59891,
+      "sha256": "a1e92d295fd41f6f5dcedc566cde31d6dff15724106d47f52509087483881937"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/paired_correction_cv.csv",
+      "bytes": 8773,
+      "sha256": "966be0c4280ecfa764a5ff94314238188d4f615390ba4d286a38866262ddb300"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/paired_shift_transfer.csv",
+      "bytes": 19695,
+      "sha256": "4c79ce6f618d1cd2542fa717db546eabee06b1a43f1ddb3e5be2a413035f406a"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/README.md",
+      "bytes": 7622,
+      "sha256": "ff166fc7346652d7952d71749d15f41755608def5f39a988f49f43623e0021a7"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/scale_coefficients.csv",
+      "bytes": 1724,
+      "sha256": "133f5a8218be42a3d7120ccec978e315fcdd985dfebbbde87e0eae0b8f59bad1"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/table_correction_comparison.csv",
+      "bytes": 2131,
+      "sha256": "0a96d4c5264724da1ffaa956d95f31aa5704af0db4a5f003f2d460652b038342"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/table_quality_sensitivity.csv",
+      "bytes": 2463,
+      "sha256": "170797c57106cb0c8f013e21179d3cc31d2921a84a4b61fefb3678a5546c12d6"
+    },
+    {
+      "path": "experiments/runs/q1-s03-handoff-audit-20260925-r01/validation.json",
+      "bytes": 387,
+      "sha256": "42e0decf88e3d38f1590a988f4feed2c0dfa9c53071aa8e28ddddf9eda3b96a9"
+    }
+  ]
+}

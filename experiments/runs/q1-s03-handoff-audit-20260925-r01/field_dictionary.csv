@@ -1,0 +1,44 @@
+field,group,description
+dataset,metadata_or_quality,Original A-table pair identifier
+role,metadata_or_quality,Original source role label
+scale,metadata_or_quality,Provided scale label; x_scale = log10(scale/1M)
+loss_observed,metadata_or_quality,True for A4-A11 observations; False for supplied A12-A15 estimates
+index,metadata_or_quality,Original within-table row ID; combined key is dataset/index
+mixture_sum_raw,metadata_or_quality,Mixture row sum before upstream normalization
+mapped_share_direct_near_direct,metadata_or_quality,Share covered by direct or near-direct quality mapping
+quality_score_mapped_0_1,metadata_or_quality,"Existing mapped quality score; five unmapped training rows excluded, never imputed"
+quality_score_proxy_0_1,metadata_or_quality,Existing composition-derived quality proxy; not an independent causal variable
+proxy_low_share,metadata_or_quality,Existing quality-proxy component share
+proxy_middle_share,metadata_or_quality,Existing quality-proxy component share
+proxy_high_share,metadata_or_quality,Existing quality-proxy component share
+loss_mean_13_domains,metadata_or_quality,Supplied equal-weight mean of the 13 named Loss columns; recomputed for metrics
+p_arxiv,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_freelaw,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_nih_exporter,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_pubmed_central,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_wikipedia_en,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_dm_mathematics,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_github,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_philpapers,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_stackexchange,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_enron_emails,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_gutenberg_pg_19,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_pile_cc,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_ubuntu_irc,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_europarl,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_hackernews,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_pubmed_abstracts,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+p_uspto_backgrounds,mixture,Normalized mixture share; nonnegative; the 17 shares sum to one
+metric/the_pile_arxiv_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_freelaw_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_pubmed_central_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_wikipedia_en_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_dm_mathematics_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_github_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_stackexchange_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_gutenberg_pg_19_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_pile_cc_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_ubuntu_irc_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_hackernews_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_pubmed_abstracts_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
+metric/the_pile_uspto_backgrounds_val_loss,response,Supplied cross-entropy Loss for the named evaluation domain
