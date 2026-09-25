@@ -1,7 +1,8 @@
 % !Mode:: "TeX:UTF-8"
 %!TEX program = xelatex
-% 由仓库中的两份已形成正文的稿件合并到 GMCM2026 模板。
+% 依据 2026-09-16 竞赛论文格式规范排版；上游类文件保持原样。
 \documentclass[bwprint]{template/gmcmthesis}
+\usepackage{template/official-format-2026}
 
 \hypersetup{hidelinks}
 \usepackage[framemethod=TikZ]{mdframed}
@@ -14,7 +15,7 @@
 \usepackage{algorithmicx,algorithm}
 \usepackage{amsmath,amssymb,booktabs,graphicx}
 \captionsetup[figure]{format=plain,justification=centering,singlelinecheck=false}
-\newcommand{\formulaname}[1]{\par\smallskip\noindent\textbf{#1}\par\nobreak}
+\newcommand{\formulaname}[1]{\par\smallskip\noindent{\songti\zihao{-4}#1}\par\nobreak}
 \graphicspath{{./}{figures/q1-mixture-scale/}{figures/q1-conflict-resolution/}{figures/q1-critic-topsis/nature-v1/}{template/figures/}}
 \input{commands.tex}
 \numberwithin{equation}{section}
@@ -22,11 +23,6 @@
 \counterwithin{table}{section}
 
 \title{数据质量评价、冲突消解与训练配比规模修正}
-\baominghao{待填写正式队伍编号}
-\schoolname{学校名称填写}
-\membera{成员 A}
-\memberb{成员 B}
-\memberc{成员 C}
 
 \floatname{algorithm}{算法}
 \renewcommand{\algorithmicrequire}{\textbf{输入:}}
@@ -36,7 +32,7 @@
 
 \maketitle
 \begin{abstract}
-本文针对多源文本数据质量评价与质量信号冲突问题，先对 A1、A2、A3 数据进行合并去重、方向统一、稳健归一化和 CRITIC--TOPSIS 综合评分，再将质量指标归并为内容价值、表达质量、整洁度、无广告程度和非重复程度五个维度。第一部分给出样本级、领域级和语料级质量评价及敏感性分析；第二部分定义相对阈值下的候选冲突，区分测量分歧、属性权衡和适用性疑点，并构造有限补偿综合评价模型；第三部分分析训练域配比与 13 个验证目标 Loss 的关系，通过同配方差分校准跨规模偏差，并检验逐目标误差与外推边界。
+本文研究多源文本质量评价、质量信号冲突及训练领域配比对语言模型 Loss 的影响。首先以 A1 拟合集固定归一化边界和 CRITIC 权重，用加权距离 TOPSIS 对 261,086 条去重记录评分；随后将通用指标归并为五维，以分位阈值标记候选冲突并构造有限补偿评分；最后用 ilr-Ridge 建立配比与 13 个验证目标 Loss 的关系，以同配方跨规模差分校准规模偏差。全量语料均分为 54.2323，较 A1 的 60.9471 低 6.7149 分，主要由领域构成变化驱动；全量候选冲突率为 34.5966\%。二阶配比模型将 1M 同尺度 RMSE 从 0.3464 降至 0.2840；配方条件规模修正将 1B 回顾评价 RMSE 从 2.6963 降至 0.6252。本文的模型构造将冻结评价标尺、有限补偿与配方条件规模校准衔接；高规模 Loss 来自给定估算，质量代理亦未获得独立验证，因此不据此断言最优训练配方。
 \par
 \keywords{数据质量评价\quad CRITIC--TOPSIS\quad 冲突消解\quad 有限补偿\quad 配比效应\quad 规模修正}
 \end{abstract}
