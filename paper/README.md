@@ -1,17 +1,18 @@
 # LaTeX 论文
 
-论文源文件以 `main.tex` 为唯一入口，采用从 [Nopon-Knowledge/huawei-cup-modeling-latex](https://github.com/Nopon-Knowledge/huawei-cup-modeling-latex) 导入的 2026 GMCMthesis 模板。模板供应目录是 `template/`，项目自己的章节、命令和参考文献仍独立维护。
+论文源文件以 `main.tex` 为唯一入口，采用 `template/` 中的用户提供 GMCM2026 模板。当前入口装配两份已经形成正文的内容：数据质量评价与基础评分、质量冲突消解与综合评价模型。
 
 ## 目录约定
 
-- `main.tex`：唯一编译入口，负责模板参数、队伍信息和章节装配。
-- `sections/`：论文正文章节；每个章节只保存正文内容，不重复定义文档环境。
+- `main.tex`：唯一编译入口，负责模板参数、队伍信息、摘要和章节装配。
+- `sections/q1-quality-evaluation.tex`：第一部分，包含数据预处理、CRITIC--TOPSIS 评分、领域聚合和敏感性分析。
+- `sections/q1-conflict-resolution.tex`：第二部分，包含冲突定义、成因分析、有限补偿模型和扩展集结果。
+- `sections/drafts/`：保留原始稿件，作为正文来源和审阅追溯。
 - `commands.tex`：统一数学符号和项目命令。
 - `refs.bib`：项目参考文献库；模板示例参考文献保留在 `template/reference.bib`。
-- `template/`：上游模板、固定版式素材、官方格式核对资料和维护脚本。
+- `template/`：GMCM2026 模板和版式素材。
+- `figures/`：论文正文图形；正文引用的 PDF 图形均保留在相应子目录。
 - `official-template-checklist.md`：提交前的格式、匿名和材料核对表。
-
-文献检索、阅读笔记和版权边界见 [docs/literature/README.md](../docs/literature/README.md)。
 
 ## 编译
 
@@ -28,7 +29,3 @@ latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 提交前请在 `main.tex` 中填写队伍编号、学校和三名成员信息，并根据当届组委会要求复核封面、摘要、页码、篇幅和匿名规则。论文中的数字应能追溯到 `experiments/runs/` 中的 `run_id`。
-
-## Q1 质量评价图组
-
-[六张 Nature 风格图、中文图注及 LaTeX 引图片段](figures/q1-critic-topsis/nature-v1/README.md)。图表来源、复现脚本和审核状态均已回链；当前为写作候选素材，正式纳入正文按团队验收流程处理。
