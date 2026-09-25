@@ -1,0 +1,452 @@
+{
+  "status": "REVIEW_REQUIRED",
+  "scope": "Publication file hashes; manifest excludes itself to avoid circular hashing.",
+  "historical_import": "data/manifests/q2_research_import.json",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 14848,
+      "sha256": "2bcc5eff1a2a6c6f2975868d908ea106daa4de32d0a844f6873231c94fa3b942"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3135,
+      "sha256": "548052bd1d16e5d3a229d2964e18604f9375016c42631740d47c262afbd6ea60"
+    },
+    {
+      "path": "data/manifests/q2_research_import.json",
+      "bytes": 14952,
+      "sha256": "6036ce6951daab67dfdf73c3ee11966d02d30fcd9f41b320c0574605a8ff3611"
+    },
+    {
+      "path": "data/manifests/q2_research_inputs.json",
+      "bytes": 15322,
+      "sha256": "9da535e7fca357a1744e428a6e6045faf0e329ff8562f95126233a205860c5c7"
+    },
+    {
+      "path": "docs/problem/q2-generalized-scaling-model-v1.md",
+      "bytes": 8519,
+      "sha256": "e61f98edbde4f9ee8e8aeb810ac051c70e94a43d8a5c1a67db95ca76111b5bd5"
+    },
+    {
+      "path": "docs/problem/q2-modeling-status-20260925.md",
+      "bytes": 5655,
+      "sha256": "38b5d6196dcce476baac71f692f10ef503f126fc101cd8abedc63b3357e5054f"
+    },
+    {
+      "path": "docs/problem/q2-quality-scaling-linkage-plan.md",
+      "bytes": 10254,
+      "sha256": "55539f98b8313862ac64d61e2181485e9e24a3c4e1f592bd0c0605bd1ff1c997"
+    },
+    {
+      "path": "docs/problem/q2-transfer-improvement-experiment-plan.md",
+      "bytes": 9460,
+      "sha256": "88670ec2a48d01bad7df71be1c664592789d5a3b40f944b53504a93955a11357"
+    },
+    {
+      "path": "docs/problem/q2-workflow-requirements-coverage.md",
+      "bytes": 7422,
+      "sha256": "48fbae2635d7a9e307d712709afe979ad1a35bdcc5bba5b8eed1cc41bdc58761"
+    },
+    {
+      "path": "docs/research/q2/README.md",
+      "bytes": 3756,
+      "sha256": "b7d3807a1c8763af19be1856bda607f3cef471740059cf75a7540bde103ac694"
+    },
+    {
+      "path": "docs/research/q2/column_dictionary.csv",
+      "bytes": 59638,
+      "sha256": "086ebc0b7324f5f25ee1fcb0429227765aad3f120dccb9981035469f14f009b7"
+    },
+    {
+      "path": "docs/research/q2/data.md",
+      "bytes": 3963,
+      "sha256": "d87a7fad3a2fd01ac7c72e551122482a885174c5d526bf7c4e8fbb8dcf774935"
+    },
+    {
+      "path": "docs/research/q2/file_inventory.csv",
+      "bytes": 10974,
+      "sha256": "3414b0739b70c0e9cc357dd79404bba3fa698e874c9a1e5281e1ce4bf14d9ec1"
+    },
+    {
+      "path": "docs/research/q2/handoff.md",
+      "bytes": 3102,
+      "sha256": "83bd026ee8203869ba1247b09c8e391cb6786f7504d3bbfd7ed9aa018351beef"
+    },
+    {
+      "path": "docs/research/q2/process.md",
+      "bytes": 2810,
+      "sha256": "65bf8409f43d1686a0d4af33c55c0dc65bd9c70448cecde0bf63148a057fca32"
+    },
+    {
+      "path": "docs/research/q2/reproduce.md",
+      "bytes": 2706,
+      "sha256": "d3943139818a3d190e77d81b165a6be4ef1540bc42699a2091d27e922e95c3b1"
+    },
+    {
+      "path": "docs/research/q2/reproduction_verification.json",
+      "bytes": 15695,
+      "sha256": "e1d522760c273c304db9fee89aaf37c5e26388d826b812add41a232bae173b79"
+    },
+    {
+      "path": "docs/research/q2/results.md",
+      "bytes": 4341,
+      "sha256": "f713680bbdbe1c1b4bee2030d435e65ad06286735795959d274b63f50b29960a"
+    },
+    {
+      "path": "docs/tasks/T-Q2-RESEARCH-HANDOFF.yml",
+      "bytes": 2146,
+      "sha256": "4315faec1a272d1ed0e292d55807cb1b1f28ff52e099e15e8a065c2fcf8aa4c2"
+    },
+    {
+      "path": "experiments/index.csv",
+      "bytes": 18382,
+      "sha256": "1258e0110ca99ba10772cd73888dc6114521a061993acaa40e74d3dd84b10745"
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv",
+      "bytes": 5406,
+      "sha256": "78729ea21bc8f7246a66ce1dbfe3544b2a2480980658f80f6c077dbc28258beb"
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/B_source_offset_audit.csv",
+      "bytes": 1233,
+      "sha256": "3a452ddfcef90feff01a8a7832d0020eb61c51184b4486abfbb0bac606eea5eb"
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/Q_axis_sensitivity.csv",
+      "bytes": 362,
+      "sha256": "044b8c5d61c57651224da7225a5a241d3db3db0db4fee3eccbf1fd6340c51ff7"
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/calibration_sensitivity_report.md",
+      "bytes": 1478,
+      "sha256": "d1c7cb3f7a4312c149cd3879c17dd54b59ef15609f7b06b6da3cd13e31b18f30"
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/sensitivity_manifest.json",
+      "bytes": 682,
+      "sha256": "78bb1370aaa1620e89ebacaf9f7799387d11ab24e012d4f2d81c098ba0e0c658"
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/README.md",
+      "bytes": 452,
+      "sha256": "41af6297c04e431aaf7f7188e440059391d6e554b34014c2e9be883d7c7c4b50"
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv",
+      "bytes": 628022,
+      "sha256": "790c64ac2978ab0ad65f507bbb4105aebbc918a6dc0379769052e3dc5ff3ca9e"
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/q1_support_effects_for_combination.csv",
+      "bytes": 262152,
+      "sha256": "e8648d376eeb5456396367470c96800ef9adf8dbb90e0f1a904710e704811ce4"
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/scenario_manifest.json",
+      "bytes": 1470,
+      "sha256": "8f8855b06fec1d21b4c7c53e28217c4ab7ab97608d71950a4e607b4bf0c9f5d1"
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/scenario_report.md",
+      "bytes": 718,
+      "sha256": "1103cecbb8883a8f25f513aae94aa867605cc091e22fe87f76796a6192f35d9f"
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv",
+      "bytes": 1049,
+      "sha256": "b0bb6e8d841e59e6007555e0af3e2913054a830dcb633ced74d6440f373f073d"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/README.md",
+      "bytes": 729,
+      "sha256": "7a50f96b27f4849fabafc311a9bead716082c3d7dabcdd962b5f831c8abafd3b"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv",
+      "bytes": 28902,
+      "sha256": "0dcd13565e0b03ab50fa65a186ba3c5f778ada9e920437a2fb15a6488e201246"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv",
+      "bytes": 1878,
+      "sha256": "bbc9c4d9afd09ed9fbd764554a220ccdf9cc411eb4d30f42d9ef131e8d561039"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv",
+      "bytes": 3704,
+      "sha256": "d3151014efc30b041bac53631b5a46eac9e873cc7ea18a4630b20318aef4cf89"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv",
+      "bytes": 1101,
+      "sha256": "6bd3f9120f642426e23a87596d25ba8b619ad61feb4b0c778698c5153bddfcc0"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv",
+      "bytes": 1217,
+      "sha256": "49b004c3fe7716e9ad3defc21b7d9652fcc00fd32cbe3c984a6a9efd0c9f3f33"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/validation_manifest.json",
+      "bytes": 1580,
+      "sha256": "f38efcd0bcbbddc3fad9dfb980848a1629f7c1a35ac2f94e42719ec864786167"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/validation_report.md",
+      "bytes": 5176,
+      "sha256": "741130f7f355d6b01f809ed5731aef91f896dc33c5d1f2b9135737d32d583c78"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/README.md",
+      "bytes": 811,
+      "sha256": "0f010f794f23756da95673b9453054aec5715c96ca104689e82d4e076074c803"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/manifest.json",
+      "bytes": 1473,
+      "sha256": "0df243b99d3da6d137f8f33cd5c14f577f1347c3a5a41612fc3a1f60cdf8daf1"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/mixture_coefficients.csv",
+      "bytes": 3208,
+      "sha256": "c9a39da8e607e1f0351cbad2f1390f1ed892eb3d91afec321a533e7487a41060"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/mixture_transfer.csv",
+      "bytes": 126,
+      "sha256": "c2399263a07979926147b2187faa5aee77f40835670aa28877203628a8eb1ae3"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/mixture_validation.csv",
+      "bytes": 5827,
+      "sha256": "02ee17a08394943b09cdc2946827e4f3210a3dd3fabc5df28fca1797bed18069"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/model_parameters.json",
+      "bytes": 6716,
+      "sha256": "46c94c6343e7bc023cf7347467d50c4e834fa50828e1e6a18c6a3b556dde7000"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv",
+      "bytes": 1254,
+      "sha256": "15983c0e0c4b9f93a9bcac36898a4858ce1c232244aa9c3c600fdc9209088d54"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv",
+      "bytes": 6935,
+      "sha256": "0335ff1f9cceaef8d61c2c074abc0762f925a3e7ca67a2c2d0a9f48f847ea52d"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_external.csv",
+      "bytes": 283,
+      "sha256": "61a464fcf05c774bf6334f54bded09bc07b3bdcd1d571475ebe67fee9f10e613"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_oof_predictions.csv",
+      "bytes": 131613,
+      "sha256": "9a7bb787bab0ae61d11ddcd3a956fdbbb47b630ee814b2177ba4ac7f04e5c190"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_oof_summary.csv",
+      "bytes": 173,
+      "sha256": "90a197dbeac354e22351f7a2a8ca772224067c94e07a5b78b7d9c5f1557ab88c"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv",
+      "bytes": 1041,
+      "sha256": "e41905251cf9eacf3fb81cc31b0a8cdf9e6c461dc4c157265869808dae16721d"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_validation.csv",
+      "bytes": 1657,
+      "sha256": "79e9784561c524c9e373d95c4c267e163b8a601c81e87b9f586751a8011e91f6"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv",
+      "bytes": 1573072,
+      "sha256": "28506e67f58d5dc631dc32e96210f6a6a24f8ac79917d0b3f179cb0ee0c8a397"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scenario_summary.csv",
+      "bytes": 992,
+      "sha256": "164e2a106edb41ff237bb15ac80acf987ff24b065cc0c605e18581ff3bac85d9"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/verification.json",
+      "bytes": 490,
+      "sha256": "c11486b1af6991b7b619a1853494b811ce857d05bd5dc10fd802051e7171c439"
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/README.md",
+      "bytes": 1112,
+      "sha256": "901a3a944d7303a3d07ae07db397c59f79a7a9fdebd2d6ada4115222b808634f"
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/linkage_manifest.json",
+      "bytes": 710,
+      "sha256": "62eb3d35e2bc59f485e5a6346ac07d91777958b88bed95622a93ae135b628c1e"
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv",
+      "bytes": 4052,
+      "sha256": "1ff0de71501df8b4a7616e7242a5a4644a43eef7ac4b011946521012804f4f80"
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv",
+      "bytes": 525890,
+      "sha256": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09"
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv",
+      "bytes": 496,
+      "sha256": "72a864fc997e227d61a56fc6eafa7c2ecc475e7882939197f9768f339ec4e589"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/A_recipe_fold_assignments.csv",
+      "bytes": 34492,
+      "sha256": "84138df103ebc9231f5bdb4d7516f46487ecc8e6922bc10c6e4540f5942703b4"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/B2_residual_diagnostics.csv",
+      "bytes": 2230,
+      "sha256": "ed04326b08091c41667fd336e239807ad16e815e6e5fcb3526e530d44374d751"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/README.md",
+      "bytes": 784,
+      "sha256": "a1a5cf84d6cd7b1729bdd6a670109a8934f4fabaa3f4b8e63796a151cb5d2654"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv",
+      "bytes": 14958,
+      "sha256": "6c6714bbb723dbdca650cea878b459999d0ab2246f52967f8b46afe73d474990"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/decisions.csv",
+      "bytes": 918,
+      "sha256": "91ba80af745eaf1ecfca42dcf1b50dabb8ff8ca15a32bfc497d48be424860893"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv",
+      "bytes": 3215,
+      "sha256": "0329cb2331f5e7ce58b9ba2d1b257335c171faf906668c28eab3a243385fff57"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv",
+      "bytes": 77973,
+      "sha256": "6ab007cd8c542b78917df3e86a001f592f0010a04b67640541a541b37ef7a176"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/manifest.json",
+      "bytes": 1532,
+      "sha256": "05b9cc3512d6671d943584f061bc380a8792caf3ba9c1a71eb10f42df19dedd3"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/model_selection.csv",
+      "bytes": 1454,
+      "sha256": "8a2db449fe18123942a3a813304319ad3d04eba3eb704b90a120887265e99107"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv",
+      "bytes": 25740,
+      "sha256": "423b7aa743db4efcf132964342249d45d3f751a8b2d20d2dfa1f59a6c056d0d1"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv",
+      "bytes": 1416103,
+      "sha256": "1f1569206555bddaa1bf1d744112aee95f28f3e6c5fd54d590e3143d0c0bba68"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv",
+      "bytes": 7095,
+      "sha256": "e3af117fa7aeb2bfe54ba77e29db615b7f4db3b34a52efe4fdcfa2a0adf75b22"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/report.md",
+      "bytes": 9149,
+      "sha256": "7fbc637b25f2384c73b7332f53382c8dcbca2c6542cd543822bb943d62a680ad"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv",
+      "bytes": 375137,
+      "sha256": "c56a455dec659c1c09d63095e7229855d4abc715679c9ada9582b16e992b3f70"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv",
+      "bytes": 3164,
+      "sha256": "01d1483abc76fa5d49b999d67e95fe2968bc8e1fb94b31fcec657d7f0a1114f6"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv",
+      "bytes": 840775,
+      "sha256": "4768419666e4675d7dac8003b4d87f04630f5c120b593fde8c2d9575179906fb"
+    },
+    {
+      "path": "governance/ai-use-log.csv",
+      "bytes": 5870,
+      "sha256": "991ee3cbe26d43449c5813aa2a78c9f033ba09f2c35ce7763070ab7d3e8ad000"
+    },
+    {
+      "path": "paper/claim-ledger.csv",
+      "bytes": 6742,
+      "sha256": "d1e8fda7465aa0133657d7300cc9e7398f95d1d53f4a5607caf405e9ced3b8e4"
+    },
+    {
+      "path": "requirements-q2-research.txt",
+      "bytes": 94,
+      "sha256": "88611a3396e64a62a543022b3d3453d389340bdcf983cf04685ddc5f895b1917"
+    },
+    {
+      "path": "scripts/q2_calibration_sensitivity.py",
+      "bytes": 7859,
+      "sha256": "7cf11b027e66dfa1f012183583223cc015a2f7b3d22a7627ca79028dea648888"
+    },
+    {
+      "path": "scripts/q2_combined_scenario_prototype.py",
+      "bytes": 8613,
+      "sha256": "08c11a75c4c77d2dd90a363093dbadc2fb2a923fb82a61ae43ab2985261565e3"
+    },
+    {
+      "path": "scripts/q2_finalize_model.py",
+      "bytes": 18019,
+      "sha256": "e7358e3b1dbe05c821048a9ecda294199804a9714558ede83edbdca8bed4c7b0"
+    },
+    {
+      "path": "scripts/q2_local_model_validation.py",
+      "bytes": 13105,
+      "sha256": "a954fc6b78c6112ed401fc06c2492a6eb61c83fa2123cda3fbec93fc4d560de1"
+    },
+    {
+      "path": "scripts/q2_quality_scaling_link.py",
+      "bytes": 4822,
+      "sha256": "5d49c27e8dea3125dcc10544697bb64c6dac862d41b352e2dccb2448dc5a8c54"
+    },
+    {
+      "path": "scripts/q2_reproduce_research.py",
+      "bytes": 1591,
+      "sha256": "48ef214aa0941dbd3a1e042da51cf01a6372a5069f0efc7376a874aa1e28f367"
+    },
+    {
+      "path": "scripts/q2_research_paths.py",
+      "bytes": 695,
+      "sha256": "d7f2df45cf5a4dbb9ff9f1118a9fe872fc9869bd17661e51da18ec4ef28857ce"
+    },
+    {
+      "path": "scripts/q2_transfer_improvement.py",
+      "bytes": 17810,
+      "sha256": "3c899f5602944e880cf11ad4a5d208c786a07c2e3af5a95f02c94a16a7ace8d7"
+    },
+    {
+      "path": "scripts/q2_verify_delivery.py",
+      "bytes": 1868,
+      "sha256": "d62eff8525e61dcb276e065d0be39f6e0181abd72369bedd827621e0b0d981ba"
+    },
+    {
+      "path": "scripts/q2_verify_reproduction.py",
+      "bytes": 3088,
+      "sha256": "e8bc3e6fc84296718cfe902a118ad88822bcb63e3e8b515ac6a83d4d4af87c41"
+    }
+  ]
+}

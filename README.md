@@ -54,3 +54,7 @@ deliverables/          封卷和提交材料
 ## WP-B 模型交付候选
 
 [CRITIC–TOPSIS 报告、表图与复现入口](README-delivery.md)；[工作包交接](docs/tasks/WP-B-delivery.yml)。当前 PARTIAL / REVIEW_BLOCKED，尚未通过团队验收。
+
+## 问题二研究归档
+
+[条件模型与迁移探索研究包](docs/research/q2/README.md)：研究过程、结果证据、数据字典与复现入口；待独立评审，完整联合模型尚未验证。

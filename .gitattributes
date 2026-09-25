@@ -160,3 +160,44 @@
 /src/models/q1_scoring.py -text
 /submission_manifest.json -text
 /tests/test_q1_scoring.py -text
+
+# Preserve historical Q2 research numeric CSV bytes for provenance hashes.
+/experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-calibration-sensitivity-20260925/B_source_offset_audit.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-calibration-sensitivity-20260925/Q_axis_sensitivity.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-combined-scenario-20260925/q1_support_effects_for_combination.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/mixture_coefficients.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/mixture_transfer.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/mixture_validation.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/scale_external.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/scale_oof_predictions.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/scale_oof_summary.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/scale_validation.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-model-finalization-20260925/scenario_summary.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/A_recipe_fold_assignments.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/B2_residual_diagnostics.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/decisions.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/model_selection.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv -text whitespace=cr-at-eol
+/experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv -text whitespace=cr-at-eol

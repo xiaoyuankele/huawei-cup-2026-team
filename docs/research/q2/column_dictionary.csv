@@ -1,0 +1,376 @@
+path,column,dtype,missing,meaning
+experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv,target,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv,raw_mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv,median_offset,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv,offset_adjusted_mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv,raw_mean_signed_error,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/B_source_offset_audit.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/B_source_offset_audit.csv,calibration_mode,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/B_source_offset_audit.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/B_source_offset_audit.csv,offset_added,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/B_source_offset_audit.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-calibration-sensitivity-20260925/B_source_offset_audit.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-calibration-sensitivity-20260925/B_source_offset_audit.csv,mean_signed_error,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/Q_axis_sensitivity.csv,scenario_variant,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/Q_axis_sensitivity.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/Q_axis_sensitivity.csv,min_difference,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/Q_axis_sensitivity.csv,median_difference,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/Q_axis_sensitivity.csv,max_difference,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-calibration-sensitivity-20260925/Q_axis_sensitivity.csv,mean_absolute_difference,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,source_row_dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,source_row_index,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,quality_axis,object,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,N_params_B,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,D_tokens_B,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,Q_A,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,Q_B_assumed,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,p_effect_centered,float64,0,normalized mixture fraction
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,Q_effect_centered,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,scenario_variant,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,predicted_loss,float64,0,model prediction; never an observed training target
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,observed_joint_row,bool,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv,interpretation,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/q1_support_effects_for_combination.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/q1_support_effects_for_combination.csv,index,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/q1_support_effects_for_combination.csv,Q_A,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-combined-scenario-20260925/q1_support_effects_for_combination.csv,delta_p_mean_loss,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/q1_support_effects_for_combination.csv,quality_axis,object,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-combined-scenario-20260925/q1_support_effects_for_combination.csv,Q_B_assumed,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-combined-scenario-20260925/q1_support_effects_for_combination.csv,delta_Q_mean_loss,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv,quality_axis,object,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv,scenario_variant,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv,predicted_loss_min,float64,0,model prediction; never an observed training target
+experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv,predicted_loss_median,float64,0,model prediction; never an observed training target
+experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv,predicted_loss_max,float64,0,model prediction; never an observed training target
+experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv,predicted_loss_mean,float64,0,model prediction; never an observed training target
+experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv,n_scenarios,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv,model_type,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv,mean_signed_error,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv,mean_absolute_percentage,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv,target,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv,validation_role,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv,validation_role,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv,model_type,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv,mean_signed_error,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv,mean_absolute_percentage,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv,model_type,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv,mean_signed_error,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv,mean_absolute_percentage,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv,train_source,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv,test_source,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv,model_type,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv,mean_signed_error,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv,mean_absolute_percentage,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv,model_type,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv,mean_signed_error,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv,mean_absolute_percentage,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv,held_out_N_params_B,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_coefficients.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_coefficients.csv,domain,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_coefficients.csv,coefficient_full,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_coefficients.csv,p_on_Q_loading,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/mixture_coefficients.csv,quality_domain,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-model-finalization-20260925/mixture_transfer.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_transfer.csv,matched_rows,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_transfer.csv,spearman_A6_A8,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_validation.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_validation.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_validation.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_validation.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_validation.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/mixture_validation.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/mixture_validation.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/mixture_validation.csv,centered_rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/mixture_validation.csv,spearman,float64,8,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv,protocol,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv,protocol,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv,fold,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_external.csv,source,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_external.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_external.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/scale_external.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/scale_external.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_oof_predictions.csv,fold,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_oof_predictions.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_oof_predictions.csv,source_row,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_oof_predictions.csv,actual,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_oof_predictions.csv,predicted,float64,0,model prediction; never an observed training target
+experiments/runs/q2-model-finalization-20260925/scale_oof_summary.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_oof_summary.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_oof_summary.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/scale_oof_summary.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/scale_oof_summary.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv,fold,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv,E,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv,A,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv,B,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv,alpha,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv,beta,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_validation.csv,fold,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_validation.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_validation.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scale_validation.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/scale_validation.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-model-finalization-20260925/scale_validation.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,A_recipe_index,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_arxiv,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_freelaw,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_nih_exporter,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_pubmed_central,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_wikipedia_en,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_dm_mathematics,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_github,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_philpapers,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_stackexchange,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_enron_emails,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_gutenberg_pg_19,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_pile_cc,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_ubuntu_irc,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_europarl,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_hackernews,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_pubmed_abstracts,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,p_uspto_backgrounds,float64,0,normalized mixture fraction
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,N_params_B,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,D_tokens_B,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,quality_axis,object,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,Q_A,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,Q_B_assumed,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,quality_map_clipped,bool,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,scale_loss,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,delta_Q,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,delta_p_remaining,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,lambda_Q_assumed,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,lambda_p_assumed,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,predicted_loss_scenario,float64,0,model prediction; never an observed training target
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,observed_joint_row,bool,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,status,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,N_params_B_outside_B1_range,bool,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,D_tokens_B_outside_B1_range,bool,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv,variant,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_summary.csv,quality_axis,object,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-model-finalization-20260925/scenario_summary.csv,variant,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_summary.csv,size,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_summary.csv,min,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_summary.csv,mean,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-model-finalization-20260925/scenario_summary.csv,max,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv,mixture_domain,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv,mapping_type_A16,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv,candidate_quality_domains,object,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv,candidate_weights,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv,q_soft_0_1,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv,q_semantic_range_low_0_1,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv,q_semantic_range_high_0_1,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv,q_semantic_range_width,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv,mapping_confidence,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv,q_topsis_domain_0_1,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv,q_topsis_source,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,role,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,scale,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,loss_observed,bool,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,index,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,Q_A_topsis_0_1,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,quality_score_soft_proxy_0_1,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,quality_score_soft_low_0_1,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,quality_score_soft_high_0_1,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,quality_score_soft_range_width,float64,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,mapped_share_direct_near_direct,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,quality_provenance,object,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,Q_A_source,object,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,Q_A_soft_source,object,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,loss_mean_13_domains,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_arxiv,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_freelaw,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_nih_exporter,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_pubmed_central,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_wikipedia_en,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_dm_mathematics,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_github,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_philpapers,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_stackexchange,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_enron_emails,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_gutenberg_pg_19,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_pile_cc,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_ubuntu_irc,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_europarl,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_hackernews,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_pubmed_abstracts,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv,p_uspto_backgrounds,float64,0,normalized mixture fraction
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,rows,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,n_ND_groups,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,groups_with_ge3_Q,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,median_within_ND_spearman,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,share_negative_within_ND,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,share_positive_within_ND,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,q_min,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,q_max,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,loss_min,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,loss_max,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv,data_type_values,object,2,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/A_recipe_fold_assignments.csv,dataset,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/A_recipe_fold_assignments.csv,source_id,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/A_recipe_fold_assignments.csv,group,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/A_recipe_fold_assignments.csv,fold,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/B2_residual_diagnostics.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/B2_residual_diagnostics.csv,trajectory,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/B2_residual_diagnostics.csv,residual_logD_spearman,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/B2_residual_diagnostics.csv,residual_mean,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv,task,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv,branch,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv,fold,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv,actual_model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv,intercept,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv,slope,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv,n_calibration,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv,n_calibration_groups,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv,n_test,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/decisions.csv,task,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/decisions.csv,branch,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/decisions.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/decisions.csv,mae_reduction_vs_raw,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/decisions.csv,improved_folds,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/decisions.csv,practical_calibration_pass,bool,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/decisions.csv,beats_mean_or_quality_only,bool,0,quality proxy or assumed quality; see data.md
+experiments/runs/q2-transfer-improvement-20260925/decisions.csv,mae_reduction_vs_mean_or_quality_only,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/decisions.csv,interpretation,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv,task,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv,branch,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv,intercept,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv,slope,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv,n_target_labels,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv,interpretation,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv,branch_supported_beyond_simple_baseline,bool,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv,v1_updated,bool,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,task,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,branch,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,outer_fold,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,inner_fold,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,signed_error,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv,spearman,float64,85,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/model_selection.csv,task,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/model_selection.csv,branch,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/model_selection.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/model_selection.csv,fold,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/model_selection.csv,selected,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv,task,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv,branch,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv,fold,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv,signed_error,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv,spearman,float64,21,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,task,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,branch,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,fold,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,actual_model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,source_id,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,group,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,actual,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,predicted,float64,0,model prediction; never an observed training target
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,x_frozen,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,q_frozen,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,coordinate_1,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv,coordinate_2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,task,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,branch,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,signed_error,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,spearman,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,macro_fold_mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,macro_fold_rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv,worst_fold_mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,task,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,branch,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,fold,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,n_calibration_groups,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,n_calibration_rows,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,repetition,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,calibration_groups,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,intercept,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,slope,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,n,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,mae,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,rmse,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,r2,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,signed_error,float64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv,spearman,float64,329,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv,task,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv,branch,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv,n_calibration_groups,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv,model,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv,evaluations,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv,mae_mean,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv,mae_median,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv,mae_min,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv,mae_max,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv,rmse_mean,float64,0,error metric; see protocol/axis/model columns
+experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv,task,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv,branch,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv,axis,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv,outer_fold,int64,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv,source_id,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv,group,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv,role,object,0,source/stage-specific field; defined by producing script and run report
+experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv,inner_fold,int64,0,source/stage-specific field; defined by producing script and run report

@@ -1,0 +1,4 @@
+﻿dataset,rows,n_ND_groups,groups_with_ge3_Q,median_within_ND_spearman,share_negative_within_ND,share_positive_within_ND,q_min,q_max,loss_min,loss_max,data_type_values
+supplementary_NQ_experiment.csv,360,45,45,-0.9285714285714286,1.0,0.0,0.1,1.0,2.0161,3.7216,n/a
+supplementary_NQ_experiment_expanded.csv,450,45,45,-0.9515151515151515,1.0,0.0,0.1,1.0,2.0161,3.7216,n/a
+supplementary_NQ_experiment_large.csv,1704,150,150,0.9929823694376381,0.0,1.0,0.05,1.0,0.5,3.3659,calibrated|extrapolated

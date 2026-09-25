@@ -1,0 +1,54 @@
+{
+  "run_id": "q2-combined-scenario-20260925",
+  "status": "SCENARIO_ONLY / REVIEW_REQUIRED",
+  "scale_model": {
+    "fit_source": "B1",
+    "intercept": 3.3009533621027876,
+    "coef_log_N": -0.13585918171302988,
+    "coef_log_D": -0.178551157163069
+  },
+  "quality_model": {
+    "fit_source": "B7 residual relative to B1 scale baseline",
+    "q_reference": 0.55,
+    "q_slope": -0.36199528619528626,
+    "B_Q_range": [
+      0.1,
+      1.0
+    ]
+  },
+  "mixture_model": {
+    "fit_source": "A4/A5",
+    "reference_mean_loss": 5.344656776171178,
+    "p_columns": [
+      "p_arxiv",
+      "p_freelaw",
+      "p_nih_exporter",
+      "p_pubmed_central",
+      "p_wikipedia_en",
+      "p_dm_mathematics",
+      "p_github",
+      "p_philpapers",
+      "p_stackexchange",
+      "p_enron_emails",
+      "p_gutenberg_pg_19",
+      "p_pile_cc",
+      "p_ubuntu_irc",
+      "p_europarl",
+      "p_hackernews",
+      "p_pubmed_abstracts",
+      "p_uspto_backgrounds"
+    ],
+    "effect_is_centered": true
+  },
+  "quality_maps": [
+    "affine min-max from observed Q1 axis to B7 Q range",
+    "not empirically identified because no paired A/B quality observations exist"
+  ],
+  "scenario_variants": [
+    "scale_only",
+    "scale_plus_Q",
+    "scale_plus_p",
+    "scale_plus_Q_plus_p"
+  ],
+  "warning": "The combined table is not an observed joint sample. The additive Q+p variant is a sensitivity scenario and may double count quality information because Q_A is derived from p."
+}
