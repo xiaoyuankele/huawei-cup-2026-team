@@ -1,19 +1,18 @@
-%% 可直接由仓库 paper/main.tex 通过 \input{sections/q1_quality_evaluation.tex} 引入。
+%% 可直接由仓库 paper/main.tex 通过 \input{sections/q1-quality-evaluation.tex} 引入。
 %% 依照 paper/template/gmcmthesis.cls 的章节、公式、图形和 booktabs 表格规范编写。
 \section{问题一：数据质量评价与基础评分}
-\subsubsection{第一小问：数据质量评价}
 
-\paragraph{问题分析与总体框架}
+\subsection{问题分析与总体框架}
 本小问的目标是将抽样集与扩展集中的多源文本质量信号统一到同一评价尺度，形成可解释、可追溯的质量分数。评价对象包括抽样集 $A_1$、扩展集 $A_2$ 和扩展集 $A_3$ 的全部记录：$A_1$ 包含 $51{,}230$ 条记录，$A_2$ 包含 $17{,}523$ 条记录，$A_3$ 包含 $203{,}752$ 条记录。合并后先按记录指纹去重，得到 $261{,}086$ 条有效记录，去重前后删除 $11{,}419$ 条重复记录。模型流程为“全量合并与去重—指标方向统一—稳健归一化—CRITIC 客观赋权—加权距离 TOPSIS 评分—样本、领域和语料级聚合—抽样集对照”。
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{figures/q1-critic-topsis/nature-v1/figure01_domain_distribution_nature.pdf}
-  \caption{全量去重语料的领域构成及抽样集对照。柱形表示各领域记录数，折线表示领域在全量语料中的占比；阴影区域标示扩展集带来的组成变化。}
+  \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure01_domain_distribution_nature.pdf}
+  \caption{各领域样本质量评分分布。轮廓表示按域峰值归一化的密度，箱体表示第 25--75 百分位数，竖线为中位数，菱形为均值，空心圆为箱须界限外观测；密度高度不表示样本量。}
   \label{fig:q1-nature-01}
 \end{figure}
 
-\paragraph{数据对象与预处理}
+\subsection{数据对象与预处理}
 设第 $i$ 条记录的原始质量指标向量为 $\boldsymbol{x}_i=(x_{i1},\ldots,x_{i16})$。16 个指标覆盖语言形式、可读性、内容质量、教育性、事实性、知识覆盖与重复性等维度，其中句末标点率、cleanliness、no-ad、readability、fluency、unique words、QuRating education、writing、FineWeb education、factual、Books、Math 和 Wikipedia 为正向指标；无字母词比例、最高频二元词组占比和最高频三元词组占比为负向指标。负向指标较大时通常意味着文本更可能由符号、模板或高频短语主导，因此需要反向处理。
 
 记方向统一后的指标为
@@ -36,12 +35,12 @@
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{figures/q1-critic-topsis/nature-v1/figure02_indicator_heatmap_nature.pdf}
-  \caption{16 个质量指标的方向统一、归一化分布及指标间相关性。颜色表示归一化后的指标水平；右侧标注负向指标在方向统一后的含义。}
+  \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure02_indicator_heatmap_nature.pdf}
+  \caption{各领域的质量指标画像。单元格为全量去重样本在相应领域、指标上的归一化均值，全图共用 0--1 色标；三项负向指标已逆向。}
   \label{fig:q1-nature-02}
 \end{figure}
 
-\paragraph{CRITIC 客观赋权}
+\subsection{CRITIC 客观赋权}
 为避免人为指定权重，采用 CRITIC 方法同时利用指标的离散程度和冲突程度。设归一化矩阵为 $Z=(z_{ij})$，第 $j$ 个指标的标准差为 $\sigma_j$，与第 $k$ 个指标的 Pearson 相关系数为 $r_{jk}$，则信息量为
 \begin{equation}
  I_j=\sigma_j\sum_{k=1}^{16}(1-r_{jk}),\qquad
@@ -53,12 +52,12 @@
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{figures/q1-critic-topsis/nature-v1/figure05_critic_weights_nature.pdf}
+  \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure05_critic_weights_nature.pdf}
   \caption{CRITIC 方法得到的 16 个质量指标权重。权重由 $A_1$ 拟合集估计，并固定用于全部样本。}
   \label{fig:q1-nature-05}
 \end{figure}
 
-\paragraph{加权距离 TOPSIS 评分}
+\subsection{加权距离 TOPSIS 评分}
 以全正向理想点 $\boldsymbol{z}^{+}=\boldsymbol{1}$ 和全负向理想点 $\boldsymbol{z}^{-}=\boldsymbol{0}$ 为参照，计算第 $i$ 条记录到两类理想点的加权欧氏距离：
 \begin{equation}
  D_i^{+}=\sqrt{\sum_{j=1}^{16}w_j(1-z_{ij})^2},\qquad
@@ -74,12 +73,12 @@
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{figures/q1-critic-topsis/nature-v1/figure03_A1_full_comparison_nature.pdf}
-  \caption{$A_1$ 抽样集与全量去重语料的质量评分分布及分位点对照。箱线图表示中位数和四分位距，散点表示领域均值。}
+  \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure03_A1_full_comparison_nature.pdf}
+  \caption{$A_1$ 与全量去重语料的领域均分对照。左图中空心圆为 $A_1$，实心菱形为全量均分，并标注样本量变化；右图为全量减 $A_1$ 的均分差值。}
   \label{fig:q1-nature-03}
 \end{figure}
 
-\paragraph{从样本级到领域级和语料级的聚合}
+\subsection{从样本级到领域级和语料级的聚合}
 对领域 $g$ 的记录集合 $\mathcal{I}_g$，采用样本数加权的均值聚合：
 \begin{equation}
  Q_g=\frac{1}{|\mathcal{I}_g|}\sum_{i\in\mathcal{I}_g}Q_i.
@@ -89,12 +88,12 @@
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{figures/q1-critic-topsis/nature-v1/figure04_composition_decomposition_nature.pdf}
-  \caption{$A_1$ 到全量语料的质量变化分解。总变化分为域内质量变化与领域组成变化两部分。}
+  \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure04_composition_decomposition_nature.pdf}
+  \caption{领域构成变化与总体均分分解。左图为 $A_1$ 与全量语料的领域占比；右图按先替换领域均分、再替换领域占比的顺序，将总变化分为域内变化与构成变化。}
   \label{fig:q1-nature-04}
 \end{figure}
 
-\paragraph{全量结果与抽样集对照}
+\subsection{全量结果与抽样集对照}
 $A_1$ 语料级平均分为 $60.9471$，全量去重语料平均分为 $54.2323$，整体下降 $6.7149$ 分。按领域对照时，arxiv 从 $63.8624$ 变为 $63.5050$，下降 $0.3574$ 分；github 从 $51.7014$ 变为 $51.6893$，下降 $0.0121$ 分；book、c4、commoncrawl、stackexchange 和 wikipedia 的领域均值保持不变或仅发生四舍五入范围内的变化。由此可见，全量平均分下降主要来自领域组成变化，而不是各领域内部质量普遍恶化。GitHub 在 $A_1$ 中约占 $19.52\%$，在全量去重语料中约占 $78.04\%$，其较低的领域均值显著拉低了全量语料级分数。
 
 \begin{table}[htbp]
@@ -108,27 +107,27 @@ $A_1$ 语料级平均分为 $60.9471$，全量去重语料平均分为 $54.2323$
     领域 & $A_1$ 均值 & 全量均值 & 变化 & 全量占比 \\
     \midrule
     arxiv & 63.8624 & 63.5050 & -0.3574 & 6.71\% \\
-    book & 56.0325 & 56.0325 & 0.0000 & 3.55\% \\
-    c4 & 66.0021 & 66.0021 & 0.0000 & 1.02\% \\
-    commoncrawl & 64.3357 & 64.3357 & 0.0000 & 0.92\% \\
+    book & 56.0325 & 56.0325 & 0.0000 & 0.07\% \\
+    c4 & 66.0021 & 66.0021 & 0.0000 & 3.83\% \\
+    commoncrawl & 64.3357 & 64.3357 & 0.0000 & 3.69\% \\
     github & 51.7014 & 51.6893 & -0.0121 & 78.04\% \\
-    stackexchange & 61.3879 & 61.3879 & 0.0000 & 5.34\% \\
-    wikipedia & 61.1009 & 61.1009 & 0.0000 & 4.42\% \\
+    stackexchange & 61.3879 & 61.3879 & 0.0000 & 3.83\% \\
+    wikipedia & 61.1009 & 61.1009 & 0.0000 & 3.83\% \\
     \midrule
     语料级均值 & 60.9471 & 54.2323 & -6.7149 & 100.00\% \\
     \bottomrule
   \end{tabular}
 \end{table}
 
-\paragraph{稳健性与适用边界}
+\subsection{稳健性与适用边界}
 将 CRITIC--TOPSIS 结果与等权加权、删除 DSIR 以及删除三个负向词组指标的敏感性方案比较。CRITIC 加权和等权结果的 Spearman 相关系数为 $0.9877$，CRITIC 结果与删除 DSIR 的结果相关系数为 $0.9860$，与删除三个负向指标的结果相关系数为 $0.9674$。在删除负向指标的方案中，平均名次变化为 $4.79$ 个百分点，约 $2.78\%$ 的记录名次变化超过 $20$ 个百分点，说明重复性指标虽不是唯一质量依据，但对尾部样本的排序具有实质影响。这里的敏感性分析用于检查第一小问质量评分对建模选择的稳定性；它不等同于问题一后续小问中对指标冲突的独立量化。
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=\linewidth]{figures/q1-critic-topsis/nature-v1/figure06_model_sensitivity_nature.pdf}
-  \caption{不同权重和指标删减方案下的模型敏感性。左侧展示样本分数的秩相关，右侧展示名次变化及受影响样本比例。}
+  \includegraphics[width=\linewidth,height=0.42\textheight,keepaspectratio]{figures/q1-critic-topsis/nature-v1/figure06_model_sensitivity_nature.pdf}
+  \caption{不同评价方案的排序敏感性。三个面板依次展示与主模型的 Spearman 相关系数、平均绝对百分位排名变化，以及排名变化至少 20 个百分点的样本比例。}
   \label{fig:q1-nature-06}
 \end{figure}
 
-\paragraph{小结}
+\subsection{小结}
 本小问形成了一个可复算的全量质量评价链条：以 $A_1$ 的稳健边界和 CRITIC 权重建立统一标尺，以加权距离 TOPSIS 输出样本级质量分数，再按记录均值聚合为领域级和语料级分数。结果表明，$A_1$ 与扩展后的全量语料在领域内部质量上总体稳定，语料级平均分的主要变化由领域配比改变所致。该结论为后续质量冲突识别和数据配比优化提供可追溯的基线。

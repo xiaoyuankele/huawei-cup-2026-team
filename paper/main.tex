@@ -6,15 +6,20 @@
 \hypersetup{hidelinks}
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage{subfig}
+\usepackage{placeins}
+\AddToHook{env/thebibliography/before}{\FloatBarrier}
 \usepackage{siunitx}
 \usepackage{colortbl}
 \usepackage[noend]{algpseudocode}
 \usepackage{algorithmicx,algorithm}
 \usepackage{amsmath,amssymb,booktabs,graphicx}
-\graphicspath{{./}{figures/q1-conflict-resolution/}{figures/q1-critic-topsis/nature-v1/}{template/figures/}}
+\graphicspath{{./}{figures/q1-mixture-scale/}{figures/q1-conflict-resolution/}{figures/q1-critic-topsis/nature-v1/}{template/figures/}}
 \input{commands.tex}
+\numberwithin{equation}{section}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
 
-\title{数据质量评价、冲突消解与综合评价模型}
+\title{数据质量评价、冲突消解与训练配比规模修正}
 \baominghao{待填写正式队伍编号}
 \schoolname{学校名称填写}
 \membera{成员 A}
@@ -29,13 +34,18 @@
 
 \maketitle
 \begin{abstract}
-本文针对多源文本数据质量评价与质量信号冲突问题，先对 A1、A2、A3 数据进行合并去重、方向统一、稳健归一化和 CRITIC--TOPSIS 综合评分，再将质量指标归并为内容价值、表达质量、整洁度、无广告程度和非重复程度五个维度。第一部分给出样本级、领域级和语料级质量评价及敏感性分析；第二部分定义相对阈值下的候选冲突，区分测量分歧、属性权衡和适用性疑点，并构造有限补偿综合评价模型。所有正文图形沿用仓库中已生成并登记的 PDF 资产。
-\\
-\keywords{数据质量评价\quad CRITIC--TOPSIS\quad 冲突消解\quad 有限补偿\quad 敏感性分析}
+本文针对多源文本数据质量评价与质量信号冲突问题，先对 A1、A2、A3 数据进行合并去重、方向统一、稳健归一化和 CRITIC--TOPSIS 综合评分，再将质量指标归并为内容价值、表达质量、整洁度、无广告程度和非重复程度五个维度。第一部分给出样本级、领域级和语料级质量评价及敏感性分析；第二部分定义相对阈值下的候选冲突，区分测量分歧、属性权衡和适用性疑点，并构造有限补偿综合评价模型；第三部分分析训练域配比与 13 个验证目标 Loss 的关系，通过同配方差分校准跨规模偏差，并检验逐目标误差与外推边界。
+\par
+\keywords{数据质量评价\quad CRITIC--TOPSIS\quad 冲突消解\quad 有限补偿\quad 配比效应\quad 规模修正}
 \end{abstract}
 \pagestyle{plain}
 
 \input{sections/q1-quality-evaluation.tex}
+\FloatBarrier
 \input{sections/q1-conflict-resolution.tex}
+\FloatBarrier
+\input{sections/q1-mixture-scale.tex}
+\FloatBarrier
+\input{sections/references.tex}
 
 \end{document}

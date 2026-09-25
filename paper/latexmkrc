@@ -1,0 +1,2 @@
+# Overleaf: compile the GMCM template with XeLaTeX.
+$pdf_mode = 5;

@@ -1,0 +1,99 @@
+% 问题一第三小问；依 main.tex 的 GMCMthesis 模板编译。
+% 数据与图形源自 q1_s03_seven_figures；A12--A15 为给定估算 Loss。
+\section{问题一：配比效应与规模修正}
+\label{sec:q13}
+
+第二小问通过冲突识别与有限补偿评分，给出了文本质量信号的审慎汇总方式；但评分的改变能否转化为语言模型收益，仍须由训练配方和验证 Loss 检验。为此，本小问以 17 个训练领域的配比向量 $\boldsymbol p_r$ 解释 13 个验证目标的 Loss，先估计同尺度的配比替代关系，再针对跨规模预测中的系统偏差进行修正。第二小问的候选质量分在此只作为可选代理参与增量对照，不预设其具有独立于配比的预测作用。
+
+\subsection{配方结构与同尺度效应}
+
+各配方满足非负及总和为 1 的约束。图~\ref{fig:q13-structure} 展示六组数据表的平均领域配比及三种不同实测配方设计的分布范围。A4/A5 含 512 个拟合配方，A6/A7 与 A8/A9 各含 256 个配方且二者配比相同；A10/A11 含 64 个配方，A12/A13 与 A14/A15 各含相同的 63 个配方。重复配方用于识别规模变化，不能增加独立的配方设计数。A10 在部分领域的配比范围与 A4 不同，因此后续领域替代效应只在非负且处于 A4 逐列边际范围内的配方上计算。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.65\textheight,keepaspectratio]{Fig01_recipe_structure.pdf}
+  \caption{17 个训练领域的平均配比及配方分布范围。右图线段为 P5--P95 分位区间，并非均值置信区间；10B、70B 表中的 Loss 为给定估算值。}
+  \label{fig:q13-structure}
+\end{figure}
+
+考虑到配比的闭合约束，模型对配比作等距对数比（ilr）变换，并以多响应 Ridge 回归刻画 13 个目标的 Loss。线性模型提供可解释基线，二阶模型容纳配比之间的非线性关系。为解释替代而非单独改变某一领域，固定从领域 $j$ 向领域 $i$ 转移一个百分点的配比，对合法配方计算模型预测差：
+
+\begin{equation}
+\Delta_{i\leftarrow j,k}(\boldsymbol p)=\hat L_k(\boldsymbol p+0.01\boldsymbol e_i-0.01\boldsymbol e_j)-\hat L_k(\boldsymbol p).\label{eq:q13-transfer}
+\end{equation}
+
+式中 $k$ 为验证目标，$\boldsymbol e_i$ 为第 $i$ 个单位向量；$\Delta<0$ 表示该目标的预测 Loss 降低。图~\ref{fig:q13-transfer} 对每个有向替代关系先在合法配方上求均值，再对 13 个目标等权平均。二阶模型的效应图较线性模型更具方向依赖性，提示配比组合会改变局部替代关系；但不同目标的正负效应可能在平均时抵消，图中颜色不能直接解释为因果效应或最优配方。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.58\textheight,keepaspectratio]{Fig02_domain_transfer.pdf}
+  \caption{A6/A7 上线性与二阶 ilr-Ridge 的领域间有限替代效应。行表示增加配比的领域，列表示减少配比的领域；每格为 13 个目标预测变化的等权均值。}
+  \label{fig:q13-transfer}
+\end{figure}
+
+同尺度检验支持保留二阶结构。图~\ref{fig:q13-stability}a、b 中，A6/A7 的 pooled RMSE 由线性模型的 0.3464 降至 0.2840，降幅为 18.0\%；MAE 由 0.2626 降至 0.2019，降幅为 23.1\%。按配方成对重采样得到的二阶减线性误差差值，RMSE 为 $-0.0624$（95\% 描述性区间 $[-0.0834,-0.0420]$），MAE 为 $-0.0607$（$[-0.0765,-0.0452]$）。这表明在固定模型条件下，非线性项确实改善了同尺度预测。图~\ref{fig:q13-stability}c 则使用较早的有限扰动运行：13 个目标、每目标 272 个有向替代关系的线性与二阶方向一致率大多约为 60\%--75\%。预测误差下降并不保证每一条领域替代解释稳定；该面板与前两面板来源不同，也不能视为最新模型的重复解释验证。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.56\textheight,keepaspectratio]{Fig03_prediction_and_stability.pdf}
+  \caption{二阶模型相对线性模型的同尺度误差收益，以及独立历史运行中的领域替代方向一致率。区间仅反映固定模型下的配方重采样波动。}
+  \label{fig:q13-stability}
+\end{figure}
+
+\subsection{规模偏差的识别与修正收益}
+
+仅以配比预测跨规模绝对 Loss 存在结构性遗漏：A6 与 A8 的配比逐行相同，而两表平均 Loss 相差 1.4594；同一配比的纯配比预测器只能给出同一个预测值。由此，将模型写为配比项与规模修正项之和，并要求修正项在 1M 基准尺度为零：
+
+\begin{equation}
+\hat L_k(\boldsymbol p,S)=f_k\!\left[\operatorname{ilr}(\boldsymbol p)\right]+c_k(\boldsymbol p,S),\qquad c_k(\boldsymbol p,1\mathrm M)=0.\label{eq:q13-scale}
+\end{equation}
+
+比较的四种设置分别为无修正、全局修正、逐目标领域修正和配方条件修正。其共同依据是 A6/A7 与 A8/A9 的同配方跨规模差分；配方基础模型保持冻结，避免把规模偏移错误归入某个训练领域的系数。图~\ref{fig:q13-scale} 显示，二阶纯配比模型在 60M 表 A8/A9 的 pooled RMSE 为 1.5993，配方条件修正后为 0.3017；在 1B 表 A10/A11，该指标由 2.6963 降至 0.6252，降幅为 76.8\%。对应的 1B 逐目标平均 MAE 由 2.6203 降至 0.5207，降幅为 80.1\%。这说明显式处理规模偏差是跨尺度绝对误差下降的主要来源。然而，A8/A9 参与修正校准，A10/A11 也已多次用于回顾性比较；这些数字不构成独立的最终泛化精度。1B 的全局修正 MAE 为 0.4256，反而低于配方条件修正的 0.5207，说明更复杂的修正并非在所有指标上占优。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.65\textheight,keepaspectratio]{Fig04_scale_correction.pdf}
+  \caption{两类配比模型在五组评价表上的 pooled RMSE 与逐目标平均 MAE。灰色区域的 10B、70B 结果依据给定估算 Loss，仅作外推情景诊断。}
+  \label{fig:q13-scale}
+\end{figure}
+
+为避免总体指标掩盖目标差异，图~\ref{fig:q13-targets}a、b 给出 1B 表中全部 13 个目标的 MAE 相对降幅。降幅按式~\eqref{eq:q13-reduction}计算，正值表示改善：
+
+\begin{equation}
+R_{k,c}=\frac{\operatorname{MAE}_{k,0}-\operatorname{MAE}_{k,c}}{\operatorname{MAE}_{k,0}}\times100\%.\label{eq:q13-reduction}
+\end{equation}
+
+三类修正在两个基础模型的 13 个目标上均得到正降幅，但改善幅度不均，二阶模型下 DM Math 的全局修正降幅仅为 36.4\%，远低于 Pile-CC 的 97.7\%。图~\ref{fig:q13-targets}c 进一步揭示外推限制：同一批 63 个配方从 10B 到 70B 的给定平均 Loss 降幅为 0.3829，而三类修正预测降幅约为 0.6936、0.6936 和 0.6975，均明显偏大。规模修正解决了已观察到的大部分绝对偏移，却尚不能据估算表推出可靠的高规模尺度律。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.68\textheight,keepaspectratio]{Fig05_domain_errors_and_extrapolation.pdf}
+  \caption{A10/A11 上三类修正相对于无修正的逐目标 MAE 降幅，以及 10B 到 70B 的给定与预测 Loss 降幅。高规模比较不是实测训练验证。}
+  \label{fig:q13-targets}
+\end{figure}
+
+\subsection{补充诊断与模型边界}
+
+第二小问的质量分提供了有意义的候选信息，但当前实验中的 $Q_{\mathrm{proxy}}$ 是配比的确定函数，并非独立观测到的文本质量。补充图~\ref{fig:q13-quality} 完整列出两类基础模型、四类修正和五组评价表的加入前后对照：在线性模型的 1M 同尺度评价中，加入代理后 RMSE 约下降 1.8\%；二阶模型在同一评价中的误差差值接近零且区间跨零，在部分跨尺度设置下还会变差。因此，现有结果不能把第二小问的评分修正表述为已被下游 Loss 验证的独立收益，更不能据此为质量代理赋予唯一因果系数。
+
+\FloatBarrier
+\subsection*{补充诊断图}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.82\textheight,keepaspectratio]{FigS01_optional_quality.pdf}
+  \caption{加入 $Q_{\mathrm{proxy}}$ 后的 RMSE、MAE 差值及配方成对重采样的 95\% 描述性区间。负值表示误差下降；重复的 1M 点不计为独立验证。}
+  \label{fig:q13-quality}
+\end{figure}
+
+补充图~\ref{fig:q13-oof} 使用 A8/A9 的 256 对配方，以完整配方对为单位分为五折，仅在训练折重拟合规模修正，配比基础模型保持冻结。二阶配方条件修正的 pooled RMSE 从校准内 0.3017 变为折外 0.3073，MAE 从 0.2128 变为 0.2157；折外误差仅小幅上升，说明此校准诊断中修正收益不完全依赖本配方参与拟合。但正则化系数沿用历史选择，且折外检验仍发生在参与规模校准的 60M 设计内，不能替代新规模、新配方的独立验证。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\linewidth,height=0.62\textheight,keepaspectratio]{FigS02_calibration_oof.pdf}
+  \caption{A8/A9 的五折校准内与折外误差对照。图中的点是全表汇总误差，不是五折均值及标准差。}
+  \label{fig:q13-oof}
+\end{figure}
+
+据此，第三小问的可支持结论是：同尺度配比关系存在可预测的非线性信号；同配方跨规模 Loss 差异要求显式规模修正；该修正在回顾性跨尺度评价中大幅降低绝对误差。领域替代关系仍是受配方支持范围约束的模型关联，高规模估算与质量代理的增量效果也尚不足以支持最优配方或通用尺度律的断言。
