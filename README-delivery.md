@@ -45,4 +45,12 @@ python -X utf8 scripts/plot_q1_topsis.py --root .
 
 G1 与模型规格待审、WP-A 元数据历史差异未结案，均已登记反馈。正式任务状态和主论文不提升为已接受。delivery_file_manifest.json 保留历史压缩包证据；submission_manifest.json 是本次团队提交路径及哈希清单。
 
+## 数据可见性与交接
+
+质量评分的公开证据已经按运行目录整理：主实验的 `domain_scores.csv`、`corpus_scores.csv`、`full_vs_A1.csv`、`extended_vs_A1.csv`、`model_weights.csv`、`indicator_parameters.csv`、`model_sensitivity.csv` 和跨模型领域对照表位于 `experiments/runs/q1-critic-topsis-20260924-r01/tables/`，运行参数、输入哈希和验证记录位于同一 run 的元数据与 `data/manifests/q1_quality_scores_delivery.yaml`。这些聚合表覆盖 A1=51,230、A2=17,523、A3=203,752 条记录（全量 272,505 行，去重后 261,086 个 ID）。
+
+完整的归一化矩阵和逐样本分数不进入公共 Git。受控团队包 `02_完整派生数据包_仅团队内部.zip` 共 8 个文件、98,499,927 bytes，SHA256 为 `A027356B2354CF6F4D396DE9208DF870FEF3810870534163B50F4B9F55591ED5`，通过团队受控渠道交接；包内文件级哈希记录在 `data/manifests/q1_quality_scores_delivery.yaml`。这一边界遵循 `docs/tasks/WP-B-delivery.yml`、`governance/prompts/catalog/P-DATA-001.md` 和 `docs/architecture.md`，不要使用 `git add -f` 绕过 `.gitignore`。
+
+该受控包的计算来源提交为 `3c7d3512301df6899d293e69a856027c7a4c530b`；本次公开交付以 WP-B 提交 `80b163a16075d4e947b19b400ce1f6515e200c6b` 为基线，随后补充交付文档和图表，二者关系和审核状态均保留在交付清单中。当前状态仍为 `REVIEW_BLOCKED / PARTIAL`，需团队审核后再提升状态。
+
 团队 PR：https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/12

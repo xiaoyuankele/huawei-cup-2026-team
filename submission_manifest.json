@@ -2,7 +2,7 @@
   "repository": "xiaoyuankele/huawei-cup-2026-team",
   "branch": "wp/ACTOR-2/WP-B",
   "team_base_commit": "1071d1ac655f50a526265bd64089e388e75a0929",
-  "source_delivery_commit": "f41c0c3a44a7956da060c97d95fbe4f2110f137f",
+  "source_delivery_commit": "80b163a16075d4e947b19b400ce1f6515e200c6b",
   "status": "REVIEW_BLOCKED",
   "scope": "Public model delivery; WP-A repair is an isolated proposal; no full sample data",
   "files": [
@@ -13,8 +13,8 @@
     },
     {
       "path": "README-delivery.md",
-      "bytes": 3764,
-      "sha256": "b7af185d0c909ceb23383c9a1b6afca4c892cddebf06fc226dbfa6ca3bea2654"
+      "bytes": 5248,
+      "sha256": "2e20313de4954eff83de2d58e6423b48099122dbadb7abc174b63d6e8d34cbf8"
     },
     {
       "path": "README.md",
@@ -27,9 +27,14 @@
       "sha256": "a95ae79e960b705512c7063addbe3f82f823fcba763cc59822ff4058c6f80328"
     },
     {
+      "path": "data/manifests/q1_quality_scores_delivery.yaml",
+      "bytes": 4262,
+      "sha256": "85567a964d95ff070166b2f3b02aedf8a2b12c3b80703e63c1df5d78711a070f"
+    },
+    {
       "path": "data/manifests/q1_scoring.json",
-      "bytes": 1144,
-      "sha256": "a498b82cdabefc24c76c7b9cc096f10f66bab4abe1ece17c4c87b39fb2c8e257"
+      "bytes": 2167,
+      "sha256": "85208a677a07192e45174416a2daf9c85b892b2be02d166c85ac6f36c491b7f2"
     },
     {
       "path": "delivery_file_manifest.json",
@@ -78,8 +83,8 @@
     },
     {
       "path": "docs/tasks/WP-B-submission-map.json",
-      "bytes": 10701,
-      "sha256": "e7fd3896e4e75000e3b853fa59b836c946f9a70e9e0b31a4c784d1b2088e0c2d"
+      "bytes": 10755,
+      "sha256": "8d77ca710da147b27a88b7a46e3afd2ce1f136c42db0e57e10cfbed2f02c7a72"
     },
     {
       "path": "experiments/index.csv",
@@ -668,8 +673,8 @@
     },
     {
       "path": "paper/claim-ledger.csv",
-      "bytes": 1200,
-      "sha256": "316db6486a45c70458306bd669b0292f1e546fbdf36002f84e6f8815ca4b55aa"
+      "bytes": 4812,
+      "sha256": "e86323d552f7a9e72cec547a2e285a318ad5584957d0ca9d2ced6e07bd2926e0"
     },
     {
       "path": "paper/sections/drafts/q1-critic-topsis-method.md",

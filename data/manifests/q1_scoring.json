@@ -25,5 +25,29 @@
     "A1": 51230,
     "A2": 17523
   },
-  "n_unique": 261086
+  "n_unique": 261086,
+  "visibility": {
+    "public_git": {
+      "description": "公开 Git 仅保存可复核的聚合评分、权重、指标参数、运行元数据、验证记录和图表；不保存逐样本矩阵或逐样本分数。",
+      "aggregate_tables": "experiments/runs/q1-critic-topsis-20260924-r01/tables/",
+      "run_metadata": "experiments/runs/q1-critic-topsis-20260924-r01/run_manifest.json",
+      "index": "experiments/index.csv"
+    },
+    "team_internal_controlled": {
+      "package_id": "q1-critic-topsis-full-derived-internal-20260924",
+      "file_name": "02_完整派生数据包_仅团队内部.zip",
+      "bytes": 98499927,
+      "sha256": "A027356B2354CF6F4D396DE9208DF870FEF3810870534163B50F4B9F55591ED5",
+      "file_count": 8,
+      "record_count": 272505,
+      "unique_record_count": 261086,
+      "delivery_channel": "controlled_team_channel",
+      "not_in_git": true
+    },
+    "policy_references": [
+      "docs/tasks/WP-B-delivery.yml",
+      "governance/prompts/catalog/P-DATA-001.md",
+      "docs/architecture.md"
+    ]
+  }
 }

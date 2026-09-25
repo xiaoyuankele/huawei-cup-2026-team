@@ -1,11 +1,12 @@
 {
   "task": "T-Q1-004",
-  "public_file_count": 155,
+  "public_file_count": 156,
   "paths": [
     ".gitattributes",
     "README-delivery.md",
     "README.md",
     "configs/q1-score-baselines.yaml",
+    "data/manifests/q1_quality_scores_delivery.yaml",
     "data/manifests/q1_scoring.json",
     "delivery_file_manifest.json",
     "docs/decisions/q1-critic-topsis-model-spec.md",
