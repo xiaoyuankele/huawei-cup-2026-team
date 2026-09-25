@@ -46,5 +46,6 @@
   "historical_script_sha256": "8e92352aa1a4b999d2fa7228e3e7fd1c61f48557393d5542932a4ee8b79b436c",
   "peer_decision": "PENDING",
   "integrator_decision": "PENDING",
-  "archive_policy": "CSV numeric outputs preserved byte-for-byte from historical exploratory run; portable scripts independently rerun"
+  "archive_policy": "CSV numeric outputs preserved byte-for-byte from historical exploratory run; portable scripts independently rerun",
+  "portable_code_commit": "cf2a32bc34cda4d2a9bb0fc9bcf56ed2d0d5e496"
 }
