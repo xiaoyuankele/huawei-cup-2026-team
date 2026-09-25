@@ -9,7 +9,7 @@ import pandas as pd
 from q2_e3_quality_substitution import ROOT, sha, dump
 
 WIDTH_IN = 180/25.4
-plt.rcParams.update({'font.family':'DejaVu Sans','font.size':7,'axes.labelsize':7,
+plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['DejaVu Sans'],'font.size':7,'axes.labelsize':7,
                      'axes.titlesize':8,'xtick.labelsize':7,'ytick.labelsize':7,
                      'legend.fontsize':7,'pdf.fonttype':42,'ps.fonttype':42,
                      'svg.fonttype':'none','axes.spines.top':False,'axes.spines.right':False})
@@ -24,9 +24,9 @@ def main():
     recipes=pd.read_csv(r/'recipe_substitution.csv')
     exports=[]
     def export(fig,name):
-        for ext in ['svg','pdf','png']:
-            p=out/(name+'.'+ext);fig.savefig(p,dpi=300)
-            if ext=='svg':
+        for suffix in ['.svg','.pdf','.png']:
+            p=out/(name+suffix);fig.savefig(p,dpi=300)
+            if suffix=='.svg':
                 p.write_text('\n'.join(x.rstrip() for x in p.read_text(encoding='utf-8').splitlines())+'\n',
                              encoding='utf-8',newline='\n')
             exports.append(p)

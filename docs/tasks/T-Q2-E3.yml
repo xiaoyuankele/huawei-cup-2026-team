@@ -12,7 +12,7 @@ release_approver_actors:
 - ACTOR-2
 - ACTOR-3
 status: REVIEW_BLOCKED
-execution_status: SPEC_READY
+execution_status: RUN_COMPLETE
 registered_at: '2026-09-25T14:23:30+00:00'
 registered_before_execution: true
 execution_class: USER_AUTHORIZED_CONDITIONAL_EXPLORATION
@@ -53,3 +53,9 @@ acceptance_criteria:
 - Actual recipe counterexamples retained
 - Inputs frozen and all CSVs reproducible
 - Independent Peer/Integrator review
+completed_at: '2026-09-25T14:31:02.171314+00:00'
+pr: PENDING_CREATION
+preregister_commit: 23dd6a3
+code_commit: 5c9f5c2be57aa6e627c6926bc81305937d53e964
+run_manifest: experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/manifest.json
+handoff: docs/tasks/T-Q2-E3-handoff.md

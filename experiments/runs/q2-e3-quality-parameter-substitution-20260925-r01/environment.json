@@ -1,0 +1,12 @@
+{
+  "python": "3.11.5",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "numpy": "1.26.4",
+  "pandas": "2.0.3",
+  "scipy": "1.11.1",
+  "matplotlib": "3.7.2",
+  "pyyaml": "6.0",
+  "seed": "deterministic; no RNG",
+  "code_commit": "5c9f5c2be57aa6e627c6926bc81305937d53e964",
+  "preregister_commit": "23dd6a3"
+}

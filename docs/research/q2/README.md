@@ -51,4 +51,6 @@ flowchart TD
 
 公开提交限研究代码、派生数值表和来源清单。原始附件、题目文件、原始聊天和本机路径不发布。独立评审、集成和论文采用均未由本次归档自动批准。
 
-E2领域替代与互补条件分析已完成计算、仍待独立评审：[方案](E2-plan.md) · [结果](../../../experiments/runs/q2-e2-domain-substitution-20260925-r01/report.md)。E1 PR #29已合并；合并事件不自动替代科学验收。E3/E4未执行。
+E2领域替代与互补条件分析已完成计算、仍待独立评审：[方案](E2-plan.md) · [结果](../../../experiments/runs/q2-e2-domain-substitution-20260925-r01/report.md)。E1 PR #29已合并；合并事件不自动替代科学验收。E3已完成条件计算，E4未执行。
+
+E3质量—参数替代条件分析已完成，仍待独立评审：[预登记](E3-plan.md) · [结果](../../../experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/report.md) · [交接](../../tasks/T-Q2-E3-handoff.md)。E2 PR #32已合并，合并不代替科学验收。

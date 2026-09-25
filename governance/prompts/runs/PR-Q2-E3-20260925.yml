@@ -13,15 +13,17 @@ tool: Codex desktop
 model: GPT-6
 provider: OpenAI
 input_summary: Frozen v1 and A4 feature columns; no observed Loss
-output_ref: docs/research/q2/E3-plan.md
-output_sha256: d04f03607c45c1c0415008f96533f314c997df84ea6b145eaebb574e1fca26da
-git_commit: f36afef332ed160146c548551d6cf09488cfd312
-git_commit_role: Baseline before numerical implementation
+output_ref: experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/report.md
+output_sha256: f812b7c64f06e24300cf3836d52ba3d16c15154a837e1c9aea0ab12a3a8393b0
+git_commit: 5c9f5c2be57aa6e627c6926bc81305937d53e964
+git_commit_role: Frozen final numerical code at both reproducibility runs
 run_id: q2-e3-quality-parameter-substitution-20260925-r01
 branch: wp/ACTOR-2/WP-B
 status: REVIEW_BLOCKED
-execution_status: SPEC_READY
+execution_status: RUN_COMPLETE
 needs_human_review: true
 peer_decision: PENDING
 integrator_decision: PENDING
 registration: PRE_EXECUTION_TASK_LEVEL
+completed_at: '2026-09-25T14:31:02.171314+00:00'
+preregister_commit: 23dd6a3

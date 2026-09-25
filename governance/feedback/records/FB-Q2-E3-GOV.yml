@@ -18,11 +18,13 @@ recorded_by: assistant; not human sign-off
 response_owner_actor: ACTOR-2
 response_status: BLOCKED
 created_at: '2026-09-25T14:23:30+00:00'
-updated_at: '2026-09-25T14:23:30+00:00'
+updated_at: '2026-09-25T14:31:02.171314+00:00'
 observed_behavior: Actor acceptance, Q2 routing, G1 and independent review not evidenced
 source: review
 evidence:
 - docs/research/q2/E3-plan.md
+- experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/report.md
+- experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/reproduction_verification.json
 decision: null
 closed_by: null
 closed_at: null
