@@ -4,6 +4,8 @@
 
 入口：[研究过程](process.md) · [结果与证据](results.md) · [数据说明](data.md) · [复现说明](reproduce.md) · [交接与待办](handoff.md) · [文件级目录](file_inventory.csv)
 
+后续题目覆盖实验：**E1边际效用与弹性、E2领域替代与互补结构诊断已完成条件分析，均待独立科学评审。** E1见[执行方案](E1-plan.md)、[结果报告](../../../experiments/runs/q2-e1-marginal-elasticity-20260925-r01/report.md)及[图表与复现入口](../../../experiments/runs/q2-e1-marginal-elasticity-20260925-r01/README.md)；E2见[结果报告](../../../experiments/runs/q2-e2-domain-substitution-20260925-r01/report.md)。E3—E4尚未执行；研究归档PR #28和E1 PR #29已合并，合并不自动代表独立科学验收。
+
 ## 当前回答
 
 我们建立了一个包含规模 N、训练量 D、质量 Q 和配比 p 的**条件模型**：B1 估计规模项，B6/B7 估计质量项，Q1 导出的 A 配方表估计配比响应，再通过显式映射假设组合。桥接表不是 A、B 同一实验的联合观测表；模型预测没有回填为真实 Loss。
@@ -48,3 +50,5 @@ flowchart TD
 团队 main 已有 [PR #23](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/23) 的 Q2 审计，包含 B3、B4/B5 分层、B8、B9/B10 和联合模型门槛。本包补交另一条研究链，不覆盖那些结果；旧文档中“B9/B10 尚未完成”只指当时本研究链。全队进度应与该审计合看，不能把这份归档当作问题二最终验收。
 
 公开提交限研究代码、派生数值表和来源清单。原始附件、题目文件、原始聊天和本机路径不发布。独立评审、集成和论文采用均未由本次归档自动批准。
+
+E2领域替代与互补条件分析已完成计算、仍待独立评审：[方案](E2-plan.md) · [结果](../../../experiments/runs/q2-e2-domain-substitution-20260925-r01/report.md)。E1 PR #29已合并；合并事件不自动替代科学验收。E3/E4未执行。

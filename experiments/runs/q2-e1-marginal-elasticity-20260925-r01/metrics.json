@@ -1,0 +1,36 @@
+{
+  "status": "PASS_CONDITIONAL_ANALYSIS",
+  "run_id": "q2-e1-marginal-elasticity-20260925-r01",
+  "input_and_model_unchanged": true,
+  "derivative_check_groups": 3371,
+  "scalar_comparisons": 39121,
+  "all_checks_pass": true,
+  "scale_grid_rows": 1681,
+  "scale_curve_rows": 246,
+  "quality_rows": 726,
+  "simplex_direction_rows": 544,
+  "assumption_scenario_rows": 9216,
+  "reference_N_B": 1.0,
+  "reference_D_B": 100.0,
+  "reference_loss": 2.3855781852659437,
+  "reference_N_marginal_benefit": 0.12034501947858552,
+  "reference_D_marginal_benefit": 0.0009566242876972288,
+  "reference_N_elasticity": -0.05044689804001099,
+  "reference_D_elasticity": -0.040100311681488005,
+  "doubling_N_marginal_ratio": 0.39502706803568016,
+  "doubling_D_marginal_ratio": 0.4118302964690864,
+  "quality_interior_slopes": {
+    "Q_A_topsis_0_1": -2.6054737605257854,
+    "quality_score_soft_proxy_0_1": -0.6753019253966672
+  },
+  "quality_axis_direction_sign_agreement": 0.9117647058823529,
+  "unordered_direction_pairs": 136,
+  "max_relative_scale_fold_deviation": {
+    "N_marginal_benefit": 0.00022213616105792866,
+    "D_marginal_benefit": 6.273442700410747e-05,
+    "elasticity_N": 0.00020563670270323797,
+    "elasticity_D": 6.584032568301978e-05
+  },
+  "max_first_derivative_check_error": 2.2146600997530186e-08,
+  "interpretation": "Analytic/implementation validation of frozen conditional v1; no new observed performance or causal validation."
+}

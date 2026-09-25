@@ -1,0 +1,113 @@
+{
+  "run_id": "q2-e2-domain-substitution-20260925-r01",
+  "task_id": "T-Q2-E2",
+  "prompt_run_id": "PR-Q2-E2-20260925",
+  "status": "REVIEW_BLOCKED",
+  "execution_status": "RUN_COMPLETE",
+  "git_commit": "2b37ac0ab9fc90624daba6635dfba17c86e6a808",
+  "git_commit_role": "code commit at execution",
+  "started_at": "2026-09-25T14:03:11.618482+00:00",
+  "completed_at": "2026-09-25T14:03:27.631554+00:00",
+  "input_sha256": {
+    "experiments/runs/q2-model-finalization-20260925/model_parameters.json": "46c94c6343e7bc023cf7347467d50c4e834fa50828e1e6a18c6a3b556dde7000",
+    "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09",
+    "configs/q2-e2-domain-substitution.json": "fdc44db8eface94d0e8e60473a8295db44edbdd1bf7afb0690d33d86039e9d7d",
+    "scripts/q2_e2_domain_substitution.py": "07939ce623040d6397ffc50ec10ded575bdd481139a15f1e75547707acf5398d",
+    "scripts/q2_finalize_model.py": "e7358e3b1dbe05c821048a9ecda294199804a9714558ede83edbdca8bed4c7b0"
+  },
+  "output_csv_sha256": {
+    "substitution_support.csv": "64ad3a3e34a998c5a38956eb9a05a1a7900895aee5a8e1dd14019c6266a0b799",
+    "support_weights.csv": "f21cacff9e8c73b489dc7bba1310d45474d6886c85cea29c1f9e6bdca569edf0",
+    "support_duals.csv": "b8d525987b1748cbc12e57a4b7ef778479e69ec57c728f433bbc3b3e9e74c5c6",
+    "finite_substitution.csv": "0219164681392bcc8571de68fbeb34da7999fed450ba631bbc66c0e57999ca27",
+    "assumption_sensitivity.csv": "d7d2183073df8a61b0614107b014efd445ae15d7ce92b89d4dbd7cf53a8f71d7",
+    "direction_stability.csv": "0516afe883e4f253f722bb07fd20b3c437225767a3df9940e7341108cb676cc7",
+    "interaction_witness_basis.csv": "9eb9ec70dc4a61021a9681e9e532f20ba844ab4edb0b2d7de2a746e60b41111f",
+    "interior_interactions.csv": "0539c57335737358e851e59ec39b2959243dd29d63b311ee253ec8c3fe691a8b",
+    "clipping_stress_interactions.csv": "64017ef1772cc9316abc8f3ebd9890ef3425c435b27c2576996864eed0b7368b",
+    "verification_checks.csv": "91ef8e96fe955e06151c80bddc3f4bb25ef2752d0d9db5dbe8f3ab7196b382be"
+  },
+  "metrics_sha256": "e46f713f68e56334f4afacaa4fc46d07351d8688a727e53d9c9d3e4198865456",
+  "config": {
+    "run_id": "q2-e2-domain-substitution-20260925-r01",
+    "task_id": "T-Q2-E2",
+    "model": "experiments/runs/q2-model-finalization-20260925/model_parameters.json",
+    "bridge": "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv",
+    "reference_N_B": 1.0,
+    "reference_D_B": 100.0,
+    "absolute_swap_fractions": [
+      0.001,
+      0.005,
+      0.01,
+      0.02,
+      0.05
+    ],
+    "supported_limit_fractions": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "hull_safety_fraction": 0.99,
+    "lambda_Q": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "lambda_p": [
+      0.0,
+      0.5,
+      1.0
+    ],
+    "interaction_max_step": 0.001,
+    "interaction_witness_safety": 0.2,
+    "stress_swap_fractions": [
+      0.1,
+      0.25,
+      0.4
+    ],
+    "lp_primal_tolerance": 1e-09,
+    "lp_dual_tolerance": 1e-09,
+    "witness_atol": 2e-08,
+    "prediction_atol": 2e-10,
+    "interaction_zero_atol": 1e-10,
+    "sign_atol": 1e-10,
+    "seed": null,
+    "fit_new_parameters": false,
+    "generated_rows_are_observations": false
+  },
+  "seed": null,
+  "deterministic": true,
+  "environment": {
+    "python": "3.11.5",
+    "numpy": "1.26.4",
+    "pandas": "2.0.3",
+    "scipy": "1.11.1"
+  },
+  "training_filter": "A4_A5_train_1m",
+  "read_columns": [
+    "dataset",
+    "index",
+    "p_arxiv",
+    "p_freelaw",
+    "p_nih_exporter",
+    "p_pubmed_central",
+    "p_wikipedia_en",
+    "p_dm_mathematics",
+    "p_github",
+    "p_philpapers",
+    "p_stackexchange",
+    "p_enron_emails",
+    "p_gutenberg_pg_19",
+    "p_pile_cc",
+    "p_ubuntu_irc",
+    "p_europarl",
+    "p_hackernews",
+    "p_pubmed_abstracts",
+    "p_uspto_backgrounds"
+  ],
+  "observed_outcome_columns_read": false,
+  "evidence": "Conditional frozen-model scenarios; A-recipe hull is not joint A-B observation support",
+  "command": "python scripts/q2_e2_domain_substitution.py",
+  "peer_decision": "PENDING",
+  "integrator_decision": "PENDING"
+}

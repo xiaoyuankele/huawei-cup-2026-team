@@ -1,0 +1,3 @@
+python scripts/q3_run_experiments.py
+python scripts/q3_verify_experiments.py
+python scripts/q3_check_reproduction.py

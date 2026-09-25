@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "files_checked": 41,
+  "checks": [
+    "Python AST",
+    "JSON and JSON-form YAML",
+    "CSV row widths",
+    "Q3 Markdown links",
+    "No local absolute paths or personal path identifiers",
+    "No common secret patterns"
+  ],
+  "scope": "Changed package files; not independent scientific peer review"
+}

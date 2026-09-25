@@ -1,0 +1,106 @@
+{
+  "run_id": "q3-frozen-q2-exploration-20260925-r01",
+  "status": "REVIEW_BLOCKED",
+  "scientific_status": "EXPLORATION_ONLY",
+  "upstream_commit": "e4a1e2855048c59c8e1484b16873141ab9a55029",
+  "historical_source_commit": "5d40a4bc466674e77ea9e01fe0aaf15692c6c263",
+  "inputs": {
+    "model_parameters.json": {
+      "path": "experiments/runs/q2-model-finalization-20260925/model_parameters.json",
+      "sha256": "46c94c6343e7bc023cf7347467d50c4e834fa50828e1e6a18c6a3b556dde7000"
+    },
+    "q1_to_q2_quality_linkage.csv": {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv",
+      "sha256": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09"
+    },
+    "q2_scenarios.csv": {
+      "path": "experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv",
+      "sha256": "28506e67f58d5dc631dc32e96210f6a6a24f8ac79917d0b3f179cb0ee0c8a397"
+    }
+  },
+  "context_values": [
+    2048,
+    4096,
+    8192,
+    32768,
+    131072
+  ],
+  "eta": 0.0002,
+  "budgets": [
+    1e+19,
+    1e+22,
+    1e+24
+  ],
+  "costs": {
+    "exponential": "1e7 exp(6Q)",
+    "power": "5e9 Q^4",
+    "logarithmic": "2e9 log(1+10Q)"
+  },
+  "seed": null,
+  "deterministic": true,
+  "cost_coordinate_variants": [
+    "Q_A",
+    "Q_B"
+  ],
+  "quality_effect_strengths": [
+    0,
+    0.5,
+    1
+  ],
+  "mixture_variants": {
+    "scale_only": [
+      0,
+      0
+    ],
+    "quality_only": [
+      1,
+      0
+    ],
+    "v1": [
+      1,
+      1
+    ],
+    "half_p": [
+      1,
+      0.5
+    ],
+    "low_p": [
+      1,
+      0.05
+    ]
+  },
+  "mixture_spaces": [
+    "reference",
+    "observed_training",
+    "training_hull",
+    "full_simplex"
+  ],
+  "scale_scopes": [
+    "unrestricted",
+    "B1_rectangle"
+  ],
+  "quality_grid_size": 65,
+  "budget_grid_log10": [
+    19,
+    24,
+    51
+  ],
+  "private_sources": {
+    "C7": {
+      "relative_path": "C_efficiency_evolution/model_architecture_metadata.csv",
+      "sha256": "ee24622cb3a6334f08d72c9ea373be26d5e5585bb266367c5f66d77499112ffc",
+      "public_extract": "context_values only; raw records excluded"
+    },
+    "problem_document": {
+      "sha256": "bc99a72460fa3d947a442d502969a13212ce0ea092d827afdbbf3b55339da4c4",
+      "role": "cost assumptions checked against visible appendix; raw text excluded"
+    }
+  },
+  "limitations": [
+    "Q2 v1 frozen; no refit or new external validation",
+    "Q_A depends on p in original model",
+    "Fixed-p processing is an added intervention assumption",
+    "Q_A and Q_B cost experiments are distinct assumptions, not equivalent coordinate changes",
+    "Retrospective labels previously inspected in Q2; no blind validation"
+  ]
+}

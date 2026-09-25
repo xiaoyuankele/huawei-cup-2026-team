@@ -1,0 +1,76 @@
+task_id: T-Q2-E1-MARGINAL
+title: E1 冻结Q2模型的边际效用与弹性
+problem_id: Q2
+subproblem_id: Q2-E1
+problem_scope: 解析导数、完整Loss弹性、质量截断和配比可行方向
+status: REVIEW_BLOCKED
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+release_approver_actors:
+- ACTOR-1
+- ACTOR-2
+- ACTOR-3
+review_domain: experiment
+review:
+  peer_decision: PENDING
+  integrator_decision: PENDING
+  peer_reviewer_must_differ: true
+  integrator_must_differ: true
+announcement:
+  mode: user_request
+  announcement_ref: docs/research/q2/E1-plan.md
+  summary: 用户同意先完成题目覆盖实验，并明确要求先执行E1。
+  announced_by_actor: null
+  announced_at: null
+  recipient_acknowledgement: null
+  record_status: PRE_EXECUTION_REGISTRATION_NOT_EVIDENCED
+feedback_required: true
+feedback_ids:
+- FB-Q2-E1-01
+- FB-Q2-E1-02
+- FB-Q2-E1-GOV-20260925
+branch: codex/q2-e1-marginal-elasticity
+branch_owner_actor: ACTOR-2
+gate: G1
+prompt:
+  prompt_id: P-Q2-E1-MARGINAL
+  version: v1.0.0
+  prompt_run_id: PR-Q2-E1-20260925
+objective: 在冻结v1下完成边际收益与弹性推导、核验、敏感性及报告
+inputs:
+- ref: configs/q2-e1-marginal-elasticity.json
+  purpose: 固定配置及输入路径
+expected_outputs:
+- path: experiments/runs/q2-e1-marginal-elasticity-20260925-r01/report.md
+  description: 结果、公式、边界及图表
+- path: docs/tasks/T-Q2-E1-MARGINAL-handoff.md
+  description: 正式交接，独立评审待定
+- path: paper/sections/drafts/q2-e1-marginal-elasticity.md
+  description: 未验收条件分析草稿，不进入正式论文
+acceptance_criteria:
+- 解析导数与冻结预测接口有限差分在预设容差内一致
+- 质量边界、单纯形约束和局部支持明确处理
+- 两次执行数值CSV一致，输入参数哈希不变
+- 图形源码和PDF核验、逐面板视觉检查完成
+- 独立Peer及Integrator评审后方可验收
+notes: FB-Q2-E1-01：质量轴影响12/136配比方向；FB-Q2-E1-02：可加结构限制跨因素资源配置。均为后续重构依据，非本轮自动解锁项。责任角色沿用WP-B接口，未代填人工确认。
+  本次补登记不能消除执行前登记缺失；不代表 G1、人工角色分配或合并批准。
+execution_status: RUN_COMPLETE
+gate_status: NOT_EVIDENCED
+execution_class: USER_AUTHORIZED_CONDITIONAL_EXPLORATION
+registered_retrospectively: true
+governance_updated_at: '2026-09-25T13:53:36+00:00'
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/29
+branch_policy:
+  expected: wp/ACTOR-2/WP-B
+  status: DEVIATION_PENDING_INTEGRATOR
+  exception_approved: false
+work_package_routing:
+  reference_issue: https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/9
+  scope_status: Q2_EXTENSION_NOT_CONFIRMED
+  actor_assignment_confirmed: false
+governance_refs:
+- docs/research/q2/E1-governance-audit.md
+- experiments/runs/q2-e1-marginal-elasticity-20260925-r01/governance.yml
