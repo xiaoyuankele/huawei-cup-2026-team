@@ -1,0 +1,6 @@
+Portable rerun: PASS
+Frozen scenarios: 1200
+Processing unique scenarios: 3492
+CSV tables compared: 7
+Independent cases: 48; successful starts: 138/144
+All assertions passed. No raw inputs published.

@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "csv_tables": [
+    {
+      "file": "frozen_v1_optima.csv",
+      "rows": 1200,
+      "columns": 19,
+      "status": "PASS"
+    },
+    {
+      "file": "independent_multistart_checks.csv",
+      "rows": 48,
+      "columns": 12,
+      "status": "PASS"
+    },
+    {
+      "file": "processing_scenarios.csv",
+      "rows": 3492,
+      "columns": 25,
+      "status": "PASS"
+    },
+    {
+      "file": "recipe_optima.csv",
+      "rows": 40,
+      "columns": 29,
+      "status": "PASS"
+    },
+    {
+      "file": "retrospective_decision_regret.csv",
+      "rows": 24,
+      "columns": 12,
+      "status": "PASS"
+    },
+    {
+      "file": "solver_crosschecks.csv",
+      "rows": 18,
+      "columns": 7,
+      "status": "PASS"
+    },
+    {
+      "file": "transition_brackets.csv",
+      "rows": 30,
+      "columns": 10,
+      "status": "PASS"
+    }
+  ],
+  "independent_verification": {
+    "cases": 48,
+    "max_full_difference": 5.225597732305687e-12,
+    "max_grid_difference": 4.440892098500626e-16,
+    "successful_starts": 138,
+    "attempted_starts": 144
+  },
+  "rtol": 1e-10,
+  "atol": 1e-10
+}

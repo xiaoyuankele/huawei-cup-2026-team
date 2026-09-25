@@ -9,3 +9,4 @@ P-VALID-001,问题一验证与稳健性分析,validation,v1.0.0,draft,work_packa
 P-PAPER-001,结果分析与LaTeX段落,paper,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-PAPER-001.md,T-Q1-008,
 P-FIG-001,论文图表生成与审查,figure,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-FIG-001.md,T-Q1-007,
 P-INT-001,问题一跨包整合与发布检查,integration,v1.0.0,draft,release_council,release_council,governance/prompts/catalog/P-INT-001.md,T-Q1-009,三人 Release Council 共同签署；只整合 PACKAGE_ACCEPTED 产物
+P-Q3-RESEARCH-HANDOFF,Q3冻结模型探索研究归档,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q3-RESEARCH-HANDOFF.md,T-Q3-RESEARCH-HANDOFF,Sanitized reconstruction of authorized task; no private transcript
