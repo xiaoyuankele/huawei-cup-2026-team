@@ -33,3 +33,5 @@
 复核重点：原始输入哈希、Q1版本、B6/B7重叠、外层组隔离、selected与候选模型指标区分、0.67全目标拟合与外层性能区分、情景与观测标签、无将外层结果回用于本轮选择。
 
 本次未替代人工签字，未修改paper/main或上游结果，未合并main。上传研究分支和PR是交接动作。
+
+发布记录：研究包提交 `3aa0e5072c105a2f80ea8b41e350671684a463a3` 已推送团队分支 `codex/q2-research-handoff`，对应 [Draft PR #28](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/28)。尚未合并main。

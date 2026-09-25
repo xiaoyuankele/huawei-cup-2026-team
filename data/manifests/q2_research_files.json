@@ -70,8 +70,8 @@
     },
     {
       "path": "docs/research/q2/handoff.md",
-      "bytes": 2869,
-      "sha256": "f5ffb070afd6a79fbe3204a311c431ed6e3818eb5bb7e490788cb0392d8ded98"
+      "bytes": 3102,
+      "sha256": "83bd026ee8203869ba1247b09c8e391cb6786f7504d3bbfd7ed9aa018351beef"
     },
     {
       "path": "docs/research/q2/process.md",
@@ -100,8 +100,8 @@
     },
     {
       "path": "experiments/index.csv",
-      "bytes": 17938,
-      "sha256": "f44d908049ea8daf2f91c9554b1b302c6f6796089dd5a8486833a28f90352b66"
+      "bytes": 18382,
+      "sha256": "1258e0110ca99ba10772cd73888dc6114521a061993acaa40e74d3dd84b10745"
     },
     {
       "path": "experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv",
@@ -385,13 +385,13 @@
     },
     {
       "path": "governance/ai-use-log.csv",
-      "bytes": 5849,
-      "sha256": "6a250dcdc7e2af71f383db99cd58bc087ed2b7a312083fdaef6ddb7a03804ce1"
+      "bytes": 5870,
+      "sha256": "991ee3cbe26d43449c5813aa2a78c9f033ba09f2c35ce7763070ab7d3e8ad000"
     },
     {
       "path": "paper/claim-ledger.csv",
-      "bytes": 6658,
-      "sha256": "83a97ac9feb97c2a90e2132479d0cd993d8379e685d8e14451b33713de683db9"
+      "bytes": 6742,
+      "sha256": "d1e8fda7465aa0133657d7300cc9e7398f95d1d53f4a5607caf405e9ced3b8e4"
     },
     {
       "path": "requirements-q2-research.txt",
