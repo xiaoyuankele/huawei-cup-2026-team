@@ -1,0 +1,12 @@
+schema_version: q1.scale-shift-transfer.v1
+run_id: q1-scale-shift-transfer-20260925-r01
+task_id: T-Q1-003-MIXTURE
+status: paired_scale_diagnostic
+source_pairs:
+  calibration: A6_A8_1m_vs_60m
+  evaluation: A12_A14_10b_vs_70b
+transfer_rule: target_mean_shift_per_log10_scale_from_calibration_pair
+claim_ceiling:
+  - paired_scale_shift_transfer_diagnostic
+  - no_global_scale_law_claim
+  - no_official_external_validation

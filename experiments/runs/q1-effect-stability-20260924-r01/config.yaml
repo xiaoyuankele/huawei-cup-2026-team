@@ -1,0 +1,28 @@
+schema_version: q1.effect-stability.v1
+run_id: q1-effect-stability-20260924-r01
+task_id: T-Q1-003-MIXTURE
+status: exploratory
+fit_data: A4_A5_train_1m
+external_input_check: A6_A7_validation_1m
+feature_contract:
+  representation: Helmert-ilr
+  zero_replacement: multiplicative
+  epsilon: 1.0e-4
+  perturbation_delta: 0.01
+  support_guard: A4 marginal coordinate ranges
+models:
+  - name: ilr_ridge
+    parameter: 10.0
+    role: linear_reference
+  - name: quadratic_ridge
+    parameter: 10.0
+    role: selected_exploratory_candidate
+effect_definition: "transfer delta mixture mass from source domain j to destination domain i"
+bootstrap:
+  replicates: 300
+  seed: 20260924
+claim_ceiling:
+  - predictive_finite_perturbation
+  - effect_direction_stability
+  - no_causal_domain_effect
+  - no_unconstrained_optimum_mixture

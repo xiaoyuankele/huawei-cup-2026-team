@@ -1,0 +1,58 @@
+{
+  "schema_version": "q1.effect-stability.v1",
+  "run_id": "q1-effect-stability-20260924-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "a4db97afe73c429af6cc3000939093d4c730cddf",
+  "status": "EXPERIMENTAL_REVIEW",
+  "fit_rule": "models fitted on A4/A5 with fixed selected parameters from q1-model-benchmark-20260924-r01",
+  "external_input_check": "A6/A7 predictions only; no refitting",
+  "basis": {
+    "name": "Helmert ilr",
+    "zero_replacement": "multiplicative",
+    "epsilon": 0.0001,
+    "component_names": [
+      "train_the_pile_arxiv",
+      "train_the_pile_freelaw",
+      "train_the_pile_nih_exporter",
+      "train_the_pile_pubmed_central",
+      "train_the_pile_wikipedia_en",
+      "train_the_pile_dm_mathematics",
+      "train_the_pile_github",
+      "train_the_pile_philpapers",
+      "train_the_pile_stackexchange",
+      "train_the_pile_enron_emails",
+      "train_the_pile_gutenberg_pg_19",
+      "train_the_pile_pile_cc",
+      "train_the_pile_ubuntu_irc",
+      "train_the_pile_europarl",
+      "train_the_pile_hackernews",
+      "train_the_pile_pubmed_abstracts",
+      "train_the_pile_uspto_backgrounds"
+    ]
+  },
+  "perturbation": {
+    "definition": "transfer delta from source to destination",
+    "delta": 0.01,
+    "support_guard": "A4 marginal coordinate ranges"
+  },
+  "bootstrap": {
+    "replicates": 300,
+    "seed": 20260924
+  },
+  "outputs": {
+    "finite_effects": {
+      "path": "experiments/runs/q1-effect-stability-20260924-r01/finite_effects.csv",
+      "rows": 14144
+    },
+    "effect_direction_summary": {
+      "path": "experiments/runs/q1-effect-stability-20260924-r01/effect_direction_summary.csv",
+      "rows": 78
+    }
+  },
+  "limitations": [
+    "Finite perturbations are predictive model effects, not causal interventions.",
+    "Support guard uses marginal A4 ranges and is not a convex-hull guarantee.",
+    "Quadratic interaction interpretation remains exploratory until sign stability and external behavior are reviewed.",
+    "Quality score Q is excluded because domain q_i is not frozen."
+  ]
+}

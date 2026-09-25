@@ -1,0 +1,60 @@
+{
+  "schema_version": "q1.scale-shift-transfer.v1",
+  "run_id": "q1-scale-shift-transfer-20260925-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "a4db97afe73c429af6cc3000939093d4c730cddf",
+  "status": "PAIRED_SCALE_DIAGNOSTIC",
+  "calibration_pair": {
+    "name": "A6_A8_1m_vs_60m",
+    "gap": 1.7781512503836439,
+    "rows": 256,
+    "files": {
+      "test_mixture_1m.csv": {
+        "sha256": "197267b7d6f15367e2f46c881e564c35b0d34e51b1754bb09d07e650cf8e1ce8"
+      },
+      "test_pile_loss_1m.csv": {
+        "sha256": "e027b1674f60140a65a87b5e4a59ab5f09dc33e8fd02c080682678074b160f53"
+      },
+      "test_mixture_60m.csv": {
+        "sha256": "197267b7d6f15367e2f46c881e564c35b0d34e51b1754bb09d07e650cf8e1ce8"
+      },
+      "test_pile_loss_60m.csv": {
+        "sha256": "8fe69d59ab7dd4fae4736459f4265ec93c7ed1ad1eca407346052560edc72b5b"
+      }
+    }
+  },
+  "evaluation_pair": {
+    "name": "A12_A14_10b_vs_70b",
+    "gap": 0.8450980400142569,
+    "rows": 63,
+    "files": {
+      "est_mixture_10b.csv": {
+        "sha256": "7561999cb5d9e604e8be3873b18b93d92881fa2ae70f5f29ebc65a80cc6c2797"
+      },
+      "est_pile_loss_10b.csv": {
+        "sha256": "226457581f3f59e15e44d8f72dee31fa7492c821699725fef47627d82cf34c0d"
+      },
+      "est_mixture_70b.csv": {
+        "sha256": "880c7ca1ebef470422e2b93d9bfcd0976db7db4e34ea57047518d95fe43327d1"
+      },
+      "est_pile_loss_70b.csv": {
+        "sha256": "d0883b2d1a44da9386a6d629a3623c724ee291cba1ac87b6d1079e5377307682"
+      }
+    }
+  },
+  "transfer_ratio": 0.4752678040363121,
+  "prediction_metrics": {
+    "mae": 0.31068018473818965,
+    "rmse": 0.36392537370621947,
+    "mean_absolute_actual_shift": 0.38291306471306474,
+    "mean_absolute_transferred_shift_error": 0.31068018473818965,
+    "mean_actual_shift": 0.38291306471306474,
+    "mean_transferred_shift": 0.6935919500146148
+  },
+  "limitations": [
+    "The calibration pair supplies one observed scale interval only.",
+    "A12/A14 are extrapolation diagnostics and not independent validation.",
+    "The transfer is an additive target-level scale-shift diagnostic, not a fitted global scale law.",
+    "Quality features are identical within each paired mixture design and cannot explain the paired scale difference."
+  ]
+}
