@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{纯配比模型的尺度迁移误差。指标在所有样本及13个响应上合并计算；1B为回顾性评价，10B和70B为题目提供的估算目标。}
+\label{tab:q1-mixture-scale}
+\begin{tabular}{llrrrrrr}
+\hline
+模型 & 修正 & 1B RMSE & 1B MAE & 10B RMSE & 10B MAE & 70B RMSE & 70B MAE \\
+\hline
+ilr-Ridge & C0 & 3.0238 & 2.9554 & 3.6096 & 3.5576 & 3.9970 & 3.9402 \\
+ilr-Ridge & C1-global & 0.8077 & 0.5782 & 0.6727 & 0.5192 & 0.6747 & 0.5041 \\
+ilr-Ridge & C1-domain & 0.7588 & 0.6446 & 1.0485 & 0.8551 & 1.1909 & 0.9146 \\
+ilr-Ridge & C2 & 0.7147 & 0.6180 & 1.0428 & 0.8386 & 1.1985 & 0.9289 \\
+Quadratic & C0 & 2.6963 & 2.6203 & 3.6231 & 3.5551 & 4.0107 & 3.9380 \\
+Quadratic & C1-global & 0.6575 & 0.4256 & 0.7498 & 0.5747 & 0.7614 & 0.5671 \\
+Quadratic & C1-domain & 0.6579 & 0.5469 & 1.0923 & 0.9044 & 1.2343 & 0.9731 \\
+Quadratic & C2 & 0.6252 & 0.5207 & 1.0663 & 0.8609 & 1.2199 & 0.9481 \\
+\hline
+\end{tabular}
+\end{table}

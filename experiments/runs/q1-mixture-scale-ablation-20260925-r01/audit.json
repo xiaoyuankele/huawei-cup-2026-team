@@ -1,0 +1,44 @@
+{
+  "n_rows": 1214,
+  "max_input_simplex_sum_error": 1.5543122344752192e-15,
+  "pair_checks": [
+    {
+      "left": "A6_A7_test_1m",
+      "right": "A8_A9_test_60m",
+      "n": 256,
+      "same_original_ids_and_mixtures": true
+    },
+    {
+      "left": "A12_A13_est_10b",
+      "right": "A14_A15_est_70b",
+      "n": 63,
+      "same_original_ids_and_mixtures": true
+    },
+    {
+      "left": "A4_A5_train_1m",
+      "right": "A12_A13_est_10b",
+      "n": 63,
+      "same_original_ids_and_mixtures": true
+    }
+  ],
+  "input_sha256": "c0714f8594ea8e9e0072b80ab156dd71293489ac436a9856f81dd64d9eb5d44b",
+  "quality_linear_reconstruction_max_error": 1.4432899320127035e-15,
+  "python": "3.11.5",
+  "numpy": "1.26.4",
+  "pandas": "2.0.3",
+  "sklearn": "1.3.0",
+  "base_fit_rows": 512,
+  "base_model_rows_identical": true,
+  "parameters_retuned": false,
+  "scale_calibration_pairs": 256,
+  "row_predictions_exported": false,
+  "interpretation_limits": [
+    "Retrospective comparison on previously inspected data, not a new independent blind evaluation.",
+    "C2 fixed alpha was historically selected on A6/A8; OOF is conditional on that choice, not nested selection validation.",
+    "Quality is a deterministic feature of composition; adding it changes representation and regularization, not independent causal information.",
+    "A12/A14 are seen training recipes and supplied estimated Loss; no true high-scale performance claim.",
+    "Paired bootstrap intervals condition on frozen fitted models and are descriptive, not simultaneous or multiplicity-adjusted inference.",
+    "Scale slopes are calibrated at only one interval; uncertainty in extrapolation shape is not covered.",
+    "Quadratic polynomial terms are in ilr coordinates, not direct causal pairwise domain interactions."
+  ]
+}

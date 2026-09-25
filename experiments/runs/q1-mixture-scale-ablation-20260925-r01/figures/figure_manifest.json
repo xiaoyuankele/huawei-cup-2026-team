@@ -1,0 +1,55 @@
+{
+  "figure": "Figure1_full_mixture_scale_ablation",
+  "backend": "python/matplotlib",
+  "matplotlib_version": "3.7.2",
+  "source": "../metrics_aggregate.csv",
+  "source_sha256": "24cae7fe7bd16bf3313b2e3aa1ae95cc580f865a7c499593bd3ff84a5e69f9e9",
+  "script": "../../../../scripts/q1_s03/plot_mixture_scale_ablation.py",
+  "script_sha256": "252ac9fd7262cb4cd7fe501e6d1d80351e0aa04b69c9c88383ec500b62f5b112",
+  "source_rows_before_selection": 120,
+  "source_rows_after_selection": 40,
+  "selection": "Two pure-mixture models; all four corrections; all five non-training tables.",
+  "metric": "rmse_pooled_all_domains",
+  "x_axis": "Ordered dataset categories; not proportional to scale.",
+  "y_axis": "linear; starts at zero",
+  "point_definition": "Deterministic whole-table pooled RMSE over all 13 response domains.",
+  "uncertainty": "None; no replicate-run or sampling-uncertainty intervals supplied.",
+  "width_mm": 183,
+  "height_mm": 100,
+  "raster_dpi": 600,
+  "minimum_declared_font_pt": 6,
+  "data_table_counts": {
+    "A6_A7_test_1m": 256,
+    "A8_A9_test_60m": 256,
+    "A10_A11_test_1b": 64,
+    "A12_A13_est_10b": 63,
+    "A14_A15_est_70b": 63
+  },
+  "outputs": [
+    {
+      "path": "Figure1_full_mixture_scale_ablation.svg",
+      "sha256": "2974dc01c48065c9fb7b8c0db71f13c2523e2c1fd04f912ab4e7aa9bc3cb21ae",
+      "bytes": 29513
+    },
+    {
+      "path": "Figure1_full_mixture_scale_ablation.pdf",
+      "sha256": "77bb68bfd6735df963ff561c6abc9a272868e58d04e2be2c53e4c9e26f390b82",
+      "bytes": 44058
+    },
+    {
+      "path": "Figure1_full_mixture_scale_ablation.png",
+      "sha256": "006729bee70392c92ac7dc192729b274f26c6c023d4910f0f9a4ec7ce126654c",
+      "bytes": 291449
+    },
+    {
+      "path": "Figure1_full_mixture_scale_ablation.tiff",
+      "sha256": "f68019cd576f6104845a44c17c3922cdca8a2f902be38e695e36422ff31a62b5",
+      "bytes": 811500
+    },
+    {
+      "path": "source_data.csv",
+      "sha256": "8bf0257d40a855fd99895b7dfd27b8f4e395e26751983ee462246fe5edc9eeaa",
+      "bytes": 4056
+    }
+  ]
+}
