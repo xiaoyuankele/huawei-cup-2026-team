@@ -1,10 +1,11 @@
 # LaTeX 模板来源
 
-本目录 `template/` 从 [Nopon-Knowledge/huawei-cup-modeling-latex](https://github.com/Nopon-Knowledge/huawei-cup-modeling-latex) 导入。
+本目录 `template/` 同步自用户提供的 GMCM2026 模板压缩包 `GMCM2026.zip`，并作为本项目后续论文编译的默认模板。
 
-- 导入基线：上游 `main` 分支提交 `a7e4c87ae5d89a3f8b931d6ef91180a3fb4bf5f2`
-- 版本说明：上游 README 标注为 2026 年第二十三届“华为杯”研究生数学建模竞赛 LaTeX 模板。
-- 本项目改动：`template/gmcmthesis.cls` 仅将固定版式素材路径改为 `template/figures/`，以便从 `paper/main.tex` 统一编译；模板正文示例不作为项目论文内容。
-- 使用边界：模板是非官方适配，提交前仍以组委会最新格式要求为准。
+- 源文件 SHA256：`C0940E53E830BD8FC6B465E91CBF5CC31A248B786643B16D84969E4E04560120`
+- 模板文件清单：29 个文件，包括 `gmcmthesis.cls`、`gmcm.bst`、官方示例、参考文献样式以及 `figures/` 下的版式素材。
+- 同步策略：旧版 `paper/template/` 的遗留文件已移除；模板根目录与源压缩包的解压内容保持一致。
+- 论文入口：`paper/main.tex` 使用 `template/gmcmthesis.cls`，正文图形仍从 `paper/figures/` 引用。
+- 记录日期：2026-09-25。
 
-更新模板时，请先在独立目录验证上游版本，再记录新的提交号、改动范围和编译结果。
+提交前仍应按当届组委会发布的最新格式要求复核封面、摘要、页码、篇幅和匿名规则。
