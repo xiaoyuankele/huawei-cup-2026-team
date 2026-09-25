@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="650" height="390" preserveAspectRatio="xMinYMin meet" viewBox="0 0 650 390" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="650" height="390"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-390)" style="clip-path: url(#clip)">
+		<g transform="">
+			<path d="M 205,65 L 205,340 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="202.497314453125" y="49" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,98) scale(1,-1)">0</text>
+			<path d="M 262.142857,65 L 262.142857,340 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="257.13748604910717" y="49" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,98) scale(1,-1)">10</text>
+			<path d="M 319.285714,65 L 319.285714,340 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="314.2803431919643" y="49" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,98) scale(1,-1)">20</text>
+			<path d="M 376.428571,65 L 376.428571,340 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="371.42320033482144" y="49" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,98) scale(1,-1)">30</text>
+			<path d="M 433.571429,65 L 433.571429,340 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="428.56605747767856" y="49" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,98) scale(1,-1)">40</text>
+			<path d="M 490.714286,65 L 490.714286,340 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="485.7089146205357" y="49" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,98) scale(1,-1)">50</text>
+			<path d="M 547.857143,65 L 547.857143,340 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="542.8517717633929" y="49" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,98) scale(1,-1)">60</text>
+			<path d="M 605,65 L 605,340 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="599.99462890625" y="49" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,98) scale(1,-1)">70</text>
+			<text x="88.291015625" y="84" style="font-family: WPCChinese; font-size: 10px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,168) scale(1,-1)">问答（stackexchange）</text>
+			<rect x="205" y="80" width="87.71428571428572" height="17" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,35%,53%); fill-rule: evenodd;"/>
+			<text x="299.7142857142857" y="84" style="font-family: WPCChinese; font-size: 8px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,168) scale(1,-1)">15.35%（10,000条）</text>
+			<text x="73.3203125" y="122" style="font-family: WPCChinese; font-size: 10px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,244) scale(1,-1)">网络抓取（commoncrawl）</text>
+			<rect x="205" y="118" width="153.17131001778307" height="17" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,35%,53%); fill-rule: evenodd;"/>
+			<text x="365.17131001778307" y="122" style="font-family: WPCChinese; font-size: 8px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,244) scale(1,-1)">26.80%（9,640条）</text>
+			<text x="113.8671875" y="160" style="font-family: WPCChinese; font-size: 10px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,320) scale(1,-1)">百科（wikipedia）</text>
+			<rect x="205" y="156" width="162.34285714285716" height="17" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,35%,53%); fill-rule: evenodd;"/>
+			<text x="374.34285714285716" y="160" style="font-family: WPCChinese; font-size: 8px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,320) scale(1,-1)">28.41%（10,000条）</text>
+			<text x="127.75390625" y="198" style="font-family: WPCChinese; font-size: 10px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,396) scale(1,-1)">代码（github）</text>
+			<rect x="205" y="194" width="191.25714285714287" height="17" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,35%,53%); fill-rule: evenodd;"/>
+			<text x="403.25714285714287" y="198" style="font-family: WPCChinese; font-size: 8px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,396) scale(1,-1)">33.47%（10,000条）</text>
+			<text x="124.4384765625" y="236" style="font-family: WPCChinese; font-size: 10px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,472) scale(1,-1)">网页语料（c4）</text>
+			<rect x="205" y="232" width="225.0857142857143" height="17" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,35%,53%); fill-rule: evenodd;"/>
+			<text x="437.0857142857143" y="236" style="font-family: WPCChinese; font-size: 8px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,472) scale(1,-1)">39.39%（10,000条）</text>
+			<text x="133.3154296875" y="274" style="font-family: WPCChinese; font-size: 10px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,548) scale(1,-1)">图书（book）</text>
+			<rect x="205" y="270" width="267.3350041771094" height="17" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,35%,53%); fill-rule: evenodd;"/>
+			<text x="479.3350041771094" y="274" style="font-family: WPCChinese; font-size: 8px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,548) scale(1,-1)">46.78%（171条）</text>
+			<text x="113.88671875" y="312" style="font-family: WPCChinese; font-size: 10px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,624) scale(1,-1)">学术论文（arxiv）</text>
+			<rect x="205" y="308" width="321.3530655391121" height="17" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,35%,53%); fill-rule: evenodd;"/>
+			<text x="533.3530655391121" y="312" style="font-family: WPCChinese; font-size: 8px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,624) scale(1,-1)">56.24%（1,419条）</text>
+			<text x="205" y="364" style="font-family: WPCChinese; font-size: 10px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,728) scale(1,-1)">A1抽样集：五维评价，固定20%与80%分位阈值</text>
+			<text x="356.109619140625" y="20" style="font-family: WPCChinese; font-size: 11px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,40) scale(1,-1)">候选冲突比例（%）</text>
+		</g>
+	</g>
+</svg>

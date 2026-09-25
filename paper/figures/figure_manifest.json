@@ -1,0 +1,28 @@
+{
+  "status": "exploratory_not_accepted",
+  "backend": "ReportLab vector drawing",
+  "fig1": {
+    "input": "results/conflict_summary.csv",
+    "partition": "A1_full",
+    "all_domains": true
+  },
+  "fig2": {
+    "input": "results/threshold_sensitivity.csv",
+    "fit": "A1_fit only",
+    "partitions": [
+      "A1_holdout",
+      "A2_new",
+      "A3_new"
+    ]
+  },
+  "fig3": {
+    "input": "results/lambda_sensitivity.csv",
+    "interpretation": "preference sensitivity, not accuracy or improvement"
+  },
+  "formats": [
+    "SVG editable text",
+    "PDF vector",
+    "PNG preview generated from SVG"
+  ],
+  "error_bars": "none; descriptive values, not population estimates"
+}

@@ -1,0 +1,8 @@
+{
+  "feedback_id": "FB-20260924-WPC-G2-001",
+  "target": "WP-B / T-Q1-004",
+  "finding": "源README-delivery.md为PARTIAL / REVIEW_BLOCKED，无PACKAGE_ACCEPTED运行及G2通过记录。",
+  "effect": "不能完成正式WP-C验收；bootstrap等新增正式实验暂不执行。",
+  "requested_action": "提供真实Peer Review、Integrator和accepted run证据；之后另立正式验证run。",
+  "status": "OPEN"
+}

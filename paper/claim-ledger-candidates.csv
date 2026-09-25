@@ -1,0 +1,6 @@
+claim_id,claim,run_id,evidence_path,row_or_field,evidence_level,status,peer_review,integrator
+WPC-C01,A1候选冲突率29.5218%,q1-conflict-trial-20260924-r01,experiments/runs/q1-conflict-trial-20260924-r01/results/conflict_summary.csv,partition=A1_full;domain=ALL,descriptive_trial,CANDIDATE_NOT_ACCEPTED,,
+WPC-C02,全量去重候选冲突90327条,q1-conflict-trial-20260924-r01,experiments/runs/q1-conflict-trial-20260924-r01/results/conflict_summary.csv,partition=union_unique;domain=ALL,descriptive_trial,CANDIDATE_NOT_ACCEPTED,,
+WPC-C03,候选分闭式解单调且有界,q1-conflict-trial-20260924-r01,experiments/runs/q1-conflict-trial-20260924-r01/validation/checks.json,range_and_bounds_checked;robust_vertex_solution_checked,mathematical_property,CANDIDATE_NOT_ACCEPTED,,
+WPC-C04,arxiv候选排序对原分相关0.6105,q1-conflict-trial-20260924-r01,experiments/runs/q1-conflict-trial-20260924-r01/results/lambda_sensitivity.csv,partition=A2_new;lambda=0.25,sensitivity_trial,CANDIDATE_NOT_ACCEPTED,,
+WPC-C05,阈值改变可改变域间相对排序,q1-conflict-trial-20260924-r01,experiments/runs/q1-conflict-trial-20260924-r01/results/threshold_sensitivity.csv,features=groups5;A2_new/A3_new,sensitivity_trial,CANDIDATE_NOT_ACCEPTED,,
