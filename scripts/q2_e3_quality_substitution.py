@@ -83,6 +83,8 @@ def main():
         S = A*N**(-alpha)
         small, ss = inverse(S, G, A, alpha)
         large, ls = inverse(S, G, A, alpha, True)
+        if G == 0:
+            small = large = float(N)
         return dict(N_required_B=small, required_status=ss, N_required_ratio=small/N,
                     required_in_B1=bool(nlo <= small <= nhi),
                     N_scale_equivalent_B=large, scale_status=ls, N_scale_ratio=large/N,
