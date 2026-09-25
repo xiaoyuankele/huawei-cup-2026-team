@@ -1,0 +1,1 @@
+{"python": "3.11.5", "mode": "read_only_external_diagnostic"}

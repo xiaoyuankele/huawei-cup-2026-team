@@ -1,0 +1,85 @@
+task_id: T-Q2-MIGRATION
+title: "问题二 A 到 B 迁移首轮 M0/M1 探索"
+status: PEER_REVIEW
+work_package: Q2-MIGRATION
+owner_actor: ACTOR-1
+peer_reviewer_actor: ACTOR-2
+release_integrator_actor: ACTOR-3
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: experiment
+priority: P1
+gate: G0
+inputs:
+  - ref: docs/decisions/q2-migration-integration-plan.md
+    purpose: "A-B迁移模式、数据契约和解锁条件"
+  - ref: docs/decisions/q2-problem-review.md
+    purpose: "问题二数据污染、B8方向和来源阻断"
+  - ref: scripts/q2_data_audit.py
+    purpose: "B1-B10只读数据审计"
+  - ref: data/origin/real_attachments/B_scaling_laws
+    purpose: "B1-B8本地原始附件，只读"
+  - ref: experiments/runs/q1-quality-migration-20260925-r01/metrics.json
+    purpose: "Q1候选质量域注入混合配方的角色变更审计；仅作条件输入"
+expected_outputs:
+  - path: scripts/q2_m0_m1_explore.py
+    description: "M0经典N-D基线和M1 B6质量敏感性探索脚本"
+  - path: experiments/runs/q2-m0-m1-20260925-r01/metrics.json
+    description: "分组留出、嵌套扩展和外部诊断指标"
+  - path: experiments/runs/q2-m0-m1-20260925-r01/data_manifest.yaml
+    description: "输入文件角色和SHA256"
+  - path: experiments/runs/q2-m0-m1-20260925-r01/config.yaml
+    description: "模型、切分、排除和验证配置"
+  - path: scripts/q2_bridge_interface_audit.py
+    description: "P1/P3 A16 域映射与 Q1 候选域分数的只读接口审计脚本"
+  - path: experiments/runs/q2-bridge-interface-20250925-r01/metrics.json
+    description: "映射覆盖、配方未映射权重和阻断原因"
+  - path: docs/decisions/q2-bridge-interface-results.md
+    description: "P1/P3 接口审计决策记录"
+  - path: scripts/q2_m2_bridge_sensitivity.py
+    description: "M2 未映射域条件情景包络脚本，不转换 B 的 Q_score"
+  - path: experiments/runs/q2-m2-sensitivity-20250925-r01/metrics.json
+    description: "Q1 候选域范围下的配方级 Q 情景敏感性"
+  - path: scripts/q2_b8_provenance_audit.py
+    description: "B6/B7/B8 来源、嵌套关系与质量方向只读审计脚本"
+  - path: experiments/runs/q2-b8-provenance-20250925-r01/metrics.json
+    description: "B8 来源和方向阻断证据包"
+  - path: scripts/q2_migration_gate_audit.py
+    description: "汇总 P0-P5 证据并执行正式联合迁移解锁检查"
+  - path: experiments/runs/q2-migration-gate-20250925-r01/metrics.json
+    description: "最终迁移门状态与剩余阻断项"
+  - path: docs/decisions/q2-migration-gate-results.md
+    description: "P0-P5 迁移证据与正式联合建模阻断决策"
+  - path: scripts/q2_m3_joint_model_preflight.py
+    description: "正式 M3 联合模型的失败即停输入契约预检"
+  - path: experiments/runs/q2-m3-preflight-20250925-r01/metrics.json
+    description: "M3 输入门检查结果，不启动拟合"
+  - path: docs/decisions/q2-m3-preflight-results.md
+    description: "正式联合模型输入契约与失败即停结果"
+  - path: docs/decisions/q2-unblock-evidence-register.md
+    description: "迁移解锁证据登记表"
+  - path: docs/decisions/q2-claim-boundaries.md
+    description: "当前可报告与禁止外推的主张边界"
+acceptance_criteria:
+  - "M0 B1 基线冻结审计通过，外部诊断与内部拟合分开记录"
+  - "M1 B6/B7 冻结审计通过，B7 扩展不作为独立验证"
+  - "B3 插值轨迹作为同源外部诊断单独记录，不冒充独立来源验证"
+  - "B4/B5 按 family/source 分层诊断，不池化外部来源并标记小样本组"
+  - "B9/B10 仅作外推范围和来源审计，不作为真实验证或拟合数据"
+  - "M0按B1参数规模分组留出，不随机拆散规模轨迹"
+  - "M1按B6的(N,D)单元分组，B7新增行只作嵌套扩展诊断"
+  - "B8、B9、B10不进入拟合"
+  - "所有输入文件记录SHA256，原始数据未修改"
+  - "结果标记为探索性，不写入最终论文主张"
+  - "P1/P3 接口审计保留 direct/near_direct/inferred 分层，不对 inferred 域插补"
+  - "M2 仅输出条件情景包络，不转换 B 的 Q_score，不进入 B 拟合"
+  - "B8 来源和方向审计完成，未通过解锁门槛"
+  - "最终迁移门保持 BLOCKED_FORMAL_JOINT_MIGRATION，未误报正式联合模型已解锁"
+  - "M3 预检失败即停，未在证据不足时启动正式拟合"
+definition_of_done:
+  - "run目录包含配置、命令、环境、提交号、manifest、metrics和README"
+  - "脚本通过编译并完成一次可复现实运行"
+  - "Peer Review确认M0/M1结果不解除A-B联合迁移阻断"
+notes: "本任务已执行 M0/M1、P1/P3、M2、P5 和最终迁移门审计；不生成Q1质量总分，不建立A-B逐行连接，不解除B8来源和方向阻断。"

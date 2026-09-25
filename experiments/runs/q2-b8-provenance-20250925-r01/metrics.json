@@ -1,0 +1,135 @@
+{
+  "run_id": "q2-b8-provenance-20250925-r01",
+  "status": "BLOCKED_B8_PROVENANCE_AND_DIRECTION",
+  "source_manifest_sha256": "34e81dabf46302eebaac8551fa18d2e72acd0833b1cf0276690bee897f1323db",
+  "files": {
+    "B6": {
+      "file": "supplementary_NQ_experiment.csv",
+      "bytes": 13670,
+      "sha256": "c7450ce0d67d8692535fef4709e60e2da60b2c184738bf96df160a4be0a33a7f",
+      "rows": 360,
+      "fields": [
+        "experiment_id",
+        "N_params_B",
+        "D_tokens_B",
+        "Q_score",
+        "val_loss"
+      ],
+      "data_type_counts": {
+        "missing": 360
+      },
+      "q_monotonicity": {
+        "groups": 45,
+        "loss_increase_when_q_increases": 80,
+        "loss_decrease_when_q_increases": 235,
+        "zero_steps": 0,
+        "mixed_groups": 43
+      },
+      "q_range": [
+        0.1,
+        1.0
+      ]
+    },
+    "B7": {
+      "file": "supplementary_NQ_experiment_expanded.csv",
+      "bytes": 17154,
+      "sha256": "880fd265ca3e1d9bc93b4559af7ed7c18f89040634266c50bae03d88486e0f3a",
+      "rows": 450,
+      "fields": [
+        "experiment_id",
+        "N_params_B",
+        "D_tokens_B",
+        "Q_score",
+        "val_loss"
+      ],
+      "data_type_counts": {
+        "missing": 450
+      },
+      "q_monotonicity": {
+        "groups": 90,
+        "loss_increase_when_q_increases": 82,
+        "loss_decrease_when_q_increases": 278,
+        "zero_steps": 0,
+        "mixed_groups": 43
+      },
+      "q_range": [
+        0.1,
+        1.0
+      ]
+    },
+    "B8": {
+      "file": "supplementary_NQ_experiment_large.csv",
+      "bytes": 81268,
+      "sha256": "bda0d449f75c73bbd04141e5cffbf4bea7002073e34b7fa95a638570fa095ffe",
+      "rows": 1704,
+      "fields": [
+        "experiment_id",
+        "N_params_B",
+        "D_tokens_B",
+        "Q_score",
+        "val_loss",
+        "data_type"
+      ],
+      "data_type_counts": {
+        "calibrated": 984,
+        "extrapolated": 720
+      },
+      "q_monotonicity": {
+        "groups": 150,
+        "loss_increase_when_q_increases": 1311,
+        "loss_decrease_when_q_increases": 2,
+        "zero_steps": 241,
+        "mixed_groups": 2
+      },
+      "q_range": [
+        0.05,
+        1.0
+      ]
+    }
+  },
+  "manifest_provenance": {
+    "B6": {
+      "manifest_entry_present": true,
+      "manifest_bytes": 13670,
+      "manifest_source": "Semi-synthetic, calibrated from Pythia training log + RegMix quality signals",
+      "manifest_note": "V5.29: 360 points (9N × 5D × 8Q); semi-synthetic supplement for N-D-Q interaction analysis.",
+      "source_present": true,
+      "note_present": true
+    },
+    "B7": {
+      "manifest_entry_present": true,
+      "manifest_bytes": 17154,
+      "manifest_source": null,
+      "manifest_note": null,
+      "source_present": false,
+      "note_present": false
+    },
+    "B8": {
+      "manifest_entry_present": true,
+      "manifest_bytes": 81268,
+      "manifest_source": null,
+      "manifest_note": null,
+      "source_present": false,
+      "note_present": false
+    }
+  },
+  "nested_relation": {
+    "b6_rows": 360,
+    "b7_rows": 450,
+    "b6_ids_in_b7": 360,
+    "b6_rows_exactly_reproduced_in_b7": 360,
+    "b7_extension_rows": 90
+  },
+  "blocking_flags": [
+    "B7_manifest_has_no_source_or_generation_note",
+    "B8_manifest_has_no_source_or_generation_note",
+    "B8_Q_direction_conflicts_with_B6_B7",
+    "B8_calibrated_and_extrapolated_rows_require_separate_semantics"
+  ],
+  "required_evidence_to_unlock": [
+    "B8 generator or reproducible construction formula and version",
+    "quality-score definition and direction for calibrated and extrapolated subsets",
+    "data_type split rule and calibration/extrapolation provenance",
+    "independent review that does not infer missing metadata from Loss behavior"
+  ]
+}

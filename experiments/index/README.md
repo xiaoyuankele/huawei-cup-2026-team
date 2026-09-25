@@ -11,10 +11,15 @@
 
 ## 已登记版本
 
-| version_id | table | source_commit | run_id | rows | status | PR | sha256 |
+| version_id | table | source_commit | scope | rows | status | PR | sha256 |
 |---|---|---|---|---:|---|---|---|
 | `q1-quality-mapping-soft-r02-v1` | [`versions/q1-quality-mapping-soft-r02-v1.csv`](versions/q1-quality-mapping-soft-r02-v1.csv) | `f5de761254973eeed30b13b887700ce62a966dbb` | `quality-mapping-20260925-r02-soft-handoff` | 1 | `REVIEW` | [#24](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/24) | `ace6b70e48211182134e69fbd589b2eeb26fcb323d4cb876755f50fa763fc8a1` |
+| `q2-migration-delivery-20250925-v1` | [`versions/q2-migration-delivery-20250925-v1.csv`](versions/q2-migration-delivery-20250925-v1.csv) | `c48737044831125745f8bc02583e41119afdcd38` | `12 个 Q2 migration audit run_id` | 12 | `REVIEW_BLOCKED` | [#23](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/23) | `3501d8a9ab5850ca542ad917432cb6819cb7903af366aca3c2b8e461862cccf4` |
 
 ## PR #24 的集成说明
 
 PR #24 的数据交付记录已经从共享聚合表拆出，独立保存在上面的 v1 版本中。合并时应保留当前 `main` 的 `experiments/index.csv`，再由主分支集成提交按本登记表追加或重新生成该记录；不要使用整文件 `ours` 或 `theirs` 覆盖另一侧。
+
+## PR #23 的集成说明
+
+PR #23 的 12 条 Q2 migration audit 记录已经独立保存在 `q2-migration-delivery-20250925-v1.csv` 中。PR 分支对 `experiments/index.csv` 的版本仅用于与当前 `main` 对齐，合并时不应把旧分支的聚合表覆盖回主分支。

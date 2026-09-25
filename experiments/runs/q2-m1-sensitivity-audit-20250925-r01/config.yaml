@@ -1,0 +1,5 @@
+run_id: q2-m1-sensitivity-audit-20250925-r01
+status: frozen_b6_b7_semisynthetic_exploratory
+source_run: q2-m0-m1-20260925-r01
+refit: false
+causal_claim: false

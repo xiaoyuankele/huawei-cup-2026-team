@@ -1,0 +1,11 @@
+run_id: q2-b8-provenance-20250925-r01
+source_files_read_only: true
+files:
+  supplementary_NQ_experiment.csv:
+    sha256: c7450ce0d67d8692535fef4709e60e2da60b2c184738bf96df160a4be0a33a7f
+  supplementary_NQ_experiment_expanded.csv:
+    sha256: 880fd265ca3e1d9bc93b4559af7ed7c18f89040634266c50bae03d88486e0f3a
+  supplementary_NQ_experiment_large.csv:
+    sha256: bda0d449f75c73bbd04141e5cffbf4bea7002073e34b7fa95a638570fa095ffe
+  source_manifest.json:
+    sha256: 34e81dabf46302eebaac8551fa18d2e72acd0833b1cf0276690bee897f1323db

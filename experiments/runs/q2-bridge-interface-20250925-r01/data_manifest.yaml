@@ -1,0 +1,28 @@
+run_id: q2-bridge-interface-20250925-r01
+source_files_read_only: true
+files:
+  domain_mapping_guide.csv:
+    sha256: 0ae884c0d16dcf77fe8411bdbe899ad7a0d487ffee73fba608c6d01b108401e7
+    role: A16 mapping contract
+  q1_domain_scores.csv:
+    path: experiments/runs/q1-critic-topsis-20260924-r01/tables/domain_scores.csv
+    sha256: 09744c302b9061aa8eb6b5da3fa25a39fd6362ae4a04b8fa3d193875f251dfd2
+    role: review-blocked candidate domain scores
+  train_mixture_1m.csv:
+    sha256: 04a32ef4ab594376bf90e11404c033668f887c351d6a03ad3744824c7296a2d8
+    role: A4 mixture diagnostic
+  test_mixture_1m.csv:
+    sha256: 197267b7d6f15367e2f46c881e564c35b0d34e51b1754bb09d07e650cf8e1ce8
+    role: A6 mixture diagnostic
+  test_mixture_60m.csv:
+    sha256: 197267b7d6f15367e2f46c881e564c35b0d34e51b1754bb09d07e650cf8e1ce8
+    role: A8 mixture diagnostic; identical hash to A6 input
+  test_mixture_1B.csv:
+    sha256: dd38052949c0a5f84165bdcb3ae3a331c7f07efd9bb83848bd579dfc4ce75a2c
+    role: A10 mixture diagnostic
+  est_mixture_10b.csv:
+    sha256: 7561999cb5d9e604e8be3873b18b93d92881fa2ae70f5f29ebc65a80cc6c2797
+    role: A12 mixture diagnostic
+  est_mixture_70b.csv:
+    sha256: 880c7ca1ebef470422e2b93d9bfcd0976db7db4e34ea57047518d95fe43327d1
+    role: A14 mixture diagnostic

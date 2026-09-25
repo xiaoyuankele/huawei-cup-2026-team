@@ -1,0 +1,31 @@
+run_id: q2-m0-m1-20260925-r01
+raw_root: data/origin/real_attachments/B_scaling_laws
+files:
+  pythia_training_log_existing.csv:
+    rows: 1176
+    sha256: 529a59644b0f57bf3a76037838b614bfedc35e58bb26b93052e34ffc63e454c2
+    role: M0_fit_and_grouped_validation
+  cerebras_training_log.csv:
+    rows: 1029
+    sha256: 178f878cad2cb31e4ec104c670553de23818197876d824a113fdb911125951a6
+    role: M0_external_diagnostic_only
+  scaling_baseline.csv:
+    rows: 57
+    sha256: 2272983ded93de35e05f9acbf95ebceedf43f283345e4be72b54fee94080391e
+    role: M0_external_diagnostic_only
+  published_scaling_data.csv:
+    rows: 44
+    sha256: dd858c5e48610e28589340d5db023d6abfb31df597506789ccdfc6a546731bbd
+    role: M0_external_diagnostic_only
+  supplementary_NQ_experiment.csv:
+    rows: 360
+    sha256: c7450ce0d67d8692535fef4709e60e2da60b2c184738bf96df160a4be0a33a7f
+    role: M1_fit_and_grouped_validation
+  supplementary_NQ_experiment_expanded.csv:
+    rows: 450
+    sha256: 880fd265ca3e1d9bc93b4559af7ed7c18f89040634266c50bae03d88486e0f3a
+    role: M1_nested_extension_diagnostic
+  supplementary_NQ_experiment_large.csv:
+    rows: 1704
+    sha256: bda0d449f75c73bbd04141e5cffbf4bea7002073e34b7fa95a638570fa095ffe
+    role: excluded_B8_provenance_and_direction_block
