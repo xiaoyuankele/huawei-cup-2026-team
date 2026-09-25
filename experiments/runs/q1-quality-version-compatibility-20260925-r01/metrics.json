@@ -1,0 +1,94 @@
+{
+  "schema_version": "q1.quality-version-compatibility.v1",
+  "run_id": "q1-quality-version-compatibility-20260925-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "d3f92c9acf68c625aa00fcad0f04b9fce4c0b168",
+  "status": "LOCAL_RESULT_PENDING_TEAM_REVIEW",
+  "canonical_reference": {
+    "remote": "origin/main",
+    "remote_commit": "aab095bf92dd5795bf0de2306e9f7b0cd8eebe21",
+    "manifest": "data/manifests/q1_quality_scores_delivery.yaml",
+    "primary_run_id": "q1-critic-topsis-20260924-r01",
+    "manifest_snapshot_status": "captured_from_origin_main"
+  },
+  "source_versions": {
+    "TOPSIS_CRITIC": {
+      "canonical_20260924": {
+        "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/domain_scores.csv",
+        "sha256": "09744c302b9061aa8eb6b5da3fa25a39fd6362ae4a04b8fa3d193875f251dfd2"
+      },
+      "local_20260925": {
+        "path": "experiments/runs/q1-critic-topsis-20260925-r01/tables/domain_scores.csv",
+        "sha256": "b9b8e124a2deb86904f139c3144c496c90a6e5cfcc858f26aa7e1768ffa0de43"
+      }
+    },
+    "CRITIC_SUM": {
+      "canonical_20260924": {
+        "path": "experiments/runs/q1-critic-sum-20260924-r02/tables/domain_scores.csv",
+        "sha256": "8ff95c151569d241d0e01710daf2a9c6a865579a175b355e547752d12fc7c33d"
+      },
+      "local_20260925": {
+        "path": "experiments/runs/q1-critic-sum-20260925-r01/tables/domain_scores.csv",
+        "sha256": "743558be133666ee4075975a4eb33345ecd0b0a6e8ef67b4a30b89038d605a82"
+      }
+    },
+    "EQUAL_SUM": {
+      "canonical_20260924": {
+        "path": "experiments/runs/q1-equal-sum-20260924-r02/tables/domain_scores.csv",
+        "sha256": "8892b40bde208df4a27dd5a42720002ce6b064f1a627b41c66eddae2e8087be6"
+      },
+      "local_20260925": {
+        "path": "experiments/runs/q1-equal-sum-20260925-r01/tables/domain_scores.csv",
+        "sha256": "d99306c4796b45bcd49e1cd065d95ece9a0442e3db500bc680760e8a4d76b5d0"
+      }
+    },
+    "TOPSIS_NO_3_COST": {
+      "canonical_20260924": {
+        "path": "experiments/runs/q1-topsis-no3cost-20260924-r01/tables/domain_scores.csv",
+        "sha256": "1bdd617b5f89efb37c2e3c4ef6604ea5f5d17722c8c1d2faa664a29dc58c8d9f"
+      },
+      "local_20260925": {
+        "path": "experiments/runs/q1-topsis-no3cost-20260925-r01/tables/domain_scores.csv",
+        "sha256": "631b041700fbd0702816e8afeefddb01291daec20f69194a05b1086b12b07688"
+      }
+    },
+    "TOPSIS_NO_DSIR": {
+      "canonical_20260924": {
+        "path": "experiments/runs/q1-topsis-nodsir-20260924-r01/tables/domain_scores.csv",
+        "sha256": "6b251d3c3164981165c5d6caddc9f2cdc9425253b16ce6b8a8fe5a7342aeb614"
+      },
+      "local_20260925": {
+        "path": "experiments/runs/q1-topsis-nodsir-20260925-r01/tables/domain_scores.csv",
+        "sha256": "3e536ba436f199e06c5f1ea10115d34bd3178f5e36ab3f309c1e84843cb0c44a"
+      }
+    },
+    "TOPSIS_WEIGHT_SQUARED": {
+      "canonical_20260924": {
+        "path": "experiments/runs/q1-topsis-wsquared-20260924-r01/tables/domain_scores.csv",
+        "sha256": "833cf0bf582077975cd436cc8f0b3186620da54e377336f7411e8eced7ec7a75"
+      },
+      "local_20260925": {
+        "path": "experiments/runs/q1-topsis-wsquared-20260925-r01/tables/domain_scores.csv",
+        "sha256": "8dc481bc385cd1d79dd9fe3c5d2b9814adbec537de33c59e4e734776ea553a02"
+      }
+    }
+  },
+  "comparison_scope": "A1/full domain means for six quality models; all seven quality domains retained",
+  "checks": {
+    "rows": 42,
+    "models": 6,
+    "domains": 7,
+    "max_abs_delta": 2.842170943040401e-14,
+    "all_within_1e-12": true
+  },
+  "output": {
+    "path": "experiments/runs/q1-quality-version-compatibility-20260925-r01/domain_score_version_comparison.csv",
+    "sha256": "fd0b4bbfbf82a4b2eee511fcc18d782028fe394fa9fedb3b94300b46ef936ccb"
+  },
+  "interpretation": [
+    "The local 20260925 domain means are numerically compatible with the canonical 20260924 means within 1e-12.",
+    "The source run IDs and hashes remain distinct and must not be silently rewritten.",
+    "Existing Q1 mixture-quality integration and baseline metrics do not require numerical refitting solely because origin/main advanced.",
+    "The quality-score delivery remains review-blocked and is not treated as accepted ground truth."
+  ]
+}

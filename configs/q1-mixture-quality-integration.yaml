@@ -1,0 +1,34 @@
+schema_version: q1.mixture-quality-integration.v1
+run_id: q1-mixture-quality-integration-20260925-r01
+task_id: T-Q1-003-MIXTURE
+status: local_result_pending_team_review
+mixture_source: experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_wide.csv
+quality_source_dataset: A1
+quality_source_subset: full
+quality_score_model_primary: TOPSIS_CRITIC
+quality_score_models:
+  - TOPSIS_CRITIC
+  - CRITIC_SUM
+  - EQUAL_SUM
+  - TOPSIS_NO_3_COST
+  - TOPSIS_NO_DSIR
+  - TOPSIS_WEIGHT_SQUARED
+quality_source_kind: sample_level_score_aggregated_by_domain
+mapping_source: data/origin/real_attachments/A_data_value/domain_mapping_guide.csv
+formulas:
+  mapped_quality_raw_0_100: sum(p_i * q_mapped_i)
+  mapped_mass: sum(p_i for mapped domains)
+  mapped_quality_renorm_0_100: mapped_quality_raw_0_100 / mapped_mass when mapped_mass > 0
+  unmapped_mass: 1 - mapped_mass
+  p_sum_normalized: sum(p_i)
+outputs:
+  wide: experiments/runs/q1-mixture-quality-integration-20260925-r01/mixture_quality_integration_wide.csv
+  long: experiments/runs/q1-mixture-quality-integration-20260925-r01/mixture_quality_contributions_long.csv
+  quality_reference: experiments/runs/q1-mixture-quality-integration-20260925-r01/quality_domain_reference.csv
+  mapping_audit: experiments/runs/q1-mixture-quality-integration-20260925-r01/mapping_audit.csv
+claim_ceiling:
+  - mapped_quality_is_a_partial_domain_quality_proxy
+  - unmapped_domains_are_not_imputed
+  - quality_score_sources_are_local_candidates_pending_team_review
+  - no_causal_quality_effect_or_optimal_mixture_claim
+  - A12_A15_are_extrapolation_scenarios_only

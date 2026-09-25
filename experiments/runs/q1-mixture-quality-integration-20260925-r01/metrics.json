@@ -1,0 +1,254 @@
+{
+  "schema_version": "q1.mixture-quality-integration.v1",
+  "run_id": "q1-mixture-quality-integration-20260925-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "d3f92c9acf68c625aa00fcad0f04b9fce4c0b168",
+  "status": "LOCAL_RESULT_PENDING_TEAM_REVIEW",
+  "inputs": {
+    "mixture_feature_table": {
+      "path": "experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_wide.csv",
+      "sha256": "9c9ca86b53440e118d7bae29f5d261121888ed5068c2044566dbdfecdc700250",
+      "rows": 1214,
+      "columns": [
+        "dataset",
+        "role",
+        "scale_label",
+        "total_scale_tokens",
+        "log10_scale",
+        "index",
+        "original_mixture_sum",
+        "p_train_the_pile_arxiv",
+        "tokens_train_the_pile_arxiv",
+        "p_train_the_pile_freelaw",
+        "tokens_train_the_pile_freelaw",
+        "p_train_the_pile_nih_exporter",
+        "tokens_train_the_pile_nih_exporter",
+        "p_train_the_pile_pubmed_central",
+        "tokens_train_the_pile_pubmed_central",
+        "p_train_the_pile_wikipedia_en",
+        "tokens_train_the_pile_wikipedia_en",
+        "p_train_the_pile_dm_mathematics",
+        "tokens_train_the_pile_dm_mathematics",
+        "p_train_the_pile_github",
+        "tokens_train_the_pile_github",
+        "p_train_the_pile_philpapers",
+        "tokens_train_the_pile_philpapers",
+        "p_train_the_pile_stackexchange",
+        "tokens_train_the_pile_stackexchange",
+        "p_train_the_pile_enron_emails",
+        "tokens_train_the_pile_enron_emails",
+        "p_train_the_pile_gutenberg_pg_19",
+        "tokens_train_the_pile_gutenberg_pg_19",
+        "p_train_the_pile_pile_cc",
+        "tokens_train_the_pile_pile_cc",
+        "p_train_the_pile_ubuntu_irc",
+        "tokens_train_the_pile_ubuntu_irc",
+        "p_train_the_pile_europarl",
+        "tokens_train_the_pile_europarl",
+        "p_train_the_pile_hackernews",
+        "tokens_train_the_pile_hackernews",
+        "p_train_the_pile_pubmed_abstracts",
+        "tokens_train_the_pile_pubmed_abstracts",
+        "p_train_the_pile_uspto_backgrounds",
+        "tokens_train_the_pile_uspto_backgrounds"
+      ]
+    },
+    "mapping_source": {
+      "path": "data/origin/real_attachments/A_data_value/domain_mapping_guide.csv",
+      "sha256": "0ae884c0d16dcf77fe8411bdbe899ad7a0d487ffee73fba608c6d01b108401e7"
+    },
+    "quality_sources": {
+      "TOPSIS_CRITIC": {
+        "path": "experiments/runs/q1-critic-topsis-20260925-r01/artifacts/sample_scores.csv",
+        "sha256": "4d3027f2624787f0ba5b575511254965379044a716dc37391ad3fd875ce846cc"
+      },
+      "CRITIC_SUM": {
+        "path": "experiments/runs/q1-critic-sum-20260925-r01/artifacts/sample_scores.csv",
+        "sha256": "48ebf00fcaf22fe7606d026c831ad90e6847391a4f93b748c6144746d651e997"
+      },
+      "EQUAL_SUM": {
+        "path": "experiments/runs/q1-equal-sum-20260925-r01/artifacts/sample_scores.csv",
+        "sha256": "22e966425c11e44db1043587a60ed17514b61083898cac18d77704a053ce45d5"
+      },
+      "TOPSIS_NO_3_COST": {
+        "path": "experiments/runs/q1-topsis-no3cost-20260925-r01/artifacts/sample_scores.csv",
+        "sha256": "867db0a04a88141b1dae6c5aa50a9c16879518220cfca72af31e97e2a27eed96"
+      },
+      "TOPSIS_NO_DSIR": {
+        "path": "experiments/runs/q1-topsis-nodsir-20260925-r01/artifacts/sample_scores.csv",
+        "sha256": "d6580518820cbf2c100f6fddee650c834d1b304f8a80a8179cb960c699930af1"
+      },
+      "TOPSIS_WEIGHT_SQUARED": {
+        "path": "experiments/runs/q1-topsis-wsquared-20260925-r01/artifacts/sample_scores.csv",
+        "sha256": "3be1bcd29d93aae6762c82ac5aeea63527999dd713bc3c17130a611e9c0684d7"
+      }
+    }
+  },
+  "quality_source": {
+    "dataset": "A1",
+    "subset": "full",
+    "aggregation": "mean sample quality_score grouped by domain"
+  },
+  "mapping_version": "A16-domain_mapping_guide@0ae884c0d16d",
+  "quality_score_version": "q1-scoring-20260925-r01",
+  "mapping": {
+    "total_mixture_domains": 17,
+    "mapped_domains": [
+      "arxiv",
+      "wikipedia_en",
+      "github",
+      "stackexchange",
+      "gutenberg_pg_19",
+      "pile_cc"
+    ],
+    "mapped_count": 6,
+    "coverage_fraction_by_domain": 0.35294117647058826,
+    "unmapped_domains": [
+      "freelaw",
+      "nih_exporter",
+      "pubmed_central",
+      "dm_mathematics",
+      "philpapers",
+      "enron_emails",
+      "ubuntu_irc",
+      "europarl",
+      "hackernews",
+      "pubmed_abstracts",
+      "uspto_backgrounds"
+    ]
+  },
+  "dataset_rows": {
+    "A4_A5_train_1m": 512,
+    "A6_A7_validation_1m": 256,
+    "A8_A9_validation_60m": 256,
+    "A10_A11_validation_1b": 64,
+    "A12_A13_extrapolation_10b": 63,
+    "A14_A15_extrapolation_70b": 63
+  },
+  "outputs": {
+    "wide": {
+      "path": "experiments/runs/q1-mixture-quality-integration-20260925-r01/mixture_quality_integration_wide.csv",
+      "sha256": "42d701c6facf14960cb88fec243d8318b187ee6b5a92c0ab753e2ed8bf0166d7",
+      "rows": 1214,
+      "columns": [
+        "dataset",
+        "role",
+        "scale_label",
+        "total_scale_tokens",
+        "log10_scale",
+        "index",
+        "original_mixture_sum",
+        "p_train_the_pile_arxiv",
+        "tokens_train_the_pile_arxiv",
+        "p_train_the_pile_freelaw",
+        "tokens_train_the_pile_freelaw",
+        "p_train_the_pile_nih_exporter",
+        "tokens_train_the_pile_nih_exporter",
+        "p_train_the_pile_pubmed_central",
+        "tokens_train_the_pile_pubmed_central",
+        "p_train_the_pile_wikipedia_en",
+        "tokens_train_the_pile_wikipedia_en",
+        "p_train_the_pile_dm_mathematics",
+        "tokens_train_the_pile_dm_mathematics",
+        "p_train_the_pile_github",
+        "tokens_train_the_pile_github",
+        "p_train_the_pile_philpapers",
+        "tokens_train_the_pile_philpapers",
+        "p_train_the_pile_stackexchange",
+        "tokens_train_the_pile_stackexchange",
+        "p_train_the_pile_enron_emails",
+        "tokens_train_the_pile_enron_emails",
+        "p_train_the_pile_gutenberg_pg_19",
+        "tokens_train_the_pile_gutenberg_pg_19",
+        "p_train_the_pile_pile_cc",
+        "tokens_train_the_pile_pile_cc",
+        "p_train_the_pile_ubuntu_irc",
+        "tokens_train_the_pile_ubuntu_irc",
+        "p_train_the_pile_europarl",
+        "tokens_train_the_pile_europarl",
+        "p_train_the_pile_hackernews",
+        "tokens_train_the_pile_hackernews",
+        "p_train_the_pile_pubmed_abstracts",
+        "tokens_train_the_pile_pubmed_abstracts",
+        "p_train_the_pile_uspto_backgrounds",
+        "tokens_train_the_pile_uspto_backgrounds",
+        "p_sum_normalized",
+        "mapping_version",
+        "quality_score_version",
+        "quality_topsis_critic_mapped_raw_0_100",
+        "quality_topsis_critic_mapped_mass",
+        "quality_topsis_critic_mapped_renorm_0_100",
+        "quality_critic_sum_mapped_raw_0_100",
+        "quality_critic_sum_mapped_mass",
+        "quality_critic_sum_mapped_renorm_0_100",
+        "quality_equal_sum_mapped_raw_0_100",
+        "quality_equal_sum_mapped_mass",
+        "quality_equal_sum_mapped_renorm_0_100",
+        "quality_topsis_no_3_cost_mapped_raw_0_100",
+        "quality_topsis_no_3_cost_mapped_mass",
+        "quality_topsis_no_3_cost_mapped_renorm_0_100",
+        "quality_topsis_no_dsir_mapped_raw_0_100",
+        "quality_topsis_no_dsir_mapped_mass",
+        "quality_topsis_no_dsir_mapped_renorm_0_100",
+        "quality_topsis_weight_squared_mapped_raw_0_100",
+        "quality_topsis_weight_squared_mapped_mass",
+        "quality_topsis_weight_squared_mapped_renorm_0_100",
+        "quality_score_model_primary",
+        "quality_mapped_raw_0_100",
+        "quality_mapped_mass",
+        "quality_mapped_renorm_0_100",
+        "quality_unmapped_mass",
+        "quality_feature_status"
+      ]
+    },
+    "long": {
+      "path": "experiments/runs/q1-mixture-quality-integration-20260925-r01/mixture_quality_contributions_long.csv",
+      "sha256": "21975d14217fb8f355ff60b6589ec4890a100a43762f152dcb737311f007b9d5",
+      "rows": 20638,
+      "columns": [
+        "mapping_version",
+        "quality_score_version",
+        "dataset",
+        "role",
+        "scale_label",
+        "total_scale_tokens",
+        "log10_scale",
+        "index",
+        "mixture_domain",
+        "proportion",
+        "quality_domain",
+        "mapping_type",
+        "mapped",
+        "quality_model",
+        "quality_score_0_100",
+        "quality_contribution_0_100",
+        "quality_contribution_status"
+      ]
+    },
+    "quality_reference": {
+      "path": "experiments/runs/q1-mixture-quality-integration-20260925-r01/quality_domain_reference.csv",
+      "sha256": "9b6c7666768954b9e977f3b79faed83e186db5959a493eace93a17139a3fcad9",
+      "rows": 54
+    },
+    "mapping_audit": {
+      "path": "experiments/runs/q1-mixture-quality-integration-20260925-r01/mapping_audit.csv",
+      "sha256": "6d692cbee42246bad69975e9f0a04163f0feab36c3d1278e11fc2eb07b0493e2",
+      "rows": 17
+    }
+  },
+  "checks": {
+    "normalized_mixture_row_sum_max_abs_error": 1.5543122344752192e-15,
+    "long_rows_equal_wide_rows_times_domains": true,
+    "wide_index_unique_within_dataset": true,
+    "primary_quality_score_range": [
+      51.68931209513098,
+      66.00211266187863
+    ]
+  },
+  "limitations": [
+    "The integrated quality is a partial mapped proxy because only six of seventeen mixture domains have direct or near-direct A16 mappings.",
+    "Unmapped domains are not imputed and mapped_quality_renorm is a sensitivity feature, not a full corpus quality score.",
+    "Quality score runs are local candidates pending team review; no causal quality effect or optimal mixture is claimed.",
+    "A12-A15 remain extrapolation scenarios and are not independent validation samples."
+  ]
+}

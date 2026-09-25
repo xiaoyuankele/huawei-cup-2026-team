@@ -1,0 +1,12 @@
+mixture_domain,quality_domain,mapping_type,a1_source_domain_present,evidence_state,required_next_evidence,current_action
+dm_mathematics,(none),inferred,False,blocked_no_domain_specific_quality_sample,domain-specific quality sample or validated transfer rule,retain_unmapped_no_imputation
+freelaw,(none),inferred,False,blocked_no_domain_specific_quality_sample,domain-specific quality sample or validated transfer rule,retain_unmapped_no_imputation
+nih_exporter,(none),inferred,False,blocked_no_domain_specific_quality_sample,domain-specific quality sample or validated transfer rule,retain_unmapped_no_imputation
+pubmed_central,(none),inferred,False,blocked_no_domain_specific_quality_sample,domain-specific quality sample or validated transfer rule,retain_unmapped_no_imputation
+philpapers,(none),inferred,False,blocked_no_domain_specific_quality_sample,domain-specific quality sample or validated transfer rule,retain_unmapped_no_imputation
+enron_emails,(none),inferred,False,blocked_no_domain_specific_quality_sample,domain-specific quality sample or validated transfer rule,retain_unmapped_no_imputation
+ubuntu_irc,(none),inferred,False,blocked_no_domain_specific_quality_sample,domain-specific quality sample or validated transfer rule,retain_unmapped_no_imputation
+europarl,(none),inferred,False,blocked_no_domain_specific_quality_sample,domain-specific quality sample or validated transfer rule,retain_unmapped_no_imputation
+hackernews,(none),inferred,False,blocked_no_domain_specific_quality_sample,domain-specific quality sample or validated transfer rule,retain_unmapped_no_imputation
+pubmed_abstracts,(none),inferred,False,blocked_no_domain_specific_quality_sample,domain-specific quality sample or validated transfer rule,retain_unmapped_no_imputation
+uspto_backgrounds,(none),inferred,False,blocked_no_domain_specific_quality_sample,domain-specific quality sample or validated transfer rule,retain_unmapped_no_imputation

@@ -1,0 +1,82 @@
+schema_version: q1.quality_scores.visibility.v1
+task_id: T-Q1-004
+run_id: q1-critic-topsis-20260924-r01
+status: REVIEW_BLOCKED
+needs_human_review: true
+
+# A1, A2 and A3 are all scored. Duplicate IDs are retained for the all-record
+# tables and removed only for the unique-union aggregation.
+coverage:
+  A1: 51230
+  A2: 17523
+  A3: 203752
+  all_record_rows: 272505
+  unique_union_rows: 261086
+
+public_git:
+  rule: aggregate_scores_and_provenance_only
+  tables:
+    - experiments/runs/q1-critic-topsis-20260924-r01/tables/domain_scores.csv
+    - experiments/runs/q1-critic-topsis-20260924-r01/tables/corpus_scores.csv
+    - experiments/runs/q1-critic-topsis-20260924-r01/tables/full_vs_A1.csv
+    - experiments/runs/q1-critic-topsis-20260924-r01/tables/extended_vs_A1.csv
+    - experiments/runs/q1-critic-topsis-20260924-r01/tables/model_weights.csv
+    - experiments/runs/q1-critic-topsis-20260924-r01/tables/indicator_parameters.csv
+    - experiments/runs/q1-critic-topsis-20260924-r01/tables/full_record_normalization_support.csv
+    - experiments/runs/q1-critic-topsis-20260924-r01/tables/fit_pearson_correlation.csv
+    - experiments/runs/q1-critic-topsis-20260924-r01/tables/model_sensitivity.csv
+    - experiments/runs/q1-critic-topsis-20260924-r01/tables/all_models_cohort_domain.csv
+  metadata:
+    - experiments/runs/q1-critic-topsis-20260924-r01/run_manifest.json
+    - data/manifests/q1_scoring.json
+    - experiments/index.csv
+  excluded:
+    - data/processed/q1_X_norm_v2.csv
+    - experiments/runs/q1-critic-topsis-20260924-r01/artifacts/sample_scores.csv
+    - experiments/runs/q1-critic-topsis-20260924-r01/artifacts/unique_sample_scores.csv
+
+team_internal_controlled:
+  package_id: q1-critic-topsis-full-derived-internal-20260924
+  file_name: 02_完整派生数据包_仅团队内部.zip
+  bytes: 98499927
+  sha256: A027356B2354CF6F4D396DE9208DF870FEF3810870534163B50F4B9F55591ED5
+  file_count: 8
+  delivery_channel: controlled_team_channel
+  contents:
+    - path: data/processed/q1_X_norm_v2.csv
+      bytes: 82849387
+      sha256: 0c61e680e0ea086976334670166cbccbdf9520541a9eb80aaf3b098a5cfb465a
+    - path: experiments/runs/q1-critic-topsis-20260924-r01/artifacts/sample_scores.csv
+      bytes: 32465320
+      sha256: 66bea0fbb349a3e21c69737288bceab92fedb3f84631b0bc18288834547ea911
+    - path: experiments/runs/q1-critic-topsis-20260924-r01/artifacts/unique_sample_scores.csv
+      bytes: 20692131
+      sha256: f7148769aac33e8e4e70662e6468f2fb7e05b85dc69901c4b2e33d2ad2b75c22
+    - path: experiments/runs/q1-critic-sum-20260924-r02/artifacts/sample_scores.csv
+      bytes: 21625402
+      sha256: 8c0c4a4f1f106ddb14597be3df8287a2a1aeb863e6c1350e0353a0098d992b4b
+    - path: experiments/runs/q1-equal-sum-20260924-r02/artifacts/sample_scores.csv
+      bytes: 21618554
+      sha256: 5da8b373d49857960c688bf199417abff2bf4015dfdb4b675eebb1af01a8c0fc
+    - path: experiments/runs/q1-topsis-no3cost-20260924-r01/artifacts/sample_scores.csv
+      bytes: 32464731
+      sha256: 71ef2bfd25a8e2fb952099a718174422dcfc4b2a9fcea7d34a9021027fda8de5
+    - path: experiments/runs/q1-topsis-nodsir-20260924-r01/artifacts/sample_scores.csv
+      bytes: 32465288
+      sha256: 32f2e4279acb8106eefcc7caf4213884c8216c3627704105e9af763686c5bc3c
+    - path: experiments/runs/q1-topsis-wsquared-20260924-r01/artifacts/sample_scores.csv
+      bytes: 32465649
+      sha256: 9f153f0ad911af38d71624bfcbd3a8c00f6d25304d82d8e098ce8244fe32e2d0
+
+provenance:
+  normalized_matrix_sha256: 0c61e680e0ea086976334670166cbccbdf9520541a9eb80aaf3b098a5cfb465a
+  preprocessing_manifest: data/manifests/q1_preprocessed.yaml
+  preprocessing_run_id: q1-indicator-normalization-20260924-r02
+  computation_source_commit: 3c7d3512301df6899d293e69a856027c7a4c530b
+  public_branch_base: 80b163a16075d4e947b19b400ce1f6515e200c6b
+  version_note: The controlled package is the scored result produced from the recorded computation commit; this public delivery is layered on the recorded WP-B branch base and does not imply a recomputation.
+
+policy:
+  public_boundary: docs/tasks/WP-B-delivery.yml
+  data_policy: governance/prompts/catalog/P-DATA-001.md
+  rationale: Complete matrices and per-record scores remain in controlled team storage; Git contains public aggregate evidence and provenance.
