@@ -1,0 +1,41 @@
+% !Mode:: "TeX:UTF-8"
+%!TEX program = xelatex
+% 问题四独立编译入口：在 Overleaf 中将 paper/ 目录作为项目根目录，
+% 选择 XeLaTeX 编译本文件即可。正文也可从 main.tex 通过 \input 接入总论文。
+\documentclass[bwprint]{template/gmcmthesis}
+
+\hypersetup{hidelinks}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{subfig}
+\usepackage{siunitx}
+\usepackage{colortbl}
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithmicx,algorithm}
+\usepackage{amsmath,amssymb,booktabs,graphicx}
+\graphicspath{{./}{figures/q4/}{template/figures/}}
+\input{commands.tex}
+
+\title{问题四：稀疏短期模型评测数据下的前沿能力预测}
+\baominghao{待填写正式队伍编号}
+\schoolname{学校名称填写}
+\membera{成员 A}
+\memberb{成员 B}
+\memberc{成员 C}
+
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本文针对可比评测月份较少、模型横截面高度不均衡的前沿预测问题，基于附件 C 的 Open LLM Leaderboard 数据重算详细 C8 六任务等权分数，并比较滚动基线、时间外面板分位数模型和十二个月算力情景。主分析覆盖 2024 年 6 月至 2025 年 3 月，按月份进行 70/30 时间切分。全类型 C8 q95 的 $h=1$ 最佳滚动基线 MAE=0.852、RMSE=0.860、普通 $R^2=0.700$，但测试点只有 3 个；截面 q95 模型的 pinball loss=0.559、普通测试 $R^2=-0.425$。在基准类型构成下，1.0、2.3 和 5.0 倍算力的十二个月平台型/趋势型前沿分别约为 58.18/69.68、61.28/72.78 和 64.20/75.71 分。结果支持把问题四表述为经时间外校准的情景比较框架，而不是单一长期点预测；问题三的规模弹性仅作为情景层的外生输入。
+\keywords{大语言模型\quad C8 评测\quad 前沿预测\quad 分位数回归\quad 算力情景}
+\end{abstract}
+
+\pagestyle{plain}
+\input{sections/drafts/q4-frontier-prediction.tex}
+
+\end{document}
+
