@@ -1,0 +1,35 @@
+{
+  "figure_id": "fig_q3_m2p_interface_cn_single_v2",
+  "title": "M2/P 接口映射造成的条件资源配置变化（中文单张图）",
+  "source_run": "experiments\\runs\\q2-q3-interface-sensitivity-20260926-r01",
+  "source_csv": "experiments\\runs\\q2-q3-interface-sensitivity-20260926-r01\\tables\\m2_q3_interface_summary.csv",
+  "source_csv_sha256": "f410270c93b2fefed1af2f56463786835740354d701d802e3b503750a150407e",
+  "filter": {
+    "cost_family": "exponential",
+    "Lctx": 2048,
+    "budget_flops": 1e+22,
+    "candidate_count": 6
+  },
+  "mapping_scenarios": [
+    "M2_partial_raw",
+    "M2_interval_low",
+    "M2_interval_mid",
+    "M2_partial_renorm",
+    "M2_interval_high"
+  ],
+  "outputs": [
+    "fig_q3_m2p_interface_cn_single_v2.pdf",
+    "fig_q3_m2p_interface_cn_single_v2.png",
+    "fig_q3_m2p_interface_cn_single_v2.svg",
+    "fig_q3_m2p_interface_cn_single_v2.tiff"
+  ],
+  "source_script": "scripts/plot_q3_m2p_interface_cn.py",
+  "source_script_sha256": "8254285e8de5a8ca7c3e35e43d2895fc2ff50e37610f87b134b45618b46a81c0",
+  "qa_status": "LOCAL_RENDERED_PENDING_PEER_REVIEW",
+  "output_sha256": {
+    "fig_q3_m2p_interface_cn_single_v2.pdf": "8c3ded63d4f268b4effddd304e27115aa13807d7adb2fd5b766865bfb36f4a7c",
+    "fig_q3_m2p_interface_cn_single_v2.png": "1a9562aaa3b7793abce9f49213cd15e81d893eb80796e143135826d90b07c64a",
+    "fig_q3_m2p_interface_cn_single_v2.svg": "dd9adfbd6661e3f64402c5e8596e26da7d97b3f0ab9b7317c3163d5abc4c0d53",
+    "fig_q3_m2p_interface_cn_single_v2.tiff": "7e8b5f9eb4a343ceb8cd6b6767d6af9de89df8766ea37e3982a13c0965aa1990"
+  }
+}

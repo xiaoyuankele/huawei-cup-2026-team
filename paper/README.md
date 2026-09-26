@@ -32,3 +32,7 @@ latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
 ## Q1 质量评价图组
 
 [六张 Nature 风格图、中文图注及 LaTeX 引图片段](figures/q1-critic-topsis/nature-v1/README.md)。图表来源、复现脚本和审核状态均已回链；当前为写作候选素材，正式纳入正文按团队验收流程处理。
+
+## Q3 中文单张图候选包
+
+[问题三五张中文单坐标图、图形契约、来源哈希和复现入口](figures/q3-conditional/README.md)。图形覆盖 M0 的 N-D 基线与预算敏感性、M1 的原生 $Q_B$ 条件优化及上下文成本结构、M2/P 接口敏感性；当前状态为候选素材，正式正文接入须经独立复核。
