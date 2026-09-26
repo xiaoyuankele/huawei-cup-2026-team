@@ -1,0 +1,42 @@
+{
+  "figure_id": "fig_q3_m0_nd_budget_cn_single_v1",
+  "title": "预算变化下 M0 的有界最优配置（中文单图）",
+  "source_run": "q3-nd-baseline-20260925-r01",
+  "source_csv": "experiments\\runs\\q3-nd-baseline-20260925-r01\\tables\\q3_nd_baseline_scenarios.csv",
+  "source_csv_sha256": "1e4e11e62679cc99183a53e15c14edb94469b0ea80b18c7f2a117dedd4d45cbc",
+  "metrics": "experiments\\runs\\q3-nd-baseline-20260925-r01\\metrics.json",
+  "metrics_sha256": "3080c54d4af0db20586ca2cbb5817fea6fc200a400d8814d7facecb05536ac6c",
+  "rows": 15,
+  "budgets_flops": [
+    1e+19,
+    1e+22,
+    1e+24
+  ],
+  "contexts": [
+    2048,
+    4096,
+    8192,
+    32768,
+    131072
+  ],
+  "visual_semantics": {
+    "open_circle": "bounded solution inside B1 support",
+    "filled_square": "bounded solution at B1 support boundary",
+    "dashed_horizontal": "B1 observed upper support bound"
+  },
+  "outputs": [
+    "fig_q3_m0_nd_budget_cn_single_v1.svg",
+    "fig_q3_m0_nd_budget_cn_single_v1.pdf",
+    "fig_q3_m0_nd_budget_cn_single_v1.png",
+    "fig_q3_m0_nd_budget_cn_single_v1.tiff"
+  ],
+  "source_script": "scripts/plot_q3_m0_nd_budget_cn.py",
+  "source_script_sha256": "d3d3fe9104bb1ab0fa2327e69f5348f7d93e6774c43472a8bda57d4fe96421f0",
+  "qa_status": "LOCAL_RENDERED_PENDING_PEER_REVIEW",
+  "output_sha256": {
+    "fig_q3_m0_nd_budget_cn_single_v1.svg": "a58bf84655658168b13a0d28464eb9b953a1cd4ce784c12f4bf5aa0100333954",
+    "fig_q3_m0_nd_budget_cn_single_v1.pdf": "5b113175929f54bb3bc0370c840ca9b5e97e351836e235ca2301c08762a50570",
+    "fig_q3_m0_nd_budget_cn_single_v1.png": "d2541d6740e261f1b98ea365562372bde10743a7e77b878ac87bb536d8c79b56",
+    "fig_q3_m0_nd_budget_cn_single_v1.tiff": "335f3c56ff500df2b485952c4a40212078dac5a3fde4f5c6edb7c048ad6849b3"
+  }
+}
