@@ -60,7 +60,8 @@ def main():
     sens=[]
     for N,D in itertools.product(ngrid,dgrid):
         base=float(scale_loss(N,D))
-        for param,rel in itertools.product(['alpha','beta'],cfg[param+'_relative_perturbations']):
+        for param in ['alpha','beta']:
+          for rel in cfg[param+'_relative_perturbations']:
             aa=alpha*(1+rel) if param=='alpha' else alpha; bb=beta*(1+rel) if param=='beta' else beta
             val=float(scale_loss(N,D,aa,bb))
             sens.append(dict(N_params_B=N,D_tokens_B=D,perturbed_parameter=param,relative_change=rel,
