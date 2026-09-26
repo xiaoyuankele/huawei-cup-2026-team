@@ -1,0 +1,20 @@
+run_id: q4-frontier-20260926-r01
+task_id: T-Q4-001
+status: REVIEW
+seed: 20260925
+source_period: [2024-06, 2025-03]
+score_primary: "详细 JSON 六任务一级指标等权均值，乘 100"
+score_sensitivity: "榜单 Average"
+frontier_quantiles: [0.90, 0.95]
+time_split:
+  train: 2024
+  test: 2025
+monthly_rolling_min_train: [3, 5]
+compute_growth_annual: [0.0, 0.25, 0.5]
+forecast_horizon_months: [12, 24]
+bootstrap:
+  monthly_cross_section_draws: 2000
+  organization_proxy_draws: 100
+time_placebo_permutations: 100000
+raw_outputs: artifacts/
+public_aggregate_outputs: metrics/

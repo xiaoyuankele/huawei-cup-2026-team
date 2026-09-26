@@ -1,0 +1,131 @@
+{
+  "package": "Q4 manuscript package",
+  "version": "q4-system-20260926-r01",
+  "files": [
+    {
+      "path": "commands.tex",
+      "bytes": 172,
+      "sha256": "96c10becc5942d76a7f01847ac0ef53204c8276efc0e509fd3b66111f831338b"
+    },
+    {
+      "path": "docs/research/q4/q4_manuscript_draft_zh.md",
+      "bytes": 20112,
+      "sha256": "c13ad5bf2b95154608b7cba7597a8a784a8cd48170b5fac142a924a977cd0ab7"
+    },
+    {
+      "path": "figures/q4/captions.md",
+      "bytes": 1791,
+      "sha256": "1726f005ef231999419a8c2f88968c5c17c7e9d8cae4454815a4b895742276c6"
+    },
+    {
+      "path": "figures/q4/FigQ4_01_frontier_validation.pdf",
+      "bytes": 72125,
+      "sha256": "62b4af9c8e465aa39108054f00518613885006142d841c1c7b586311263f78f1"
+    },
+    {
+      "path": "figures/q4/FigQ4_02_12m_scenarios.pdf",
+      "bytes": 55197,
+      "sha256": "d2f8eb93da7686c9a19d4799f5b9cff3ed0b99156980ce6527bd5878cef99a88"
+    },
+    {
+      "path": "figures/q4/FigQ4_03_workflow.pdf",
+      "bytes": 52042,
+      "sha256": "80cc23cb901dadbf5a03bcb075b77ec03b02af541d73afe3b26e6403b7cb2308"
+    },
+    {
+      "path": "figures/q4/figure_contract.md",
+      "bytes": 1480,
+      "sha256": "0eda28822d67770a588e7fbeb8693a7cbe4ae78ac9f45cc2d5dc9b09cb98f073"
+    },
+    {
+      "path": "figures/q4/qa_report.md",
+      "bytes": 1057,
+      "sha256": "0a13bb8dca6aa6fa2d5be1de17889499c57307a34378ff490c8aabe02fa7e662"
+    },
+    {
+      "path": "figures/q4/README.md",
+      "bytes": 1722,
+      "sha256": "a215c7ad6ac39f86ac2b29de89a6610684196c881ca1b0216a7c85ab8c3d0d8d"
+    },
+    {
+      "path": "figures/q4/source_data/q4_boot.csv",
+      "bytes": 941,
+      "sha256": "25ed5c25c9c55764f154f771aed1895485d5f16505bd1f7a1c53e3e6e2bab998"
+    },
+    {
+      "path": "figures/q4/source_data/q4_composition.csv",
+      "bytes": 967,
+      "sha256": "244b37120d286d644856d3357eccffd570de43965c68db8e7a15dec14d65bd3c"
+    },
+    {
+      "path": "figures/q4/source_data/q4_exclusions.csv",
+      "bytes": 100,
+      "sha256": "570f4c11726a0deb36edfc320e6933a46b34dfc10bc9cb46fda627ffa7687898"
+    },
+    {
+      "path": "figures/q4/source_data/q4_monthly_avg.csv",
+      "bytes": 387,
+      "sha256": "495fe5170c297c43c5ed4ec96853100c8fcf25eef895069374c03245a44340c8"
+    },
+    {
+      "path": "figures/q4/source_data/q4_monthly_c8.csv",
+      "bytes": 427,
+      "sha256": "860f96e912364eadd3af85a6c87446afaff582ffbd917ed3cdbf548de6502405"
+    },
+    {
+      "path": "figures/q4/source_data/q4_rolling.csv",
+      "bytes": 2713,
+      "sha256": "aca5fa44232e683db0da13e69c659f2735d019d9206f153c44e072bee599716e"
+    },
+    {
+      "path": "figures/q4/source_data/q4_scenarios.csv",
+      "bytes": 10918,
+      "sha256": "978d82761d08c2e8e2846d0a0ce88b7669fbef1705bad749d4453b3430c33ef0"
+    },
+    {
+      "path": "figures/q4/source_data/q4_task.csv",
+      "bytes": 585,
+      "sha256": "46967514e8ec8efb3c5d6ec1591171ced0b7c33024c6e0fe54a319db957703d6"
+    },
+    {
+      "path": "Q4-OVERLEAF-README.md",
+      "bytes": 1181,
+      "sha256": "d2755713d3db8fb1a5d70ca56f2cde54845ade7ca06087dd9f9b3791cc3dcf8f"
+    },
+    {
+      "path": "q4-overleaf.tex",
+      "bytes": 2051,
+      "sha256": "e51f63583cc1cd9356aa033034f96aec57bf25e5a12a82c1145099c44d780510"
+    },
+    {
+      "path": "README.md",
+      "bytes": 807,
+      "sha256": "34b54d71cf78de903ac77b7588659bee8829f3bae749457af43f538c2536574e"
+    },
+    {
+      "path": "sections/drafts/q4-frontier-prediction.tex",
+      "bytes": 10148,
+      "sha256": "efafce80db16a48217642b8bfc7254d9585579227a70e02b37e9d69617d7df53"
+    },
+    {
+      "path": "template/figures/abstract-header2026.pdf",
+      "bytes": 43741,
+      "sha256": "91e709b64f51d98172a75bbd67cad1f6b51b532fd1a86e19de7d8a310b03d22b"
+    },
+    {
+      "path": "template/figures/cover2026.pdf",
+      "bytes": 257362,
+      "sha256": "1b8f1fa89e6cdba8aec6a9a17474eca252483e1f30c549a8914ed2d53f336314"
+    },
+    {
+      "path": "template/figures/keywords2026.pdf",
+      "bytes": 43750,
+      "sha256": "f1403443238369fa56fbfd85922cf45e9f0dba1d95df5bbc105c0145bb0d0abf"
+    },
+    {
+      "path": "template/gmcmthesis.cls",
+      "bytes": 22178,
+      "sha256": "0cbc401c5d71b8bcd2ae06155f57abebd1438870590e455f5bdc318e540f8038"
+    }
+  ]
+}

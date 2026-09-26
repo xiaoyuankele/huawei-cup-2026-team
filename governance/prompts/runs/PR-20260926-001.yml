@@ -1,0 +1,19 @@
+prompt_run_id: PR-20260926-001
+task_id: T-Q4-001
+prompt_id: P-EXP-001
+prompt_version: v1.0.0
+owner: B
+device_id: DEVICE-LOCAL-CODEX
+date: 2026-09-26
+tool: Codex desktop
+model: GPT-6
+provider: OpenAI
+input_summary: "问题四附件 C 的短期稀疏能力前沿实验；用户要求审计、基线、误差和仓库交付。省略题面与原始记录。"
+output_ref: experiments/runs/q4-frontier-20260926-r01/metrics.json
+output_sha256: ec042edfebc3bc307ea11ad85afb8d235be9babbb176f412d074a93f4df72bf2
+git_commit: d132944a334dc34f2f95c2f738e01db936d05e37
+needs_human_review: true
+status: REVIEW
+reviewer: A
+failure_or_limitations: "仅 10 个月可比数据；未来 12/24 个月为情景；训练算力和数据量不可完整识别。"
+next_action: "Owner 核对评分口径、复现运行与公开范围；Reviewer A 审核技术主张。"
