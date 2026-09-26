@@ -1,0 +1,46 @@
+{
+  "run_id": "q2-e4-b9-b10-extrapolation-20260926-r01",
+  "task_id": "T-Q2-E4",
+  "model": "experiments/runs/q2-model-finalization-20250925/model_parameters.json",
+  "b9_b10_audit": "experiments/runs/q2-b9-b10-extrapolation-audit-20250925-r01/metrics.json",
+  "e3_support": "experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/quality_path_support.csv",
+  "N_grid_B": [
+    0.1,
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0
+  ],
+  "D_grid_B": [
+    0.1,
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0,
+    36000.0
+  ],
+  "lambda_Q": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "quality_cases": [
+    "reference",
+    "feasible_99pct",
+    "formal_coordinate"
+  ],
+  "alpha_relative_perturbations": [
+    -0.1,
+    0.1
+  ],
+  "beta_relative_perturbations": [
+    -0.1,
+    0.1
+  ],
+  "interpretation": "Range-conditioned extrapolation only; B9/B10 row-level files and Loss values are not available in the published repository",
+  "fit_new_parameters": false,
+  "use_b9_b10_as_validation": false,
+  "seed": null
+}
