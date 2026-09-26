@@ -29,3 +29,6 @@ latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 提交前请在 `main.tex` 中填写队伍编号、学校和三名成员信息，并根据当届组委会要求复核封面、摘要、页码、篇幅和匿名规则。论文中的数字应能追溯到 `experiments/runs/` 中的 `run_id`。
+## 问题三独立审阅稿
+
+问题三当前以独立候选稿形式维护，入口和编译说明见 [`Q3-CONDITIONAL-README.md`](Q3-CONDITIONAL-README.md)。由于任务卡仍处于 `REVIEW_BLOCKED`，稿件暂不接入 `main.tex`；使用时须保留 `Q3-CONDITIONAL-INTERFACE-v1.0.0` 版本标签、对应 `run_id` 和条件性证据边界。

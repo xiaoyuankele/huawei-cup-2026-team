@@ -1,0 +1,192 @@
+% 问题三子问题二候选正文。
+% 仅使用 B6/B7 原生 Q_B 条件模型及已登记的 Q3 优化运行；
+% 当前稿件待科学评审，不直接修改 paper/main.tex。
+
+\subsection{问题三子问题二：M1 的规模--数据量--质量条件优化}
+\label{sec:q3-subproblem2}
+
+\subsubsection{问题分析与变量界定}
+
+子问题二在问题二 M1 的基础上，将质量资源作为第三个决策变量。本文记该变量为
+$Q_B$，它是 B6/B7 数据表中的原生 \texttt{Q\_score}，不是问题一得到的
+A 侧质量变量 $Q_A$。因此，$Q_B$ 只在 B6/B7 条件模型内部解释为质量分数，
+不能与 $Q_A$ 直接相等，也不能把两个量尺合并成一个已验证的质量变量。
+
+M1 的三个决策变量为模型规模 $N$、训练数据量 $D$ 和原生质量分数 $Q_B$。
+其中 $N$ 和 $D$ 分别以十亿参数和十亿 tokens 计，$Q_B$ 的观测范围为
+$[0.1,1.0]$。$N$ 和 $D$ 的有界范围取自 B1 样本：
+\begin{equation}
+  N\in[0.070542,11.965825],\qquad
+  D\in[0.134,299.893].
+  \label{eq:q3-sp2-support}
+\end{equation}
+这些区间表示当前数据的观测适用范围，不表示对更大模型或更多训练数据的物理定律外推许可。
+
+\subsubsection{M1 目标函数与质量成本}
+
+冻结的 B6 M1 条件损失为
+\begin{equation}
+  \widehat L_{\mathrm{M1}}(N,D,Q_B)
+  =E+A N^{-\alpha}+B D^{-\beta}+G(1-Q_B).
+  \label{eq:q3-sp2-m1-loss}
+\end{equation}
+本轮使用的参数为
+\begin{equation}
+\begin{aligned}
+E&=1.4892660413, & A&=0.5401729883, & B&=1.3167948616,\\
+G&=0.3622474350, & \alpha&=0.2790539239, &
+\beta&=0.2828029135.
+\end{aligned}
+\label{eq:q3-sp2-m1-parameters}
+\end{equation}
+
+给定上下文长度 $L_{\mathrm{ctx}}$ 时，基础规模成本写为
+\begin{equation}
+  C_{\mathrm{base}}
+  =10^{18}ND\left(6+\eta L_{\mathrm{ctx}}\right),
+  \qquad \eta=2\times10^{-4}.
+  \label{eq:q3-sp2-base-cost}
+\end{equation}
+相对于基准质量 $Q_0=0.1$ 的质量增量成本写为
+\begin{equation}
+  C_Q=10^9D\left[g(Q_B)-g(Q_0)\right].
+  \label{eq:q3-sp2-quality-cost}
+\end{equation}
+本文比较三类成本形状：
+\begin{equation}
+\begin{aligned}
+g_{\mathrm{exp}}(Q)&=10^7\exp(6Q),\\
+g_{\mathrm{pow}}(Q)&=5\times10^9Q^4,\\
+g_{\mathrm{log}}(Q)&=2\times10^9\log(1+10Q).
+\end{aligned}
+\label{eq:q3-sp2-cost-families}
+\end{equation}
+三类 $g$ 用于敏感性比较，不被解释为已经由真实训练账单验证的成本定律。
+在预算 $C$ 下，优化问题为
+\begin{equation}
+\begin{aligned}
+\min_{N,D,Q_B}\quad&
+\widehat L_{\mathrm{M1}}(N,D,Q_B),\\
+\mathrm{s.t.}\quad&
+C_{\mathrm{base}}(N,D;L_{\mathrm{ctx}})
++C_Q(D,Q_B)\le C,\\
+&N\in[0.070542,11.965825],\\
+&D\in[0.134,299.893],\\
+&Q_B\in[0.1,1.0].
+\end{aligned}
+\label{eq:q3-sp2-opt}
+\end{equation}
+
+质量成本占比定义为
+\begin{equation}
+  \rho_Q=\frac{C_Q}{C_{\mathrm{base}}+C_Q}.
+  \label{eq:q3-sp2-quality-share}
+\end{equation}
+$\rho_Q$ 是当前成本假设下的模型内比例，不是现实工程账单中的实测占比。
+
+\subsubsection{求解方法}
+
+为保持正值约束，$N$ 和 $D$ 采用对数参数化，优化变量为
+$(\log N,\log D,Q_B)$。预算约束按预算值缩放后送入 SLSQP，以避免
+$10^{19}$--$10^{24}$ 量级的原始约束造成有限差分尺度失衡。
+
+每个情景使用六个确定性初始点，覆盖低值、几何中点、高值以及不同的
+$Q_B$ 初始值。多起点的目的在于检查局部求解是否受初始点影响，并比较
+可行性、收敛状态、目标函数值和边界状态。最终优先保留优化器报告收敛且预算可行的解。
+当前不采用遗传算法或粒子群算法，原因是决策维度低、目标函数连续光滑、约束边界明确，
+解析结构与多起点局部优化更便于逐情景审计。
+
+求解后将结果分为三类：$Q_B=0.1$ 或 $Q_B=1.0$ 的端点状态；
+$0.1<Q_B<1.0$ 且 $N,D$ 未触及边界的内点状态；以及 $N$、$D$ 或 $Q_B$
+触及观测范围边界的边界状态。
+
+\subsubsection{\texorpdfstring{原生 $Q_B$ 情景结果}{原生 Q\_B 情景结果}}
+
+本轮共生成 $3\times5\times3=45$ 个原生 $Q_B$ 情景，覆盖三类质量成本、
+五档上下文
+\[
+L_{\mathrm{ctx}}\in\{2048,4096,8192,32768,131072\}
+\]
+和三档预算
+\[
+C\in\{10^{19},10^{22},10^{24}\}\ \mathrm{FLOPs}.
+\]
+每行结果报告 $Q_B^*$、$N^*$、$D^*$、$L^*$、质量成本占比、预算活跃状态、
+边界状态和多起点收敛信息。
+
+按上下文取平均后，低预算 $C=10^{19}$ 下，指数型、幂函数型和对数渐进型
+的最优质量分别约为 $0.7243$、$0.6103$ 和 $1.0000$。预算提高到
+$10^{22}$ 或 $10^{24}$ 后，当前参数下三类成本通常均将 $Q_B^*$ 推到
+$1.0000$。这只说明在当前 M1 和成本假设下质量增量成本相对 $N,D$ 成本较小，
+不表示真实训练质量已经饱和，也不表示 $Q_B=1$ 是经验验证的唯一最优质量。
+
+在指数成本、$L_{\mathrm{ctx}}=8192$、$C=10^{22}$ 的代表性情景中，质量成本
+约占总成本的 $5.3\%$--$7.4\%$。高预算情景中若同时触及
+$N=11.965825$、$D=299.893$ 和 $Q_B=1.0$，则应将其标记为观测范围边界解；
+名义预算的剩余部分不能用来证明支持范围外仍有有效收益。
+
+\begin{table}[htbp]
+  \centering
+  \caption{M1 原生质量条件情景的摘要}
+  \label{tab:q3-sp2-summary}
+  \small
+  \begin{tabular}{lccc}
+    \toprule
+    质量成本族 & $C=10^{19}$ 的平均 $Q_B^*$ &
+    $C=10^{22}$ 的典型状态 & 主要边界 \\
+    \midrule
+    指数型 & 0.7243 & 接近 $1.0$ & 低预算内点、高预算边界 \\
+    幂函数型 & 0.6103 & 接近 $1.0$ & 低预算内点、高预算边界 \\
+    对数渐进型 & 1.0000 & $1.0$ & 质量上界较早活跃 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsubsection{上下文成本结构}
+
+由式~\eqref{eq:q3-sp2-base-cost}，基础成本中的注意力项与训练项之比为
+\begin{equation}
+  \frac{C_{\mathrm{attn}}}{C_{\mathrm{train}}}
+  =\frac{\eta L_{\mathrm{ctx}}}{6}
+  =\frac{L_{\mathrm{ctx}}}{30000}.
+  \label{eq:q3-sp2-context-ratio}
+\end{equation}
+因此，$L_{\mathrm{ctx}}=30000$ 是当前成本结构中的代数临界点：
+低于该值时注意力项小于训练项，高于该值时注意力项大于训练项。
+它不是已经由任务效果验证的上下文性能临界点，也不是 $Q_B$ 的经验转折点。
+
+\subsubsection{数值复核与稳健性}
+
+本轮复核包括以下内容：
+\begin{enumerate}
+  \item 45 行原生 $Q_B$ 输出及参数折叠传播结果均为有限值；
+  \item 原生质量情景最大相对预算误差约为 $2.1\times10^{-12}$；
+  \item 质量成本稳健性运行的最大相对预算误差约为
+  $9.7\times10^{-12}$，参数折叠运行的 M1 最大相对误差约为
+  $9.01\times10^{-12}$；
+  \item $N,D$ 未超过 B1 观测范围，$Q_B$ 未超过 B6 原生范围；
+  \item 六个起点的成功状态、目标值差异和边界标志均被保留；
+  \item 原生情景表 SHA256 为
+  {\scriptsize\texttt{77171f327c40d0bbd2559665b5aa7b6fdc945b5052301dbd1c73296289330378}}；
+  \item $Q_0\in\{0.1,0.3,0.5\}$ 的扫描显示，低预算下指数型和幂函数型
+  对 $Q_0$ 有可见敏感性，对数渐进型在当前参数下系统性地推向质量上界。
+\end{enumerate}
+
+\subsubsection{结果讨论与小结}
+
+在 B1 的 $N,D$ 观测范围、B6/B7 原生 $Q_B$ 范围以及给定预算、上下文和
+质量成本假设下，可以报告质量--规模--数据量的条件替代关系、成本族造成的
+资源配置差异、上下文改变后的训练--注意力成本转移，以及参数折叠和边界检查
+支持的稳健范围。
+
+不能据此声称 A--B 联合 Loss 已经验证，不能声称 $Q_A$ 与 $Q_B$ 已经建立稳定
+实证关系，不能声称 $Q_B=1$ 是真实训练中的唯一最优质量，也不能把支持范围外的
+结果解释为现实中的全局最优。以上结论均属于冻结 M1 参数和成本假设下的条件情景。
+
+本子问题的证据运行包括：
+\begin{itemize}
+  \item \texttt{q3-q-conditional-20260925-r01}；
+  \item \texttt{q3-q-robustness-20260925-r01}；
+  \item \texttt{q3-optimization-robustness-20260926-r01}；
+  \item \texttt{q3-answer-package-20260926-r01}。
+\end{itemize}

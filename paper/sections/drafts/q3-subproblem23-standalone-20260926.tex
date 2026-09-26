@@ -1,0 +1,62 @@
+% 问题三子问题二、三独立审阅入口。
+% 组织方式参考用户提供的数学建模竞赛论文：封面信息、摘要、关键词、目录、分问题分析与建模求解。
+% 当前文件仅用于独立编译审阅，不接入 paper/main.tex。
+
+\documentclass[UTF8,a4paper,12pt]{ctexart}
+\usepackage{amsmath,amssymb,booktabs,geometry,hyperref,longtable}
+\geometry{left=2.7cm,right=2.7cm,top=2.6cm,bottom=2.6cm}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.25em}
+\sloppy
+\emergencystretch=3em
+\renewcommand{\contentsname}{目录}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{2.0cm}
+  {\heiti\zihao{2}问题三条件资源配置分析\par}
+  \vspace{0.8cm}
+  {\heiti\zihao{3}子问题二与子问题三独立审阅稿\par}
+  \vfill
+  {\zihao{4}预算约束下的原生质量优化与配比接口敏感性\par}
+  \vspace{1.0cm}
+  {\zihao{4}版本：Q3-CONDITIONAL-INTERFACE-v1.0.0\par}
+  \vspace{2.0cm}
+  {\zihao{4}DRAFT / REVIEW REQUIRED\par}
+\end{titlepage}
+
+\pagenumbering{roman}
+\section*{摘要}
+本文按照问题三的条件资源配置口径，分别讨论 B6/B7 原生质量变量
+$Q_B$ 下的 $N$--$D$--$Q_B$ 优化，以及 A 侧观测配比通过假设
+$Q_A\to Q_B$ 接口进入 Q3 的条件面板。由于 A、B 数据缺少共同连接键，
+且 $Q_A$ 与 $Q_B$ 尚未统一标度，配比结果只作为条件情景和接口敏感性结果，
+不解释为跨来源联合最优。所有数值均受 B1/B6 观测范围、给定预算、上下文
+和成本函数假设约束。
+
+\noindent\textbf{关键词：} 条件资源配置；广义标度律；原生质量变量；
+多起点 SLSQP；配比接口；敏感性分析
+
+\clearpage
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+
+\setcounter{section}{5}
+\section{问题三的求解：预算约束下的条件资源配置}
+\label{sec:q3-standalone}
+问题三的总体输入包括 B1 的 $N,D$ 标量、B6/B7 的原生 $Q_B$ 以及
+A 侧有限个观测配比候选。本文将这些输入拆分为可识别的 B 侧条件优化
+和明确标注的 A--B 假设接口，不在缺少共同键的情况下拼接四量联合样本。
+
+\setcounter{subsection}{4}
+\input{q3-subproblem2-m1-ndqb-draft-20260926.tex}
+
+\setcounter{subsection}{5}
+\input{q3-subproblem3-m2p-interface-draft-20260926.tex}
+
+\end{document}
