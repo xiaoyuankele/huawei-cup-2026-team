@@ -25,6 +25,7 @@ ORDER = [
     "q4_error_evaluation.py",
     "q4_r2_evaluation.py",
     "q4_c8_cluster_bootstrap.py",
+    "q4_protocol_experiment.py",
 ]
 
 

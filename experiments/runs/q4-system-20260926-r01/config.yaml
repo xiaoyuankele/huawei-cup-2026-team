@@ -1,0 +1,21 @@
+run_id: q4-system-20260926-r01
+task_id: T-Q4-001
+status: RUNNING
+seed: 20260926
+score_primary: "C8 detailed six-task equal-weight mean times 100"
+score_sensitivity: "Leaderboard Average"
+time_split: "chronological 70/30; current 10 months => first 7 months train, last 3 months test"
+rolling_horizons_months: [1, 3]
+forecast_horizon_months: [12]
+model_type_main: [pretrained, chat, fine-tuned, merge]
+model_type_sensitivity: [pretrained]
+compute_growth_multipliers: [1.0, 1.5, 2.3, 4.0, 5.0]
+type_share_perturbation_pp: [-10, 10]
+frontier_quantile: 0.95
+compute_scenario_sources:
+  - "Sevilla et al. 2022, arXiv:2202.05924"
+  - "Epoch AI 2024, Training compute of frontier AI models grows by 4-5x per year"
+  - "Epoch AI Trends, frontier language compute and compute stock"
+compute_scenario_interpretation: "external scenario multipliers, not identified causal effects"
+raw_outputs: artifacts/
+public_aggregate_outputs: metrics/
