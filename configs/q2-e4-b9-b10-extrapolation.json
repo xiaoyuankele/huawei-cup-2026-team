@@ -1,7 +1,7 @@
 {
   "run_id": "q2-e4-b9-b10-extrapolation-20260926-r01",
   "task_id": "T-Q2-E4",
-  "model": "experiments/runs/q2-model-finalization-20250925/model_parameters.json",
+  "model": "experiments/runs/q2-model-finalization-20260925/model_parameters.json",
   "b9_b10_audit": "experiments/runs/q2-b9-b10-extrapolation-audit-20250925-r01/metrics.json",
   "e3_support": "experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/quality_path_support.csv",
   "N_grid_B": [
