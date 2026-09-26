@@ -1,0 +1,1 @@
+python -X utf8 scripts/q1_scale_domain_summary.py --input experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_long.csv --output-dir experiments/runs/q1-scale-domain-summary-20260924-r01 > experiments/runs/q1-scale-domain-summary-20260924-r01/metrics.json

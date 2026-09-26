@@ -1,0 +1,3 @@
+python scripts/q1_conflict_analysis.py
+python scripts/plot_q1_conflict.py
+python scripts/q1_conflict_validation.py --self-test

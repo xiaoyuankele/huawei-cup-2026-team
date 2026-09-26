@@ -1,0 +1,56 @@
+# 问题一跨包整合与发布检查
+task_id: T-Q1-009
+title: "问题一跨包整合、主张登记与发布检查"
+status: DRAFT # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
+work_package: Q1-INT
+owner_actor: ACTOR-1
+peer_reviewer_actors:
+  - ACTOR-2
+  - ACTOR-3
+release_integrator_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+approval_rule: unanimous_release_council
+review:
+  independent_peer_required: true
+  owner_must_not_approve_alone: true
+  no_reviewer_status: REVIEW_BLOCKED
+priority: P0
+issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/11"
+branch: "integration/ACTOR-1/Q1-INT"
+branch_owner_actor: ACTOR-1
+gate: G3
+prompt:
+  prompt_id: P-INT-001
+  version: v1.0.0
+  prompt_run_id: ""
+objective: "整合三个纵向工作包，核对代码、实验、论文主张和发布材料的一致性。"
+inputs:
+  - ref: docs/tasks/Q1-work-packages.md
+    purpose: "工作包交付协议"
+  - ref: paper/claim-ledger.csv
+    purpose: "论文主张和证据回链"
+  - ref: experiments/index.csv
+    purpose: "运行记录索引"
+expected_outputs:
+  - path: paper/claim-ledger.csv
+    description: "完整主张—图表—run_id—限制回链"
+  - path: paper/final/submission-draft.pdf
+    description: "从集成分支编译的最终草稿"
+  - path: docs/decisions/q1-release-audit.md
+    description: "复现、合规、数字一致性和未决风险检查"
+acceptance_criteria:
+  - "WP-A、WP-B、WP-C 均为 PACKAGE_ACCEPTED"
+  - "论文所有数字和图表均能回链到 PACKAGE_ACCEPTED 的 run_id"
+  - "三人分别完成 Release Council 签署"
+  - "未决限制、失败运行和证据等级已写入发布审查"
+definition_of_done:
+  - "全量复现命令和环境记录齐全"
+  - "claim ledger、PDF、附件和哈希一致"
+  - "三人签署后状态才可为 INTEGRATED"
+notes: "本任务不替任何工作包修改未经复核的实验结果；发现问题时建立 feedback_id 并退回对应 Owner。"

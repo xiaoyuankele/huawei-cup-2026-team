@@ -1,20 +1,36 @@
 prompt_run_id: PR-20260923-003
 task_id: T-Q1-002
+work_package: WP-A
 prompt_id: P-DATA-001
 prompt_version: v1.0.0
-owner: B
+owner_actor: ACTOR-1
+peer_reviewer_actor: ACTOR-2
+release_integrator_actor: ACTOR-3
+gate: G0
+independence_check: PASS
+peer_decision: PENDING
+integrator_decision: PENDING
+release_council_decision: PENDING
 device_id: DEVICE-LOCAL-CODEX
 date: 2026-09-24
 tool: Codex desktop
 model: gpt-6-astra
 provider: OpenAI
-input_summary: "A0 原始数据契约、A1 候选质量字段、题目数据说明和可核验字段定义；建立 22 个质量指标的语义、方向、列表压缩、A1 拟合归一化和漂移审计，不建立质量评分模型。"
-output_ref: "indicator_catalog.yaml; data/processed/q1_X_norm_v1.csv; normalization_stats.json; indicator_audit.csv; normalization_sensitivity.csv; data/manifests/q1_preprocessed.yaml; configs/q1-indicator-normalization.yaml; scripts/q1_indicator_preprocess.py"
-output_sha256: "indicator_catalog.yaml=d8b57018240df1d0e94faf73f4c07acc423a49eb8396e16485d402cd5fe39ed5; data/processed/q1_X_norm_v1.csv=0c61e680e0ea086976334670166cbccbdf9520541a9eb80aaf3b098a5cfb465a; normalization_stats.json=66f4a4f41bf723efaea2ff2d8340741698c46a4fad57bc513ea7650ea87ae34a; indicator_audit.csv=29f935b68093841cd0c8061e29760701d66afbf9325ca787681ffef209abc310; normalization_sensitivity.csv=854535096ebc4bb1bee5df897b794743bfa5e260f3cece8c911c68f5555e1f4c; data/manifests/q1_preprocessed.yaml=8c394ba10c88881ca4ce0bdacd0d4998fb5579cc435524e5cb6b74cc3f3c4c17"
+input_summary: A0 原始数据契约、A1 候选质量字段、题目数据说明和可核验字段定义；建立 22 个质量指标的语义、方向、列表压缩、A1 拟合归一化和漂移审计，不建立质量评分模型。
+output_ref: indicator_catalog.yaml; data/processed/q1_X_norm_v1.csv; normalization_stats.json;
+  indicator_audit.csv; normalization_sensitivity.csv; data/manifests/q1_preprocessed.yaml;
+  configs/q1-indicator-normalization.yaml; scripts/q1_indicator_preprocess.py
+output_sha256: indicator_catalog.yaml=d8b57018240df1d0e94faf73f4c07acc423a49eb8396e16485d402cd5fe39ed5;
+  data/processed/q1_X_norm_v1.csv=0c61e680e0ea086976334670166cbccbdf9520541a9eb80aaf3b098a5cfb465a;
+  normalization_stats.json=66f4a4f41bf723efaea2ff2d8340741698c46a4fad57bc513ea7650ea87ae34a;
+  indicator_audit.csv=29f935b68093841cd0c8061e29760701d66afbf9325ca787681ffef209abc310;
+  normalization_sensitivity.csv=854535096ebc4bb1bee5df897b794743bfa5e260f3cece8c911c68f5555e1f4c;
+  data/manifests/q1_preprocessed.yaml=8c394ba10c88881ca4ce0bdacd0d4998fb5579cc435524e5cb6b74cc3f3c4c17
 git_commit: 7db9a5d
+run_id: q1-indicator-normalization-20260923-r01
 needs_human_review: true
-status: REVIEW # TRIAL | REVIEW | ACCEPTED | REJECTED
-reviewer: A
-pr: "https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/4"
-failure_or_limitations: "9 个输出方向待核验并在最终矩阵留空；A2/A3 与 A1 存在 ID 重叠，不能作为独立来源真值；缺失/非有限值不填补；未进行质量总分、权重、PP-GA 或模型拟合。"
-next_action: "Reviewer A 复核语义、方向、列表压缩、A1 冻结边界、强相关和域漂移审计；通过后更新任务和 Prompt Run 为 ACCEPTED。"
+status: PEER_REVIEW
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/4
+failure_or_limitations: 9 个输出方向待核验并在最终矩阵留空；A2/A3 与 A1 存在 ID 重叠，不能作为独立来源真值；缺失/非有限值不填补；未进行质量总分、权重、PP-GA
+  或模型拟合。
+next_action: ACTOR-2 完成 Peer Review；通过后由 ACTOR-3 检查包级接口、证据回链和 handoff，再进入 PACKAGE_ACCEPTED。

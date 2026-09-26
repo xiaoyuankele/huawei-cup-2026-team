@@ -1,0 +1,30 @@
+task_id: T-Q2-E1-MARGINAL
+run_id: q2-e1-marginal-elasticity-20260925-r01
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+role_assignment_status: ROUTING_ONLY_PENDING_HUMAN_CONFIRMATION
+status: REVIEW_BLOCKED
+execution_status: RUN_COMPLETE
+gate: G1
+gate_status: NOT_EVIDENCED
+peer_decision: PENDING
+integrator_decision: PENDING
+branch: codex/q2-e1-marginal-elasticity
+git_commit: d58e4a1de3f9bac16bbfbc6bf75cfa5c24a322d0
+seed: deterministic; no new random fit
+prompt_run_ids:
+- PR-Q2-E1-20260925
+- PR-Q2-E1-GOV-20260925
+feedback_ids:
+- FB-Q2-E1-01
+- FB-Q2-E1-02
+- FB-Q2-E1-GOV-20260925
+manifest_ref: experiments/runs/q2-e1-marginal-elasticity-20260925-r01/manifest.json
+manifest_sha256: 5aca76bd3f1e1d740d54b802027caaeab8393173a93a76ffe10746b057199cc1
+paper_draft: paper/sections/drafts/q2-e1-marginal-elasticity.md
+handoff: docs/tasks/T-Q2-E1-MARGINAL-handoff.md
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/29
+recorded_at: '2026-09-25T13:53:36+00:00'
+registration: Retrospective governance supplement; original manifest preserved

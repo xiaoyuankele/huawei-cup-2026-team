@@ -1,0 +1,17 @@
+﻿indicator,distance_or_sum_weight
+fineweb_edu,0.073705893909328329
+fluency_en_fluent_margin,0.082626347238569459
+modernbert_cleanliness_expected,0.095907487108322309
+modernbert_readability_expected,0.091584526780794595
+dsir_books,0.051022337433706738
+dsir_wiki,0.049950805052328837
+dsir_math,0.051490327610231389
+qurater_writing_style,0.075446400747379239
+qurater_facts_trivia,0.069912793080652957
+qurater_educational_value,0.076362230156244174
+ad_en_no_ad_margin,0.092937186349863851
+rps_doc_frac_unique_words,0.082255783540661098
+rps_doc_frac_no_alph_words,0
+rps_doc_frac_chars_top_2gram,0
+rps_doc_frac_chars_top_3gram,0
+rps_lines_ending_with_terminal_punctution_mark,0.10679788099191695

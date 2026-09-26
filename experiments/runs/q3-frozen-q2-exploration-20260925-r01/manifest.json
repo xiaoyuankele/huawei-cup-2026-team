@@ -1,0 +1,51 @@
+{
+  "status": "REVIEW_BLOCKED",
+  "model_status": "CONDITIONAL_SCENARIO",
+  "source_repo_commit": "5d40a4bc466674e77ea9e01fe0aaf15692c6c263",
+  "script_sha256": "88e8f08086e8c166bf69b8d55b5ce3add106d97d6068493e1756d59f2a164d10",
+  "python": "3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)]",
+  "numpy": "1.26.4",
+  "pandas": "2.0.3",
+  "scipy": "1.11.1",
+  "no_refitting": true,
+  "outputs_are_not_observations": true,
+  "quality_intervention_is_extra_assumption": true,
+  "frozen_prediction_max_difference": 8.881784197001252e-16,
+  "full_variable_crosschecks": 18,
+  "count_frozen": 1200,
+  "count_processing": 3492,
+  "count_transition_brackets": 30,
+  "costs": {
+    "exponential": "1e7 exp(6Q)",
+    "power": "5e9 Q^4",
+    "logarithmic": "2e9 log(1+10Q)"
+  },
+  "critical_context": 30000.0,
+  "context_values": [
+    2048,
+    4096,
+    8192,
+    32768,
+    131072
+  ],
+  "external_validation_not_performed": true,
+  "retrospective_candidate_set_evaluation": "Q2 previously inspected A6/A8/A10 labels, no new blind validation",
+  "quality_cost_parameters_source": "User DOCX appendix B, paragraphs 55-58",
+  "problem_docx_sha256": "bc99a72460fa3d947a442d502969a13212ce0ea092d827afdbbf3b55339da4c4",
+  "scientific_status": "EXPLORATION_ONLY",
+  "run_id": "q3-frozen-q2-exploration-20260925-r01",
+  "task_id": "T-Q3-RESEARCH-HANDOFF",
+  "prompt_run_id": "PR-Q3-RESEARCH-HANDOFF-20260925",
+  "upstream_commit": "e4a1e2855048c59c8e1484b16873141ab9a55029",
+  "input_manifest": "data/manifests/q3_research_inputs.json",
+  "input_sha256": {
+    "model_parameters.json": "46c94c6343e7bc023cf7347467d50c4e834fa50828e1e6a18c6a3b556dde7000",
+    "q1_to_q2_quality_linkage.csv": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09",
+    "q2_scenarios.csv": "28506e67f58d5dc631dc32e96210f6a6a24f8ac79917d0b3f179cb0ee0c8a397"
+  },
+  "historical_script_sha256": "8e92352aa1a4b999d2fa7228e3e7fd1c61f48557393d5542932a4ee8b79b436c",
+  "peer_decision": "PENDING",
+  "integrator_decision": "PENDING",
+  "archive_policy": "CSV numeric outputs preserved byte-for-byte from historical exploratory run; portable scripts independently rerun",
+  "portable_code_commit": "cf2a32bc34cda4d2a9bb0fc9bcf56ed2d0d5e496"
+}

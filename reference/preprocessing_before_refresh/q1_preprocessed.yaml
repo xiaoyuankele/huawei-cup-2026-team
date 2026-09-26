@@ -1,0 +1,57 @@
+schema_version: q1.preprocessed.v1
+task_id: T-Q1-002
+run_id: q1-indicator-normalization-20260923-r01
+prompt_run_id: PR-20260923-003
+status: REVIEW
+needs_human_review: true
+raw_root: data/origin/real_attachments
+raw_inputs:
+- dataset_id: A1
+  relative_path: A_data_value/slimpajama_quality_signal_sample.jsonl.xz
+  sha256: 14a4eeec4c7d98efd78942ddd9c1329640527f2108e73227be449bc1a8dbe579
+  role: A1_fit_and_holdout
+- dataset_id: A2
+  relative_path: A_data_value/slimpajama_quality_extended/arxiv_part-6777d8857c6e-000486.jsonl.xz
+  sha256: ae1e3399f84f605d994fc60b46984d742e14abb3355d8e7a91822eae1b99e16a
+  role: external_validation_only
+- dataset_id: A3
+  relative_path: A_data_value/slimpajama_quality_extended/github_part-6777d8857c6e-000275.jsonl.xz
+  sha256: 7af069c71c6027a10f2013cc14dd9d5d17855c264734f69c955544ff6cff7382
+  role: external_validation_only
+fit_rule:
+  dataset: A1
+  split_rule: sha256(seed + '|' + id) modulo 100; 0-79 fit, 80-99 holdout
+  seed: 20260923
+  fit_percent: 80
+  holdout_percent: 20
+normalization:
+  primary: quantile_01_99
+  compare:
+  - min_max
+  - quantile_01_99
+  - rank_ecdf
+  - robust_z_logistic
+  output_range:
+  - 0.0
+  - 1.0
+  direction_rule: confirmed benefit/cost only; pending directions are withheld from
+    final matrix
+missing:
+  policy: retain_row_leave_indicator_null
+  nonfinite_policy: treat_as_missing_and_report_component
+  imputation: none
+outputs:
+  matrix: data/processed/q1_X_norm_v1.csv
+  matrix_sha256: 0c61e680e0ea086976334670166cbccbdf9520541a9eb80aaf3b098a5cfb465a
+  catalog: indicator_catalog.yaml
+  catalog_sha256: d8b57018240df1d0e94faf73f4c07acc423a49eb8396e16485d402cd5fe39ed5
+  stats: normalization_stats.json
+  stats_sha256: 66f4a4f41bf723efaea2ff2d8340741698c46a4fad57bc513ea7650ea87ae34a
+  audit: indicator_audit.csv
+  audit_sha256: 29f935b68093841cd0c8061e29760701d66afbf9325ca787681ffef209abc310
+  sensitivity: normalization_sensitivity.csv
+  sensitivity_sha256: 854535096ebc4bb1bee5df897b794743bfa5e260f3cece8c911c68f5555e1f4c
+limitations:
+- pending_verification directions are withheld from final higher-is-better cells
+- A2/A3 overlap with A1 is retained as a flag and is not independent-source validation
+- no imputation, quality total, weights or model fit is performed

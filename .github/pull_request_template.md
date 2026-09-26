@@ -1,6 +1,15 @@
 ## 关联记录
 
-- Task ID：
+- Work package：WP-A / WP-B / WP-C / Q1-INT
+- Task ID / checklist：
+- Problem ID：`Q1`
+- Subproblem ID：`Q1-S00`
+- Owner Actor：
+- Peer Reviewer Actor：
+- Release Integrator Actor：
+- Release Approver Actors：
+- Independence Check：PASS / FAIL / REVIEW_BLOCKED
+- Gate：G0 / G1 / G2 / G3 / G4
 - Feedback ID（如有）：
 - Prompt：`P-XXX-000@vX.Y.Z`
 - Prompt Run ID（如有）：
@@ -8,14 +17,15 @@
 
 ## 变更内容
 
-<!-- 用几句话说明本 PR 改了什么，以及为什么需要修改。 -->
+<!-- 说明本 PR 对代码、实验、论文段或治理文件的修改。 -->
 
 ## 验收与复现
 
-- [ ] 已在任务分支完成必要测试或审计
-- [ ] 已记录可复制的命令、配置、seed 和环境
-- [ ] 实验结果已关联数据 manifest、Git commit 和 `run_id`
-- [ ] 论文数字已同步到 `paper/claim-ledger.csv`（如适用）
+- [ ] Owner 交付代码或脚本
+- [ ] 实验已记录配置、seed、命令、环境、run_id 和输出哈希
+- [ ] 论文段或 claim ledger 已回链运行证据
+- [ ] Peer Reviewer 已独立检查并记录决定
+- [ ] Release Integrator 已检查接口、manifest 和证据完整性
 - [ ] 未提交原始数据、未公开题目、密钥或完整敏感 AI 对话
 
 复现命令：
@@ -26,7 +36,14 @@
 
 ## 审核重点
 
-<!-- 请明确希望 Reviewer 重点检查的公式、数据边界、指标、图表或排版。 -->
+<!-- 请明确希望 Peer Reviewer 和 Integrator 检查的公式、数据边界、指标、图表或主张。 -->
+
+## 决定
+
+- Peer Review：PENDING / PASS / PASS_WITH_WARNINGS / FAIL
+- Integrator：PENDING / PASS / PASS_WITH_WARNINGS / FAIL
+- Package：PENDING / PACKAGE_ACCEPTED / REWORK / REVIEW_BLOCKED
+- Release Council（仅 Q1-INT）：PENDING / ACCEPTED / BLOCKED
 
 ## 风险与后续动作
 

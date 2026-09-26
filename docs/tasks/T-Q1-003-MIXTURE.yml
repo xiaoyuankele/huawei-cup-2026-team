@@ -1,0 +1,157 @@
+# 问题一第三小问：领域配比与Loss建模
+task_id: T-Q1-003-MIXTURE
+title: "问题一第三小问领域配比建模与尺度审计"
+status: PEER_REVIEW # SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | REWORK | REVIEW_BLOCKED
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: model
+priority: P0
+gate: G0
+inputs:
+  - ref: problem/数据说明_已清除隐藏误导文字.pdf
+    purpose: "A4-A15字段、数据性质和题目要求"
+  - ref: docs/decisions/q1-data-contract.md
+    purpose: "配方/Loss索引对齐、训练/验证/外推角色"
+  - ref: problem/隐藏文字检查报告.md
+    purpose: "隐藏预置结果和跳过验证建议的隔离"
+expected_outputs:
+  - path: docs/decisions/q1-mixture-modeling-contract.md
+    description: "领域配比建模变量、尺度条件、质量评分可识别性和验证边界"
+  - path: configs/q1-mixture-model.yaml
+    description: "冻结的数据分层、单纯形、模型和验证配置"
+  - path: scripts/q1_mixture_audit.py
+    description: "A4-A15只读结构、重复设计和线性基线审计"
+  - path: scripts/q1_mixture_model.py
+    description: "仅基于A4/A5内部交叉验证的正则化探索模型"
+  - path: experiments/runs/q1-mixture-audit-20260924-r01/metrics.json
+    description: "结构审计和尺度偏置证据"
+  - path: experiments/runs/q1-mixture-model-20260924-r01/metrics.json
+    description: "探索模型的内部CV、外部验证和相对效应诊断"
+  - path: configs/q1-mixture-collinearity.yaml
+    description: "单纯形闭合、参考组、ilr零替换和二次设计诊断配置"
+  - path: scripts/q1_mixture_collinearity.py
+    description: "系统化秩、条件数、VIF、参考组敏感性和二次设计审计"
+  - path: experiments/runs/q1-mixture-collinearity-20260924-r01/metrics.json
+    description: "A4-A15共线性与设计漂移结构化结果"
+  - path: scripts/q1_mixture_basis_sensitivity.py
+    description: "参考域与Helmert-ilr坐标基的Ridge敏感性实验"
+  - path: experiments/runs/q1-mixture-basis-sensitivity-20260924-r01/metrics.json
+    description: "坐标、零替换和正则化敏感性结果"
+  - path: scripts/q1_scale_identifiability.py
+    description: "重复配比跨规模目标差异及p-only误差下界审计"
+  - path: experiments/runs/q1-scale-identifiability-20260924-r01/metrics.json
+    description: "A6/A8和A12/A14规模不可识别性证据"
+  - path: scripts/q1_scale_design_rank.py
+    description: "不读取Loss目标的候选规模条件输入设计秩审计"
+  - path: experiments/runs/q1-scale-design-rank-20260924-r01/metrics.json
+    description: "规模主效应和配比交互输入设计可识别性结果"
+  - path: docs/decisions/q1-analysis-track-split.md
+    description: "同尺度配比、重复配比尺度差异和未来规模条件模型的执行边界"
+  - path: configs/q1-same-scale-protocol.yaml
+    description: "轨道A同尺度配比模型候选协议"
+  - path: docs/decisions/q1-same-scale-protocol.md
+    description: "轨道A候选坐标、正则化和目标级报告要求"
+  - path: docs/decisions/q1-same-scale-target-audit.md
+    description: "A6/A7同尺度外部验证的13目标逐目标诊断"
+  - path: docs/decisions/q1-same-scale-residual-audit.md
+    description: "A6/A7同尺度外部验证的逐目标残差和校准偏差"
+  - path: scripts/q1_scale_feature_table.py
+    description: "按固定规模标签生成总规模、log10规模和域级期望token数派生表"
+  - path: experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_wide.csv
+    description: "A4-A15宽格式规模特征表"
+  - path: experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_long.csv
+    description: "A4-A15长格式配方—域规模特征表"
+  - path: experiments/runs/q1-scale-feature-table-20260924-r01/metrics.json
+    description: "规模特征表的输入哈希、派生表哈希和行数摘要"
+  - path: scripts/q1_scale_domain_summary.py
+    description: "按数据集和域汇总规模特征与期望token数分布"
+  - path: experiments/runs/q1-scale-domain-summary-20260924-r01/q1_scale_domain_summary.csv
+    description: "102行数据集—域级比例和期望token数摘要表"
+  - path: experiments/runs/q1-scale-domain-summary-20260924-r01/metrics.json
+    description: "规模域级摘要的输入派生表哈希和输出哈希"
+  - path: docs/decisions/q1-scale-feature-table.md
+    description: "规模特征表的计算公式、单位和解释边界"
+  - path: docs/decisions/q1-scale-domain-summary.md
+    description: "数据集—域级期望token数分布说明"
+  - path: scripts/q1_scale_model_design.py
+    description: "从规模特征表生成ilr、log规模和配比—规模交互候选设计"
+  - path: experiments/runs/q1-scale-model-design-20260924-r01/q1_scale_model_design_epsilon_1e-4.csv
+    description: "1214行、33预测变量的输入候选设计表"
+  - path: experiments/runs/q1-scale-model-design-20260924-r01/metrics.json
+    description: "候选规模设计的输入哈希、秩和条件数"
+  - path: docs/decisions/q1-scale-model-design.md
+    description: "规模条件候选设计的变量构成和估计边界"
+  - path: scripts/q1_track_a_same_scale.py
+    description: "严格轨道A：A4/A5拟合、A6/A7同尺度验证和跨尺度事后诊断"
+  - path: experiments/runs/q1-track-a-same-scale-20260924-r01/metrics.json
+    description: "轨道A候选模型的逐数据集、逐目标指标和输入哈希"
+  - path: experiments/runs/q1-track-a-same-scale-20260924-r01/predictions.csv
+    description: "轨道A全部A4-A15预测明细及目标实际值"
+  - path: docs/decisions/q1-track-a-same-scale-results.md
+    description: "轨道A实验结果、同尺度验证和跨尺度诊断边界"
+  - path: scripts/q1_track_b_scale_difference.py
+    description: "轨道B：重复配比的逐目标跨规模差值分析"
+  - path: experiments/runs/q1-track-b-scale-difference-20260924-r01/metrics.json
+    description: "A6/A8和A12/A14成对规模差异、方向一致性和p-only误差下界"
+  - path: experiments/runs/q1-track-b-scale-difference-20260924-r01/scale_difference_summary.csv
+    description: "逐数据集—目标尺度差异摘要"
+  - path: experiments/runs/q1-track-b-scale-difference-20260924-r01/scale_differences_long.csv
+    description: "逐行逐目标低规模减高规模差值明细"
+  - path: docs/decisions/q1-track-b-scale-difference-results.md
+    description: "轨道B尺度差异实验结果与解释边界"
+  - path: scripts/q1_track_b_interaction_screen.py
+    description: "轨道B差值与ilr坐标的bootstrap交互假设筛查"
+  - path: experiments/runs/q1-track-b-interaction-screen-20260924-r01/interaction_screen.csv
+    description: "416个目标—ilr配对相关及bootstrap区间"
+  - path: experiments/runs/q1-track-b-interaction-screen-20260924-r01/metrics.json
+    description: "轨道B交互假设筛查的输入哈希和区间配置"
+  - path: docs/decisions/q1-track-b-interaction-screen.md
+    description: "轨道B规模—配比交互候选说明"
+  - path: scripts/q1_track_c_multiscale_exploratory.py
+    description: "角色变更探索：多尺度ilr、规模和交互Ridge"
+  - path: experiments/runs/q1-track-c-multiscale-exploratory-20260924-r01/metrics.json
+    description: "A4/A6/A8适配、A10未见规模留出和A12-A15诊断结果"
+  - path: experiments/runs/q1-track-c-multiscale-exploratory-20260924-r01/predictions.csv
+    description: "轨道C探索实验的逐行逐目标预测明细"
+  - path: docs/decisions/q1-track-c-multiscale-results.md
+    description: "轨道C多尺度探索结果和角色变更限制"
+  - path: scripts/q1_track_c_ablation.py
+    description: "轨道C规模主效应与配比—规模交互特征块消融"
+  - path: experiments/runs/q1-track-c-ablation-20260924-r01/ablation_metrics.csv
+    description: "4种特征块在适配集、1B未见规模和外推诊断上的指标"
+  - path: experiments/runs/q1-track-c-ablation-20260924-r01/metrics.json
+    description: "轨道C消融的角色变更和指标哈希记录"
+  - path: docs/decisions/q1-track-c-ablation-results.md
+    description: "轨道C规模主效应与交互项消融解释"
+  - path: scripts/q1_track_c_reduced_interactions.py
+    description: "轨道C低维规模—配比交互候选比较"
+  - path: configs/q1-track-c-reduced-interactions.yaml
+    description: "轨道C低维交互的适配、留出和外推诊断配置"
+  - path: experiments/runs/q1-track-c-reduced-interactions-20260924-r01/reduced_interaction_metrics.csv
+    description: "规模主效应、top1/top3/top5交互和全量交互的指标"
+  - path: experiments/runs/q1-track-c-reduced-interactions-20260924-r01/selected_alpha_logo.csv
+    description: "各低维特征块的LeaveOneGroupOut alpha选择记录"
+  - path: experiments/runs/q1-track-c-reduced-interactions-20260924-r01/metrics.json
+    description: "轨道C低维交互运行清单、哈希和角色边界"
+  - path: docs/decisions/q1-track-c-reduced-interactions-results.md
+    description: "轨道C低维规模—配比交互结果与冻结边界"
+acceptance_criteria:
+  - "连续配比和连续Loss保持定量建模，不改成分类任务"
+  - "A4/A5仅用于拟合；A6-A11用于验证；A12-A15仅用于外推情景"
+  - "报告A6=A8、A12=A14重复配方及其规模条件Loss差异"
+  - "不采用预置R2、系数、最优配比或跨尺度共用系数"
+  - "Q(p)与全部p主效应的共线性及A16映射不确定性已登记"
+  - "17列闭合秩亏与参考组VIF敏感性已分开报告"
+  - "二次设计的样本量—特征数识别风险已设置准入门槛"
+  - "p-only跨规模绝对预测的重复配比误差下界已计算"
+  - "规模条件设计的输入秩审计不使用验证/外推Loss目标"
+definition_of_done:
+  - "Reviewer完成数据角色、尺度条件和模型可识别性复核"
+  - "正式模型不得在本任务未PACKAGE_ACCEPTED前写入论文结论"
+notes: "当前运行是SPEC_ONLY/探索证据，需人工复核后才能进入正式成分回归与论文整合。"

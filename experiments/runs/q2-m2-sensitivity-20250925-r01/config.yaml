@@ -1,0 +1,10 @@
+run_id: q2-m2-sensitivity-20250925-r01
+status: conditional_scenario_only
+scope: problem_2_migration_m2
+scenario_range_source: six review-blocked Q1 candidate domain means
+scenario_values: {low: 51.7014075324, mid: 61.3878733360, high: 64.3357099536}
+rules:
+  impute_inferred_domains_as_truth: false
+  convert_to_B_Q_score: false
+  fit_B_model: false
+  official_q: false

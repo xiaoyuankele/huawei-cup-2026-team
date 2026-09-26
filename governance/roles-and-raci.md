@@ -1,47 +1,61 @@
-# 三人角色与审核矩阵
+# 三人执行、复核与发布架构
 
-本项目采用“一名技术负责人 + 两个交付单元”的协作方式。角色描述的是责任边界，不限制每个人使用的编辑器、编程语言或 AI 工具。
+本项目的执行单位是三个真实 Actor，不能用 A/B/C 角色名代替。A/B/C 只作为题目中的责任视角；任务卡以 `owner_actor`、`peer_reviewer_actor` 和 `release_integrator_actor` 为准。
 
-## 角色分工
+## 三种可轮换身份
 
-| 角色 | Owner 范围 | 必须交付 | 关键审核权 |
-|---|---|---|---|
-| A：架构与算法负责人 | 题目拆解、数据角色、模型假设、接口、评价协议、最终技术结论 | 任务卡、模型规格、验收条件、决策记录、结论审核 | P0 模型和结论必须通过 A |
-| B：实现与实验负责人 | 数据处理、基线、批量实验、运行环境、复现 | 代码、配置、`run_id`、指标、数据清单、运行命令 | 对 B 的实现由 C 或 A 复核 |
-| C：实现、论文与图表负责人 | 模型实现协作、结果分析、图表、LaTeX、格式和封卷 | 图表源文件、表格、图注、章节修改、编译产物 | 论文格式由 C 负责，技术结论由 A 复核 |
-
-B、C 可以使用各自设备上的 AI。AI 生成内容必须由对应 Owner 理解、测试并承担责任，不能把聊天输出直接视为实验结果或论文证据。
-
-## 审核分级
-
-| 等级 | 内容 | 审核要求 |
+| 身份 | 权限 | 禁止事项 |
 |---|---|---|
-| P0 | 题目解释、数据切分、核心公式、模型结构、评价指标、论文结论 | A 必须审核；至少一名队友复核 |
-| P1 | 特征工程、训练配置、实验设计、重要图表和结果解释 | Owner 之外至少一人审核；涉及结论时升级到 P0 |
-| P2 | 代码整理、普通可视化样式、排版和文档修订 | 队友交叉审核；不改变已批准结论 |
+| Owner | 修改本工作包代码、配置、实验和论文段；解释自己的结果 | 不能审核自己的结果，不能把聊天输出当作证据 |
+| Peer Reviewer | 独立检查代码、run manifest、统计边界和主张；登记 feedback | 不能代替 Owner 修改结果，不能绕过失败运行 |
+| Release Integrator | 检查接口、证据回链、claim ledger 和包状态；决定是否进入集成分支 | 不能替代 Peer Review，不能把缺证据结果并入论文 |
 
-## RACI 责任矩阵
+当前采用环形分配：
 
-R 表示执行，A 表示最终负责，C 表示需要征询，I 表示知会。
-
-| 工作项 | A 架构算法 | B 实现实验 | C 论文图表 |
+| 工作包 | Owner | Peer Reviewer | Release Integrator |
 |---|---|---|---|
-| 题目拆解与建模假设 | A/R | C | I |
-| 数据清洗与数据清单 | A | R | C |
-| 模型代码与基线 | A | R | C |
-| 批量实验与复现 | A | R | C |
-| 结果分析与图表源文件 | A | C | R |
-| LaTeX 章节与排版 | A | C | R |
-| 论文主张与最终封卷 | A/R | C | R |
+| WP-A 数据与证据 | ACTOR-1 | ACTOR-2 | ACTOR-3 |
+| WP-B 模型与优化 | ACTOR-2 | ACTOR-3 | ACTOR-1 |
+| WP-C 验证与结果 | ACTOR-3 | ACTOR-1 | ACTOR-2 |
 
-## 责任闭环
+Q1-INT/T-Q1-009 是跨包发布任务。ACTOR-1 可以承担协调和集成分支维护，但最终发布必须由 ACTOR-1、ACTOR-2、ACTOR-3 三人共同签署。
 
-1. A 将研究想法写成任务卡，明确输入、输出和验收条件。
-2. B 或 C 在自己的任务分支中实现，并记录提示词版本、设备和 AI 使用情况。
-3. 实验结果写入带 `run_id` 的运行目录，不能只在聊天中报告数字。
-4. Owner 填写交接单并提交 Pull Request，由非 Owner 队员审核。
-5. 合并后，论文只引用已接受的 `run_id`；结论、图表、代码和数据清单通过 `paper/claim-ledger.csv` 关联。
+## RACI
 
-## 防止技术负责人堵塞
+| 工作项 | ACTOR-1 | ACTOR-2 | ACTOR-3 |
+|---|---|---|---|
+| WP-A 数据代码、预处理实验、数据论文段 | R | C/Peer | C/Integrator |
+| WP-B 模型代码、基线实验、模型论文段 | C/Integrator | R | C/Peer |
+| WP-C 冲突验证代码、稳健性实验、结果论文段 | C/Peer | C/Integrator | R |
+| Q1-INT claim ledger、论文整合和发布检查 | C/Coordinator | C | C |
+| 最终提交 | Release Council | Release Council | Release Council |
 
-A 重点审查模型边界、数据泄漏、实验协议和最终结论，不逐行审查所有低风险代码。P2 内容由 B/C 交叉审核；只有改变模型、指标或论文主张时才要求 A 再次签字。
+`R` 是执行责任，`C/Peer` 是独立复核，`C/Integrator` 是包级集成检查。协调人不拥有单独的最终否决或签署权。
+
+## 证据门
+
+- **G0：范围门**——数据角色、题意解释、保密边界和任务卡冻结。
+- **G1：接口门**——预处理 manifest、指标方向、模型输入输出和评价指标冻结。
+- **G2：运行门**——模型正式 run 通过配置、seed、分层和失败记录检查。
+- **G3：论文门**——三个工作包都完成 code、run_id、paper section、handoff 和 Peer Review。
+- **G4：发布门**——claim ledger、PDF、附件、哈希和提交材料由三人共同检查。
+
+没有独立 Peer Review 时状态只能是 `REVIEW_BLOCKED`；没有 Integrator 检查时不能进入 `PACKAGE_ACCEPTED`；没有三人 Release Council 签署时不能进入 `INTEGRATED`。
+
+## 任务状态
+
+统一状态为：
+
+```text
+DRAFT → SPEC_READY → CODE_READY → RUNNING → RUN_COMPLETE
+      → PEER_REVIEW → PACKAGE_ACCEPTED → INTEGRATED
+                         └→ REWORK / REVIEW_BLOCKED
+```
+
+`Task Card` 管范围和依赖，`PR` 管代码审阅，`Run Manifest` 管实验事实，`paper/claim-ledger.csv` 管论文主张。四者缺一不可。
+
+## 对话与 GitHub 规则
+
+每个 Actor 使用一个工作包对话；协调对话只维护任务图、门控和决策日志。每个工作包原则上一个 Issue、一个主 PR，微任务作为 checklist。Reviewer 通过 PR/handoff 留意见，Owner 在自己的分支修订；Integrator 只在包级证据齐全后推动合并。
+
+分支命名使用 `wp/ACTOR-1/WP-A`、`wp/ACTOR-2/WP-B`、`wp/ACTOR-3/WP-C`；跨包整合使用 `integration/ACTOR-1/Q1-INT`。原始数据、未公开题目、密钥和敏感对话不进入 GitHub。

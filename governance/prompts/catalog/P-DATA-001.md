@@ -2,8 +2,8 @@
 prompt_id: P-DATA-001
 version: v1.0.0
 status: trial
-owner: B
-reviewer: A
+owner: work_package_owner
+reviewer: peer_reviewer
 ---
 
 # 问题一质量数据预处理与泄漏审计
@@ -51,7 +51,7 @@ reviewer: A
 - 原始文件 SHA256 与运行前一致。
 - 任何排除、保留、替代、未决语义和重叠处理都能从汇总表追溯到规则。
 - 输出中不出现质量总分、PP-GA 权重、模型优劣结论或论文措辞。
-- 输出默认 `needs_human_review=true`，等待 Reviewer A 审查后才能供评分模型任务引用。
+- 输出默认 `needs_human_review=true`，须先由任务卡指定的 `peer_reviewer_actor` 独立审查，再由 `release_integrator_actor` 检查包级证据后才能供下游任务引用。
 
 ## 返回格式
 

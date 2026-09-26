@@ -1,0 +1,10 @@
+schema_version: q1.scale-identifiability.v1
+run_id: q1-scale-identifiability-20260924-r01
+task_id: T-Q1-003-MIXTURE
+duplicate_design_pairs:
+  validation: [A6_A7, A8_A9]
+  extrapolation: [A12_A13, A14_A15]
+metric: shared_prediction_error_lower_bound_from_paired_target_delta
+governance:
+  p_only_absolute_cross_scale_model: blocked
+  source_files_read_only: true

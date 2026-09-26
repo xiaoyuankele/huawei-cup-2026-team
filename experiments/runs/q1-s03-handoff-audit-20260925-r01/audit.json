@@ -1,0 +1,52 @@
+{
+  "n_rows": 1214,
+  "max_input_simplex_sum_error": 1.5543122344752192e-15,
+  "pair_checks": [
+    {
+      "left": "A6_A7_test_1m",
+      "right": "A8_A9_test_60m",
+      "n": 256,
+      "same_original_ids_and_mixtures": true
+    },
+    {
+      "left": "A12_A13_est_10b",
+      "right": "A14_A15_est_70b",
+      "n": 63,
+      "same_original_ids_and_mixtures": true
+    },
+    {
+      "left": "A4_A5_train_1m",
+      "right": "A12_A13_est_10b",
+      "n": 63,
+      "same_original_ids_and_mixtures": true
+    }
+  ],
+  "input_sha256": "c0714f8594ea8e9e0072b80ab156dd71293489ac436a9856f81dd64d9eb5d44b",
+  "input_name": "scored_wide_v1_hard.csv",
+  "python": "3.11.5",
+  "numpy": "1.26.4",
+  "pandas": "2.0.3",
+  "export_predictions": false,
+  "base_fit": "A4/A5 only; mapped quality drops five unmapped rows",
+  "correction_fit": "A6/A8 matched composition differences only",
+  "C2_units_fixed": true,
+  "C2_fold_preprocessing": "training_fold_only",
+  "metric_definitions": {
+    "rmse_mean_loss": "sqrt(mean_rows((mean_domains(y)-mean_domains(pred))**2))",
+    "rmse_domain_macro": "mean_domains(sqrt(mean_rows((y-pred)**2)))",
+    "rmse_pooled_all_domains": "sqrt(mean_rows_and_domains((y-pred)**2))",
+    "mae_mean_loss": "mean_rows(abs(mean_domains(y)-mean_domains(pred)))",
+    "bias_observed_minus_pred_mean_loss": "mean_rows(mean_domains(y)-mean_domains(pred))"
+  },
+  "limitations": [
+    "A6/A8 are calibration members for corrected models; A8 is not independent validation.",
+    "A10/A11 and A12-A15 were previously inspected; evaluations are retrospective, not fresh blind tests.",
+    "A12-A15 contain supplied estimated Loss values, not independent observed measurements.",
+    "A12/A14 mixtures equal the first 63 A4 recipes; this is scale extrapolation, not unseen-mixture validation.",
+    "Negative R2 means worse squared error than the evaluated table's own mean reference.",
+    "C1 shifts all recipes at the same scale equally and cannot improve within-scale rank ordering.",
+    "Bootstrap intervals quantify paired-row sampling variability, not scale-law form uncertainty.",
+    "Quality is composition-derived; regression coefficients are predictive, not causal domain effects.",
+    "Historical regularization is fixed; the C2 selected tuning score is not a nested performance estimate."
+  ]
+}

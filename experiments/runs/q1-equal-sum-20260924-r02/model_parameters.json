@@ -1,0 +1,27 @@
+{
+  "model": "EQUAL_SUM",
+  "run_id": "q1-equal-sum-20260924-r02",
+  "fit_records": 40919,
+  "weights": {
+    "fineweb_edu": 0.0625,
+    "fluency_en_fluent_margin": 0.0625,
+    "modernbert_cleanliness_expected": 0.0625,
+    "modernbert_readability_expected": 0.0625,
+    "dsir_books": 0.0625,
+    "dsir_wiki": 0.0625,
+    "dsir_math": 0.0625,
+    "qurater_writing_style": 0.0625,
+    "qurater_facts_trivia": 0.0625,
+    "qurater_educational_value": 0.0625,
+    "ad_en_no_ad_margin": 0.0625,
+    "rps_doc_frac_unique_words": 0.0625,
+    "rps_doc_frac_no_alph_words": 0.0625,
+    "rps_doc_frac_chars_top_2gram": 0.0625,
+    "rps_doc_frac_chars_top_3gram": 0.0625,
+    "rps_lines_ending_with_terminal_punctution_mark": 0.0625
+  },
+  "positive_ideal": 1.0,
+  "negative_ideal": 0.0,
+  "weight_convention": "100*sum(w*x)",
+  "note": "Main and controls use the same frozen normalized matrix"
+}

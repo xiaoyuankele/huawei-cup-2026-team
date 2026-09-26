@@ -1,0 +1,347 @@
+{
+  "schema_version": "q1.track-c-multiscale-exploratory.v1",
+  "run_id": "q1-track-c-multiscale-exploratory-20260924-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "d962ebbbf2187489a54f39b7618d893030a09be0",
+  "status": "ROLE_CHANGE_EXPLORATORY",
+  "role_change": "A6/A7 and A8/A9 are used as adaptation data in this run; they are not official validation after this use.",
+  "feature_table": {
+    "path": "experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_wide.csv",
+    "sha256": "9c9ca86b53440e118d7bae29f5d261121888ed5068c2044566dbdfecdc700250"
+  },
+  "adaptation_datasets": [
+    "A4_A5_train_1m",
+    "A6_A7_validation_1m",
+    "A8_A9_validation_60m"
+  ],
+  "unseen_scale_holdout": [
+    "A10_A11_validation_1b"
+  ],
+  "extrapolation_diagnostics": [
+    "A12_A13_extrapolation_10b",
+    "A14_A15_extrapolation_70b"
+  ],
+  "basis": {
+    "name": "Helmert ilr plus log10 scale and interactions",
+    "zero_replacement": "multiplicative",
+    "epsilon": 0.0001
+  },
+  "alpha_selection": {
+    "method": "leave_one_scale_out_on_adaptation_scales",
+    "candidates": [
+      {
+        "alpha": 0.1,
+        "leave_one_scale_out_mean_r2": -6.17970237292241,
+        "fold_r2": [
+          -4.678919552549065,
+          -7.680485193295755
+        ]
+      },
+      {
+        "alpha": 1.0,
+        "leave_one_scale_out_mean_r2": -6.179709301017138,
+        "fold_r2": [
+          -4.6795616080858515,
+          -7.679856993948425
+        ]
+      },
+      {
+        "alpha": 10.0,
+        "leave_one_scale_out_mean_r2": -6.1798206628019665,
+        "fold_r2": [
+          -4.6859605358715495,
+          -7.6736807897323835
+        ]
+      },
+      {
+        "alpha": 100.0,
+        "leave_one_scale_out_mean_r2": -6.183991845196168,
+        "fold_r2": [
+          -4.746546381112273,
+          -7.621437309280062
+        ]
+      }
+    ],
+    "selected": {
+      "alpha": 0.1,
+      "leave_one_scale_out_mean_r2": -6.17970237292241,
+      "fold_r2": [
+        -4.678919552549065,
+        -7.680485193295755
+      ]
+    }
+  },
+  "evaluations": {
+    "A4_A5_train_1m": {
+      "role": "adaptation",
+      "mean_target_r2": 0.7504898034358365,
+      "per_target_r2": [
+        0.7723584622936897,
+        0.8542479275917365,
+        0.8037025348349963,
+        0.779144157789265,
+        0.8147915319450666,
+        0.7542434711130624,
+        0.7395735698195702,
+        0.6756781607232407,
+        0.6820150143603664,
+        0.7967051308358636,
+        0.648836143114228,
+        0.642434472884786,
+        0.7926368673600043
+      ],
+      "centered_relative_mean_target_r2": 0.7512039153475867,
+      "mae": 0.27578090373489533,
+      "rmse": 0.38475119934000207,
+      "mean_residual": 0.019018904843541733,
+      "per_target_mean_residual": [
+        0.03618510169013142,
+        0.010358872091534077,
+        0.029320846890041042,
+        0.011655541160016075,
+        0.02477702122055259,
+        0.024364414953703235,
+        0.01880566858780175,
+        0.010721593501240445,
+        0.009467616401995534,
+        0.03270541356028482,
+        0.011036810724631568,
+        0.016381480446536104,
+        0.011465381737573853
+      ]
+    },
+    "A6_A7_validation_1m": {
+      "role": "adaptation",
+      "mean_target_r2": 0.7831277688198559,
+      "per_target_r2": [
+        0.7910437213480903,
+        0.837246764955562,
+        0.8713051853716017,
+        0.807781522671947,
+        0.8579287203594405,
+        0.7752185544765025,
+        0.7307980190246017,
+        0.7353949940683384,
+        0.7002133674571004,
+        0.8368135191576888,
+        0.6989796342829848,
+        0.7087039356720077,
+        0.8292330558122618
+      ],
+      "centered_relative_mean_target_r2": 0.7864081882059704,
+      "mae": 0.2502669929751937,
+      "rmse": 0.33118915703428076,
+      "mean_residual": -0.03792553759477883,
+      "per_target_mean_residual": [
+        -0.07223444482019731,
+        -0.020616302545437393,
+        -0.05850518929245678,
+        -0.02320868075261653,
+        -0.04945757852086178,
+        -0.04853931301700793,
+        -0.037485398381688434,
+        -0.021370681585655464,
+        -0.018855193576888814,
+        -0.06526934305295082,
+        -0.022000621134362606,
+        -0.032662012541484334,
+        -0.022827229510516696
+      ]
+    },
+    "A8_A9_validation_60m": {
+      "role": "adaptation",
+      "mean_target_r2": 0.773040894975424,
+      "per_target_r2": [
+        0.796688365249752,
+        0.82548295675975,
+        0.8386896495342231,
+        0.8042489749562736,
+        0.8245415698883212,
+        0.7577260896140987,
+        0.7480243923070844,
+        0.7486690334000263,
+        0.6902090564096693,
+        0.7950140631587759,
+        0.6836042407499547,
+        0.7196281569670664,
+        0.8170050856855164
+      ],
+      "centered_relative_mean_target_r2": 0.7730409421245678,
+      "mae": 0.1935717809355214,
+      "rmse": 0.25605950844048714,
+      "mean_residual": -0.00011227209231056124,
+      "per_target_mean_residual": [
+        -0.00013575856007149584,
+        -0.00010144163763655192,
+        -0.0001365044876338109,
+        -0.00010240156742118665,
+        -9.646392024903992e-05,
+        -0.00018951689040989494,
+        -0.0001259387939205204,
+        -7.250541683056534e-05,
+        -8.003922710480768e-05,
+        -0.00014148406762627512,
+        -7.300031490474652e-05,
+        -0.00010094835159344881,
+        -0.00010353396463497373
+      ]
+    },
+    "A10_A11_validation_1b": {
+      "role": "unseen_scale_holdout",
+      "mean_target_r2": -18.673627309798594,
+      "per_target_r2": [
+        -2.691314696554967,
+        -30.812796209413435,
+        -30.0509009338039,
+        -31.57012445589006,
+        0.7060459878481565,
+        -9.756562689525085,
+        -7.505722757242173,
+        -16.765403537021776,
+        -70.19340368078028,
+        -2.6473073342441884,
+        -11.769951251230411,
+        -22.725646895872345,
+        -6.974066573651269
+      ],
+      "centered_relative_mean_target_r2": 0.015833146395577227,
+      "mae": 0.5558581420049706,
+      "rmse": 0.6352339835019624,
+      "mean_residual": -0.4909654029585695,
+      "per_target_mean_residual": [
+        -0.17605345062045097,
+        -0.7750959670433277,
+        -0.2741098036587977,
+        -0.8948713706592013,
+        -0.015101163712864865,
+        0.36545370382015596,
+        -0.3590426796020118,
+        -1.0136700987827365,
+        -0.8457741046351789,
+        -0.7969252351926078,
+        -0.6957202823009834,
+        -0.5185639495375627,
+        -0.3830758365358352
+      ]
+    },
+    "A12_A13_extrapolation_10b": {
+      "role": "extrapolation_diagnostic",
+      "mean_target_r2": -18.490343087521644,
+      "per_target_r2": [
+        -2.031509770499919,
+        -1.6655561880826126,
+        -3.046132887462676,
+        -11.01880904442804,
+        -2.734212293756695,
+        -64.76594536028013,
+        -3.031995472151027,
+        -38.728848706121454,
+        -42.174075226196244,
+        0.17775208395076814,
+        -61.74266792163665,
+        -7.878918808034365,
+        -1.7335405430823547
+      ],
+      "centered_relative_mean_target_r2": -0.4541493992024532,
+      "mae": 0.7966977515958966,
+      "rmse": 1.0127058699270113,
+      "mean_residual": -0.1358705649330518,
+      "per_target_mean_residual": [
+        0.4824772005494353,
+        -0.4021060659481279,
+        0.4687831702014487,
+        -0.738809032095658,
+        0.5849820567903393,
+        2.1961180299333654,
+        0.294659481547837,
+        -1.3217784069368714,
+        -1.357119229301731,
+        0.11795472672656471,
+        -1.338933027856998,
+        -0.4779327699568712,
+        -0.274613477782407
+      ]
+    },
+    "A14_A15_extrapolation_70b": {
+      "role": "extrapolation_diagnostic",
+      "mean_target_r2": -33.21703179598091,
+      "per_target_r2": [
+        -14.788730547884272,
+        -0.6764949603140267,
+        -20.289355235822374,
+        -7.085255946312724,
+        -13.562349202870688,
+        -194.88407397673862,
+        -22.536631392785687,
+        -42.442273279202595,
+        -41.886714875407186,
+        -5.711977959920487,
+        -61.529982825843746,
+        -5.812010226921634,
+        -0.6155629177277602
+      ],
+      "centered_relative_mean_target_r2": -1.3170047480114588,
+      "mae": 0.9504220236429652,
+      "rmse": 1.2148574727829486,
+      "mean_residual": 0.19987961525380757,
+      "per_target_mean_residual": [
+        0.9103702892758947,
+        -0.1303243145292037,
+        0.9195691250775377,
+        -0.49890209564856614,
+        0.9894900882115485,
+        3.021525755835434,
+        0.71582549149009,
+        -1.2364001245881044,
+        -1.2522754456078475,
+        0.5980751416486626,
+        -1.2515102539796699,
+        -0.20914733806814587,
+        0.02213867918186865
+      ]
+    }
+  },
+  "target_sources": {
+    "A4_A5_train_1m": {
+      "path": "data/origin/real_attachments/A_data_value/regmix_tables/train_pile_loss_1m.csv",
+      "sha256": "49a959aa07ce5c20831d5abe3a7896ff0cd90a398bd407c8913fd5588be0465a",
+      "rows": 512
+    },
+    "A6_A7_validation_1m": {
+      "path": "data/origin/real_attachments/A_data_value/regmix_tables/test_pile_loss_1m.csv",
+      "sha256": "e027b1674f60140a65a87b5e4a59ab5f09dc33e8fd02c080682678074b160f53",
+      "rows": 256
+    },
+    "A8_A9_validation_60m": {
+      "path": "data/origin/real_attachments/A_data_value/regmix_tables/test_pile_loss_60m.csv",
+      "sha256": "8fe69d59ab7dd4fae4736459f4265ec93c7ed1ad1eca407346052560edc72b5b",
+      "rows": 256
+    },
+    "A10_A11_validation_1b": {
+      "path": "data/origin/real_attachments/A_data_value/regmix_tables/test_pile_loss_1B.csv",
+      "sha256": "b2451e2b7fa15400688edc39e4d32f21ccbe0fb356e07d62a0e9ccddf247114f",
+      "rows": 64
+    },
+    "A12_A13_extrapolation_10b": {
+      "path": "data/origin/real_attachments/A_data_value/regmix_tables/est_pile_loss_10b.csv",
+      "sha256": "226457581f3f59e15e44d8f72dee31fa7492c821699725fef47627d82cf34c0d",
+      "rows": 63
+    },
+    "A14_A15_extrapolation_70b": {
+      "path": "data/origin/real_attachments/A_data_value/regmix_tables/est_pile_loss_70b.csv",
+      "sha256": "d0883b2d1a44da9386a6d629a3623c724ee291cba1ac87b6d1079e5377307682",
+      "rows": 63
+    }
+  },
+  "prediction_output": {
+    "path": "experiments/runs/q1-track-c-multiscale-exploratory-20260924-r01/predictions.csv",
+    "sha256": "248895e94cb3ad70be6db4f007ea81dc0698ebeb2ba9262157904f1e1abadaf5",
+    "rows": 1214
+  },
+  "limitations": [
+    "This is an exploratory role-change run and cannot be compared as an official external-validation result.",
+    "Only 1M and 60M are adaptation scales; 1B is the primary unseen-scale holdout.",
+    "A12-A15 remain estimated extrapolation diagnostics.",
+    "No optimum mixture or causal effect is produced."
+  ]
+}

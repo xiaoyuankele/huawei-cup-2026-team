@@ -2,15 +2,15 @@
 prompt_id: P-CONFLICT-001
 version: v1.0.0
 status: draft
-owner: A
-reviewer: C
+owner: work_package_owner
+reviewer: peer_reviewer
 ---
 
 # 问题一冲突诊断与解释
 
 ## 任务
 
-利用已接受的模型运行结果、指标审计和验证分层，解释指标方向冲突、尺度差异、域漂移、缺失模式、权重扰动和模型 rank reversal。
+利用PACKAGE_ACCEPTED 的模型运行结果、指标审计和验证分层，解释指标方向冲突、尺度差异、域漂移、缺失模式、权重扰动和模型 rank reversal。
 
 ## 约束
 

@@ -43,7 +43,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \fi
 % 页面布局
 \RequirePackage{geometry}
-\RequirePackage{eso-pic}
 % 数学宏包
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
@@ -191,8 +190,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{hyperref}
 %% Document Layout
 % 页面布局
-\geometry{paperwidth=595.2bp,paperheight=841.92bp,top=85.1bp,bottom=49.65bp,left=63.8bp,right=63.7bp,footskip=1.1bp,headheight=0pt,headsep=0pt}
-\renewcommand*{\baselinestretch}{1.0}
+\geometry{top=30.0mm,bottom=25.0mm,left=22.5mm,right=22.5mm,headsep=8mm}
+\renewcommand*{\baselinestretch}{1.38}
 % 每行缩进两个汉字
 \setlength\parindent{2em}
 % 设置字体
@@ -312,13 +311,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \fi
 
 
-% Use the same SimSun / SimHei families as Word when Office fonts are available.
-\IfFileExists{/Applications/Microsoft Word.app/Contents/Resources/DFonts/Simsun.ttc}{%
-  \setCJKmainfont[Path=/Applications/Microsoft Word.app/Contents/Resources/DFonts/,AutoFakeBold=2.15]{Simsun.ttc}
-  \setCJKfamilyfont{zhsong}[Path=/Applications/Microsoft Word.app/Contents/Resources/DFonts/,AutoFakeBold=2.15]{Simsun.ttc}
-  \setCJKfamilyfont{zhhei}[Path=/Applications/Microsoft Word.app/Contents/Resources/DFonts/]{SimHei.ttf}
-}{}
-
 % 数学环境, 定理等设置
 \newtheorem{definition}{\gmcm@cap@definition}
 \newtheorem{theorem}{\gmcm@cap@theorem}
@@ -351,7 +343,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
  % 如果图片没有指定后缀, 依次按下列顺序搜索
 \DeclareGraphicsExtensions{.pdf,.eps,.jpg,.png}
  % 设置图表搜索路径, 可以给图表文件夹取如下名字
-\graphicspath{{template/figures/}{figures/}{figure/}{pictures/}%
+\graphicspath{{figures/}{figure/}{pictures/}%
   {picture/}{pic/}{pics/}{image/}{images/}}
 % 图表标题
 \DeclareCaptionFont{song}{\songti}
@@ -430,41 +422,65 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   \global\let\date\relax
   \global\let\and\relax
 }
-% Coordinates below are in PDF points from the supplied 2026 Word template.
-\newcommand\gmcm@field[2]{%
-  \put(212,-#1){\makebox[294bp][c]{\fontsize{18bp}{22bp}\selectfont\songti\bfseries #2}}}
 \def\ge@maketitle{%
   \clearpage
-  \if@gmcm@preface
+  %\thispagestyle{plain}%
   \thispagestyle{empty}
-  \setcounter{page}{0}
-  \pdfbookmark[1]{封面}{cover}
-  \AddToShipoutPictureBG*{\AtPageUpperLeft{\setlength{\unitlength}{1bp}%
-    \put(0,-770){\includegraphics{template/figures/cover2026.pdf}}}}
-  \AddToShipoutPictureFG*{\AtPageUpperLeft{\setlength{\unitlength}{1bp}%
-    \gmcm@field{392.4}{\gmcm@tokens@schoolname}%
-    \gmcm@field{450.7}{\gmcm@tokens@baominghao}%
-    \gmcm@field{483.36}{\gmcm@tokens@membera}%
-    \gmcm@field{515.52}{\gmcm@tokens@memberb}%
-    \gmcm@field{547.92}{\gmcm@tokens@memberc}}}
-  \null\clearpage
-  \fi
-  \makenametitle
+  \pdfbookmark[1]{封~面}{cover}
+  \if@gmcm@preface
+  %\setcounter{page}{0}
+  %\def\thepage{0}
+
+ \begin{center}
+ {\includegraphics{logo}}
+
+  \vskip1.5cm
+ {\zihao{2} \gmcm@ges@string@contents \par}
+ \end{center}
+
+ \vskip4em
+
+ % \thispagestyle{gmcmheadings}
+ \renewcommand\arraystretch{1.5}
+ %\noindent 
+ \begin{tabularx}{\textwidth-40pt}{lX}
+  \zihao{-2}\bfseries 学\qquad 校&\zihao{-2}\bfseries\gmcm@tokens@schoolname\\
+  \Xhline{1.2pt}\\
+  \zihao{-2}\bfseries 参赛队号&\zihao{-2}\bfseries\gmcm@tokens@baominghao\\
+  \Xhline{1.2pt}\\[-15pt]
+   \multirow{3}{*}{\zihao{-2}\bfseries 队员姓名}&\zihao{-2}\bfseries   1. \gmcm@tokens@membera\hfill\null\\
+   \cline{2-2}\\[-15pt]
+                               &\zihao{-2}\bfseries 2. \gmcm@tokens@memberb\hfill\null\\
+   \cline{2-2}\\[-15pt]
+                        &\zihao{-2}\bfseries 3.  \gmcm@tokens@memberc\hfill\null\\
+   \Xhline{1.2pt}
+  \end{tabularx}
+
+	\makenametitle
+	}
+
+\def\makenametitle{
+\clearpage
+\thispagestyle{plain}%
+\pdfbookmark[1]{标~题}{title}
+\setcounter{page}{1}
+\begin{center}
+%{\includegraphics[width=4cm]{logo}}
+{\zihao{2} \gmcm@ges@string@contents \par}
+\end{center}
+
+\vskip0.6cm%
+
+\begin{center}
+\begin{tabularx}{.95\textwidth}{@{}lX@{}}
+{\zihao{-2}\lishu 题\quad 目: } &\hfill\zihao{3}\heiti \@title\hfill\null\\
+\cline{2-2}
+\end{tabularx}
+\end{center}
+
+\vskip0.2cm%
 }
-\def\makenametitle{%
-  \global\let\gmcm@papertitle\@title
-  \clearpage
-  \thispagestyle{plain}
-  \pdfbookmark[1]{标题与摘要}{title}
-  \setcounter{page}{1}
-  \AddToShipoutPictureBG*{\AtPageUpperLeft{\setlength{\unitlength}{1bp}%
-    \put(0,-338){\includegraphics{template/figures/abstract-header2026.pdf}}}}
-  \AddToShipoutPictureFG*{\AtPageUpperLeft{\setlength{\unitlength}{1bp}%
-    \put(147.6,-259){\makebox(0,0)[l]{%
-      \parbox[b]{245bp}{\centering\fontsize{16bp}{20bp}\selectfont\heiti\gmcm@papertitle}}}}}
-  % Start the editable abstract beneath the fixed abstract label.
-  \vspace*{238bp}\par
-}
+
 
 % 中文标题格式设置
 % 目录深度
@@ -500,7 +516,16 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 %% Define new environment and command
 %% 摘要两个字设置为 -2 号.
 %% 定义摘要环境
-\renewenvironment{abstract}{\quotation}{\endquotation\newpage}
+\renewenvironment{abstract}{%
+\if@twocolumn
+		\section*{\gmcm@cap@abstractname}%
+	\else
+	 \begin{center}%
+	{\zihao{-2}\lishu\gmcm@cap@abstractname\vspace{\z@}}%
+	 \end{center}%
+ 	 \quotation
+	\fi}
+	{\if@twocolumn\else\endquotation\newpage\null\fi}
 \renewenvironment{quotation}
 	{\list{}{\listparindent 2em%
 	 \itemindent \listparindent
@@ -511,10 +536,12 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 	{\endlist}
 
 \newcommand\keywords[1]{%
-  \renewcommand{\gmcm@tokens@keywords}{#1}%
-  \par\vspace{1ex}\noindent
-  \raisebox{-5.8bp}{\includegraphics{template/figures/keywords2026.pdf}}\hspace{0.5em}#1\par
-}
+	\renewcommand{\gmcm@tokens@keywords}{#1}
+	\par
+	\vskip1ex
+	{\noindent\zihao{-3}\lishu\gmcm@cap@keywordsname：}~{\gmcm@tokens@keywords}
+	}
+
 
 \newcommand*\baominghao[1]{%
 	\renewcommand{\gmcm@tokens@baominghao}{#1}}
@@ -606,8 +633,5 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % {\thecontentslabel\hskip.5em}{}{\titlerule*[0.5pc]{.}\contentspage}
 
 % \pagestyle{plain}
-
-
-\def\ps@plain{\let\@mkboth\@gobbletwo\let\@oddhead\@empty\let\@evenhead\@empty\def\@oddfoot{\hfil\raisebox{3.05bp}[0pt][0pt]{\fontsize{9.12bp}{11bp}\selectfont\thepage}\hfil}\let\@evenfoot\@oddfoot}
 
 \endinput

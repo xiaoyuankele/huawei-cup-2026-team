@@ -1,7 +1,7 @@
 % !Mode:: "TeX:UTF-8"
 %!TEX program  = xelatex
 
-\documentclass[bwprint]{gmcmthesis}
+\documentclass[bwprint,fontset=windows]{gmcmthesis}
 
 \hypersetup{hidelinks}
 \usepackage[framemethod=TikZ]{mdframed}
@@ -41,11 +41,11 @@
 %===================== 建模论文题目 ======================
 
 \title{全国研究生数学建模竞赛论文标题}
-\baominghao{待填写正式队伍编号} %参赛队号
-\schoolname{学校名称填写} %学校名称
-\membera{成员A} %队员A
-\memberb{成员B} %队员B
-\memberc{成员C} %队员C
+\baominghao{\hspace{6em} 20250900001} %参赛队号
+\schoolname{\hspace{5.8em} 学校名称填写} %学校名称
+\membera{\hspace{6em} 成员A} %队员A
+\memberb{\hspace{6em} 成员B} %队员B
+\memberc{\hspace{6em} 成员C} %队员C
 
 %=======================================================
 
@@ -66,13 +66,13 @@
 \begin{mdframed}[%
 roundcorner=5pt,linecolor=gray!50,outerlinewidth=0.5pt,
 middlelinewidth=0.3pt,backgroundcolor=gray!2,
-innertopmargin=\topskip, frametitle={2026年模板使用说明},
+innertopmargin=\topskip, frametitle={2026年格式变化说明},
 frametitlefont= \bfseries,frametitlerule=true,frametitlealignment =\raggedright\noindent,
 frametitlerulewidth=.5pt, frametitlebackgroundcolor=gray!2,]
-本模板已按第二十三届赛事更新，提交前请替换所有示例内容：
+今年的格式变化如下：
 \begin{enumerate}
-\item 已更新届数及西安交通大学校徽；
-\item 摘要后直接开始正文，采用单倍行距；摘要不超过两页。
+\item 论文前两页 Logo 和 Title 替换；
+\item 修复若干 bug。
 \end{enumerate}
 \end{mdframed}
 
@@ -86,7 +86,7 @@ frametitlerulewidth=.5pt, frametitlebackgroundcolor=gray!2,]
 \pagestyle{plain}
 
 %目录 不推荐加
-%\maketoc
+\maketoc
 
 \clearpage
 
@@ -276,7 +276,7 @@ output result
 002 & 16 & 158 & 45 \\
 003 & 14 & 162 & 48 \\
 004 & 15 & 163 & 50 \\
-\cmidrule{1-4}
+\cmidrule{2-4}
 平均 & 15 & 159.75 & 46.25 \\
 \bottomrule
 \end{tabularx}

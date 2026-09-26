@@ -1,0 +1,52 @@
+flowchart LR
+    subgraph ENGINEERING[工程/协作环节]
+        T[Task Card\nT-Q1-003-MIXTURE\nOwner: ACTOR-2]
+        S[Specification\n变量、角色、约束、假设]
+        C[Config freeze\nq1-mixture-model.yaml]
+        I[Implementation\n审计脚本与模型脚本]
+        R[Run Manifest\ncommand / env / commit / metrics]
+        PR[Peer Review\nACTOR-3]
+        RI[Release Integrator\nACTOR-1]
+        CL[Claim Ledger\n数字、图表、run_id、限制]
+        PAPER[论文段落与图表]
+        RC[Release Council\nACTOR-1/2/3]
+        T --> S --> C --> I --> R --> PR
+        PR -->|REWORK / REVIEW_BLOCKED| S
+        PR -->|通过| RI --> CL --> PAPER --> RC
+    end
+
+    subgraph EXPERIMENT[实验环节]
+        E0[原始附件快照\nA4-A15 + A16]
+        E1[只读审计\nCSV矩形性、index、哈希]
+        E2[配方-Loss配对\ninner alignment]
+        E3[成分预处理\n记录行和、p/s、零值]
+        E4[设计诊断\nrank、condition、支持距离]
+        E5[模型候选\n线性 Ridge / 二阶 Ridge]
+        E6[内部CV\n仅A4/A5，选alpha]
+        E7[完整A4/A5拟合\n13目标多响应]
+        E8[同尺度外部验证\nA6/A7，绝对指标]
+        E9[跨尺度诊断\nA8-A11，绝对+中心化相对]
+        E10[外推敏感性\nA12-A15，非独立情景]
+        E11[质量Q门控\nq_i冻结后才可进入]
+        E12[正式模型候选\nscale-conditioned + Q sensitivity]
+        E0 --> E1 --> E2 --> E3 --> E4 --> E5 --> E6 --> E7
+        E7 --> E8 --> E9 --> E10
+        E10 --> E11 --> E12
+    end
+
+    C -.冻结规则.-> E0
+    E1 -.metrics.json.-> R
+    E6 -.selected_model.-> R
+    E8 -.validation metrics.-> R
+    E9 -.scale limitation.-> R
+    E10 -.scenario metrics.-> R
+    E12 -.only after review.-> CL
+
+    classDef gate fill:#fff7e6,stroke:#d46b08,color:#873800;
+    classDef active fill:#e6f4ff,stroke:#1677ff,color:#003a8c;
+    classDef locked fill:#fff1f0,stroke:#cf1322,color:#820014;
+    classDef output fill:#f6ffed,stroke:#389e0d,color:#135200;
+    class T,S,C,I,R,E0,E1,E2,E3,E4,E5,E6,E7 active;
+    class PR,RI,RC,E11,E12 gate;
+    class CL,PAPER output;
+    class E9,E10 locked;

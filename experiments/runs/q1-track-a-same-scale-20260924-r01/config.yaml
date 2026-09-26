@@ -1,0 +1,17 @@
+schema_version: q1.track-a-same-scale.v1
+run_id: q1-track-a-same-scale-20260924-r01
+task_id: T-Q1-003-MIXTURE
+input_feature_table: experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_wide.csv
+fit_pair: [A4, A5]
+same_scale_validation_pair: [A6, A7]
+cross_scale_diagnostics: [A8_A9, A10_A11, A12_A13, A14_A15]
+basis: helmert_ilr
+zero_replacement: {method: multiplicative, epsilon: 0.0001}
+model: multioutput_linear_ridge
+alpha_selection: five_fold_cv_on_A4_A5_only
+alpha_grid: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0]
+metrics: [MAE, RMSE, R2_per_target, centered_relative_R2, Spearman_per_target, mean_residual]
+governance:
+  validation_targets_not_used_for_fit: true
+  extrapolation_targets_not_used_for_fit: true
+  no_final_claim: true

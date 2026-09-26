@@ -1,0 +1,112 @@
+{
+  "schema_version": "q1.scale-feature-table.v1",
+  "run_id": "q1-scale-feature-table-20260924-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "d962ebbbf2187489a54f39b7618d893030a09be0",
+  "source_root": "data/origin/real_attachments/A_data_value/regmix_tables",
+  "derived_outputs": {
+    "wide_table": "experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_wide.csv",
+    "long_table": "experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_long.csv",
+    "wide_sha256": "9c9ca86b53440e118d7bae29f5d261121888ed5068c2044566dbdfecdc700250",
+    "long_sha256": "cc9617805819eb40c8344917289895a1e3405a503916a8f1a72e498ff621632a"
+  },
+  "rows": {
+    "wide": 1214,
+    "long": 20638
+  },
+  "domains": [
+    "train_the_pile_arxiv",
+    "train_the_pile_freelaw",
+    "train_the_pile_nih_exporter",
+    "train_the_pile_pubmed_central",
+    "train_the_pile_wikipedia_en",
+    "train_the_pile_dm_mathematics",
+    "train_the_pile_github",
+    "train_the_pile_philpapers",
+    "train_the_pile_stackexchange",
+    "train_the_pile_enron_emails",
+    "train_the_pile_gutenberg_pg_19",
+    "train_the_pile_pile_cc",
+    "train_the_pile_ubuntu_irc",
+    "train_the_pile_europarl",
+    "train_the_pile_hackernews",
+    "train_the_pile_pubmed_abstracts",
+    "train_the_pile_uspto_backgrounds"
+  ],
+  "scale_levels": [
+    "1M",
+    "60M",
+    "1B",
+    "10B",
+    "70B"
+  ],
+  "source_records": {
+    "A4_A5_train_1m": {
+      "relative_path": "data/origin/real_attachments/A_data_value/regmix_tables/train_mixture_1m.csv",
+      "sha256": "04a32ef4ab594376bf90e11404c033668f887c351d6a03ad3744824c7296a2d8",
+      "rows": 512,
+      "original_sum_min": 0.9960000000000001,
+      "original_sum_max": 1.0030000000000001,
+      "normalized_sum_max_abs_deviation": 4.440892098500626e-16,
+      "scale_label": "1M",
+      "scale_tokens": 1000000
+    },
+    "A6_A7_validation_1m": {
+      "relative_path": "data/origin/real_attachments/A_data_value/regmix_tables/test_mixture_1m.csv",
+      "sha256": "197267b7d6f15367e2f46c881e564c35b0d34e51b1754bb09d07e650cf8e1ce8",
+      "rows": 256,
+      "original_sum_min": 0.9970000000000001,
+      "original_sum_max": 1.0030000000000001,
+      "normalized_sum_max_abs_deviation": 4.440892098500626e-16,
+      "scale_label": "1M",
+      "scale_tokens": 1000000
+    },
+    "A8_A9_validation_60m": {
+      "relative_path": "data/origin/real_attachments/A_data_value/regmix_tables/test_mixture_60m.csv",
+      "sha256": "197267b7d6f15367e2f46c881e564c35b0d34e51b1754bb09d07e650cf8e1ce8",
+      "rows": 256,
+      "original_sum_min": 0.9970000000000001,
+      "original_sum_max": 1.0030000000000001,
+      "normalized_sum_max_abs_deviation": 4.440892098500626e-16,
+      "scale_label": "60M",
+      "scale_tokens": 60000000
+    },
+    "A10_A11_validation_1b": {
+      "relative_path": "data/origin/real_attachments/A_data_value/regmix_tables/test_mixture_1B.csv",
+      "sha256": "dd38052949c0a5f84165bdcb3ae3a331c7f07efd9bb83848bd579dfc4ce75a2c",
+      "rows": 64,
+      "original_sum_min": 0.998,
+      "original_sum_max": 1.002,
+      "normalized_sum_max_abs_deviation": 3.3306690738754696e-16,
+      "scale_label": "1B",
+      "scale_tokens": 1000000000
+    },
+    "A12_A13_extrapolation_10b": {
+      "relative_path": "data/origin/real_attachments/A_data_value/regmix_tables/est_mixture_10b.csv",
+      "sha256": "7561999cb5d9e604e8be3873b18b93d92881fa2ae70f5f29ebc65a80cc6c2797",
+      "rows": 63,
+      "original_sum_min": 0.998,
+      "original_sum_max": 1.0020000000000002,
+      "normalized_sum_max_abs_deviation": 3.3306690738754696e-16,
+      "scale_label": "10B",
+      "scale_tokens": 10000000000
+    },
+    "A14_A15_extrapolation_70b": {
+      "relative_path": "data/origin/real_attachments/A_data_value/regmix_tables/est_mixture_70b.csv",
+      "sha256": "880c7ca1ebef470422e2b93d9bfcd0976db7db4e34ea57047518d95fe43327d1",
+      "rows": 63,
+      "original_sum_min": 0.998,
+      "original_sum_max": 1.0020000000000002,
+      "normalized_sum_max_abs_deviation": 3.3306690738754696e-16,
+      "scale_label": "70B",
+      "scale_tokens": 70000000000
+    }
+  },
+  "calculation": "p_normalized = p_raw / row_sum; expected_tokens_domain = p_normalized_domain * total_scale_tokens; log10_scale = log10(total_scale_tokens)",
+  "interpretation_limits": [
+    "Per-domain token counts are expected allocations, not independently observed integer token counts.",
+    "Scale labels are fixed from the Q1 data contract; this run does not infer or validate training-process metadata such as epochs, steps, deduplication, or model size.",
+    "The derived table is an input feature artifact and does not fit a Loss model or change A4-A15 data roles.",
+    "Original attachments remain read-only and are not copied into the run directory."
+  ]
+}

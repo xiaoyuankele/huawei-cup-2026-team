@@ -2,15 +2,15 @@
 prompt_id: P-PAPER-001
 version: v1.0.0
 status: draft
-owner: C
-reviewer: A
+owner: work_package_owner
+reviewer: peer_reviewer
 ---
 
 # 结果分析与 LaTeX 段落
 
 ## 任务
 
-仅依据已接受的实验 `run_id`、图表源文件和引用资料，生成可审查的 LaTeX 段落、表格和图注。
+仅依据PACKAGE_ACCEPTED 的实验 `run_id`、图表源文件和引用资料，生成可审查的 LaTeX 段落、表格和图注。
 
 ## 约束
 

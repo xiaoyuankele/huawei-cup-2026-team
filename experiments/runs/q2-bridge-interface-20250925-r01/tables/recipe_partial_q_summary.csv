@@ -1,0 +1,7 @@
+recipe,file,role,n_rows,mean_total_mass,min_mapped_mass,mean_mapped_mass,max_mapped_mass,mean_unmapped_mass,mean_q_partial_raw,mean_q_partial_renorm,p99_unmapped_mass,status
+A4_A5_train_1m,A_data_value/regmix_tables/train_mixture_1m.csv,fit,512,0.9998808593750006,0.0,0.5645898437499997,1.0,0.435291015625,33.945845684709155,60.073479600416626,0.999,diagnostic_only_partial_q
+A6_A7_validation_1m,A_data_value/regmix_tables/test_mixture_1m.csv,validation,256,0.9999609374999998,0.001,0.569,1.0,0.4309609374999999,34.00529980310786,59.586929996171335,0.984,diagnostic_only_partial_q
+A8_A9_validation_60m,A_data_value/regmix_tables/test_mixture_60m.csv,validation,256,0.9999609374999998,0.001,0.569,1.0,0.4309609374999999,34.00529980310786,59.586929996171335,0.984,diagnostic_only_partial_q
+A10_A11_validation_1b,A_data_value/regmix_tables/test_mixture_1B.csv,validation,64,0.9997187499999998,0.138,0.6224375,0.888,0.3772812500000001,38.118688287010706,61.12661339943875,0.862,diagnostic_only_partial_q
+A12_A13_extrapolation_10b,A_data_value/regmix_tables/est_mixture_10b.csv,extrapolation,63,0.9998730158730158,0.003,0.5434761904761903,1.0,0.45639682539682547,32.87730182281079,60.18889217877291,0.997,diagnostic_only_partial_q
+A14_A15_extrapolation_70b,A_data_value/regmix_tables/est_mixture_70b.csv,extrapolation,63,0.9998730158730158,0.003,0.5434761904761903,1.0,0.45639682539682547,32.87730182281079,60.18889217877291,0.997,diagnostic_only_partial_q

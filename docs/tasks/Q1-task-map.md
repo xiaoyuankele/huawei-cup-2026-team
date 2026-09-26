@@ -1,36 +1,32 @@
-# 问题一任务分发图
+# 问题一任务分发图 v2
 
-状态：计划稿。任务卡是执行入口，Prompt Registry 是模板入口，Prompt Run 和 `run_id` 是实际调用与结果入口。未达到前置任务 `ACCEPTED` 的任务只能保持 `DRAFT` 或 `READY`，不能把聊天输出当作实验依据。
+任务卡只描述范围、依赖和证据门；实际执行人由 `owner_actor`、`peer_reviewer_actor` 和 `release_integrator_actor` 决定。A/B/C 不再作为人员身份。正式状态使用 `DRAFT → SPEC_READY → CODE_READY → RUNNING → RUN_COMPLETE → PEER_REVIEW → PACKAGE_ACCEPTED → INTEGRATED`。
 
-复制给自己或队友的角色化执行消息见 [`Q1-prompt-dispatch.md`](Q1-prompt-dispatch.md)；其中的 canonical prompt、任务卡和 GitHub 回链要求不可省略。
+| 顺序 | task_id | 任务 | 工作包 | Owner | Peer Reviewer | Release Integrator | Prompt | 状态 | 前置门 |
+|---:|---|---|---|---|---|---|---|---|---|
+| 1 | T-Q1-001 | 原始数据契约与实验边界 | WP-A | ACTOR-1 | ACTOR-2 | ACTOR-3 | P-EXP-001@v1.0.0 | PEER_REVIEW | G0 |
+| 2 | T-Q1-002 | 指标语义、方向、归一化和泄漏审计 | WP-A | ACTOR-1 | ACTOR-2 | ACTOR-3 | P-DATA-001@v1.0.0 | PEER_REVIEW | T-Q1-001 / G0 |
+| 3 | T-Q1-003 | 综合评价模型规格与评价协议 | WP-B | ACTOR-2 | ACTOR-3 | ACTOR-1 | P-MODEL-002@v1.0.0 | DRAFT | G0，可与 WP-C 脚手架并行 |
+| 4 | T-Q1-004 | 基线、PP-GA 和对照模型实现 | WP-B | ACTOR-2 | ACTOR-3 | ACTOR-1 | P-EXP-002@v1.0.0 | DRAFT | G1 / T-Q1-003 PACKAGE_ACCEPTED |
+| 5 | T-Q1-005 | 指标冲突、权重敏感性和解释 | WP-C | ACTOR-3 | ACTOR-1 | ACTOR-2 | P-CONFLICT-001@v1.0.0 | DRAFT | G2 / T-Q1-004 PACKAGE_ACCEPTED |
+| 6 | T-Q1-006 | 内部/外部验证与稳健性分析 | WP-C | ACTOR-3 | ACTOR-1 | ACTOR-2 | P-VALID-001@v1.0.0 | DRAFT | G2 / T-Q1-004、005 |
+| 7 | T-Q1-007 | Q1 图表与结果表 | WP-C | ACTOR-3 | ACTOR-1 | ACTOR-2 | P-FIG-001@v1.0.0 | DRAFT | G2 / T-Q1-005、006 |
+| 8 | T-Q1-008 | WP-C 结果论文段与主张登记 | WP-C | ACTOR-3 | ACTOR-1 | ACTOR-2 | P-PAPER-001@v1.0.0 | DRAFT | T-Q1-006、007 |
+| 9 | T-Q1-009 | Q1 跨包整合与发布检查 | Q1-INT | ACTOR-1（协调） | ACTOR-2/3 | ACTOR-1/2/3 | P-INT-001@v1.0.0 | DRAFT | WP-A/B/C PACKAGE_ACCEPTED |
 
-| 顺序 | task_id | 任务 | Owner | Reviewer | Prompt | 状态 | 前置 |
-|---:|---|---|---|---|---|---|---|
-| 1 | T-Q1-001 | 原始数据契约与实验边界 | B | A | P-EXP-001@v1.0.0 | REVIEW | — |
-| 2 | T-Q1-002 | 指标语义、方向、归一化和泄漏审计 | B | A | P-DATA-001@v1.0.0 | REVIEW | T-Q1-001（不要求已接受，但不得绕过其限制） |
-| 3 | T-Q1-003 | 综合评价模型规格与评价协议 | A | B | P-MODEL-002@v1.0.0 | DRAFT | T-Q1-002 |
-| 4 | T-Q1-004 | 基线、PP-GA 和对照模型实现 | B | A | P-EXP-002@v1.0.0 | DRAFT | T-Q1-002、T-Q1-003 |
-| 5 | T-Q1-005 | 指标冲突、权重敏感性和解释 | A | C | P-CONFLICT-001@v1.0.0 | DRAFT | T-Q1-004 |
-| 6 | T-Q1-006 | 内部/外部验证与稳健性分析 | C | A | P-VALID-001@v1.0.0 | DRAFT | T-Q1-004、T-Q1-005 |
-| 7 | T-Q1-007 | Q1 图表与结果表 | C | B | P-FIG-001@v1.0.0 | DRAFT | T-Q1-005、T-Q1-006 |
-| 8 | T-Q1-008 | Q1 论文段落与主张登记 | C | A | P-PAPER-001@v1.0.0 | DRAFT | T-Q1-006、T-Q1-007 |
+## 并行规则
 
-## 分发规则
+1. WP-A 在 G0 后执行数据契约和预处理；9 个 `pending_verification` 方向不能进入主评分矩阵。
+2. T-Q1-003 的模型规格和 WP-C 的诊断/图表/论文脚手架可以并行准备；没有 G1/G2 时不得写正式结果。
+3. T-Q1-004 通过 G1 后先跑等权/稳健基线，再跑 PP-GA 和对照方法；每个方法独立 `run_id`。
+4. T-Q1-005/006/007/008 共享已接受模型 run_id，但 WP-C 可提前准备代码和空表结构。
+5. T-Q1-009 只做跨包整合，不替 Owner 重写结果；三人 Release Council 全部签署后才进入 `INTEGRATED`。
 
-1. B 先处理 T-Q1-002 的 Reviewer 意见；9 个 `pending_verification` 方向不能在 T-Q1-003 前被静默填入 higher-is-better 矩阵。
-2. A 可以并行起草 T-Q1-003，但不得使用未接受的质量总分、权重或模型结果。
-3. T-Q1-004 先跑等权/稳健基线，再运行 PP-GA 和其他对照；所有数字进入独立 `run_id`。
-4. T-Q1-005 解释冲突来源，不自动把冲突列当作噪声删除，也不凭主观理由加入惩罚项。
-5. T-Q1-006 必须按 A1 fit、A1 holdout、A2/A3 重叠子集和新增子集分层报告，不能把 A2/A3 全量写成独立真值验证。
-6. T-Q1-007、T-Q1-008 只能引用已接受的运行记录；论文数字回链 `paper/claim-ledger.csv`。
+## 四个事实源
 
-## 统一交接门
+- Task Card：范围、门控和验收条件。
+- Pull Request：代码审阅、Peer Review 和 Integrator 决定。
+- Run Manifest：配置、seed、输入、指标、失败原因和输出哈希。
+- `paper/claim-ledger.csv`：每个论文主张、图表和数字的证据链。
 
-每个任务完成时必须填写 `governance/handoff-template.md`，记录 `prompt_run_id`、`run_id`、commit、输入引用、命令、输出哈希、限制和 Reviewer 请求。发现执行失败、证据不足、方向争议或结果矛盾时，先登记 `feedback_id`，再决定重试、降级为探索性结果或暂停下游任务。
-
-## GitHub 管理边界
-
-1. 进入 GitHub 版本管理的内容包括：脱敏任务卡、提示词模板、`registry.csv`、Prompt Run 元数据、handoff、配置、脚本、实验 manifest、审计摘要和审核结论。每个可执行任务都必须能回链到分支、Issue 或 PR；当前 T-Q1-001、T-Q1-002 已分别绑定 PR #3、PR #4。
-2. 不进入 GitHub 的内容包括：`data/origin/` 原始数据、`problem/` 未公开题目、完整敏感 AI 对话、账号信息、密钥和未脱敏中间结果。GitHub 只保留相对路径、脱敏摘要和 SHA256。
-3. 分发到其他对话时，只发送对应任务卡、已登记的提示词模板和仓库链接；真实调用完成后必须回写 `prompt_run_id`、`run_id`、commit、输出哈希和 handoff，不能把聊天窗口作为唯一交付物。
-4. T-Q1-003 至 T-Q1-008 在进入 `READY` 或 `RUNNING` 前，须补齐 GitHub Issue/PR 回链；没有前置审核或回链时只能保持 `DRAFT`。
+缺少任一事实源、独立复核、Integrator 结论或论文段时，任务只能是 `PARTIAL`、`REWORK` 或 `REVIEW_BLOCKED`。

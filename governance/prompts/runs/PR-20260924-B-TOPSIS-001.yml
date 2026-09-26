@@ -1,0 +1,35 @@
+prompt_run_id: PR-20260924-B-TOPSIS-001
+task_ids:
+- T-Q1-002
+- T-Q1-004
+prompt_id: P-EXP-002
+prompt_version: v1.0.0
+owner: B
+reviewer: A
+date: '2026-09-24'
+tool: Codex desktop
+status: REVIEW
+needs_human_review: true
+input_summary: User selects existing fixed-reference CRITIC-weighted TOPSIS; refresh
+  preprocessing in a new delivery workspace, rerun main model and controls, produce
+  reproducible report and full local data. Existing repository states and old run
+  histories are preserved.
+source_repository_commit: 3c7d3512301df6899d293e69a856027c7a4c530b
+model_config_sha256: a95ae79e960b705512c7063addbe3f82f823fcba763cc59822ff4058c6f80328
+output_refs:
+- docs/decisions/q1-quality-evaluation-report.md
+- data/manifests/q1_preprocessed.yaml
+- data/manifests/q1_scoring.json
+- experiments/runs/q1-critic-topsis-20260924-r01
+run_ids:
+- q1-indicator-normalization-20260924-r02
+- q1-critic-topsis-20260924-r01
+- q1-critic-sum-20260924-r02
+- q1-equal-sum-20260924-r02
+- q1-topsis-no3cost-20260924-r01
+- q1-topsis-nodsir-20260924-r01
+- q1-topsis-wsquared-20260924-r01
+limitations: User-authorized local delivery; A review not completed. Historical manifest
+  mismatch retained; no old approval or prompt registration fabricated.
+submission_pr: https://github.com/2971793671-lgtm/huawei-cup-2026-team/pull/1
+submission_commit: 3e42c853460b7cbce3a0d7ae8648fd90521e657e

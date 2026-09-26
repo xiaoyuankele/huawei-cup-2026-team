@@ -2,8 +2,8 @@
 prompt_id: P-MODEL-002
 version: v1.0.0
 status: draft
-owner: A
-reviewer: B
+owner: work_package_owner
+reviewer: peer_reviewer
 ---
 
 # 问题一综合评价模型规格与评价协议

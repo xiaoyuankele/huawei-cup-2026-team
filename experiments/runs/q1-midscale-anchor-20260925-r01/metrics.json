@@ -1,0 +1,81 @@
+{
+  "schema_version": "q1.midscale-anchor.v1",
+  "run_id": "q1-midscale-anchor-20260925-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "a4db97afe73c429af6cc3000939093d4c730cddf",
+  "status": "ROLE_CHANGE_EXPLORATORY",
+  "adaptation": [
+    "A4_A5_train_1m",
+    "A6_A7_validation_1m",
+    "A8_A9_validation_60m",
+    "A10_A11_validation_1b"
+  ],
+  "diagnostic": [
+    "A12_A13_extrapolation_10b",
+    "A14_A15_extrapolation_70b"
+  ],
+  "quality_source": {
+    "name": "TOPSIS_CRITIC",
+    "path": "experiments/runs/q1-critic-topsis-20260924-r01/tables/domain_scores.csv",
+    "sha256": "09744c302b9061aa8eb6b5da3fa25a39fd6362ae4a04b8fa3d193875f251dfd2"
+  },
+  "mapping_source": {
+    "path": "data/origin/real_attachments/A_data_value/domain_mapping_guide.csv",
+    "sha256": "0ae884c0d16dcf77fe8411bdbe899ad7a0d487ffee73fba608c6d01b108401e7"
+  },
+  "summary": [
+    {
+      "block": "baseline",
+      "dataset": "A12_A13_extrapolation_10b",
+      "selected_alpha": 0.1,
+      "logo_mean_target_r2": -1.9587503979897278,
+      "logo_sd_target_r2": 5.389091596631296,
+      "mean_target_r2": -8.277382750421731,
+      "centered_relative_mean_target_r2": -1.2212031594929291,
+      "mae": 0.6623913734937044,
+      "rmse": 0.7842345914630181,
+      "mean_target_spearman": 0.2923729793749134
+    },
+    {
+      "block": "baseline",
+      "dataset": "A14_A15_extrapolation_70b",
+      "selected_alpha": 0.1,
+      "logo_mean_target_r2": -1.9587503979897278,
+      "logo_sd_target_r2": 5.389091596631296,
+      "mean_target_r2": -48.23178406672418,
+      "centered_relative_mean_target_r2": -2.2227237338409624,
+      "mae": 1.371247334399876,
+      "rmse": 1.4994238673823557,
+      "mean_target_spearman": 0.054729767810618384
+    },
+    {
+      "block": "q_raw_coverage",
+      "dataset": "A12_A13_extrapolation_10b",
+      "selected_alpha": 0.1,
+      "logo_mean_target_r2": -1.7666558767271383,
+      "logo_sd_target_r2": 5.066170889028386,
+      "mean_target_r2": -8.007116727205641,
+      "centered_relative_mean_target_r2": -1.3126886805707951,
+      "mae": 0.6465033720933879,
+      "rmse": 0.7706257437383616,
+      "mean_target_spearman": 0.28873403175469775
+    },
+    {
+      "block": "q_raw_coverage",
+      "dataset": "A14_A15_extrapolation_70b",
+      "selected_alpha": 0.1,
+      "logo_mean_target_r2": -1.7666558767271383,
+      "logo_sd_target_r2": 5.066170889028386,
+      "mean_target_r2": -45.19639144046087,
+      "centered_relative_mean_target_r2": -2.3736237608393607,
+      "mae": 1.324198219622921,
+      "rmse": 1.4540851251662603,
+      "mean_target_spearman": 0.052154342950900406
+    }
+  ],
+  "limitations": [
+    "A10/A11 are deliberately used as adaptation data in this role-change experiment.",
+    "A12-A15 remain extrapolation diagnostics and are not official validation.",
+    "No full quality score, causal scale law or optimum mixture is claimed."
+  ]
+}

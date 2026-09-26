@@ -1,0 +1,152 @@
+{
+  "run_id": "q2-b4-b5-stratified-audit-20250925-r01",
+  "status": "B4_B5_STRATIFIED_EXTERNAL_DIAGNOSTIC",
+  "source_model_run": "q2-m0-m1-20260925-r01",
+  "datasets": {
+    "B4": {
+      "file": "scaling_baseline.csv",
+      "group_key": "family",
+      "rows": 57,
+      "groups": {
+        "BLOOM": {
+          "n": 4,
+          "mae": 0.29396340125007614,
+          "rmse": 0.30294029326601024,
+          "r2": -2.4347722585860594,
+          "small_group": true
+        },
+        "Cerebras-GPT": {
+          "n": 7,
+          "mae": 0.18592543414969984,
+          "rmse": 0.22002664189803753,
+          "r2": 0.5157444098106736,
+          "small_group": false
+        },
+        "Falcon": {
+          "n": 2,
+          "mae": 0.15818766943372797,
+          "rmse": 0.16888992413572235,
+          "r2": -1.8523806474569997,
+          "small_group": true
+        },
+        "GPT2": {
+          "n": 4,
+          "mae": 0.21125232779346048,
+          "rmse": 0.2158106025749574,
+          "r2": -2.548511709239333,
+          "small_group": true
+        },
+        "Gemma": {
+          "n": 3,
+          "mae": 0.16458091348873127,
+          "rmse": 0.17540709317889933,
+          "r2": -0.587104951788509,
+          "small_group": true
+        },
+        "LLaMA": {
+          "n": 6,
+          "mae": 0.12153774241959703,
+          "rmse": 0.14406475759378,
+          "r2": 0.48448946016329686,
+          "small_group": false
+        },
+        "Mistral": {
+          "n": 1,
+          "mae": 0.12727048285729903,
+          "rmse": 0.12727048285729903,
+          "r2": null,
+          "small_group": true
+        },
+        "OPT": {
+          "n": 7,
+          "mae": 0.28099033188955513,
+          "rmse": 0.31681717923589336,
+          "r2": 0.11541670361683043,
+          "small_group": false
+        },
+        "Phi": {
+          "n": 6,
+          "mae": 0.18379569489059797,
+          "rmse": 0.19523499797723665,
+          "r2": -0.24260518181620272,
+          "small_group": false
+        },
+        "Pythia": {
+          "n": 8,
+          "mae": 0.4434118120630149,
+          "rmse": 0.5433677081004578,
+          "r2": 0.42940501535111464,
+          "small_group": false
+        },
+        "Qwen2": {
+          "n": 7,
+          "mae": 0.17625890257496085,
+          "rmse": 0.23858285299982668,
+          "r2": 0.5285535983086991,
+          "small_group": false
+        },
+        "Yi": {
+          "n": 2,
+          "mae": 0.0571192185861602,
+          "rmse": 0.06390206754131006,
+          "r2": 0.5916525763945855,
+          "small_group": true
+        }
+      }
+    },
+    "B5": {
+      "file": "published_scaling_data.csv",
+      "group_key": "source",
+      "rows": 44,
+      "groups": {
+        "Chowdhery et al. 2022": {
+          "n": 3,
+          "mae": 0.30757182691407575,
+          "rmse": 0.33038476757357577,
+          "r2": -2.5453965953120004,
+          "small_group": true
+        },
+        "Hoffmann et al. 2022": {
+          "n": 16,
+          "mae": 0.1422003176699793,
+          "rmse": 0.1633239316207949,
+          "r2": 0.7930610160383426,
+          "small_group": false
+        },
+        "Kaplan et al. 2020": {
+          "n": 9,
+          "mae": 0.12278797303926892,
+          "rmse": 0.14365094948008902,
+          "r2": 0.7422367660869593,
+          "small_group": false
+        },
+        "Scao et al. 2022": {
+          "n": 4,
+          "mae": 0.20063594188456552,
+          "rmse": 0.20736732050343346,
+          "r2": 0.4927947993725139,
+          "small_group": true
+        },
+        "Touvron et al. 2023": {
+          "n": 7,
+          "mae": 0.20783434288595992,
+          "rmse": 0.21592549777414813,
+          "r2": -3.606335180642205,
+          "small_group": false
+        },
+        "Zhang et al. 2022": {
+          "n": 5,
+          "mae": 0.1902701791704695,
+          "rmse": 0.23646491079886175,
+          "r2": -0.02401670711127246,
+          "small_group": false
+        }
+      }
+    }
+  },
+  "checks": {
+    "refit_by_family_or_source": false,
+    "pooled_external_fit": false,
+    "small_groups_flagged": true
+  }
+}

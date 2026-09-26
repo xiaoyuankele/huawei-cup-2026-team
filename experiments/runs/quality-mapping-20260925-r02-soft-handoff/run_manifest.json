@@ -1,0 +1,101 @@
+{
+  "schema_version": "q1.run.v1",
+  "run_id": "quality-mapping-20260925-r02-soft-handoff",
+  "task_id": "T-Q1-004",
+  "owner": "B",
+  "reviewer": "A",
+  "status": "REVIEW",
+  "needs_human_review": true,
+  "branch": "feature/B/T-Q1-004-quality-mapping-soft-r02",
+  "base_ref": "github/wp/ACTOR-2/WP-B",
+  "mapping_version": "v2_soft",
+  "row_counts": {
+    "quality_records": 272505,
+    "mapping_rows": 17,
+    "wide_rows": 1214,
+    "long_rows": 20638
+  },
+  "mapping_counts": {
+    "direct": 3,
+    "near_direct": 3,
+    "inferred": 11
+  },
+  "raw_policy": "raw attachments remain in controlled local storage; only relative paths and hashes are committed",
+  "files": [
+    {
+      "path": "command.txt",
+      "bytes": 295,
+      "sha256": "2cf2cb43ef010cb287bb05f384d353351c2dfebfd6c66469b6fbd2d08721da87"
+    },
+    {
+      "path": "config.yaml",
+      "bytes": 781,
+      "sha256": "94ad713230c3c4d511d7a6fc583113c7ed6efefae6fb944055f554029deacdc3"
+    },
+    {
+      "path": "method.json",
+      "bytes": 1518,
+      "sha256": "5a620c39961fa8350b0da5988a070358b1d6dab2bb94d30d129b882511f299ae"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1827,
+      "sha256": "ac65f8b3c195b48d9ce60cf85924f8b92e50ce225b0507239c116dd21581552f"
+    },
+    {
+      "path": "reports/mapping_soft_flow.md",
+      "bytes": 980,
+      "sha256": "bfae29ec479307fb4cf2e889665250cfb48ba486095c9f3e34509df4c6803dce"
+    },
+    {
+      "path": "reports/report_v2.md",
+      "bytes": 4244,
+      "sha256": "2006465993494da5e6f87a70e0fd5f169ab512feb49becbf7e983624ed080dc5"
+    },
+    {
+      "path": "reports/revision_note.md",
+      "bytes": 1219,
+      "sha256": "c8b1b3b38f6350eb1ba436bf98457a25767e1d1b4daa8dc15215c9f74d0d0806"
+    },
+    {
+      "path": "tables/mapping_v1_hard.csv",
+      "bytes": 3824,
+      "sha256": "260099fab755f5384ea0de3098ad4642b64dc1843a57bda613e7dfa8ddd3aad2"
+    },
+    {
+      "path": "tables/mapping_v2_soft.csv",
+      "bytes": 5333,
+      "sha256": "87868b4fa50070b4c8a3a1e491c841cbab2374ceb87a9908d1ebf1cdacda5cbe"
+    },
+    {
+      "path": "tables/quality_domain_scores.csv",
+      "bytes": 716,
+      "sha256": "1d37bb9d1009431068dd34316102bea3adda1b279ba018775231cea557a6c461"
+    },
+    {
+      "path": "tables/scored_long_v1_hard.csv",
+      "bytes": 2548495,
+      "sha256": "6e8602f504889bb9e8e900510abb5a6f7152ec9f95f9d555f90ce8ddcb739bd2"
+    },
+    {
+      "path": "tables/scored_long_v2_soft.csv",
+      "bytes": 6406374,
+      "sha256": "576d59500e14d910c547f3e1d8b13b827c9de2eb2aa315a9909a31370afa4c7d"
+    },
+    {
+      "path": "tables/scored_wide_v1_hard.csv",
+      "bytes": 683318,
+      "sha256": "fe449de9cf3245955f8896dbdde7ee161bbf8708e140e52c5dd8dd9358632c42"
+    },
+    {
+      "path": "tables/scored_wide_v2_soft.csv",
+      "bytes": 753501,
+      "sha256": "5d16c2c30ce5f0dcf0ecc0760fec9d8df621690d4a29f5af1ce5f44b2ede880c"
+    },
+    {
+      "path": "tables/v1_v2_comparison.csv",
+      "bytes": 1021,
+      "sha256": "07a2cb2692c76bf1b44005510bcb9d2e9eef5f6a92b8579d6cb3a887c2c97a42"
+    }
+  ]
+}

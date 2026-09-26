@@ -1,164 +1,79 @@
-# Q1 细分任务与提示词分发包
+# Q1 细分任务与提示词分发 v2
 
-状态：READY（分发包）；具体任务仍受各自任务卡状态和前置审核门控制。
+本文件是三个人和多个 Codex 对话的复制入口。实际分工见 [`Q1-work-packages.md`](Q1-work-packages.md)，架构规则见 [`docs/architecture.md`](../architecture.md)。执行身份只使用 Owner、Peer Reviewer、Release Integrator；A/B/C 不能代替真实 Actor。
 
-本文是给三个人、多个 Codex 对话使用的复制入口。它不替代任务卡，也不产生新的 `prompt_id`；每个执行对话必须同时引用对应的任务卡和 `governance/prompts/catalog/` 中的规范提示词。
+## 当前分发
 
-## 当前线上基线
+| 工作包 | Owner | Peer Reviewer | Release Integrator | 代码 | 实验 | 论文 |
+|---|---|---|---|---|---|---|
+| WP-A | ACTOR-1 | ACTOR-2 | ACTOR-3 | 数据审计和预处理 | 数据角色、归一化、泄漏和漂移 | 数据方法与限制段 |
+| WP-B | ACTOR-2 | ACTOR-3 | ACTOR-1 | 评分接口、基线、PP-GA | 分层模型比较和敏感性 | 模型与实验协议段 |
+| WP-C | ACTOR-3 | ACTOR-1 | ACTOR-2 | 冲突、验证、图表 | bootstrap、重复 seed、域分层 | 结果、解释和限制段 |
+| Q1-INT | 三人共同 | 三人共同 | 三人共同 | claim ledger、整合和复现 | 全量复现与发布检查 | 三段合并和最终稿 |
 
-- GitHub `main` 已包含 PR #1 至 PR #4 的合并结果；本地基线应从 `origin/main` 开始。
-- T-Q1-001、T-Q1-002 已合并到 `main`，但任务卡仍需 Reviewer A 最终确认后才可标记 `ACCEPTED`。
-- T-Q1-002 的当前运行是 `q1-indicator-normalization-20260923-r01`，Prompt Run 是 `PR-20260923-003`；9 个方向仍为 `pending_verification`，不能静默进入主评分矩阵。
-- T-Q1-003 可以先写模型协议；T-Q1-004 至 T-Q1-008 不能绕过前置 `ACCEPTED` 状态执行正式实验或写论文结论。
+## 通用执行协议
 
-## 分工与分支
+1. 先读对应 Task Card、canonical prompt、manifest 和 handoff 模板。
+2. 执行前生成唯一 `prompt_run_id`；结束时写入 Prompt Run、AI 使用日志和 handoff。
+3. 所有实验必须有 `run_id`、配置、seed、命令、commit、环境、输入引用、输出哈希和失败原因。
+4. Owner 只在自己的工作分支修改；Peer Reviewer 只通过 PR/handoff 提意见；Integrator 只在证据齐全后推动包级合并。
+5. 论文只能引用 `PACKAGE_ACCEPTED` 的 run_id；不能把 A2/A3 全量写成独立真值。
 
-| 执行人 | 任务 | Canonical Prompt | Reviewer | 分支 | 当前门控 |
-|---|---|---|---|---|---|
-| 你（B，数据与实现） | T-Q1-002 反馈修订 | P-DATA-001@v1.0.0 | A | `feature/B/T-Q1-002` | 等待 A 审核；只处理反馈 |
-| 你（B，数据与实现） | T-Q1-004 基线与 PP-GA | P-EXP-002@v1.0.0 | A | `feature/B/T-Q1-004` | T-Q1-003 ACCEPTED 后正式运行 |
-| 队友 A（架构算法） | T-Q1-002 审核 | P-DATA-001@v1.0.0 | 你/B | `feature/A/review-T-Q1-002` | 现在可执行，只读审核 |
-| 队友 A（架构算法） | T-Q1-003 模型规格 | P-MODEL-002@v1.0.0 | B | `feature/A/T-Q1-003` | 现在可起草，不运行模型 |
-| 队友 A（架构算法） | T-Q1-005 冲突解释 | P-CONFLICT-001@v1.0.0 | C | `feature/A/T-Q1-005` | 等 T-Q1-004 ACCEPTED |
-| 队友 C（验证论文） | T-Q1-006 稳健性验证 | P-VALID-001@v1.0.0 | A | `feature/C/T-Q1-006` | 等 T-Q1-004、T-Q1-005 ACCEPTED |
-| 队友 C（验证论文） | T-Q1-007 图表与结果表 | P-FIG-001@v1.0.0 | B | `feature/C/T-Q1-007` | 等 T-Q1-005、T-Q1-006 ACCEPTED |
-| 队友 C（验证论文） | T-Q1-008 论文与主张登记 | P-PAPER-001@v1.0.0 | A | `paper/C/T-Q1-008` | 等 T-Q1-006、T-Q1-007 ACCEPTED |
-
-## 所有对话都必须遵守
-
-1. 先读取任务卡、canonical prompt、相关 manifest 和 `governance/handoff-template.md`，再开始工作。
-2. 真实调用前生成唯一 `prompt_run_id`；结束时写入 `governance/prompts/runs/`、`governance/ai-use-log.csv` 和 handoff。
-3. 任务结果必须有 `run_id`、commit、配置、命令、输入引用、输出哈希和 `needs_human_review` 状态。
-4. `data/origin/`、`problem/`、完整敏感对话、密钥和未脱敏中间结果不得提交 GitHub。
-5. 发现证据不足、方向争议、失败运行或任务矛盾时，先写 `feedback_id`，再暂停下游；不得用聊天中的数字替代运行记录。
-6. 任务卡为执行入口，canonical prompt 为规范模板，本文件只负责分发和角色化上下文。
-
-## 可直接复制的执行提示词
-
-### 1. 发给队友 A：T-Q1-002 Reviewer
+## 复制给 ACTOR-1：WP-A Owner
 
 ```text
-你负责角色 A，执行仓库任务 T-Q1-002 的只读审核。
+执行 WP-A/T-Q1-001/002。完成数据审计、只读预处理、指标目录、manifest、归一化和泄漏审计；记录 A1 fit/holdout、A2/A3 overlap、新增子集、缺失、漂移和 pending_verification。同步交付代码、run_id 和数据方法段。
 
-先阅读：
-- docs/tasks/T-Q1-002.yml
-- docs/tasks/T-Q1-002-handoff.md
-- governance/prompts/catalog/P-DATA-001.md
-- governance/prompts/runs/PR-20260923-003.yml
-- data/manifests/q1_preprocessed.yaml
-- docs/decisions/q1-preprocessing-contract.md
-- governance/handoff-template.md
-
-请检查：
-1. Prompt Run、run_id、commit、输出哈希是否相互一致；
-2. A1 fit-only 变换是否被 A1 holdout、A2、A3 正确复用；
-3. A1/A2/A3 ID 重叠是否显式分层，是否错误称为独立真值；
-4. 缺失、非有限值、列表指标和 9 个 pending_verification 方向是否被保守处理；
-5. 命令、配置、manifest 是否能从仓库根目录复现；
-6. 是否意外建立质量总分、权重、PP-GA 或论文结论。
-
-只做审核，不修改原始数据，不运行评分模型，不把 REVIEW 改为 ACCEPTED。若发现问题，建立 feedback_id 并写明阻塞下游的理由；若通过，返回 PASS/PASS_WITH_WARNINGS/FAIL、审核意见和下一步。保留 needs_human_review=true，完成 handoff。
+G0 后可执行。ACTOR-2 做 Peer Review，ACTOR-3 做 Release Integrator。未完成三者检查不得 PACKAGE_ACCEPTED。
 ```
 
-### 2. 发给队友 A：T-Q1-003 模型规格
+## 复制给 ACTOR-2：WP-B Owner
 
 ```text
-你负责角色 A，执行 T-Q1-003“问题一综合评价模型规格与评价协议”。
+执行 WP-B/T-Q1-003/004。先冻结统一评分接口、等权/稳健基线、线性投影、PP-GA、对照方法和评价指标；G1 后再做正式实验。每种方法独立 run_id，保留失败运行，并交付模型协议和实验段。
 
-先阅读 docs/tasks/T-Q1-003.yml、governance/prompts/catalog/P-MODEL-002.md、docs/tasks/T-Q1-002.yml、data/manifests/q1_preprocessed.yaml、indicator_catalog.yaml 和 docs/decisions/q1-preprocessing-contract.md。
-
-只起草协议，不运行评分模型、不虚构最优结果。必须：
-- 区分 22 个 JSON 字段、25 个候选语义输出、47 个原始数值分量；
-- 把 9 个 pending_verification 方向排除在主 higher-is-better 矩阵之外；
-- 定义等权/稳健基线、线性投影寻踪、PP-GA 及批准对照方法的统一接口；
-- 明确目标函数、约束、初始化、停止条件、随机种子、分层评价和冲突定义；
-- 说明 PP 目标不是真实质量标签，GA 只是非凸优化器；
-- 设计 A1 fit、A1 holdout、A2/A3 overlap 与新增子集的比较指标。
-
-交付 docs/decisions/q1-model-spec.md、configs/q1-model-spec.yaml 和必要 feedback_id；生成 prompt_run_id，记录 commit 和 handoff。任务保持 DRAFT/REVIEW，不能引用未经接受的模型结果。
+ACTOR-3 做 Peer Review，ACTOR-1 做 Release Integrator。单次最高分不能写成最优性或因果结论。
 ```
 
-### 3. 发给你自己：T-Q1-002 反馈修订
+## 复制给 ACTOR-3：WP-C Owner
 
 ```text
-你负责角色 B，继续维护 T-Q1-002。先等待并读取 Reviewer A 的审核记录和 feedback_id，再决定是否修改。
+执行 WP-C/T-Q1-005/006/007/008。G0 后可准备冲突诊断、验证、图表、表结构和论文骨架；G2 后再写正式数字。交付冲突分类、rank reversal、bootstrap/重复 seed、域分层、图表源文件、结果段和限制段。
 
-允许修改：预处理脚本、配置、manifest、审计汇总、决策文档和 handoff。禁止修改 data/origin/，禁止把 9 个 pending_verification 方向填入主矩阵，禁止引入质量总分、权重、PP-GA 或论文结论。
-
-若需重跑，只使用：
-python -X utf8 scripts/q1_indicator_preprocess.py --root . --config configs/q1-indicator-normalization.yaml
-
-重跑前后记录原始文件 SHA256、参数哈希、输出哈希和新的 prompt_run_id/run_id；保留旧失败记录，不覆盖历史运行。完成后更新 T-Q1-002 handoff，仍需 Reviewer A 接受后才可进入 T-Q1-003/T-Q1-004 的正式接口。
+ACTOR-1 做 Peer Review，ACTOR-2 做 Release Integrator。T-Q1-008 只负责 WP-C 结果段，跨包整合由 T-Q1-009 完成。
 ```
 
-### 4. 发给你自己：T-Q1-004 基线与 PP-GA
+## 复制给 Q1-INT 对话
 
 ```text
-你负责角色 B，执行 T-Q1-004。只有在 T-Q1-003 已 ACCEPTED 且模型规格、配置和评价接口已回链后，才可以进行正式实验；此前只能做接口 smoke test。
+执行 Q1-INT/T-Q1-009。检查 WP-A/B/C 的 code、run_id、paper_section、PR、Peer Review、Integrator 结论、handoff 和 claim-ledger；执行全量复现、正文/图表数字一致性、PDF、附件和哈希检查。
 
-先阅读 docs/tasks/T-Q1-004.yml、governance/prompts/catalog/P-EXP-002.md、docs/decisions/q1-model-spec.md、configs/q1-model-spec.yaml 和 data/manifests/q1_preprocessed.yaml。
-
-实现并按顺序运行：等权基线、稳健基线、线性投影模型、PP-GA 和批准的对照方法。所有方法必须共享相同的数据分层、A1 fit 变换和评价指标；A2/A3 不参与参数估计；外部结果按 overlap_with_A1 和新增子集分层。
-
-每个方法使用独立 run_id，保存配置、seed、命令、commit、环境、指标、失败原因和输出哈希。不得把单次最高分写成最优性、因果结论或论文结论。完成后交付 src/models/q1_scoring.py、scripts/q1_score_models.py、configs/q1-score-baselines.yaml、experiments/runs/<run_id>/ 和 handoff，等待 Reviewer A。
+三人必须分别签署自己的工作包和最终 Release Council。任何一人未签署，状态保持 REVIEW_BLOCKED 或未进入 INTEGRATED。
 ```
 
-### 5. 发给队友 A：T-Q1-005 冲突诊断
+## 回收格式
 
 ```text
-你负责角色 A，执行 T-Q1-005。只有 T-Q1-004 的基线和 PP-GA 运行记录通过 Reviewer A 验收后，才开始正式冲突解释。
-
-先阅读 docs/tasks/T-Q1-005.yml、governance/prompts/catalog/P-CONFLICT-001.md、已接受的实验 run_id、indicator_audit.csv 和 normalization_sensitivity.csv。
-
-把冲突分成语义冲突、测量冲突、尺度/方向冲突、缺失模式、域漂移、同源重复和优化不稳定。至少报告 rank reversal、权重扰动、分层差异和 bootstrap/重复种子稳定性。不要自动删除冲突指标，不要无证据增加惩罚项，不要把 A2/A3 全量写成独立真值。
-
-交付 docs/decisions/q1-conflict-analysis.md、诊断运行目录、必要图表数据和 feedback_id；每个解释回链输入、脚本、run_id 和证据等级。等待 Reviewer C。
-```
-
-### 6. 发给队友 C：T-Q1-006 验证与稳健性
-
-```text
-你负责角色 C，执行 T-Q1-006。只有 T-Q1-004 和 T-Q1-005 已 ACCEPTED 后，才执行正式验证；之前只能准备脚本和表结构。
-
-先阅读 docs/tasks/T-Q1-006.yml、governance/prompts/catalog/P-VALID-001.md、已接受模型 run_id、冲突分类和 data/manifests/q1_preprocessed.yaml。
-
-按 A1 fit、A1 holdout、A2/A3 overlap_with_A1、新增子集分层报告。根据配对结构选择 Pearson、Spearman、Kendall、排名重合、误差和稳定性指标；没有定义基础时不得使用 ICC。通过 bootstrap、重复 seed 或敏感性分析给出区间和不确定性，不把 A2/A3 称为独立真值。
-
-交付 docs/decisions/q1-validation-report.md、验证脚本、分层结果表、稳定性摘要和 handoff，所有数字回链 run_id/manifest/commit，等待 Reviewer A。
-```
-
-### 7. 发给队友 C：T-Q1-007 图表与 T-Q1-008 论文
-
-```text
-你负责角色 C。先完成 T-Q1-007，再进入 T-Q1-008；两个任务都只能使用已 ACCEPTED 的 run_id。
-
-T-Q1-007：阅读 docs/tasks/T-Q1-007.yml 和 governance/prompts/catalog/P-FIG-001.md，生成质量分布、方法比较、冲突诊断、稳健性和域迁移图表。每张图回链输入 run_id、manifest、脚本和命令，区分 A1 fit/holdout、overlap 和新增子集，不用截图替代源文件，不删除不利结果。交付 paper/figures/、paper/tables/ 和 docs/decisions/q1-figure-audit.md。
-
-T-Q1-008：在 T-Q1-006/T-Q1-007 ACCEPTED 后，阅读 docs/tasks/T-Q1-008.yml 和 governance/prompts/catalog/P-PAPER-001.md，将数据、模型、冲突、验证证据写入论文和 paper/claim-ledger.csv。论文只能引用 ACCEPTED run_id，明确同源重叠、代理质量信号、方向未决和验证限制；AI 辅助内容按 governance/ai-use-log.csv 披露。交付 LaTeX 修改、图表引用、编译日志和 handoff，等待 Reviewer A。
-```
-
-## 每个分发对话的回收格式
-
-执行人完成后，必须返回并写入仓库：
-
-```text
-task_id:
+work_package:
+task_ids:
+owner_actor:
+peer_reviewer_actor:
+release_integrator_actor:
+release_approver_actors:
+gate:
 prompt_id@version:
 prompt_run_id:
-owner:
-reviewer:
 branch:
 commit:
 run_id:
 changed_files:
-command:
 outputs_and_hashes:
-status: REVIEW | ACCEPTED | REWORK | BLOCKED
-acceptance_result: PASS | PASS_WITH_WARNINGS | FAIL
+claim_refs:
+status:
 feedback_id:
+peer_decision:
+integrator_decision:
+release_council_decision:
 limitations:
-review_request:
 next_action:
 ```
-
-只有 GitHub 上的任务卡、提交、运行记录和 Reviewer 结论完成回链后，才算任务交付；聊天窗口只作为通知渠道。

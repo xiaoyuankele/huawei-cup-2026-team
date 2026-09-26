@@ -1,0 +1,392 @@
+[
+  {
+    "block": "baseline",
+    "model": "shared_alpha_ridge",
+    "selection": {
+      "alpha": 0.01,
+      "logo_mean_target_r2": -1.696090306894883,
+      "fold_r2": [
+        0.8558538986452829,
+        0.8703308942288932,
+        -6.814455713558825
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 0,
+      "alpha": 0.01,
+      "logo_target_r2": -1.4143999445997597,
+      "fold_r2": [
+        0.8177291312825623,
+        0.837868646202674,
+        -5.8987976112845155
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 1,
+      "alpha": 0.01,
+      "logo_target_r2": -0.3700662558503465,
+      "fold_r2": [
+        0.9258803738403459,
+        0.9163025244385771,
+        -2.9523816658299626
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 2,
+      "alpha": 0.01,
+      "logo_target_r2": -1.7716140707503563,
+      "fold_r2": [
+        0.9316500673960393,
+        0.9583589805795562,
+        -7.204851260226665
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 3,
+      "alpha": 0.01,
+      "logo_target_r2": -1.465365456344662,
+      "fold_r2": [
+        0.8610573361534488,
+        0.8784923570917222,
+        -6.135646062279157
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 4,
+      "alpha": 100.0,
+      "logo_target_r2": -0.4372471324115446,
+      "fold_r2": [
+        0.8112716376208048,
+        0.8889449558982491,
+        -3.0119579907536878
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 5,
+      "alpha": 0.01,
+      "logo_target_r2": -3.0385429451420123,
+      "fold_r2": [
+        0.8289509498597067,
+        0.8422710025809266,
+        -10.78685078786667
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 6,
+      "alpha": 0.01,
+      "logo_target_r2": -1.6933925617745669,
+      "fold_r2": [
+        0.8123482858565689,
+        0.7990366181829698,
+        -6.691562589363239
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 7,
+      "alpha": 0.01,
+      "logo_target_r2": -1.0349335958523775,
+      "fold_r2": [
+        0.8016957842530692,
+        0.8263612004003092,
+        -4.732857772210511
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 8,
+      "alpha": 0.1,
+      "logo_target_r2": -3.0168285282733325,
+      "fold_r2": [
+        0.7756512495797188,
+        0.793889082101165,
+        -10.62002591650088
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 9,
+      "alpha": 0.01,
+      "logo_target_r2": -1.5031472706766846,
+      "fold_r2": [
+        0.9473617859842325,
+        0.9603322375808384,
+        -6.417135835595125
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 10,
+      "alpha": 0.01,
+      "logo_target_r2": -2.2387523647797223,
+      "fold_r2": [
+        0.837323124290664,
+        0.8657746829723962,
+        -8.419354901602228
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 11,
+      "alpha": 100.0,
+      "logo_target_r2": -1.2972309424050659,
+      "fold_r2": [
+        0.716786023925658,
+        0.7868496177250508,
+        -5.395328468865906
+      ]
+    }
+  },
+  {
+    "block": "baseline",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 12,
+      "alpha": 100.0,
+      "logo_target_r2": -2.52951192734134,
+      "fold_r2": [
+        0.8340896498001437,
+        0.8861444423537626,
+        -9.308769874177926
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "shared_alpha_ridge",
+    "selection": {
+      "alpha": 0.01,
+      "logo_mean_target_r2": -1.6290566062989835,
+      "fold_r2": [
+        0.8773711899611573,
+        0.8888116239171885,
+        -6.653352632775296
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 0,
+      "alpha": 0.01,
+      "logo_target_r2": -1.3531319858555015,
+      "fold_r2": [
+        0.8183749699520457,
+        0.8370081538065769,
+        -5.714779081325127
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 1,
+      "alpha": 0.01,
+      "logo_target_r2": -0.3630710583694549,
+      "fold_r2": [
+        0.9351922192289596,
+        0.9264390860932151,
+        -2.9508444804305394
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 2,
+      "alpha": 0.01,
+      "logo_target_r2": -1.805753400922202,
+      "fold_r2": [
+        0.9374153019188822,
+        0.9639021590108234,
+        -7.318577663696312
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 3,
+      "alpha": 0.01,
+      "logo_target_r2": -1.3656940451289001,
+      "fold_r2": [
+        0.8919784538598753,
+        0.9039316238193317,
+        -5.892992213065908
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 4,
+      "alpha": 100.0,
+      "logo_target_r2": -0.41873529454389996,
+      "fold_r2": [
+        0.8120522967447292,
+        0.8896963532432959,
+        -2.957954533619725
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 5,
+      "alpha": 0.01,
+      "logo_target_r2": -2.854474570519336,
+      "fold_r2": [
+        0.8551590240329502,
+        0.8765932237594434,
+        -10.2951759593504
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 6,
+      "alpha": 0.01,
+      "logo_target_r2": -1.5296019484711136,
+      "fold_r2": [
+        0.8336253234887993,
+        0.8243734913365901,
+        -6.24680466023873
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 7,
+      "alpha": 0.01,
+      "logo_target_r2": -0.9599583399750703,
+      "fold_r2": [
+        0.8162676503802484,
+        0.8327168231483961,
+        -4.528859493453855
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 8,
+      "alpha": 0.01,
+      "logo_target_r2": -2.8202368652131082,
+      "fold_r2": [
+        0.8399998243243899,
+        0.8474914055421923,
+        -10.148201825505907
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 9,
+      "alpha": 0.01,
+      "logo_target_r2": -1.4318675368528322,
+      "fold_r2": [
+        0.9504206801657883,
+        0.9633844514712299,
+        -6.209407742195515
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 10,
+      "alpha": 0.01,
+      "logo_target_r2": -2.0971650563633584,
+      "fold_r2": [
+        0.861093571855762,
+        0.8732303078406813,
+        -8.025819048786518
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 11,
+      "alpha": 100.0,
+      "logo_target_r2": -1.40287158463801,
+      "fold_r2": [
+        0.7505144492674034,
+        0.8172239910415872,
+        -5.77635319422302
+      ]
+    }
+  },
+  {
+    "block": "q_raw_coverage",
+    "model": "target_specific_alpha_ridge",
+    "selection": {
+      "target_index": 12,
+      "alpha": 0.01,
+      "logo_target_r2": -2.617544246020166,
+      "fold_r2": [
+        0.9161282682488389,
+        0.9237779332124051,
+        -9.692538939521743
+      ]
+    }
+  }
+]

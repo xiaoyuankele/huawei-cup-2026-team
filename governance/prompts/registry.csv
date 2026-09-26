@@ -1,10 +1,16 @@
 prompt_id,title,domain,version,status,owner,reviewer,template_path,linked_tasks,notes
-P-MODEL-001,模型规格与算法拆解,model,v1.0.0,draft,A,B,governance/prompts/catalog/P-MODEL-001.md,,
-P-MODEL-002,问题一综合评价模型规格与评价协议,model,v1.0.0,draft,A,B,governance/prompts/catalog/P-MODEL-002.md,T-Q1-003,
-P-DATA-001,问题一质量数据预处理与泄漏审计,data,v1.0.0,trial,B,A,governance/prompts/catalog/P-DATA-001.md,T-Q1-002,PR-20260923-003 已运行并等待 Reviewer A
-P-EXP-001,可复现实验实现与记录,experiment,v1.0.0,draft,B,A,governance/prompts/catalog/P-EXP-001.md,T-Q1-001,
-P-EXP-002,问题一基线、PP-GA 与对照模型实现,experiment,v1.0.0,draft,B,A,governance/prompts/catalog/P-EXP-002.md,T-Q1-004,
-P-CONFLICT-001,问题一冲突诊断与解释,analysis,v1.0.0,draft,A,C,governance/prompts/catalog/P-CONFLICT-001.md,T-Q1-005,
-P-VALID-001,问题一验证与稳健性分析,validation,v1.0.0,draft,C,A,governance/prompts/catalog/P-VALID-001.md,T-Q1-006,
-P-PAPER-001,结果分析与LaTeX段落,paper,v1.0.0,draft,C,A,governance/prompts/catalog/P-PAPER-001.md,T-Q1-008,
-P-FIG-001,论文图表生成与审查,figure,v1.0.0,draft,C,B,governance/prompts/catalog/P-FIG-001.md,T-Q1-007,
+P-MODEL-001,模型规格与算法拆解,model,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-MODEL-001.md,,
+P-MODEL-002,问题一综合评价模型规格与评价协议,model,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-MODEL-002.md,T-Q1-003,
+P-DATA-001,问题一质量数据预处理与泄漏审计,data,v1.0.0,trial,work_package_owner,peer_reviewer,governance/prompts/catalog/P-DATA-001.md,T-Q1-002,PR-20260923-003 已运行；等待 ACTOR-2 Peer Review 和 ACTOR-3 Release Integrator 检查
+P-EXP-001,可复现实验实现与记录,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-EXP-001.md,T-Q1-001,
+P-EXP-002,问题一基线、PP-GA 与对照模型实现,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-EXP-002.md,T-Q1-004,
+P-CONFLICT-001,问题一冲突诊断与解释,analysis,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-CONFLICT-001.md,T-Q1-005,
+P-VALID-001,问题一验证与稳健性分析,validation,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-VALID-001.md,T-Q1-006,
+P-PAPER-001,结果分析与LaTeX段落,paper,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-PAPER-001.md,T-Q1-008,
+P-FIG-001,论文图表生成与审查,figure,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-FIG-001.md,T-Q1-007,
+P-INT-001,问题一跨包整合与发布检查,integration,v1.0.0,draft,release_council,release_council,governance/prompts/catalog/P-INT-001.md,T-Q1-009,三人 Release Council 共同签署；只整合 PACKAGE_ACCEPTED 产物
+P-Q2-E1-MARGINAL,E1 冻结模型边际效用与弹性,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q2-E1-MARGINAL.md,T-Q2-E1-MARGINAL,Retrospective sanitized reconstruction; exact per-call prompts unavailable; no preregistration claim
+P-Q2-E1-GOV,E1 仓库规范自查与补登记,governance,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q2-E1-GOV.md,T-Q2-E1-MARGINAL,Retrospective sanitized reconstruction; exact per-call prompts unavailable; no preregistration claim
+P-Q3-RESEARCH-HANDOFF,Q3冻结模型探索研究归档,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q3-RESEARCH-HANDOFF.md,T-Q3-RESEARCH-HANDOFF,Sanitized reconstruction of authorized task; no private transcript
+P-Q2-E2-DOMAIN,E2 领域替代与互补条件分析,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q2-E2-DOMAIN.md,T-Q2-E2,Registered before numerical execution; user-authorized exploration; independent review pending
+P-Q2-E3-SUBSTITUTION,E3 质量与参数等Loss替代,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q2-E3-SUBSTITUTION.md,T-Q2-E3,Pre-execution task-level registration; conditional exploration only

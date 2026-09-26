@@ -1,0 +1,8 @@
+{
+  "n_rows": 272505,
+  "A1_fit": 40919,
+  "A1_holdout": 10311,
+  "selected_columns": 16,
+  "withheld_columns": 9,
+  "raw_hash_stable": true
+}

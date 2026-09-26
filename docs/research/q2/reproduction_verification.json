@@ -1,0 +1,365 @@
+{
+  "status": "PASS",
+  "tolerance": {
+    "rtol": 1e-10,
+    "atol": 1e-10
+  },
+  "compared_csvs": 38,
+  "model_parameters_equal": true,
+  "environment": {
+    "python": "3.11.5",
+    "numpy": "1.26.4",
+    "pandas": "2.0.3",
+    "scipy": "1.11.1",
+    "scikit_learn": "1.3.0"
+  },
+  "note": "Numerical equivalence only; archived narrative and historical source/script hashes intentionally retained. No independent scientific review implied.",
+  "files": [
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv",
+      "status": "PASS",
+      "rows": 39,
+      "columns": 7,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "78729ea21bc8f7246a66ce1dbfe3544b2a2480980658f80f6c077dbc28258beb",
+      "rerun_sha256": "78729ea21bc8f7246a66ce1dbfe3544b2a2480980658f80f6c077dbc28258beb"
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/B_source_offset_audit.csv",
+      "status": "PASS",
+      "rows": 12,
+      "columns": 7,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "3a452ddfcef90feff01a8a7832d0020eb61c51184b4486abfbb0bac606eea5eb",
+      "rerun_sha256": "3a452ddfcef90feff01a8a7832d0020eb61c51184b4486abfbb0bac606eea5eb"
+    },
+    {
+      "path": "experiments/runs/q2-calibration-sensitivity-20260925/Q_axis_sensitivity.csv",
+      "status": "PASS",
+      "rows": 4,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "044b8c5d61c57651224da7225a5a241d3db3db0db4fee3eccbf1fd6340c51ff7",
+      "rerun_sha256": "044b8c5d61c57651224da7225a5a241d3db3db0db4fee3eccbf1fd6340c51ff7"
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/combined_scenario_examples.csv",
+      "status": "PASS",
+      "rows": 3200,
+      "columns": 13,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "790c64ac2978ab0ad65f507bbb4105aebbc918a6dc0379769052e3dc5ff3ca9e",
+      "rerun_sha256": "790c64ac2978ab0ad65f507bbb4105aebbc918a6dc0379769052e3dc5ff3ca9e"
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/q1_support_effects_for_combination.csv",
+      "status": "PASS",
+      "rows": 2176,
+      "columns": 7,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "e8648d376eeb5456396367470c96800ef9adf8dbb90e0f1a904710e704811ce4",
+      "rerun_sha256": "e8648d376eeb5456396367470c96800ef9adf8dbb90e0f1a904710e704811ce4"
+    },
+    {
+      "path": "experiments/runs/q2-combined-scenario-20260925/scenario_sensitivity_summary.csv",
+      "status": "PASS",
+      "rows": 8,
+      "columns": 7,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "b0bb6e8d841e59e6007555e0af3e2913054a830dcb633ced74d6440f373f073d",
+      "rerun_sha256": "b0bb6e8d841e59e6007555e0af3e2913054a830dcb633ced74d6440f373f073d"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/mixture_domain_validation.csv",
+      "status": "PASS",
+      "rows": 156,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "0dcd13565e0b03ab50fa65a186ba3c5f778ada9e920437a2fb15a6488e201246",
+      "rerun_sha256": "0dcd13565e0b03ab50fa65a186ba3c5f778ada9e920437a2fb15a6488e201246"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/mixture_validation_summary.csv",
+      "status": "PASS",
+      "rows": 12,
+      "columns": 9,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "bbc9c4d9afd09ed9fbd764554a220ccdf9cc411eb4d30f42d9ef131e8d561039",
+      "rerun_sha256": "bbc9c4d9afd09ed9fbd764554a220ccdf9cc411eb4d30f42d9ef131e8d561039"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/quality_cross_source_validation.csv",
+      "status": "PASS",
+      "rows": 22,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "d3151014efc30b041bac53631b5a46eac9e873cc7ea18a4630b20318aef4cf89",
+      "rerun_sha256": "d3151014efc30b041bac53631b5a46eac9e873cc7ea18a4630b20318aef4cf89"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/scale_external_validation.csv",
+      "status": "PASS",
+      "rows": 8,
+      "columns": 8,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "6bd3f9120f642426e23a87596d25ba8b619ad61feb4b0c778698c5153bddfcc0",
+      "rerun_sha256": "6bd3f9120f642426e23a87596d25ba8b619ad61feb4b0c778698c5153bddfcc0"
+    },
+    {
+      "path": "experiments/runs/q2-local-model-validation-20260925/scale_leave_one_size_out.csv",
+      "status": "PASS",
+      "rows": 8,
+      "columns": 9,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "49b004c3fe7716e9ad3defc21b7d9652fcc00fd32cbe3c984a6a9efd0c9f3f33",
+      "rerun_sha256": "49b004c3fe7716e9ad3defc21b7d9652fcc00fd32cbe3c984a6a9efd0c9f3f33"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/mixture_coefficients.csv",
+      "status": "PASS",
+      "rows": 34,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "c9a39da8e607e1f0351cbad2f1390f1ed892eb3d91afec321a533e7487a41060",
+      "rerun_sha256": "c9a39da8e607e1f0351cbad2f1390f1ed892eb3d91afec321a533e7487a41060"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/mixture_transfer.csv",
+      "status": "PASS",
+      "rows": 2,
+      "columns": 3,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "c2399263a07979926147b2187faa5aee77f40835670aa28877203628a8eb1ae3",
+      "rerun_sha256": "c2399263a07979926147b2187faa5aee77f40835670aa28877203628a8eb1ae3"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/mixture_validation.csv",
+      "status": "PASS",
+      "rows": 40,
+      "columns": 9,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "02ee17a08394943b09cdc2946827e4f3210a3dd3fabc5df28fca1797bed18069",
+      "rerun_sha256": "02ee17a08394943b09cdc2946827e4f3210a3dd3fabc5df28fca1797bed18069"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv",
+      "status": "PASS",
+      "rows": 15,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "15983c0e0c4b9f93a9bcac36898a4858ce1c232244aa9c3c600fdc9209088d54",
+      "rerun_sha256": "15983c0e0c4b9f93a9bcac36898a4858ce1c232244aa9c3c600fdc9209088d54"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv",
+      "status": "PASS",
+      "rows": 80,
+      "columns": 7,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "0335ff1f9cceaef8d61c2c074abc0762f925a3e7ca67a2c2d0a9f48f847ea52d",
+      "rerun_sha256": "0335ff1f9cceaef8d61c2c074abc0762f925a3e7ca67a2c2d0a9f48f847ea52d"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_external.csv",
+      "status": "PASS",
+      "rows": 3,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "61a464fcf05c774bf6334f54bded09bc07b3bdcd1d571475ebe67fee9f10e613",
+      "rerun_sha256": "61a464fcf05c774bf6334f54bded09bc07b3bdcd1d571475ebe67fee9f10e613"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_oof_predictions.csv",
+      "status": "PASS",
+      "rows": 2352,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "9a7bb787bab0ae61d11ddcd3a956fdbbb47b630ee814b2177ba4ac7f04e5c190",
+      "rerun_sha256": "9a7bb787bab0ae61d11ddcd3a956fdbbb47b630ee814b2177ba4ac7f04e5c190"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_oof_summary.csv",
+      "status": "PASS",
+      "rows": 2,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "90a197dbeac354e22351f7a2a8ca772224067c94e07a5b78b7d9c5f1557ab88c",
+      "rerun_sha256": "90a197dbeac354e22351f7a2a8ca772224067c94e07a5b78b7d9c5f1557ab88c"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv",
+      "status": "PASS",
+      "rows": 9,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "e41905251cf9eacf3fb81cc31b0a8cdf9e6c461dc4c157265869808dae16721d",
+      "rerun_sha256": "e41905251cf9eacf3fb81cc31b0a8cdf9e6c461dc4c157265869808dae16721d"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scale_validation.csv",
+      "status": "PASS",
+      "rows": 18,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "79e9784561c524c9e373d95c4c267e163b8a601c81e87b9f586751a8011e91f6",
+      "rerun_sha256": "79e9784561c524c9e373d95c4c267e163b8a601c81e87b9f586751a8011e91f6"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scenario_predictions.csv",
+      "status": "PASS",
+      "rows": 4000,
+      "columns": 35,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "28506e67f58d5dc631dc32e96210f6a6a24f8ac79917d0b3f179cb0ee0c8a397",
+      "rerun_sha256": "28506e67f58d5dc631dc32e96210f6a6a24f8ac79917d0b3f179cb0ee0c8a397"
+    },
+    {
+      "path": "experiments/runs/q2-model-finalization-20260925/scenario_summary.csv",
+      "status": "PASS",
+      "rows": 10,
+      "columns": 6,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "164e2a106edb41ff237bb15ac80acf987ff24b065cc0c605e18581ff3bac85d9",
+      "rerun_sha256": "164e2a106edb41ff237bb15ac80acf987ff24b065cc0c605e18581ff3bac85d9"
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/q1_domain_quality_for_q2.csv",
+      "status": "PASS",
+      "rows": 17,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "1ff0de71501df8b4a7616e7242a5a4644a43eef7ac4b011946521012804f4f80",
+      "rerun_sha256": "1ff0de71501df8b4a7616e7242a5a4644a43eef7ac4b011946521012804f4f80"
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv",
+      "status": "PASS",
+      "rows": 1214,
+      "columns": 32,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09",
+      "rerun_sha256": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09"
+    },
+    {
+      "path": "experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv",
+      "status": "historical_manual_audit_not_regenerated"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/A_recipe_fold_assignments.csv",
+      "status": "PASS",
+      "rows": 576,
+      "columns": 4,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "84138df103ebc9231f5bdb4d7516f46487ecc8e6922bc10c6e4540f5942703b4",
+      "rerun_sha256": "84138df103ebc9231f5bdb4d7516f46487ecc8e6922bc10c6e4540f5942703b4"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/B2_residual_diagnostics.csv",
+      "status": "PASS",
+      "rows": 35,
+      "columns": 4,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "ed04326b08091c41667fd336e239807ad16e815e6e5fcb3526e530d44374d751",
+      "rerun_sha256": "ed04326b08091c41667fd336e239807ad16e815e6e5fcb3526e530d44374d751"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/calibration_coefficients.csv",
+      "status": "PASS",
+      "rows": 185,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "6c6714bbb723dbdca650cea878b459999d0ab2246f52967f8b46afe73d474990",
+      "rerun_sha256": "6c6714bbb723dbdca650cea878b459999d0ab2246f52967f8b46afe73d474990"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/decisions.csv",
+      "status": "PASS",
+      "rows": 7,
+      "columns": 9,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "91ba80af745eaf1ecfca42dcf1b50dabb8ff8ca15a32bfc497d48be424860893",
+      "rerun_sha256": "91ba80af745eaf1ecfca42dcf1b50dabb8ff8ca15a32bfc497d48be424860893"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/full_target_refits.csv",
+      "status": "PASS",
+      "rows": 28,
+      "columns": 10,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "0329cb2331f5e7ce58b9ba2d1b257335c171faf906668c28eab3a243385fff57",
+      "rerun_sha256": "0329cb2331f5e7ce58b9ba2d1b257335c171faf906668c28eab3a243385fff57"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/inner_validation.csv",
+      "status": "PASS",
+      "rows": 568,
+      "columns": 12,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "6ab007cd8c542b78917df3e86a001f592f0010a04b67640541a541b37ef7a176",
+      "rerun_sha256": "6ab007cd8c542b78917df3e86a001f592f0010a04b67640541a541b37ef7a176"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/model_selection.csv",
+      "status": "PASS",
+      "rows": 37,
+      "columns": 5,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "8a2db449fe18123942a3a813304319ad3d04eba3eb704b90a120887265e99107",
+      "rerun_sha256": "8a2db449fe18123942a3a813304319ad3d04eba3eb704b90a120887265e99107"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv",
+      "status": "PASS",
+      "rows": 185,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "423b7aa743db4efcf132964342249d45d3f751a8b2d20d2dfa1f59a6c056d0d1",
+      "rerun_sha256": "423b7aa743db4efcf132964342249d45d3f751a8b2d20d2dfa1f59a6c056d0d1"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/outer_predictions.csv",
+      "status": "PASS",
+      "rows": 9945,
+      "columns": 14,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "1f1569206555bddaa1bf1d744112aee95f28f3e6c5fd54d590e3143d0c0bba68",
+      "rerun_sha256": "1f1569206555bddaa1bf1d744112aee95f28f3e6c5fd54d590e3143d0c0bba68"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv",
+      "status": "PASS",
+      "rows": 35,
+      "columns": 13,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "e3af117fa7aeb2bfe54ba77e29db615b7f4db3b34a52efe4fdcfa2a0adf75b22",
+      "rerun_sha256": "e3af117fa7aeb2bfe54ba77e29db615b7f4db3b34a52efe4fdcfa2a0adf75b22"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/small_sample_detail.csv",
+      "status": "PASS",
+      "rows": 1308,
+      "columns": 17,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "c56a455dec659c1c09d63095e7229855d4abc715679c9ada9582b16e992b3f70",
+      "rerun_sha256": "c56a455dec659c1c09d63095e7229855d4abc715679c9ada9582b16e992b3f70"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/small_sample_summary.csv",
+      "status": "PASS",
+      "rows": 24,
+      "columns": 11,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "01d1483abc76fa5d49b999d67e95fe2968bc8e1fb94b31fcec657d7f0a1114f6",
+      "rerun_sha256": "01d1483abc76fa5d49b999d67e95fe2968bc8e1fb94b31fcec657d7f0a1114f6"
+    },
+    {
+      "path": "experiments/runs/q2-transfer-improvement-20260925/split_manifest.csv",
+      "status": "PASS",
+      "rows": 12003,
+      "columns": 8,
+      "max_absolute_numeric_difference": 0.0,
+      "archived_sha256": "4768419666e4675d7dac8003b4d87f04630f5c120b593fde8c2d9575179906fb",
+      "rerun_sha256": "4768419666e4675d7dac8003b4d87f04630f5c120b593fde8c2d9575179906fb"
+    }
+  ]
+}

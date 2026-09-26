@@ -1,0 +1,14 @@
+task_id: T-Q1-007
+work_package: WP-C
+owner_actor: ACTOR-3
+peer_reviewer_actor: ACTOR-1
+release_integrator_actor: ACTOR-2
+status: REVIEW_BLOCKED
+gate: G2
+gate_evidence: null
+upstream_task_card: docs/tasks/T-Q1-007.yml
+source_task_card_sha256: 32e416c878594971c7526cb1068cc8b41d7b77a5712fb056237134ae54f37103
+local_record_only: true
+peer_review_decision: null
+integrator_decision: null
+limitations: "已有试算仅探索性；正式bootstrap/权重扰动待G2；不得将候选主张写为已接受。"

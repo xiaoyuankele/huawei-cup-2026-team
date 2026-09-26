@@ -1,0 +1,197 @@
+{
+  "run_id": "q3-frozen-q2-exploration-20260925-r01",
+  "portable_code_commit": "cf2a32bc34cda4d2a9bb0fc9bcf56ed2d0d5e496",
+  "upstream_commit": "e4a1e2855048c59c8e1484b16873141ab9a55029",
+  "status": "REVIEW_BLOCKED",
+  "hash_scope": "Payload working bytes verified against final Git index; ledger and prompt-run cross-links excluded to avoid self-referential hashes",
+  "excluded_mutable_links": [
+    "experiments/index.csv",
+    "governance/ai-use-log.csv",
+    "governance/feedback/index.csv",
+    "governance/prompts/registry.csv",
+    "governance/prompts/runs/PR-Q3-RESEARCH-HANDOFF-20260925.yml",
+    "paper/claim-ledger.csv"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "a2f345c5160046beca9ad22a21d17d43122950ccf4ba6e8e92f3fb024c3ca25c",
+      "bytes": 14989
+    },
+    {
+      "path": "README.md",
+      "sha256": "5b937d76b70616088a6e9e437d9be15c2dc95fde0f8651cef72fe42ab8408fce",
+      "bytes": 3345
+    },
+    {
+      "path": "configs/q3-frozen-q2-exploration.json",
+      "sha256": "9c2525513f2add802a29bef8dad80cecce8ddca981875244516ba488bcfc2df8",
+      "bytes": 2673
+    },
+    {
+      "path": "data/manifests/q3_research_inputs.json",
+      "sha256": "9c2525513f2add802a29bef8dad80cecce8ddca981875244516ba488bcfc2df8",
+      "bytes": 2673
+    },
+    {
+      "path": "docs/research/q3/README.md",
+      "sha256": "bc65b4e6ea991641c4c6f2af8fb7bd7e9a64436c63591b03f64878a1c92aa4a3",
+      "bytes": 1111
+    },
+    {
+      "path": "docs/research/q3/data.md",
+      "sha256": "fefb8a175fcf86a209a13163650623aeb09761d2f8ab8d1d564690238e1a4c37",
+      "bytes": 2428
+    },
+    {
+      "path": "docs/research/q3/handoff.md",
+      "sha256": "e185f7c3b2fcb47cbe3e2d8b58ce67d1d034d50743fa77cac0bbecbb309a2187",
+      "bytes": 1720
+    },
+    {
+      "path": "docs/research/q3/package_verification.json",
+      "sha256": "db2e24c9c36b61d9eb217534181fd08dcc485a196c5da9e209bc76db61264376",
+      "bytes": 329
+    },
+    {
+      "path": "docs/research/q3/process.md",
+      "sha256": "65cb08fc15ec136d86ccdb37078b06e2ea9d32d3a6b399de58a2f3b2bfdc95a4",
+      "bytes": 2076
+    },
+    {
+      "path": "docs/research/q3/reproduce.md",
+      "sha256": "5640c6ec720eb9fd3bf7cb8f92cf441936f3e55bf145e7801bdd4c1d23685cfc",
+      "bytes": 1531
+    },
+    {
+      "path": "docs/research/q3/reproduction_verification.json",
+      "sha256": "2e398619757830a7004811961431eddacecd2d5f404b27a5b0d7102080e32d78",
+      "bytes": 1117
+    },
+    {
+      "path": "docs/research/q3/results.md",
+      "sha256": "fb923806f11c0a86edee9278e7fcafb28d236dc4c3e1f94d87835592a0874def",
+      "bytes": 12362
+    },
+    {
+      "path": "docs/tasks/T-Q3-RESEARCH-HANDOFF.yml",
+      "sha256": "7d0f4cd5245de1b0fa185e73697499d9fb44ac4830e07ef3d6bb5432cfe0a94b",
+      "bytes": 2362
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/README.md",
+      "sha256": "58e3a0124b6da0e0209de46cd87322fdf4193f57a081235b9fa5b2ebbc14ec1c",
+      "bytes": 217
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/command.txt",
+      "sha256": "9b38a7e7770cbc399599e10e34da897ebabbe0672078441875595c28d13b176d",
+      "bytes": 117
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/environment.json",
+      "sha256": "55c08f5acf1a61e70ed2c2443343c881b41504fef26270cfe6ec563e53e5c966",
+      "bytes": 172
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/execution.log",
+      "sha256": "6d77856fa5344922de50ecf262185eca7f41fc42ce73362c54144e6f3aec9d22",
+      "bytes": 199
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/frozen_v1_optima.csv",
+      "sha256": "deee8a194161dac04625bcb154b3baa8d1403b997281de9e5bad54e335838459",
+      "bytes": 295214
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/independent_multistart_checks.csv",
+      "sha256": "737d709af0400ccd027539eecf8a9b7278431b011f44e9a91d60281b89233a01",
+      "bytes": 7113
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/independent_verification.json",
+      "sha256": "58861991bcd913b0dfe88df685302c228d1505525553306de00c73045368f01f",
+      "bytes": 168
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/manifest.json",
+      "sha256": "bdafbf87d86e7fbef410bdaaccc7016beaa56b76213ac65e7fbd5a18545b712b",
+      "bytes": 2257
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/portable_reproduction_manifest.json",
+      "sha256": "087df5e419878710074dbe8bbdecdf24ca0541de348fa1a4a17e9033292c46ab",
+      "bytes": 2080
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/processing_scenarios.csv",
+      "sha256": "f3a96268f21038e5a07b55f6c19630533c65d0b024acad9b0c03ce7fde81ac9e",
+      "bytes": 1162685
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/recipe_optima.csv",
+      "sha256": "9fec36a6f83826f2fa5226f359bb714d452efcb8208ce8b09b528388ff128d32",
+      "bytes": 15548
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/retrospective_decision_regret.csv",
+      "sha256": "a965b3ea7091bf77be55af216c566d759b05030aa7a0304b2adc1b34569bc5a7",
+      "bytes": 4267
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/solver_crosschecks.csv",
+      "sha256": "9e2bb4a0cada04ab79a6ea56b7296e6a4d7617bf81a094fd39b153922f91f666",
+      "bytes": 1686
+    },
+    {
+      "path": "experiments/runs/q3-frozen-q2-exploration-20260925-r01/transition_brackets.csv",
+      "sha256": "46695eb3d78d678ffb59d387eac29e945036bd918ae789e80e6c275345c31279",
+      "bytes": 4019
+    },
+    {
+      "path": "governance/feedback/records/FB-Q3-RH-01.yml",
+      "sha256": "681aca776b282454884578c987c4a99fadeb4b2946f53cba6d8e424181f97569",
+      "bytes": 1488
+    },
+    {
+      "path": "governance/feedback/records/FB-Q3-RH-02.yml",
+      "sha256": "a39f8f84bf89f17668ffd529d1e0c7dac71ade0724841b92103baab821c52683",
+      "bytes": 1473
+    },
+    {
+      "path": "governance/feedback/records/FB-Q3-RH-03.yml",
+      "sha256": "1e3350f4763695b2cf5a1505f05dac3b6cd43d40085168c80201a56a356b99f7",
+      "bytes": 1442
+    },
+    {
+      "path": "governance/prompts/catalog/P-Q3-RESEARCH-HANDOFF.md",
+      "sha256": "05064489dd0520faa438544f167501013c70348c65496e5bc390e67e7386a639",
+      "bytes": 527
+    },
+    {
+      "path": "paper/sections/drafts/q3-exploratory-results.md",
+      "sha256": "f2d06a212937d3cbe4afb07e4222c2d74122467bce04d99197f7465699061df6",
+      "bytes": 2689
+    },
+    {
+      "path": "requirements-q3-research.txt",
+      "sha256": "e9e71ef5a03bc07510cdfb66bfb0f04706b58f14122d05d7bc16ded6d230d593",
+      "bytes": 42
+    },
+    {
+      "path": "scripts/q3_check_reproduction.py",
+      "sha256": "b1a1778576e5c00e07489d674fa98bda9c83df7bcf6bd0dab3ca4dcfdd7b7a5b",
+      "bytes": 1048
+    },
+    {
+      "path": "scripts/q3_run_experiments.py",
+      "sha256": "88e8f08086e8c166bf69b8d55b5ce3add106d97d6068493e1756d59f2a164d10",
+      "bytes": 16072
+    },
+    {
+      "path": "scripts/q3_verify_experiments.py",
+      "sha256": "40e08233ad909dbdfee3c926229bcc200cc7ea6ace2b843b669de9575092cadf",
+      "bytes": 3235
+    }
+  ]
+}

@@ -1,128 +1,79 @@
-# 全流程架构图
+# 全流程架构图 v2
 
-这张图描述从题目进入、任务卡与提示词治理、数据处理、批量实验、LaTeX 写作，到最终封卷提交的完整链路。图源保存在 `architecture-flow.mmd`，本 Markdown 文件中的 Mermaid 代码可以直接在 GitHub 和支持 Mermaid 的 VS Code 插件中预览。
+本图描述题目/子问题拆分、口头发布、三条纵向工作包、反馈回链、证据门和最终 Release Council。图源保存在 `architecture-flow.mmd`。
 
 ```mermaid
 flowchart TB
-    subgraph TEAM[三人协作入口]
-        A[A 架构 + 算法负责人]
-        B[B 实现 + 实验负责人]
-        C[C 实现 + 论文 + 图表负责人]
+    subgraph TEAM[三人执行入口]
+        P1[ACTOR-1\nWP-A Owner\nWP-B Integrator]
+        P2[ACTOR-2\nWP-B Owner\nWP-C Integrator]
+        P3[ACTOR-3\nWP-C Owner\nWP-A Integrator]
+        COORD[协调对话\n任务图/门控/决策]
     end
 
-    subgraph CONTROL[任务与治理]
-        ISSUE[Issue 与任务清单]
-        TASK[Task Card<br/>Owner / Reviewer / 验收]
-        PROMPT[Prompt Registry<br/>prompt_id@version]
-        PRUN[Prompt Run<br/>设备 / 模型 / 输出哈希]
-        REVIEW[Prompt Review<br/>评测 / 回滚]
-        FEEDBACK[Feedback Case<br/>失败 / 阻塞 / 不确定性]
-        DECISION[决策日志]
-        AI[AI 使用摘要日志]
-        HANDOFF[跨设备 Handoff]
-        RISK[风险登记]
+    subgraph PROBLEM_TREE[题目分解与发布]
+        PROBLEM[Problem Qn]
+        SUBPROBLEM[Subproblem Qn-Sxx]
+        ANNOUNCE[口头/会议发布\nannouncement_ref]
     end
 
-    subgraph GIT[公开 GitHub 仓库]
-        MAIN[main 稳定集成]
-        BRANCH[任务分支<br/>data / model / exp / paper / docs]
-        PR[Pull Request + 队友审阅]
-        RELEASE[release/huawei-cup-2026]
+    subgraph WPS[纵向工作包]
+        WPA[WP-A 数据与证据\n代码 + run_id + 数据论文段]
+        WPB[WP-B 模型与优化\n代码 + run_id + 模型论文段]
+        WPC[WP-C 验证与结果\n代码 + run_id + 结果论文段]
+        INT[Q1-INT / T-Q1-009\nclaim ledger + 论文整合 + 发布检查]
     end
 
-    subgraph DATA[数据与计算链路]
-        PROBLEM[题目与公开资料]
-        BRIEF[题目简报<br/>problem-brief.md]
-        RAW[原始数据<br/>只读 + SHA256]
-        MANIFEST[数据 manifest]
-        PIPELINE[数据处理脚本<br/>src / scripts]
-        CLEAN[interim / processed]
-        CONFIG[实验配置<br/>configs/*.yaml]
-        RUN[批量实验<br/>experiments/runs/run_id]
-        METRIC[指标、日志、结论]
+    subgraph GATES[证据门]
+        G0[G0 范围/数据边界]
+        G1[G1 数据契约与模型接口]
+        G2[G2 已接受模型 run_id]
+        G3[G3 三个包 PACKAGE_ACCEPTED]
+        G4[G4 Release Council 三人签署]
     end
 
-    subgraph PAPER[论文生产链路]
-        FIG[图表生成脚本]
-        SECTIONS[LaTeX 章节<br/>paper/sections]
-        MAIN_TEX[main.tex + sections/ + refs.bib]
-        TEMPLATE[paper/template<br/>2026 GMCMthesis 模板]
-        XELATEX[XeLaTeX 编译]
-        PDF[最终 PDF]
+    subgraph SOURCES[事实源]
+        TASK[Task Card\ntask_id + 题目/子问题]
+        PR[Pull Request]
+        RUN[Run Manifest]
+        FEEDBACK[Feedback Case\nfeedback_id + 证据/响应]
+        CLAIM[Claim Ledger]
     end
 
-    subgraph SUBMIT[封卷与提交]
-        CHECK[双人合规检查]
-        HASH[PDF SHA256 / MD5]
-        ATTACH[程序与结果附件]
-        RECEIPT[上传回执与只读归档]
-    end
-
-    A --> ISSUE
-    B --> ISSUE
-    C --> ISSUE
-    ISSUE --> TASK
-    TASK --> PROMPT
-    PROMPT --> PRUN
-    PRUN --> REVIEW
-    PRUN --> FEEDBACK
-    FEEDBACK --> REVIEW
-    REVIEW --> BRANCH
-    TASK --> HANDOFF
-    HANDOFF --> BRANCH
-    BRANCH --> PR
-    PR --> MAIN
-    MAIN --> RELEASE
-    DECISION -.-> MAIN
-    PRUN -.-> AI
-    REVIEW -.-> AI
+    P1 --> WPA
+    P2 --> WPB
+    P3 --> WPC
+    P1 --> COORD
+    P2 --> COORD
+    P3 --> COORD
+    COORD --> TASK
+    PROBLEM --> SUBPROBLEM
+    SUBPROBLEM --> ANNOUNCE
+    ANNOUNCE --> TASK
+    TASK --> G0
+    G0 --> WPA
+    G0 --> WPB
+    G0 --> WPC
+    WPA --> G1
+    WPB --> G1
+    G1 --> WPB
+    WPB --> G2
+    G2 --> WPC
+    WPA --> G3
+    WPB --> G3
+    WPC --> G3
+    G3 --> INT
+    INT --> G4
     TASK -.-> PR
-    RISK -.-> ISSUE
-
-    PROBLEM --> BRIEF
-    BRIEF --> RAW
-    RAW --> MANIFEST
-    MANIFEST --> PIPELINE
-    PIPELINE --> CLEAN
-    CLEAN --> CONFIG
-    CONFIG --> RUN
-    RUN --> METRIC
-    METRIC --> FIG
-    METRIC --> SECTIONS
-    FIG --> MAIN_TEX
-    SECTIONS --> MAIN_TEX
-    TEMPLATE --> MAIN_TEX
-    MAIN_TEX --> XELATEX
-    XELATEX --> PDF
-
-    PDF --> CHECK
-    RELEASE --> CHECK
-    CHECK --> HASH
-    HASH --> ATTACH
-    ATTACH --> RECEIPT
-    MANIFEST -.DVC / LFS / 对象存储.-> RAW
-    RUN -.本地缓存 + 远程备份.-> METRIC
-
-    classDef person fill:#e8f1ff,stroke:#3973b8,color:#102a43;
-    classDef control fill:#fff4d6,stroke:#b7791f,color:#4a2c00;
-    classDef repo fill:#e6ffed,stroke:#2f855a,color:#17351f;
-    classDef data fill:#f0e7ff,stroke:#805ad5,color:#2d174f;
-    classDef paper fill:#ffe8ee,stroke:#c53030,color:#4a1010;
-    classDef submit fill:#e6fffa,stroke:#25855a,color:#123c32;
-    class A,B,C person;
-    class ISSUE,TASK,PROMPT,PRUN,REVIEW,FEEDBACK,DECISION,AI,HANDOFF,RISK control;
-    class MAIN,BRANCH,PR,RELEASE repo;
-    class PROBLEM,BRIEF,RAW,MANIFEST,PIPELINE,CLEAN,CONFIG,RUN,METRIC data;
-    class FIG,SECTIONS,MAIN_TEX,XELATEX,PDF paper;
-    class CHECK,HASH,ATTACH,RECEIPT submit;
+    PR -.-> RUN
+    RUN -.-> CLAIM
+    RUN -.-> FEEDBACK
+    FEEDBACK -.-> TASK
+    FEEDBACK -.-> PR
+    CLAIM -.-> INT
+    G4 --> RELEASE[集成分支/最终 PDF/附件]
 ```
-
-## 快速使用
-
-1. GitHub 直接预览 `architecture-flow.md`。
-2. VS Code 安装 Mermaid 预览插件，编辑 `.mmd` 后实时查看。
-3. 需要 SVG/PNG 时，再安装 Mermaid CLI 导出，不改变 `.mmd` 源文件。
 
 ## 阅读顺序
 
-先看蓝色的三人入口和绿色的 Git 集成，再看紫色的数据实验链路，接着看粉色的 LaTeX 论文链路，最后看青色的封卷提交链路。公开仓库中的文件必须经过公开性检查；原始数据和敏感配置不进入 Git。虚线表示治理、备份和大文件存储关系，不是主处理顺序。
+先看 Owner—Peer Reviewer—Integrator 的环形分工，再看 G0–G4 门控。WP-B 的模型规格和 WP-C 的脚手架可以在 G0 后并行准备；正式分析结果必须等待 G2。只有三个工作包全部 `PACKAGE_ACCEPTED`，Q1-INT 才能整合 claim ledger 和最终论文。

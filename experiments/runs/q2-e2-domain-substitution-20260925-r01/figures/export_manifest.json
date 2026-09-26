@@ -1,0 +1,38 @@
+{
+  "backend": "Python/matplotlib",
+  "matplotlib": "3.7.2",
+  "figures": [
+    {
+      "figure": "E2_substitution_support",
+      "width_mm": 180,
+      "height_mm": 160,
+      "source_csvs": [
+        "substitution_support.csv"
+      ],
+      "independent_replicates": 0,
+      "uncertainty": "Not estimated; conditional deterministic calculations"
+    },
+    {
+      "figure": "E2_direction_interaction",
+      "width_mm": 180,
+      "height_mm": 92,
+      "source_csvs": [
+        "assumption_sensitivity.csv",
+        "direction_stability.csv",
+        "interior_interactions.csv",
+        "clipping_stress_interactions.csv"
+      ],
+      "independent_replicates": 0,
+      "uncertainty": "Not estimated; conditional deterministic calculations"
+    }
+  ],
+  "plot_script_sha256": "81ebb210b73504a70c4073a4119ccbbb975f71e593cb456ca1f8cf5926f25250",
+  "file_sha256": {
+    "E2_direction_interaction.pdf": "5416f101f6d99f44aabd0b58989637dd9424282118a56297e22903ff83111eb0",
+    "E2_direction_interaction.png": "ab5523f58979809cb62ca978fa4c78211b245f1abf832599401b6ef41cd40e9d",
+    "E2_direction_interaction.svg": "1a4c2ffbeba1bc0ed145a2a419271ba889470fddedf31548fe0ec445a3f5826f",
+    "E2_substitution_support.pdf": "50da5346286c2b770437d2b51f4a84a7f41674985c48d447d4f27c7e3a946bab",
+    "E2_substitution_support.png": "9f741f9ee5aed948d7a7d121d37f3505c3c2b6360772894ce3866c7da2bcb71f",
+    "E2_substitution_support.svg": "ce6fec0e2324c746375036dc65b24245f9668be58f18a47c5bb7244f282f0b5a"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "historical_archive_not_a_new_model_run",
+  "sources": [
+    {
+      "file": "model_summary.csv",
+      "source_package": "q1_models_comparison_20260924",
+      "source_filename": "model_summary.csv",
+      "sha256": "7e1d9d54331875860256659dbbf49a61d0c714c88f1bb09598da43a8de1a5696"
+    },
+    {
+      "file": "pairwise_comparison.csv",
+      "source_package": "q1_models_comparison_20260924",
+      "source_filename": "pairwise_comparison.csv",
+      "sha256": "550a8445ff4d061eaec31de833378e747d8e7901346b1bf74deb31c7a1b50f7f"
+    },
+    {
+      "file": "linear_model_weights.csv",
+      "source_package": "q1_models_comparison_20260924",
+      "source_filename": "linear_model_weights.csv",
+      "sha256": "9b8833b92c4793be20a6a64d11b337c9d415bbd4937f15846bc8c71e8c8485d0"
+    },
+    {
+      "file": "ppga_weight_collapse.json",
+      "source_package": "q1_ppga_comparison_20260924",
+      "source_filename": "weight_collapse_diagnostic.json",
+      "sha256": "a33eb749e66a5bfd59134245cb963bf45987c7c6ad2ae19e328d85f0493a92b2"
+    }
+  ],
+  "source_run_ids": [
+    "q1-fixed-A1-multimodel-20260924-r01",
+    "q1-ppga-20260924-r01"
+  ]
+}

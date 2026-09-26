@@ -1,0 +1,20 @@
+{
+  "raw_source_sha256": {
+    "${Q2_RAW_ROOT}\\B_scaling_laws\\pythia_training_log_existing.csv": "529a59644b0f57bf3a76037838b614bfedc35e58bb26b93052e34ffc63e454c2",
+    "${Q2_RAW_ROOT}\\B_scaling_laws\\supplementary_NQ_experiment.csv": "c7450ce0d67d8692535fef4709e60e2da60b2c184738bf96df160a4be0a33a7f",
+    "${Q2_RAW_ROOT}\\B_scaling_laws\\supplementary_NQ_experiment_expanded.csv": "880fd265ca3e1d9bc93b4559af7ed7c18f89040634266c50bae03d88486e0f3a",
+    "${Q2_RAW_ROOT}\\B_scaling_laws\\cerebras_training_log.csv": "178f878cad2cb31e4ec104c670553de23818197876d824a113fdb911125951a6",
+    "${Q2_RAW_ROOT}\\B_scaling_laws\\scaling_baseline.csv": "2272983ded93de35e05f9acbf95ebceedf43f283345e4be72b54fee94080391e",
+    "${Q2_RAW_ROOT}\\B_scaling_laws\\published_scaling_data.csv": "dd858c5e48610e28589340d5db023d6abfb31df597506789ccdfc6a546731bbd",
+    "${REPO}\\experiments\\runs\\q2-quality-scaling-linkage-20260925\\q1_to_q2_quality_linkage.csv": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09",
+    "${REPO}\\experiments\\runs\\q2-quality-scaling-linkage-20260925\\q1_domain_quality_for_q2.csv": "1ff0de71501df8b4a7616e7242a5a4644a43eef7ac4b011946521012804f4f80"
+  },
+  "script_sha256": "5db665c9d8907878be5b5007d6444a3c675049a23b3ef23e672101ea860bda9a",
+  "excluded": [
+    "A12-A15",
+    "B8",
+    "B10"
+  ],
+  "output_scenarios": 4000,
+  "note": "No generated scenario is used for fitting. Raw source descriptions are not parameter constraints."
+}

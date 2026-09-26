@@ -1,0 +1,10 @@
+{
+  "review_kind": "internal automated and AI-assisted independent numerical checks; not human peer acceptance",
+  "focused_tests": {"new_ablation_tests_passed": 3, "shared_scale_tests_passed": 3, "failed": 0},
+  "new_invariants": ["pure mixture features do not read quality; quality adds exactly one column", "perturbing held-out delta labels does not change that fold's OOF predictions", "paired bootstrap resamples whole 13-response recipe vectors"],
+  "independent_parameter_reconstruction": {"aggregate_values": 600, "max_absolute_difference": 2.27e-13, "domain_rmse_mae_values": 3120, "max_domain_absolute_difference": 2.22e-15},
+  "independent_sklearn_oof": {"values": 40, "max_absolute_difference": 6.66e-16},
+  "independent_paired_bootstrap": {"comparisons": 135, "difference_and_interval_values": 810, "max_absolute_difference": 1.33e-15},
+  "historical_input_alignment": "6 datasets aligned by original ID; 17 mixture columns and 13 Loss columns agree exactly with historical benchmark",
+  "human_peer_review": "PENDING"
+}

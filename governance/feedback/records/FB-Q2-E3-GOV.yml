@@ -1,0 +1,34 @@
+feedback_id: FB-Q2-E3-GOV
+type: evidence_gap
+severity: P1
+status: captured
+task_id: T-Q2-E3
+problem_id: Q2
+subproblem_id: Q2-E3
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+prompt_id: P-Q2-E3-SUBSTITUTION
+prompt_run_id: PR-Q2-E3-20260925
+related_run_ids:
+- q2-e3-quality-parameter-substitution-20260925-r01
+submitted_by_actor: null
+recorded_by: assistant; not human sign-off
+response_owner_actor: ACTOR-2
+response_status: BLOCKED
+created_at: '2026-09-25T14:23:30+00:00'
+updated_at: '2026-09-25T14:31:02.171314+00:00'
+observed_behavior: Actor acceptance, Q2 routing, G1 and independent review not evidenced
+source: review
+evidence:
+- docs/research/q2/E3-plan.md
+- experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/report.md
+- experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/reproduction_verification.json
+decision: null
+closed_by: null
+closed_at: null
+next_action: Conditional numerical checks then actual independent review
+acceptance_test: Recorded independent decision with evidence boundary
+sensitivity: public
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/33

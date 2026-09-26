@@ -1,0 +1,12 @@
+{
+  "prompt_run_id": "PR-20260924-WPC-LOCAL-001",
+  "task": "按问题一第二小问需求生成文件，并按WP-C/ACTOR-3任务卡交付",
+  "actor_confirmed_by_user": true,
+  "run_id": "q1-conflict-trial-20260924-r01",
+  "status": "EXPLORATORY_AND_REVIEW_BLOCKED",
+  "skills": [
+    "math-contest-paper-writer",
+    "pdf"
+  ],
+  "external_messages_sent": false
+}

@@ -2,15 +2,15 @@
 prompt_id: P-VALID-001
 version: v1.0.0
 status: draft
-owner: C
-reviewer: A
+owner: work_package_owner
+reviewer: peer_reviewer
 ---
 
 # 问题一验证与稳健性分析
 
 ## 任务
 
-对已接受的 Q1 模型进行 A1 内部留出、A2/A3 重叠子集、新增子集和重复种子/Bootstrap 稳健性评估。
+对PACKAGE_ACCEPTED 的 Q1 模型进行 A1 内部留出、A2/A3 重叠子集、新增子集和重复种子/Bootstrap 稳健性评估。
 
 ## 约束
 

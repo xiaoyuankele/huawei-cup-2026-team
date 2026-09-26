@@ -1,0 +1,5 @@
+run_id: q2-migration-gate-20250925-r01
+status: blocked_formal_joint_migration
+scope: aggregate_release_gate
+model_fit: false
+publication_claim: false

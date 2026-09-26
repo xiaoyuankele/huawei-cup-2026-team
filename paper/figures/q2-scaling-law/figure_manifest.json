@@ -1,0 +1,71 @@
+{
+  "figures": [
+    {
+      "figure": "Fig01_B1_leave_size",
+      "source": "experiments/runs/q2-model-finalization-20260925/scale_validation.csv",
+      "rows_used": 16,
+      "unit": "held-out N size"
+    },
+    {
+      "figure": "Fig02_quality_increment",
+      "sources": [
+        "experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv",
+        "experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv"
+      ],
+      "rows_used": {
+        "summary": 6,
+        "fold": 32
+      },
+      "unit": "validation fold"
+    },
+    {
+      "figure": "Fig03_transfer_calibration",
+      "sources": [
+        "experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv",
+        "experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv"
+      ],
+      "rows_used": {
+        "summary": 9,
+        "fold": 51
+      },
+      "unit": "held-out trajectory or recipe fold"
+    },
+    {
+      "figure": "Fig04_mixture_scale",
+      "source": "experiments/runs/q2-model-finalization-20260925/mixture_validation.csv",
+      "rows_used": 6,
+      "unit": "held-out recipe row"
+    },
+    {
+      "figure": "FigS01_B8_quality_direction",
+      "source": "experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv",
+      "rows_used": 3,
+      "unit": "N-D group"
+    },
+    {
+      "figure": "FigS02_large_model_range",
+      "sources": [
+        "experiments/runs/q2-b9-b10-extrapolation-audit-20250925-r01/metrics.json",
+        "experiments/runs/q2-model-finalization-20260925/model_parameters.json"
+      ],
+      "rows_used": {
+        "B9": 132,
+        "B10": 128
+      },
+      "unit": "model record"
+    }
+  ],
+  "sources": {
+    "experiments/runs/q2-b9-b10-extrapolation-audit-20250925-r01/metrics.json": "6d0630f1f956ff7c6a8f09770f2a6aef48f21c21cfc285c2837e42aac73eafe5",
+    "experiments/runs/q2-model-finalization-20260925/mixture_validation.csv": "02ee17a08394943b09cdc2946827e4f3210a3dd3fabc5df28fca1797bed18069",
+    "experiments/runs/q2-model-finalization-20260925/model_parameters.json": "46c94c6343e7bc023cf7347467d50c4e834fa50828e1e6a18c6a3b556dde7000",
+    "experiments/runs/q2-model-finalization-20260925/quality_increment_summary.csv": "15983c0e0c4b9f93a9bcac36898a4858ce1c232244aa9c3c600fdc9209088d54",
+    "experiments/runs/q2-model-finalization-20260925/quality_validation_folds.csv": "0335ff1f9cceaef8d61c2c074abc0762f925a3e7ca67a2c2d0a9f48f847ea52d",
+    "experiments/runs/q2-model-finalization-20260925/scale_validation.csv": "79e9784561c524c9e373d95c4c267e163b8a601c81e87b9f586751a8011e91f6",
+    "experiments/runs/q2-quality-scaling-linkage-20260925/quality-direction-audit.csv": "72a864fc997e227d61a56fc6eafa7c2ecc475e7882939197f9768f339ec4e589",
+    "experiments/runs/q2-transfer-improvement-20260925/outer_fold_metrics.csv": "423b7aa743db4efcf132964342249d45d3f751a8b2d20d2dfa1f59a6c056d0d1",
+    "experiments/runs/q2-transfer-improvement-20260925/performance_summary.csv": "e3af117fa7aeb2bfe54ba77e29db615b7f4db3b34a52efe4fdcfa2a0adf75b22"
+  },
+  "backend": "Python/matplotlib",
+  "style_reuse": "style only"
+}

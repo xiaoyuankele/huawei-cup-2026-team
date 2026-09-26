@@ -1,0 +1,23 @@
+feedback_id: FB-Q1-S03-20260925-CALIBRATION
+task_id: T-Q1-S03-HANDOFF
+severity: P1
+status: RESPONDED_PENDING_REVIEW
+scope: "本地历史尺度校准实验的发布前纠正"
+findings:
+  - id: scale_units
+    problem: "历史 C2 拟合 A8-A6 完整差值，预测时漏除 log10(60)，C3继承错误。"
+    resolution: "新脚本统一采用 x/log10(60) 乘配对差；旧 C2/C3 数值不进入本提交结论。"
+  - id: cv_preprocessing
+    problem: "历史 C2 标准化在分折前完成；C3 基础均值使用全体配对数据。"
+    resolution: "新 C2 在每个训练折内标准化；C3不进入本轮结论，需另做正确调参协议。"
+  - id: metric_aggregation
+    problem: "此前平均 Loss RMSE 被误用于推断逐域性能或与团队 pooled RMSE 排名。"
+    resolution: "新输出分列 mean-response、pooled、target-macro 及逐目标指标。"
+  - id: evidence_strength
+    problem: "已反复查看的A10及估算A12-A15不应称新盲测或真实大规模验证。"
+    resolution: "使用校准外回顾评价及估算外推表审计；保留负R2和高规模斜率冲突。"
+  - id: model_identity
+    problem: "本地B1名称易误认成团队旧质量-规模模型的精确复现。"
+    resolution: "本地B1只作透明质量基线；A4单规模无法拟合规模系数。"
+peer_decision: PENDING
+close_rule: "非Owner队员核对脚本、测试和新运行后关闭；本提交不代签关闭。"

@@ -1,0 +1,5 @@
+run_id: q2-m3-preflight-20250925-r01
+status: blocked_no_fit_started
+scope: formal_joint_model_input_contract
+fail_closed: true
+fit_started: false

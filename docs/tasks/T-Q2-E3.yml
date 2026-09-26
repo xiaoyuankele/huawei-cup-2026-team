@@ -1,0 +1,61 @@
+task_id: T-Q2-E3
+title: E3 质量与参数的等Loss替代
+problem_id: Q2
+subproblem_id: Q2-E3
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+role_assignment_status: ROUTING_PENDING_HUMAN_CONFIRMATION
+release_approver_actors:
+- ACTOR-1
+- ACTOR-2
+- ACTOR-3
+status: REVIEW_BLOCKED
+execution_status: RUN_COMPLETE
+registered_at: '2026-09-25T14:23:30+00:00'
+registered_before_execution: true
+execution_class: USER_AUTHORIZED_CONDITIONAL_EXPLORATION
+branch: wp/ACTOR-2/WP-B
+gate: G1
+gate_status: NOT_EVIDENCED
+review:
+  peer_decision: PENDING
+  integrator_decision: PENDING
+announcement:
+  mode: user_request
+  announcement_ref: docs/research/q2/E3-announcement.md
+  recorded_at: '2026-09-25T14:23:30+00:00'
+  announced_by_actor: null
+  acknowledged_by_actor: null
+  assistant_acknowledged: true
+issue: https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/9
+issue_scope: Routing reference; Q2 scope pending
+prompt:
+  prompt_id: P-Q2-E3-SUBSTITUTION
+  version: v1.0.0
+  prompt_run_id: PR-Q2-E3-20260925
+feedback_required: true
+feedback_ids:
+- FB-Q2-E3-GOV
+- FB-Q2-E3-IDENTIFIABILITY
+inputs:
+- ref: experiments/runs/q2-model-finalization-20260925/model_parameters.json
+- ref: experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv
+- ref: configs/q2-e3-quality-parameter-substitution.json
+expected_outputs:
+- path: experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01
+- path: paper/sections/drafts/q2-e3-quality-parameter-substitution.md
+- path: docs/tasks/T-Q2-E3-handoff.md
+acceptance_criteria:
+- Feasible path separated from formal quality freedom
+- Inverse solutions, asymptotic and range limits verified
+- Actual recipe counterexamples retained
+- Inputs frozen and all CSVs reproducible
+- Independent Peer/Integrator review
+completed_at: '2026-09-25T14:31:02.171314+00:00'
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/33
+preregister_commit: 23dd6a3
+code_commit: 5c9f5c2be57aa6e627c6926bc81305937d53e964
+run_manifest: experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/manifest.json
+handoff: docs/tasks/T-Q2-E3-handoff.md

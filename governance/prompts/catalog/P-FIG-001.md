@@ -2,8 +2,8 @@
 prompt_id: P-FIG-001
 version: v1.0.0
 status: draft
-owner: C
-reviewer: B
+owner: work_package_owner
+reviewer: peer_reviewer
 ---
 
 # 论文图表生成与审查

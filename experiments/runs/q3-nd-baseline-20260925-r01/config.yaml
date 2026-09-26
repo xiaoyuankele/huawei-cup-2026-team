@@ -1,0 +1,24 @@
+run_id: "q3-nd-baseline-20260925-r01"
+model: "M0 B1 classical N-D scaling law"
+objective: "E + A*N_B^(-alpha) + B*D_B^(-beta)"
+N_D_units: "billions"
+flops_conversion: "1e18*(6 + eta*Lctx)*N_B*D_B"
+eta: 0.0002
+budgets_flops:
+  - 1e+19
+  - 1e+22
+  - 1e+24
+Lctx_values:
+  - 2048
+  - 4096
+  - 8192
+  - 32768
+  - 131072
+bounds:
+  N_min_B: 0.070542
+  N_max_B: 11.965825
+  D_min_B: 0.134
+  D_max_B: 299.893
+  B1_rows: 1176
+solver: "SLSQP on log(N_B), log(D_B), explicit budget inequality, six deterministic starts"
+status: "exploratory"

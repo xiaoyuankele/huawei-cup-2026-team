@@ -2,8 +2,8 @@
 prompt_id: P-EXP-001
 version: v1.0.0
 status: draft
-owner: B
-reviewer: A
+owner: work_package_owner
+reviewer: peer_reviewer
 ---
 
 # 可复现实验实现与记录

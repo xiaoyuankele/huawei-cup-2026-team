@@ -1,0 +1,68 @@
+{
+  "quality_records": 272505,
+  "quality_domains": [
+    "arxiv",
+    "book",
+    "c4",
+    "commoncrawl",
+    "github",
+    "stackexchange",
+    "wikipedia"
+  ],
+  "cluster_anchor_centers": {
+    "0": 0.5755139297651041,
+    "1": 0.4881961229367445,
+    "2": 0.45936473436074093
+  },
+  "cluster_q_mapping": {
+    "2": 0.0,
+    "1": 0.5,
+    "0": 1.0
+  },
+  "list_reduction": "arithmetic mean of numeric list elements",
+  "normalization": "rank percentile per feature over A1-A3 records; KMeans n_clusters=3 random_state=42",
+  "anchor_features": [
+    "fineweb_edu",
+    "fluency_en",
+    "modernbert_cleanliness",
+    "modernbert_readability",
+    "modernbert_reasoning",
+    "modernbert_professionalism",
+    "qurater",
+    "ad_en"
+  ],
+  "official_mapping": "A16 direct/near_direct only",
+  "inferred_proxy_mapping": "included in quality_score_proxy_0_1 and marked inferred_proxy",
+  "datasets": [
+    {
+      "dataset": "A4_A5_train_1m",
+      "n": 512
+    },
+    {
+      "dataset": "A6_A7_test_1m",
+      "n": 256
+    },
+    {
+      "dataset": "A8_A9_test_60m",
+      "n": 256
+    },
+    {
+      "dataset": "A10_A11_test_1b",
+      "n": 64
+    },
+    {
+      "dataset": "A12_A13_est_10b",
+      "n": 63
+    },
+    {
+      "dataset": "A14_A15_est_70b",
+      "n": 63
+    }
+  ],
+  "output_files": [
+    "A16_domain_mapping_resolved.csv",
+    "A4_A15_quality_scored.csv",
+    "A4_A15_quality_scored_long.csv",
+    "quality_domain_scores.csv"
+  ]
+}

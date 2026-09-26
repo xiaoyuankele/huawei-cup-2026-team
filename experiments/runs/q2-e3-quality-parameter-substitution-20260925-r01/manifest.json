@@ -1,0 +1,27 @@
+{
+  "task_id": "T-Q2-E3",
+  "run_id": "q2-e3-quality-parameter-substitution-20260925-r01",
+  "git_commit": "5c9f5c2be57aa6e627c6926bc81305937d53e964",
+  "created_at": "2026-09-25T14:28:06.492239+00:00",
+  "inputs": {
+    "experiments/runs/q2-model-finalization-20260925/model_parameters.json": "46c94c6343e7bc023cf7347467d50c4e834fa50828e1e6a18c6a3b556dde7000",
+    "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv": "0c7b55e69e386c58de782ef6b906bbedb10d2f70e7da7fc4348762b797e03e09",
+    "configs/q2-e3-quality-parameter-substitution.json": "bb95db745fe48951e0146e68b6ec733aa5a492d13d7ab42261674e0e957a7041",
+    "scripts/q2_e3_quality_substitution.py": "cd5822b61e97f95651758b5070e5339c14089489cf7056e927195f3d80d4fe9b",
+    "scripts/q2_finalize_model.py": "e7358e3b1dbe05c821048a9ecda294199804a9714558ede83edbdca8bed4c7b0"
+  },
+  "outputs": {
+    "quality_path_support.csv": "5866939a09aabcb032318eff397c35706572d227e8ae1add2134dd75b66ac0aa",
+    "support_weights.csv": "a164ca4f1c1e9e3a5182cb4a5b323d55396b878855d39018db8c7b38e6ca81a9",
+    "support_duals.csv": "f80b9600a51d4d95f36cf4f196e8ee4d097e258f14ed46e85eb1debebae5156e",
+    "quality_path_curves.csv": "1307c031f95ed3fcb2cc30fc4167aaf850690c949a80b0d3e636517c801dafe3",
+    "quality_capacity.csv": "4765f7d2e9e0f778cfe5bfcd61893f3426024ab805b4fb6e7b1a5ef656f0a63f",
+    "expansion_targets.csv": "a81ff1fd9da8e4b75b135c7789a4492142a872a8cff2bb533330f87313b14ced",
+    "recipe_substitution.csv": "405670b4c1b10efa5d6043b4b5824cd0a944282c25be1c4a9d846af546324a34",
+    "recipe_summary.csv": "f14a29912a2f609c48f38e76eb5ae88fe5ca52da92ad22f353306533c7ab9a01",
+    "verification_checks.csv": "8f81b29645a5ecb2c8eb01659e7d27b3e38bc484390cbcf0da13b30819eda423"
+  },
+  "metrics_sha256": "877c9ee1f26699118fba6262557d8e97881e4d00ec39e3808fe40ca8bd1eeaca",
+  "inference_status": "CONDITIONAL_SCENARIO_NOT_JOINT_VALIDATION",
+  "cost_status": "ASSUMPTION_ONLY"
+}

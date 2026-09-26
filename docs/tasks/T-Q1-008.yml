@@ -1,16 +1,29 @@
 # 问题一论文集成
 task_id: T-Q1-008
 title: "问题一论文段落与主张登记"
-status: DRAFT # DRAFT | READY | RUNNING | REVIEW | ACCEPTED | REWORK | BLOCKED
-owner: C
-reviewer: A
+status: REVIEW_BLOCKED # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
+work_package: WP-C
+owner_actor: ACTOR-3
+peer_reviewer_actor: ACTOR-1
+release_integrator_actor: ACTOR-2
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: paper
+review:
+  peer_reviewer_must_differ: true
+  integrator_must_differ: true
+  no_reviewer_status: REVIEW_BLOCKED
 priority: P0
-issue: ""
-branch: "paper/C/T-Q1-008"
+issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/10"
+branch: "wp/ACTOR-3/WP-C"
+branch_owner_actor: ACTOR-3
+gate: G2
 prompt:
   prompt_id: P-PAPER-001
   version: v1.0.0
-  prompt_run_id: ""
+  prompt_run_id: "PR-20260924-WPC-LOCAL-001"
 objective: "将已接受的 Q1 数据、模型、冲突和验证证据写入论文，并完成 claim-ledger 回链。"
 inputs:
   - ref: docs/tasks/T-Q1-006.yml
@@ -29,8 +42,18 @@ expected_outputs:
   - path: paper/final/submission-draft.pdf
     description: "通过编译和格式检查的草稿（如进入论文阶段）"
 acceptance_criteria:
-  - "论文只引用 ACCEPTED 的 run_id，不把 trial/REVIEW 结果写成最终结论"
+  - "论文只引用 PACKAGE_ACCEPTED 的 run_id，不把 trial/PEER_REVIEW 结果写成最终结论"
   - "说明同源重叠、半监督/代理质量信号、方向未决和验证限制"
   - "AI 辅助内容按官方要求和仓库 AI 使用记录披露"
 definition_of_done:
-  - "A 审核技术主张，C 完成 LaTeX 编译和格式检查"
+  - "ACTOR-3 完成 WP-C 结果段和 claim ledger 回链，ACTOR-1 完成 Peer Review，ACTOR-2 完成 Release Integrator 检查"
+  - "跨包论文整合、最终 PDF 和发布检查转由 T-Q1-009 完成"
+
+local_delivery:
+  run_id: q1-conflict-trial-20260924-r01
+  execution_status: EXPLORATORY_RUN_COMPLETE
+  handoff: docs/tasks/WP-C-delivery.json
+  evidence_manifest: docs/tasks/WP-C-file-manifest.json
+  formal_gate_passed: false
+  peer_review_decision: null
+  integrator_decision: null

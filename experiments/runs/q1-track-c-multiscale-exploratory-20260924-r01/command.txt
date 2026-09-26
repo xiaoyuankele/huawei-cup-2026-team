@@ -1,0 +1,1 @@
+python -X utf8 scripts/q1_track_c_multiscale_exploratory.py --output-dir experiments/runs/q1-track-c-multiscale-exploratory-20260924-r01 > experiments/runs/q1-track-c-multiscale-exploratory-20260924-r01/metrics.json

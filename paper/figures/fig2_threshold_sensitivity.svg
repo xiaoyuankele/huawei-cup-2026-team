@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="650" height="380" preserveAspectRatio="xMinYMin meet" viewBox="0 0 650 380" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="650" height="380"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-380)" style="clip-path: url(#clip)">
+		<g transform="">
+			<path d="M 66,60 L 625,60 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="51.99462890625" y="57.0" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,114) scale(1,-1)">0</text>
+			<path d="M 66,122.352941 L 625,122.352941 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="46.9892578125" y="119.35294117647058" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,238) scale(1,-1)">20</text>
+			<path d="M 66,184.705882 L 625,184.705882 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="46.9892578125" y="181.70588235294116" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,363) scale(1,-1)">40</text>
+			<path d="M 66,247.058824 L 625,247.058824 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="46.9892578125" y="244.05882352941177" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,488) scale(1,-1)">60</text>
+			<path d="M 66,309.411765 L 625,309.411765 Z" style="stroke: rgb(86%,86%,86%); stroke-linecap: butt; stroke-width: 0.5;"/>
+			<text x="46.9892578125" y="306.4117647058823" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,612) scale(1,-1)">80</text>
+			<text x="60.99462890625" y="43" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,86) scale(1,-1)">10</text>
+			<text x="247.32796223958331" y="43" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,86) scale(1,-1)">15</text>
+			<text x="433.66129557291663" y="43" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,86) scale(1,-1)">20</text>
+			<text x="619.99462890625" y="43" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,86) scale(1,-1)">25</text>
+			<path d="M 66,60 L 66,325 Z" style="stroke: rgb(26%,26%,26%); stroke-linecap: butt; stroke-width: 1;"/>
+			<path d="M 66,60 L 625,60 Z" style="stroke: rgb(26%,26%,26%); stroke-linecap: butt; stroke-width: 1;"/>
+			<text x="243.427734375" y="20" style="font-family: WPCChinese; font-size: 11px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,40) scale(1,-1)">低分位阈值 p（%），高分位阈值为 100-p</text>
+			<text x="66" y="337" style="font-family: WPCChinese; font-size: 10px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,674) scale(1,-1)">候选冲突比例（%）</text>
+			<path d="M 66,89.329043 L 252.333333,119.202337 Z" style="stroke: rgb(18%,35%,53%); stroke-linecap: butt; stroke-width: 1.7;"/>
+			<path d="M 252.333333,119.202337 L 438.666667,151.88759 Z" style="stroke: rgb(18%,35%,53%); stroke-linecap: butt; stroke-width: 1.7;"/>
+			<path d="M 438.666667,151.88759 L 625,189.259443 Z" style="stroke: rgb(18%,35%,53%); stroke-linecap: butt; stroke-width: 1.7;"/>
+			<circle cx="66.0" cy="89.32904322625178" r="3" style="stroke: rgb(18%,35%,53%); stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,35%,53%); fill-rule: evenodd;"/>
+			<circle cx="252.33333333333331" cy="119.20233673917633" r="3" style="stroke: rgb(18%,35%,53%); stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,35%,53%); fill-rule: evenodd;"/>
+			<circle cx="438.66666666666663" cy="151.88759006657654" r="3" style="stroke: rgb(18%,35%,53%); stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,35%,53%); fill-rule: evenodd;"/>
+			<circle cx="625.0" cy="189.25944308476952" r="3" style="stroke: rgb(18%,35%,53%); stroke-linecap: butt; stroke-width: 1; fill: rgb(18%,35%,53%); fill-rule: evenodd;"/>
+			<path d="M 66,362 L 86,362 Z" style="stroke: rgb(18%,35%,53%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="91" y="359" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,718) scale(1,-1)">A1内部留出集</text>
+			<path d="M 66,72.13838 L 252.333333,151.279843 Z" style="stroke: rgb(90%,51%,16%); stroke-linecap: butt; stroke-width: 1.7; stroke-dasharray: 5, 2;"/>
+			<path d="M 252.333333,151.279843 L 438.666667,242.133778 Z" style="stroke: rgb(90%,51%,16%); stroke-linecap: butt; stroke-width: 1.7; stroke-dasharray: 5, 2;"/>
+			<path d="M 438.666667,242.133778 L 625,306.503974 Z" style="stroke: rgb(90%,51%,16%); stroke-linecap: butt; stroke-width: 1.7; stroke-dasharray: 5, 2;"/>
+			<circle cx="66.0" cy="72.13837994214079" r="3" style="stroke: rgb(90%,51%,16%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,51%,16%); fill-rule: evenodd;"/>
+			<circle cx="252.33333333333331" cy="151.279842786593" r="3" style="stroke: rgb(90%,51%,16%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,51%,16%); fill-rule: evenodd;"/>
+			<circle cx="438.66666666666663" cy="242.13377750504074" r="3" style="stroke: rgb(90%,51%,16%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,51%,16%); fill-rule: evenodd;"/>
+			<circle cx="625.0" cy="306.5039741679086" r="3" style="stroke: rgb(90%,51%,16%); stroke-linecap: butt; stroke-width: 1; fill: rgb(90%,51%,16%); fill-rule: evenodd;"/>
+			<path d="M 246,362 L 266,362 Z" style="stroke: rgb(90%,51%,16%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="271" y="359" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,718) scale(1,-1)">A2新增学术论文</text>
+			<path d="M 66,102.998144 L 252.333333,134.388302 Z" style="stroke: rgb(21%,52%,42%); stroke-linecap: butt; stroke-width: 1.7; stroke-dasharray: 2, 2;"/>
+			<path d="M 252.333333,134.388302 L 438.666667,165.870178 Z" style="stroke: rgb(21%,52%,42%); stroke-linecap: butt; stroke-width: 1.7; stroke-dasharray: 2, 2;"/>
+			<path d="M 438.666667,165.870178 L 625,197.918455 Z" style="stroke: rgb(21%,52%,42%); stroke-linecap: butt; stroke-width: 1.7; stroke-dasharray: 2, 2;"/>
+			<circle cx="66.0" cy="102.99814438348112" r="3" style="stroke: rgb(21%,52%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(21%,52%,42%); fill-rule: evenodd;"/>
+			<circle cx="252.33333333333331" cy="134.3883023294788" r="3" style="stroke: rgb(21%,52%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(21%,52%,42%); fill-rule: evenodd;"/>
+			<circle cx="438.66666666666663" cy="165.87017849379316" r="3" style="stroke: rgb(21%,52%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(21%,52%,42%); fill-rule: evenodd;"/>
+			<circle cx="625.0" cy="197.91845488350177" r="3" style="stroke: rgb(21%,52%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(21%,52%,42%); fill-rule: evenodd;"/>
+			<path d="M 426,362 L 446,362 Z" style="stroke: rgb(21%,52%,42%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="451" y="359" style="font-family: WPCChinese; font-size: 9px;fill: rgb(13%,13%,13%); stroke:none;" transform="translate(0,718) scale(1,-1)">A3新增代码</text>
+		</g>
+	</g>
+</svg>

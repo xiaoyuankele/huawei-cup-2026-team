@@ -1,16 +1,29 @@
 # 问题一图表与结果表
 task_id: T-Q1-007
 title: "问题一图表与结果表"
-status: DRAFT # DRAFT | READY | RUNNING | REVIEW | ACCEPTED | REWORK | BLOCKED
-owner: C
-reviewer: B
+status: REVIEW_BLOCKED # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
+work_package: WP-C
+owner_actor: ACTOR-3
+peer_reviewer_actor: ACTOR-1
+release_integrator_actor: ACTOR-2
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: paper
+review:
+  peer_reviewer_must_differ: true
+  integrator_must_differ: true
+  no_reviewer_status: REVIEW_BLOCKED
 priority: P1
-issue: ""
-branch: "feature/C/T-Q1-007"
+issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/10"
+branch: "wp/ACTOR-3/WP-C"
+branch_owner_actor: ACTOR-3
+gate: G2
 prompt:
   prompt_id: P-FIG-001
   version: v1.0.0
-  prompt_run_id: ""
+  prompt_run_id: "PR-20260924-WPC-LOCAL-001"
 objective: "从已接受 run_id 生成可复现的质量分布、方法比较、冲突诊断、稳健性和域迁移图表。"
 inputs:
   - ref: docs/tasks/T-Q1-005.yml
@@ -29,4 +42,13 @@ acceptance_criteria:
   - "区分训练/内部留出/重叠外部/新增外部，图例不掩盖不确定性"
   - "不使用截图替代源文件，不删去不利结果"
 definition_of_done:
-  - "B 复核数字和路径，C 复核图表和图注"
+  - "ACTOR-1 完成 Peer Review，ACTOR-2 完成 Release Integrator 检查数字、路径、图表和图注"
+
+local_delivery:
+  run_id: q1-conflict-trial-20260924-r01
+  execution_status: EXPLORATORY_RUN_COMPLETE
+  handoff: docs/tasks/WP-C-delivery.json
+  evidence_manifest: docs/tasks/WP-C-file-manifest.json
+  formal_gate_passed: false
+  peer_review_decision: null
+  integrator_decision: null

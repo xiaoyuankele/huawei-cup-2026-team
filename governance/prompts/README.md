@@ -1,32 +1,29 @@
 # 提示词注册与调用规范
 
-提示词与代码、数据清单和实验配置一样，是可审计的研究资产。模板负责说明“应该如何完成任务”，调用记录负责说明“某台设备何时实际调用了哪个版本”。
+`governance/prompts/registry.csv` 是规范提示词目录，`governance/prompts/catalog/` 保存可公开模板，`governance/prompts/runs/` 保存实际调用元数据。
 
-## 标识与生命周期
+- `prompt_id@version` 代表一个稳定模板；模板不绑定固定 A/B/C 人员。
+- 注册表中的 `owner`/`reviewer` 只表示 `work_package_owner` 和 `peer_reviewer` 这类通用责任，不表示具体成员。
+- 任务卡必须额外记录 `owner_actor`、`peer_reviewer_actor` 和 `release_integrator_actor`。
+- 每次真实调用生成唯一 `prompt_run_id`，并回链 `task_id`、`work_package`、设备、分支、Git commit、输入摘要、输出哈希、`run_id` 和状态。
+- Peer Reviewer 只能独立检查；Release Integrator 负责包级证据、接口和 claim ledger 回链；二者都不能代替 Owner 修改结果。
+- 题目原文、原始数据、敏感对话、密钥和未公开结果不能进入公开模板或 Prompt Run。
 
-- `prompt_id` 使用领域前缀和序号，例如 `P-MODEL-001`、`P-EXP-001`、`P-PAPER-001`。
-- 模板使用语义版本：修正文案或格式用 patch，改变输出结构用 minor，改变任务目标或验收含义用 major。
-- 生命周期：`draft → trial → approved → active → deprecated → archived`。
-- 每次真实调用生成唯一 `prompt_run_id`，并回链 `task_id`、设备、分支、Git commit 和输出摘要。
-
-## 目录约定
+## 目录
 
 ```text
 governance/prompts/
-├── README.md
-├── registry.csv              # 稳定索引，不记录敏感正文
-├── catalog/                  # 经脱敏、可公开的提示词模板
-└── runs/                     # 调用记录格式和索引说明
+├── registry.csv
+├── catalog/
+│   ├── P-*.md
+│   └── README.md
+└── runs/
+    ├── README.md
+    └── PR-*.yml
 ```
 
-完整题目、原始数据、未公开结果和包含这些内容的完整 AI 对话保存在本地受控目录。公开仓库只提交脱敏模板、元数据、引用关系和 SHA256；哈希用于证明记录发生过，不用于恢复敏感内容。
+## 最低记录
 
-## 最小调用记录
+每次调用至少记录：`prompt_run_id`、`prompt_id@version`、`task_id`、`work_package`、Owner/Peer Reviewer/Integrator Actor、设备、日期、AI 工具/模型/提供方、输入摘要、输出用途、代码提交号、输出文件或哈希、`run_id`、Peer Review 决定、Integrator 决定和状态。
 
-每次调用至少记录：`prompt_run_id`、`prompt_id@version`、`task_id`、`owner`、`device_id`、日期、AI 工具/模型/提供方、输入摘要、输出用途、代码提交号、输出文件或哈希、人工复核人和状态。
-
-AI 产生的代码、公式、数字和文字默认处于 `needs_human_review=true`。只有通过任务验收并进入 PR 的内容才可以被实验或论文引用。
-
-## 优化与回滚
-
-修改提示词必须新增版本，并用固定测试案例比较旧版和新版的正确性、完整性、可复现性、证据边界和格式合规性。新版没有明确收益时继续使用已批准版本；发现回归时将状态改为 `deprecated` 并回退到上一版。
+运行失败、证据不足、方向争议或模型不一致时，先建立 `feedback_id`，任务进入 `REWORK` 或 `REVIEW_BLOCKED`，不能把聊天窗口的数字直接写入论文。

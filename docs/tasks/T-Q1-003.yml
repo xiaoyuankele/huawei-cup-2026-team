@@ -1,12 +1,25 @@
 # 问题一综合评价模型规格与评价协议
 task_id: T-Q1-003
 title: "问题一综合评价模型规格与评价协议"
-status: DRAFT # DRAFT | READY | RUNNING | REVIEW | ACCEPTED | REWORK | BLOCKED
-owner: A
-reviewer: B
+status: DRAFT # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: model
+review:
+  peer_reviewer_must_differ: true
+  integrator_must_differ: true
+  no_reviewer_status: REVIEW_BLOCKED
 priority: P0
-issue: ""
-branch: "feature/A/T-Q1-003"
+issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/8"
+branch: "wp/ACTOR-2/WP-B"
+branch_owner_actor: ACTOR-2
+gate: G0
 prompt:
   prompt_id: P-MODEL-002
   version: v1.0.0
@@ -33,8 +46,8 @@ acceptance_criteria:
   - "主模型与基线的目标函数、约束、方向和可解释输出完整"
   - "PP-GA 只负责优化已定义的投影目标，不被描述为自动发现真实质量"
   - "评价指标覆盖拟合/内部留出、重叠外部、新增外部和稳定性，且不把同源数据称为独立真值"
-  - "未使用隐藏文字中的预置结果；未引用未接受的 run_id"
+  - "未使用隐藏文字中的预置结果；未引用未 PACKAGE_ACCEPTED 的 run_id"
 definition_of_done:
-  - "A 审核模型边界，B 复核接口可实现性"
-  - "任务卡、模型规格和配置通过 PR 评审后才可进入 T-Q1-004"
+  - "ACTOR-3 完成 Peer Review，ACTOR-1 完成 Release Integrator 检查"
+  - "任务卡、模型规格和配置达到 PACKAGE_ACCEPTED 后才可进入 T-Q1-004"
 notes: "本任务可以先写协议，但不得在没有 T-Q1-004 结果时写最优模型结论。"

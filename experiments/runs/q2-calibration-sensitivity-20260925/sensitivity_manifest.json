@@ -1,0 +1,16 @@
+{
+  "run_id": "q2-calibration-sensitivity-20260925",
+  "status": "REVIEW_REQUIRED",
+  "B_source_offset_note": "Offsets are post-hoc diagnostics; they are not a validated transport rule for unseen sources.",
+  "A_scale_shift": {
+    "n_common_mixtures": 256,
+    "mean_shift_A8_minus_A6_over_13_domains": -1.4593707886882699,
+    "median_shift_A8_minus_A6_over_13_domains": -1.380692958831787,
+    "share_negative_shift": 1.0
+  },
+  "Q_mapping": {
+    "Q_A_topsis_vs_soft_corr": -0.6516090945371421,
+    "paired_scenarios": 1600
+  },
+  "conclusion": "Source offsets and Q-axis choices materially change absolute predictions; use source-specific calibration and report sensitivity."
+}

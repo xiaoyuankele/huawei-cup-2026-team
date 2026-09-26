@@ -1,0 +1,1 @@
+Preprocessing rerun from unchanged raw attachments; see docs/decisions/q1-preprocessing-refresh-report.md and data/manifests/q1_preprocessed.yaml. Status REVIEW; needs_human_review=true. No score is part of this preprocessing task.

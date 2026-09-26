@@ -1,0 +1,21 @@
+bridge_id: q2-bridge-interface-20250925-r01
+status: conditional_review_blocked
+assumptions:
+  - id: A16-DIRECT
+    rule: direct mappings may be used only as candidate domain-level sensitivity inputs
+    uncertainty: semantic equivalence is documented but Q1 candidate score is not accepted truth
+  - id: A16-NEAR-DIRECT
+    rule: near_direct mappings remain separate from direct mappings
+    uncertainty: source/domain distribution mismatch is not quantified here
+  - id: A16-INFERRED
+    rule: inferred domains are retained as unmapped mass and receive no imputed q
+    uncertainty: unresolved until independent quality labels or a validated mapping are supplied
+  - id: NO-ROW-JOIN
+    rule: no A-to-B row-level merge is attempted
+    uncertainty: B tables have no shared record key with A1
+  - id: B8-EXCLUDED
+    rule: B8 remains outside the bridge because its Q direction conflicts with B6/B7 and provenance is incomplete
+    uncertainty: source and generation rule must be recovered before reconsideration
+derived_values:
+  partial_q_is_diagnostic_only: true
+  partial_q_renorm_is_not_for_model_fit: true

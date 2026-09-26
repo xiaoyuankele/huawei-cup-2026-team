@@ -1,0 +1,147 @@
+{
+  "schema_version": "q1.quality.mapping.gate.v1",
+  "run_id": "q1-quality-mapping-gate-20250925-r01",
+  "task_id": "T-Q1-004",
+  "source_files": {
+    "preprocessed_manifest": "data/manifests/q1_preprocessed_20260925.yaml",
+    "scoring_manifest": "data/manifests/q1_scoring_20260925.json",
+    "mapping_table": "data/origin/real_attachments/A_data_value/domain_mapping_guide.csv"
+  },
+  "preprocessed": {
+    "status": "REVIEW",
+    "run_id": "q1-indicator-normalization-20260924-r02"
+  },
+  "scoring": {
+    "status": "LOCAL_RESULT_PENDING_TEAM_REVIEW",
+    "primary_model": "TOPSIS_CRITIC",
+    "primary_run_id": "q1-critic-topsis-20260925-r01",
+    "record_counts": {
+      "A3": 203752,
+      "A1": 51230,
+      "A2": 17523
+    },
+    "n_unique": 261086
+  },
+  "datasets": {
+    "A1": {
+      "path": "E:\\huaweicup\\2026project\\data\\origin\\real_attachments\\A_data_value\\slimpajama_quality_signal_sample.jsonl.xz",
+      "bytes": 103349792,
+      "sha256": "14a4eeec4c7d98efd78942ddd9c1329640527f2108e73227be449bc1a8dbe579",
+      "record_count": 51230,
+      "unique_id_count": 51230,
+      "duplicate_id_count": 0,
+      "duplicate_key_record_count": 0,
+      "parse_error_count": 0,
+      "nonfinite_record_count": 18,
+      "field_count": 27,
+      "domain_counts": {
+        "arxiv": 1419,
+        "book": 171,
+        "c4": 10000,
+        "commoncrawl": 9640,
+        "github": 10000,
+        "stackexchange": 10000,
+        "wikipedia": 10000
+      }
+    },
+    "A2": {
+      "path": "E:\\huaweicup\\2026project\\data\\origin\\real_attachments\\A_data_value\\slimpajama_quality_extended\\arxiv_part-6777d8857c6e-000486.jsonl.xz",
+      "bytes": 3652724,
+      "sha256": "ae1e3399f84f605d994fc60b46984d742e14abb3355d8e7a91822eae1b99e16a",
+      "record_count": 17523,
+      "unique_id_count": 17523,
+      "duplicate_id_count": 0,
+      "duplicate_key_record_count": 0,
+      "parse_error_count": 0,
+      "nonfinite_record_count": 0,
+      "field_count": 24,
+      "domain_counts": {}
+    },
+    "A3": {
+      "path": "E:\\huaweicup\\2026project\\data\\origin\\real_attachments\\A_data_value\\slimpajama_quality_extended\\github_part-6777d8857c6e-000275.jsonl.xz",
+      "bytes": 37618172,
+      "sha256": "7af069c71c6027a10f2013cc14dd9d5d17855c264734f69c955544ff6cff7382",
+      "record_count": 203752,
+      "unique_id_count": 203752,
+      "duplicate_id_count": 0,
+      "duplicate_key_record_count": 0,
+      "parse_error_count": 0,
+      "nonfinite_record_count": 1,
+      "field_count": 24,
+      "domain_counts": {}
+    }
+  },
+  "overlap": {
+    "A1_A2": {
+      "intersection_count": 1419,
+      "left_only_count": 49811,
+      "right_only_count": 16104
+    },
+    "A1_A3": {
+      "intersection_count": 10000,
+      "left_only_count": 41230,
+      "right_only_count": 193752
+    },
+    "A2_A3": {
+      "intersection_count": 0,
+      "left_only_count": 17523,
+      "right_only_count": 203752
+    }
+  },
+  "mapping": {
+    "path": "E:\\huaweicup\\2026project\\data\\origin\\real_attachments\\A_data_value\\domain_mapping_guide.csv",
+    "bytes": 1086,
+    "sha256": "0ae884c0d16dcf77fe8411bdbe899ad7a0d487ffee73fba608c6d01b108401e7",
+    "row_count": 17,
+    "mapping_type_counts": {
+      "direct": 3,
+      "inferred": 11,
+      "near_direct": 3
+    },
+    "mapped_row_count": 6,
+    "unmapped_row_count": 11,
+    "inferred_domains": [
+      "dm_mathematics",
+      "freelaw",
+      "nih_exporter",
+      "pubmed_central",
+      "philpapers",
+      "enron_emails",
+      "ubuntu_irc",
+      "europarl",
+      "hackernews",
+      "pubmed_abstracts",
+      "uspto_backgrounds"
+    ],
+    "unmapped_domains": [
+      "dm_mathematics",
+      "freelaw",
+      "nih_exporter",
+      "pubmed_central",
+      "philpapers",
+      "enron_emails",
+      "ubuntu_irc",
+      "europarl",
+      "hackernews",
+      "pubmed_abstracts",
+      "uspto_backgrounds"
+    ]
+  },
+  "gates": {
+    "step1_can_advance_to_review": true,
+    "step1_final_q_accepted": false,
+    "step1_blockers": [
+      "preprocessing_manifest_status_REVIEW",
+      "scoring_pending_team_review",
+      "pending_indicator_directions_and_no_approved_weights_or_total",
+      "A2_A3_are_external_same_family_checks_not_independent_truth",
+      "nonfinite_values_reported_as_missing_components"
+    ],
+    "step2_can_advance_direct_near_direct_review": true,
+    "step2_full_17_domain_mapping_accepted": false,
+    "step2_blockers": [
+      "11_inferred_domains_without_quality_domain_evidence",
+      "mapping_table_notes_are_not_evidence-backed_per_domain"
+    ]
+  }
+}

@@ -2,8 +2,8 @@
 prompt_id: P-MODEL-001
 version: v1.0.0
 status: draft
-owner: A
-reviewer: B
+owner: work_package_owner
+reviewer: peer_reviewer
 ---
 
 # 模型规格与算法拆解

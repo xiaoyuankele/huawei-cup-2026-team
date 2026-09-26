@@ -1,0 +1,18 @@
+schema_version: q1.target-specific-scale.v1
+run_id: q1-target-specific-scale-20260925-r01
+task_id: T-Q1-003-MIXTURE
+status: role_change_exploratory
+quality_source: TOPSIS_CRITIC
+feature_blocks: [baseline, q_raw_coverage]
+comparison_models:
+  shared_alpha_ridge: one_alpha_for_all_targets
+  target_specific_alpha_ridge: alpha_selected_per_loss_target
+adaptation_data: [A4_A5_train_1m, A6_A7_validation_1m, A8_A9_validation_60m]
+unseen_scale_holdout: [A10_A11_validation_1b]
+extrapolation_diagnostics: [A12_A13_extrapolation_10b, A14_A15_extrapolation_70b]
+selection: leave_one_dataset_out_on_adaptation_data
+alpha_grid: [0.01, 0.1, 1.0, 10.0, 100.0]
+claim_ceiling:
+  - target_specific_regularization_sensitivity
+  - no_official_external_validation_after_role_change
+  - no_causal_scale_effect

@@ -1,0 +1,36 @@
+{
+  "feedback_id": "FB-20260924-B-PREPROCESS-PROVENANCE",
+  "task_id": "T-Q1-002",
+  "status": "NEW_RUN_CHAIN_REPAIRED_HISTORICAL_CAUSE_UNRESOLVED",
+  "old_matrix_missing_at_audit": true,
+  "new_matrix_path": "data/processed/q1_X_norm_v2.csv",
+  "new_matrix_matches_old_declared_sha256": true,
+  "new_run_id": "q1-indicator-normalization-20260924-r02",
+  "items": [
+    {
+      "item": "catalog",
+      "old_declared_hash": "d8b57018240df1d0e94faf73f4c07acc423a49eb8396e16485d402cd5fe39ed5",
+      "retained_current_before_refresh_hash": "2c66c7f5bcabaa276ae22c6c5445c9bda36091c77bbf20d12f585c075662a3c0",
+      "new_run_hash": "1eaf3aedc644b318f4231e3fe7470ca0998c30f694ef584f334154cfc434f32f"
+    },
+    {
+      "item": "stats",
+      "old_declared_hash": "66f4a4f41bf723efaea2ff2d8340741698c46a4fad57bc513ea7650ea87ae34a",
+      "retained_current_before_refresh_hash": "f5fafa8a9ba2740599ac386d9daa9a36d37a3c28f38ba4eea087f361e96226a8",
+      "new_run_hash": "d0ce72bfb931fd7414671262229284b104ffd60468e46c89115b78d608177077"
+    },
+    {
+      "item": "audit",
+      "old_declared_hash": "29f935b68093841cd0c8061e29760701d66afbf9325ca787681ffef209abc310",
+      "retained_current_before_refresh_hash": "a83ba85bc15f581fe2988c9c2d554a908c62debddf1e209759e89b32dd99b1d8",
+      "new_run_hash": "29f935b68093841cd0c8061e29760701d66afbf9325ca787681ffef209abc310"
+    },
+    {
+      "item": "sensitivity",
+      "old_declared_hash": "854535096ebc4bb1bee5df897b794743bfa5e260f3cece8c911c68f5555e1f4c",
+      "retained_current_before_refresh_hash": "356823b0aba30cfeee52e63c9bb566f29e1541425d05846d4b2cb72ad58822af",
+      "new_run_hash": "854535096ebc4bb1bee5df897b794743bfa5e260f3cece8c911c68f5555e1f4c"
+    }
+  ],
+  "action": "Retain old snapshots; rebuild from unchanged raw inputs with a new run ID; do not alter old recorded hashes."
+}

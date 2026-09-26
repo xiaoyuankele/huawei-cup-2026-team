@@ -9,11 +9,19 @@ assignees: ""
 ## 基本信息
 
 - Feedback ID：`FB-YYYYMMDD-DOMAIN-000`
+- Problem ID：`Q1`
+- Subproblem ID：`Q1-S00`
 - 类型：no_solution / execution_failure / quality_failure / evidence_gap / contradiction / security_privacy / human_disagreement
 - 严重等级：P0 / P1 / P2 / P3
-- Owner：
-- Reviewer：
+- Work package：WP-A / WP-B / WP-C / Q1-INT
+- Owner Actor：
+- Peer Reviewer Actor：
+- Release Integrator Actor：
 - 关联 Task ID：
+- Task Card URL 或路径：
+- Submitted by Actor：
+- Response Owner Actor：
+- Response Status：CAPTURED / RESPONDED / CLOSED / BLOCKED
 - Prompt Run ID：
 - Experiment Run ID（如有）：
 

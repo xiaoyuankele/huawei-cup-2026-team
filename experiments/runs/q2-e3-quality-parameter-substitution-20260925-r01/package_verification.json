@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "main_commit": "f36afef332ed160146c548551d6cf09488cfd312",
+  "preregistration_config_unchanged": true,
+  "report_hash_matches": true,
+  "shared_ledgers": [
+    {
+      "file": "experiments/index.csv",
+      "main_records": 45,
+      "current_records": 46,
+      "main_records_unchanged": true
+    },
+    {
+      "file": "governance/ai-use-log.csv",
+      "main_records": 11,
+      "current_records": 12,
+      "main_records_unchanged": true
+    },
+    {
+      "file": "governance/feedback/index.csv",
+      "main_records": 13,
+      "current_records": 15,
+      "main_records_unchanged": true
+    },
+    {
+      "file": "governance/prompts/registry.csv",
+      "main_records": 14,
+      "current_records": 15,
+      "main_records_unchanged": true
+    },
+    {
+      "file": "paper/claim-ledger.csv",
+      "main_records": 22,
+      "current_records": 25,
+      "main_records_unchanged": true
+    }
+  ],
+  "scope": "E3 package self-check; no independent human sign-off"
+}

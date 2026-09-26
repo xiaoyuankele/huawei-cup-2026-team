@@ -1,16 +1,29 @@
 # 问题一冲突诊断与解释
 task_id: T-Q1-005
 title: "问题一指标冲突、权重敏感性与解释"
-status: DRAFT # DRAFT | READY | RUNNING | REVIEW | ACCEPTED | REWORK | BLOCKED
-owner: A
-reviewer: C
+status: REVIEW_BLOCKED # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
+work_package: WP-C
+owner_actor: ACTOR-3
+peer_reviewer_actor: ACTOR-1
+release_integrator_actor: ACTOR-2
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: validation
+review:
+  peer_reviewer_must_differ: true
+  integrator_must_differ: true
+  no_reviewer_status: REVIEW_BLOCKED
 priority: P0
-issue: ""
-branch: "feature/A/T-Q1-005"
+issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/10"
+branch: "wp/ACTOR-3/WP-C"
+branch_owner_actor: ACTOR-3
+gate: G2
 prompt:
   prompt_id: P-CONFLICT-001
   version: v1.0.0
-  prompt_run_id: ""
+  prompt_run_id: "PR-20260924-WPC-LOCAL-001"
 objective: "解释不同质量指标、投影方向、权重和域分布之间的冲突，区分测量差异、语义差异、数据漂移和模型不稳定。"
 inputs:
   - ref: docs/tasks/T-Q1-004.yml
@@ -32,6 +45,15 @@ acceptance_criteria:
   - "不自动删除冲突指标，不以单次投影目标替代真实质量标签"
   - "每个解释回链输入、脚本、run_id 和证据等级"
 definition_of_done:
-  - "C 复核解释是否可视化且没有超出数据证据"
-  - "A 确认技术结论与未决问题"
-notes: "本任务不能在 T-Q1-004 没有可接受 run_id 时开始正式解释。"
+  - "ACTOR-1 完成 Peer Review，ACTOR-2 完成 Release Integrator 检查"
+  - "三人 Release Council 在跨包整合时共同确认技术结论与未决问题"
+notes: "本任务不能在 T-Q1-004 没有 PACKAGE_ACCEPTED run_id 时开始正式解释；T-Q1-004 必须先由 ACTOR-3 完成 Peer Review、ACTOR-1 完成 Release Integrator 检查并达到 PACKAGE_ACCEPTED。"
+
+local_delivery:
+  run_id: q1-conflict-trial-20260924-r01
+  execution_status: EXPLORATORY_RUN_COMPLETE
+  handoff: docs/tasks/WP-C-delivery.json
+  evidence_manifest: docs/tasks/WP-C-file-manifest.json
+  formal_gate_passed: false
+  peer_review_decision: null
+  integrator_decision: null

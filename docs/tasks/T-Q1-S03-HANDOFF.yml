@@ -1,0 +1,38 @@
+task_id: T-Q1-S03-HANDOFF
+parent_task_id: T-Q1-003-MIXTURE
+problem_id: Q1
+subproblem_id: Q1-S03
+title: "第三问数据与模型统一索引、尺度校准复核交接"
+status: PEER_REVIEW
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+actor_assignment_source: docs/tasks/T-Q1-003-MIXTURE.yml
+peer_decision: PENDING
+integrator_decision: PENDING
+announcement_ref: docs/tasks/T-Q1-S03-HANDOFF.md
+branch: codex/q1-s03-data-model-handoff-20260925
+repository: xiaoyuankele/huawei-cup-2026-team
+prompt_id: P-Q1-S03-HANDOFF
+prompt_version: v1
+run_id: q1-s03-handoff-audit-20260925-r01
+feedback_ids: [FB-Q1-S03-20260925-CALIBRATION]
+objective: "整理现有团队资产与本地补充模型，以可复现数值和明确口径交接，不替代主仓库现有研究。"
+inputs:
+  - data/manifests/q1_raw.yaml
+  - docs/tasks/T-Q1-003-MIXTURE.yml
+  - experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/scored_wide_v1_hard.csv
+expected_outputs:
+  - Q1_S03_HANDOFF.md
+  - docs/problem/q1-s03-data-model-guide.md
+  - docs/problem/q1-s03-team-model-inventory.md
+  - scripts/q1_s03/reproduce.py
+  - experiments/runs/q1-s03-handoff-audit-20260925-r01/
+acceptance_criteria:
+  - "字段、配对、数量、质量版本、指标聚合口径和外推表性质均可追溯"
+  - "C2 单位修复有测试；不复用旧错误结论"
+  - "C1 历史 RMSE/MAE 可以复现；逐域及 pooled 指标单独输出"
+  - "上传目标和 PR base 均为协作仓库，不使用个人 fork"
+  - "主论文、团队既有任务状态和原始数据不被本交接自动覆盖"
+notes: "Actor 路由沿用父任务，不代表已经取得任何人的审核签名。团队接受后再按流程登记正式论文主张。"

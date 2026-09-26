@@ -50,3 +50,15 @@ deliverables/          封卷和提交材料
 先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)、[docs/architecture.md](docs/architecture.md)、[全流程架构图](docs/architecture-flow.md)、[governance/roles-and-raci.md](governance/roles-and-raci.md)、[governance/prompts/README.md](governance/prompts/README.md)、[paper/README.md](paper/README.md) 和 [governance/release-checklist.md](governance/release-checklist.md)。
 
 论文模板来源和本项目的路径适配记录见 [paper/TEMPLATE-SOURCE.md](paper/TEMPLATE-SOURCE.md)。
+
+## WP-B 模型交付候选
+
+[CRITIC–TOPSIS 报告、表图与复现入口](README-delivery.md)；[工作包交接](docs/tasks/WP-B-delivery.yml)。当前 PARTIAL / REVIEW_BLOCKED，尚未通过团队验收。
+
+## 问题二研究归档
+
+[条件模型与迁移探索研究包](docs/research/q2/README.md)：研究过程、结果证据、数据字典与复现入口；待独立评审，完整联合模型尚未验证。
+
+## 问题三阶段性研究归档
+
+[冻结问题二模型的资源优化探索](docs/research/q3/README.md)：条件求解、实验流程、失败诊断与复现入口；REVIEW_BLOCKED，等待独立评审。

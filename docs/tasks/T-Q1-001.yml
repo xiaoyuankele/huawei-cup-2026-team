@@ -1,13 +1,39 @@
 # 问题一原始数据契约与实验治理任务卡
 task_id: T-Q1-001
 title: "问题一原始数据契约与实验治理"
-status: REVIEW # DRAFT | READY | RUNNING | REVIEW | ACCEPTED | REWORK | BLOCKED
-owner: B
-reviewer: A
+problem_id: Q1
+subproblem_id: Q1-S00
+problem_scope: "问题一整体数据与证据边界"
+status: PEER_REVIEW # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
+work_package: WP-A
+owner_actor: ACTOR-1
+peer_reviewer_actor: ACTOR-2
+release_integrator_actor: ACTOR-3
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: data
+review:
+  peer_reviewer_must_differ: true
+  integrator_must_differ: true
+  no_reviewer_status: REVIEW_BLOCKED
 priority: P1
-issue: ""
+issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/8"
 pr: "https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/3"
+announcement:
+  mode: oral
+  announced_by_actor: ACTOR-1
+  announced_at: 2026-09-23T12:00:00+08:00
+  announcement_ref: "docs/decisions/q1-data-contract.md"
+  summary: "口头发布问题一原始数据只读审计和验证角色冻结任务"
+  acknowledged_by_actor: ACTOR-1
+  acknowledged_at: 2026-09-23T12:05:00+08:00
+feedback_required: true
+feedback_ids: []
 branch: "feature/B/T-Q1-001"
+branch_owner_actor: ACTOR-1
+gate: G0
 prompt:
   prompt_id: P-EXP-001
   version: v1.0.0
@@ -37,5 +63,5 @@ definition_of_done:
   - "只读审计重新运行，清单中的记录数、字节数和 SHA256 全部匹配"
   - "run_id 已加入 experiments/index.csv"
   - "Prompt Run、AI 使用记录和交接单已建立"
-  - "等待 Reviewer A 复核后再标记 ACCEPTED"
-notes: "已绑定 GitHub PR #3；本任务处于 REVIEW，等待 Reviewer A 复核后再标记 ACCEPTED。"
+  - "等待 ACTOR-2 完成 Peer Review，再由 ACTOR-3 检查包级接口和证据回链后标记 PACKAGE_ACCEPTED"
+notes: "已绑定 GitHub PR #3；本任务处于 PEER_REVIEW，先由 ACTOR-2 完成 Peer Review，再由 ACTOR-3 检查包级接口和证据回链后标记 PACKAGE_ACCEPTED。"

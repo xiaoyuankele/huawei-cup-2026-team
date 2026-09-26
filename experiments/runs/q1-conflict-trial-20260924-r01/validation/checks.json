@@ -1,0 +1,27 @@
+{
+  "n_records": 272505,
+  "n_unique": 261086,
+  "A1_fit_n": 40919,
+  "max_q1_mean_error": 6.892264536872972e-13,
+  "duplicate_metrics_consistent": true,
+  "four_classes_partition": true,
+  "robust_vertex_solution_checked": true,
+  "monotonicity_checked": true,
+  "range_and_bounds_checked": true,
+  "manual_accuracy_test_performed": false,
+  "review_sample_n": 83,
+  "review_sample_unlabeled": true,
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "platform": "macOS-15.7.9-arm64-arm-64bit",
+  "inputs_sha256": {
+    "q1_domain_scores.csv": "09744c302b9061aa8eb6b5da3fa25a39fd6362ae4a04b8fa3d193875f251dfd2",
+    "config.json": "ea6a5891cc69282591012c248f3b5574d161ca50ae74fe39b9dca40198b11ae2",
+    "normalization_stats.json": "d0ce72bfb931fd7414671262229284b104ffd60468e46c89115b78d608177077",
+    "case_selection.csv": "705fbf0c2f22b5029f879fe688ce70e90c516f90031c414708dc13f105df99ad",
+    "q1_model.json": "7e01614bfd1e03915cd3b15fc715fdee4adc86164bafaebf83e256ad9074b201",
+    "case_texts.json": "1df1601c19dcfffcd6b500cc6b5f2f0dd67dc77972e3c9332296d0a55023f43c",
+    "normalized_records.csv.gz": "896f1dc51ba62ba19fba8938f153859802a05ef95aecbd112eaf9f413cc9a989"
+  }
+}

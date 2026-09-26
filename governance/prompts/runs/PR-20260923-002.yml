@@ -1,20 +1,33 @@
 prompt_run_id: PR-20260923-002
 task_id: T-Q1-001
+work_package: WP-A
 prompt_id: P-EXP-001
 prompt_version: v1.0.0
-owner: B
+owner_actor: ACTOR-1
+peer_reviewer_actor: ACTOR-2
+release_integrator_actor: ACTOR-3
+gate: G0
+independence_check: PASS
+peer_decision: PENDING
+integrator_decision: PENDING
+release_council_decision: PENDING
 device_id: DEVICE-LOCAL-CODEX
 date: 2026-09-23
 tool: Codex desktop
 model: gpt-6-astra
 provider: OpenAI
-input_summary: "对问题一 A1-A16 原始数据进行只读清单、字段/记录核对和实验角色治理；不建立质量评分模型。"
-output_ref: "data/manifests/q1_raw.yaml; docs/decisions/q1-data-contract.md; schema_snapshot.csv; scripts/q1_audit_raw.py"
-output_sha256: "data/manifests/q1_raw.yaml=c60550c1c0ebb8d26af7c996d45bae08758b022fb14e1dd2c1102dd8949a8941; docs/decisions/q1-data-contract.md=a3d5d44aded99d78993afd43517cd7a0574a2f5cb039d495457c728a88cf9508; schema_snapshot.csv=e8aa8b61803803da9038855fe9ef4e1526063cc6cec392cec579bb59302559ff; scripts/q1_audit_raw.py=c7c2f11662099dc2754de907eb125e369b276c554151196622e68af6c3e220be"
+input_summary: 对问题一 A1-A16 原始数据进行只读清单、字段/记录核对和实验角色治理；不建立质量评分模型。
+output_ref: data/manifests/q1_raw.yaml; docs/decisions/q1-data-contract.md; schema_snapshot.csv;
+  scripts/q1_audit_raw.py
+output_sha256: data/manifests/q1_raw.yaml=c60550c1c0ebb8d26af7c996d45bae08758b022fb14e1dd2c1102dd8949a8941;
+  docs/decisions/q1-data-contract.md=a3d5d44aded99d78993afd43517cd7a0574a2f5cb039d495457c728a88cf9508;
+  schema_snapshot.csv=e8aa8b61803803da9038855fe9ef4e1526063cc6cec392cec579bb59302559ff;
+  scripts/q1_audit_raw.py=c7c2f11662099dc2754de907eb125e369b276c554151196622e68af6c3e220be
 git_commit: a8fd1399da10012edb28a6746f2619bc8e562543
+run_id: q1-raw-contract-20260923-r01
 needs_human_review: true
-status: REVIEW # TRIAL | REVIEW | ACCEPTED | REJECTED
-reviewer: A
-pr: "https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/3"
-failure_or_limitations: "A1/A3 含 NaN 非有限值；A2/A3 不是独立来源真值；上游许可条款未在本地 source_manifest.json 中登记。"
-next_action: "Reviewer A 复核任务卡、数据契约和交接记录；通过后更新为 ACCEPTED。"
+status: PEER_REVIEW
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/3
+failure_or_limitations: A1/A3 含 NaN 非有限值；A2/A3 不是独立来源真值；上游许可条款未在本地 source_manifest.json
+  中登记。
+next_action: ACTOR-2 完成 Peer Review；通过后由 ACTOR-3 检查包级接口、证据回链和 handoff，再进入 PACKAGE_ACCEPTED。

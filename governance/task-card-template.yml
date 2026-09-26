@@ -1,12 +1,40 @@
 # 复制本文件到 docs/tasks/T-<编号>.yml 后填写
-task_id: T-Q1-001
+# A/B/C 只可作为可选 review_domain；实际协作以 Actor 字段为准。
+task_id: T-Q1-000
 title: "明确任务名称"
-status: READY # DRAFT | READY | RUNNING | REVIEW | ACCEPTED | REWORK | BLOCKED
-owner: B
-reviewer: A
+problem_id: Q1
+subproblem_id: Q1-S00
+problem_scope: "题目或子问题名称"
+status: DRAFT # DRAFT | SPEC_READY | CODE_READY | RUNNING | RUN_COMPLETE | PEER_REVIEW | PACKAGE_ACCEPTED | INTEGRATED | REWORK | REVIEW_BLOCKED
+work_package: WP-A
+owner_actor: ACTOR-1
+peer_reviewer_actor: ACTOR-2
+release_integrator_actor: ACTOR-3
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: data | model | experiment | validation | paper | integration
+review:
+  peer_reviewer_must_differ: true
+  integrator_must_differ: true
+  no_reviewer_status: REVIEW_BLOCKED
 priority: P1 # P0 | P1 | P2
 issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/"
-branch: "feature/B/T-Q1-001"
+announcement:
+  mode: oral # oral | meeting | issue
+  announced_by_actor: ACTOR-1
+  announced_at: 2026-09-24T12:00:00+08:00
+  announcement_ref: "docs/meeting_notes/YYYYMMDD-topic.md 或 Issue URL"
+  summary: "口头发布内容的脱敏摘要"
+  acknowledged_by_actor: ACTOR-2
+  acknowledged_at: 2026-09-24T12:05:00+08:00
+feedback_required: true
+feedback_ids: []
+# announcement_ref 为空时只能保持 DRAFT 或 REVIEW_BLOCKED，不能进入 RUNNING。
+branch: "wp/ACTOR-1/WP-A"
+branch_owner_actor: ACTOR-1
+gate: G0
 prompt:
   prompt_id: P-EXP-001
   version: v1.0.0
@@ -20,14 +48,18 @@ expected_outputs:
     description: "实现文件"
   - path: experiments/runs/<run_id>/
     description: "可复现实验记录"
+  - path: paper/sections/
+    description: "可回链的论文段"
 acceptance_criteria:
   - "命令可以在干净环境中运行"
   - "固定 seed 并记录环境"
   - "指标、日志和失败原因完整"
   - "不存在数据泄漏"
+  - "代码、run_id 和 paper section 互相回链"
 definition_of_done:
   - "代码已格式化并完成必要测试"
   - "run_id 已加入 experiments/index.csv"
-  - "交接单已填写"
-  - "PR 已由非 Owner 审核"
+  - "论文主张已登记 paper/claim-ledger.csv"
+  - "Peer Review 和 Integrator 结论已写入 handoff"
+  - "状态达到 PACKAGE_ACCEPTED 后才可进入集成"
 notes: "限制、待确认事项和下一步"

@@ -1,0 +1,25 @@
+{
+  "regression_checks": [
+    {
+      "check": "historical_pure_p_benchmark",
+      "model": "ilr_ridge",
+      "max_absolute_difference": 0.0,
+      "passed": true
+    },
+    {
+      "check": "historical_pure_p_benchmark",
+      "model": "quadratic_ridge",
+      "max_absolute_difference": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "check": "historical_quality_and_corrections_96_values",
+      "max_absolute_difference": 4.440892098500626e-16,
+      "passed": true
+    }
+  ],
+  "aggregate_rows": 120,
+  "domain_rows": 1560,
+  "paired_comparisons": 135,
+  "oof_rows": 20
+}

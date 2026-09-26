@@ -1,0 +1,30 @@
+{
+  "schema_version": "q1.track-c-ablation.v1",
+  "run_id": "q1-track-c-ablation-20260924-r01",
+  "task_id": "T-Q1-003-MIXTURE",
+  "git_commit": "d962ebbbf2187489a54f39b7618d893030a09be0",
+  "status": "ROLE_CHANGE_EXPLORATORY",
+  "adaptation_data": [
+    "A4_A5_train_1m",
+    "A6_A7_validation_1m",
+    "A8_A9_validation_60m"
+  ],
+  "unseen_scale_holdout": [
+    "A10_A11_validation_1b"
+  ],
+  "blocks": {
+    "p_only_ilr": 16,
+    "scale_only": 1,
+    "shared_ilr_plus_scale": 17,
+    "full_interaction": 33
+  },
+  "output": {
+    "path": "experiments/runs/q1-track-c-ablation-20260924-r01/ablation_metrics.csv",
+    "sha256": "e07da973c7cb7825ac7dc96aebc2dff88c3167f9719e375777f43abd572d6feb",
+    "rows": 24
+  },
+  "limitations": [
+    "A6/A7 and A8/A9 are adaptation data in this run and are not official validation.",
+    "Ablation compares feature blocks under the same role-change protocol; it does not establish a final model."
+  ]
+}

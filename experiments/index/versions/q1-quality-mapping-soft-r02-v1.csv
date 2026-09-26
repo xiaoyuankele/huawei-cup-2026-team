@@ -1,0 +1,2 @@
+run_id,task_id,prompt_run_id,owner,device,status,method,data_manifest,git_commit,seed,metrics,conclusion,reviewer,pr
+quality-mapping-20260925-r02-soft-handoff,T-Q1-004,PR-20250925-B-MAPPING-SOFT-001,B,DEVICE-LOCAL-CODEX,REVIEW,A16 soft mapping and A4-A15 quality handoff,data/manifests/q1_quality_mapping_v2_soft.json,PENDING,,experiments/runs/quality-mapping-20260925-r02-soft-handoff/tables/v1_v2_comparison.csv,"v2 soft mapping submitted separately; inferred weights require A review",A,PENDING

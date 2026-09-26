@@ -1,0 +1,32 @@
+{
+  "run_id": "q3-answer-package-20260926-r01",
+  "status": "CONDITIONAL_ANSWER_PACKAGE_REVIEW",
+  "source_runs": [
+    "q3-nd-baseline-20260925-r01",
+    "q3-q-conditional-20260925-r01",
+    "q3-p-conditional-20260925-r01",
+    "q3-optimization-robustness-20260926-r01",
+    "q2-q3-interface-sensitivity-20260926-r01"
+  ],
+  "data_counts": {
+    "B1_rows": 1176,
+    "B6_rows": 360,
+    "C7_context_values": 5,
+    "A4_A5_observed_p_candidates": 6
+  },
+  "scenario_counts": {
+    "Q3_ND": 15,
+    "Q3_Q_native": 45,
+    "Q3_P_panel": 90,
+    "Q3_M2_interface": 1350
+  },
+  "checks": {
+    "formal_M3_joint_fit": false,
+    "A_B_row_join": false,
+    "Q1_to_B6_scale_calibrated": false,
+    "B8_used": false,
+    "C8_truncated_files_used_in_Q3": false,
+    "smart_global_optimizer_required": false
+  },
+  "claim_boundary": "M0 and native M1 are conditional source-specific results; M2 is hypothetical interface sensitivity only."
+}

@@ -1,0 +1,32 @@
+{
+  "run_id": "q2-e1-marginal-elasticity-20260925-r01",
+  "status": "CONDITIONAL_MODEL_ANALYSIS",
+  "model": "experiments/runs/q2-model-finalization-20260925/model_parameters.json",
+  "bridge": "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv",
+  "scale_folds": "experiments/runs/q2-model-finalization-20260925/scale_parameters_by_fold.csv",
+  "grid_points_per_dimension": 41,
+  "anchor_N_B": [0.1, 1.0, 10.0],
+  "anchor_D_B": [1.0, 10.0, 100.0],
+  "reference_N_B": 1.0,
+  "reference_D_B": 100.0,
+  "lambda_Q_sensitivity": [0.0, 0.5, 1.0],
+  "lambda_p_sensitivity": [0.0, 0.5, 1.0],
+  "quality_normalized_positions": {"start": -0.1, "stop": 1.1, "count": 121},
+  "finite_difference_relative_steps": [0.0001, 0.00001],
+  "first_derivative_rtol": 0.000002,
+  "first_derivative_atol": 0.00000002,
+  "curvature_rtol": 0.002,
+  "curvature_atol": 0.00001,
+  "mixture_max_step": 0.0001,
+  "convex_witness_safety_fraction": 0.2,
+  "fit_new_parameters": false,
+  "generated_rows_are_observations": false,
+  "notes": [
+    "N and D are in billions; marginal benefits are Loss reduction per additional billion units.",
+    "Grid support is a marginal B1 bounding box, not verified joint support.",
+    "Quality partials hold the residual mixture term fixed; no independent causal Q intervention is identified.",
+    "Mixture derivatives are verified using simplex directions with explicit convex-combination witnesses in the A4 training hull.",
+    "Lambda values are assumptions, not estimates or confidence limits.",
+    "Scale-fold parameter spread is development sensitivity, not a confidence interval."
+  ]
+}

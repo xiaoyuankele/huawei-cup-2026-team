@@ -1,0 +1,7 @@
+{
+  "python": "3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "pandas": "2.2.3",
+  "numpy": "2.2.6",
+  "scikit_learn": "1.9.1"
+}

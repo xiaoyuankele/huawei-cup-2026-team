@@ -1,0 +1,34 @@
+prompt_run_id: PR-Q2-E1-20260925
+prompt_id: P-Q2-E1-MARGINAL
+prompt_version: v1.0.0
+task_id: T-Q2-E1-MARGINAL
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+device_id: DEVICE-LOCAL-CODEX
+date: '2026-09-25'
+recorded_at: '2026-09-25T13:53:36+00:00'
+tool: Codex desktop
+model: GPT-6
+provider: OpenAI
+model_snapshot: null
+input_summary: Published frozen E1 inputs and repository governance; sanitized task-level
+  reconstruction
+output_ref: experiments/runs/q2-e1-marginal-elasticity-20260925-r01/report.md
+output_sha256: b3e27b646c05f79416a4b8d8e66d480d9dbb99888416856838df48355f95456b
+git_commit: d58e4a1de3f9bac16bbfbc6bf75cfa5c24a322d0
+git_commit_role: Original E1 code provenance; governance changes identified by commit
+  containing this record
+branch: codex/q2-e1-marginal-elasticity
+run_id: q2-e1-marginal-elasticity-20260925-r01
+needs_human_review: true
+peer_decision: PENDING
+integrator_decision: PENDING
+release_council_decision: PENDING
+status: REVIEW_BLOCKED
+registration: RETROSPECTIVE_TASK_LEVEL_RECONSTRUCTION
+exact_per_call_prompt_available: false
+failure_or_limitations: Not evidence of preregistration or complete per-call trace.
+  Independent review, routing and branch resolution pending.
+next_action: Independent Peer/Integrator review; retain open P1 governance feedback

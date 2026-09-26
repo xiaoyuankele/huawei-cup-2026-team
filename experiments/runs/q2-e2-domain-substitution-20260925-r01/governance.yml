@@ -1,0 +1,25 @@
+task_id: T-Q2-E2
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+status: REVIEW_BLOCKED
+execution_status: RUN_COMPLETE
+branch: wp/ACTOR-2/WP-B
+gate: G1
+gate_status: NOT_EVIDENCED
+feedback_ids:
+- FB-Q2-E2-GOV-20260925
+- FB-Q2-E2-STRUCTURE
+preregister_commit: 7dee3f3
+code_commit: 2b37ac0ab9fc90624daba6635dfba17c86e6a808
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/32
+run_id: q2-e2-domain-substitution-20260925-r01
+prompt_run_id: PR-Q2-E2-20260925
+manifest_ref: experiments/runs/q2-e2-domain-substitution-20260925-r01/manifest.json
+manifest_sha256: 7cba385f275af43f39a02a9aa6bbd7c96de0db12f5878b41bebf3450b5bcf36c
+paper_draft: paper/sections/drafts/q2-e2-domain-substitution.md
+handoff: docs/tasks/T-Q2-E2-handoff.md
+peer_decision: PENDING
+integrator_decision: PENDING
+role_assignment_status: ROUTING_PENDING_HUMAN_CONFIRMATION

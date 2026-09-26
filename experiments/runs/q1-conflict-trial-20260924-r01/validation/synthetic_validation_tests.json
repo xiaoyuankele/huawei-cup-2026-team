@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "input_kind": "synthetic_interface_only",
+  "n": 300,
+  "seeds": [
+    20260923,
+    20260924,
+    20260925
+  ],
+  "tests": [
+    "identity_rank_reversal_zero",
+    "identity_spearman_one",
+    "topsis_monotonicity",
+    "bootstrap_constant_interval",
+    "deterministic_score_repeatability"
+  ],
+  "real_data_bootstrap_performed": false
+}

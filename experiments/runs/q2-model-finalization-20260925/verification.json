@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "axis": "Q_A_topsis_0_1",
+      "reference_centering": true,
+      "scale_monotonicity": true,
+      "serialization_roundtrip": true
+    },
+    {
+      "axis": "quality_score_soft_proxy_0_1",
+      "reference_centering": true,
+      "scale_monotonicity": true,
+      "serialization_roundtrip": true
+    }
+  ],
+  "exported_prediction_rows": 4000,
+  "additive_decomposition": true,
+  "all_predictions_finite": true,
+  "generated_rows_never_marked_observed": true
+}

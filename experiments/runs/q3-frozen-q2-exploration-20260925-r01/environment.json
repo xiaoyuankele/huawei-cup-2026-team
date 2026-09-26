@@ -1,0 +1,9 @@
+{
+  "python": "3.11.5",
+  "numpy": "1.26.4",
+  "pandas": "2.0.3",
+  "scipy": "1.11.1",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "seed": null,
+  "deterministic": true
+}

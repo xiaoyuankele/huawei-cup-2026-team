@@ -1,0 +1,16 @@
+{
+  "primary_model": "TOPSIS_CRITIC",
+  "A1_mean": 60.94713054317868,
+  "full_unique_mean": 54.23226387916366,
+  "full_minus_A1": -6.71486666401502,
+  "A1_share_standardized_full_mean": 60.93487003287877,
+  "within_domain_component": -0.012260510299910266,
+  "composition_component": -6.702606153715109,
+  "macro_domain_mean": 60.579056337075016,
+  "n_file_rows": 272505,
+  "n_unique": 261086,
+  "overlap_removed": 11419,
+  "n_fit": 40919,
+  "n_holdout": 10311,
+  "total_seconds": 17.07900000002701
+}

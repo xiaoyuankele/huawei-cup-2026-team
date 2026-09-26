@@ -1,0 +1,6 @@
+schema_version: q1.quality-version-compatibility.v1
+run_id: q1-quality-version-compatibility-20260925-r01
+canonical_run: q1-critic-topsis-20260924-r01
+local_run: q1-critic-topsis-20260925-r01
+comparison: A1/full domain means across six quality models
+tolerance: 1e-12
