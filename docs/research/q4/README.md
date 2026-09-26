@@ -10,6 +10,14 @@
 4. `q4_baseline_report.md`、`q4_robustness_report.md`、`q4_error_evaluation_report.md`：短期误差和稳健性。
 5. `q4_task_frontier_report.md`、`q4_time_placebo_report.md`、`q4_loss_bridge_report.md`：任务异质性与证伪。
 
+论文草稿见 `q4_manuscript_draft_zh.md`。已生成的出版级图件、图注、源数据和 QA 记录集中在 `paper/figures/q4/`；绘图入口为 `scripts/plot_q4_figures.py`。图件包包含：
+
+- `FigQ4_01_frontier_validation`：月度 C8/Average 前沿、任务变化、类型构成和短期误差诊断；
+- `FigQ4_02_12m_scenarios`：平台型/趋势型 12 个月情景及类型比例敏感性；
+- `FigQ4_03_workflow`：从投毒隔离到情景投影的分析流程边界。
+
+图件重绘需要本地附件 C 和 `q4-system-20260926-r01` 运行目录；原始附件不随仓库发布。
+
 详细 JSON 六任务等权指标与榜单 `Average` 属于不同评分口径；报告中应分别引用。当前主协议只把 12 个月作为情景投影，早期 24 个月结果只作历史探索，不具备已验证的长期预测误差。时间系数也可能吸收评测构成变化，不能直接解释为纯技术进步。
 
 早期研究文档中的 `artifacts/` 路径指向运行后在本地生成的文件，该目录按仓库规范被 Git 忽略。公开的聚合指标快照保存在运行目录的 `metrics/`。
