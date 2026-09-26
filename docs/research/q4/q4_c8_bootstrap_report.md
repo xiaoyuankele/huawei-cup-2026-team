@@ -1,5 +1,7 @@
 # 详细 C8 主模型的 cluster bootstrap
 
+> **结果定位：历史不确定性量级检查。** 本文的 100 次发布方代理 bootstrap 仍可作为参考，但其年度训练样本和趋势情景不替代当前 70/30 主协议。
+
 对 2024 年训练样本按模型发布方前缀（`Model` 中斜杠前字符串）做 100 次 cluster bootstrap，并重拟合完整 95% 分位模型。该前缀是组织/发布方代理，不是经过验证的模型家族，因此结果用于不确定性量级评估。
 
 结果见 `experiments/runs/q4-frontier-20260926-r01/artifacts/c8_bootstrap/cluster_bootstrap_summary.csv`：

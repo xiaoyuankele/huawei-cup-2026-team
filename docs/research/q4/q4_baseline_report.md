@@ -1,5 +1,7 @@
 # 问题四基线实验报告
 
+> **结果定位：历史探索。** 本文结果来自早期运行 `q4-frontier-20260926-r01`，保留用于方法开发和兼容性检查。当前主结果请参见 `q4_c8_main_results.md` 与 `q4_results_reconciliation.md`，统一采用 70/30 月份切分和 12 个月情景。
+
 ## 实验范围
 
 本轮实验使用 `leaderboard_cleaned.csv`，按 `Submission Date` 聚合到月份，并按模型名在同一月份去重。主目标是从 C8 逐任务详细 JSON 中提取 IFEval、BBH、MATH、GPQA、MUSR、MMLU-PRO 六个任务组的主指标，要求六项均存在后取等权均值并转换到 0--100 分；共连接到 1,855 个模型。Leaderboard 的 `Average` 作为敏感性目标。
