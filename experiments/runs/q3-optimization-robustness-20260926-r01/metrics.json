@@ -1,0 +1,75 @@
+{
+  "schema_version": "q3.optimization.robustness.v1",
+  "run_id": "q3-optimization-robustness-20260926-r01",
+  "status": "EXPLORATORY_Q3_PARAMETER_UNCERTAINTY_PROPAGATION",
+  "inputs": {
+    "parameter_fold_values": {
+      "path": "experiments\\runs\\q2-elasticity-audit-20260925-r01\\tables\\parameter_fold_values.csv",
+      "sha256": "77f26c78c7361ebba1f07f3962e5520ce30ecdc3839d312f9a9cc42be3fbf490",
+      "rows": 13
+    },
+    "q2_model_metrics": {
+      "path": "experiments\\runs\\q2-m0-m1-20260925-r01\\metrics.json",
+      "sha256": "38854c768a44d450bf96f03da47d8ee47a8f292e48b8e5dedc48f489c71022e1"
+    }
+  },
+  "roles": {
+    "M0": "B1 fold parameters propagated into Q3 N-D optimization",
+    "M1": "B6 fold parameters propagated into Q3 native-Q_score optimization",
+    "Q1_Q_A_p": "not used in M0/M1 optimization; no A-B row join",
+    "B8": "excluded"
+  },
+  "support": {
+    "N_min_B": 0.070542,
+    "N_max_B": 11.965825,
+    "D_min_B": 0.134,
+    "D_max_B": 299.893,
+    "B1_rows": 1176,
+    "Q_min": 0.1,
+    "Q_max": 1.0,
+    "B6_rows": 360
+  },
+  "contexts": [
+    2048,
+    4096,
+    8192,
+    32768,
+    131072
+  ],
+  "budgets_flops": [
+    1e+19,
+    1e+22,
+    1e+24
+  ],
+  "fold_counts": {
+    "M0": 8,
+    "M1": 5
+  },
+  "scenario_counts": {
+    "M0": 120,
+    "M1": 225
+  },
+  "pareto_definition": "within each fold and context (and cost family for M1), lower loss and lower realized cost dominate",
+  "checks": {
+    "all_m0_finite": true,
+    "all_m1_finite": true,
+    "m1_budget_violation_max_relative": 9.0120912896e-12,
+    "formal_joint_fit": false,
+    "a_to_b_row_join": false
+  },
+  "limitations": [
+    "folds are propagated from frozen exploratory fits; no refit is performed here",
+    "M0/M1 folds quantify parameter sensitivity, not independent external validation",
+    "M1 Q is native B6 Q_score and is not Q1-derived Q_A(p)",
+    "discrete frontier is a scenario frontier, not a globally validated optimum",
+    "B1/B6 support bounds remain active; any relaxed solution outside support is extrapolation"
+  ],
+  "output_sha256": {
+    "m0_fold_scenarios.csv": "c2b257e79accd8a36a65515aba06f9a35509d5f224b2bb646f39ef9bbf69b001",
+    "m1_fold_scenarios.csv": "254cab14ca0e607c312f9636c9a49ff45e910fd3fae29a0106a39c936daf33ff",
+    "m0_uncertainty_summary.csv": "17ab6cc92d516ba63703c2fa4858053f2c71368f2fafb3d174d50533447e9d0e",
+    "m1_uncertainty_summary.csv": "5b1ab555753e2539256fe795015666dc60ff6dae7ee659bbe0c0dd91bafe67bb",
+    "m0_discrete_frontier.csv": "41c9efbd167d53deb7ce22f32e1a254fec43c2255e28bba755868bb3ec029a17",
+    "m1_discrete_frontier.csv": "fbf65b631e60fca82a3dff87263b2af446ad141b74bf2908bae961905676f216"
+  }
+}

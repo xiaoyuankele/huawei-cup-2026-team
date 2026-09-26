@@ -1,0 +1,72 @@
+{
+  "run_id": "q3-q-robustness-20260925-r01",
+  "status": "EXPLORATORY_Q3_Q_ROBUSTNESS",
+  "parent_experiment": "q3-q-conditional-20260925-r01",
+  "m1_parameters": {
+    "E": 1.4892660413046754,
+    "A": 0.5401729882501645,
+    "B": 1.3167948616197847,
+    "G": 0.36224743500545836,
+    "alpha": 0.27905392394495887,
+    "beta": 0.28280291348008263
+  },
+  "Q0_values": [
+    0.1,
+    0.3,
+    0.5
+  ],
+  "cost_families": {
+    "exponential": {
+      "gamma": 10000000.0,
+      "lambda": 6.0
+    },
+    "power": {
+      "gamma": 5000000000.0,
+      "lambda": 4.0
+    },
+    "logarithmic": {
+      "gamma": 2000000000.0,
+      "lambda": 10.0
+    }
+  },
+  "budgets_flops": [
+    1e+19,
+    1e+22,
+    1e+24
+  ],
+  "Lctx_values_from_metadata": [
+    2048,
+    4096,
+    8192,
+    32768,
+    131072
+  ],
+  "scenario_count": 135,
+  "inputs": {
+    "m1_metrics": {
+      "path": "experiments/runs/q2-m0-m1-20260925-r01/metrics.json",
+      "sha256": "38854c768a44d450bf96f03da47d8ee47a8f292e48b8e5dedc48f489c71022e1"
+    },
+    "b1_support": {
+      "path": "data/origin/real_attachments/B_scaling_laws/pythia_training_log_existing.csv",
+      "sha256": "529a59644b0f57bf3a76037838b614bfedc35e58bb26b93052e34ffc63e454c2"
+    },
+    "b6_q_range": {
+      "path": "data/origin/real_attachments/B_scaling_laws/supplementary_NQ_experiment.csv",
+      "sha256": "c7450ce0d67d8692535fef4709e60e2da60b2c184738bf96df160a4be0a33a7f"
+    },
+    "c7_context": {
+      "path": "data/origin/real_attachments/C_efficiency_evolution/model_architecture_metadata.csv",
+      "sha256": "ee24622cb3a6334f08d72c9ea373be26d5e5585bb266367c5f66d77499112ffc"
+    }
+  },
+  "output_sha256": {
+    "q3_q_robustness_scenarios.csv": "7961ae4b401c2dae45440a40ee27cdb6573fb2f1ad300fefe5d678cb2fe9d1d6"
+  },
+  "limitations": [
+    "This is a parameter-sensitivity sweep around the B6/B7 semi-synthetic M1 conditional model.",
+    "Q0 values are scenario assumptions; M1 is not refit at each Q0.",
+    "The B6 Q score is not promoted to the Q1 A-side quality score.",
+    "p remains fixed and no A-B row-level bridge is used."
+  ]
+}

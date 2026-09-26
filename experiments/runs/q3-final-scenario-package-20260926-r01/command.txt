@@ -1,0 +1,1 @@
+python -X utf8 scripts/q3_final_scenario_packaging.py

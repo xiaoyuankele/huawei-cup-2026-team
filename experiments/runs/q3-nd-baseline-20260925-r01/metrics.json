@@ -1,0 +1,41 @@
+{
+  "run_id": "q3-nd-baseline-20260925-r01",
+  "status": "EXPLORATORY_Q3_ND_BASELINE",
+  "m0_parameters": {
+    "E": 1.6897975629375732,
+    "A": 0.353980320647387,
+    "B": 1.2403055835489103,
+    "alpha": 0.3399765819095136,
+    "beta": 0.2798781285449292
+  },
+  "support": {
+    "N_min_B": 0.070542,
+    "N_max_B": 11.965825,
+    "D_min_B": 0.134,
+    "D_max_B": 299.893,
+    "B1_rows": 1176
+  },
+  "Lctx_values_from_metadata": [
+    2048,
+    4096,
+    8192,
+    32768,
+    131072
+  ],
+  "budgets_flops": [
+    1e+19,
+    1e+22,
+    1e+24
+  ],
+  "scenario_count": 15,
+  "cross_check": "analytic relaxed solution versus bounded explicit-constraint SLSQP",
+  "output_sha256": {
+    "q3_nd_baseline_scenarios.csv": "1e4e11e62679cc99183a53e15c14edb94469b0ea80b18c7f2a117dedd4d45cbc"
+  },
+  "limitations": [
+    "M0 is B1/Pythia exploratory baseline, not a universal cross-source law",
+    "Q and p are fixed; no B6 quality term or A-B row-level bridge is used",
+    "relaxed solutions outside B1 support are extrapolation diagnostics",
+    "C7 values are observed max_position_embeddings values from architecture metadata"
+  ]
+}

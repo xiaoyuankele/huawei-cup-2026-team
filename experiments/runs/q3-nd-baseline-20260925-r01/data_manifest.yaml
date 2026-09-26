@@ -1,0 +1,10 @@
+run_id: "q3-nd-baseline-20260925-r01"
+inputs:
+  m0_metrics: {"path": "experiments\\runs\\q2-m0-m1-20260925-r01\\metrics.json", "sha256": "38854c768a44d450bf96f03da47d8ee47a8f292e48b8e5dedc48f489c71022e1"}
+  b1_support: {"path": "data\\origin\\real_attachments\\B_scaling_laws\\pythia_training_log_existing.csv", "sha256": "529a59644b0f57bf3a76037838b614bfedc35e58bb26b93052e34ffc63e454c2", "rows": 1176}
+  c7_context_metadata: {"path": "data\\origin\\real_attachments\\C_efficiency_evolution\\model_architecture_metadata.csv", "sha256": "ee24622cb3a6334f08d72c9ea373be26d5e5585bb266367c5f66d77499112ffc", "rows": 45}
+roles:
+  Q: "fixed at Q0; quality cost is zero"
+  p: "fixed bookkeeping value; not present in B1 objective"
+  B8: "excluded"
+  B9_B10: "excluded from fitting and optimization"
