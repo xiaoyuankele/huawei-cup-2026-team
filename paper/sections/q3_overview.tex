@@ -1,0 +1,139 @@
+% 问题三 6.1--6.3：问题分析、数据预分析与目标函数。
+% 依据 q3-conditional-resource.tex 及其 outline 整理为仓库正文片段。
+% 本文件不定义文档环境，不单独编译。
+
+\subsection{问题分析}
+\label{sec:q3-analysis}
+
+\subsubsection{问题要求与求解对象}
+
+问题三要求在给定计算预算和上下文条件下配置模型规模、训练数据量及质量资源，
+使预测损失尽可能小。前两问提供的数据没有统一的样本级连接键，因此不能把
+$N$、$D$、$Q_B$、$p$ 和 $Q_A(p)$ 直接拼接为一个已验证的联合样本表。其中，
+$N$ 和 $D$ 来自 B1，$Q_B$ 是 B6/B7 的原生质量分数，$p$ 和 $Q_A(p)$ 来自
+A4/A5 的配比面板。本文据此将问题三定义为条件资源配置问题。
+
+求解对象分为三层递进分析：第一层使用 B1 的 $N$--$D$ 数据建立 M0 基线；
+第二层使用 B6/B7 的原生 $Q_B$ 建立 M1 的 $N$--$D$--$Q_B$ 条件优化；
+第三层以 A4/A5 中实际观测的配比候选生成情景，通过显式标注的假设接口构造
+对应的 $Q_B$，再调用 M1 求解器得到资源配置面板。三层结果不混合拟合。
+
+\subsubsection{问题三与前两问的衔接}
+
+问题二的 B1 数据提供规模基线，B6/B7 数据提供含原生质量变量的条件模型，问题一
+提供有限个已观测配比候选及其 A 侧质量标签。由于 A、B 数据缺少共同连接键，且
+$Q_A$ 与 $Q_B$ 尚未统一标度，本文不把四量模型写成已验证的联合实证模型，也不
+把 $Q_A$ 直接代入 B 侧 Loss。
+
+\subsubsection{求解路线}
+
+本文按“冻结数据与版本—建立 M0、M1、M2/P 三层条件模型—施加预算、支持域、
+上下文和质量成本约束—解析解与多起点 SLSQP 求解—有限性、哈希、预算误差、
+参数折叠和边界检查—输出条件情景”的路线组织结果。该路线保留了探索性计算、
+条件结论和不可识别接口之间的边界。
+
+\subsection{数据预分析与变量说明}
+\label{sec:q3-data}
+
+\subsubsection{数据角色和规模}
+
+问题三使用的数据角色、规模和用途如表~\ref{tab:q3-data-roles} 所示。
+
+\begin{table}[htbp]
+  \centering
+  \caption{问题三数据角色、规模与用途}
+  \label{tab:q3-data-roles}
+  \small
+  \begin{tabular}{lcl}
+    \toprule
+    数据角色 & 规模 & 本节用途 \\
+    \midrule
+    B1 & 1,176 行 & M0 参数与 $N,D$ 支持域 \\
+    B6 & 360 行 & M1 原生 $Q_B$ 条件模型 \\
+    B7 & B6 的嵌套扩展 & 条件核验，不重复计权 \\
+    C7 & 5 个上下文值 & $L_{\rm ctx}$ 场景 \\
+    A4/A5 & 6 个观测配比候选 & M2/P 离散配比情景 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsubsection{变量、量纲与支持域}
+
+$N$ 表示模型参数规模（十亿参数），$D$ 表示训练数据规模（十亿 tokens），
+$L_{\rm ctx}$ 表示上下文长度，$Q_B$ 表示 B6/B7 原生质量分数。配比向量
+$p=(p_1,\ldots,p_J)$ 满足
+\begin{equation}
+ Q_A(p)=q^\top p=\sum_{j=1}^{J}q_jp_j,
+ \qquad p_j\ge0,\qquad \sum_{j=1}^{J}p_j=1.
+ \label{eq:q3-overview-qa}
+\end{equation}
+$Q_A(p)$ 保留在 Q1 的 $0$--$100$ 候选尺度，$Q_B$ 使用 B6/B7 的
+$0.1$--$1.0$ 原生尺度，二者不直接相等。
+
+M0 和 M1 的资源配置均限制在 B1 的观测支持域
+\begin{equation}
+ N\in[0.070542,11.965825],\qquad
+ D\in[0.134,299.893],
+ \label{eq:q3-overview-support}
+\end{equation}
+M1 额外满足
+\begin{equation}
+ Q_B\in[0.1,1.0],\qquad Q_0=0.1.
+ \label{eq:q3-overview-q-domain}
+\end{equation}
+
+\subsubsection{数据排除和版本边界}
+
+B8 不进入问题三主拟合；C8 中的 4 个截断 JSON 不进入当前 Q3 主输入；
+M0/M1 参数折叠只用于不确定性传播，不重新拟合模型；A--B 行级连接、正式
+M3 联合拟合和未经验证的质量桥接均保持关闭。所有支持域外点和边界点在输出中
+单独标记。
+
+\subsection{目标函数、预算约束与求解方法}
+\label{sec:q3-objective}
+
+\subsubsection{规模损失函数}
+
+M0 的 B1 条件损失为
+\begin{equation}
+ \widehat L_{\mathrm{M0}}(N,D)=E+A N^{-\alpha}+B D^{-\beta}.
+ \label{eq:q3-overview-m0}
+\end{equation}
+M1 在 B6/B7 原生质量变量下为
+\begin{equation}
+ \widehat L_{\mathrm{M1}}(N,D,Q_B)
+ =E+A N^{-\alpha}+B D^{-\beta}+G(1-Q_B).
+ \label{eq:q3-overview-m1}
+\end{equation}
+M1 的 $Q_B$ 只表示 B6/B7 原生质量变量，不替代 Q1 的 $Q_A$。
+
+\subsubsection{成本函数与预算约束}
+
+基础规模成本采用上下文修正的乘积形式
+\begin{equation}
+ C_{\mathrm{base}}=10^{18}ND(6+\eta L_{\rm ctx}),
+ \qquad \eta=2\times10^{-4},
+ \label{eq:q3-overview-base-cost}
+\end{equation}
+质量增量成本为
+\begin{equation}
+ C_Q=10^9D\,[g(Q_B)-g(Q_0)].
+ \label{eq:q3-overview-quality-cost}
+\end{equation}
+本文将指数、幂函数和对数渐进三类 $g$ 分开比较，不把它们混合为一个确定的
+真实成本律。预算集合为
+\begin{equation}
+ C_{\mathrm{base}}+C_Q\le C,qquad
+ C\in\{10^{19},10^{22},10^{24}\},qquad
+ L_{\rm ctx}\in\{2048,4096,8192,32768,131072\}.
+ \label{eq:q3-overview-constraints}
+\end{equation}
+
+\subsubsection{约束集合与数值方法}
+
+统一约束还包括式~\eqref{eq:q3-overview-support} 的 $N,D$ 支持域和式
+~\eqref{eq:q3-overview-q-domain} 的 $Q_B$ 支持域。M0 先利用平滑预算约束
+推导解析候选，再用有界多起点 SLSQP 复核；M1 对正值变量采用对数参数化，
+从多个确定性起点执行 SLSQP；M2/P 固定接口产生的假设 $Q_B$，复用冻结的 M1
+求解器。当前模型维度低、目标函数光滑、约束明确，故不采用遗传算法或粒子群
+算法。每个情景均检查预算可行性、有限性、收敛状态、边界状态和支持域角色。

@@ -1,0 +1,106 @@
+{
+  "schema_version": "q2.qp.interface.preflight.v1",
+  "run_id": "q2-qp-interface-preflight-20260925-r01",
+  "task_id": "T-Q2-MIGRATION",
+  "status": "Q2_QP_INTERFACE_PREFLIGHT_EXPLORATORY",
+  "inputs": {
+    "q1_latex_interface": "experiments/runs/q1-latex-q-interface-20260925-r01/metrics.json",
+    "q1_latex_interface_sha256": "e6ae85d804541c505b387c27824d57839dbcb6f04a8ba94d81b09fa84c17c7f3",
+    "approved_mapping_decision": "experiments/runs/q1-domain-conflict-review-decision-20260925-r01/metrics.json",
+    "q_a4_a15_wide": "experiments/runs/q1-domain-transfer-matrix-20260925-r01/tables/A4_A15_quality_transfer_soft_wide.csv",
+    "q_a4_a15_wide_sha256": "3e1feccd596d2c8d315721b837f8c8628df7c45d8ca345032cc4ad9827b6ce01"
+  },
+  "checks": {
+    "row_count": 1214,
+    "p_column_count": 17,
+    "p_sum_max_abs_error": 1.5543122344752192e-15,
+    "p_finite": true,
+    "q_finite": true,
+    "q_in_0_100": true,
+    "q_interval_ordered": true,
+    "duplicate_dataset_index_count": 0,
+    "observed_rows": 1088,
+    "extrapolation_rows": 126
+  },
+  "dataset_summary": [
+    {
+      "dataset": "A4_A5_train_1m",
+      "role": "fit",
+      "loss_observed": true,
+      "row_count": 512,
+      "mean_q_soft_0_100": 60.83759051961494,
+      "min_q_soft_0_100": 51.81511625420505,
+      "max_q_soft_0_100": 64.3193971459079,
+      "mean_q_range_width_0_100": 2.3597738057392545,
+      "mean_official_mapped_mass": 0.5646359074665894,
+      "p_sum_max_abs_error": 1.5543122344752192e-15
+    },
+    {
+      "dataset": "A6_A7_test_1m",
+      "role": "validation",
+      "loss_observed": true,
+      "row_count": 256,
+      "mean_q_soft_0_100": 60.70709360966629,
+      "min_q_soft_0_100": 51.832182947054896,
+      "max_q_soft_0_100": 64.1772501175528,
+      "mean_q_range_width_0_100": 2.2349780115346864,
+      "mean_official_mapped_mass": 0.5690096574719248,
+      "p_sum_max_abs_error": 1.4432899320127035e-15
+    },
+    {
+      "dataset": "A8_A9_test_60m",
+      "role": "validation",
+      "loss_observed": true,
+      "row_count": 256,
+      "mean_q_soft_0_100": 60.70709360966629,
+      "min_q_soft_0_100": 51.832182947054896,
+      "max_q_soft_0_100": 64.1772501175528,
+      "mean_q_range_width_0_100": 2.2349780115346864,
+      "mean_official_mapped_mass": 0.5690096574719248,
+      "p_sum_max_abs_error": 1.4432899320127035e-15
+    },
+    {
+      "dataset": "A10_A11_test_1b",
+      "role": "validation",
+      "loss_observed": true,
+      "row_count": 64,
+      "mean_q_soft_0_100": 61.5709985180858,
+      "min_q_soft_0_100": 57.5744266230554,
+      "max_q_soft_0_100": 63.34827832860234,
+      "mean_q_range_width_0_100": 1.8541093798091377,
+      "mean_official_mapped_mass": 0.6226118279817832,
+      "p_sum_max_abs_error": 1.1102230246251565e-15
+    },
+    {
+      "dataset": "A12_A13_est_10b",
+      "role": "extrapolation",
+      "loss_observed": false,
+      "row_count": 63,
+      "mean_q_soft_0_100": 60.95186118908112,
+      "min_q_soft_0_100": 53.68345056911369,
+      "max_q_soft_0_100": 63.95799290631837,
+      "mean_q_range_width_0_100": 2.6298713226484454,
+      "mean_official_mapped_mass": 0.543489078968979,
+      "p_sum_max_abs_error": 1.2212453270876722e-15
+    },
+    {
+      "dataset": "A14_A15_est_70b",
+      "role": "extrapolation",
+      "loss_observed": false,
+      "row_count": 63,
+      "mean_q_soft_0_100": 60.95186118908112,
+      "min_q_soft_0_100": 53.68345056911369,
+      "max_q_soft_0_100": 63.95799290631837,
+      "mean_q_range_width_0_100": 2.6298713226484454,
+      "mean_official_mapped_mass": 0.543489078968979,
+      "p_sum_max_abs_error": 1.2212453270876722e-15
+    }
+  ],
+  "join_policy": "Q/p are a declared interface; no A-to-B row-number join is performed",
+  "formal_fit": false,
+  "limitations": [
+    "Q is the Q1 first-subquestion composite proxy and the 11 inferred mappings remain exploratory priors.",
+    "A12-A15 are extrapolation/estimated roles, not independent validation.",
+    "This preflight does not resolve B8's quality-direction issue or estimate scaling-law parameters."
+  ]
+}

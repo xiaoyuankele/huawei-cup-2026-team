@@ -1,0 +1,4 @@
+manifest_ref: data/manifests/q4_attachment_c.yaml
+raw_data_committed: false
+input_override: "--data-dir <local Attachment C directory>"
+q3_input_ref: experiments/runs/q4-frontier-20260926-r01/q3_baseline_ND_optima.csv

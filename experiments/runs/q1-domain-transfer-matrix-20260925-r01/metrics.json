@@ -1,0 +1,65 @@
+{
+  "schema_version": "q1.domain.transfer.matrix.v1",
+  "run_id": "q1-domain-transfer-matrix-20260925-r01",
+  "task_id": "T-Q1-004",
+  "status": "EXPLORATORY_TRANSFER_MATRIX_REVIEW",
+  "current_workspace_commit": "d3f92c9acf68c625aa00fcad0f04b9fce4c0b168",
+  "source_repo_reference": {
+    "path": "E:/huaweicup/2026project-pr24-update",
+    "branch": "codex/pr24-versioned-index",
+    "commit": "ef339a9230805b940aa8046b306bc7470cd4d520",
+    "source_run_id": "quality-mapping-20260925-r02-soft-handoff",
+    "source_method_sha256": "c75269d027c783efa29aff5a5ce0d6dbc90640ad2b55793c96b19955bd846123",
+    "source_mapping_v2_sha256": "8a1ec05476edecf915217f89d51337e5aed4905e9726fce8cd0e00eee5724c02",
+    "use": "reference_only_soft_prior_weights"
+  },
+  "current_sources": {
+    "mapping_guide": {
+      "path": "data/origin/real_attachments/A_data_value/domain_mapping_guide.csv",
+      "sha256": "0ae884c0d16dcf77fe8411bdbe899ad7a0d487ffee73fba608c6d01b108401e7"
+    },
+    "quality_domain_scores": {
+      "path": "experiments/runs/q1-critic-topsis-20260925-r01/tables/domain_scores.csv",
+      "sha256": "b9b8e124a2deb86904f139c3144c496c90a6e5cfcc858f26aa7e1768ffa0de43",
+      "run_id": "q1-critic-topsis-20260925-r01",
+      "subset": "A1/full"
+    }
+  },
+  "mapping_counts": {
+    "inferred": 11,
+    "direct": 3,
+    "near_direct": 3
+  },
+  "matrix": {
+    "rows": 17,
+    "quality_anchor_count": 7,
+    "all_rows_sum_to_one": true
+  },
+  "datasets": {
+    "A4_A5_train_1m": 512,
+    "A6_A7_test_1m": 256,
+    "A8_A9_test_60m": 256,
+    "A10_A11_test_1b": 64,
+    "A12_A13_est_10b": 63,
+    "A14_A15_est_70b": 63
+  },
+  "outputs": {
+    "mapping": "tables/mapping_v2_soft_current_scores.csv",
+    "matrix": "tables/domain_transfer_matrix_W.csv",
+    "wide": "tables/A4_A15_quality_transfer_soft_wide.csv",
+    "long": "tables/A4_A15_quality_transfer_soft_long.csv"
+  },
+  "summary": {
+    "wide_rows": 1214,
+    "long_rows": 20638,
+    "soft_q_mean_0_100": 60.83307799767191,
+    "soft_range_width_mean_0_100": 2.308517065408358,
+    "official_mapped_mass_mean": 0.567342100650284
+  },
+  "limitations": [
+    "11 inferred rows use semantic-prior weights referenced from the new repository; they are not validated mappings.",
+    "This run recalculates q values from the current workspace TOPSIS candidate domain scores and must not be mixed with the new repository v2 scores.",
+    "Semantic min/max is a scenario range, not a statistical confidence interval.",
+    "No formal Q2 fit is performed and no official A16 file is modified."
+  ]
+}

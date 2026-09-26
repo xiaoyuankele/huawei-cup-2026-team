@@ -1,0 +1,33 @@
+{
+  "run_id": "q4-frontier-20260926-r01",
+  "status": "REVIEW",
+  "c8_q95_holdout": {
+    "n_test_models": 691,
+    "pinball_loss": 0.5586032095820853,
+    "empirical_coverage": 0.9638205499276411,
+    "MAE_for_quantile_only": 10.373915375780763,
+    "RMSE_for_quantile_only": 12.144822902533019
+  },
+  "c8_monthly_one_step": {
+    "n_test_months": 7,
+    "naive_MAE": 0.9990839300994411,
+    "linear_MAE": 0.8571343917891312
+  },
+  "trend_scenario_cluster_bootstrap": {
+    "draws": 100,
+    "h12_q025_q975": [
+      60.728628512248,
+      71.4304602573719
+    ],
+    "h24_q025_q975": [
+      69.0688292031263,
+      86.77168043021439
+    ]
+  },
+  "limitations": [
+    "Only 10 comparable months and one calendar-year holdout",
+    "No 12/24-month forecast-error backtest",
+    "Compute scaling is an external exploratory Q3 assumption",
+    "Time coefficient is not a causal technology effect"
+  ]
+}

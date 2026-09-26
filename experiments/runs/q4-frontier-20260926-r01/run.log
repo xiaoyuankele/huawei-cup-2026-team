@@ -1,0 +1,318 @@
+
+=== q4_baseline_experiment.py (exit 0) ===
+             target       method  n_forecasts      MAE     RMSE  mean_bias
+leaderboard_average linear_trend            7 3.172465 3.920568   3.094168
+leaderboard_average  mean_last_3            7 1.638263 2.146939  -1.535178
+leaderboard_average   naive_last            7 1.711790 1.890134  -0.186152
+      c8_equal_task linear_trend            7 0.857134 0.959031   0.236126
+      c8_equal_task  mean_last_3            7 1.993976 2.108318  -1.993976
+      c8_equal_task   naive_last            7 0.999084 1.328449  -0.766512
+C8 joined models: 1855
+
+
+=== q4_robustness_experiment.py (exit 0) ===
+             target  min_train        method  n_forecasts      MAE     RMSE  mean_bias
+      c8_equal_task          3    linear_all            7 0.857134 0.959031   0.236126
+      c8_equal_task          3    naive_last            7 0.999084 1.328449  -0.766512
+      c8_equal_task          3 linear_last_4            7 1.005298 1.069982   0.102904
+      c8_equal_task          3   mean_last_3            7 1.993976 2.108318  -1.993976
+      c8_equal_task          3      mean_all            7 3.421429 3.667606  -3.421429
+      c8_equal_task          5    linear_all            5 0.760841 0.835717  -0.108571
+      c8_equal_task          5 linear_last_4            5 0.968271 1.006772  -0.295082
+      c8_equal_task          5    naive_last            5 1.235917 1.539674  -1.235917
+      c8_equal_task          5   mean_last_3            5 2.001059 2.140743  -2.001059
+      c8_equal_task          5      mean_all            5 3.967021 4.133606  -3.967021
+leaderboard_average          3   mean_last_3            7 1.638263 2.146939  -1.535178
+leaderboard_average          3    naive_last            7 1.711790 1.890134  -0.186152
+leaderboard_average          3    linear_all            7 3.172465 3.920568   3.094168
+leaderboard_average          3 linear_last_4            7 3.227486 4.126090   1.758161
+leaderboard_average          3      mean_all            7 3.578862 3.762464  -3.578862
+leaderboard_average          5   mean_last_3            5 1.523695 1.926179  -1.438992
+leaderboard_average          5    naive_last            5 1.595507 1.787784  -1.061611
+leaderboard_average          5    linear_all            5 1.808367 2.045101   1.698751
+leaderboard_average          5 linear_last_4            5 1.885396 2.549062  -0.171658
+leaderboard_average          5      mean_all            5 3.973849 4.079286  -3.973849
+
+Bootstrap C8:
+     month   n       q95  q95_boot_lo  q95_boot_hi  q95_boot_se
+2024-06-01 160 45.800600    41.477721    47.345600     1.522996
+2024-07-01  69 42.450280    40.858604    44.485953     1.428771
+2024-08-01 102 48.798808    45.057403    55.797066     2.160279
+2024-09-01 249 48.100990    45.942897    49.770833     1.006156
+2024-10-01 196 47.984806    45.609439    49.171764     1.169081
+2024-11-01 168 49.847635    47.465136    53.100360     1.132358
+2024-12-01 228 50.252280    49.662874    50.905547     0.345854
+2025-01-01 364 50.405157    48.615246    51.684748     0.902346
+2025-02-01 204 53.036377    50.846787    53.476799     0.584502
+2025-03-01 119 54.164391    52.244648    54.696134     0.729045
+
+Type rows: 32
+
+
+=== q4_family_quantile_experiment.py (exit 0) ===
+DATA {'n': 4561, 'train_2024': 2659, 'test_2025': 1902, 'unseen_family_test': 1719}
+SHIFT
+  n_train  n_test  n_test_unseen_family  train_q95  test_q95  ks_statistic    ks_pvalue
+    2659    1902                  1719  38.556866 41.245643      0.120875 1.419501e-14
+RESULTS
+  tau             subset                  model    n       MAE      RMSE  pinball_loss  mean_bias_pred_minus_actual
+0.90           all_2025    quantile_regression 1902 11.900833 14.347246      1.221167                    11.823124
+0.90 unseen_family_2025    quantile_regression 1719 12.033322 14.588902      1.233401                    11.958149
+0.95           all_2025    quantile_regression 1902 13.194035 15.501856      0.667533                    13.176633
+0.95 unseen_family_2025    quantile_regression 1719 13.239663 15.667262      0.668404                    13.225395
+0.90           all_2025 2024_constant_frontier 1902 14.020028 16.922922      2.072931                    12.342708
+0.90 unseen_family_2025 2024_constant_frontier 1719 13.239034 16.107359      2.040317                    11.448001
+0.95           all_2025 2024_constant_frontier 1902 16.391297 19.566464      1.097569                    15.773511
+0.95 unseen_family_2025 2024_constant_frontier 1719 15.531870 18.702114      1.070473                    14.878804
+
+
+=== q4_nested_quantile_experiment.py (exit 0) ===
+ tau       model             subset    n  pinball_loss       MAE      RMSE  mean_bias_pred_minus_actual  pred_min  pred_max
+0.90        full           all_2025 1902      1.221167 11.900833 14.347246                    11.823124 14.044846 58.099109
+0.90      params           all_2025 1902      1.242872  7.748070 10.515848                     6.577907  7.996428 55.453911
+0.90 params_time           all_2025 1902      1.287036 12.775517 15.211415                    12.751806 16.944203 58.677985
+0.90 params_type           all_2025 1902      1.381176  7.669285 10.131144                     6.133666  5.516102 52.760156
+0.90   intercept           all_2025 1902      2.066641 14.063759 16.974329                    12.413097 35.196453 35.196453
+0.90        full unseen_family_2025 1719      1.233401 12.033322 14.588902                    11.958149 15.589603 58.099109
+0.90      params unseen_family_2025 1719      1.290432  8.015694 10.824181                     6.793536  7.996428 55.453911
+0.90 params_time unseen_family_2025 1719      1.290821 12.815686 15.382954                    12.792554 16.944203 58.677985
+0.90 params_type unseen_family_2025 1719      1.420288  7.959983 10.445072                     6.399259  9.360761 52.760156
+0.90   intercept unseen_family_2025 1719      2.033017 13.280746 16.157463                    11.518391 35.196453 35.196453
+0.95 params_time           all_2025 1902      0.660089 13.078620 15.452681                    13.064935 17.081178 59.085678
+0.95        full           all_2025 1902      0.667533 13.194035 15.501856                    13.176633 15.772077 57.560569
+0.95 params_type           all_2025 1902      0.777618  8.806114 11.360464                     8.056532  5.969423 54.276725
+0.95      params           all_2025 1902      0.802609  8.657151 11.317331                     7.835482 10.574114 55.099250
+0.95   intercept           all_2025 1902      1.092508 16.443060 19.621938                    15.842272 38.625628 38.625628
+0.95 params_time unseen_family_2025 1719      0.662283 13.132379 15.633203                    13.119793 17.081178 59.085678
+0.95        full unseen_family_2025 1719      0.668404 13.239663 15.667262                    13.225395 18.461326 57.560569
+0.95 params_type unseen_family_2025 1719      0.800973  9.051269 11.650685                     8.277025 10.998401 54.276725
+0.95      params unseen_family_2025 1719      0.831241  8.846737 11.591085                     7.982505 10.574114 55.099250
+0.95   intercept unseen_family_2025 1719      1.064747 15.582303 18.756865                    14.947565 38.625628 38.625628
+
+Coefficients:
+ tau       model  prsquared
+0.90   intercept   0.000001
+0.90      params   0.327014
+0.90 params_type   0.365755
+0.90 params_time   0.410601
+0.90        full   0.424208
+0.95   intercept   0.000001
+0.95      params   0.356062
+0.95 params_type   0.383980
+0.95 params_time   0.410691
+0.95        full   0.431225
+
+Conditional frontier scenarios (tau=.95):
+ tau       model      profile  horizon_months  n_profile  predicted_frontier_q95_of_conditional  predicted_median_conditional  predicted_max_conditional  predicted_mean_conditional
+0.95   intercept profile_2024              12       2659                              38.625628                     38.625628                  38.625628                   38.625628
+0.95 params_type profile_2024              12       2659                              51.843825                     33.453366                  60.395190                   32.660729
+0.95      params profile_2024              12       2659                              54.554574                     32.752206                  62.051091                   32.901332
+0.95        full profile_2024              12       2659                              74.306004                     58.043730                  83.346827                   57.863963
+0.95 params_time profile_2024              12       2659                              77.061948                     57.841247                  83.670785                   57.972715
+0.95   intercept profile_2024              24       2659                              38.625628                     38.625628                  38.625628                   38.625628
+0.95 params_type profile_2024              24       2659                              51.843825                     33.453366                  60.395190                   32.660729
+0.95      params profile_2024              24       2659                              54.554574                     32.752206                  62.051091                   32.901332
+0.95        full profile_2024              24       2659                              92.209753                     75.947479                 101.250576                   75.767712
+0.95 params_time profile_2024              24       2659                              95.240349                     76.019648                 101.849186                   76.151116
+0.95   intercept profile_2025              12       1902                              38.625628                     38.625628                  38.625628                   38.625628
+0.95      params profile_2025              12       1902                              39.258958                     32.752206                  55.099250                   30.618838
+0.95 params_type profile_2025              12       1902                              39.437247                     33.619842                  54.276725                   30.839888
+0.95 params_time profile_2025              12       1902                              63.577520                     57.841247                  77.542128                   55.960496
+0.95        full profile_2025              12       1902                              64.814089                     57.648748                  77.850490                   55.768325
+0.95   intercept profile_2025              24       1902                              38.625628                     38.625628                  38.625628                   38.625628
+0.95      params profile_2025              24       1902                              39.258958                     32.752206                  55.099250                   30.618838
+0.95 params_type profile_2025              24       1902                              39.437247                     33.619842                  54.276725                   30.839888
+0.95 params_time profile_2025              24       1902                              81.755921                     76.019648                  95.720529                   74.138898
+0.95        full profile_2025              24       1902                              82.717838                     75.552497                  95.754239                   73.672075
+
+
+=== q4_c8_panel_quantile_experiment.py (exit 0) ===
+ tau       model  n_train  n_test  pinball_loss       MAE      RMSE  mean_bias  pred_min  pred_max
+0.90      params     1184     691      1.006636  6.153549  8.235920   5.175345 24.615199 63.501206
+0.90        full     1184     691      1.016306  9.645387 11.439269   9.515969 27.588639 63.951534
+0.90 params_time     1184     691      1.030370 10.018918 11.845906   9.947723 30.927003 66.261229
+0.90 params_type     1184     691      1.086085  6.197239  8.076231   5.031337 21.544639 60.764176
+0.90   intercept     1184     691      1.766619 12.989754 15.578108  11.820646 46.883956 46.883956
+0.95        full     1184     691      0.558603 10.373915 12.144823  10.285232 28.576513 63.614683
+0.95 params_time     1184     691      0.569801 11.156318 12.871382  11.129684 32.829725 66.383351
+0.95 params_type     1184     691      0.647889  7.384181  9.292899   6.764892 22.386954 62.379571
+0.95      params     1184     691      0.656496  7.201507  9.134774   6.542794 26.962565 63.409608
+0.95   intercept     1184     691      1.004013 14.901380 17.555129  14.325948 49.389258 49.389258
+
+Forecasts
+ tau       model  horizon_months  n_profile  frontier_q95_conditional  median_conditional  mean_conditional  max_conditional
+0.95   intercept              12        691                 49.389258           49.389258         49.389258        49.389258
+0.95 params_type              12        691                 50.765516           45.191372         41.828203        62.379571
+0.95      params              12        691                 50.870918           45.074250         41.606105        63.409608
+0.95        full              12        691                 66.638251           62.139856         58.970349        76.870527
+0.95 params_time              12        691                 71.141219           66.174487         63.202892        81.884687
+0.95   intercept              24        691                 49.389258           49.389258         49.389258        49.389258
+0.95 params_type              24        691                 50.765516           45.191372         41.828203        62.379571
+0.95      params              24        691                 50.870918           45.074250         41.606105        63.409608
+0.95        full              24        691                 78.874414           74.376019         71.206512        89.106690
+0.95 params_time              24        691                 86.420828           81.454097         78.482502        97.164296
+
+
+=== q4_compute_constrained_scenarios.py (exit 0) ===
+ annual_compute_growth  horizon_months               model  n_profile  N_scale  D_scale  conditional_frontier_q95  conditional_median  conditional_mean  conditional_max
+                  0.00              12      full_time_type       1902 1.000000 1.000000                 64.814089           57.648748         55.768325        77.850490
+                  0.25              12      full_time_type       1902 1.106005 1.130194                 65.610383           58.402564         56.458721        78.687501
+                  0.50              12      full_time_type       1902 1.200906 1.249057                 66.264494           59.024524         57.030129        79.372164
+                  0.00              24      full_time_type       1902 1.000000 1.000000                 82.717838           75.552497         73.672075        95.754239
+                  0.25              24      full_time_type       1902 1.223247 1.277338                 84.315105           77.068237         75.062690        97.429300
+                  0.50              24      full_time_type       1902 1.442176 1.560143                 85.633024           78.329145         76.226878        98.800754
+                  0.00              12 params_type_no_time       1902 1.000000 1.000000                 39.437247           33.619842         30.839888        54.276725
+                  0.25              12 params_type_no_time       1902 1.106005 1.130194                 40.348207           34.481815         31.629340        55.233829
+                  0.50              12 params_type_no_time       1902 1.200906 1.249057                 41.096480           35.193012         32.282733        56.016726
+                  0.00              24 params_type_no_time       1902 1.000000 1.000000                 39.437247           33.619842         30.839888        54.276725
+                  0.25              24 params_type_no_time       1902 1.223247 1.277338                 41.264479           35.353058         32.430027        56.192120
+                  0.50              24 params_type_no_time       1902 1.442176 1.560143                 42.772039           36.794878         33.761250        57.760348
+
+
+=== q4_c8_compute_scenarios.py (exit 0) ===
+ annual_compute_growth  horizon_months               model  N_scale  D_scale  frontier_q95_conditional  median_conditional  mean_conditional  max_conditional
+                  0.00              12      full_time_type 1.000000 1.000000                 66.638251           62.139856         58.970349        76.870527
+                  0.25              12      full_time_type 1.106005 1.130194                 67.287762           62.754413         59.491175        77.552939
+                  0.50              12      full_time_type 1.200906 1.249057                 67.821278           63.261474         59.923309        78.111141
+                  0.00              24      full_time_type 1.000000 1.000000                 78.874414           74.376019         71.206512        89.106690
+                  0.25              24      full_time_type 1.223247 1.277338                 80.177224           75.611744         72.257023        90.472359
+                  0.50              24      full_time_type 1.442176 1.560143                 81.252109           76.639720         73.140947        91.590500
+                  0.00              12 params_type_no_time 1.000000 1.000000                 50.765516           45.191372         41.828203        62.379571
+                  0.25              12 params_type_no_time 1.106005 1.130194                 51.478474           45.879431         42.399906        63.128645
+                  0.50              12 params_type_no_time 1.200906 1.249057                 52.064107           46.446248         42.874253        63.741376
+                  0.00              24 params_type_no_time 1.000000 1.000000                 50.765516           45.191372         41.828203        62.379571
+                  0.25              24 params_type_no_time 1.223247 1.277338                 52.195591           46.573699         42.981333        63.878647
+                  0.50              24 params_type_no_time 1.442176 1.560143                 53.375477           47.720294         43.951605        65.106015
+
+
+=== q4_loss_bridge_audit.py (exit 0) ===
+<repo>\scripts\q4\q4_loss_bridge_audit.py:17: RankWarning: Polyfit may be poorly conditioned
+  slope, intercept = np.polyfit(x, y, 1)
+<repo>\scripts\q4\q4_loss_bridge_audit.py:17: RankWarning: Polyfit may be poorly conditioned
+  slope, intercept = np.polyfit(x, y, 1)
+<repo>\scripts\q4\q4_loss_bridge_audit.py:17: RankWarning: Polyfit may be poorly conditioned
+  slope, intercept = np.polyfit(x, y, 1)
+<repo>\scripts\q4\q4_loss_bridge_audit.py:17: RankWarning: Polyfit may be poorly conditioned
+  slope, intercept = np.polyfit(x, y, 1)
+<repo>\scripts\q4\q4_loss_bridge_audit.py:17: RankWarning: Polyfit may be poorly conditioned
+  slope, intercept = np.polyfit(x, y, 1)
+<repo>\scripts\q4\q4_loss_bridge_audit.py:17: RankWarning: Polyfit may be poorly conditioned
+  slope, intercept = np.polyfit(x, y, 1)
+<repo>\scripts\q4\q4_loss_bridge_audit.py:17: RankWarning: Polyfit may be poorly conditioned
+  slope, intercept = np.polyfit(x, y, 1)
+comparability  n      score  slope_score_per_loss  intercept  loo_MAE                                slope_ci95                    pred_at_loss_1.8_ci95                  pred_at_loss_2.0_ci95                    pred_at_loss_2.2_ci95
+         High  7 LB_Average             -0.881664   7.671652 0.478108 [-4.588606789272424, 0.42596194151460054]   [5.236662274612756, 7.516207107136376] [5.325358540628155, 6.542651522531239]   [5.389815659378326, 5.950073415202943]
+       Medium 36 LB_Average            -14.528726  48.929270 6.722044  [-22.80309854350841, -7.472263319764434] [18.507887918539993, 27.706649680927526] [16.72632656484018, 23.38351479076094] [14.559096614418849, 19.387895516423832]
+
+High-comparability task slopes:
+comparability  n       score  slope_score_per_loss  intercept  loo_MAE                                 slope_ci95                     pred_at_loss_1.8_ci95                     pred_at_loss_2.0_ci95                     pred_at_loss_2.2_ci95
+         High  7  LB_Average             -0.881664   7.671652 0.478108  [-4.588606789272424, 0.42596194151460054]    [5.236662274612756, 7.516207107136376]    [5.325358540628155, 6.542651522531239]    [5.389815659378326, 5.950073415202943]
+         High  7   LB_IFEval             -9.983938  44.948851 1.370307 [-13.708032383607467, -0.7797693141560516]  [22.815316462766006, 29.247247225038222]  [22.542888195507732, 26.601762337114977]    [22.12711897007938, 23.95141530394724]
+         High  7      LB_BBH             -7.106178  20.078628 0.887292  [-16.714961905578214, -4.129655029365154]    [5.26817666797894, 10.944671839760787]    [4.481095334699891, 7.662363769974476]    [3.616314656232875, 5.009862996126179]
+         High  7     LB_MATH             -1.445388   4.550055 0.196119  [-3.252779939770177, -0.7667465147308807]   [1.5536055830778492, 2.599002248630664]    [1.380075275098995, 1.953023907985325]   [1.1969683382183147, 1.500742814663984]
+         High  7     LB_GPQA              2.417952  -4.798791 0.536885   [0.44458162167709486, 7.743766985914426] [-2.4032170287221923, 0.8207789985647732] [-0.9235391265716295, 0.9346507967549696] [0.22066108712962418, 1.0703495826636884]
+         High  7     LB_MUSR             10.983904 -20.532481 2.586005  [-5.0383814997102245, 19.127454427664066] [-5.5158422131390665, 5.4525918356381515]  [-1.8266576841308508, 4.468069351924209]   [1.9434721464125237, 4.596699481213211]
+         High  7 LB_MMLU_PRO             -0.156338   1.783652 0.153049  [-0.7246894178242416, 0.9690533792038478]  [1.0079171261460593, 1.8419603386047576]   [1.1826724547852567, 1.707073529767321]  [1.3118746644441281, 1.5688361735978527]
+
+
+=== q4_task_frontier_audit.py (exit 0) ===
+             target  n_months  first_q95  last_q95  change_last_minus_first  linear_slope_per_month
+             IFEval        10  77.613909 83.153477                 5.539568                0.301868
+                BBH        10  63.812706 67.163687                 3.350981                0.386886
+               MATH        10  20.528701 47.824773                27.296073                3.194109
+               GPQA        10  36.581376 39.135906                 2.554530                0.430827
+               MUSR        10  48.948413 48.955026                 0.006614                0.241783
+           MMLU_PRO        10  49.273604 54.129820                 4.856217                0.740392
+  C8_exclude_IFEval        10  42.292542 49.741011                 7.448469                1.077344
+     C8_exclude_BBH        10  42.788620 51.672254                 8.883634                1.092698
+    C8_exclude_MATH        10  51.452402 55.659737                 4.207335                0.459538
+    C8_exclude_GPQA        10  47.912911 57.224114                 9.311202                1.111094
+    C8_exclude_MUSR        10  46.387643 55.074424                 8.686781                1.072780
+C8_exclude_MMLU_PRO        10  45.882469 54.256336                 8.373868                1.016735
+
+
+=== q4_time_placebo_test.py (exit 0) ===
+          target  n_months  observed_slope_per_month  perm_mean  perm_sd  one_sided_exceedance  two_sided_exceedance  perm_q025  perm_q975
+loo_exclude_MATH        10                  0.459538   0.000414 0.252578               0.02727               0.05563  -0.468442   0.465813
+          IFEval        10                  0.301868  -0.000982 0.242148               0.11620               0.23302  -0.461598   0.461453
+             BBH        10                  0.386886   0.000155 0.225068               0.04035               0.07951  -0.420203   0.420781
+            MATH        10                  3.194109   0.001862 1.148779               0.00007               0.00016  -2.202852   2.216538
+            GPQA        10                  0.430827   0.000767 0.176140               0.00121               0.00252  -0.326444   0.328274
+            MUSR        10                  0.241783   0.000009 0.150726               0.05611               0.11278  -0.290366   0.288923
+        MMLU_PRO        10                  0.740392  -0.001875 0.334795               0.00247               0.00504  -0.613529   0.612542
+
+
+=== q4_error_evaluation.py (exit 0) ===
+BASELINE ERRORS
+              target        method  n      MAE     RMSE  mean_bias  median_abs_error  max_abs_error  under_prediction_rate  over_prediction_rate  window_min_train
+      c8_equal_task  linear_trend  7 0.857134 0.959031   0.236126          0.856288       1.615289               0.428571              0.571429                 3
+      c8_equal_task   mean_last_3  7 1.993976 2.108318  -1.993976          1.607803       2.933120               1.000000              0.000000                 3
+      c8_equal_task    naive_last  7 0.999084 1.328449  -0.766512          0.697818       2.631220               0.714286              0.285714                 3
+leaderboard_average  linear_trend  7 3.172465 3.920568   3.094168          2.688593       6.681654               0.142857              0.857143                 3
+leaderboard_average   mean_last_3  7 1.638263 2.146939  -1.535178          1.243171       3.745325               0.714286              0.285714                 3
+leaderboard_average    naive_last  7 1.711790 1.890134  -0.186152          1.334739       3.140140               0.571429              0.428571                 3
+      c8_equal_task    naive_last  5 1.235917 1.539674  -1.235917          1.128014       2.631220               1.000000              0.000000                 5
+      c8_equal_task   mean_last_3  5 2.001059 2.140743  -2.001059          1.607803       2.933120               1.000000              0.000000                 5
+      c8_equal_task      mean_all  5 3.967021 4.133606  -3.967021          3.220539       5.644732               1.000000              0.000000                 5
+      c8_equal_task    linear_all  5 0.760841 0.835717  -0.108571          0.856288       1.105007               0.600000              0.400000                 5
+      c8_equal_task linear_last_4  5 0.968271 1.006772  -0.295082          0.849254       1.497483               0.600000              0.400000                 5
+leaderboard_average    naive_last  5 1.595507 1.787784  -1.061611          1.334739       3.140140               0.800000              0.200000                 5
+leaderboard_average   mean_last_3  5 1.523695 1.926179  -1.438992          1.243171       3.745325               0.800000              0.200000                 5
+leaderboard_average      mean_all  5 3.973849 4.079286  -3.973849          3.986079       5.423589               1.000000              0.000000                 5
+leaderboard_average    linear_all  5 1.808367 2.045101   1.698751          1.758673       2.929080               0.200000              0.800000                 5
+leaderboard_average linear_last_4  5 1.885396 2.549062  -0.171658          1.465433       5.142637               0.200000              0.800000                 5
+
+PANEL ERRORS
+  tau       model   n       MAE      RMSE  mean_bias_pred_minus_actual  median_abs_error  max_abs_error  pinball_loss  coverage_y_le_pred  coverage_error
+0.90      params 691  6.153549  8.235920                     5.175345          4.293721      32.571164      1.006636            0.820550       -0.079450
+0.90        full 691  9.645387 11.439269                     9.515969          9.526852      34.698832      1.016306            0.949349        0.049349
+0.90 params_time 691 10.018918 11.845906                     9.947723          9.673113      37.031041      1.030370            0.959479        0.059479
+0.90 params_type 691  6.197239  8.076231                     5.031337          5.129137      30.950329      1.086085            0.813314       -0.086686
+0.90   intercept 691 12.989754 15.578108                    11.820646         11.135035      28.048679      1.766619            0.858177       -0.041823
+0.95        full 691 10.373915 12.144823                    10.285232         10.503098      35.218180      0.558603            0.963821        0.013821
+0.95 params_time 691 11.156318 12.871382                    11.129684         11.327594      37.589509      0.569801            0.984081        0.034081
+0.95 params_type 691  7.384181  9.292899                     6.764892          6.748877      32.167315      0.647889            0.878437       -0.071563
+0.95      params 691  7.201507  9.134774                     6.542794          6.090897      33.089358      0.656496            0.872648       -0.077352
+0.95   intercept 691 14.901380 17.555129                    14.325948         13.640338      30.553981      1.004013            0.901592       -0.048408
+
+FULL BY TYPE
+  tau                                     type   n       MAE      RMSE  mean_bias_pred_minus_actual  pinball_loss  coverage_y_le_pred  coverage_error
+0.90                             🌸 multimodal   3  4.607250  4.752526                     4.607250      0.460725            1.000000        0.100000
+0.90      💬 chat models (RLHF, DPO, IFT, ...)  39 10.531032 12.278309                    10.399710      1.105632            0.923077        0.023077
+0.90 🔶 fine-tuned on domain-specific datasets 311 10.490610 11.877238                    10.302483      1.124312            0.951768        0.051768
+0.90                             🟢 pretrained  35  7.100893  7.331897                     7.100893      0.710089            1.000000        0.100000
+0.90                🟩 continuously pretrained   7 16.584555 16.903583                    16.584555      1.658456            1.000000        0.100000
+0.90                🤝 base merges and moerges 296  8.828472 11.138082                     8.741313      0.917711            0.942568        0.042568
+0.95                             🌸 multimodal   3  3.986611  4.141637                     3.986611      0.199331            1.000000        0.050000
+0.95      💬 chat models (RLHF, DPO, IFT, ...)  39 12.279568 13.915791                    12.279568      0.613978            1.000000        0.050000
+0.95 🔶 fine-tuned on domain-specific datasets 311 11.583849 12.887019                    11.461771      0.634128            0.967846        0.017846
+0.95                             🟢 pretrained  35  7.897824  8.106157                     7.897824      0.394891            1.000000        0.050000
+0.95                🟩 continuously pretrained   7 18.656232 18.920345                    18.656232      0.932812            1.000000        0.050000
+0.95                🤝 base merges and moerges 296  9.013236 11.309729                     8.934474      0.486105            0.949324       -0.000676
+
+
+=== q4_r2_evaluation.py (exit 0) ===
+ tau       model  pseudo_R2_train  ordinary_R2_train  ordinary_R2_test_trainmean_baseline  ordinary_R2_test_testmean_baseline
+0.90   intercept         0.000005          -1.759181                            -1.355205                           -1.357241
+0.90      params         0.319758          -0.635059                             0.341700                            0.341131
+0.90 params_type         0.384574          -0.130911                             0.366981                            0.366434
+0.90 params_time         0.406783          -0.249799                            -0.361871                           -0.363048
+0.90        full         0.425856          -0.109064                            -0.269977                           -0.271075
+0.95   intercept         0.000004          -2.607347                            -1.990938                           -1.993523
+0.95      params         0.331503          -0.869500                             0.190168                            0.189468
+0.95 params_type         0.374126          -0.582522                             0.161889                            0.161164
+0.95 params_time         0.413193          -0.448814                            -0.607865                           -0.609255
+0.95        full         0.430985          -0.411731                            -0.431468                           -0.432706
+
+
+=== q4_c8_cluster_bootstrap.py (exit 0) ===
+<python-env>\Lib\site-packages\statsmodels\regression\quantile_regression.py:191: IterationLimitWarning: Maximum number of iterations (3000) reached.
+  warnings.warn("Maximum number of iterations (" + str(max_iter) +
+<python-env>\Lib\site-packages\statsmodels\regression\quantile_regression.py:191: IterationLimitWarning: Maximum number of iterations (3000) reached.
+  warnings.warn("Maximum number of iterations (" + str(max_iter) +
+        quantity  n_boot    median      q025      q975       sd
+           const     100 19.410500 16.320239 21.521318 1.333743
+      log_params     100  6.868368  5.901607  8.334256 0.648790
+      time_month     100  1.040625  0.694721  1.290003 0.160941
+frontier_q95_h12     100 67.358521 60.728629 71.430460 2.836480
+frontier_q95_h24     100 79.938385 69.068829 86.771680 4.737023

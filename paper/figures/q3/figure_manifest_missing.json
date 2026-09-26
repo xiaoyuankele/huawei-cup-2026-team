@@ -1,0 +1,94 @@
+{
+  "backend": "Python/matplotlib",
+  "style_inheritance": "Q3 existing Nature-style figures: white background, charcoal ink, teal primary, warm orange contrast",
+  "status": "conditional_scenario_figures_for_manuscript",
+  "input_sha256": {
+    "experiments/runs/q3-nd-baseline-20260925-r01/tables/q3_nd_baseline_scenarios.csv": "68b6faa0eb173532511695f43587ac84f5ba26992d511843f1c16c1f26a386ff",
+    "experiments/runs/q3-q-conditional-20260925-r01/tables/q3_q_conditional_scenarios.csv": "7a06eefb8a8c81a0848ee038a4418263db8d5d1f60eaf376c1f1b6055d49c1f3",
+    "experiments/runs/q3-q-robustness-20260925-r01/tables/q3_q_robustness_scenarios.csv": "c3dff4b61762c10621d1e1437e6fb09071c191f1ac6d5b72ad50b46abfea7a52",
+    "experiments/runs/q3-p-conditional-20260925-r01/tables/p_candidate_summary.csv": "e784b47786a74df32c340cb33af1adbfa7999214723fa916fdbee2abe6c7c05e",
+    "experiments/runs/q3-p-conditional-20260925-r01/tables/p_candidate_q3_nd_panel.csv": "20db89cb1c7a61a243ee23f8835f1711c8a92d53d5ef221d4977b5b4870aceb0",
+    "experiments/runs/q3-optimization-robustness-20260926-r01/tables/m0_uncertainty_summary.csv": "acbf69a57b19b22d84225de4af7fd03b81a25fcb7abb66fad2e458cdad627081",
+    "experiments/runs/q3-optimization-robustness-20260926-r01/tables/m1_uncertainty_summary.csv": "fe6dd2225dd52b381f1d8ade225269ce9c83ed229872311d6c2cda5f842a2f04",
+    "experiments/runs/q3-optimization-robustness-20260926-r01/tables/m0_discrete_frontier.csv": "f22c47c2f8acf7c1c4e2c8fa87cceb7a463ab43b5cc3e7a40b14533d37ca5b07",
+    "experiments/runs/q3-optimization-robustness-20260926-r01/tables/m1_discrete_frontier.csv": "4a7c3f9cdb5aa63d34841cd06b36424be1833bf8da08d82670b2cd1ad34d496d",
+    "experiments/runs/q2-q3-interface-sensitivity-20260926-r01/tables/m2_q3_fixed_q_scenarios.csv": "14af28be8ac488462bc574c37f96a39b4088b88b3ca5d287950e63332126b0cd"
+  },
+  "figures": {
+    "Fig06_M0_budget_context": {
+      "rows": 15,
+      "contexts": [
+        2048,
+        4096,
+        8192,
+        32768,
+        131072
+      ],
+      "budgets": [
+        19.0,
+        22.0,
+        24.0
+      ]
+    },
+    "Fig07_M1_quality_tradeoff": {
+      "rows": 45,
+      "cost_families": [
+        "exponential",
+        "power",
+        "logarithmic"
+      ],
+      "contexts": [
+        2048,
+        4096,
+        8192,
+        32768,
+        131072
+      ]
+    },
+    "Fig08_Q0_cost_robustness": {
+      "rows": 135,
+      "q0_values": [
+        0.1,
+        0.3,
+        0.5
+      ],
+      "budgets": [
+        1e+19,
+        1e+22,
+        1e+24
+      ]
+    },
+    "Fig09_parameter_uncertainty": {
+      "m0_rows": 15,
+      "m1_rows": 45,
+      "m1_slice": "exponential, Lctx=2048"
+    },
+    "Fig10_discrete_pareto": {
+      "m0_rows_lctx2048": 24,
+      "m1_rows_lctx2048": 45,
+      "m0_pareto": 24,
+      "m1_pareto": 45
+    },
+    "Fig11_p_candidate_panel": {
+      "summary_rows": 6,
+      "panel_rows": 90,
+      "candidate_order": [
+        46,
+        323,
+        270,
+        97,
+        170,
+        186
+      ]
+    },
+    "Fig12_M2_interface_heatmap": {
+      "rows": 1350,
+      "slice_rows": 30,
+      "slice": "exponential, Lctx=2048, budget=1e22"
+    },
+    "Fig13_identifiability_interface": {
+      "blocks": 7,
+      "status": "M3 blocked pending A-B bridge and Q-scale calibration"
+    }
+  }
+}

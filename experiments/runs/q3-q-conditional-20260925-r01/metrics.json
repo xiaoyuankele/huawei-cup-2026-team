@@ -1,0 +1,61 @@
+{
+  "run_id": "q3-q-conditional-20260925-r01",
+  "status": "EXPLORATORY_Q3_Q_CONDITIONAL",
+  "m1_parameters": {
+    "E": 1.4892660413046754,
+    "A": 0.5401729882501645,
+    "B": 1.3167948616197847,
+    "G": 0.36224743500545836,
+    "alpha": 0.27905392394495887,
+    "beta": 0.28280291348008263
+  },
+  "support": {
+    "N_min_B": 0.070542,
+    "N_max_B": 11.965825,
+    "D_min_B": 0.134,
+    "D_max_B": 299.893,
+    "B1_rows": 1176
+  },
+  "q_bounds": {
+    "Q_min": 0.1,
+    "Q_max": 1.0,
+    "B6_rows": 360
+  },
+  "Q0": 0.1,
+  "cost_families": {
+    "exponential": {
+      "gamma": 10000000.0,
+      "lambda": 6.0
+    },
+    "power": {
+      "gamma": 5000000000.0,
+      "lambda": 4.0
+    },
+    "logarithmic": {
+      "gamma": 2000000000.0,
+      "lambda": 10.0
+    }
+  },
+  "budgets_flops": [
+    1e+19,
+    1e+22,
+    1e+24
+  ],
+  "Lctx_values_from_metadata": [
+    2048,
+    4096,
+    8192,
+    32768,
+    131072
+  ],
+  "scenario_count": 45,
+  "output_sha256": {
+    "q3_q_conditional_scenarios.csv": "77171f327c40d0bbd2559665b5aa7b6fdc945b5052301dbd1c73296289330378"
+  },
+  "limitations": [
+    "M1 is a B6/B7 semi-synthetic conditional sensitivity, not a universal law",
+    "Q is the B6 score and is not the Q1 A-side quality score",
+    "p is fixed and the A-B row-level bridge is not used",
+    "N,D,Q are bounded to observed B1/B6 ranges; no unbounded optimum is claimed"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "run_id": "q2-e3-quality-parameter-substitution-20260925-r01",
+  "task_id": "T-Q2-E3",
+  "model": "experiments/runs/q2-model-finalization-20260925/model_parameters.json",
+  "bridge": "experiments/runs/q2-quality-scaling-linkage-20260925/q1_to_q2_quality_linkage.csv",
+  "N_anchors_B": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "D_reference_B": 100.0,
+  "D_invariance_check_B": 10.0,
+  "lambda_Q": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "lambda_p": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "target_N_multipliers": [
+    1.25,
+    1.5,
+    2.0,
+    4.0
+  ],
+  "path_points": 51,
+  "hull_safety_fraction": 0.99,
+  "lp_tolerance": 1e-09,
+  "witness_atol": 2e-08,
+  "equality_atol": 2e-10,
+  "sign_atol": 1e-10,
+  "root_xtol": 1e-12,
+  "compute_coefficient_kappa": 6.0,
+  "cost_assumption": "Illustrative C=kappa*N*D only; extra quality-processing cost is unobserved",
+  "fit_new_parameters": false,
+  "observed_outcome_columns_read": false,
+  "seed": null
+}

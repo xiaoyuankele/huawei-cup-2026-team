@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "certificate_axes": 2,
+  "csv_files_byte_identical": 9,
+  "metrics_byte_identical": true,
+  "inputs_unchanged": true,
+  "exported_inverse_and_cost_checks": true,
+  "files": {
+    "quality_path_support.csv": "5866939a09aabcb032318eff397c35706572d227e8ae1add2134dd75b66ac0aa",
+    "support_weights.csv": "a164ca4f1c1e9e3a5182cb4a5b323d55396b878855d39018db8c7b38e6ca81a9",
+    "support_duals.csv": "f80b9600a51d4d95f36cf4f196e8ee4d097e258f14ed46e85eb1debebae5156e",
+    "quality_path_curves.csv": "1307c031f95ed3fcb2cc30fc4167aaf850690c949a80b0d3e636517c801dafe3",
+    "quality_capacity.csv": "4765f7d2e9e0f778cfe5bfcd61893f3426024ab805b4fb6e7b1a5ef656f0a63f",
+    "expansion_targets.csv": "a81ff1fd9da8e4b75b135c7789a4492142a872a8cff2bb533330f87313b14ced",
+    "recipe_substitution.csv": "405670b4c1b10efa5d6043b4b5824cd0a944282c25be1c4a9d846af546324a34",
+    "recipe_summary.csv": "f14a29912a2f609c48f38e76eb5ae88fe5ca52da92ad22f353306533c7ab9a01",
+    "verification_checks.csv": "8f81b29645a5ecb2c8eb01659e7d27b3e38bc484390cbcf0da13b30819eda423"
+  }
+}
