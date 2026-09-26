@@ -1,0 +1,92 @@
+{
+  "schema_version": "q2.q3.interface.sensitivity.v1",
+  "run_id": "q2-q3-interface-sensitivity-20260926-r01",
+  "status": "EXPLORATORY_INTERFACE_SENSITIVITY_SCENARIO_ONLY",
+  "candidate_count": 6,
+  "mapping_scenario_count": 5,
+  "q3_row_count": 1350,
+  "inputs": {
+    "m2_recipe_scenarios": {
+      "path": "experiments/runs/q2-m2-sensitivity-20250925-r01/tables/recipe_q_scenarios.csv",
+      "sha256": "3430742dbccf9dba9ea624a9616a179b88400f19d6cf29160299282a45846edc"
+    },
+    "m2_metrics": {
+      "path": "experiments/runs/q2-m2-sensitivity-20250925-r01/metrics.json",
+      "sha256": "3d77ce7b4bd3a7b3cbd08cf323872bfb6bad1157a33fea1abd25be71d3c44abb"
+    },
+    "p_candidate_summary": {
+      "path": "experiments/runs/q3-p-conditional-20260925-r01/tables/p_candidate_summary.csv",
+      "sha256": "f93211d5b288e5b655f29881da6a42459c78e84d00ae909640d5e081d6bbf242"
+    },
+    "m1_metrics": {
+      "path": "experiments/runs/q2-m0-m1-20260925-r01/metrics.json",
+      "sha256": "38854c768a44d450bf96f03da47d8ee47a8f292e48b8e5dedc48f489c71022e1"
+    },
+    "q3_nd_reference": {
+      "path": "experiments/runs/q3-nd-baseline-20260925-r01/tables/q3_nd_baseline_scenarios.csv",
+      "sha256": "1e4e11e62679cc99183a53e15c14edb94469b0ea80b18c7f2a117dedd4d45cbc"
+    },
+    "q3_q_reference": {
+      "path": "experiments/runs/q3-q-conditional-20260925-r01/tables/q3_q_conditional_scenarios.csv",
+      "sha256": "77171f327c40d0bbd2559665b5aa7b6fdc945b5052301dbd1c73296289330378"
+    }
+  },
+  "mapping_scenarios": {
+    "M2_partial_raw": {
+      "source_column": "q_partial_raw",
+      "scale": "Q1 candidate 0-100",
+      "role": "M2 conditional"
+    },
+    "M2_partial_renorm": {
+      "source_column": "q_partial_renorm",
+      "scale": "Q1 candidate 0-100",
+      "role": "M2 conditional"
+    },
+    "M2_interval_low": {
+      "source_column": "q_scenario_low",
+      "scale": "Q1 candidate 0-100",
+      "role": "M2 conditional"
+    },
+    "M2_interval_mid": {
+      "source_column": "q_scenario_mid",
+      "scale": "Q1 candidate 0-100",
+      "role": "M2 conditional"
+    },
+    "M2_interval_high": {
+      "source_column": "q_scenario_high",
+      "scale": "Q1 candidate 0-100",
+      "role": "M2 conditional"
+    }
+  },
+  "hypothetical_calibration": {
+    "formula": "Q_B=0.1+0.9*clip((Q_A-q1_low)/(q1_high-q1_low),0,1)",
+    "q1_low": 51.70140753241471,
+    "q1_high": 64.33570995356357,
+    "target_range": [
+      0.1,
+      1.0
+    ],
+    "status": "UNVERIFIED_SCENARIO_ONLY"
+  },
+  "checks": {
+    "input_candidate_rows": 6,
+    "all_q_a_finite": true,
+    "all_q_b_finite": true,
+    "q_b_inside_b6_support": true,
+    "all_q3_finite": true,
+    "budget_violation_max_relative": 9.3193240576e-12,
+    "a_b_row_join": false,
+    "formal_m3_fit": false,
+    "b8_used": false
+  },
+  "interpretation": [
+    "M2 values are Q1-side candidate-score scenarios; the affine conversion to B6 Q_score is hypothetical.",
+    "Fixed-Q M1 solutions show how a proposed interface value would change N-D allocation and quality-cost share.",
+    "These rows do not establish Q1/B6 scale equivalence, G_bridge, or a joint optimum over p.",
+    "M0 and native-M1 Q3 references are preserved separately and are not averaged with M2 rows."
+  ],
+  "output_sha256": {
+    "m2_q3_fixed_q_scenarios.csv": "a5009de0b6cc88d43b61a65dccaec79600bbbbc060f4b610b269d1be9dbb95d4",
+    "m2_q3_interface_summary.csv": "f410270c93b2fefed1af2f56463786835740354d701d802e3b503750a150407e"
+  }
+}

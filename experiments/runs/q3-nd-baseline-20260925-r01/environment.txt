@@ -1,0 +1,5 @@
+python=3.11.5
+platform=Windows-10-10.0.19045-SP0
+numpy=2.2.6
+pandas=2.2.3
+scipy=1.11.1
