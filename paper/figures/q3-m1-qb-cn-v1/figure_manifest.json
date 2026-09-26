@@ -1,0 +1,43 @@
+{
+  "figure_id": "fig_q3_m1_qb_cn_single_v2",
+  "title": "M1 原生质量条件下的最优 Q_B（中文单张图）",
+  "source_run": "experiments\\runs\\q3-q-conditional-20260925-r01",
+  "source_csv": "experiments\\runs\\q3-q-conditional-20260925-r01\\tables\\q3_q_conditional_scenarios.csv",
+  "source_csv_sha256": "77171f327c40d0bbd2559665b5aa7b6fdc945b5052301dbd1c73296289330378",
+  "rows": 15,
+  "filter": {
+    "cost_family": [
+      "exponential",
+      "power",
+      "logarithmic"
+    ],
+    "budget_flops": [
+      1e+19
+    ],
+    "Lctx": [
+      2048,
+      4096,
+      8192,
+      32768,
+      131072
+    ]
+  },
+  "marker_semantics": {
+    "triangle": "Q_B 触及 B6/B7 支持上界 1.0"
+  },
+  "outputs": [
+    "fig_q3_m1_qb_cn_single_v2.pdf",
+    "fig_q3_m1_qb_cn_single_v2.png",
+    "fig_q3_m1_qb_cn_single_v2.svg",
+    "fig_q3_m1_qb_cn_single_v2.tiff"
+  ],
+  "source_script": "scripts/plot_q3_m1_qb_cn.py",
+  "source_script_sha256": "059e14480872af56ab65fb2abe735f4a5e81e935b56ed8a9c3c9bbbb4300d119",
+  "qa_status": "LOCAL_RENDERED_PENDING_PEER_REVIEW",
+  "output_sha256": {
+    "fig_q3_m1_qb_cn_single_v2.pdf": "40dcf27c984f6de99c3914502cde8b6f4f41e33479af3cd7b3a0043a02f69775",
+    "fig_q3_m1_qb_cn_single_v2.png": "b4800f29bc6547412dbcbba30e4e9fa58e61666d4b686e9f04dd8bbc6886f6eb",
+    "fig_q3_m1_qb_cn_single_v2.svg": "da854fd5f5a29d0b8229baf68b3bd85d86b40ab0474df909147a1154014128c8",
+    "fig_q3_m1_qb_cn_single_v2.tiff": "b69f0fa6c774813222ab32e398c2ae06e52f8a448d32f2599412692164f27cec"
+  }
+}

@@ -29,5 +29,14 @@
     "fig_q3_m0_nd_budget_cn_single_v1.pdf",
     "fig_q3_m0_nd_budget_cn_single_v1.png",
     "fig_q3_m0_nd_budget_cn_single_v1.tiff"
-  ]
+  ],
+  "source_script": "scripts/plot_q3_m0_nd_budget_cn.py",
+  "source_script_sha256": "d3d3fe9104bb1ab0fa2327e69f5348f7d93e6774c43472a8bda57d4fe96421f0",
+  "qa_status": "LOCAL_RENDERED_PENDING_PEER_REVIEW",
+  "output_sha256": {
+    "fig_q3_m0_nd_budget_cn_single_v1.svg": "a58bf84655658168b13a0d28464eb9b953a1cd4ce784c12f4bf5aa0100333954",
+    "fig_q3_m0_nd_budget_cn_single_v1.pdf": "5b113175929f54bb3bc0370c840ca9b5e97e351836e235ca2301c08762a50570",
+    "fig_q3_m0_nd_budget_cn_single_v1.png": "d2541d6740e261f1b98ea365562372bde10743a7e77b878ac87bb536d8c79b56",
+    "fig_q3_m0_nd_budget_cn_single_v1.tiff": "335f3c56ff500df2b485952c4a40212078dac5a3fde4f5c6edb7c048ad6849b3"
+  }
 }
