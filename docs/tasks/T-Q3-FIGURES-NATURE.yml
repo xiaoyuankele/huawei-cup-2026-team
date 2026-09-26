@@ -42,7 +42,7 @@ inputs:
   - ref: experiments/runs/q2-e2-domain-substitution-20260925-r01/substitution_support.csv
     purpose: "上游配方支持域诊断"
 expected_outputs:
-  - path: paper/figures/q3-frozen-q2-exploration/
+  - path: paper/figures/q3/
     description: "绘图脚本、源表、图注及 SVG/PDF/PNG/TIFF 图件"
 acceptance_criteria:
   - "从固定源表重建五张图"
