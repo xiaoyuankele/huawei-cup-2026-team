@@ -1,0 +1,78 @@
+{
+  "schema_version": "q2.elasticity.audit.v1",
+  "run_id": "q2-elasticity-audit-20260925-r01",
+  "task_id": "T-Q2-MIGRATION",
+  "status": "EXPLORATORY_MODEL_INTERNAL_ELASTICITY_AUDIT",
+  "inputs": {
+    "source_model_metrics": "experiments/runs/q2-m0-m1-20260925-r01/metrics.json",
+    "source_model_metrics_sha256": "38854c768a44d450bf96f03da47d8ee47a8f292e48b8e5dedc48f489c71022e1",
+    "B1": {
+      "path": "data/origin/real_attachments/B_scaling_laws/pythia_training_log_existing.csv",
+      "sha256": "529a59644b0f57bf3a76037838b614bfedc35e58bb26b93052e34ffc63e454c2",
+      "rows": 1176
+    },
+    "B6": {
+      "path": "data/origin/real_attachments/B_scaling_laws/supplementary_NQ_experiment.csv",
+      "sha256": "c7450ce0d67d8692535fef4709e60e2da60b2c184738bf96df160a4be0a33a7f",
+      "rows": 360
+    },
+    "B7": {
+      "path": "data/origin/real_attachments/B_scaling_laws/supplementary_NQ_experiment_expanded.csv",
+      "sha256": "880fd265ca3e1d9bc93b4559af7ed7c18f89040634266c50bae03d88486e0f3a",
+      "rows": 450
+    }
+  },
+  "formulas": {
+    "epsilon_N": "dL/dN * N/L",
+    "epsilon_D": "dL/dD * D/L",
+    "epsilon_Q_score": "dL/dQ_score * Q_score/L; M1 native B6/B7 scale only",
+    "epsilon_impurity": "dL/d(1-Q_score) * (1-Q_score)/L; M1 native B6/B7 scale only",
+    "dlnN_dlnQ_score": "-epsilon_Q_score/epsilon_N",
+    "dlnD_dlnQ_score": "-epsilon_Q_score/epsilon_D"
+  },
+  "checks": {
+    "m0_rows": 1176,
+    "m1_b6_rows": 360,
+    "m1_b7_rows": 450,
+    "m0_finite": true,
+    "m1_finite": true,
+    "B7_nested_not_independent": true,
+    "Q1_Q_used_in_M1": false,
+    "a_to_b_row_join": false,
+    "formal_joint_fit": false
+  },
+  "full_fit_parameters": {
+    "M0_B1": {
+      "E": 1.6897975629375732,
+      "A": 0.353980320647387,
+      "B": 1.2403055835489103,
+      "alpha": 0.3399765819095136,
+      "beta": 0.2798781285449292
+    },
+    "M1_B6": {
+      "E": 1.4892660413046754,
+      "A": 0.5401729882501645,
+      "B": 1.3167948616197847,
+      "alpha": 0.27905392394495887,
+      "beta": 0.28280291348008263,
+      "G": 0.36224743500545836
+    }
+  },
+  "quality_counterfactual_within_M1": {
+    "q_score_low": 0.1,
+    "q_score_high": 1.0,
+    "absolute_loss_change_high_minus_low": -0.32602269150491253,
+    "B6_relative_loss_reduction_summary": {
+      "mean": 0.11879176432710632,
+      "p05": 0.0963035048275917,
+      "p95": 0.13885715656633577
+    },
+    "interpretation": "conditional M1 counterfactual only; not Q1 migration and not causal evidence"
+  },
+  "interpretation": [
+    "Elasticities are local derivatives of the frozen model forms, not new fitted effects.",
+    "M0 epsilon_N and epsilon_D describe B1's conditional scaling baseline.",
+    "M1 epsilon_Q_score and substitution ratios apply only to the native semi-synthetic B6/B7 Q_score.",
+    "No Q1-derived Q, A-side p, B8, or A-B row linkage enters this audit."
+  ]
+}
