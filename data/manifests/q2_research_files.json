@@ -250,8 +250,8 @@
     },
     {
       "path": "experiments/index.csv",
-      "bytes": 25735,
-      "sha256": "1c49dbfc881311e60eb44ec1dff09a2bd8e5921de684b7b01aea7da5472e76ea"
+      "bytes": 26393,
+      "sha256": "22581c69696d7cdc78069638f9f608334ffec8fc94048a365d9bd5c1bf6aaed0"
     },
     {
       "path": "experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv",
