@@ -1,0 +1,38 @@
+{
+  "run_id": "q3-p-conditional-20260925-r01",
+  "status": "EXPERIMENTAL_REVIEW",
+  "candidate_count": 6,
+  "candidate_indices": [
+    46,
+    97,
+    170,
+    186,
+    270,
+    323
+  ],
+  "model_count": 36,
+  "q3_nd_scenario_count": 15,
+  "panel_rows": 90,
+  "p_effect_in_nd_objective": false,
+  "joint_A_B_loss_claim": false,
+  "inputs": {
+    "stability_run": {
+      "path": "experiments/runs/q1-p-stability-20260925-r01",
+      "sha256": "f492f499e0288e1fad7aaa023597fe9a87a53886578831239928208afd6a8a31"
+    },
+    "feature_table": {
+      "path": "experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_wide.csv",
+      "sha256": "9c9ca86b53440e118d7bae29f5d261121888ed5068c2044566dbdfecdc700250"
+    },
+    "nd_scenarios": {
+      "path": "experiments/runs/q3-nd-baseline-20260925-r01/tables/q3_nd_baseline_scenarios.csv",
+      "sha256": "1e4e11e62679cc99183a53e15c14edb94469b0ea80b18c7f2a117dedd4d45cbc"
+    }
+  },
+  "limitations": [
+    "p is a discrete observed-candidate policy label; no continuous simplex optimum is produced",
+    "A-side p scores and Q3 N-D allocations are reported separately",
+    "no A-B row-level bridge or joint Loss objective is assumed",
+    "Q is not included"
+  ]
+}
