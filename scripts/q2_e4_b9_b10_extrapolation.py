@@ -81,6 +81,7 @@ def main():
     check('D_gradient',grid.dL_dlogD,-beta*B*grid.D_tokens_B**(-beta),tol=1e-12)
     check('asymptotic_floor',scale_loss(1e100,1e100),E,tol=1e-10)
     check('reference_quality_zero',quality[quality.quality_case=='reference'].quality_increment_loss,0.,tol=1e-12)
+    save('verification_checks.csv',pd.DataFrame(checks))
     metrics=dict(status='RUN_COMPLETE_RANGE_CONDITIONED',grid_rows=len(grid),quality_rows=len(quality),sensitivity_rows=len(sensitivity),coverage_rows=len(coverage),
         checks=len(checks),numerical_comparisons=sum(x['comparisons'] for x in checks),B9_B10_rows={'B9':audit['files']['B9']['rows'],'B10':audit['files']['B10']['rows']},
         max_N_extrapolation_factor=float(max(x['max_N_over_B1'] for x in coverage_rows)),max_D_extrapolation_factor=float(max(x['max_D_over_B1'] for x in coverage_rows)),

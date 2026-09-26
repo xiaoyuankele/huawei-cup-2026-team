@@ -14,5 +14,7 @@ def main():
     assert np.allclose(g.dL_dlogN,-alpha*A*g.N_params_B**(-alpha));assert np.allclose(g.dL_dlogD,-beta*b*g.D_tokens_B**(-beta))
     assert q[q.quality_case=='reference'].quality_increment_loss.abs().max()<1e-12
     assert json.loads((out/'metrics.json').read_text())['row_level_loss_loaded'] is False
-    print(json.dumps({'status':'PASS','csv_files_byte_identical':len(m['outputs']),'metrics_byte_identical':True,'inputs_unchanged':True,'row_level_loss_loaded':False},indent=2))
+    result={'status':'PASS','csv_files_byte_identical':len(m['outputs']),'metrics_byte_identical':True,'inputs_unchanged':True,'row_level_loss_loaded':False}
+    (out/'reproduction_verification.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
+    print(json.dumps(result,indent=2))
 if __name__=='__main__': main()
