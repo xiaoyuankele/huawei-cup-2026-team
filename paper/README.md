@@ -11,6 +11,7 @@
 - `sections/q1-quality-evaluation.tex`：第一部分，包含数据预处理、CRITIC--TOPSIS 评分、领域聚合和敏感性分析。
 - `sections/q1-conflict-resolution.tex`：第二部分，包含冲突定义、成因分析、有限补偿模型和扩展集结果。
 - `sections/drafts/q4-frontier-prediction.tex`：问题四正式章节，按最新大纲接入数据审计、短期验证、分位数模型、任务级证伪和十二个月情景。
+- `sections/drafts/figure/`：问题四正文图件的便捷浏览副本；完整出版级资产仍在 `figures/q4/`。
 - `sections/drafts/q2-current-stage.tex`：第二问的条件组合模型、迁移检验及六张正文图；由 `main.tex` 引入供排版审阅。
 - `sections/drafts/q3-resource-optimization.tex`：第三问的条件资源优化、五图一表和适用边界；由 `main.tex` 引入供排版审阅。
 - `sections/references.tex`：全文参考文献，在问题三正文后统一排版。
