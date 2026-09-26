@@ -1,0 +1,100 @@
+flowchart TB
+    START[实验卡冻结\nexperiment_id / run_id / 假设 / 主张边界]
+
+    subgraph DATA[只读数据与血缘层]
+        AQUAL[A1-A3\n质量信号与域级候选 q]
+        ARECIPE[A4-A15\n17域配比 p 与 Loss 配对]
+        AMAP[A16\n域映射 direct / near-direct / inferred]
+        BND[B1-B5\nN-D 标度与来源分层]
+        BQ[B6-B8\nQ_score 半合成敏感性]
+        BEXT[B9-B10\n外推范围与来源诊断]
+        C7[C7\n可行上下文长度]
+    end
+
+    subgraph AUDIT[数据与接口审计]
+        G0[G0 数据门\n路径 / 哈希 / 角色 / 投毒隔离]
+        BRIDGE[A-B 接口审计\n真实 join_key? 映射覆盖?]
+    end
+
+    subgraph MODELS[隔离模型轨道]
+        M0[M0 B1 经典 N-D\nL=E+A N^-alpha+B D^-beta]
+        M1[M1 B6/B7 条件质量\nM0+G(1-Q_score)]
+        AP[A侧配比模型\nL_A=f(p)\n组成数据变换]
+        M2[M2 Q(p) 情景\nQ_direct / Q_near / Q_range]
+    end
+
+    subgraph VALID[分层验证层]
+        V0[B1 分组留出]
+        V1[B2/B3/B4/B5\n来源或轨迹诊断]
+        V2[B6 ND单元留出\nB7嵌套扩展]
+        V3[A6-A11 验证\nA12-A15 外推诊断]
+        V4[映射覆盖与不确定性\n不得静默插补]
+    end
+
+    subgraph OPT[问题三条件优化层]
+        O0[Q3-ND 基线\n固定 Q=Q0, p=p0]
+        O1[质量条件情景\n比较 g(Q)]
+        O2[配比条件情景\n只使用 A侧或 Q(p) 区间]
+        SENS[预算 / Lctx / 参数\n成本占比与结构转移]
+    end
+
+    subgraph GATES[发布门]
+        G1[G1 模型门\n公式 / 单位 / 切分冻结]
+        G2[G2 验证门\n训练 / 留出 / 外推分离]
+        G3[G3 优化门\n可行性 / 边界 / 多初值]
+        G4[G4 主张门\nclaim ledger / 哈希 / 限制]
+        BLOCK[REVIEW_BLOCKED\n不得发布正式联合模型]
+    end
+
+    START --> G0
+    AQUAL --> G0
+    ARECIPE --> G0
+    AMAP --> G0
+    BND --> G0
+    BQ --> G0
+    BEXT --> G0
+    C7 --> G0
+    G0 --> BRIDGE
+    G0 --> G1
+    BRIDGE --> M2
+    BRIDGE --> BLOCK
+    G1 --> M0
+    G1 --> M1
+    G1 --> AP
+    M0 --> V0
+    M0 --> V1
+    M1 --> V2
+    AP --> V3
+    M2 --> V4
+    V0 --> G2
+    V1 --> G2
+    V2 --> G2
+    V3 --> G2
+    V4 --> G2
+    G2 --> O0
+    G2 --> O1
+    G2 --> O2
+    C7 --> O0
+    C7 --> O1
+    O0 --> SENS
+    O1 --> SENS
+    O2 --> SENS
+    SENS --> G3
+    G3 --> G4
+    G4 --> RELEASE[探索性 / 条件性结果包\nrun_id + metrics + claim ledger]
+    G2 -.-> BLOCK
+    G3 -.-> BLOCK
+
+    classDef data fill:#edf2f7,stroke:#4a5568,color:#1a202c;
+    classDef audit fill:#fff4d6,stroke:#b7791f,color:#4a2c00;
+    classDef model fill:#e6ffed,stroke:#2f855a,color:#17351f;
+    classDef valid fill:#e8f1ff,stroke:#3973b8,color:#102a43;
+    classDef opt fill:#f0e7ff,stroke:#805ad5,color:#2d174f;
+    classDef gate fill:#ffe8ee,stroke:#c53030,color:#4a1010;
+    class START data;
+    class AQUAL,ARECIPE,AMAP,BND,BQ,BEXT,C7 data;
+    class G0,BRIDGE audit;
+    class M0,M1,AP,M2 model;
+    class V0,V1,V2,V3,V4 valid;
+    class O0,O1,O2,SENS opt;
+    class G1,G2,G3,G4,BLOCK,RELEASE gate;
