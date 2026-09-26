@@ -8,4 +8,4 @@ run_id: q2-e4-b9-b10-extrapolation-20260926-r01；结果为范围条件外推，
 
 B9/B10估算Loss没有加载，不能当独立验证。
 
-发布：[Draft PR #38](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/38)，分支 wp/ACTOR-2/WP-B。保持 REVIEW_BLOCKED，未合并。
+发布：[Draft PR #38](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/41)，分支 wp/ACTOR-2/WP-B。保持 REVIEW_BLOCKED，未合并。

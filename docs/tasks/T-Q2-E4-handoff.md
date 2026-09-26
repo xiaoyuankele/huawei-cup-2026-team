@@ -6,4 +6,4 @@ task_id: T-Q2-E4；run_id: q2-e4-b9-b10-extrapolation-20260926-r01；commit: 5e3
 
 下一步：获取源链接B9/B10逐行数据并完成独立评审后，才可讨论验证。当前不自动升级为PACKAGE_ACCEPTED。
 
-发布：[Draft PR #38](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/38)，分支 wp/ACTOR-2/WP-B。保持 REVIEW_BLOCKED，未合并。
+发布：[Draft PR #38](https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/41)，分支 wp/ACTOR-2/WP-B。保持 REVIEW_BLOCKED，未合并。

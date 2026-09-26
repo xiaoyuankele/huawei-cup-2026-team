@@ -226,12 +226,12 @@
     {
       "path": "docs/tasks/T-Q2-E4-handoff.md",
       "bytes": 774,
-      "sha256": "7067cf289a00f9c0149405c5c00086f8c64ed5803fcc1c618a9ef83e3267d955"
+      "sha256": "af16c6463aafe80b6ce0ae33e9ccc6b51067876f41cb0341b7bea63e6e34a55f"
     },
     {
       "path": "docs/tasks/T-Q2-E4.yml",
       "bytes": 2012,
-      "sha256": "39424290680e9c0f6b384ca0c917f152065b6e74c3847de912c8e62be4da5464"
+      "sha256": "7d9ddf083773a20e0766c65a0398718e907558c0bb1b815721f69310a9b87c98"
     },
     {
       "path": "docs/tasks/T-Q2-RESEARCH-HANDOFF.yml",
@@ -251,7 +251,7 @@
     {
       "path": "experiments/index.csv",
       "bytes": 25735,
-      "sha256": "be9d1d72edc1dbefa5e7f0c663befdeaea1cb8be22452da66959d0ede3237c34"
+      "sha256": "1c49dbfc881311e60eb44ec1dff09a2bd8e5921de684b7b01aea7da5472e76ea"
     },
     {
       "path": "experiments/runs/q2-calibration-sensitivity-20260925/A_scale_offset_audit.csv",
@@ -711,7 +711,7 @@
     {
       "path": "experiments/runs/q2-e4-b9-b10-extrapolation-20260926-r01/README.md",
       "bytes": 728,
-      "sha256": "d127c4595220e5e6d7c73298171e9a8913877a110213985c62f95aacf5486e74"
+      "sha256": "d8a8ef28c3ffe6e1da5b0ab80ba595b2c8e6ab325e983c42dcf9549a6cb72cb1"
     },
     {
       "path": "experiments/runs/q2-e4-b9-b10-extrapolation-20260926-r01/b9_b10_coverage.csv",
@@ -781,7 +781,7 @@
     {
       "path": "experiments/runs/q2-e4-b9-b10-extrapolation-20260926-r01/governance.yml",
       "bytes": 893,
-      "sha256": "6e34e947c0ebe1b11eaf0ce267ac34884a4321123e6e2cb41f580f2f609b473a"
+      "sha256": "bc2b4e7fa2f13dc6aa9621c4bbccd543f6081efebde3095ba58d1cdf448393cb"
     },
     {
       "path": "experiments/runs/q2-e4-b9-b10-extrapolation-20260926-r01/manifest.json",
@@ -1446,12 +1446,12 @@
     {
       "path": "governance/feedback/records/FB-Q2-E4-COVERAGE.yml",
       "bytes": 1808,
-      "sha256": "47e3540f3f6abc68e8cd8d4e8682a38fcb8aae1ef720cb3166c9b0a0fe0f0855"
+      "sha256": "7f4157406586c70ecd223e7fffd6f75dd84b1b81f702b3b138f84a27ec03c789"
     },
     {
       "path": "governance/feedback/records/FB-Q2-E4-GOV.yml",
       "bytes": 1769,
-      "sha256": "7283fa1a201bef9a0657fd75aaed11e1f0c661a7e9ee72138ca6f362dd4a49cd"
+      "sha256": "1eac02458ec1bf7ea4760ee2d057507d5962260aab9f6b2818c3e2a7f141e14f"
     },
     {
       "path": "governance/prompts/catalog/P-Q2-E1-GOV.md",
@@ -1501,7 +1501,7 @@
     {
       "path": "governance/prompts/runs/PR-Q2-E4-20260926.yml",
       "bytes": 1102,
-      "sha256": "fb70ab33d3497ba39c012a7887397f4b42859e84c66d0109832dec66cf342914"
+      "sha256": "fb269ec6fce4d75047b9296188b5183a41c5a2c3bd5cd17acc6066ce0a0a91fe"
     },
     {
       "path": "paper/claim-ledger.csv",
