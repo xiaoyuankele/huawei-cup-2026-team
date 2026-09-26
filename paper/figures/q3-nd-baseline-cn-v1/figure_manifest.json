@@ -1,0 +1,35 @@
+{
+  "figure_id": "fig_q3_m0_nd_cn_single_v1",
+  "title": "M0模型在预算约束下的N-D最优配置（中文单图）",
+  "source_run": "q3-nd-baseline-20260925-r01",
+  "source_csv": "experiments\\runs\\q3-nd-baseline-20260925-r01\\tables\\q3_nd_baseline_scenarios.csv",
+  "source_csv_sha256": "1e4e11e62679cc99183a53e15c14edb94469b0ea80b18c7f2a117dedd4d45cbc",
+  "metrics": "experiments\\runs\\q3-nd-baseline-20260925-r01\\metrics.json",
+  "metrics_sha256": "3080c54d4af0db20586ca2cbb5817fea6fc200a400d8814d7facecb05536ac6c",
+  "filter": {
+    "Lctx": 8192,
+    "rows": 3
+  },
+  "outputs": [
+    "fig_q3_m0_nd_cn_single_v1.svg",
+    "fig_q3_m0_nd_cn_single_v1.pdf",
+    "fig_q3_m0_nd_cn_single_v1.png",
+    "fig_q3_m0_nd_cn_single_v1.tiff"
+  ],
+  "encoding": "N,D in billions; budget C in FLOPs; Q and p fixed per M0 run",
+  "visual_semantics": {
+    "hollow_circle": "relaxed analytic solution within B1 support",
+    "hollow_triangle": "relaxed analytic extrapolation outside B1 support",
+    "filled_circle": "bounded solution inside B1 support",
+    "filled_square": "bounded solution at B1 support boundary"
+  },
+  "source_script": "scripts/plot_q3_m0_nd_cn.py",
+  "source_script_sha256": "ce602fe292509ae032baec265e5f655580d1a832ef0e7beef18be334c1c589ee",
+  "qa_status": "LOCAL_RENDERED_PENDING_PEER_REVIEW",
+  "output_sha256": {
+    "fig_q3_m0_nd_cn_single_v1.svg": "e93ae07e5656346cbed535b640f13b9e16276d41c45a1714e971b24c4851fd44",
+    "fig_q3_m0_nd_cn_single_v1.pdf": "cf17a29f28f5013374159dba7535663ff69286c859d5f0ba58a5c259c2abbf7d",
+    "fig_q3_m0_nd_cn_single_v1.png": "8e8ca06ceaebdb215807d094e7ff9f3ee62f022579c218668f5b6d77809f96a0",
+    "fig_q3_m0_nd_cn_single_v1.tiff": "7722bb270cad140d7679381df76c8de5b7c75afc504fe3c38870300ba65fe6b7"
+  }
+}

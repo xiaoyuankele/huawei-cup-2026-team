@@ -1,0 +1,71 @@
+task_id: T-Q3-FIGURES
+title: "问题三中文单张图整理与可追溯交付"
+problem_id: Q3
+subproblem_id: Q3-S01~Q3-S03
+problem_scope: "M0 N-D 基线、M1 N-D-Q_B 条件优化和 M2/P 配比接口敏感性图形"
+status: PEER_REVIEW
+work_package: WP-C
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: paper
+review:
+  peer_reviewer_must_differ: true
+  integrator_must_differ: true
+  no_reviewer_status: REVIEW_BLOCKED
+priority: P1
+issue: ""
+announcement:
+  mode: oral
+  announced_by_actor: ACTOR-1
+  announced_at: 2026-09-26T00:00:00+08:00
+  announcement_ref: "docs/decisions/q3-figure-package-20260926.md"
+  summary: "按仓库规范整理问题三中文单张图、图形说明、来源哈希和复核入口"
+  acknowledged_by_actor: ACTOR-2
+  acknowledged_at: 2026-09-26T00:00:00+08:00
+feedback_required: true
+feedback_ids: []
+branch: "feature/B/role-actor-separation"
+branch_owner_actor: ACTOR-2
+gate: G0
+prompt:
+  prompt_id: P-PAPER-FIGURES-001
+  version: v1.0.0
+  prompt_run_id: PR-20260926-Q3-FIGURES-LOCAL-001
+objective: "把问题三五张中文单图及其数据、脚本、解释和限制整理为可复核的候选论文素材包"
+inputs:
+  - ref: experiments/runs/q3-nd-baseline-20260925-r01/
+    purpose: "M0 N-D 基线和预算敏感性场景"
+  - ref: experiments/runs/q3-q-conditional-20260925-r01/
+    purpose: "M1 原生 Q_B 条件场景"
+  - ref: experiments/runs/q3-p-conditional-20260925-r01/
+    purpose: "M2/P 条件面板"
+  - ref: experiments/runs/q2-q3-interface-sensitivity-20260926-r01/
+    purpose: "Q2-Q3 接口敏感性汇总"
+expected_outputs:
+  - path: paper/figures/q3-conditional/README.md
+    description: "五张单图清单、用途、解释边界和复现入口"
+  - path: paper/figures/q3-*-cn-v1/
+    description: "PDF、SVG、600 dpi PNG/TIFF、figure_contract.md 和 figure_manifest.json"
+  - path: scripts/plot_q3_*_cn.py
+    description: "可复现的 Python 绘图脚本"
+  - path: docs/decisions/q3-figure-package-20260926.md
+    description: "交付说明、复核结果和正文接入边界"
+acceptance_criteria:
+  - "每张图只表达一个主要关系，中文标签不遮挡数据"
+  - "源 CSV、源脚本、输出文件和 SHA256 在 manifest 中可追溯"
+  - "M1 明确 Q_B 为 B6/B7 原生变量，M2/P 明确为假设条件情景"
+  - "所有图提供 PDF、SVG、600 dpi PNG/TIFF"
+  - "完整情景表优先于代表性单图，支持域外点和边界点单独标记"
+  - "不声称 A-B 联合 Loss 已验证、存在唯一最优配比或现实全局最优"
+  - "Peer Review 和 Integrator 结论完成前不自动替换正文图引用"
+definition_of_done:
+  - "五个绘图脚本可重复运行并通过语法检查"
+  - "任务说明、figure contract、manifest 和实验索引互相回链"
+  - "问题三候选主张登记到 paper/claim-ledger.csv"
+  - "Peer Reviewer 和 Integrator 独立复核后再决定正文集成"
+notes: "本次提交为可审阅候选素材包；正式正文接入、发布版 PDF 和主张状态升级留待复核。"

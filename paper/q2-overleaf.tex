@@ -1,0 +1,40 @@
+% !Mode:: "TeX:UTF-8"
+%!TEX program = xelatex
+% 问题二独立编译入口：在 Overleaf 中将 paper/ 目录作为项目根目录，
+% 选择 XeLaTeX 编译本文件即可。
+\documentclass[bwprint]{template/gmcmthesis}
+
+\hypersetup{hidelinks}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{subfig}
+\usepackage{siunitx}
+\usepackage{colortbl}
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithmicx,algorithm}
+\usepackage{amsmath,amssymb,booktabs,graphicx}
+\graphicspath{{./}{figures/q2-scaling-law/}{template/figures/}}
+\input{commands.tex}
+
+\title{问题二：跨维度数据融合与广义标度律}
+\baominghao{待填写正式队伍编号}
+\schoolname{学校名称填写}
+\membera{成员 A}
+\memberb{成员 B}
+\memberc{成员 C}
+
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本文针对参数规模、训练数据量、数据质量和领域配比来自不同附件、缺少逐行联合观测的问题，先分别检验规模项、质量增量和配比响应，再通过显式的质量桥接构造条件预测式。B1 内部留一检验支持幂律规模项；B6/B7 支持半合成质量增量的局部诊断；A 侧配方数据用于领域配比与质量代理的条件分析。结果显示，边际收益递减、有限领域替代和质量—参数替代均可在冻结模型内计算，但质量桥接覆盖有限，B8 存在方向冲突，B9/B10 仅支持范围审计，B4/B5 仍保留明显来源异质性。因此，本文将联合式定位为资源配置的条件情景模型，而非已经完成外部联合验证的广义定律。
+\keywords{广义标度律\quad 数据质量\quad 领域配比\quad 条件外推\quad 迁移诊断}
+\end{abstract}
+
+\pagestyle{plain}
+\input{sections/drafts/q2-complete.tex}
+
+\end{document}
