@@ -1,14 +1,14 @@
 {
   "status": "PASS",
-  "main_commit": "3581600024f0f3be2c8e3b9effd4045a41992f31",
+  "main_commit": "45021588b418887429118a211e3187ee22575131",
   "figure_qa_failures": 0,
   "preregistration_config_unchanged": true,
   "report_hash_matches": true,
   "shared_ledgers": [
     {
       "file": "experiments/index.csv",
-      "main_records": 46,
-      "current_records": 47,
+      "main_records": 56,
+      "current_records": 57,
       "main_records_unchanged": true
     },
     {
