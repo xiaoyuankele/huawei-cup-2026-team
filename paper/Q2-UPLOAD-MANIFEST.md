@@ -1,6 +1,10 @@
 # 问题二上传位置清单
 
-本文档记录问题二数据处理、七张新增图件和论文草稿在云端仓库中的建议路径。仓库根目录为 `q4_merge_worktree/`。
+本文档记录问题二数据处理、七张新增图件和论文草稿在团队云端仓库中的实际路径。
+
+目标仓库：`https://github.com/xiaoyuankele/huawei-cup-2026-team`
+
+目标分支：`main`
 
 ## 直接提交到仓库的文件
 
@@ -13,7 +17,7 @@
 | 七张新增图的 SVG/PNG/TIFF | `paper/figures/q2-scaling-law/Fig05...Fig11.{svg,png,tiff}` | 编辑、预览和投稿格式备用 |
 | 图件来源清单 | `paper/figures/q2-scaling-law/q2_gap_figures_manifest.json` | 记录每幅图对应的数据源、脚本和输出文件 |
 | 图件质量检查 | `paper/figures/q2-scaling-law/FIGURE-QA.md` | 记录文字重叠、字体、版式和 PDF 导出检查结果 |
-| 绘图脚本 | `scripts/plot_q2_gap_figures.py` | 重新生成 Fig05–Fig11 的唯一脚本入口 |
+| 绘图脚本 | `paper/figures/q2-scaling-law/plot_q2_figures.py` | 重新生成 Fig01–Fig11 和补充图的脚本入口 |
 
 ## Overleaf 一次性上传包
 
@@ -31,13 +35,13 @@
 
 ## 当前整合边界
 
-`paper/main.tex` 尚未切换到 `q2-complete.tex`。因此本次整理只准备了问题二的可审阅草稿和 Overleaf 编译入口，没有覆盖主文稿入口。完成科学审阅后，再决定是否把 `q2-complete.tex` 接入 `paper/main.tex`。
+`paper/main.tex` 已切换到 `sections/drafts/q2-complete.tex`。该完整章节保留原有 Fig01–Fig04、补充图 FigS01–FigS02，并接入第二部分新增 Fig05–Fig11；`q2-current-stage.tex` 保留为早期阶段稿，仅用于追溯。
 
 E4 外推实验的原始运行目录仍在本地交付目录 `q2_e2_delivery/`；本仓库已保存其生成图件及来源记录，但没有把该本地目录整体复制进 `q4_merge_worktree`。
 
 ## 建议上传顺序
 
-1. 先上传 `paper/figures/q2-scaling-law/` 和 `scripts/plot_q2_gap_figures.py`。
-2. 再上传 `paper/sections/drafts/q2-complete.tex`、`paper/q2-overleaf.tex` 和 `paper/Q2-OVERLEAF-README.md`。
-3. 需要给合作者直接编译时，再上传 `paper/Q2-Overleaf-Bundle.zip`。
-4. 上传后在云端仓库核对 `q2_gap_figures_manifest.json` 和 `FIGURE-QA.md` 是否一并存在。
+1. 已上传 `paper/figures/q2-scaling-law/` 中 Fig05–Fig11 的 PDF、SVG、PNG、TIFF，以及 README、QA、manifest 和绘图脚本。
+2. 已上传 `paper/sections/drafts/q2-complete.tex`、`paper/q2-overleaf.tex`、`paper/Q2-OVERLEAF-README.md` 和 `paper/Q2-Overleaf-Bundle.zip`。
+3. 已更新 `paper/main.tex`，主入口现在引用 `q2-complete.tex`。
+4. 已在 `main` 分支逐项核验 28 个图件文件、完整正文和 Overleaf 文件。
