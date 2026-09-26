@@ -8,8 +8,8 @@ peer_reviewer_actor: ACTOR-3
 release_integrator_actor: ACTOR-1
 role_assignment_status: ROUTING_PENDING_HUMAN_CONFIRMATION
 status: REVIEW_BLOCKED
-execution_status: SPEC_READY
-registered_at: '2026-09-26T02:14:40+00:00'
+execution_status: RUN_COMPLETE
+registered_at: '2026-09-26T02:15:35+00:00'
 registered_before_execution: true
 execution_class: USER_AUTHORIZED_CONDITIONAL_EXPLORATION
 branch: wp/ACTOR-2/WP-B
@@ -21,7 +21,7 @@ review:
 announcement:
   mode: user_request
   announcement_ref: docs/research/q2/E4-announcement.md
-  recorded_at: '2026-09-26T02:14:40+00:00'
+  recorded_at: '2026-09-26T02:15:35+00:00'
 issue: https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/9
 issue_scope: Routing reference; Q2 scope pending
 prompt:
@@ -33,7 +33,7 @@ feedback_ids:
 - FB-Q2-E4-GOV
 - FB-Q2-E4-COVERAGE
 inputs:
-- ref: experiments/runs/q2-model-finalization-20250925/model_parameters.json
+- ref: experiments/runs/q2-model-finalization-20260925/model_parameters.json
 - ref: experiments/runs/q2-b9-b10-extrapolation-audit-20250925-r01/metrics.json
 - ref: experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/quality_path_support.csv
 - ref: configs/q2-e4-b9-b10-extrapolation.json
@@ -47,3 +47,8 @@ acceptance_criteria:
 - quality scenarios labelled formal versus feasible
 - second-directory bytes identical
 - independent review
+completed_at: '2026-09-26T02:31:07.751726+00:00'
+pr: PENDING_CREATION
+code_commit: 5e31981174d9e4e93a7c05c0cdcbc8361d8ab900
+run_manifest: experiments/runs/q2-e4-b9-b10-extrapolation-20260926-r01/manifest.json
+handoff: docs/tasks/T-Q2-E4-handoff.md
