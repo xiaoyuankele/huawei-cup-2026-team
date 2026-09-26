@@ -1,0 +1,172 @@
+{
+  "audit": {
+    "rows_joined": 1859,
+    "models": 1850,
+    "months": [
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12",
+      "2025-01",
+      "2025-02",
+      "2025-03"
+    ],
+    "month_counts": {
+      "2024-06": 160,
+      "2024-07": 69,
+      "2024-08": 102,
+      "2024-09": 249,
+      "2024-10": 196,
+      "2024-11": 168,
+      "2024-12": 228,
+      "2025-01": 364,
+      "2025-02": 204,
+      "2025-03": 119
+    },
+    "type_counts": {
+      "chat": 319,
+      "fine-tuned": 783,
+      "merge": 613,
+      "other": 7,
+      "pretrained": 137
+    },
+    "split": {
+      "train_months": [
+        "2024-06",
+        "2024-07",
+        "2024-08",
+        "2024-09",
+        "2024-10",
+        "2024-11",
+        "2024-12"
+      ],
+      "test_months": [
+        "2025-01",
+        "2025-02",
+        "2025-03"
+      ]
+    },
+    "metadata_fields_available": {
+      "model_family": false,
+      "training_data_volume": false,
+      "training_compute": false,
+      "eval_version": false
+    },
+    "metadata_fields_derived": [
+      "model_family=namespace_prefix"
+    ],
+    "primary_score": "C8 detailed six-task equal-weight mean x 100",
+    "warning": "12-month outputs are scenario projections, not validated 12-step forecasts; profile intervals are not prediction intervals."
+  },
+  "best_rolling": [
+    {
+      "score": "c8_q95",
+      "cohort": "pretrained_only",
+      "horizon_months": 3,
+      "method": "mean_last_3",
+      "n_forecasts": 1,
+      "MAE": 0.5130337172473389,
+      "RMSE": 0.5130337172473389,
+      "mean_bias": -0.5130337172473389,
+      "R2": NaN
+    },
+    {
+      "score": "leaderboard_average_q95",
+      "cohort": "all_models",
+      "horizon_months": 3,
+      "method": "linear_all",
+      "n_forecasts": 1,
+      "MAE": 0.6161365400505687,
+      "RMSE": 0.6161365400505687,
+      "mean_bias": -0.6161365400505687,
+      "R2": NaN
+    },
+    {
+      "score": "c8_q95",
+      "cohort": "pretrained_only",
+      "horizon_months": 3,
+      "method": "linear_all",
+      "n_forecasts": 1,
+      "MAE": 0.7522206926388648,
+      "RMSE": 0.7522206926388648,
+      "mean_bias": 0.7522206926388648,
+      "R2": NaN
+    },
+    {
+      "score": "c8_q95",
+      "cohort": "all_four_types",
+      "horizon_months": 1,
+      "method": "linear_last_4",
+      "n_forecasts": 3,
+      "MAE": 0.8524778271876722,
+      "RMSE": 0.8602484043149786,
+      "mean_bias": -0.3768708346331451,
+      "R2": 0.7004185404006313
+    },
+    {
+      "score": "leaderboard_average_q95",
+      "cohort": "all_models",
+      "horizon_months": 1,
+      "method": "linear_last_4",
+      "n_forecasts": 3,
+      "MAE": 0.8545155761219215,
+      "RMSE": 1.193989942984971,
+      "mean_bias": -0.5623764211383531,
+      "R2": 0.21285366198943168
+    }
+  ],
+  "best_70_30": [
+    {
+      "cohort": "pretrained_only",
+      "tau": 0.95,
+      "n_train": 96,
+      "n_test": 41,
+      "pinball_loss": 0.406937756304215,
+      "MAE": 8.138755126084293,
+      "RMSE": 8.666317797415896,
+      "bias": 8.138755126084293,
+      "R2": -1.1385185919660126,
+      "pseudo_R2": 0.4420046493351536
+    },
+    {
+      "cohort": "all_four_types",
+      "tau": 0.95,
+      "n_train": 1167,
+      "n_test": 684,
+      "pinball_loss": 0.559348917691612,
+      "MAE": 10.38726440176718,
+      "RMSE": 12.132635206845578,
+      "bias": 10.298407295982175,
+      "R2": -0.424696021273993,
+      "pseudo_R2": 0.4290225685823672
+    },
+    {
+      "cohort": "pretrained_only",
+      "tau": 0.9,
+      "n_train": 96,
+      "n_test": 41,
+      "pinball_loss": 0.7242237128861831,
+      "MAE": 6.8258215017413395,
+      "RMSE": 7.339360482032256,
+      "bias": 6.721717594961215,
+      "R2": -0.5337700290943557,
+      "pseudo_R2": 0.44998593262095055
+    },
+    {
+      "cohort": "all_four_types",
+      "tau": 0.9,
+      "n_train": 1167,
+      "n_test": 684,
+      "pinball_loss": 1.006303384099597,
+      "MAE": 9.457107480329716,
+      "RMSE": 11.250653323723075,
+      "bias": 9.305625890163153,
+      "R2": -0.22508836989570336,
+      "pseudo_R2": 0.4229165119212792
+    }
+  ],
+  "scenario_rows": 50
+}

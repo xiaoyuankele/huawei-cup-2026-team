@@ -1,0 +1,62 @@
+{
+  "rows_joined": 1859,
+  "models": 1850,
+  "months": [
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03"
+  ],
+  "month_counts": {
+    "2024-06": 160,
+    "2024-07": 69,
+    "2024-08": 102,
+    "2024-09": 249,
+    "2024-10": 196,
+    "2024-11": 168,
+    "2024-12": 228,
+    "2025-01": 364,
+    "2025-02": 204,
+    "2025-03": 119
+  },
+  "type_counts": {
+    "chat": 319,
+    "fine-tuned": 783,
+    "merge": 613,
+    "other": 7,
+    "pretrained": 137
+  },
+  "split": {
+    "train_months": [
+      "2024-06",
+      "2024-07",
+      "2024-08",
+      "2024-09",
+      "2024-10",
+      "2024-11",
+      "2024-12"
+    ],
+    "test_months": [
+      "2025-01",
+      "2025-02",
+      "2025-03"
+    ]
+  },
+  "metadata_fields_available": {
+    "model_family": false,
+    "training_data_volume": false,
+    "training_compute": false,
+    "eval_version": false
+  },
+  "metadata_fields_derived": [
+    "model_family=namespace_prefix"
+  ],
+  "primary_score": "C8 detailed six-task equal-weight mean x 100",
+  "warning": "12-month outputs are scenario projections, not validated 12-step forecasts; profile intervals are not prediction intervals."
+}
