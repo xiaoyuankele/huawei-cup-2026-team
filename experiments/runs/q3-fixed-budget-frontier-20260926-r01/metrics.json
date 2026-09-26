@@ -1,0 +1,92 @@
+{
+  "schema_version": "q3.fixed_budget.frontier.v1",
+  "run_id": "q3-fixed-budget-frontier-20260926-r01",
+  "status": "EXPLORATORY_Q3_FIXED_BUDGET_GRID_FRONTIER",
+  "model": "frozen B6 M1 native Q_score conditional model",
+  "grid": {
+    "N_points": 15,
+    "D_points": 15,
+    "Q_points": 19,
+    "N_range_B": [
+      0.070542,
+      11.965825
+    ],
+    "D_range_B": [
+      0.134,
+      299.893
+    ],
+    "Q_range": [
+      0.1,
+      1.0
+    ]
+  },
+  "Q0_values": [
+    0.1,
+    0.3,
+    0.5
+  ],
+  "cost_families": {
+    "exponential": {
+      "gamma": 10000000.0,
+      "lambda": 6.0
+    },
+    "power": {
+      "gamma": 5000000000.0,
+      "lambda": 4.0
+    },
+    "logarithmic": {
+      "gamma": 2000000000.0,
+      "lambda": 10.0
+    }
+  },
+  "budgets_flops": [
+    1e+19,
+    1e+22,
+    1e+24
+  ],
+  "Lctx_values_from_metadata": [
+    2048,
+    4096,
+    8192,
+    32768,
+    131072
+  ],
+  "scenario_count": 135,
+  "frontier_definition": "within fixed Q0, cost family, Lctx and budget, sort feasible grid by realized cost and keep points with strictly improving loss",
+  "inputs": {
+    "m1_metrics": {
+      "path": "experiments/runs/q2-m0-m1-20260925-r01/metrics.json",
+      "sha256": "38854c768a44d450bf96f03da47d8ee47a8f292e48b8e5dedc48f489c71022e1"
+    },
+    "b1_support": {
+      "path": "data/origin/real_attachments/B_scaling_laws/pythia_training_log_existing.csv",
+      "sha256": "529a59644b0f57bf3a76037838b614bfedc35e58bb26b93052e34ffc63e454c2"
+    },
+    "b6_q_range": {
+      "path": "data/origin/real_attachments/B_scaling_laws/supplementary_NQ_experiment.csv",
+      "sha256": "c7450ce0d67d8692535fef4709e60e2da60b2c184738bf96df160a4be0a33a7f"
+    },
+    "c7_context": {
+      "path": "data/origin/real_attachments/C_efficiency_evolution/model_architecture_metadata.csv",
+      "sha256": "ee24622cb3a6334f08d72c9ea373be26d5e5585bb266367c5f66d77499112ffc"
+    }
+  },
+  "checks": {
+    "all_frontier_finite": true,
+    "all_summary_finite": true,
+    "a_to_b_row_join": false,
+    "formal_joint_fit": false,
+    "Q1_Q_A_p_used": false,
+    "B8_used": false
+  },
+  "limitations": [
+    "grid frontier is a discrete conditional scenario, not a continuous global optimum",
+    "Q0 values are cost-reference assumptions and M1 is not refit at each Q0",
+    "Q is native B6 Q_score, not Q1-derived Q_A(p)",
+    "all N, D and Q values are restricted to observed B1/B6 support"
+  ],
+  "output_sha256": {
+    "fixed_budget_frontier_points.csv": "a0b31425ea5ff5c9d91c3045651fbb9a3eb9fba9be708c6bbf038ff913ec6063",
+    "fixed_budget_frontier_summary.csv": "7fb662f2dbb276b80309369e905d714eb6bcb172eed3669807f60b28a8c53823"
+  }
+}

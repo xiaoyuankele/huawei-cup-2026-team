@@ -1,0 +1,48 @@
+{
+  "schema_version": "q1.latex.q.interface.v1",
+  "run_id": "q1-latex-q-interface-20260925-r01",
+  "task_id": "T-Q1-004",
+  "status": "Q1_LATEX_Q_INTERFACE_READY_FOR_EXPLORATORY_Q2",
+  "source_model": {
+    "paper_tex": "paper/sections/drafts/q1-quality-evaluation.tex",
+    "paper_tex_sha256": "7ad290632a0ffb84f4c1b0099815e89fa4844ac6757aaedf4a39713a230c640b",
+    "score_table": "experiments/runs/q1-critic-topsis-20260925-r01/tables/domain_scores.csv",
+    "score_table_sha256": "b9b8e124a2deb86904f139c3144c496c90a6e5cfcc858f26aa7e1768ffa0de43",
+    "model": "16 indicators -> A1 1%/99% robust normalization -> CRITIC weights -> weighted-distance TOPSIS",
+    "formula": "Q_i = 100 * D_i_minus / (D_i_plus + D_i_minus)",
+    "domain_aggregation": "Q_g = mean_i_in_domain(Q_i)"
+  },
+  "latex_token_audit": {
+    "sixteen_indicators": true,
+    "robust_01_99": true,
+    "critic": true,
+    "topsis": true,
+    "q_formula": true,
+    "domain_mean": true
+  },
+  "anchor_quality_scores": {
+    "arxiv": 63.862359595226806,
+    "book": 56.03252048079162,
+    "c4": 66.00211266187863,
+    "commoncrawl": 64.33570995356357,
+    "github": 51.70140753241471,
+    "stackexchange": 61.38787333596658,
+    "wikipedia": 61.10090692042493
+  },
+  "anchor_score_max_abs_error_vs_frozen_table": 0.0,
+  "approved_mapping_decision": "q1-domain-conflict-review-decision-20260925-r01",
+  "transfer_matrix_run": "q1-domain-transfer-matrix-20260925-r01",
+  "transfer_matrix_summary": {
+    "wide_rows": 1214,
+    "long_rows": 20638,
+    "soft_q_mean_0_100": 60.83307799767191,
+    "soft_range_width_mean_0_100": 2.308517065408358,
+    "official_mapped_mass_mean": 0.567342100650284
+  },
+  "q2_status": "exploratory_interface_only; formal Q2 fit not started",
+  "limitations": [
+    "The Q1 score is a composite proxy, not a human-label accuracy estimate.",
+    "The 11 inferred domain rows remain semantic priors even after user approval of the main recommendation.",
+    "The interface does not join A and B rows by row number; Q/p must enter Q2 through the declared interface."
+  ]
+}
