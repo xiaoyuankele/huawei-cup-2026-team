@@ -133,6 +133,33 @@ $C_{\mathrm{attn}}=\eta L_{\mathrm{ctx}}\times10^{18}ND$，得到
 项小于训练项，高于该值时注意力项大于训练项。它不是模型效果已经验证的临界点，
 也不是质量变量的经验转折点。
 
+
+图~\ref{fig:q3-m1-qb}显示低预算代表性切片下三类质量成本对 $Q_B^*$ 的影响。
+在相同的五档上下文中，成本曲线的差别会改变质量变量是否较早触及 $Q_B=1.0$
+上界；这说明质量投入与规模、数据量共享预算时，成本形状本身就是资源配置的
+一个条件因素。该图只抽取 $C=10^{19}$ FLOPs 的 15 行，不能替代前述三档预算
+共 45 行的情景表，也不能把 $Q_B^*=1$ 解释为经验验证的质量饱和点。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.82\textwidth]{figures/q3-m1-qb-cn-v1/fig_q3_m1_qb_cn_single_v2.pdf}
+  \caption{M1 低预算代表性情景下的最优原生质量变量 $Q_B^*$。$Q_B$ 为 B6/B7 原生变量；曲线比较三类假设质量成本和五档上下文。}
+  \label{fig:q3-m1-qb}
+\end{figure}
+
+图~\ref{fig:q3-context-cost}给出上下文成本转移的结构解释。比值曲线在
+$L_{\rm ctx}=30000$ 处穿过 1，正好对应式~\eqref{eq:q3-sp2-context-ratio}；
+观测上下文集合中的 $8192$ 位于训练成本占优的一侧，而 $32768$ 和 $131072$
+位于注意力成本占优的一侧。因此，图形支持的是成本项的代数分解和情景解释，
+不支持把 $30000$ 认作模型效果已经发生转折的实证阈值。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.78\textwidth]{figures/q3-context-cost-cn-v1/fig_q3_context_cost_cn_single_v1.pdf}
+  \caption{上下文注意力成本与训练成本的结构比值。虚线标出 $L_{\rm ctx}=30000$ 的成本结构临界点；该点不表示模型效果验证的临界点。}
+  \label{fig:q3-context-cost}
+\end{figure}
+
 \subsubsection{稳健性分析与结论}
 
 复核结果包括：45 行输出及参数折叠传播均为有限值；原生情景最大相对预算误差

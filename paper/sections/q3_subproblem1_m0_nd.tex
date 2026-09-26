@@ -192,6 +192,33 @@ $2.30\times10^{22}$ 至 $1.16\times10^{23}$ FLOPs；未使用的预算不能
 被解释为模型还可以在 B1 证据范围内继续获得的收益。高预算下无界解析
 Loss（1.9134--1.9763）只能作为外推诊断，不能作为已验证的最优 Loss。
 
+
+图~\ref{fig:q3-m0-nd-baseline}将表中的解析解、有界解和 B1 支持边界放在同一
+$N$--$D$ 平面中。低预算点位于观测支持域内部，解析点与有界点基本重合；预算
+升高后，解析前沿继续向支持域外延伸，而有界解在 $N_{\max}$ 或 $D_{\max}$
+处停止。因而图中的边界点表达的是“在当前支持域内可取的最大配置”，不是对
+支持域外模型规模的经验验证。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.82\textwidth]{figures/q3-nd-baseline-cn-v1/fig_q3_m0_nd_cn_single_v1.pdf}
+  \caption{M0 在 $L_{\rm ctx}=8192$ 下的 $N$--$D$ 条件配置。空心点表示无界解析解，实心点表示 B1 支持域内的有界解，方形表示支持上界活跃的情景。}
+  \label{fig:q3-m0-nd-baseline}
+\end{figure}
+
+图~\ref{fig:q3-m0-nd-budget}进一步将五档上下文和三档预算放在同一条件面板中。
+随着 $L_{\rm ctx}$ 增加，注意力项压缩有效预算乘积，配置点沿着较低的 $N$--$D$
+乘积移动；在 $10^{24}$ FLOPs 档，五个上下文均触及 B1 的双上界。这个图形只
+是 15 个场景的可视化索引，数值判定仍以表~\ref{tab:q3-m0-nd-scenarios} 和
+支持域约束为准。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.78\textwidth]{figures/q3-nd-budget-cn-v1/fig_q3_m0_nd_budget_cn_single_v1.pdf}
+  \caption{M0 在三档预算和五档上下文下的有界 $N$--$D$ 配置。虚线表示 B1 观测支持上限，方形表示边界约束活跃的场景。}
+  \label{fig:q3-m0-nd-budget}
+\end{figure}
+
 \subsubsection{小结}
 
 在 B1/Pythia 的观测支持域内，M0 给出了可复核的 $N$--$D$ 条件资源分配关系。
