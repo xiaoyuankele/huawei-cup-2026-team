@@ -3,6 +3,7 @@
 % GMCM2026 论文入口。问题二、三为候选研究结果，待独立科学评审。
 \documentclass[bwprint]{template/gmcmthesis}
 
+
 \hypersetup{hidelinks}
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage{subfig}
@@ -14,6 +15,7 @@
 \graphicspath{{./}{figures/q1-conflict-resolution/}{figures/q1-critic-topsis/nature-v1/}{template/figures/}}
 \input{commands.tex}
 
+
 \title{数据质量评价、冲突消解与资源配置诊断}
 \baominghao{待填写正式队伍编号}
 \schoolname{学校名称填写}
@@ -21,11 +23,14 @@
 \memberb{成员 B}
 \memberc{成员 C}
 
+
 \floatname{algorithm}{算法}
 \renewcommand{\algorithmicrequire}{\textbf{输入:}}
 \renewcommand{\algorithmicensure}{\textbf{输出:}}
 
+
 \begin{document}
+
 
 \maketitle
 \begin{abstract}
@@ -35,14 +40,18 @@
 \end{abstract}
 \pagestyle{plain}
 
+
 \input{sections/q1-quality-evaluation.tex}
 \input{sections/q1-conflict-resolution.tex}
 % 问题二候选稿接入正文供协作审阅，尚待独立科学评审。
-\input{sections/drafts/q2-current-stage.tex}
+\input{sections/drafts/q2-complete.tex}
 % 问题三研究状态：REVIEW_BLOCKED / EXPLORATION_ONLY。
 \input{sections/drafts/q3-resource-optimization.tex}
+
 
 \clearpage
 \input{sections/references.tex}
 
+
 \end{document}
+
