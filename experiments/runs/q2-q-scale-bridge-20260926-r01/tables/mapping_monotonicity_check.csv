@@ -1,0 +1,6 @@
+﻿mapping_id,strictly_increasing_on_extended_domain,nondecreasing_on_extended_domain,value_at_QA_0,value_at_QA_100,min_on_extended,max_on_extended,leaves_fitted_B6_range
+M1_linear_normalization,True,True,0.1,1.0,-0.35,1.4500000000000002,True
+M5_linear_normalization_clamped,False,True,0.1,1.0,0.1,1.0,False
+M2_minmax_observed,True,True,-0.17179835778027772,1.1492988625430807,-0.8323469679419567,1.8098474727047595,True
+M3_robust_quantile_p05_p95,True,True,-1.3820817467168747,2.073514542313938,-3.1098798912322816,3.8013126868293443,True
+M4_rank_quantile_isotonic,False,True,0.1,1.0,0.1,1.0,False

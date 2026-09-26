@@ -1,6 +1,6 @@
 # 问题二多套广义标度律与问题三接口
 
-运行号：`q2-q3-formula-interface-20260926-r01`  
+运行号：`q2-q3-formula-interface-20260926-r01`
 状态：`FORMULA_INTERFACE_REGISTERED`
 
 问题二目前不是只有一个公式。它们对应不同的数据角色，不能把所有参数直接拼成一个统一公式。

@@ -1,0 +1,63 @@
+{
+  "schema_version": "q2.answer.package.v1",
+  "run_id": "q2-answer-package-20260925-r01",
+  "task_id": "T-Q2-MIGRATION",
+  "status": "CONDITIONAL_Q2_ANSWER_PACKAGE_READY",
+  "formal_joint_fit": false,
+  "route": "conditional-migration-no-row-key",
+  "main_results": {
+    "M0_B1": {
+      "formula": "L=E+A*N^(-alpha)+B*D^(-beta)",
+      "parameters": {"E": 1.6897975629375732, "A": 0.353980320647387, "B": 1.2403055835489103, "alpha": 0.3399765819095136, "beta": 0.2798781285449292},
+      "grouped_holdout_folds": 8,
+      "internal_r2_range": [0.9999992254999314, 0.9999998339785723],
+      "external_diagnostics": {"B2_r2": -5.072798817291193, "B4_r2": 0.6045048852515391, "B5_r2": 0.7305591129184816},
+      "interpretation": "descriptive B1 baseline; no universal cross-source law"
+    },
+    "M1_B6_B7": {
+      "formula": "L=E+A*N^(-alpha)+B*D^(-beta)+G*(1-Q_score)",
+      "parameters": {"E": 1.4892660413046754, "A": 0.5401729882501645, "B": 1.3167948616197847, "alpha": 0.27905392394495887, "beta": 0.28280291348008263, "G": 0.36224743500545836},
+      "grouped_holdout_folds": 5,
+      "internal_r2_range": [0.9526270971343106, 0.9704708587285216],
+      "nested_b7_extension_r2": 0.9832869441678942,
+      "interpretation": "conditional semi-synthetic sensitivity; B7 extension is nested"
+    }
+  },
+  "elasticity_results": {
+    "M0_B1_mean_epsilon_N": -0.05389434818796699,
+    "M0_B1_mean_epsilon_D": -0.04154985669111581,
+    "M1_B6_mean_epsilon_N": -0.05990815641057883,
+    "M1_B6_mean_epsilon_D": -0.04095444477294901,
+    "M1_B6_mean_epsilon_Q_score": -0.07751225527018446,
+    "M1_B6_mean_dlnN_dlnQ_score": -1.4753277557059246,
+    "M1_B6_mean_dlnD_dlnQ_score": -2.111156011752482,
+    "M1_Q_score_0_1_to_1_0_delta_L": -0.32602269150491253,
+    "M1_Q_score_0_1_to_1_0_relative_loss_reduction_mean": 0.11879176432710632,
+    "M1_Q_score_0_1_to_1_0_relative_loss_reduction_p05_p95": [0.0963035048275917, 0.13885715656633577]
+  },
+  "quality_bridge": {
+    "q1_qp_interface_rows": 1214,
+    "q1_qp_observed_rows": 1088,
+    "q1_qp_estimate_rows": 126,
+    "scenario_count": 5,
+    "scenario_max_abs_delta_q": 1.4064270985151595,
+    "q1_q_equals_b6_q_score": false,
+    "a_to_b_row_join": false
+  },
+  "b8": {
+    "status": "excluded_from_main_fit",
+    "reason": ["incomplete provenance", "undefined generation and split rule", "systematic direction conflict with B6/B7"],
+    "audit_preserved": true
+  },
+  "claim_boundary": {
+    "allowed": ["B1 descriptive scaling baseline", "B3/B4/B5 stratified diagnostics", "B6/B7 conditional semi-synthetic sensitivity", "Q1-derived Q/p scenario sensitivity"],
+    "not_allowed": ["formal A-B joint L(N,D,Q,p)", "causal Q1 quality effect on B loss", "validated 17-domain mapping", "B8 quality effect"]
+  },
+  "inputs": [
+    "experiments/runs/q2-elasticity-audit-20260925-r01/metrics.json",
+    "experiments/runs/q2-m0-baseline-audit-20260925-r02/metrics.json",
+    "experiments/runs/q2-m1-sensitivity-audit-20260925-r02/metrics.json",
+    "experiments/runs/q2-qp-scenario-sensitivity-20260925-r01/metrics.json",
+    "experiments/runs/q2-conditional-bridge-decision-20260925-r01/metrics.json"
+  ]
+}

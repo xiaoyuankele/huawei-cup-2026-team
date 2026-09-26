@@ -1,0 +1,8 @@
+﻿claim_id,claim,status,evidence
+Q3-C1,M0 supports conditional N-D resource allocation inside or explicitly marked beyond B1 support,SUPPORTED_CONDITIONALLY,q3-optimization-robustness + q3-fixed-budget-frontier
+Q3-C2,M1 supports native B6 Q_score quality-cost sensitivity,SUPPORTED_CONDITIONALLY,q3-optimization-robustness + q3-fixed-budget-frontier
+Q3-C3,"The preferred Q depends on Q0, cost family and budget",SUPPORTED_CONDITIONALLY,fixed_budget_frontier_summary.csv
+Q3-C4,Observed p candidates can be displayed alongside B-side frontiers,SUPPORTED_AS_SCENARIO_PANEL,q3-p-fixed-budget-panel
+Q3-C5,A-side p or Q_A(p) has an identified independent B-side Loss coefficient,NOT_IDENTIFIED,no A-B row/batch key
+Q3-C6,Q1 Q_A(p) equals native B6 Q_score,NOT_ESTABLISHED,different definitions and scales
+Q3-C7,A globally validated four-quantity optimum is available,BLOCKED,formal_joint_fit=false; B8 excluded

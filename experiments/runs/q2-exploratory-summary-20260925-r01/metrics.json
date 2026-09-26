@@ -1,0 +1,177 @@
+{
+  "schema_version": "q2.exploratory.summary.v1",
+  "run_id": "q2-exploratory-summary-20260925-r01",
+  "task_id": "T-Q2-MIGRATION",
+  "status": "EXPLORATORY_Q2_AUDIT_COMPLETE_FORMAL_FIT_BLOCKED",
+  "scope": [
+    "freeze the Q1 LaTeX CRITIC-TOPSIS Q interface for exploratory use",
+    "report the grouped B1 baseline audit",
+    "report the conditional B6/B7 semi-synthetic quality sensitivity audit",
+    "keep B8 as a provenance-and-direction blocker"
+  ],
+  "inputs": {
+    "q_interface": {
+      "path": "experiments\\runs\\q2-qp-interface-preflight-20260925-r01\\metrics.json",
+      "sha256": "8f1566973684229911762420dea549bfdf14c76af8bee8095cc991675eade70d"
+    },
+    "b1": {
+      "path": "experiments\\runs\\q2-m0-baseline-audit-20260925-r02\\metrics.json",
+      "sha256": "e3a32590d8b9f143bf25280effaa05078620fa5c45dc94ef61a244efd88d647b"
+    },
+    "m1": {
+      "path": "experiments\\runs\\q2-m1-sensitivity-audit-20260925-r02\\metrics.json",
+      "sha256": "83ee97e5489a891d798986b087f7e34a7681f0150279c8b21c2f50b3879ddbbb"
+    },
+    "b8": {
+      "path": "experiments\\runs\\q2-b8-provenance-20260925-r02\\metrics.json",
+      "sha256": "d73c21aac6e5ee483d905cc333235ca897e8265a4feacc448f0aefadc28f82f8"
+    },
+    "q1_interface": {
+      "path": "experiments\\runs\\q1-latex-q-interface-20260925-r01\\metrics.json",
+      "sha256": "e6ae85d804541c505b387c27824d57839dbcb6f04a8ba94d81b09fa84c17c7f3"
+    },
+    "mapping_decision": {
+      "path": "experiments\\runs\\q1-domain-conflict-review-decision-20260925-r01\\metrics.json",
+      "sha256": "0eaded69587f9538991b9c6dc8a7e3785dd0608a8239be2c7560d225ad54128d"
+    },
+    "semantic_evidence": {
+      "path": "experiments\\runs\\q1-domain-semantic-evidence-20260925-r01\\metrics.json",
+      "sha256": "1818e5ee65c7d1326ccc7f10d33758864ef7fee117f87cbf52612f18a8ee5dac"
+    }
+  },
+  "checks": {
+    "q1_qp_interface_passed": true,
+    "q1_mapping_decision_present": true,
+    "b1_grouped_holdout_passed": true,
+    "b1_external_diagnostics_separate": true,
+    "m1_grouped_nd_cell_holdout_passed": true,
+    "m1_b7_nested_not_independent": true,
+    "b8_blocked": true,
+    "formal_joint_fit": false,
+    "a_to_b_row_join": false
+  },
+  "q1_quality_interface": {
+    "source": "Q1 first-subquestion LaTeX CRITIC-TOPSIS score",
+    "row_count": 1214,
+    "p_column_count": 17,
+    "observed_rows": 1088,
+    "extrapolation_rows": 126,
+    "p_sum_max_abs_error": 1.5543122344752192e-15,
+    "q_range": [
+      0.0,
+      100.0
+    ],
+    "join_policy": "Q/p are a declared interface; no A-to-B row-number join is performed",
+    "anchor_quality_score_count": 7,
+    "official_reference_rows": 6,
+    "exploratory_prior_rows": 11,
+    "formal_mapping_validated": false
+  },
+  "b1_baseline": {
+    "status": "FROZEN_B1_BASELINE_EXPLORATORY",
+    "folds": 8,
+    "r2_range": [
+      0.9999992254999314,
+      0.9999998339785723
+    ],
+    "rmse_range": [
+      0.0001019753194439902,
+      0.00022023035132143461
+    ],
+    "external_diagnostics": {
+      "B2": {
+        "n": 1029,
+        "mae": 1.1784418124930014,
+        "rmse": 1.243084866579495,
+        "r2": -5.072798817291193,
+        "residual_median": -1.0419545157278503,
+        "residual_p95_abs": 1.9486286823305494
+      },
+      "B4": {
+        "n": 57,
+        "mae": 0.22726329326670552,
+        "rmse": 0.29266667754575126,
+        "r2": 0.6045048852515391,
+        "residual_median": -0.2034669419455737,
+        "residual_p95_abs": 0.4813969174281502
+      },
+      "B5": {
+        "n": 44,
+        "mae": 0.17072153146381008,
+        "rmse": 0.1975950740393815,
+        "r2": 0.7305591129184816,
+        "residual_median": -0.05584512448175072,
+        "residual_p95_abs": 0.31435454463167617
+      }
+    },
+    "interpretation": "descriptive B1 baseline; no universal cross-source scaling-law claim"
+  },
+  "b6_b7_quality_sensitivity": {
+    "status": "FROZEN_B6_B7_SEMISYNTHETIC_EXPLORATORY",
+    "q_field": "B6/B7 Q_score (semi-synthetic field; not replaced by Q1 Q)",
+    "folds": 5,
+    "r2_range": [
+      0.9526270971343106,
+      0.9704708587285216
+    ],
+    "rmse_range": [
+      0.051209776007239055,
+      0.06689441212441666
+    ],
+    "G_mean": 0.3622474352107223,
+    "G_sd": 0.006646173359636679,
+    "b7_extension": {
+      "n": 90,
+      "mae": 0.03223152171684526,
+      "rmse": 0.04159627702825863,
+      "r2": 0.9832869441678942,
+      "residual_median": -0.00190392844586329,
+      "residual_p95_abs": 0.08154840444658036
+    },
+    "interpretation": "conditional sensitivity result; B7 extension is nested and not independent validation"
+  },
+  "b8_gate": {
+    "status": "BLOCKED_B8_PROVENANCE_AND_DIRECTION",
+    "data_type_counts": {
+      "calibrated": 984,
+      "extrapolated": 720
+    },
+    "q_monotonicity": {
+      "groups": 150,
+      "loss_increase_when_q_increases": 1311,
+      "loss_decrease_when_q_increases": 2,
+      "zero_steps": 241,
+      "mixed_groups": 2
+    },
+    "blocking_flags": [
+      "B7_manifest_has_no_source_or_generation_note",
+      "B8_manifest_has_no_source_or_generation_note",
+      "B8_Q_direction_conflicts_with_B6_B7",
+      "B8_calibrated_and_extrapolated_rows_require_separate_semantics"
+    ],
+    "required_evidence_to_unlock": [
+      "B8 generator or reproducible construction formula and version",
+      "quality-score definition and direction for calibrated and extrapolated subsets",
+      "data_type split rule and calibration/extrapolation provenance",
+      "independent review that does not infer missing metadata from Loss behavior"
+    ]
+  },
+  "decision": {
+    "allowed_now": [
+      "use Q1-derived Q and 17-domain p as an explicitly exploratory A-side interface",
+      "report B1 grouped baseline and B6/B7 conditional sensitivity as separate evidence layers",
+      "run mapping and Q-interface sensitivity analyses without claiming identification"
+    ],
+    "blocked_now": [
+      "formal A-B joint fit or row-level A-B merge",
+      "including B8 in a quality fit",
+      "treating B6/B7 Q_score as the Q1 LaTeX Q",
+      "causal quality effect, universal scaling law, or independent B7 validation"
+    ]
+  },
+  "next_gates": [
+    "obtain B8 generator/version, Q definition and direction, and calibrated/extrapolated split rule",
+    "obtain a documented A-B bridge key or keep p as a scenario-level exploratory interface",
+    "complete Q1 final acceptance before promoting Q/p beyond exploratory analysis"
+  ]
+}

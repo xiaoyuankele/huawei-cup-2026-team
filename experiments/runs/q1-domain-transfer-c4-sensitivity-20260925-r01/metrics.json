@@ -1,0 +1,81 @@
+{
+  "schema_version": "q1.domain.transfer.c4.sensitivity.v1",
+  "run_id": "q1-domain-transfer-c4-sensitivity-20260925-r01",
+  "task_id": "T-Q1-004",
+  "status": "EXPLORATORY_C4_SENSITIVITY",
+  "inputs": {
+    "baseline_wide": "experiments/runs/q1-domain-transfer-matrix-20260925-r01/tables/A4_A15_quality_transfer_soft_wide.csv",
+    "baseline_wide_sha256": "3e1feccd596d2c8d315721b837f8c8628df7c45d8ca345032cc4ad9827b6ce01",
+    "baseline_mapping": "experiments/runs/q1-domain-transfer-matrix-20260925-r01/tables/mapping_v2_soft_current_scores.csv",
+    "anchor_quality_scores": "experiments/runs/q1-critic-topsis-20260925-r01/tables/domain_scores.csv"
+  },
+  "branches": [
+    {
+      "branch_id": "nih_exporter_c4",
+      "target_domain": "nih_exporter",
+      "baseline_weights": "{\"arxiv\":0.6,\"wikipedia\":0.2,\"commoncrawl\":0.2}",
+      "c4_branch_weights": "{\"c4\":0.5,\"arxiv\":0.4,\"wikipedia\":0.1}",
+      "baseline_domain_q_0_100": 63.40473913193378,
+      "c4_branch_domain_q_0_100": 64.65609086107253,
+      "domain_q_delta_0_100": 1.2513517291387473,
+      "baseline_range_low_0_100": 61.10090692042493,
+      "baseline_range_high_0_100": 64.33570995356357,
+      "c4_branch_range_low_0_100": 61.10090692042493,
+      "c4_branch_range_high_0_100": 66.00211266187863,
+      "wide_row_count": 1214,
+      "mean_delta_q_soft_0_100": 0.007752570974619517,
+      "max_abs_delta_q_soft_0_100": 0.31659198747210127,
+      "mean_abs_delta_q_soft_0_100": 0.007752570974619517,
+      "spearman_baseline_vs_branch": 0.9999145666443505,
+      "formal_mapping_change": "NO",
+      "formal_q2_fit": "NO"
+    },
+    {
+      "branch_id": "pubmed_abstracts_c4",
+      "target_domain": "pubmed_abstracts",
+      "baseline_weights": "{\"arxiv\":0.7,\"wikipedia\":0.2,\"commoncrawl\":0.1}",
+      "c4_branch_weights": "{\"c4\":0.5,\"arxiv\":0.4,\"wikipedia\":0.1}",
+      "baseline_domain_q_0_100": 63.357404096100105,
+      "c4_branch_domain_q_0_100": 64.65609086107253,
+      "domain_q_delta_0_100": 1.2986867649724232,
+      "baseline_range_low_0_100": 61.10090692042493,
+      "baseline_range_high_0_100": 64.33570995356357,
+      "c4_branch_range_low_0_100": 61.10090692042493,
+      "c4_branch_range_high_0_100": 66.00211266187863,
+      "wide_row_count": 1214,
+      "mean_delta_q_soft_0_100": 0.08270810668188013,
+      "max_abs_delta_q_soft_0_100": 0.7472962803437753,
+      "mean_abs_delta_q_soft_0_100": 0.08270810668188013,
+      "spearman_baseline_vs_branch": 0.9949749854749714,
+      "formal_mapping_change": "NO",
+      "formal_q2_fit": "NO"
+    },
+    {
+      "branch_id": "uspto_backgrounds_c4",
+      "target_domain": "uspto_backgrounds",
+      "baseline_weights": "{\"book\":0.4,\"arxiv\":0.3,\"wikipedia\":0.2,\"commoncrawl\":0.1}",
+      "c4_branch_weights": "{\"c4\":0.4,\"book\":0.3,\"arxiv\":0.2,\"wikipedia\":0.1}",
+      "baseline_domain_q_0_100": 60.225468450326034,
+      "c4_branch_domain_q_0_100": 62.09316382007678,
+      "domain_q_delta_0_100": 1.8676953697507486,
+      "baseline_range_low_0_100": 56.03252048079162,
+      "baseline_range_high_0_100": 64.33570995356357,
+      "c4_branch_range_low_0_100": 56.03252048079162,
+      "c4_branch_range_high_0_100": 66.00211266187863,
+      "wide_row_count": 1214,
+      "mean_delta_q_soft_0_100": 0.1386226398900535,
+      "max_abs_delta_q_soft_0_100": 1.2954573672422853,
+      "mean_abs_delta_q_soft_0_100": 0.1386226398900535,
+      "spearman_baseline_vs_branch": 0.9868075754543854,
+      "formal_mapping_change": "NO",
+      "formal_q2_fit": "NO"
+    }
+  ],
+  "summary": {
+    "branch_count": 3,
+    "total_branch_rows": 3642,
+    "max_abs_delta_across_branches_0_100": 1.2954573672422853,
+    "mean_abs_delta_across_branches_0_100": 0.07636110584885104
+  },
+  "decision_boundary": "c4 alternatives are sensitivity-only; baseline mapping and Q1 scores are unchanged; no formal Q2 fit is performed"
+}
