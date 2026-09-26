@@ -67,13 +67,13 @@ def main():
             sens.append(dict(N_params_B=N,D_tokens_B=D,perturbed_parameter=param,relative_change=rel,
                baseline_loss=base,perturbed_loss=val,delta=val-base,observed_joint_row=False))
     sensitivity=save('exponent_sensitivity.csv',pd.DataFrame(sens))
-    coverage=[]
+    coverage_rows=[]
     for src,info in audit['files'].items():
-        coverage.append(dict(source=src,rows=info['rows'],N_min_B=info['n_min'],N_max_B=info['n_max'],D_min_B=info['d_min'],D_max_B=info['d_max'],
+        coverage_rows.append(dict(source=src,rows=info['rows'],N_min_B=info['n_min'],N_max_B=info['n_max'],D_min_B=info['d_min'],D_max_B=info['d_max'],
             max_N_over_B1=float(info['n_max']/nhi),max_D_over_B1=float(info['d_max']/dhi),
             row_level_loss_available=False,estimated_loss_allowed=(src=='B10'),source_metadata_complete=audit['checks']['source_metadata_complete'],
             interpretation='range and provenance audit only'))
-    coverage=save('b9_b10_coverage.csv',pd.DataFrame(coverage))
+    coverage=save('b9_b10_coverage.csv',pd.DataFrame(coverage_rows))
     # Analytical monotonicity and asymptotic checks.
     check('N_monotonic_scale',np.diff(scale_loss(ngrid,1)),np.minimum(np.diff(scale_loss(ngrid,1)),0),tol=1e-12)
     check('D_monotonic_scale',np.diff(scale_loss(1,dgrid)),np.minimum(np.diff(scale_loss(1,dgrid)),0),tol=1e-12)
@@ -83,7 +83,7 @@ def main():
     check('reference_quality_zero',quality[quality.quality_case=='reference'].quality_increment_loss,0.,tol=1e-12)
     metrics=dict(status='RUN_COMPLETE_RANGE_CONDITIONED',grid_rows=len(grid),quality_rows=len(quality),sensitivity_rows=len(sensitivity),coverage_rows=len(coverage),
         checks=len(checks),numerical_comparisons=sum(x['comparisons'] for x in checks),B9_B10_rows={'B9':audit['files']['B9']['rows'],'B10':audit['files']['B10']['rows']},
-        max_N_extrapolation_factor=float(max(x['max_N_over_B1'] for x in coverage)),max_D_extrapolation_factor=float(max(x['max_D_over_B1'] for x in coverage)),
+        max_N_extrapolation_factor=float(max(x['max_N_over_B1'] for x in coverage_rows)),max_D_extrapolation_factor=float(max(x['max_D_over_B1'] for x in coverage_rows)),
         row_level_loss_loaded=False,fit_new_parameters=False,used_as_true_validation=False,inputs_unchanged=True,interpretation='Conditional trend and range audit; no B10 outcome comparison')
     dump(out/'metrics.json',metrics)
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
