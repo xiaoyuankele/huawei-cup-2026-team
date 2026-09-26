@@ -1,0 +1,135 @@
+{
+  "bundle": "Q4 Nature-style figure bundle",
+  "commit_scope": "q4-system-20260926-r01",
+  "figure_backend": "python/matplotlib",
+  "vector_exports": [
+    "svg",
+    "pdf"
+  ],
+  "raster_exports": [
+    "png@600dpi",
+    "tiff@600dpi"
+  ],
+  "files": [
+    {
+      "path": "captions.md",
+      "bytes": 1791,
+      "sha256": "1726f005ef231999419a8c2f88968c5c17c7e9d8cae4454815a4b895742276c6"
+    },
+    {
+      "path": "FigQ4_01_frontier_validation.pdf",
+      "bytes": 72125,
+      "sha256": "62b4af9c8e465aa39108054f00518613885006142d841c1c7b586311263f78f1"
+    },
+    {
+      "path": "FigQ4_01_frontier_validation.png",
+      "bytes": 739399,
+      "sha256": "d7d20cc3718d249c9e5925ebac6d9d45c43f234ffedbb78474fc64ac6dc23b45"
+    },
+    {
+      "path": "FigQ4_01_frontier_validation.svg",
+      "bytes": 64514,
+      "sha256": "18c355c922549ccc967720be94c07cc45e8384e19ecceb0b16e5317e36dbbedb"
+    },
+    {
+      "path": "FigQ4_01_frontier_validation.tiff",
+      "bytes": 52217686,
+      "sha256": "ac42cf5494294ae930df07b7956d141896ac0f6058dbe1868dc240c464526751"
+    },
+    {
+      "path": "FigQ4_02_12m_scenarios.pdf",
+      "bytes": 55197,
+      "sha256": "d2f8eb93da7686c9a19d4799f5b9cff3ed0b99156980ce6527bd5878cef99a88"
+    },
+    {
+      "path": "FigQ4_02_12m_scenarios.png",
+      "bytes": 431977,
+      "sha256": "bdc37e7a48405323cd60371ce2ef399835c939967cce4d149aaa4369a3bfc99b"
+    },
+    {
+      "path": "FigQ4_02_12m_scenarios.svg",
+      "bytes": 26712,
+      "sha256": "746ddc032fcca7c2af0dfcbdb923dbea9654eee9a062c8903e7463dce3a4dca1"
+    },
+    {
+      "path": "FigQ4_02_12m_scenarios.tiff",
+      "bytes": 32959566,
+      "sha256": "34f8b7a1d4b5d187e6fc55deba3ffb6292f717ec4e09dd0eab00a1034cbb7248"
+    },
+    {
+      "path": "FigQ4_03_workflow.pdf",
+      "bytes": 52042,
+      "sha256": "80cc23cb901dadbf5a03bcb075b77ec03b02af541d73afe3b26e6403b7cb2308"
+    },
+    {
+      "path": "FigQ4_03_workflow.png",
+      "bytes": 282420,
+      "sha256": "d0a1162396bf8edde29a5f297d1b2dc825b3c67592c78d2d67b3f2b884da47df"
+    },
+    {
+      "path": "FigQ4_03_workflow.svg",
+      "bytes": 9032,
+      "sha256": "1d1d7984bc075b62d50d64dd0edfb16080d9349cbf71ba81ad9212b8303a3dc5"
+    },
+    {
+      "path": "FigQ4_03_workflow.tiff",
+      "bytes": 20891438,
+      "sha256": "2b33edb601c64f8d42d057907c56fa24e679a5275bc74f411d188f8a1821bfcb"
+    },
+    {
+      "path": "figure_contract.md",
+      "bytes": 1480,
+      "sha256": "0eda28822d67770a588e7fbeb8693a7cbe4ae78ac9f45cc2d5dc9b09cb98f073"
+    },
+    {
+      "path": "qa_report.md",
+      "bytes": 1057,
+      "sha256": "0a13bb8dca6aa6fa2d5be1de17889499c57307a34378ff490c8aabe02fa7e662"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1578,
+      "sha256": "ba6cfc5d388b29ff68ee2daaad181db19df635625a0475780a3a56b0cf562bda"
+    },
+    {
+      "path": "source_data/q4_boot.csv",
+      "bytes": 941,
+      "sha256": "25ed5c25c9c55764f154f771aed1895485d5f16505bd1f7a1c53e3e6e2bab998"
+    },
+    {
+      "path": "source_data/q4_composition.csv",
+      "bytes": 967,
+      "sha256": "244b37120d286d644856d3357eccffd570de43965c68db8e7a15dec14d65bd3c"
+    },
+    {
+      "path": "source_data/q4_exclusions.csv",
+      "bytes": 100,
+      "sha256": "570f4c11726a0deb36edfc320e6933a46b34dfc10bc9cb46fda627ffa7687898"
+    },
+    {
+      "path": "source_data/q4_monthly_avg.csv",
+      "bytes": 387,
+      "sha256": "495fe5170c297c43c5ed4ec96853100c8fcf25eef895069374c03245a44340c8"
+    },
+    {
+      "path": "source_data/q4_monthly_c8.csv",
+      "bytes": 427,
+      "sha256": "860f96e912364eadd3af85a6c87446afaff582ffbd917ed3cdbf548de6502405"
+    },
+    {
+      "path": "source_data/q4_rolling.csv",
+      "bytes": 2713,
+      "sha256": "aca5fa44232e683db0da13e69c659f2735d019d9206f153c44e072bee599716e"
+    },
+    {
+      "path": "source_data/q4_scenarios.csv",
+      "bytes": 10918,
+      "sha256": "978d82761d08c2e8e2846d0a0ce88b7669fbef1705bad749d4453b3430c33ef0"
+    },
+    {
+      "path": "source_data/q4_task.csv",
+      "bytes": 585,
+      "sha256": "46967514e8ec8efb3c5d6ec1591171ced0b7c33024c6e0fe54a319db957703d6"
+    }
+  ]
+}

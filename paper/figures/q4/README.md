@@ -12,6 +12,8 @@
 
 每个图件同时导出 SVG、PDF、600 dpi PNG 和 600 dpi TIFF。SVG/PDF 保留可编辑文本。`source_data/` 中的 CSV 与各面板一一对应，可用于复核或重绘。
 
+`manifest.json` 记录本图件包 24 个文件的大小和 SHA-256 校验值，可用于投稿打包或跨机器传输后的完整性核对。
+
 ## 重现命令
 
 在仓库根目录运行：
@@ -25,4 +27,3 @@ python scripts/plot_q4_figures.py `
 ```
 
 脚本只使用 Attachment C 的清洗榜单、详细任务分数和已保存的 Q4 实验产物；月度 bootstrap 直接读取 `q4-system-20260926-r01/artifacts/robustness/c8_equal_task_frontier_bootstrap.csv`，缺失时会显式报错，不会生成演示数据。
-
