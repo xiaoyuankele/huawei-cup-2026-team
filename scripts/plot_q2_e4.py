@@ -13,9 +13,9 @@ def main():
  ap=argparse.ArgumentParser();ap.add_argument('--run-dir',type=Path,default=ROOT/'experiments/runs/q2-e4-b9-b10-extrapolation-20260926-r01');a=ap.parse_args();r=a.run_dir;out=r/'figures';out.mkdir(exist_ok=True)
  g=pd.read_csv(r/'scale_extrapolation_grid.csv');q=pd.read_csv(r/'quality_extrapolation_grid.csv');ex=[]
  def save(fig,name):
-  for ext in ['svg','pdf','png']:
-   p=out/(name+'.'+ext);fig.savefig(p,dpi=300)
-   if ext=='svg':p.write_text('\n'.join(x.rstrip() for x in p.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
+  for suffix in ['.svg','.pdf','.png']:
+   p=out/(name+suffix);fig.savefig(p,dpi=300)
+   if suffix=='.svg':p.write_text('\n'.join(x.rstrip() for x in p.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
    ex.append(p)
   plt.close(fig)
  fig,ax=plt.subplots(1,2,figsize=(W,85/25.4),layout='constrained')
