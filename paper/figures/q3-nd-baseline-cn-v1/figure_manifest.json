@@ -22,5 +22,14 @@
     "hollow_triangle": "relaxed analytic extrapolation outside B1 support",
     "filled_circle": "bounded solution inside B1 support",
     "filled_square": "bounded solution at B1 support boundary"
+  },
+  "source_script": "scripts/plot_q3_m0_nd_cn.py",
+  "source_script_sha256": "ce602fe292509ae032baec265e5f655580d1a832ef0e7beef18be334c1c589ee",
+  "qa_status": "LOCAL_RENDERED_PENDING_PEER_REVIEW",
+  "output_sha256": {
+    "fig_q3_m0_nd_cn_single_v1.svg": "e93ae07e5656346cbed535b640f13b9e16276d41c45a1714e971b24c4851fd44",
+    "fig_q3_m0_nd_cn_single_v1.pdf": "cf17a29f28f5013374159dba7535663ff69286c859d5f0ba58a5c259c2abbf7d",
+    "fig_q3_m0_nd_cn_single_v1.png": "8e8ca06ceaebdb215807d094e7ff9f3ee62f022579c218668f5b6d77809f96a0",
+    "fig_q3_m0_nd_cn_single_v1.tiff": "7722bb270cad140d7679381df76c8de5b7c75afc504fe3c38870300ba65fe6b7"
   }
 }

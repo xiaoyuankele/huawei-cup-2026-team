@@ -42,3 +42,7 @@ latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
 ```
 
 提交前请在 `main.tex` 中填写队伍编号、学校和三名成员信息，并根据当届组委会要求复核封面、摘要、页码、篇幅和匿名规则。论文中的数字应能追溯到 `experiments/runs/` 中的 `run_id`。
+
+## Q3 中文单张图候选包
+
+[问题三五张中文单坐标图、图形契约、来源哈希和复现入口](figures/q3-conditional/README.md)。图形覆盖 M0 的 N-D 基线与预算敏感性、M1 的原生 $Q_B$ 条件优化及上下文成本结构、M2/P 接口敏感性；当前状态为候选素材，正式正文接入须经独立复核。
