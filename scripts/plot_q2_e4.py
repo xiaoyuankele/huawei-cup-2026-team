@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from q2_e4_b9_b10_extrapolation import ROOT,sha
 W=180/25.4
-plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['DejaVu Sans'],'font.size':7,'axes.labelsize':7,'axes.titlesize':8,
-                     'xtick.labelsize':7,'ytick.labelsize':7,'legend.fontsize':7,'pdf.fonttype':42,'svg.fonttype':'none',
+plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['DejaVu Sans'],'font.size':8,'axes.labelsize':8,'axes.titlesize':9,
+                     'xtick.labelsize':8,'ytick.labelsize':8,'legend.fontsize':8,'pdf.fonttype':42,'svg.fonttype':'none',
                      'axes.spines.top':False,'axes.spines.right':False})
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--run-dir',type=Path,default=ROOT/'experiments/runs/q2-e4-b9-b10-extrapolation-20260926-r01');a=ap.parse_args();r=a.run_dir;out=r/'figures';out.mkdir(exist_ok=True)
