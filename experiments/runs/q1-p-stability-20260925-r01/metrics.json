@@ -1,0 +1,100 @@
+{
+  "run_id": "q1-p-stability-20260925-r01",
+  "status": "EXPERIMENTAL_REVIEW",
+  "fit_rule": "A4/A5 only; fixed selected alpha=10 configurations",
+  "validation": "A6/A7 predictions are diagnostics; no model selection on validation",
+  "representations": {
+    "epsilon_values": [
+      1e-06,
+      0.0001,
+      0.001
+    ],
+    "basis": "Helmert ilr",
+    "delta": 0.01
+  },
+  "train_rows": 512,
+  "validation_rows": 256,
+  "target_count": 13,
+  "domain_count": 17,
+  "empirical_best_index": 170,
+  "candidate_model_count": 6,
+  "finite_perturbation_count": 1152,
+  "pair_count": 192,
+  "pair_sign_consistent_fraction": 0.24479166666666666,
+  "candidate_unique_predicted_indices": [
+    46,
+    97,
+    186,
+    270,
+    323
+  ],
+  "candidate_model_epsilon_table": [
+    {
+      "model": "ilr_ridge",
+      "epsilon": 1e-06,
+      "predicted_best_index": 186,
+      "predicted_best_score_z": -0.4667851011249114,
+      "a6_a7_mean_predicted_loss_overall": 5.34286780281038
+    },
+    {
+      "model": "quadratic_ridge",
+      "epsilon": 1e-06,
+      "predicted_best_index": 97,
+      "predicted_best_score_z": -0.8283941319101186,
+      "a6_a7_mean_predicted_loss_overall": 5.3446976618259745
+    },
+    {
+      "model": "ilr_ridge",
+      "epsilon": 0.0001,
+      "predicted_best_index": 186,
+      "predicted_best_score_z": -0.583797180467895,
+      "a6_a7_mean_predicted_loss_overall": 5.339199570266261
+    },
+    {
+      "model": "quadratic_ridge",
+      "epsilon": 0.0001,
+      "predicted_best_index": 46,
+      "predicted_best_score_z": -0.8956620768165682,
+      "a6_a7_mean_predicted_loss_overall": 5.325570206376025
+    },
+    {
+      "model": "ilr_ridge",
+      "epsilon": 0.001,
+      "predicted_best_index": 323,
+      "predicted_best_score_z": -0.6461460504380352,
+      "a6_a7_mean_predicted_loss_overall": 5.330842397128209
+    },
+    {
+      "model": "quadratic_ridge",
+      "epsilon": 0.001,
+      "predicted_best_index": 270,
+      "predicted_best_score_z": -0.8809006486962753,
+      "a6_a7_mean_predicted_loss_overall": 5.307394944365637
+    }
+  ],
+  "inputs": {
+    "feature_table": {
+      "path": "experiments/runs/q1-scale-feature-table-20260924-r01/q1_scale_features_wide.csv",
+      "sha256": "9c9ca86b53440e118d7bae29f5d261121888ed5068c2044566dbdfecdc700250"
+    },
+    "train_loss": {
+      "path": "data/origin/real_attachments/A_data_value/regmix_tables/train_pile_loss_1m.csv",
+      "sha256": "49a959aa07ce5c20831d5abe3a7896ff0cd90a398bd407c8913fd5588be0465a"
+    },
+    "validation_loss": {
+      "path": "data/origin/real_attachments/A_data_value/regmix_tables/test_pile_loss_1m.csv",
+      "sha256": "e027b1674f60140a65a87b5e4a59ab5f09dc33e8fd02c080682678074b160f53"
+    }
+  },
+  "outputs": {
+    "candidate_summary": "candidate_summary.csv",
+    "finite_perturbations": "finite_perturbations.csv",
+    "pair_stability_summary": "pair_stability_summary.csv"
+  },
+  "limitations": [
+    "The candidate screen is restricted to observed A4/A5 rows; no unconstrained optimum is produced.",
+    "Finite perturbations are local diagnostics and do not establish causal domain effects.",
+    "A8-A15 cross-scale behavior is not used for model selection.",
+    "Quality Q and any A-B bridge are excluded."
+  ]
+}

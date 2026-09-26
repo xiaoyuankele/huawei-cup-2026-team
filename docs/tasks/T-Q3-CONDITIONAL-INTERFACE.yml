@@ -1,0 +1,69 @@
+task_id: T-Q3-CONDITIONAL-INTERFACE
+title: "问题三条件资源模型与 Q2→Q3 接口版本化交付"
+problem_id: Q3
+subproblem_id: Q3-RESEARCH
+problem_scope: "在数据可识别边界内回答第三问，并把 Q2 模型接口、条件优化和版本来源分开归档"
+status: REVIEW_BLOCKED
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: experiment
+review:
+  peer_reviewer_must_differ: true
+  integrator_must_differ: true
+  no_reviewer_status: REVIEW_BLOCKED
+priority: P1
+issue: "https://github.com/xiaoyuankele/huawei-cup-2026-team/issues/"
+announcement:
+  mode: user_request
+  announced_by_actor: ACTOR-2
+  announced_at: 2026-09-26T00:00:00+08:00
+  announcement_ref: "docs/research/q3/conditional-interface-version-20260926.md"
+  summary: "用户授权将问题三研究成果分批推送至大仓库，并要求区分队友版本"
+  acknowledged_by_actor: ACTOR-2
+  acknowledged_at: 2026-09-26T00:00:00+08:00
+feedback_required: true
+feedback_ids: []
+branch: "exp/ACTOR-2/q3-conditional-interface-20260926"
+branch_owner_actor: ACTOR-2
+gate: G0
+prompt:
+  prompt_id: P-Q3-CONDITIONAL-INTERFACE
+  version: v1.0.0
+  prompt_run_id: PR-Q3-CONDITIONAL-INTERFACE-20260926
+objective: "交付可复现的 Q3 条件模型、Q2→Q3 假设接口敏感性和版本边界说明"
+inputs:
+  - ref: experiments/runs/q2-m0-m1-20260925-r01/metrics.json
+    purpose: "冻结 M0/M1 参数及 B1/B6 支持域"
+  - ref: experiments/runs/q2-m2-sensitivity-20250925-r01/tables/recipe_q_scenarios.csv
+    purpose: "Q2 M2 配方质量情景；仅作为未校准接口输入"
+  - ref: docs/research/q3/handoff.md
+    purpose: "现有队友 Q3 交接版本的来源与审查边界"
+expected_outputs:
+  - path: scripts/q3_nd_baseline.py
+    description: "M0 N-D 条件资源情景"
+  - path: scripts/q3_q_conditional.py
+    description: "M1 原生 B6 Q_score 条件情景"
+  - path: scripts/q2_q3_interface_sensitivity.py
+    description: "Q2→Q3 假设接口敏感性"
+  - path: experiments/runs/q3-answer-package-20260926-r01/
+    description: "问题三综合答复运行记录"
+  - path: docs/research/q3/conditional-interface-version-20260926.md
+    description: "本版本与队友版本的边界表"
+acceptance_criteria:
+  - "运行记录包含命令、环境、输入哈希、指标和限制"
+  - "Q3 的 M0/M1/M2 角色和 B1/B6/Q1 变量尺度明确区分"
+  - "不按行号构造 A-B 连接，不把假设校准写成实证标定"
+  - "不使用 B8，也不把截断 C 数据静默补全"
+  - "队友 Q3 运行保持独立 run_id 和版本标签"
+  - "所有新 run_id 已加入 experiments/index.csv"
+definition_of_done:
+  - "脚本通过语法检查，运行指标的有限性和预算约束检查通过"
+  - "代码、run、版本说明和综合答复互相回链"
+  - "在 Peer Review 和 Integrator 确认前保持 REVIEW_BLOCKED"
+notes: "本任务交付条件场景和可审查接口，不宣称正式 M3 联合拟合或全局最优；队友本地 Q3 结果不在本分支覆盖。"
