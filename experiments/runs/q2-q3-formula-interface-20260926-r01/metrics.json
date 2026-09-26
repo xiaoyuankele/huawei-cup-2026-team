@@ -1,0 +1,35 @@
+{
+  "run_id": "q2-q3-formula-interface-20260926-r01",
+  "status": "FORMULA_INTERFACE_REGISTERED",
+  "formula_count": 5,
+  "q3_interface_count": 5,
+  "executed_q3_paths": [
+    "Q3_ND_BASELINE",
+    "Q3_Q_CONDITIONAL",
+    "Q3_P_SCENARIO",
+    "Q3_M2_INTERFACE_SENSITIVITY"
+  ],
+  "blocked_path": "Q3_JOINT_FOUR_QUANTITY",
+  "parameter_sources": {
+    "q2_metrics": "38854c768a44d450bf96f03da47d8ee47a8f292e48b8e5dedc48f489c71022e1",
+    "q3_nd_metrics": "3080c54d4af0db20586ca2cbb5817fea6fc200a400d8814d7facecb05536ac6c",
+    "q3_q_metrics": "cb956ccb3f2a373d7c2365134d4487778f2953c78979452deb16b018d5e084f2",
+    "q3_p_metrics": "1c3400a40bc743c57f166647130f7215bcff9c48d98f4d968724a9bf82e48908",
+    "q3_m2_interface_metrics": "7c7aec9b3bfa5a1a42dc6d8ff845ab473d05411151590fba7581d17c47333e18"
+  },
+  "checks": {
+    "m0_parameters_registered": true,
+    "m1_parameters_registered": true,
+    "q3_nd_scenarios": 15,
+    "q3_q_scenarios": 45,
+    "q3_p_panel_rows": 90,
+    "q1_to_b_q_scale_calibrated": false,
+    "a_b_row_bridge_available": false,
+    "b8_allowed_in_main_fit": false
+  },
+  "limitations": [
+    "This registry does not refit any model or merge A and B rows.",
+    "M1 uses native B6/B7 Q_score; M2 Q_A(p) remains Q1-side 0-100 scenario metadata.",
+    "M3 is an interface specification until G_bridge, Q scale calibration and a traceable A-B bridge exist."
+  ]
+}
