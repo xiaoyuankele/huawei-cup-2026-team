@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="497.932783pt" height="369.508767pt" viewBox="0 0 497.932783 369.508767" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-26T09:05:07.473588</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.8.4, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 369.508767
+L 497.932783 369.508767
+L 497.932783 0
+L 0 0
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 97.270866 301.073548
+L 350.858268 301.073548
+L 350.858268 47.486147
+L 97.270866 47.486147
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p64d4098d67)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAWEAAAFhCAYAAACh/xvXAAAI30lEQVR4nO3dPW/dZx3H4d9xTqzGsfuQRyQq9QEiZYjEUlF16sQCSIyekokulVAzNCBZ1C1VSBOlxG2isqRigLULjihVhgwwkAGBSsVQIbVAHRW7IYnUNCVJ7cMrQM3w++ub4Ot6AV/dx8f++N7u0ZPPHJ5Us7m52e7JOnd8sXXv6WePtO5VVR3Yv699c+HQfPvmwReOte5dOHOida+q6jtHXmzfPH/qaPvmO+++17q3ePps615V1fJS/+ee2Trdvjka9e6demu5d7CqDn/v2+2bU+2LANwxEQYIEmGAIBEGCBJhgCARBggSYYAgEQYIEmGAIBEGCBJhgCARBggSYYAgEQYIEmGAIBEGCBJhgCARBggSYYAgEQYIGqcPADCEIR7lfP7sL9s33YQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIGj8lb27+0fHd//7oUN87qnRqH1zCHv39H/2brOz29NHiNi7Z1f6CDEbt79o3Xvt12+37lVVbZnqv7e6CQMEiTBAkAgDBIkwQJAIAwSJMECQCAMEiTBAkAgDBIkwQJAIAwSJMECQCAMEiTBAkAgDBIkwQJAIAwSJMECQCAMEjSeTSfvozZs32ze7jQZ4D268ZUv75hDW19fTR/hSQ3w/94Lp6en0Ee7I5Ive9+Cqqqa23v1vU055Yw7g/4sIAwSJMECQCAMEiTBAkAgDBIkwQJAIAwSJMECQCAMEiTBAkAgDBIkwQJAIAwSJMECQCAMEiTBAkAgDBIkwQJAIAwSNV9cut4/Ozc22b3b71+on7Zs7H3ygfXMIV65cSx/hS3366fX0ESJWLn3cvrlt1H/XGo3v/kc5h3B7iAdO2xcBuGMiDBAkwgBBIgwQJMIAQSIMECTCAEEiDBAkwgBBIgwQJMIAQSIMECTCAEEiDBAkwgBBIgwQJMIAQSIMECTCAEEiDBC0OV/rq6rJZJI+QszGZCN9BP6H80s/bd/8fIDve6Z9cfNyEwYIEmGAIBEGCBJhgCARBggSYYAgEQYIEmGAIBEGCBJhgCARBggSYYAgEQYIEmGAIBEGCBJhgCARBggSYYAgEQYIEmGAoE370Cd0eOrxx1r3vnV4oXWvqmp56Wj7Jn3chAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRpeuXp10j7YPVtXO7dtb96589lnr3lCmRv3/JzcmG617O5q/m6phvp/7BvhZ/mfS/dve/9czGo3aN+8bb23f7D7mjVu3eweraojvx00YIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJGTz5zuP3lurm52e7JOnd8sXXv6WePtO5VVR3Yv699c+HQfPvmwReOte5dOHOida+q6saNz9s3Hxjg9/Kdd99r3Vs8fbZ1r6pqeelo++bM1un2ze6HPk+9tdw7WFUra5fbN92EAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBodPGDD9sf+hzCNx7+auveX1Yute5VVQ3xg9w12/845b+vX2/d+/qOHa17VVXvX+5/UPGbjz3avvmnf37Uurcx6f8tevihB9s374WHPv+29knvYA3zN+4mDBAkwgBBIgwQJMIAQSIMECTCAEEiDBAkwgBBIgwQJMIAQSIMECTCAEEiDBAkwgBBIgwQJMIAQSIMECTCAEEiDBAkwgBB4+deeb19dG6u/3HKc8cXW/d+cOy11r2qqgP797VvLhyab9/sfphzZmZb615V1Y/PvNm+ef7U0fbNtavXWvcWT59t3auqWl7q/9z3gnO/+0P75spa/wO0bsIAQSIMECTCAEEiDBAkwgBBIgwQJMIAQSIMECTCAEEiDBAkwgBBIgwQJMIAQSIMECTCAEEiDBAkwgBBIgwQJMIAQeP0AVJGo/QJ7sxD09Ptm9/90UutexfOnGjdg83ETRggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgjbtQ5+TSf/mye8fbN+8eutW+yZw93ATBggSYYAgEQYIEmGAIBEGCBJhgCARBggSYYAgEQYIEmGAIBEGCBJhgCARBggSYYAgEQYIEmGAIBEGCBJhgCARBggSYYCgTfvQ529ffbl988ibv2rfXDg0374J3D3chAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggSIQBgkQYIEiEAYJEGCBIhAGCRBggaHTxgw8n3aPr6+vdk7V/9+7Wvb+urrbuVVWNt2xp39xz//3tmx9fu9a698Sjj7TuVVX98e//aN986muPt2/++aOV1r1bt2+37lVVPbJrZ/vmzNbp9s3RqHfv/dW13sEapm1uwgBBIgwQJMIAQSIMECTCAEEiDBAkwgBBIgwQJMIAQSIMECTCAEEiDBAkwgBBIgwQJMIAQSIMECTCAEEiDBAkwgBBIgwQNH7uldfbR98++ZP2zZmZba17z598o3WvqurA/n3tmwuH5ts3f/izn7fuXThzonWvqurFN37Rvnn+1NH2zdUrV1v3Fk+fbd2rqlpe6v/c94Lf/P5i++bK2uX2TTdhgCARBggSYYAgEQYIEmGAIBEGCBJhgCARBggSYYAgEQYIEmGAIBEGCBJhgCARBggSYYAgEQYIEmGAIBEGCBJhgKDxEO/Bzb98sn3z3PHF9k2ANDdhgCARBggSYYAgEQYIEmGAIBEGCBJhgCARBggSYYAgEQYIEmGAIBEGCBJhgCARBggSYYAgEQYIEmGAIBEGCBJhgCARBgj6Lz7I7o3F693kAAAAAElFTkSuQmCC" id="image86ebb6233e" transform="scale(1 -1) translate(0 -254.16)" x="97.270866" y="-46.913548" width="254.16" height="254.16"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="108.865382" y="302.573548" transform="rotate(-90 108.865382 302.573548)">arxiv</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="123.782288" y="302.573548" transform="rotate(-90 123.782288 302.573548)">freelaw</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="138.699194" y="302.573548" transform="rotate(-90 138.699194 302.573548)">nih exporter</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="153.6161" y="302.573548" transform="rotate(-90 153.6161 302.573548)">pubmed central</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="168.533006" y="302.573548" transform="rotate(-90 168.533006 302.573548)">wikipedia en</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="183.449912" y="302.573548" transform="rotate(-90 183.449912 302.573548)">dm mathematics</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="198.366817" y="302.573548" transform="rotate(-90 198.366817 302.573548)">github</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="213.283723" y="302.573548" transform="rotate(-90 213.283723 302.573548)">philpapers</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9"/>
+     <g id="text_9">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="228.200629" y="302.573548" transform="rotate(-90 228.200629 302.573548)">stackexchange</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10"/>
+     <g id="text_10">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="243.117535" y="302.573548" transform="rotate(-90 243.117535 302.573548)">enron emails</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_11"/>
+     <g id="text_11">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="258.115441" y="302.573548" transform="rotate(-90 258.115441 302.573548)">gutenberg pg 19</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_12"/>
+     <g id="text_12">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="272.951347" y="302.573548" transform="rotate(-90 272.951347 302.573548)">pile cc</text>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_13"/>
+     <g id="text_13">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="287.868253" y="302.573548" transform="rotate(-90 287.868253 302.573548)">ubuntu irc</text>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_14"/>
+     <g id="text_14">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="302.785159" y="302.573548" transform="rotate(-90 302.785159 302.573548)">europarl</text>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_15"/>
+     <g id="text_15">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="317.702065" y="302.573548" transform="rotate(-90 317.702065 302.573548)">hackernews</text>
+     </g>
+    </g>
+    <g id="xtick_16">
+     <g id="line2d_16"/>
+     <g id="text_16">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="332.618971" y="302.573548" transform="rotate(-90 332.618971 302.573548)">pubmed abstracts</text>
+     </g>
+    </g>
+    <g id="xtick_17">
+     <g id="line2d_17"/>
+     <g id="text_17">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="347.535877" y="302.573548" transform="rotate(-90 347.535877 302.573548)">uspto backgrounds</text>
+     </g>
+    </g>
+    <g id="text_18">
+     <text style="font: 7.5px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="224.064567" y="364.378298" transform="rotate(-0 224.064567 364.378298)">减少的领域</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_18"/>
+     <g id="text_19">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="57.012631" transform="rotate(-0 95.770866 57.012631)">arxiv</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_19"/>
+     <g id="text_20">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="71.929537" transform="rotate(-0 95.770866 71.929537)">freelaw</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_20"/>
+     <g id="text_21">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="86.846443" transform="rotate(-0 95.770866 86.846443)">nih exporter</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_21"/>
+     <g id="text_22">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="101.763349" transform="rotate(-0 95.770866 101.763349)">pubmed central</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_22"/>
+     <g id="text_23">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="116.680255" transform="rotate(-0 95.770866 116.680255)">wikipedia en</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_23"/>
+     <g id="text_24">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="131.597161" transform="rotate(-0 95.770866 131.597161)">dm mathematics</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_24"/>
+     <g id="text_25">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="146.514067" transform="rotate(-0 95.770866 146.514067)">github</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_25"/>
+     <g id="text_26">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="161.430973" transform="rotate(-0 95.770866 161.430973)">philpapers</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_26"/>
+     <g id="text_27">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="176.347879" transform="rotate(-0 95.770866 176.347879)">stackexchange</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_27"/>
+     <g id="text_28">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="191.264785" transform="rotate(-0 95.770866 191.264785)">enron emails</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_28"/>
+     <g id="text_29">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="206.222191" transform="rotate(-0 95.770866 206.222191)">gutenberg pg 19</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_29"/>
+     <g id="text_30">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="221.098597" transform="rotate(-0 95.770866 221.098597)">pile cc</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_30"/>
+     <g id="text_31">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="236.015503" transform="rotate(-0 95.770866 236.015503)">ubuntu irc</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_31"/>
+     <g id="text_32">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="250.932409" transform="rotate(-0 95.770866 250.932409)">europarl</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_32"/>
+     <g id="text_33">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="265.849315" transform="rotate(-0 95.770866 265.849315)">hackernews</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_33"/>
+     <g id="text_34">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="280.766221" transform="rotate(-0 95.770866 280.766221)">pubmed abstracts</text>
+     </g>
+    </g>
+    <g id="ytick_17">
+     <g id="line2d_34"/>
+     <g id="text_35">
+      <text style="font: 5.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="95.770866" y="295.683126" transform="rotate(-0 95.770866 295.683126)">uspto backgrounds</text>
+     </g>
+    </g>
+    <g id="text_36">
+     <text style="font: 7.5px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="38.180179" y="174.279847" transform="rotate(-90 38.180179 174.279847)">增加的领域</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 97.270866 301.073548
+L 97.270866 47.486147
+" style="fill: none; stroke: #000000; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 97.270866 301.073548
+L 350.858268 301.073548
+" style="fill: none; stroke: #000000; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_37">
+    <text style="fill: #29363d; font: 700 9px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="71.912126" y="45.649584" transform="rotate(-0 71.912126 45.649584)">a</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 392.655118 59.561737
+L 480.840945 59.561737
+L 480.840945 54.328981
+L 392.655118 54.328981
+z
+" style="fill: #ffffff"/>
+   </g>
+   <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAHsAAAAICAYAAADZcYAQAAAAkUlEQVR4nO2RUQ4EIQhD3+79jyx0P3AcnDF7AWhiTAtUST8K4BICJJG5uxCTS0i8ePRq9cb89Fq9JN+Ddr23fHc+zDBzzB33uC++axa9s770NJO1MWz3eHraXf/3B+V/CyRHAsha7I5IO9510t6KgY1nf06zpHfmIWlfGmXQYRdCh10IHXYhdNiF0GEXQoddCD/tL0MYd1IQ1gAAAABJRU5ErkJggg==" id="image309e338dab" transform="scale(1 -1) translate(0 -5.76)" x="392.4" y="-54" width="88.56" height="5.76"/>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_18">
+     <g id="line2d_35">
+      <defs>
+       <path id="mc9b941e34e" d="M 0 0
+L 0 2
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mc9b941e34e" x="392.655118" y="59.561737" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_38">
+      <text style="font: 6px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="392.655118" y="69.657362" transform="rotate(-0 392.655118 69.657362)">0</text>
+     </g>
+    </g>
+    <g id="xtick_19">
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#mc9b941e34e" x="436.748031" y="59.561737" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_39">
+      <text style="font: 6px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="436.748031" y="69.657362" transform="rotate(-0 436.748031 69.657362)">6</text>
+     </g>
+    </g>
+    <g id="xtick_20">
+     <g id="line2d_37">
+      <g>
+       <use xlink:href="#mc9b941e34e" x="480.840945" y="59.561737" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_40">
+      <text style="font: 6px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="480.840945" y="69.657362" transform="rotate(-0 480.840945 69.657362)">12</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4"/>
+   <g id="LineCollection_1"/>
+   <g id="patch_6">
+    <path d="M 392.655118 59.561737
+L 392.655118 56.945359
+L 392.655118 54.328981
+L 480.840945 54.328981
+L 480.840945 56.945359
+L 480.840945 59.561737
+L 392.655118 59.561737
+z
+" style="fill: none; stroke: #000000; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_7">
+    <path d="M 392.655118 248.745989
+L 486.028346 248.745989
+L 486.028346 83.712918
+L 392.655118 83.712918
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_5">
+    <g id="xtick_21">
+     <g id="line2d_38">
+      <path d="M 392.655118 248.745989
+L 392.655118 83.712918
+" clip-path="url(#p6d8bb5ed55)" style="fill: none; stroke: #edf0f1; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_39">
+      <defs>
+       <path id="mb81efff19d" d="M 0 0
+L 0 2.6
+" style="stroke: #738087; stroke-width: 0.65"/>
+      </defs>
+      <g>
+       <use xlink:href="#mb81efff19d" x="392.655118" y="248.745989" style="fill: #738087; stroke: #738087; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_41">
+      <text style="fill: #29363d; font: 6.8px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="392.655118" y="260.054364" transform="rotate(-0 392.655118 260.054364)">0</text>
+     </g>
+    </g>
+    <g id="xtick_22">
+     <g id="line2d_40">
+      <path d="M 436.443942 248.745989
+L 436.443942 83.712918
+" clip-path="url(#p6d8bb5ed55)" style="fill: none; stroke: #edf0f1; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_41">
+      <g>
+       <use xlink:href="#mb81efff19d" x="436.443942" y="248.745989" style="fill: #738087; stroke: #738087; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_42">
+      <text style="fill: #29363d; font: 6.8px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="436.443942" y="260.054364" transform="rotate(-0 436.443942 260.054364)">136</text>
+     </g>
+    </g>
+    <g id="xtick_23">
+     <g id="line2d_42">
+      <path d="M 480.232767 248.745989
+L 480.232767 83.712918
+" clip-path="url(#p6d8bb5ed55)" style="fill: none; stroke: #edf0f1; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_43">
+      <g>
+       <use xlink:href="#mb81efff19d" x="480.232767" y="248.745989" style="fill: #738087; stroke: #738087; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_43">
+      <text style="fill: #29363d; font: 6.8px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="480.232767" y="260.054364" transform="rotate(-0 480.232767 260.054364)">272</text>
+     </g>
+    </g>
+    <g id="text_44">
+     <text style="font: 7.5px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="439.341732" y="271.344724" transform="rotate(-0 439.341732 271.344724)">支持方向数 / 272</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_18">
+     <g id="line2d_44">
+      <defs>
+       <path id="m28373601b2" d="M 0 0
+L -2.6 0
+" style="stroke: #738087; stroke-width: 0.65"/>
+      </defs>
+      <g>
+       <use xlink:href="#m28373601b2" x="392.655118" y="105.73346" style="fill: #738087; stroke: #738087; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_45">
+      <text style="fill: #29363d; font: 6.8px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="386.555118" y="108.337648" transform="rotate(-0 386.555118 108.337648)">≥0.1</text>
+     </g>
+    </g>
+    <g id="ytick_19">
+     <g id="line2d_45">
+      <g>
+       <use xlink:href="#m28373601b2" x="392.655118" y="166.229454" style="fill: #738087; stroke: #738087; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_46">
+      <text style="fill: #29363d; font: 6.8px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="386.555118" y="168.833641" transform="rotate(-0 386.555118 168.833641)">≥1</text>
+     </g>
+    </g>
+    <g id="ytick_20">
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m28373601b2" x="392.655118" y="226.725447" style="fill: #738087; stroke: #738087; stroke-width: 0.65"/>
+      </g>
+     </g>
+     <g id="text_47">
+      <text style="fill: #29363d; font: 6.8px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="386.555118" y="229.329635" transform="rotate(-0 386.555118 229.329635)">≥5</text>
+     </g>
+    </g>
+    <g id="text_48">
+     <text style="font: 7.5px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="363.657024" y="166.229454" transform="rotate(-90 363.657024 166.229454)">替代幅度（百分点）</text>
+    </g>
+   </g>
+   <g id="patch_8">
+    <path d="M 392.655118 91.214422
+L 480.232767 91.214422
+L 480.232767 120.252499
+L 392.655118 120.252499
+z
+" clip-path="url(#p6d8bb5ed55)" style="fill: #315f6a"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 392.655118 151.710415
+L 464.777888 151.710415
+L 464.777888 180.748492
+L 392.655118 180.748492
+z
+" clip-path="url(#p6d8bb5ed55)" style="fill: #527f88"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 392.655118 212.206409
+L 430.326386 212.206409
+L 430.326386 241.244486
+L 392.655118 241.244486
+z
+" clip-path="url(#p6d8bb5ed55)" style="fill: #c8dedf"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 392.655118 248.745989
+L 392.655118 83.712918
+" style="fill: none; stroke: #738087; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 392.655118 248.745989
+L 486.028346 248.745989
+" style="fill: none; stroke: #738087; stroke-width: 0.65; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_49">
+    <text style="fill: #29363d; font: 700 9px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="383.317795" y="73.624702" transform="rotate(-0 383.317795 73.624702)">b</text>
+   </g>
+   <g id="text_50">
+    <text style="fill: #29363d; font: 6.5px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="481.520673" y="107.559554" transform="rotate(-0 481.520673 107.559554)">272</text>
+   </g>
+   <g id="text_51">
+    <text style="fill: #29363d; font: 6.5px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="466.065794" y="168.055547" transform="rotate(-0 466.065794 168.055547)">224</text>
+   </g>
+   <g id="text_52">
+    <text style="fill: #29363d; font: 6.5px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="431.614293" y="228.551541" transform="rotate(-0 431.614293 228.551541)">117</text>
+   </g>
+  </g>
+  <g id="text_53">
+   <text style="fill: #738087; font: 6.4px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="392.655118" y="43.46095" transform="rotate(-0 392.655118 43.46095)">替代上限（百分点）</text>
+  </g>
+  <g id="text_54">
+   <text style="fill: #29363d; font: 700 10px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="3.6" y="11.259375" transform="rotate(-0 3.6 11.259375)">配方凸包内的有限领域替代支持域</text>
+  </g>
+  <g id="text_55">
+   <text style="fill: #738087; font: 6.8px 'Hiragino Sans GB', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="3.6" y="27.360162" transform="rotate(-0 3.6 27.360162)">Q2-E2 特征支持诊断 · 272 个有向替代 · 99% 安全余量</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p64d4098d67">
+   <rect x="97.270866" y="47.486147" width="253.587402" height="253.587402"/>
+  </clipPath>
+  <clipPath id="p6d8bb5ed55">
+   <rect x="392.655118" y="83.712918" width="93.373228" height="165.033071"/>
+  </clipPath>
+ </defs>
+</svg>

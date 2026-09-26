@@ -1,0 +1,56 @@
+task_id: T-Q3-FIGURES-NATURE
+title: "问题三阶段性研究正文图与绘图代码归档"
+problem_id: Q3
+subproblem_id: Q3-FIGURES
+problem_scope: "冻结 Q2 模型的配方、质量成本、预算与回溯诊断可视化"
+status: REVIEW_BLOCKED
+work_package: WP-C
+owner_actor: ACTOR-3
+peer_reviewer_actor: ACTOR-2
+release_integrator_actor: ACTOR-1
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: paper
+review:
+  peer_reviewer_must_differ: true
+  integrator_must_differ: true
+  peer_decision: PENDING
+  integrator_decision: PENDING
+priority: P1
+announcement:
+  mode: user_request
+  announcement_ref: "用户在 Codex 对话中要求绘制全部问题三正文图并上传仓库"
+  summary: "按 nature-figure 流程绘制五张图，提供代码、图注、源表和四格式导出"
+feedback_required: true
+feedback_ids:
+  - FB-Q3-RH-01
+  - FB-Q3-RH-02
+  - FB-Q3-RH-03
+branch: codex/q3-nature-figures
+branch_owner_actor: ACTOR-3
+gate: G0
+prompt:
+  prompt_id: P-Q3-FIGURES-NATURE
+  version: v1.0.0
+  prompt_run_id: PR-Q3-FIGURES-NATURE-20260926
+objective: "归档五张可复现的阶段性正文图，并准确标注研究证据边界"
+inputs:
+  - ref: experiments/runs/q3-frozen-q2-exploration-20260925-r01
+    purpose: "问题三冻结模型派生结果"
+  - ref: experiments/runs/q2-e2-domain-substitution-20260925-r01/substitution_support.csv
+    purpose: "上游配方支持域诊断"
+expected_outputs:
+  - path: paper/figures/q3-frozen-q2-exploration/
+    description: "绘图脚本、源表、图注及 SVG/PDF/PNG/TIFF 图件"
+acceptance_criteria:
+  - "从固定源表重建五张图"
+  - "图件具有可编辑矢量格式和 600 dpi TIFF"
+  - "图注区分上游证据、派生情景与独立验证"
+  - "不宣称阶段性研究已获科学验收"
+definition_of_done:
+  - "源码、图片、图注和源表哈希可回链"
+  - "自然科学图件源码和 PDF 文字检查完成"
+  - "人工 Peer Review 和 Integrator 结论保持待定"
+notes: "上传图件不改变 Q3 研究的 REVIEW_BLOCKED / EXPLORATION_ONLY 状态；角色是评审路由，未代填人工确认。"
