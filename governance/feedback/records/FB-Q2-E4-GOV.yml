@@ -39,3 +39,4 @@ closed_at: null
 next_action: Complete conditional audit then independent review
 acceptance_test: Recorded independent decision with evidence boundary
 sensitivity: public
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/38

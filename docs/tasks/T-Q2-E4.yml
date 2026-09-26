@@ -48,7 +48,7 @@ acceptance_criteria:
 - second-directory bytes identical
 - independent review
 completed_at: '2026-09-26T02:31:07.751726+00:00'
-pr: PENDING_CREATION
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/38
 code_commit: 5e31981174d9e4e93a7c05c0cdcbc8361d8ab900
 run_manifest: experiments/runs/q2-e4-b9-b10-extrapolation-20260926-r01/manifest.json
 handoff: docs/tasks/T-Q2-E4-handoff.md
