@@ -1,0 +1,3 @@
+source,rows,N_min_B,N_max_B,D_min_B,D_max_B,max_N_over_B1,max_D_over_B1,row_level_loss_available,estimated_loss_allowed,source_metadata_complete,interpretation
+B9,132,100.0,10000.0,0.0,36000.0,835.7133753836446,120.04281527077993,False,False,False,range and provenance audit only
+B10,128,100.0,10000.0,0.1,36000.0,835.7133753836446,120.04281527077993,False,True,False,range and provenance audit only
