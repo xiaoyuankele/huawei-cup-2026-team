@@ -1,6 +1,6 @@
 # LaTeX 论文
 
-论文源文件以 `main.tex` 为唯一入口，采用 `template/` 中的用户提供 GMCM2026 模板。当前入口按问题一质量评价与冲突消解、问题二广义标度律候选章节、问题三资源配置探索性章节的顺序装配正文。问题三运行 `q3-frozen-q2-exploration-20260925-r01` 仍为 `REVIEW_BLOCKED / EXPLORATION_ONLY`；接入是排版和协作审阅，不表示模型已通过独立验证或可以给出最终训练建议。问题二候选稿仍待独立科学评审；当前接入仅用于完整论文排版与协作审阅。
+论文源文件以 `main.tex` 为唯一入口，采用 `template/` 中的用户提供 GMCM2026 模板。当前入口按问题一质量评价与冲突消解、问题二完整广义标度律章节、问题三资源配置探索性章节的顺序装配正文。问题二和问题三仍需独立科学评审；接入主入口用于完整论文排版与协作审阅，不代表组合模型已经完成外部验证。
 
 ## 目录约定
 
@@ -10,18 +10,19 @@
 - `Q4-Manuscript-Package.zip`：问题四正文、图件、源数据、QA 记录和最小模板依赖的归档包。
 - `sections/q1-quality-evaluation.tex`：第一部分，包含数据预处理、CRITIC--TOPSIS 评分、领域聚合和敏感性分析。
 - `sections/q1-conflict-resolution.tex`：第二部分，包含冲突定义、成因分析、有限补偿模型和扩展集结果。
+- `sections/drafts/q2-complete.tex`：问题二完整候选章节，包含原有 Fig01--Fig04、第二部分新增 Fig05--Fig11、补充图和适用范围说明；由 `main.tex` 引入。
+- `sections/drafts/q2-current-stage.tex`：问题二早期阶段稿，保留用于审阅追溯，不作为主入口正文。
+- `sections/drafts/q3-resource-optimization.tex`：问题三的条件资源优化、图表和适用边界；由 `main.tex` 引入供排版审阅。
 - `sections/drafts/q4-frontier-prediction.tex`：问题四正式章节，按最新大纲接入数据审计、短期验证、分位数模型、任务级证伪和十二个月情景。
-- `sections/drafts/q2-current-stage.tex`：第二问的条件组合模型、迁移检验及六张正文图；由 `main.tex` 引入供排版审阅。
-- `sections/drafts/q3-resource-optimization.tex`：第三问的条件资源优化、五图一表和适用边界；由 `main.tex` 引入供排版审阅。
 - `sections/references.tex`：全文参考文献，在问题三正文后统一排版。
 - `sections/drafts/`：保留原始稿件，作为正文来源和审阅追溯。
 - `commands.tex`：统一数学符号和项目命令。
 - `refs.bib`：项目参考文献库；模板示例参考文献保留在 `template/reference.bib`。
 - `template/`：GMCM2026 模板和版式素材。
-- `figures/`：论文正文图形；正文引用的 PDF 图形均保留在相应子目录。
-- `figures/q4/`：问题四三幅正式图件、图注、源数据和 QA/完整性清单。
-- `figures/q2-scaling-law/`：问题二六张正文图及绘图脚本。
-- `figures/q3/figures/`：问题三五张正文图的 PDF 及其他格式，源表和绘图脚本在 `figures/q3/`。
+- `figures/q2-scaling-law/`：问题二 Fig01--Fig11 正文图、补充图、全部格式、脚本、QA 和 manifest。
+- `figures/q3/figures/`：问题三正文图的 PDF 及其他格式，源表和绘图脚本在 `figures/q3/`。
+- `figures/q4/`：问题四正式图件、图注、源数据和 QA/完整性清单。
+- `Q2-Overleaf-Bundle.zip`、`Q2-OVERLEAF-README.md`、`Q2-UPLOAD-MANIFEST.md`：问题二独立编译包及上传说明。
 - `official-template-checklist.md`：提交前的格式、匿名和材料核对表。
 
 ## 编译
