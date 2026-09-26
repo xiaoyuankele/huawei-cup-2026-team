@@ -44,10 +44,64 @@
 
 源表：`source_data/retrospective_decision_regret.csv`。图件：`figures/Fig05_decision_regret.*`。
 
+## 新增正文图：未写入旧稿的 M0/M1/M2 分析
+
+以下 Fig06–Fig13 使用已经上传到 `experiments/runs/` 的 Q3 条件实验表，沿用本目录既有的白底、深灰文字、蓝绿色主色和暖橙色对照色。每幅图都按 183 mm 正文宽度输出 PDF、SVG、500 dpi PNG 和 600 dpi LZW TIFF。
+
+### 图 6：M0 预算下的参数量–训练 token 配置
+
+实线为 B1 支持域约束解，虚线为放松支持域的解析解；颜色表示上下文长度。阴影表示 B1 的参数量和 token 支持范围。超出支持域的放松解仅作外推诊断。
+
+源表：`experiments/runs/q3-nd-baseline-20260925-r01/tables/q3_nd_baseline_scenarios.csv`。图件：`figures/Fig06_M0_budget_context.*`。
+
+### 图 7：M1 原生质量条件下的质量投入与资源替代
+
+三列分别为指数、幂函数和对数成本；颜色表示 C7 上下文长度。上排为最优质量，下排为质量成本占比。Q 是 B6/B7 原生质量分数，不等同于 Q1 质量分，也不构成 A–B 联合验证。
+
+源表：`experiments/runs/q3-q-conditional-20260925-r01/tables/q3_q_conditional_scenarios.csv`。图件：`figures/Fig07_M1_quality_tradeoff.*`。
+
+### 图 8：质量最优解对初始质量和成本函数的稳健性
+
+每个热图单元格为五个上下文情景的最优质量中位数；右下角显示达到质量上界的情景比例。该图是 Q0 与成本族的参数敏感性，不是重新拟合或独立验证。
+
+源表：`experiments/runs/q3-q-robustness-20260925-r01/tables/q3_q_robustness_scenarios.csv`。图件：`figures/Fig08_Q0_cost_robustness.*`。
+
+### 图 9：Q2 参数折叠传播到 Q3 优化结果的范围
+
+阴影为 5%–95% 折叠参数传播范围，实线为中位数。它表示参数不确定性传播，不是独立实验的置信区间。M1 示例固定指数成本和 Lctx=2048。
+
+源表：`experiments/runs/q3-optimization-robustness-20260926-r01/tables/m0_uncertainty_summary.csv`、`m1_uncertainty_summary.csv`。图件：`figures/Fig09_parameter_uncertainty.*`。
+
+### 图 10：M0/M1 的离散成本–Loss 前沿
+
+固定 Lctx=2048；点为折叠参数传播后的确定性情景，菱形为组内离散非支配点。该图用于比较条件情景的成本–Loss 关系，不表示连续优化的全局最优边界。
+
+源表：`experiments/runs/q3-optimization-robustness-20260926-r01/tables/m0_discrete_frontier.csv`、`m1_discrete_frontier.csv`。图件：`figures/Fig10_discrete_pareto.*`。
+
+### 图 11：已观测配比候选的 A 侧表现与 Q3 条件配置
+
+a，A 侧观测/预测 scalar Loss；b，指数成本、Lctx=2048、预算 1e22 FLOPs 下的条件配置。A 侧配比评价与 B 侧资源配置分开呈现，不相加为未经验证的联合 Loss。
+
+源表：`experiments/runs/q3-p-conditional-20260925-r01/tables/p_candidate_summary.csv`、`p_candidate_q3_nd_panel.csv`。图件：`figures/Fig11_p_candidate_panel.*`。
+
+### 图 12：Q1 配比质量到 B6 质量接口的情景敏感性
+
+固定指数成本、Lctx=2048、预算 1e22 FLOPs；每个单元格对应一个条件优化情景。热图展示接口假设如何改变假设 Q、预测 Loss 和质量成本占比。Q1→B6 仿射映射未经验证，不代表质量尺度已校准。
+
+源表：`experiments/runs/q2-q3-interface-sensitivity-20260926-r01/tables/m2_q3_fixed_q_scenarios.csv`。图件：`figures/Fig12_M2_interface_heatmap.*`。
+
+### 图 13：问题三模型接口与可识别性边界
+
+示意图区分可分别识别的 M0、M1、P/M2 条件路径和暂不识别的 M3 四量联合模型。缺少 A–B 行级连接键、Q1 与 B6 质量尺度未校准以及 `G_bridge` 未识别，是当前联合模型阻断的原因。
+
+图件：`figures/Fig13_identifiability_interface.*`。该图是方法结构示意，不是参数估计结果。
+
+新增图的输入哈希、行数和绘图输出登记在 `figure_manifest_missing.json`；静态和 PDF 字体检查记录在 `Q3-MISSING-FIGURE-QA.md`。
+
 ## 使用边界与复现
 
 仓库中的问题三当前状态为 `REVIEW_BLOCKED / EXPLORATION_ONLY`。这些图适合配合正文说明模型行为、敏感性和证据限制；在获得联合校验或独立验证前，不能写成已证实的最优训练建议。Q3 表格均为派生计算，没有新增训练观测；图中的情景点不是独立重复，不加统计误差线。
 
 在本目录运行 `MPLCONFIGDIR=/tmp/q3-figure-mplcache python plot_q3_figures.py` 可从 `source_data/` 重建图件。`figure_manifest.json` 记录源提交、源表 SHA-256 与每图使用的行数。`source_data/transition_brackets.csv` 保留作转折点复核，但没有单独画成图，避免与图 3 重复。
 
-已对绘图脚本运行 nature-figure 源码检查（19 PASS、1 WARN、0 FAIL）；五张 PDF 的实际最小字级为 5.4–6.7 pt，均满足 5 pt 下限。WARN 是静态检查器未识别对数正值保护；输入的预算和图 4 的 N/D 均为正值。所有图已逐张目视检查。
+已对原有绘图脚本运行 nature-figure 源码检查（19 PASS、1 WARN、0 FAIL）；新增脚本 `plot_q3_missing_figures.py` 通过 19 PASS、1 WARN、0 FAIL。新增八张 PDF 的实际最小字级均不低于 5.04 pt；所有图已逐张目视检查。唯一 WARN 是静态检查器对数学上标 `$Q^*$` 的保守提示，PDF 实际字体审计已通过。

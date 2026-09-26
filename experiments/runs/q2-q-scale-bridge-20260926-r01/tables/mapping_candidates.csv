@@ -1,0 +1,6 @@
+﻿mapping_id,family,formula,parameter_source,boundary_behaviour,monotone_nondecreasing
+M1_linear_normalization,closed_form,q = 0.1 + 0.9*(Q_A/100),"指定端点：Q_A 名义域 [0,100] -> Q_score [0.1,1.0]",Q_A=0 -> q=0.1; Q_A=100 -> q=1.0; Q_A<0 或 >100 线性外延到 B6 拟合区间之外（须标注）,True
+M5_linear_normalization_clamped,closed_form,"q = clip(0.1 + 0.9*(Q_A/100), 0.1, 1.0)",同 M1，但把结果夹在 B6 观测区间内,"Q_A<=0 -> 0.1; Q_A>=100 -> 1.0；永不离开 [0.1,1.0]，但在两端失去分辨力（导数=0）",True
+M2_minmax_observed,closed_form,"q = 0.1 + 0.9*(Q_A - Q_A,min)/(Q_A,max - Q_A,min)","Q_A,min=20.573683, Q_A,max=88.698874（问题一 unique-union 观测端点）",Q_A<=20.5737 -> q<=0.1; Q_A>=88.6989 -> q>=1.0; 观测范围之外线性外延到 B6 拟合区间之外（须标注）,True
+M3_robust_quantile_p05_p95,closed_form,q = 0.100000 + 0.03455596*(Q_A - 42.889320),"问题一 p05=42.889320, p95=68.934029; B6 p05=0.100000, p95=1.000000",两端线性外延、无界：Q_A 低于 p05 / 高于 p95 时离开 B6 拟合区间（须标注）；中心 90% 区间内不做钳制，保留分辨力,True
+M4_rank_quantile_isotonic,empirical_quantile,q = Qemp_B6(F_emp_Q1(Q_A))；按经验分布函数对齐，分段线性插值，两端饱和,问题一 unique-union 经验 CDF；B6 Q_score 在共同概率网格上的经验分位函数,"Q_A <= 问题一最小值 -> q = B6 最小值 = 0.1；Q_A >= 问题一最大值 -> q = 1.0；两端饱和、永不离开 [0.1,1.0]；只在观测支撑内严格递增（8 个平台）",True

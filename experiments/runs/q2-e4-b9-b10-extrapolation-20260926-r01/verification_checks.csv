@@ -1,0 +1,7 @@
+check,comparisons,max_absolute_error,tolerance,passed
+N_monotonic_scale,5,0.0,1e-12,True
+D_monotonic_scale,6,0.0,1e-12,True
+N_gradient,42,0.0,1e-12,True
+D_gradient,42,0.0,1e-12,True
+asymptotic_floor,1,0.0,1e-10,True
+reference_quality_zero,252,0.0,1e-12,True
