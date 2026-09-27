@@ -18,6 +18,9 @@
 - `sections/drafts/figure/`：问题四正文图件的便捷浏览副本；完整出版级资产仍在 `figures/q4/`。
 - `sections/references.tex`：全文参考文献，在问题三正文后统一排版。
 - `sections/drafts/`：保留原始稿件，作为正文来源和审阅追溯。
+- `sections/drafts/supplementary-appendix.tex`：补充附件草稿，汇总数据角色、冻结参数、模型诊断和主张边界。
+- `sections/drafts/supplement_appendix.pdf`、`Supplementary_Tables.xlsx`、`S2_runs.csv`、`S4_claim_evidence_boundary.csv`：与补充附件草稿对应的评审材料、参数表、运行索引和证据边界表。
+- `sections/drafts/supplement.zip`、`reproducibility.zip`、`supplementary-MANIFEST.sha256`：补充材料封装、公开元数据 smoke test 和校验清单。
 - `commands.tex`：统一数学符号和项目命令。
 - `refs.bib`：项目参考文献库；模板示例参考文献保留在 `template/reference.bib`。
 - `template/`：GMCM2026 模板和版式素材。
