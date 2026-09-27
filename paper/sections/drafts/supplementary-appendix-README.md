@@ -18,3 +18,15 @@
 - `S4_claim_evidence_boundary.csv`：主张—证据边界表；
 - `supplement_appendix.pdf`：评审版短附录；
 - `reproducibility.zip`：不含原始敏感数据的公开 smoke test。
+
+本目录当前已经包含上述附件的仓库副本：
+
+- `supplement_appendix.pdf`
+- `Supplementary_Tables.xlsx`
+- `S2_runs.csv`
+- `S4_claim_evidence_boundary.csv`
+- `supplement.zip`
+- `reproducibility.zip`
+- `supplementary-MANIFEST.sha256`
+
+其中 CSV、工作簿和压缩包只包含公开派生表、索引和元数据，不包含原始文本或受控附件。
