@@ -44,11 +44,11 @@ I_i=\mathbf{1}\{|H_i|>0\ \land\ |L_i|>0\}.
 \end{equation}
 
 严格不等号使处于阈值上的样本归入中间状态。$I_i=1$ 只表示同一文本至少有一组相对突出、另一组相对偏低，不是显著性检验结果，也不是质量缺陷真值。由 $H_i,L_i$ 是否为空，可得到候选冲突、仅优势、仅短板、中间状态四个互斥且穷尽的类别。冲突程度定义为
-\begin{equation}
-C_i=\max_g\left[\frac{z_{ig}-h_g}{1-h_g}\right]_+
-    \max_g\left[\frac{l_g-z_{ig}}{l_g}\right]_+,
-\qquad
-B_i=\frac{|H_i||L_i|}{\binom{5}{2}}.
+  \begin{equation}
+  C_i=\max_g\left[\frac{z_{ig}-h_g}{1-h_g}\right]_+
+    \times\max_g\left[\frac{l_g-z_{ig}}{l_g}\right]_+,
+  \qquad
+  B_i=\frac{|H_i||L_i|}{\binom{5}{2}}.
 \label{eq:q12-strength}
 \end{equation}
 其中 $C_i$ 为跨阈幅度，$B_i$ 为高低组配对广度，二者都不是概率。阈值来自 A1 拟合集，数值见表~\ref{tab:q12-thresholds}。
