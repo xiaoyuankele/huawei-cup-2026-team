@@ -47,3 +47,6 @@ latexmk -xelatex -interaction=nonstopmode -halt-on-error main.tex
 ## Q3 中文单张图候选包
 
 [问题三五张中文单坐标图、图形契约、来源哈希和复现入口](figures/q3-conditional/README.md)。图形覆盖 M0 的 N-D 基线与预算敏感性、M1 的原生 $Q_B$ 条件优化及上下文成本结构、M2/P 接口敏感性；当前状态为候选素材，正式正文接入须经独立复核。
+## 问题三独立条件资源审阅包
+
+主论文当前接入的 `sections/drafts/q3-resource-optimization.tex` 与本分支提交的 `q3-conditional-resource.tex` 属于不同版本：前者用于主论文排版审阅，后者是 `Q3-CONDITIONAL-INTERFACE-v1.0.0` 独立条件资源稿，入口和编译说明见 [`Q3-CONDITIONAL-README.md`](Q3-CONDITIONAL-README.md)。独立稿仍处于 `DRAFT / REVIEW_REQUIRED`，不能把假设接口写成正式四量联合拟合。

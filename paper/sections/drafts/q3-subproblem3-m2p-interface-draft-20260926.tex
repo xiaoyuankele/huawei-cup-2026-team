@@ -1,0 +1,160 @@
+% 问题三子问题三候选正文。
+% A 侧配比只作为条件标签；Q_A 到 Q_B 的传递是未经验证的假设接口。
+
+\subsection{问题三子问题三：M2/P 配比条件面板与 Q3 接口敏感性}
+\label{sec:q3-subproblem3}
+
+\subsubsection{配比进入方式}
+
+子问题三使用 A4/A5 中已经观测到的六个配比候选。记配比向量为
+$p=(p_1,\ldots,p_J)$，满足
+\begin{equation}
+  p_j\geq0,\qquad \sum_{j=1}^{J}p_j=1.
+\end{equation}
+A 侧候选质量分数按
+\begin{equation}
+  Q_A(p)=q^\top p=\sum_{j=1}^{J}q_jp_j
+  \label{eq:q3-sp3-qa}
+\end{equation}
+计算。$Q_A(p)$ 只作为 A 侧配比条件标签，不直接加到 B 侧 M1 的
+Loss 中，也不替换 M1 中的 $Q_B$。
+
+本节保留两个层次。第一层是六个观测配比候选与 Q3 的 15 个预算--上下文
+$N$--$D$ 情景组成的 90 行条件面板；第二层是在明确标注的
+$Q_A\to Q_B$ 假设接口下，将固定的假设 $Q_B$ 传给 M1 求解器，形成
+接口敏感性结果。90 行和 1350 行均表示实验覆盖量，不是新增观测样本量。
+
+\subsubsection{假设质量接口}
+
+由于 A 侧 $Q_A$ 与 B6/B7 原生 $Q_B$ 没有共同量尺和样本级连接键，本文不把
+二者直接相等。为进行可计算的接口压力测试，使用登记的区间仿射校准：
+\begin{equation}
+  Q_B^{\mathrm{hyp}}(p)
+  =0.1+0.9\,\mathrm{clip}
+  \left(
+  \frac{Q_A(p)-q_{\min}}{q_{\max}-q_{\min}},0,1
+  \right),
+  \label{eq:q3-sp3-hyp-map}
+\end{equation}
+其中
+\begin{equation}
+  q_{\min}=51.7014075324,\qquad
+  q_{\max}=64.3357099536.
+  \label{eq:q3-sp3-map-range}
+\end{equation}
+该变换仅把 Q1 候选的 $0$--$100$ 量尺压缩到 B6 的 $[0.1,1.0]$ 计算区间，
+没有使用 A--B 配对样本估计校准参数。
+
+正文必须保留三条限制：
+\begin{enumerate}
+  \item 这不是 $Q_A,Q_B$ 的实证关系；
+  \item 在没有共同键和标度验证的情况下，不能识别 $G_{\mathrm{bridge}}$；
+  \item 映射结果是反事实条件情景，不是新增观测样本。
+\end{enumerate}
+
+\subsubsection{映射情景与计算设计}
+
+本轮并列保留五种 Q1 侧构造：部分映射原值
+\texttt{M2\_partial\_raw}、部分映射重归一化
+\texttt{M2\_partial\_renorm}，以及对未映射质量使用低、中、高端点的
+\texttt{M2\_interval\_low}、\texttt{M2\_interval\_mid} 和
+\texttt{M2\_interval\_high}。五种构造仍在 Q1 的 $0$--$100$ 量尺中保存，
+只有进入 Q3 接口压力测试时才使用式~\eqref{eq:q3-sp3-hyp-map}。
+
+接口敏感性矩阵为
+\begin{equation}
+  6\times5\times3\times5\times3=1350
+\end{equation}
+行，分别对应六个候选、五种映射、三类质量成本、五档上下文和三档预算。
+每行报告 $Q_A$、假设 $Q_B$、$N^*$、$D^*$、$L^*$、质量成本占比、
+预算活跃状态、边界状态和支持范围状态。M0 与 B6 原生 M1 只作为独立参考，
+不参与参数平均，也不与接口行合并拟合。
+
+\subsubsection{配比条件面板结果}
+
+六个候选行号为 46、97、170、186、270 和 323。90 行面板用于并列考察
+观测配比候选与问题三规模资源情景之间的条件组合。它不表示 A 侧每一行与
+B1 的某一行存在对应关系，也不表示 $p$ 已经进入 $N$--$D$ 目标函数。
+
+观测标准化 Loss 最低的候选是 170，而跨模型平均预测排名第一的是 46。
+排序差异说明当前离散候选面板不能推出稳定的唯一最优配方，配比结果应与
+Q3 的 $N$--$D$ 资源解分列呈现。
+
+\subsubsection{Q2--Q3 接口敏感性结果}
+
+在指数型质量成本、$L_{\mathrm{ctx}}=2048$、$C=10^{22}$ FLOPs 的代表性情景下，
+按六个候选取中位数，接口构造得到表~\ref{tab:q3-sp3-representative}。
+
+\begin{table}[htbp]
+  \centering
+  \caption{代表性预算--上下文下的接口情景中位数}
+  \label{tab:q3-sp3-representative}
+  \small
+  \begin{tabular}{lrrrrrr}
+    \toprule
+    映射情景 & $Q_A$ & 假设 $Q_B$ & $N^*$ & $D^*$ & $L^*$ & $\rho_Q$ \\
+    \midrule
+    partial raw & 33.39 & 0.100 & 8.094 & 192.756 & 2.414 & 0.000 \\
+    interval low & 57.21 & 0.493 & 8.132 & 191.168 & 2.272 & 0.004 \\
+    interval mid & 61.83 & 0.822 & 8.359 & 181.994 & 2.155 & 0.025 \\
+    partial renorm & 62.24 & 0.851 & 8.407 & 180.129 & 2.145 & 0.029 \\
+    interval high & 63.54 & 0.943 & 8.630 & 171.916 & 2.113 & 0.049 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+在这一代表性场景中，假设 $Q_B$ 增大时，$N^*$ 增大、$D^*$ 减小、
+质量成本占比上升而 Loss 下降。全体 1350 行情景保持这一条件方向，
+但该方向只描述冻结 M1 和给定成本函数下的资源替代，不证明真实系统中
+提高 A 侧配比质量一定会提高 B6 的 $Q_B$。
+
+六个 \texttt{partial\_raw} 候选均被压到 $Q_B=0.1$ 下界，说明“未映射质量
+直接视为零贡献”的构造会把接口解推向低质量端。这是接口假设的结果，不能
+解释成 B6 观测到的低质量事实。作为独立参照，原生 B6 M1 优化在同一类
+预算--上下文条件下给出 $Q_B=1.0$、$N^*=8.834$、$D^*=164.915$、
+$L^*=2.094$，该结果不能与 M2/P 假设映射情景合并解释。
+
+\subsubsection{数值复核与稳健性}
+
+接口结果复核如下：
+\begin{enumerate}
+  \item 六个候选的 $Q_A$、假设 $Q_B$ 及全部 1350 行 Q3 输出均为有限值；
+  \item 所有假设 $Q_B$ 均位于 B6 的 $[0.1,1.0]$ 区间，$N,D$ 均位于
+  B1 观测范围；
+  \item 最大相对预算误差为 $9.3193240576\times10^{-12}$；
+  \item \texttt{m2\_q3\_fixed\_q\_scenarios.csv} 的 SHA256 为
+  {\scriptsize\texttt{a5009de0b6cc88d43b61a65dccaec79600bbbbc060f4b610b269d1be9dbb95d4}}；
+  \item \texttt{m2\_q3\_interface\_summary.csv} 的 SHA256 为
+  {\scriptsize\texttt{f410270c93b2fefed1af2f56463786835740354d701d802e3b503750a150407e}}；
+  \item 接口检查保持 \texttt{a\_b\_row\_join=false}、
+  \texttt{formal\_m3\_fit=false} 和 \texttt{b8\_used=false}。
+\end{enumerate}
+
+\subsubsection{结果讨论与主张边界}
+
+在当前证据范围内，可以报告六个已观测配比候选的 $Q_A(p)$ 条件面板，
+五种接口构造在不同成本、预算和上下文条件下对 $Q_B,N^*,D^*,L^*$ 及
+质量成本占比的条件影响，以及映射构造造成的资源配置变化。
+
+以下内容只能写成条件结论：在某个明确的 $Q_A\to Q_B$ 假设下，
+某个候选配比对应的 Q3 资源解如何变化；接口选择如何改变预算前沿；
+以及 M3-H 有效数据效率模型的理论反事实结果。
+
+不能据此声称 A--B 联合 Loss 已经验证，不能声称 $Q_A$ 与 $Q_B$ 已经建立
+稳定关系，不能声称 $G_{\mathrm{bridge}}$ 已被识别，不能声称六个候选中
+存在现实中的唯一最优配比，也不能把 1350 行情景写成 1350 个新增观测样本。
+
+\subsubsection{小结}
+
+在给定的观测配比候选、预算、上下文和成本假设下，本节完成了 A 侧配比条件面板
+以及 $Q_A\to Q_B$ 假设接口的敏感性分析。结果表明，不同映射会改变
+$Q_B$、$N^*$、$D^*$、Loss 和质量成本占比，因此接口选择是问题三结果的重要
+敏感性来源。由于 A、B 数据缺少共同连接键，且 $Q_A$ 与 $Q_B$ 尚未统一标度，
+本文不把这些反事实情景解释为跨来源联合最优，也不据此选择唯一配比。
+
+本子问题的证据运行包括：
+\begin{itemize}
+  \item \texttt{q3-p-conditional-20260925-r01}；
+  \item \texttt{q2-q3-interface-sensitivity-20260926-r01}；
+  \item \texttt{q3-answer-package-20260926-r01}。
+\end{itemize}

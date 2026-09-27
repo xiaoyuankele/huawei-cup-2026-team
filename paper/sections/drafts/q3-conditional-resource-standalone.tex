@@ -1,0 +1,13 @@
+% 问题三独立审阅入口；从 paper/ 目录使用 XeLaTeX 编译。
+% 当前稿件待独立科学评审，不进入 main.tex。
+\documentclass[UTF8,a4paper,12pt]{ctexart}
+\usepackage{amsmath,amssymb,booktabs,graphicx,geometry,hyperref}
+\geometry{margin=2.5cm}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
+\renewcommand{\theequation}{\thesection-\arabic{equation}}
+\renewcommand{\thetable}{\thesection-\arabic{table}}
+\renewcommand{\thefigure}{\thesection-\arabic{figure}}
+\begin{document}
+\setcounter{section}{5}
+\input{sections/drafts/q3-conditional-resource.tex}
+\end{document}
