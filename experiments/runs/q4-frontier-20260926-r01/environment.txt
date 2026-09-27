@@ -1,0 +1,9 @@
+OS: Windows
+Python: 3.11.5
+numpy: 1.26.4
+pandas: 2.0.3
+scipy: 1.11.1
+statsmodels: 0.14.0
+pyarrow: 11.0.0
+run_date: 2026-09-26
+python_command: python

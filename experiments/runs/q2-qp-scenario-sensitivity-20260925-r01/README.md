@@ -1,0 +1,1 @@
+# Q2 Q/p scenario sensitivity\n\nThis exploratory run recalculates Q from the frozen A4-A15 p vectors under the approved baseline and c4 mapping scenarios. It preserves p, makes no A-to-B row join, and does not fit a Q2 model. Q remains in the Q1 candidate 0-100 scale.\n

@@ -1,0 +1,111 @@
+{
+  "schema_version": "q2.progress.alignment.v1",
+  "run_id": "q2-progress-alignment-20260925-r01",
+  "task_id": "T-Q2-MIGRATION",
+  "status": "ALIGNMENT_RECONCILED_FORMAL_GATE_BLOCKED",
+  "canonical_repo_state": {
+    "task_status": "PEER_REVIEW",
+    "gate": "G0",
+    "migration_gate_status": "BLOCKED_FORMAL_JOINT_MIGRATION",
+    "m3_preflight_status": "BLOCKED_NO_FIT_STARTED",
+    "canonical_blockers": [
+      "Q1 candidate domain scores are pending review, not accepted quality truth.",
+      "Only 6/17 mixture domains have candidate mappings.",
+      "No A-to-B row-level join key exists.",
+      "B8 provenance and quality-direction gate remains blocked."
+    ]
+  },
+  "reconciliation": {
+    "validated_candidate_mixture_mappings": 6,
+    "mixture_domain_total": 17,
+    "q1_anchor_score_count": 7,
+    "semantic_official_reference_rows": 6,
+    "semantic_exploratory_prior_rows": 11,
+    "computed_qp_domains": 17,
+    "formal_mapping_validated": false,
+    "q1_score_accepted_in_canonical_gate": false
+  },
+  "new_exploratory_evidence": {
+    "qp_preflight_status": "Q2_QP_INTERFACE_PREFLIGHT_EXPLORATORY",
+    "qp_rows": 1214,
+    "qp_observed_rows": 1088,
+    "qp_extrapolation_rows": 126,
+    "scenario_status": "Q2_QP_SCENARIO_SENSITIVITY_EXPLORATORY",
+    "scenario_count": 5,
+    "scenario_max_abs_delta": 1.4064270985151595,
+    "scenario_formal_fit": false,
+    "scenario_a_to_b_join": false
+  },
+  "decision": {
+    "formal_joint_fit_allowed": false,
+    "allowed_claims": [
+      "B1 grouped baseline and B2/B3/B4/B5 stratified diagnostics",
+      "B6/B7 conditional semi-synthetic sensitivity",
+      "Q1-derived Q/p interface structural preflight",
+      "Q/p and approved c4 scenario sensitivity"
+    ],
+    "prohibited_claims": [
+      "validated 17-domain quality mapping",
+      "Q1 Q equals B6/B7 Q_score",
+      "A-B row-level quality-Loss relationship",
+      "formal joint L(N,D,Q,p) fit",
+      "B8 quality effect or causal direction"
+    ]
+  },
+  "bookkeeping": {
+    "q2_interface_reaudit_indexed": false,
+    "q2_p6_claim_boundaries_directory_present": false,
+    "r02_internal_run_id_year_mismatch": [
+      "q2-m0-baseline-audit-20260925-r02",
+      "q2-m1-sensitivity-audit-20260925-r02",
+      "q2-b8-provenance-20260925-r02"
+    ]
+  },
+  "inputs": {
+    "migration_gate": {
+      "path": "experiments/runs/q2-migration-gate-20250925-r01/metrics.json",
+      "sha256": "0250e7c515bbab188312bbc38ffcaf453ffe59323a1a353fe196cdff6b894d31",
+      "internal_run_id": "q2-migration-gate-20250925-r01"
+    },
+    "m3_preflight": {
+      "path": "experiments/runs/q2-m3-preflight-20250925-r01/metrics.json",
+      "sha256": "e32dd88849fc2f52ff9dbee393bdbf5deb21c991f6cc06e18bd2a5ad10737274",
+      "internal_run_id": "q2-m3-preflight-20250925-r01"
+    },
+    "interface_reaudit": {
+      "path": "experiments/runs/q2-interface-reaudit-20260925-r01/metrics.json",
+      "sha256": "f36084df40af0c884d2e867b573b15cda671945334a3b734a507467c093385a2",
+      "internal_run_id": "q2-interface-reaudit-20260925-r01"
+    },
+    "exploratory_summary": {
+      "path": "experiments/runs/q2-exploratory-summary-20260925-r01/metrics.json",
+      "sha256": "749fba674679c5246216a8d115496223955af0e6ab57a39c88d158086d0f524c",
+      "internal_run_id": "q2-exploratory-summary-20260925-r01"
+    },
+    "qp_preflight": {
+      "path": "experiments/runs/q2-qp-interface-preflight-20260925-r01/metrics.json",
+      "sha256": "8f1566973684229911762420dea549bfdf14c76af8bee8095cc991675eade70d",
+      "internal_run_id": "q2-qp-interface-preflight-20260925-r01"
+    },
+    "scenario_sensitivity": {
+      "path": "experiments/runs/q2-qp-scenario-sensitivity-20260925-r01/metrics.json",
+      "sha256": "d9ac37d39b8ed6ccf11210684975883e0d5747d2bd611a74c2ce86d58fb1440a",
+      "internal_run_id": "q2-qp-scenario-sensitivity-20260925-r01"
+    },
+    "b1": {
+      "path": "experiments/runs/q2-m0-baseline-audit-20260925-r02/metrics.json",
+      "sha256": "e3a32590d8b9f143bf25280effaa05078620fa5c45dc94ef61a244efd88d647b",
+      "internal_run_id": "q2-m0-baseline-audit-20250925-r01"
+    },
+    "m1": {
+      "path": "experiments/runs/q2-m1-sensitivity-audit-20260925-r02/metrics.json",
+      "sha256": "83ee97e5489a891d798986b087f7e34a7681f0150279c8b21c2f50b3879ddbbb",
+      "internal_run_id": "q2-m1-sensitivity-audit-20250925-r01"
+    },
+    "b8": {
+      "path": "experiments/runs/q2-b8-provenance-20260925-r02/metrics.json",
+      "sha256": "d73c21aac6e5ee483d905cc333235ca897e8265a4feacc448f0aefadc28f82f8",
+      "internal_run_id": "q2-b8-provenance-20250925-r01"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+% !Mode:: "TeX:UTF-8"
+%!TEX program = xelatex
+% 问题三独立编译入口：在 Overleaf 中将 paper/ 目录作为项目根目录，
+% 选择 XeLaTeX 编译本文件即可。
+\documentclass[bwprint]{template/gmcmthesis}
+
+\hypersetup{hidelinks}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{subfig}
+\usepackage{siunitx}
+\usepackage{colortbl}
+\usepackage[noend]{algpseudocode}
+\usepackage{algorithmicx,algorithm}
+\usepackage{amsmath,amssymb,booktabs,graphicx}
+\graphicspath{{./}{figures/q3/figures/}{template/figures/}}
+\input{commands.tex}
+
+\title{问题三：资源优化与条件配置}
+\baominghao{待填写正式队伍编号}
+\schoolname{学校名称填写}
+\membera{成员 A}
+\memberb{成员 B}
+\memberc{成员 C}
+
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本文针对参数规模、训练 token、数据质量和领域配比来自不同数据块、缺少跨来源连接键的问题，采用分层条件模型回答问题三的资源配置要求。M0 在 B1 内建立参数量--训练 token 规模基线，M1 在 B6/B7 原生质量坐标下比较三类质量成本，P/M2 将已观测配比和 Q1 到 B6 的质量接口作为离散情景。结果表明，B1 支持域可以给出可复核的规模配置，但高预算解会触及支持边界；低预算质量投入对成本函数和初始质量敏感，高预算情景则常到达质量上界；跨来源接口会改变条件 Loss 和质量成本占比，但不能替代统一质量标度和 A--B 连接键。因此，本文将四量模型定位为条件资源配置框架，暂不把 M3 联合式写成已识别的经验定律。
+\keywords{资源配置\quad 规模律\quad 数据质量\quad 配比接口\quad 条件优化}
+\end{abstract}
+
+\pagestyle{plain}
+\input{sections/drafts/q3-conditional-results.tex}
+
+\end{document}

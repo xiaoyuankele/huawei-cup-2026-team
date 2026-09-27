@@ -1,0 +1,85 @@
+{
+  "run_id": "q2-m0-baseline-audit-20250925-r01",
+  "status": "FROZEN_B1_BASELINE_EXPLORATORY",
+  "scope": "B1 internal scaling baseline only",
+  "source_run": "q2-m0-m1-20260925-r01",
+  "checks": {
+    "grouped_leave_one_N_size_out": true,
+    "internal_r2_all_above_0_99": true,
+    "external_diagnostics_kept_separate": true,
+    "cross_source_universal_law_claim": false,
+    "B1_compute_proxy_exact_6ND": false,
+    "random_row_split_used": false
+  },
+  "internal_metrics": {
+    "folds": 8,
+    "rmse_min": 0.0001019753194439902,
+    "rmse_max": 0.00022023035132143461,
+    "r2_min": 0.9999992254999314,
+    "r2_max": 0.9999998339785723
+  },
+  "parameter_stability": {
+    "E": {
+      "mean": 1.689804823859529,
+      "sd": 2.3821113048612698e-05,
+      "min": 1.689765426512735,
+      "max": 1.6898368161865558
+    },
+    "A": {
+      "mean": 0.35397218316063744,
+      "sd": 3.475423414744119e-05,
+      "min": 0.3538917276685838,
+      "max": 0.3540089883824697
+    },
+    "B": {
+      "mean": 1.2403055842886481,
+      "sd": 2.795018043188718e-05,
+      "min": 1.2402700375582356,
+      "max": 1.2403612578182213
+    },
+    "alpha": {
+      "mean": 0.33998513946734404,
+      "sd": 3.273070041522798e-05,
+      "min": 0.3399575823678758,
+      "max": 0.3400666767886917
+    },
+    "beta": {
+      "mean": 0.2798781285940374,
+      "sd": 1.1404411134387839e-05,
+      "min": 0.2798608372978694,
+      "max": 0.27989618347774486
+    }
+  },
+  "external_diagnostics": {
+    "B2": {
+      "n": 1029,
+      "mae": 1.1784418124930014,
+      "rmse": 1.243084866579495,
+      "r2": -5.072798817291193,
+      "residual_median": -1.0419545157278503,
+      "residual_p95_abs": 1.9486286823305494
+    },
+    "B4": {
+      "n": 57,
+      "mae": 0.22726329326670552,
+      "rmse": 0.29266667754575126,
+      "r2": 0.6045048852515391,
+      "residual_median": -0.2034669419455737,
+      "residual_p95_abs": 0.4813969174281502
+    },
+    "B5": {
+      "n": 44,
+      "mae": 0.17072153146381008,
+      "rmse": 0.1975950740393815,
+      "r2": 0.7305591129184816,
+      "residual_median": -0.05584512448175072,
+      "residual_p95_abs": 0.31435454463167617
+    }
+  },
+  "frozen_interpretation": [
+    "M0 is a descriptive B1 baseline with parameter-size grouped holdout.",
+    "B2/B4/B5 are external diagnostics and do not select or refit M0.",
+    "The baseline is not a universal cross-source scaling law.",
+    "The C_FLOPs_1e21 column is retained as a proxy and is not assumed to equal exact 6ND."
+  ]
+}

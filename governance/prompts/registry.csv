@@ -14,3 +14,4 @@ P-Q2-E1-GOV,E1 仓库规范自查与补登记,governance,v1.0.0,draft,work_packa
 P-Q3-RESEARCH-HANDOFF,Q3冻结模型探索研究归档,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q3-RESEARCH-HANDOFF.md,T-Q3-RESEARCH-HANDOFF,Sanitized reconstruction of authorized task; no private transcript
 P-Q2-E2-DOMAIN,E2 领域替代与互补条件分析,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q2-E2-DOMAIN.md,T-Q2-E2,Registered before numerical execution; user-authorized exploration; independent review pending
 P-Q2-E3-SUBSTITUTION,E3 质量与参数等Loss替代,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q2-E3-SUBSTITUTION.md,T-Q2-E3,Pre-execution task-level registration; conditional exploration only
+P-Q2-E4-EXTRAPOLATION,E4 B9/B10百亿以上外推审计,experiment,v1.0.0,draft,work_package_owner,peer_reviewer,governance/prompts/catalog/P-Q2-E4-EXTRAPOLATION.md,T-Q2-E4,Pre-execution task-level registration; range audit only

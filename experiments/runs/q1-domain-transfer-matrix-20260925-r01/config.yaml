@@ -1,0 +1,7 @@
+schema_version: q1.domain.transfer.matrix.v1
+run_id: q1-domain-transfer-matrix-20260925-r01
+status: EXPLORATORY_TRANSFER_MATRIX_REVIEW
+quality_score_source: q1-critic-topsis-20260925-r01
+soft_prior_source: quality-mapping-20260925-r02-soft-handoff (reference only)
+formal_q2_fit: false
+raw_policy: raw attachments remain read-only and local-only

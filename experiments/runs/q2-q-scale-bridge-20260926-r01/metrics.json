@@ -1,0 +1,383 @@
+{
+  "schema_version": "q2.q_scale_bridge.v1",
+  "run_id": "q2-q-scale-bridge-20260926-r01",
+  "task_id": "P-Q2-001",
+  "dispatch": "q2-gap-a-quality-scale",
+  "status": "EXPLORATORY_Q_SCALE_BRIDGE",
+  "created_utc": "2026-09-26T02:00:36+00:00",
+  "scope": "仅在问题一 Q_A(0-100) 与 B6 Q_score([0.1,1.0]) 之间建立**尺度兼容**；不建立 A-B 逐行对应",
+  "inputs": {
+    "q1_unique_sample_scores": {
+      "path": "experiments/runs/q1-critic-topsis-20260925-r01/artifacts/unique_sample_scores.csv",
+      "sha256": "12b3a9b34a48407f4afbdad324f41f63049a7a3bf13cd8b2c5db1c698dbb68c1",
+      "bytes": 20692086
+    },
+    "q1_sample_scores": {
+      "path": "experiments/runs/q1-critic-topsis-20260925-r01/artifacts/sample_scores.csv",
+      "sha256": "4d3027f2624787f0ba5b575511254965379044a716dc37391ad3fd875ce846cc",
+      "bytes": 32465410
+    },
+    "q1_domain_scores": {
+      "path": "experiments/runs/q1-critic-topsis-20260925-r01/tables/domain_scores.csv",
+      "sha256": "b9b8e124a2deb86904f139c3144c496c90a6e5cfcc858f26aa7e1768ffa0de43",
+      "bytes": 5461
+    },
+    "q1_corpus_scores": {
+      "path": "experiments/runs/q1-critic-topsis-20260925-r01/tables/corpus_scores.csv",
+      "sha256": "3ce728765ef4c1b0bb0380393b05bd56e752c4c8ca599139cbdbff83ac605de4",
+      "bytes": 1468
+    },
+    "b6_supplementary_NQ_experiment": {
+      "path": "data/origin/real_attachments/B_scaling_laws/supplementary_NQ_experiment.csv",
+      "sha256": "c7450ce0d67d8692535fef4709e60e2da60b2c184738bf96df160a4be0a33a7f",
+      "bytes": 13670
+    },
+    "m0_m1_metrics": {
+      "path": "experiments/runs/q2-m0-m1-20260925-r01/metrics.json",
+      "sha256": "38854c768a44d450bf96f03da47d8ee47a8f292e48b8e5dedc48f489c71022e1",
+      "bytes": 13473
+    },
+    "elasticity_audit_b6_table": {
+      "path": "experiments/runs/q2-elasticity-audit-20260925-r01/tables/m1_b6_elasticities.csv",
+      "sha256": "e29992c43f72c9d9f571417f8d2971df7b16ef5a7da87b6f7800ec55badaab3e",
+      "bytes": 84249
+    }
+  },
+  "frozen_parameters": {
+    "M1_source": "experiments/runs/q2-m0-m1-20260925-r01/metrics.json -> M1.fit_B6",
+    "M1_form": "L = E + A*N^(-alpha) + B*D^(-beta) + G*(1 - Q_score); N,D 单位十亿",
+    "M1_true_order_interpretation": {
+      "E": 1.4892660413046754,
+      "A": 0.5401729882501645,
+      "B": 1.3167948616197847,
+      "G": 0.36224743500545836,
+      "alpha": 0.27905392394495887,
+      "beta": 0.28280291348008263
+    },
+    "M1_alt_label_interpretation_NOT_USED_AS_PRIMARY": {
+      "E": 1.4892660413046754,
+      "A": 0.5401729882501645,
+      "B": 1.3167948616197847,
+      "alpha": 0.36224743500545836,
+      "beta": 0.27905392394495887,
+      "G": 0.28280291348008263
+    },
+    "refit_performed": false,
+    "M0_M1_modified": false,
+    "raw_array_unchanged": [
+      1.4892660413046754,
+      0.5401729882501645,
+      1.3167948616197847,
+      0.36224743500545836,
+      0.27905392394495887,
+      0.28280291348008263
+    ]
+  },
+  "parameter_order_correction": {
+    "authoritative_source": "scripts/q2_m0_m1_explore.py line 46: `e, a, b, g, alpha, beta = theta`",
+    "true_order": [
+      "E",
+      "A",
+      "B",
+      "G",
+      "alpha",
+      "beta"
+    ],
+    "spec_declared_order": [
+      "E",
+      "A",
+      "B",
+      "alpha",
+      "beta",
+      "G"
+    ],
+    "spec_declared_order_is_wrong": true,
+    "frozen_array": [
+      1.4892660413046754,
+      0.5401729882501645,
+      1.3167948616197847,
+      0.36224743500545836,
+      0.27905392394495887,
+      0.28280291348008263
+    ],
+    "index_3_is": "G",
+    "index_4_is": "alpha",
+    "index_5_is": "beta",
+    "interpreted_under_true_order": {
+      "E": 1.4892660413046754,
+      "A": 0.5401729882501645,
+      "B": 1.3167948616197847,
+      "G": 0.36224743500545836,
+      "alpha": 0.27905392394495887,
+      "beta": 0.28280291348008263
+    },
+    "interpreted_under_spec_order": {
+      "E": 1.4892660413046754,
+      "A": 0.5401729882501645,
+      "B": 1.3167948616197847,
+      "alpha": 0.36224743500545836,
+      "beta": 0.27905392394495887,
+      "G": 0.28280291348008263
+    },
+    "which_positions_move": "派发声明与真实顺序的差异是：声明把 index3 当成 alpha、index4 当成 beta、index5 当成 G；真实是 index3=G、index4=alpha、index5=beta。等价地，声明的 G 值 0.28280291348008263 其实是 beta，声明的 beta 值 0.27905392394495887 其实是 alpha，真正的 G 是 0.36224743500545836。",
+    "ssr_B6_true_order": 1.272272615088866,
+    "ssr_B6_spec_order": 5.4883758288341715,
+    "ssr_ratio_spec_over_true": 4.313836330156976,
+    "rmse_B6_true_order": 0.05944821778210909,
+    "rmse_B6_spec_order": 0.12347262212097164,
+    "max_abs_diff_vs_committed_epsilon_table_true_order": 9.71445146547012e-17,
+    "max_abs_diff_vs_committed_epsilon_table_spec_order": 0.03709673543594155,
+    "evidence_conclusion": "真实顺序 [E,A,B,G,alpha,beta] 同时 (a) 与生产拟合脚本的数组布局一致、(b) 逐行复制已提交的 m1_b6_elasticities.csv（最大绝对差 0.0）、(c) 给出与 metrics.json 中 grouped_ND_cell_cv rmse 0.0512-0.0669 一致的 B6 rmse。声明顺序 [E,A,B,alpha,beta,G] 三项全部不成立。",
+    "numeric_impact": "质量项系数应为 G=0.36224743500545836，而派发/README 声明的 G=0.28280291348008263 实为 beta；声明把 G 低估 21.9%。本脚本主结果用真实顺序的 G，并在 tables/mapping_effect_G_sensitivity.csv 给出两种 G 的对照。",
+    "raw_array_values_unchanged": true,
+    "action_taken": "仅记录并本地纠正标签；未修改 metrics.json、未改任何冻结数值、未重拟合"
+  },
+  "elasticity_definition": {
+    "epsilon_N": "(dL/dN)*(N/L)",
+    "epsilon_D": "(dL/dD)*(D/L)",
+    "epsilon_q": "(dL/dq)*(q/L) = -G*q/L for M1",
+    "note": "无量纲；禁止把有限差分 dL/dN 当弹性（PDF-10 误导点）"
+  },
+  "rejected_definitions": [
+    "PDF-10：把有限差分 ΔL/ΔN 当弹性、声称无需乘 N/L（拒绝）",
+    "PDF-09：对 L,N,D 直接取对数做多元线性回归（拒绝）",
+    "PDF-12：预置正弹性符号（拒绝）"
+  ],
+  "checks": {
+    "q1_scores_parsable": true,
+    "q1_reference_run": "q1-critic-topsis-20260925-r01",
+    "q1_reference_run_status": "LOCAL_RESULT_PENDING_TEAM_REVIEW（仍未验收，不得当作质量真值）",
+    "b6_rows": 360,
+    "b6_rows_expected": 360,
+    "b6_used_as_independent_observation": false,
+    "b6_is_subset_of_b7": true,
+    "b8_used": false,
+    "b8_reversed_or_pruned": false,
+    "a_b_row_join_established": false,
+    "Q1_Q_equals_B6_Q_score_asserted": false,
+    "monotonicity_verified_numerically": true,
+    "mappings_leaving_B6_fitted_range": [
+      "M1_linear_normalization",
+      "M2_minmax_observed",
+      "M3_robust_quantile_p05_p95"
+    ],
+    "M0_M1_refit": false,
+    "frozen_G_used": 0.36224743500545836,
+    "core_blockers_unlocked": 0,
+    "core_blockers_declared": [
+      "问题一的候选质量分尚未通过验收",
+      "17 个配方域中仅 6 个有候选映射（formal_mapping_validated=false）",
+      "附件 A 与附件 B 没有逐行 join key（已冻结 conditional-no-row-key-v1）",
+      "B8 缺生成来源，且方向与 B6/B7 冲突"
+    ]
+  },
+  "distribution_summary": {
+    "Q1_Q_A": {
+      "n": 261086,
+      "min": 20.573683268650814,
+      "p01": 37.836087196915436,
+      "p05": 42.88931989600419,
+      "p10": 45.386539019930105,
+      "p25": 49.31734182463843,
+      "p50": 53.29782328546341,
+      "p75": 58.24080169435776,
+      "p90": 65.27089248778088,
+      "p95": 68.9340289627691,
+      "p99": 75.06870741496967,
+      "max": 88.69887391735354,
+      "mean": 54.23226387916365,
+      "sd": 7.722491149855086,
+      "skew": 0.5311807991975132,
+      "kurtosis_excess": 0.5700252975768665
+    },
+    "B6_Q_score": {
+      "n": 360,
+      "min": 0.1,
+      "p01": 0.1,
+      "p05": 0.1,
+      "p10": 0.1,
+      "p25": 0.275,
+      "p50": 0.5,
+      "p75": 0.8250000000000001,
+      "p90": 1.0,
+      "p95": 1.0,
+      "p99": 1.0,
+      "max": 1.0,
+      "mean": 0.5375,
+      "sd": 0.31642039487881407,
+      "skew": 0.10586315260884163,
+      "kurtosis_excess": -1.4835533807959915
+    },
+    "B6_distinct_levels": 8,
+    "B6_uniformity_ks_vs_uniform_0.1_1.0": {
+      "statistic": 0.16666666666666663,
+      "pvalue": 3.292296150734033e-09
+    }
+  },
+  "mapping_family": {
+    "count": 5,
+    "all_monotone": true,
+    "ids": [
+      "M1_linear_normalization",
+      "M5_linear_normalization_clamped",
+      "M2_minmax_observed",
+      "M3_robust_quantile_p05_p95",
+      "M4_rank_quantile_isotonic"
+    ]
+  },
+  "headline_results": {
+    "delta_L_definition": "在固定 (N,D)、冻结 M1、不重拟合下，问题一锚点质量从 p05 升到 p95 时的 Loss 变化",
+    "mapping_effect_is_linear_in_G": true,
+    "relative_loss_reduction_range": [
+      0.03349744528178779,
+      0.1218913715558075
+    ],
+    "delta_L_sign": "negative for all mappings",
+    "delta_L_sign_stable_across_mappings": true,
+    "epsilon_q_baseline_range": [
+      -0.0694527429051637,
+      -0.013543485728423057
+    ],
+    "epsilon_q_upper_range": [
+      -0.1542347414626709,
+      -0.10651827838879038
+    ],
+    "epsilon_q_sign_always_negative": true,
+    "epsilon_q_sign_always_negative_in_B6_range": true,
+    "epsilon_q_positive_outside_B6_range_count": 92,
+    "epsilon_q_out_of_range_combinations": 184,
+    "epsilon_q_positive_trap_note": "q 被映射推出 [0.1,1.0] 后 (1-q) 项被异常外推，ε_q 会算成正数；这是 PDF-10 同型陷阱，须判为定义域失效而非真实效应",
+    "magnitude_flips_across_mappings": true,
+    "G_bridge_identifiable": false,
+    "G_bridge_note": "本 run 全程沿用冻结 G，不产生 G_bridge 的识别性估计"
+  },
+  "linearity_check_3_4": {
+    "question": "M1 的 G·(1-Q_score) 线性项隐含\"质量边际效应恒为 -G\"，该假设本身在 B6 上成立吗？",
+    "model_B_coef_impurity": 0.362247435228656,
+    "model_B_se": 0.014398078476572833,
+    "model_B_p": 5.439151463499992e-81,
+    "model_B_r2": 0.9381128675220842,
+    "model_B_reset_p": 2.327453411005352e-32,
+    "model_B_bp_p": 0.00038898217755512345,
+    "model_D_coef_impurity_sq": -0.014003324633357805,
+    "model_D_p_impurity_sq": 0.8274380442460972,
+    "coef_impurity_vs_frozen_G_true_order": 2.2319762704725576e-10,
+    "coef_impurity_vs_frozen_G_declared_order": 0.07944452174857336,
+    "within_cell_slope_mean": 0.36224743522865666,
+    "within_cell_slope_sd": 0.1106445787677268,
+    "within_cell_slope_vs_frozen_G_true_order": 2.2319829318107054e-10,
+    "model_E_frozen_powers_r2": 0.9703176635179545,
+    "model_F_declared_powers_r2": 0.9682193520500906,
+    "verdict": "B6 内部 (1-Q) 的系数与 M1 隐含常数边际效应**一致**（差 < 1e-9），但 B6 是半合成数据且 M1 正是在这 360 行上拟合的，因此该检验**不能**证实 M1 形式；它只能证伪。线性形式假设在 B6 上不可独立检验——这是 M1 的形式局限，不是坐标换算能修的。",
+    "honest_negative_result": "关键负面结论：把 (1-Q) 单独对该数据回归只得 R²=0.110，说明质量项在 B6 的总变异中只占约 11%；补齐 N、D 项后 R² 才升到 0.938，且 RESET 检验仍显著（p≈2.3e-32），说明\"线性 + 幂律加和\"的整体形式在 B6 上仍有可检出的设定误差。",
+    "residual_structure": "见 tables/linearity_residual_by_Q_bin.csv（按 Q 分箱的残差均值）与 linearity_check.csv"
+  },
+  "stop_conditions_hit": [
+    {
+      "token": "BLOCKED_MAPPING_SENSITIVE",
+      "reason": "候选映射之间 Loss 影响的量级差异超过 2 倍：相对降幅范围 [0.03349744528178779, 0.1218913715558075]，倍数 3.6388",
+      "action": "如实报告差异；不得把任何单一映射写成\"正确的\"换算"
+    },
+    {
+      "token": "FEEDBACK_REQUIRED",
+      "reason": "冻结数组 M1.fit_B6 的**标签顺序**与派发声明不一致（数值未变）。真实顺序 [E,A,B,G,alpha,beta] 下 B6 SSR=1.272273，声明顺序 [E,A,B,alpha,beta,G] 下 B6 SSR=5.488376（差 4.314 倍）；真实顺序逐行复刻已提交的 m1_b6_elasticities.csv（最大绝对差 9.7e-17）。因此质量项系数应为 G=0.36224743500545836，而非派发与 README 写的 0.28280291348008263。",
+      "action": "写入 discrepancy_report.md；本 run 按真实顺序计算并同时给出两种 G 的敏感性对照表；未修改任何冻结参数文件、未重拟合 M1、未改数据"
+    }
+  ],
+  "limitations": [
+    "本工作只建立**尺度兼容**，未建立 A–B 逐行对应 / row-level correspondence。",
+    "未把问题一的 Q_A 认证为正式质量真值（问题一 run 仍为待验收 REVIEW 状态）。",
+    "不解除四个核心阻断中的任何一个。",
+    "不产生 G_bridge 的可识别估计；全程沿用冻结 G。",
+    "未重拟合 M1（也未重拟合 M0）。",
+    "B6 为半合成数据且被 B7 完全包含，本 run 不把 B6/B7 当作独立观测。",
+    "映射选择会改变 Loss 影响量级，任何单一映射的数值只能写成条件结论。",
+    "ε_q 是逐点量，依赖 L 的取值，只能按分位数/锚点报告，不能压成一个常数。",
+    "M1 质量项是线性项，其常数边际效应假设无法用 B6 自身证伪；这是 M1 的形式局限。",
+    "冻结数组 M1.fit_B6 的标签顺序与派发声明不一致（见 parameter_order_correction），已在 discrepancy_report.md 记录，未擅自改文件。",
+    "所有产物状态为 EXPLORATORY，不得作为最终论文结论直接引用。"
+  ],
+  "outputs": {
+    "tables/q1_scale_distribution.csv": {
+      "path": "tables/q1_scale_distribution.csv",
+      "sha256": "2e65b2d0e1549ba6f7b92497e8057229ed5dc596e5872c1fce73f713ea192e2d"
+    },
+    "tables/b6_scale_distribution.csv": {
+      "path": "tables/b6_scale_distribution.csv",
+      "sha256": "8bbdea53bd98ef0f686bfea10215e26816a044e8671455d450efe36374011510"
+    },
+    "tables/b6_scale_levels.csv": {
+      "path": "tables/b6_scale_levels.csv",
+      "sha256": "e2847e0e5b70551be1e38891ef83f59d17c6ad3f61a94903ca28f66455d5232d"
+    },
+    "tables/mapping_candidates.csv": {
+      "path": "tables/mapping_candidates.csv",
+      "sha256": "f499ade6124e58eb409b98baaecc39c19e0111d70f29ce4e124de9990f949ced"
+    },
+    "tables/mapping_probe_points.csv": {
+      "path": "tables/mapping_probe_points.csv",
+      "sha256": "069955d242a7d0a91d04f7dfd19798bb840714dc9a9ba959ffb0a9365cba99e4"
+    },
+    "tables/mapping_monotonicity_check.csv": {
+      "path": "tables/mapping_monotonicity_check.csv",
+      "sha256": "2e996a76db0e3e026f4c4e43b69c0f04d4239cfca713b8517589320c4e0d51bf"
+    },
+    "tables/mapping_effect.csv": {
+      "path": "tables/mapping_effect.csv",
+      "sha256": "84072f7c0e72a9bd3745debe22fe8a73703394b587a5bce9368699d895f75a7d"
+    },
+    "tables/mapping_effect_rows.csv": {
+      "path": "tables/mapping_effect_rows.csv",
+      "sha256": "8fdcfbed98b7325fc1c86f1dbb5c29d909a2b3fab9792caebb3bb91bcf7c1396"
+    },
+    "tables/mapping_effect_G_sensitivity.csv": {
+      "path": "tables/mapping_effect_G_sensitivity.csv",
+      "sha256": "9b33219dba757fe0ee3b4d040de6f31407c565ad217c748dd0ac3252090de9d3"
+    },
+    "tables/mapping_delta_loss.csv": {
+      "path": "tables/mapping_delta_loss.csv",
+      "sha256": "94b18e93e7467c198b67ad19ac528f9a2c728bff8782ef87b26e0ce91906c4fc"
+    },
+    "tables/epsilon_q_rows.csv": {
+      "path": "tables/epsilon_q_rows.csv",
+      "sha256": "852b261017741a3cad6d08149ce5e4fd7b4faa1657183d60b97e188953719b87"
+    },
+    "tables/linearity_check.csv": {
+      "path": "tables/linearity_check.csv",
+      "sha256": "d69902ec1341ad4cb94cdb9969f651b670f4aba00ef83926da756d2d1d84534d"
+    },
+    "tables/linearity_residual_by_Q_bin.csv": {
+      "path": "tables/linearity_residual_by_Q_bin.csv",
+      "sha256": "ceb8fa8a5c77b4a49b739ca90fa8d296abac6bbb1993e0d73563290f93a3ce0a"
+    },
+    "tables/linearity_within_cell_slopes.csv": {
+      "path": "tables/linearity_within_cell_slopes.csv",
+      "sha256": "0c4d2ad9dc722e7433ef477563e1017a969412fb50cad18acc8fbbd73ab33597"
+    },
+    "tables/epsilon_q_out_of_range_trap.csv": {
+      "path": "tables/epsilon_q_out_of_range_trap.csv",
+      "sha256": "e31a8e9aa8bf9ac874fe04dcc0a2a217a79a0dfacf48db096fc9a2342a13fa9f"
+    },
+    "tables/epsilon_q_out_of_range_summary.csv": {
+      "path": "tables/epsilon_q_out_of_range_summary.csv",
+      "sha256": "78c8c577b527f16fd7c3604292664a831c5f89825df6b2a0cdb3cca3ff28a2a6"
+    },
+    "tables/scale_distribution_both.csv": {
+      "path": "tables/scale_distribution_both.csv",
+      "sha256": "2dc577a98404b1c707c535150786aa9020c82ffc2c4398694e1d377adba27659"
+    },
+    "tables/bridge_contract.csv": {
+      "path": "tables/bridge_contract.csv",
+      "sha256": "3aa6303e6d6359ba5b362933fc38fe6c2a68aff680e4f5d54b7ad92a0bb88cfd"
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.0"
+  },
+  "reproduce_command": "python -X utf8 scripts/q2_q_scale_bridge.py"
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "q3.p.fixed_budget.panel.v1",
+  "run_id": "q3-p-fixed-budget-panel-20260926-r01",
+  "status": "EXPLORATORY_Q3_P_TO_FIXED_BUDGET_PANEL",
+  "candidate_count": 6,
+  "frontier_scenario_count": 135,
+  "panel_rows": 810,
+  "candidate_indices": [
+    46,
+    323,
+    270,
+    97,
+    170,
+    186
+  ],
+  "inputs": {
+    "p_candidate_summary": {
+      "path": "experiments/runs/q3-p-conditional-20260925-r01/tables/p_candidate_summary.csv",
+      "sha256": "f93211d5b288e5b655f29881da6a42459c78e84d00ae909640d5e081d6bbf242"
+    },
+    "q1_quality_transfer_wide": {
+      "path": "experiments/runs/q1-domain-transfer-matrix-20260925-r01/tables/A4_A15_quality_transfer_soft_wide.csv",
+      "sha256": "3e1feccd596d2c8d315721b837f8c8628df7c45d8ca345032cc4ad9827b6ce01"
+    },
+    "fixed_budget_frontier_summary": {
+      "path": "experiments/runs/q3-fixed-budget-frontier-20260926-r01/tables/fixed_budget_frontier_summary.csv",
+      "sha256": "7fb662f2dbb276b80309369e905d714eb6bcb172eed3669807f60b28a8c53823"
+    }
+  },
+  "checks": {
+    "candidate_rows_complete": true,
+    "panel_rows_expected": true,
+    "p_effect_in_ndq_objective": false,
+    "joint_A_B_loss_claim": false,
+    "A_B_row_join": false,
+    "Q1_Q_A_p_to_B6_Q_score_conversion": false,
+    "formal_joint_fit": false
+  },
+  "limitations": [
+    "p candidates and B-side frontiers are paired as scenarios, not matched samples",
+    "Q_A(p) is a Q1-derived 0-100 proxy with inferred domain mappings",
+    "B-side Q is native B6 Q_score; the two quality quantities remain separate",
+    "panel cannot identify a p coefficient or a cross-source joint optimum"
+  ],
+  "output_sha256": {
+    "p_fixed_budget_frontier_panel.csv": "53f6d1e058b325f6ce57590f14b2432ab5b77dc83f03d4931394b732c45aab2f"
+  }
+}

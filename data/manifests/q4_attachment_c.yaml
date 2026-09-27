@@ -1,0 +1,33 @@
+dataset_id: q4-attachment-c-local-20260926
+source: "竞赛附件 C 的本地副本；原始文件不进入公开仓库"
+access_date: 2026-09-26
+local_layout: data/origin/C_efficiency_evolution
+license: "未核实；仅保留哈希和聚合实验结果"
+inputs:
+  - path: leaderboard_cleaned.csv
+    bytes: 1011558
+    sha256: 199891128629f24f83ed2f51211eee65a82a13f45275e79a8227d5dacc7c2846
+    fields: "Model, #Params (B), Submission Date, Type, Average 及六项任务分数"
+  - path: data/train-00000-of-00001.parquet
+    bytes: 1109997
+    sha256: f13a7061e63133bc8745d89f8c7a56148584940ede22d3b27e21cad1e078dca5
+    fields: "模型名、类型、参数、六任务、Base Model 等"
+  - path: loss_benchmark_bridge.csv
+    bytes: 11807
+    sha256: 284dee7f8878bfe8ebf48c4efbcaa85c1c566377edc5008727c06efa6520170f
+    fields: "Loss、Benchmark、High/Medium comparability"
+  - path: leaderboard_extended_timeseries.csv
+    bytes: 826723
+    sha256: ab2b5715b2945ebdeeabfb18e8d040f7c68d8c76bd02c01e446959218bfcd184
+    fields: "年份、来源、汇总分数；仅用于来源断点审计"
+  - path: detailed_results/**/*.json
+    file_count: 1958
+    tree_sha256: e27d653af44d7437206219e75ab2e497ea60b9c8529b0eef4406c50b82a6e0e0
+    tree_hash_rule: "按相对路径排序，逐文件 SHA256；每行 UTF-8 相对路径、NUL、十六进制 SHA256、换行，再整体 SHA256"
+    fields: "六项任务一级指标的详细结果；只接纳六项齐全的模型"
+derived_input:
+  path: experiments/runs/q4-frontier-20260926-r01/q3_baseline_ND_optima.csv
+  sha256: 573ce56c1bc968f7480ff745f49aac68927a501765088965d273817b45e9cda5
+  status: "问题三探索性结果，仅用作外生情景，不视为已接受模型"
+processing: scripts/q4/run_all.py
+parent_version: "本地附件 C；无上游版本号"

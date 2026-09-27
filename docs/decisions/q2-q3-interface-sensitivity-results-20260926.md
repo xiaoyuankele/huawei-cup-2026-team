@@ -1,6 +1,6 @@
 # 问题二到问题三接口敏感性结果
 
-运行号：`q2-q3-interface-sensitivity-20260926-r01`  
+运行号：`q2-q3-interface-sensitivity-20260926-r01`
 状态：`EXPLORATORY_INTERFACE_SENSITIVITY_SCENARIO_ONLY`
 
 本轮把问题一侧 6 个已观测的 A4/A5 配比候选接入问题二的 M2 接口，再把接口值作为固定质量情景传给问题三的 M1 求解器。没有重拟合 M0/M1，没有按行号建立 A-B 连接，没有使用 B8。

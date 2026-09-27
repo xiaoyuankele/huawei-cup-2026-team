@@ -1,0 +1,110 @@
+{
+  "status": "conditional_deterministic_figures_pending_peer_review",
+  "backend": "Python/matplotlib",
+  "style": {
+    "ink": "#29363D",
+    "teal": "#527F88",
+    "teal_light": "#C8DEDF",
+    "warm": "#C17855",
+    "grey": "#738087"
+  },
+  "figures": [
+    {
+      "figure": "Fig05_E1_marginal_elasticity",
+      "width_mm": 183.0,
+      "height_mm": 136.0,
+      "backend": "Python/matplotlib",
+      "editable_vector_text": true,
+      "png_dpi": 600,
+      "confidence_intervals": false,
+      "sources": [
+        "q2-e1-marginal-elasticity-20260925-r01/scale_curves.csv",
+        "q2-e1-marginal-elasticity-20260925-r01/quality_piecewise.csv",
+        "q2-e1-marginal-elasticity-20260925-r01/simplex_directional_derivatives.csv"
+      ]
+    },
+    {
+      "figure": "Fig06_E2_substitution_interaction",
+      "width_mm": 183.0,
+      "height_mm": 150.0,
+      "backend": "Python/matplotlib",
+      "editable_vector_text": true,
+      "png_dpi": 600,
+      "confidence_intervals": false,
+      "sources": [
+        "q2-e2-domain-substitution-20260925-r01/substitution_support.csv",
+        "q2-e2-domain-substitution-20260925-r01/assumption_sensitivity.csv",
+        "q2-e2-domain-substitution-20260925-r01/interior_interactions.csv",
+        "q2-e2-domain-substitution-20260925-r01/clipping_stress_interactions.csv"
+      ]
+    },
+    {
+      "figure": "Fig07_E3_quality_parameter_tradeoff",
+      "width_mm": 183.0,
+      "height_mm": 118.0,
+      "backend": "Python/matplotlib",
+      "editable_vector_text": true,
+      "png_dpi": 600,
+      "confidence_intervals": false,
+      "sources": [
+        "q2-e3-quality-parameter-substitution-20260925-r01/quality_path_curves.csv",
+        "q2-e3-quality-parameter-substitution-20260925-r01/quality_capacity.csv",
+        "q2-e3-quality-parameter-substitution-20260925-r01/recipe_substitution.csv"
+      ]
+    },
+    {
+      "figure": "Fig08_E4_scale_extrapolation",
+      "width_mm": 183.0,
+      "height_mm": 75.0,
+      "backend": "Python/matplotlib",
+      "editable_vector_text": true,
+      "png_dpi": 600,
+      "confidence_intervals": false,
+      "sources": [
+        "C:\\Users\\29717\\Documents\\ChatGPT\\2026\\q2_e2_delivery\\experiments\\runs\\q2-e4-b9-b10-extrapolation-20260926-r01\\scale_extrapolation_grid.csv",
+        "C:\\Users\\29717\\Documents\\ChatGPT\\2026\\q2_e2_delivery\\experiments\\runs\\q2-e4-b9-b10-extrapolation-20260926-r01\\quality_extrapolation_grid.csv",
+        "C:\\Users\\29717\\Documents\\ChatGPT\\2026\\q2_e2_delivery\\experiments\\runs\\q2-e4-b9-b10-extrapolation-20260926-r01\\b9_b10_coverage.csv"
+      ]
+    },
+    {
+      "figure": "Fig09_quality_bridge_coverage",
+      "width_mm": 183.0,
+      "height_mm": 105.0,
+      "backend": "Python/matplotlib",
+      "editable_vector_text": true,
+      "png_dpi": 600,
+      "confidence_intervals": false,
+      "sources": [
+        "q2-bridge-interface-20250925-r01/tables/domain_mapping_with_candidate_q.csv",
+        "q2-bridge-interface-20250925-r01/tables/recipe_partial_q_summary.csv"
+      ]
+    },
+    {
+      "figure": "Fig10_B8_direction_conflict",
+      "width_mm": 183.0,
+      "height_mm": 66.0,
+      "backend": "Python/matplotlib",
+      "editable_vector_text": true,
+      "png_dpi": 600,
+      "confidence_intervals": false,
+      "sources": [
+        "q2-quality-scaling-linkage-20260925/quality-direction-audit.csv",
+        "q2-b8-provenance-20250925-r01/metrics.json"
+      ]
+    },
+    {
+      "figure": "Fig11_stratified_transfer_diagnostics",
+      "width_mm": 183.0,
+      "height_mm": 76.0,
+      "backend": "Python/matplotlib",
+      "editable_vector_text": true,
+      "png_dpi": 600,
+      "confidence_intervals": false,
+      "sources": [
+        "q2-b4-b5-stratified-audit-20250925-r01/metrics.json"
+      ]
+    }
+  ],
+  "script_sha256": "8de70892ca96bbc08d10df03b90480e31a9b68543fb97ad595bc008ea0845a6b",
+  "uncertainty": "No confidence intervals; calculations are deterministic model diagnostics."
+}

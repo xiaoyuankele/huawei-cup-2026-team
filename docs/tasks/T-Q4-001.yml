@@ -1,0 +1,35 @@
+task_id: T-Q4-001
+title: "问题四能力前沿基线、分位数模型与算力情景探索"
+status: REVIEW
+owner: B
+reviewer: A
+priority: P0
+issue: ""
+branch: "feature/B/T-Q4-001-frontier-experiments"
+prompt:
+  prompt_id: P-EXP-001
+  version: v1.0.0
+  prompt_run_id: PR-20260926-001
+objective: "在附件 C 上建立可复现的能力前沿基线与探索性条件分位数模型，并明确外推和因果识别边界。"
+inputs:
+  - ref: data/manifests/q4_attachment_c.yaml
+    purpose: "附件 C 的榜单、逐任务结果及 Loss–Benchmark 桥接"
+  - ref: experiments/runs/q4-frontier-20260926-r01/q3_baseline_ND_optima.csv
+    purpose: "仅用于探索性算力增长情景的外生弹性"
+expected_outputs:
+  - path: scripts/q4/
+    description: "可复现的审计、基线和模型脚本"
+  - path: experiments/runs/q4-frontier-20260926-r01/
+    description: "配置、环境、聚合指标、日志和结论"
+  - path: docs/research/q4/
+    description: "研究报告及局限性"
+acceptance_criteria:
+  - "原始数据、详细逐模型预测和未公开题目不进入公开 Git"
+  - "训练仅用 2024 年，2025 年作为时间外测试；月度基线采用滚动验证"
+  - "95% 分位模型同时报告 pinball loss 与经验覆盖率"
+  - "详细 C8 与官方 Average 分开报告，算力情景不得被解释为因果结论"
+definition_of_done:
+  - "脚本从仓库根目录运行，输入路径可配置"
+  - "run_id 和数据哈希已记录，并加入 experiments/index.csv"
+  - "Owner 复核后由非 Owner 成员审核 PR；审核前不作为论文已接受结论"
+notes: "本提交为探索性 REVIEW 包；模型族、训练算力和跨期评测可比性仍需人工核查。"

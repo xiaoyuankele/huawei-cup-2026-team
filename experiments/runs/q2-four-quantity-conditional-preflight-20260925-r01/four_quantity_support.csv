@@ -1,0 +1,6 @@
+﻿quantity,source,role,scale,n,min,mean,max,finite
+N,B1 pythia_training_log_existing.csv,B1 main baseline,,1176,0.070542,3.088587875,11.965825,True
+D,B1 pythia_training_log_existing.csv,B1 main baseline,,1176,0.134,146.89993197278912,299.893,True
+Q_score_native_B,B6 supplementary_NQ_experiment.csv,B6 semi-synthetic native quality,,360,0.1,0.5375,1.0,True
+Q_A(p)_baseline,A4-A15 Q1-derived interface,A-side conditional interface,,1214,51.81511625420505,60.83307799767191,64.3193971459079,True
+p_sum,A4-A15 Q1-derived interface,A-side simplex check,,1214,0.9999999999999984,0.9999999999999997,1.0000000000000002,True

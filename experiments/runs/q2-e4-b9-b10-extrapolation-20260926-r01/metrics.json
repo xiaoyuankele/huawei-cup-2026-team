@@ -1,0 +1,20 @@
+{
+  "status": "RUN_COMPLETE_RANGE_CONDITIONED",
+  "grid_rows": 42,
+  "quality_rows": 756,
+  "sensitivity_rows": 168,
+  "coverage_rows": 2,
+  "checks": 6,
+  "numerical_comparisons": 348,
+  "B9_B10_rows": {
+    "B9": 132,
+    "B10": 128
+  },
+  "max_N_extrapolation_factor": 835.7133753836446,
+  "max_D_extrapolation_factor": 120.04281527077993,
+  "row_level_loss_loaded": false,
+  "fit_new_parameters": false,
+  "used_as_true_validation": false,
+  "inputs_unchanged": true,
+  "interpretation": "Conditional trend and range audit; no B10 outcome comparison"
+}

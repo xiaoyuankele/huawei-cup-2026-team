@@ -1,0 +1,107 @@
+# 问题三正文图（2026-09-26）
+
+本目录包含五张按仓库既有 Q1/Q2 图件的配色、字体与留白绘制的正文图。数据固定在仓库提交 `f36afef332ed160146c548551d6cf09488cfd312`；绘图使用 Python/matplotlib，没有重新拟合模型。每张图提供可编辑的 SVG、PDF，以及 PNG、600 dpi TIFF。
+
+## 建议的正文顺序与配文
+
+### 图 1：配方替代的支持域
+
+**正文衔接。** 在使用质量代理优化领域配比之前，先检查已有训练配方的可识别范围。Q2-E2 结果表明，17 个领域之间的 272 个有向替代在 0.1 个百分点阈值下均有有限支持，但达到 1 和 5 个百分点的方向分别只有 224 和 117 个。因此，后续配方优化应明确标注其相对训练凸包的范围。
+
+**图注。** 图 1 配方凸包内的有限领域替代支持域。a，基于 Q2-E2 的 99% 安全余量计算的有向领域替代上限，横轴为减少领域、纵轴为增加领域，单位为百分点；对角线不适用。b，替代上限达到不同幅度阈值的方向数。该图是 Q2 上游支持诊断，不能视作问题三联合模型的独立验证。
+
+源表：`source_data/e2_substitution_support.csv`，对应仓库 `experiments/runs/q2-e2-domain-substitution-20260925-r01/substitution_support.csv`。图件：`figures/Fig01_recipe_support.*`。
+
+### 图 2：配比放开后的模型失效
+
+**正文衔接。** 将冻结的质量效应外推到完整配比单纯形时，最优解落到纯 Enron 顶点，而训练配方中 Enron 的最大占比仅为 2.6026%。所有 60 个完整单纯形情景都给出负的预测 Loss。这个现象提示极值解主要反映支持域外推风险，不能据此推荐纯 Enron 配方。
+
+**图注。** 图 2 配比约束变化与冻结模型的异常最优解。a，两种质量轴下，参考配方、已有训练配方、训练凸包和完整单纯形四种可行域的模型总修正。b，完整单纯形的 60 个确定性情景所对应的预测 Loss；横轴为预算。不同预算、上下文、规模边界和质量轴不是独立训练重复；负 Loss 为模型诊断信号，不是实测性能。
+
+源表：`source_data/recipe_optima.csv`、`source_data/frozen_v1_optima.csv`。图件：`figures/Fig02_recipe_failure.*`。
+
+### 图 3：质量成本口径的敏感性
+
+**正文衔接。** 固定参考配方、上下文长度 2048、指数成本、无规模上限和冻结效应强度 1 后，分别沿两个质量轴采用 QA 或 QB 计价。QA 计价下，最优质量随预算几乎不变；QB 计价下则出现内点区间，并在更高预算进入质量上界。两种成本坐标代表不同假设，不能作为等价换元。
+
+**图注。** 图 3 不同质量成本坐标下的最优处理质量。a–d，TOPSIS 与 soft 质量轴分别按 QA、QB 计价的预算扫描，每格含 51 个确定性预算点。虚线表示该口径的初始质量；阴影表示内点解区间。预算步长为 0.1 log10，因此转折位置仅具有该网格的分辨率；曲线不是经验置信区间。
+
+源表：`source_data/processing_scenarios.csv`；筛选后的绘图数据为 204 行。图件：`figures/Fig03_quality_cost.*`。
+
+### 图 4：预算与模型规模、训练 token 的配置
+
+**正文衔接。** 在 TOPSIS 质量轴、v1、参考配方和上下文 2048 的条件下，预算从 1e19 增至 1e24 FLOPs 时，无规模约束解在最高预算越过 B1 参数量与 token 的支持上限。施加 B1 矩形约束后，最优解贴到边界；这说明高预算结论依赖于规模外推条件。
+
+**图注。** 图 4 三个离散预算下的最优参数量与训练 token 数。a 为参数量 N，b 为训练 token 数 D，单位均为十亿。虚线水平线为 B1 支持上限，空心圈标记无约束解超过相应上限。连接线仅辅助辨认离散情景，不表示对中间预算的连续优化结果。1e24 FLOPs 情景下受限解的预算利用率为 2.30%，该数值不能解释为现实算力上限。
+
+源表：`source_data/frozen_v1_optima.csv`；筛选后的绘图数据为 6 行。图件：`figures/Fig04_budget_ND.*`。
+
+### 图 5：回溯选优的决策风险
+
+**正文衔接。** 即使模型预测能在候选配方之间排序，最终选中的方案仍可能明显偏离候选集的实测最优。冻结 v1 的回溯结果中，1M、60M 和 1B 的选择后悔值分别为 0.709、0.618 和 0.116 Loss；相应实测名次为 193/256、226/256 和 34/64。
+
+**图注。** 图 5 冻结 v1 模型在三个模型规模的候选配方集合中的回溯选优。每个面板展示候选最佳、候选均值和模型选中配方的实测平均 Loss；后悔值为选中配方与候选最佳之间的 Loss 差。两种质量轴在每个规模选中同一配方，因此只绘制一份。相关标签已用于 Q2 研究，此图是回溯诊断，不是新的独立盲测；1M 与 60M 配方匹配，也不视为独立重复。
+
+源表：`source_data/retrospective_decision_regret.csv`。图件：`figures/Fig05_decision_regret.*`。
+
+## 新增正文图：未写入旧稿的 M0/M1/M2 分析
+
+以下 Fig06–Fig13 使用已经上传到 `experiments/runs/` 的 Q3 条件实验表，沿用本目录既有的白底、深灰文字、蓝绿色主色和暖橙色对照色。每幅图都按 183 mm 正文宽度输出 PDF、SVG、500 dpi PNG 和 600 dpi LZW TIFF。
+
+### 图 6：M0 预算下的参数量–训练 token 配置
+
+实线为 B1 支持域约束解，虚线为放松支持域的解析解；颜色表示上下文长度。阴影表示 B1 的参数量和 token 支持范围。超出支持域的放松解仅作外推诊断。
+
+源表：`experiments/runs/q3-nd-baseline-20260925-r01/tables/q3_nd_baseline_scenarios.csv`。图件：`figures/Fig06_M0_budget_context.*`。
+
+### 图 7：M1 原生质量条件下的质量投入与资源替代
+
+三列分别为指数、幂函数和对数成本；颜色表示 C7 上下文长度。上排为最优质量，下排为质量成本占比。Q 是 B6/B7 原生质量分数，不等同于 Q1 质量分，也不构成 A–B 联合验证。
+
+源表：`experiments/runs/q3-q-conditional-20260925-r01/tables/q3_q_conditional_scenarios.csv`。图件：`figures/Fig07_M1_quality_tradeoff.*`。
+
+### 图 8：质量最优解对初始质量和成本函数的稳健性
+
+每个热图单元格为五个上下文情景的最优质量中位数；右下角显示达到质量上界的情景比例。该图是 Q0 与成本族的参数敏感性，不是重新拟合或独立验证。
+
+源表：`experiments/runs/q3-q-robustness-20260925-r01/tables/q3_q_robustness_scenarios.csv`。图件：`figures/Fig08_Q0_cost_robustness.*`。
+
+### 图 9：Q2 参数折叠传播到 Q3 优化结果的范围
+
+阴影为 5%–95% 折叠参数传播范围，实线为中位数。它表示参数不确定性传播，不是独立实验的置信区间。M1 示例固定指数成本和 Lctx=2048。
+
+源表：`experiments/runs/q3-optimization-robustness-20260926-r01/tables/m0_uncertainty_summary.csv`、`m1_uncertainty_summary.csv`。图件：`figures/Fig09_parameter_uncertainty.*`。
+
+### 图 10：M0/M1 的离散成本–Loss 前沿
+
+固定 Lctx=2048；点为折叠参数传播后的确定性情景，菱形为组内离散非支配点。该图用于比较条件情景的成本–Loss 关系，不表示连续优化的全局最优边界。
+
+源表：`experiments/runs/q3-optimization-robustness-20260926-r01/tables/m0_discrete_frontier.csv`、`m1_discrete_frontier.csv`。图件：`figures/Fig10_discrete_pareto.*`。
+
+### 图 11：已观测配比候选的 A 侧表现与 Q3 条件配置
+
+a，A 侧观测/预测 scalar Loss；b，指数成本、Lctx=2048、预算 1e22 FLOPs 下的条件配置。A 侧配比评价与 B 侧资源配置分开呈现，不相加为未经验证的联合 Loss。
+
+源表：`experiments/runs/q3-p-conditional-20260925-r01/tables/p_candidate_summary.csv`、`p_candidate_q3_nd_panel.csv`。图件：`figures/Fig11_p_candidate_panel.*`。
+
+### 图 12：Q1 配比质量到 B6 质量接口的情景敏感性
+
+固定指数成本、Lctx=2048、预算 1e22 FLOPs；每个单元格对应一个条件优化情景。热图展示接口假设如何改变假设 Q、预测 Loss 和质量成本占比。Q1→B6 仿射映射未经验证，不代表质量尺度已校准。
+
+源表：`experiments/runs/q2-q3-interface-sensitivity-20260926-r01/tables/m2_q3_fixed_q_scenarios.csv`。图件：`figures/Fig12_M2_interface_heatmap.*`。
+
+### 图 13：问题三模型接口与可识别性边界
+
+示意图区分可分别识别的 M0、M1、P/M2 条件路径和暂不识别的 M3 四量联合模型。缺少 A–B 行级连接键、Q1 与 B6 质量尺度未校准以及 `G_bridge` 未识别，是当前联合模型阻断的原因。
+
+图件：`figures/Fig13_identifiability_interface.*`。该图是方法结构示意，不是参数估计结果。
+
+新增图的输入哈希、行数和绘图输出登记在 `figure_manifest_missing.json`；静态和 PDF 字体检查记录在 `Q3-MISSING-FIGURE-QA.md`。
+
+## 使用边界与复现
+
+仓库中的问题三当前状态为 `REVIEW_BLOCKED / EXPLORATION_ONLY`。这些图适合配合正文说明模型行为、敏感性和证据限制；在获得联合校验或独立验证前，不能写成已证实的最优训练建议。Q3 表格均为派生计算，没有新增训练观测；图中的情景点不是独立重复，不加统计误差线。
+
+在本目录运行 `MPLCONFIGDIR=/tmp/q3-figure-mplcache python plot_q3_figures.py` 可从 `source_data/` 重建图件。`figure_manifest.json` 记录源提交、源表 SHA-256 与每图使用的行数。`source_data/transition_brackets.csv` 保留作转折点复核，但没有单独画成图，避免与图 3 重复。
+
+已对原有绘图脚本运行 nature-figure 源码检查（19 PASS、1 WARN、0 FAIL）；新增脚本 `plot_q3_missing_figures.py` 通过 19 PASS、1 WARN、0 FAIL。新增八张 PDF 的实际最小字级均不低于 5.04 pt；所有图已逐张目视检查。唯一 WARN 是静态检查器对数学上标 `$Q^*$` 的保守提示，PDF 实际字体审计已通过。

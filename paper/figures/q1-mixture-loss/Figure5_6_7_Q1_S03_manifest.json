@@ -1,0 +1,24 @@
+{
+  "backend": "python/matplotlib/seaborn",
+  "figures": [
+    "Figure5_Q1_S03_model_selection_validation",
+    "Figure6_Q1_S03_aitchison_support",
+    "Figure7_Q1_S03_quality_increment"
+  ],
+  "width_mm": 183,
+  "source_files": {
+    "q1_third_team_git\\experiments\\runs\\q1-model-benchmark-20260924-r01\\cv_folds.csv": "67b0a0b9ac3d9d9c23af940386dae0c41eb4e516bf2c9e69f3783ffc409ed0c3",
+    "q1_third_team_git\\experiments\\runs\\q1-model-benchmark-20260924-r01\\metrics.json": "98e02d996e0c608ba2133efb3c2bd97e97765f97b0cc2a9f91bd7028218c90e2",
+    "q1_s03_all_assets_20260926\\exports\\quality_mapping_v1_v2\\scored_wide_v2_soft.csv": "5d16c2c30ce5f0dcf0ecc0760fec9d8df621690d4a29f5af1ce5f44b2ede880c",
+    "q1_s03_all_assets_20260926\\exports\\mixture_loss_runs\\q1-mixture-loss-20260925-r01\\predictions_mean_loss.csv": "9777d5b5b84352bff3d8394e64407dd7c00c56c6666bf6e97313c95a46ce006a",
+    "q1_third_team_git\\experiments\\runs\\q1-mixture-quality-baseline-20260925-r01\\paper_comparison_target_summary.csv": "e1361d51123c1e4238fedb95a3ca3b7cbb812d3d3b2de34f1ed36949025129ba",
+    "q1_third_team_git\\experiments\\runs\\q1-mixture-quality-baseline-20260925-r01\\paper_comparison_summary.csv": "918f51b4a681a1feb16c28bec7df0b4ba533dd2740bfdee451bc317e15be9dd7",
+    "q1_third_team_git\\experiments\\runs\\q1-mixture-quality-baseline-20260925-r01\\selected_models.csv": "54ccb5ce0492b554c86403c887e7fd2704de4c95bc91ef130a3d6c190d227b7a"
+  },
+  "status_notes": [
+    "The benchmark and quality-increment sources are local experimental runs marked EXPERIMENTAL_REVIEW in their manifests.",
+    "Model selection fits A4/A5 only; A6/A7 is same-scale external validation; A8-A15 are not used for selection.",
+    "Aitchison distances use CLR with epsilon=1e-4 and include epsilon sensitivity data; A12/A14 are exact recipe subsets of A4/A5 and represent scale extrapolation.",
+    "Quality mappings cover 6/17 domains and are shown as optional increments, not causal effects."
+  ]
+}

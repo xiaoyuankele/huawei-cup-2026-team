@@ -1,0 +1,27 @@
+{
+  "task_id": "T-Q2-E4",
+  "run_id": "q2-e4-b9-b10-extrapolation-20260926-r01",
+  "git_commit": "5e31981174d9e4e93a7c05c0cdcbc8361d8ab900",
+  "created_at": "2026-09-26T02:27:02.738472+00:00",
+  "inputs": {
+    "experiments/runs/q2-model-finalization-20260925/model_parameters.json": "46c94c6343e7bc023cf7347467d50c4e834fa50828e1e6a18c6a3b556dde7000",
+    "experiments/runs/q2-b9-b10-extrapolation-audit-20250925-r01/metrics.json": "6d0630f1f956ff7c6a8f09770f2a6aef48f21c21cfc285c2837e42aac73eafe5",
+    "experiments/runs/q2-e3-quality-parameter-substitution-20260925-r01/quality_path_support.csv": "5866939a09aabcb032318eff397c35706572d227e8ae1add2134dd75b66ac0aa",
+    "configs/q2-e4-b9-b10-extrapolation.json": "ea1319fd5d185bf70155a82f9eaca313266dee75181e6324cd9719a52d98a8f2",
+    "scripts/q2_e4_b9_b10_extrapolation.py": "1721e4de265583d2bf5e5eb35ffb33b69b8856ce18cd18fcb55c1bf618d0653b",
+    "scripts/q2_finalize_model.py": "e7358e3b1dbe05c821048a9ecda294199804a9714558ede83edbdca8bed4c7b0"
+  },
+  "outputs": {
+    "scale_extrapolation_grid.csv": "b2111000fd5a9399c53b6565a4982734b4e6315805a7c4d68250b19a6a0cd293",
+    "quality_extrapolation_grid.csv": "7bf941777703b00f74d32bad91197911304007d9597766526c575c1148d56e1a",
+    "exponent_sensitivity.csv": "e6138c0d331483254298bb7e9e0d3662fd38fd0d34594bf27de1136cf41403c3",
+    "b9_b10_coverage.csv": "5aa1e185f40d244c3a2af0e8a000ce647c85ba8a711f15fb939952c5e74a63d1",
+    "verification_checks.csv": "5690ebe5d6431a0f04bb2768dfe5453169321264da594435bfbbb217fb26e53f"
+  },
+  "metrics_sha256": "44f57544376323ff11e3b51f98e15e38d53dbf8dd4d6d4d45eabf0929afb85fc",
+  "inference_status": "RANGE_CONDITIONED_NOT_VALIDATION",
+  "source_data_roles": {
+    "B9": "metadata/range only",
+    "B10": "estimated baseline/range only"
+  }
+}

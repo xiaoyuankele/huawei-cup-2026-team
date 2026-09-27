@@ -1,0 +1,41 @@
+{
+  "schema_version": "q2.conditional.bridge.decision.v1",
+  "run_id": "q2-conditional-bridge-decision-20260925-r01",
+  "task_id": "T-Q2-MIGRATION",
+  "status": "USER_CONFIRMED_CONDITIONAL_MIGRATION_NO_ROW_KEY",
+  "user_confirmation": "A、B没有唯一id将样本链接在一起",
+  "checks": {
+    "a_to_b_row_level_join_key_available": false,
+    "formal_joint_fit_identifiable_from_current_files": false,
+    "conditional_scenario_analysis_allowed": true,
+    "q1_q_converted_to_b6_q_score": false,
+    "b8_unblocked": false,
+    "raw_data_modified": false
+  },
+  "decision": {
+    "bridge_id": "conditional-no-row-key-v1",
+    "mapping_scope": "domain_or_scenario_level",
+    "identifiability": "conditional_only",
+    "formal_a_b_model": "not_identifiable from current A/B files",
+    "primary_route": "report B-side evidence separately and use Q1-derived Q/p only for A-side conditional scenarios",
+    "native_b_quality": "B6/B7 Q_score remains a separate semi-synthetic field",
+    "b8": "exclude from main fit until provenance and direction are resolved"
+  },
+  "allowed_next_work": [
+    "freeze conditional bridge manifest and claim boundaries",
+    "complete Q1-derived Q/p scenario and mapping sensitivity reports",
+    "report B1, B3, B4/B5 and B6/B7 evidence in separate layers",
+    "compute model-internal elasticities only within the explicitly scoped B models"
+  ],
+  "prohibited_next_work": [
+    "row-number or scale-only A-B merge",
+    "estimate an identified p effect from the current files",
+    "rename B6/B7 Q_score as Q1 Q",
+    "fit L(N,D,Q,p) as a formal joint model"
+  ],
+  "inputs": {
+    "interface_reaudit": "experiments/runs/q2-interface-reaudit-20260925-r01/metrics.json",
+    "alignment": "experiments/runs/q2-progress-alignment-20260925-r01/metrics.json",
+    "scenario_sensitivity": "experiments/runs/q2-qp-scenario-sensitivity-20260925-r01/metrics.json"
+  }
+}

@@ -1,0 +1,3 @@
+Experiment source commit: d132944a334dc34f2f95c2f738e01db936d05e37
+This commit contains the scripts and aggregate outputs used in the run.
+The subsequent metadata-only commit fills this reference and the experiment index.

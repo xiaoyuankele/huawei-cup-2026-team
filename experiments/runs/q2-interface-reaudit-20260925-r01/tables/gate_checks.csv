@@ -1,0 +1,7 @@
+﻿check,passed
+q1_score_accepted,False
+all_17_mixture_domains_have_quality_score,False
+a_b_row_level_join_key_available,False
+b8_manifest_has_source_and_note,False
+b8_direction_consistent_with_b6_b7,False
+mixture_rows_have_finite_sums,True

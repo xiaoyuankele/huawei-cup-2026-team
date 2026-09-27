@@ -1,0 +1,55 @@
+{
+  "run_id": "q2-interface-reaudit-20260925-r01",
+  "status": "BLOCKED_FORMAL_JOINT_MIGRATION",
+  "purpose": "Read-only re-audit using the current Q1 score run and current A/B attachments.",
+  "q1_score_run": {
+    "run_id": "q1-critic-topsis-20260925-r01",
+    "status": "LOCAL_RESULT_PENDING_TEAM_REVIEW",
+    "sha256": "c1e630716d3828323df26c0237dc21ce6d04ef04b125e4aefc5bb19decb34694"
+  },
+  "mapping": {
+    "total_mixture_domains": 17,
+    "mapped_candidate_domains": 6,
+    "coverage_fraction": 0.35294117647058826,
+    "mapping_type_counts": {
+      "inferred": 11,
+      "direct": 3,
+      "near_direct": 3
+    }
+  },
+  "a_b_field_intersection": {
+    "all_intersection": [],
+    "possible_key_intersection": []
+  },
+  "b6_b7_nested": {
+    "b6_rows": 360,
+    "b7_rows": 450,
+    "b6_exact_rows_in_b7": 360
+  },
+  "checks": {
+    "q1_score_accepted": false,
+    "all_17_mixture_domains_have_quality_score": false,
+    "a_b_row_level_join_key_available": false,
+    "b8_manifest_has_source_and_note": false,
+    "b8_direction_consistent_with_b6_b7": false,
+    "mixture_rows_have_finite_sums": true
+  },
+  "blockers": [
+    "Current Q1 TOPSIS-CRITIC run remains LOCAL_RESULT_PENDING_TEAM_REVIEW.",
+    "Only 6/17 mixture domains have current A1 domain-score mappings.",
+    "A mixture fields and B6 fields intersect only at non-key fields: []; no row-level join key is available.",
+    "B8 manifest lacks complete source/generation provenance.",
+    "B8 Q direction is inconsistent with the B6/B7 within-cell direction."
+  ],
+  "source_sha256": {
+    "domain_mapping_guide.csv": "0ae884c0d16dcf77fe8411bdbe899ad7a0d487ffee73fba608c6d01b108401e7",
+    "domain_scores.csv": "b9b8e124a2deb86904f139c3144c496c90a6e5cfcc858f26aa7e1768ffa0de43",
+    "source_manifest.json": "34e81dabf46302eebaac8551fa18d2e72acd0833b1cf0276690bee897f1323db",
+    "B6": "c7450ce0d67d8692535fef4709e60e2da60b2c184738bf96df160a4be0a33a7f",
+    "B7": "880fd265ca3e1d9bc93b4559af7ed7c18f89040634266c50bae03d88486e0f3a",
+    "B8": "bda0d449f75c73bbd04141e5cffbf4bea7002073e34b7fa95a638570fa095ffe"
+  },
+  "no_raw_mutation": true,
+  "no_model_fit": true,
+  "no_q_conversion_to_b6_scale": true
+}

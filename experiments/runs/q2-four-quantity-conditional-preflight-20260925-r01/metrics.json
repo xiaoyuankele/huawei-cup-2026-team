@@ -1,0 +1,96 @@
+{
+  "schema_version": "q2.four.quantity.conditional.preflight.v1",
+  "run_id": "q2-four-quantity-conditional-preflight-20260925-r01",
+  "task_id": "T-Q2-MIGRATION",
+  "status": "FOUR_QUANTITY_CONDITIONAL_INTERFACE_READY_NOT_IDENTIFIED",
+  "candidate_form": "L_cond(N,D,Q_A(p)) = E + A*N^(-alpha) + B*D^(-beta) + G_bridge*(1-Q_A(p))",
+  "quantity_roles": {
+    "N": "B-side parameter count",
+    "D": "B-side token count",
+    "Q": "A-side Q1-derived composite score in 0-100 scale",
+    "p": "A-side 17-domain simplex; Q_A(p)=sum_j p_j*q_j"
+  },
+  "checks": {
+    "p_column_count": 17,
+    "p_sum_max_abs_error": 1.5543122344752192e-15,
+    "q_finite": true,
+    "q_in_0_100": true,
+    "q1_formal_mapping_validated": false,
+    "a_to_b_row_join_key": false,
+    "G_bridge_identifiable": false,
+    "formal_joint_fit": false
+  },
+  "identified_components": {
+    "M0_E_A_B_alpha_beta": "available from B1 grouped baseline",
+    "M1_G_native": "available only for B6/B7 native Q_score",
+    "Q_A_of_p": "computable for A4-A15 scenario interface"
+  },
+  "unidentified_components": {
+    "G_bridge": "No A-B row or batch bridge; cannot estimate Q1-derived Q effect on B Loss",
+    "p_independent_B_effect": "No A-B linkage; cannot estimate an independent p coefficient in B model"
+  },
+  "support_summary": [
+    {
+      "quantity": "N",
+      "source": "B1 pythia_training_log_existing.csv",
+      "role": "B1 main baseline",
+      "scale": "",
+      "n": 1176,
+      "min": 0.070542,
+      "mean": 3.088587875,
+      "max": 11.965825,
+      "finite": true
+    },
+    {
+      "quantity": "D",
+      "source": "B1 pythia_training_log_existing.csv",
+      "role": "B1 main baseline",
+      "scale": "",
+      "n": 1176,
+      "min": 0.134,
+      "mean": 146.89993197278912,
+      "max": 299.893,
+      "finite": true
+    },
+    {
+      "quantity": "Q_score_native_B",
+      "source": "B6 supplementary_NQ_experiment.csv",
+      "role": "B6 semi-synthetic native quality",
+      "scale": "",
+      "n": 360,
+      "min": 0.1,
+      "mean": 0.5375,
+      "max": 1.0,
+      "finite": true
+    },
+    {
+      "quantity": "Q_A(p)_baseline",
+      "source": "A4-A15 Q1-derived interface",
+      "role": "A-side conditional interface",
+      "scale": "",
+      "n": 1214,
+      "min": 51.81511625420505,
+      "mean": 60.83307799767191,
+      "max": 64.3193971459079,
+      "finite": true
+    },
+    {
+      "quantity": "p_sum",
+      "source": "A4-A15 Q1-derived interface",
+      "role": "A-side simplex check",
+      "scale": "",
+      "n": 1214,
+      "min": 0.9999999999999984,
+      "mean": 0.9999999999999997,
+      "max": 1.0000000000000002,
+      "finite": true
+    }
+  ],
+  "interpretation": [
+    "Four quantities are represented in the conditional research design, but only N,D are fitted on B1.",
+    "Q_A(p) remains an A-side scenario input and is not converted to B6/B7 Q_score.",
+    "The candidate form is a specification and sensitivity interface, not an identified fitted law.",
+    "B8 remains excluded from this interface because its provenance and direction gates are unresolved."
+  ],
+  "next_gate": "Only an external A-B bridge at row or batch level can unlock estimation of G_bridge or an independent p effect."
+}

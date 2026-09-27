@@ -1,0 +1,74 @@
+{
+  "run_id": "q2-m1-sensitivity-audit-20250925-r01",
+  "status": "FROZEN_B6_B7_SEMISYNTHETIC_EXPLORATORY",
+  "scope": "B6/B7 semi-synthetic conditional quality sensitivity",
+  "source_run": "q2-m0-m1-20260925-r01",
+  "checks": {
+    "grouped_ND_cell_holdout": true,
+    "internal_r2_all_above_0_90": true,
+    "B7_extension_kept_nested": true,
+    "B7_extension_treated_as_independent_validation": false,
+    "B8_in_fit": false,
+    "A_quality_score_validated": false,
+    "causal_quality_claim": false
+  },
+  "internal_metrics": {
+    "folds": 5,
+    "rmse_min": 0.051209776007239055,
+    "rmse_max": 0.06689441212441666,
+    "r2_min": 0.9526270971343106,
+    "r2_max": 0.9704708587285216
+  },
+  "parameter_stability": {
+    "E": {
+      "mean": 1.4880352777752734,
+      "sd": 0.018940767483581936,
+      "min": 1.4599807135871508,
+      "max": 1.5176092006709792
+    },
+    "A": {
+      "mean": 0.540709688981836,
+      "sd": 0.020377488229303634,
+      "min": 0.514007870151306,
+      "max": 0.5736768858704402
+    },
+    "B": {
+      "mean": 1.316207145171689,
+      "sd": 0.00129045022157739,
+      "min": 1.3137934819140384,
+      "max": 1.3175679878767503
+    },
+    "G": {
+      "mean": 0.3622474352107223,
+      "sd": 0.006646173359636679,
+      "min": 0.3502825151000146,
+      "max": 0.3703968440366765
+    },
+    "alpha": {
+      "mean": 0.2790764217689897,
+      "sd": 0.008291762931436774,
+      "min": 0.2650213202752908,
+      "max": 0.2892988606431599
+    },
+    "beta": {
+      "mean": 0.2822688623752378,
+      "sd": 0.000940754710287488,
+      "min": 0.28128845355096915,
+      "max": 0.2837399814248822
+    }
+  },
+  "nested_extension": {
+    "n": 90,
+    "mae": 0.03223152171684526,
+    "rmse": 0.04159627702825863,
+    "r2": 0.9832869441678942,
+    "residual_median": -0.00190392844586329,
+    "residual_p95_abs": 0.08154840444658036
+  },
+  "interpretation": [
+    "M1 is a conditional sensitivity result for the B6/B7 semi-synthetic construction.",
+    "B7 contains all B6 rows; its 90-row extension is a nested diagnostic, not independent validation.",
+    "The fitted G coefficient does not validate Q1 or establish a causal quality effect.",
+    "B8 remains excluded because its direction and provenance gates are unresolved."
+  ]
+}

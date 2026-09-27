@@ -1,0 +1,5 @@
+$env:Q4_DATA_DIR='D:\F题\real_attachments\C_efficiency_evolution'
+$env:Q4_RUN_DIR='experiments/runs/q4-system-20260926-r01'
+$env:Q4_Q3_OPTIMA_FILE='experiments/runs/q4-system-20260926-r01/q3_baseline_ND_optima.csv'
+python scripts/q4/run_all.py --data-dir $env:Q4_DATA_DIR --run-dir $env:Q4_RUN_DIR
+python scripts/q4/q4_protocol_experiment.py --base $env:Q4_DATA_DIR --run-dir $env:Q4_RUN_DIR --q3-optima $env:Q4_Q3_OPTIMA_FILE

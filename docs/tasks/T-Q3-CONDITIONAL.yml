@@ -1,0 +1,48 @@
+task_id: T-Q3-CONDITIONAL
+title: "问题三条件资源分配与配比情景前沿"
+status: PEER_REVIEW
+work_package: Q3-CONDITIONAL
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-1
+release_integrator_actor: ACTOR-3
+release_approver_actors:
+  - ACTOR-1
+  - ACTOR-2
+  - ACTOR-3
+review_domain: experiment
+priority: P1
+gate: G0
+inputs:
+  - ref: docs/decisions/q2-q3-linkage-experimental-architecture-20260926.md
+    purpose: "问题二到问题三的条件接口和识别边界"
+  - ref: experiments/runs/q2-m0-m1-20260925-r01/metrics.json
+    purpose: "M0/M1冻结参数和验证指标"
+  - ref: experiments/runs/q2-q-scale-bridge-20260926-r01/metrics.json
+    purpose: "Q1 Q_A与B6 Q_score的尺度兼容性审计"
+  - ref: experiments/runs/q2-conditional-bridge-decision-20260925-r01/metrics.json
+    purpose: "A-B无唯一桥接键的条件迁移决策"
+expected_outputs:
+  - path: scripts/q3_optimization_robustness.py
+    description: "M0/M1折叠参数传播到问题三优化器"
+  - path: scripts/q3_fixed_budget_frontier.py
+    description: "固定预算N-D-Q_score网格前沿"
+  - path: scripts/q3_p_fixed_budget_panel.py
+    description: "A侧p候选与B侧前沿条件面板"
+  - path: scripts/q3_final_scenario_packaging.py
+    description: "问题三条件情景和主张边界打包"
+  - path: experiments/runs/q3-final-scenario-package-20260926-r01/metrics.json
+    description: "135个条件候选、9个代表情景和7条主张边界"
+acceptance_criteria:
+  - "M0/M1折叠参数只做传播，不重新拟合"
+  - "N、D、Q均限制在观测支持域，外推显式标记"
+  - "Q0和质量成本族敏感性保留"
+  - "p作为A侧离散策略标签，不进入B侧连续目标函数"
+  - "Q_A(p)不转换为B6 Q_score"
+  - "不建立A-B逐行连接，不声称四量联合系数已识别"
+  - "B8不进入主拟合"
+  - "全部run记录命令、环境、提交号、指标和限制"
+definition_of_done:
+  - "Peer Review确认条件情景结果不等同于全局最优"
+  - "Release Integrator复核Q1/Q2依赖和版本化索引"
+  - "原始数据、未公开题目和密钥未进入PR"
+notes: "本任务是问题三的条件性研究包；正式四量联合拟合仍受A-B无唯一键、Q尺度未统一和B8证据不足阻断。"

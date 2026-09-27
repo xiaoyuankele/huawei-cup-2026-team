@@ -1,0 +1,157 @@
+{
+  "schema_version": "q2.qp.scenario.sensitivity.v1",
+  "run_id": "q2-qp-scenario-sensitivity-20260925-r01",
+  "task_id": "T-Q2-MIGRATION",
+  "status": "Q2_QP_SCENARIO_SENSITIVITY_EXPLORATORY",
+  "inputs": {
+    "q1_a4_a15_wide": "experiments/runs/q1-domain-transfer-matrix-20260925-r01/tables/A4_A15_quality_transfer_soft_wide.csv",
+    "q1_a4_a15_wide_sha256": "3e1feccd596d2c8d315721b837f8c8628df7c45d8ca345032cc4ad9827b6ce01",
+    "q1_mapping": "experiments/runs/q1-domain-transfer-matrix-20260925-r01/tables/mapping_v2_soft_current_scores.csv",
+    "q1_mapping_sha256": "9c4fb425c0a1cd57cf78b258b7d3ba68cad79e1bef260948281776fa599df081",
+    "q1_anchor_scores": "experiments/runs/q1-critic-topsis-20260925-r01/tables/domain_scores.csv",
+    "q1_anchor_scores_sha256": "b9b8e124a2deb86904f139c3144c496c90a6e5cfcc858f26aa7e1768ffa0de43",
+    "approved_conflict_decision": "experiments/runs/q1-domain-conflict-review-decision-20260925-r01/metrics.json",
+    "approved_conflict_decision_sha256": "0eaded69587f9538991b9c6dc8a7e3785dd0608a8239be2c7560d225ad54128d"
+  },
+  "scenarios": {
+    "S0_baseline": {
+      "note": "approved soft mapping and current Q1 A1/full anchor scores",
+      "domain_q": {
+        "arxiv": 63.862359595226806,
+        "dm_mathematics": 63.310069060266436,
+        "enron_emails": 62.804398361656744,
+        "europarl": 61.057670542439865,
+        "freelaw": 59.213674307236005,
+        "github": 51.70140753241471,
+        "gutenberg_pg_19": 56.03252048079162,
+        "hackernews": 62.833095003210914,
+        "nih_exporter": 63.40473913193378,
+        "philpapers": 61.7441012373794,
+        "pile_cc": 64.33570995356357,
+        "pubmed_abstracts": 63.357404096100105,
+        "pubmed_central": 63.357404096100105,
+        "stackexchange": 61.38787333596658,
+        "ubuntu_irc": 62.833095003210914,
+        "uspto_backgrounds": 60.225468450326034,
+        "wikipedia_en": 61.10090692042493
+      }
+    },
+    "S1_c4_nih_exporter": {
+      "note": "approved conflict-domain c4 branch; c4 uses the frozen A1/full Q1 anchor score",
+      "domain_q": {
+        "arxiv": 63.862359595226806,
+        "dm_mathematics": 63.310069060266436,
+        "enron_emails": 62.804398361656744,
+        "europarl": 61.057670542439865,
+        "freelaw": 59.213674307236005,
+        "github": 51.70140753241471,
+        "gutenberg_pg_19": 56.03252048079162,
+        "hackernews": 62.833095003210914,
+        "nih_exporter": 64.65609086107253,
+        "philpapers": 61.7441012373794,
+        "pile_cc": 64.33570995356357,
+        "pubmed_abstracts": 63.357404096100105,
+        "pubmed_central": 63.357404096100105,
+        "stackexchange": 61.38787333596658,
+        "ubuntu_irc": 62.833095003210914,
+        "uspto_backgrounds": 60.225468450326034,
+        "wikipedia_en": 61.10090692042493
+      }
+    },
+    "S2_c4_pubmed_abstracts": {
+      "note": "approved conflict-domain c4 branch; c4 uses the frozen A1/full Q1 anchor score",
+      "domain_q": {
+        "arxiv": 63.862359595226806,
+        "dm_mathematics": 63.310069060266436,
+        "enron_emails": 62.804398361656744,
+        "europarl": 61.057670542439865,
+        "freelaw": 59.213674307236005,
+        "github": 51.70140753241471,
+        "gutenberg_pg_19": 56.03252048079162,
+        "hackernews": 62.833095003210914,
+        "nih_exporter": 63.40473913193378,
+        "philpapers": 61.7441012373794,
+        "pile_cc": 64.33570995356357,
+        "pubmed_abstracts": 64.65609086107253,
+        "pubmed_central": 63.357404096100105,
+        "stackexchange": 61.38787333596658,
+        "ubuntu_irc": 62.833095003210914,
+        "uspto_backgrounds": 60.225468450326034,
+        "wikipedia_en": 61.10090692042493
+      }
+    },
+    "S3_c4_uspto_backgrounds": {
+      "note": "approved conflict-domain c4 branch; c4 uses the frozen A1/full Q1 anchor score",
+      "domain_q": {
+        "arxiv": 63.862359595226806,
+        "dm_mathematics": 63.310069060266436,
+        "enron_emails": 62.804398361656744,
+        "europarl": 61.057670542439865,
+        "freelaw": 59.213674307236005,
+        "github": 51.70140753241471,
+        "gutenberg_pg_19": 56.03252048079162,
+        "hackernews": 62.833095003210914,
+        "nih_exporter": 63.40473913193378,
+        "philpapers": 61.7441012373794,
+        "pile_cc": 64.33570995356357,
+        "pubmed_abstracts": 63.357404096100105,
+        "pubmed_central": 63.357404096100105,
+        "stackexchange": 61.38787333596658,
+        "ubuntu_irc": 62.833095003210914,
+        "uspto_backgrounds": 62.09316382007678,
+        "wikipedia_en": 61.10090692042493
+      }
+    },
+    "S4_c4_all_reviewed": {
+      "note": "simultaneous application of the three approved c4 branches; sensitivity-only",
+      "domain_q": {
+        "arxiv": 63.862359595226806,
+        "dm_mathematics": 63.310069060266436,
+        "enron_emails": 62.804398361656744,
+        "europarl": 61.057670542439865,
+        "freelaw": 59.213674307236005,
+        "github": 51.70140753241471,
+        "gutenberg_pg_19": 56.03252048079162,
+        "hackernews": 62.833095003210914,
+        "nih_exporter": 64.65609086107253,
+        "philpapers": 61.7441012373794,
+        "pile_cc": 64.33570995356357,
+        "pubmed_abstracts": 64.65609086107253,
+        "pubmed_central": 63.357404096100105,
+        "stackexchange": 61.38787333596658,
+        "ubuntu_irc": 62.833095003210914,
+        "uspto_backgrounds": 62.09316382007678,
+        "wikipedia_en": 61.10090692042493
+      }
+    }
+  },
+  "checks": {
+    "input_rows": 1214,
+    "p_column_count": 17,
+    "p_sum_max_abs_error": 1.5543122344752192e-15,
+    "baseline_reconstruction_max_abs_error": 8.526512829121202e-14,
+    "scenario_q_finite": true,
+    "scenario_q_in_0_100": true,
+    "duplicate_dataset_index_count": 0,
+    "observed_rows": 1088,
+    "extrapolation_rows": 126,
+    "p_perturbed": false,
+    "a_to_b_row_join": false,
+    "q2_model_fit": false
+  },
+  "scenario_count": 5,
+  "row_count_per_scenario": 1214,
+  "outputs": {
+    "scenario_q_long": "scenario_q_long.csv",
+    "scenario_summary": "scenario_summary.csv",
+    "scenario_domain_anchors": "scenario_domain_anchors.csv",
+    "baseline_semantic_bounds": "baseline_semantic_bounds.csv"
+  },
+  "interpretation": [
+    "This is a Q1 candidate-score interface stress test, not an official Q score.",
+    "Measured mixture proportions p are held fixed; no unsupported p uncertainty model is invented.",
+    "Q1 0-100 values are not converted to B6's 0-1 Q_score and are not inserted into M0/M1.",
+    "The semantic low/high columns are candidate-anchor bounds, not confidence intervals.",
+    "B8 remains excluded; no quality-direction or provenance issue is resolved here."
+  ]
+}

@@ -1,0 +1,3 @@
+# Q2 exploratory summary
+
+This run consolidates the Q1 LaTeX quality-score interface and the read-only Q2 audits. The Q1-derived `Q` and 17-domain `p` are an exploratory interface only: seven anchor domain scores are directly checked against the frozen Q1 table, six semantic-evidence rows have official/reference support, and eleven rows remain exploratory semantic priors; formal mapping validation is still false. B1 is reported as a grouped baseline; B6/B7 is a conditional semi-synthetic sensitivity result using its own `Q_score`; B8 is excluded because provenance and quality-direction gates are unresolved. No A-to-B row join, formal joint fit, causal claim, or universal scaling-law claim is made.

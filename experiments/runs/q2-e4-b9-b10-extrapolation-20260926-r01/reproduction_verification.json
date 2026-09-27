@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "csv_files_byte_identical": 5,
+  "metrics_byte_identical": true,
+  "inputs_unchanged": true,
+  "row_level_loss_loaded": false
+}

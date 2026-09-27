@@ -1,0 +1,4 @@
+﻿file,path,rows,fields,has_experiment_id,has_N_params_B,has_D_tokens_B,has_Q_score,has_val_loss,q_min,q_max,q_monotonicity
+B6,data/origin/real_attachments/B_scaling_laws/supplementary_NQ_experiment.csv,360,5,True,True,True,True,True,0.1,1.0,"{""groups"": 45, ""loss_increase_when_q_increases"": 80, ""loss_decrease_when_q_increases"": 235, ""zero_steps"": 0, ""mixed_groups"": 43}"
+B7,data/origin/real_attachments/B_scaling_laws/supplementary_NQ_experiment_expanded.csv,450,5,True,True,True,True,True,0.1,1.0,"{""groups"": 90, ""loss_increase_when_q_increases"": 82, ""loss_decrease_when_q_increases"": 278, ""zero_steps"": 0, ""mixed_groups"": 43}"
+B8,data/origin/real_attachments/B_scaling_laws/supplementary_NQ_experiment_large.csv,1704,6,True,True,True,True,True,0.05,1.0,"{""groups"": 150, ""loss_increase_when_q_increases"": 1311, ""loss_decrease_when_q_increases"": 2, ""zero_steps"": 241, ""mixed_groups"": 2}"

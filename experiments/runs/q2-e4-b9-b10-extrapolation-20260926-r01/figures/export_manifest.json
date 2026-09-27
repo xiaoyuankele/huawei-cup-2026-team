@@ -1,0 +1,17 @@
+{
+  "source_script_sha256": "ccaba426c94fc57de3a16f53905ab1c420eb6b17a0304f7aa3c47db2080b7cea",
+  "source_csvs": {
+    "scale_extrapolation_grid.csv": "b2111000fd5a9399c53b6565a4982734b4e6315805a7c4d68250b19a6a0cd293",
+    "quality_extrapolation_grid.csv": "7bf941777703b00f74d32bad91197911304007d9597766526c575c1148d56e1a",
+    "exponent_sensitivity.csv": "e6138c0d331483254298bb7e9e0d3662fd38fd0d34594bf27de1136cf41403c3"
+  },
+  "exports": {
+    "E4_scale_extrapolation.svg": "e4a5431bcdacc33ca7825d5966b941898398a20430f0244824ba2d87e8e150fb",
+    "E4_scale_extrapolation.pdf": "f194f8e8024800ff0676393a8430245949ecb0dd139fdc445ccd55697c5ee86e",
+    "E4_scale_extrapolation.png": "0d67fe12e6e14983dd1cb8d0626ae56707506364a1d9328b9040303d82de09fa",
+    "E4_quality_high_scale.svg": "9c26b586cf70cdc9dd40ef1c08b624a24a002e0c9780e8312cf107763a3bfba2",
+    "E4_quality_high_scale.pdf": "7709cc6cc18ee6c6c3157b8f94b77d510d006ba143e9879578fe786219d677ee",
+    "E4_quality_high_scale.png": "cd415ee4b65f58ca8f57d8ba05df05b101d99aac5f54bff692db47ffb0acd604"
+  },
+  "status": "SELF_CHECK_NOT_PEER_REVIEW"
+}

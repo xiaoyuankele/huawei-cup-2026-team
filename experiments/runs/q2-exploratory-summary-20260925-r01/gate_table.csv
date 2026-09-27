@@ -1,0 +1,6 @@
+gate,status,evidence,consequence
+Q1 LaTeX Q/p interface,PASS_EXPLORATORY,1214 rows; 17 p columns; finite and ordered intervals,usable only as declared exploratory interface
+B1 grouped baseline,PASS_EXPLORATORY,8 leave-one-N-size-out folds; R2 > 0.9999992 internally,descriptive B1 baseline; external diagnostics remain separate
+B6/B7 conditional sensitivity,PASS_EXPLORATORY,5 grouped N-D cell folds; R2 0.9526–0.9705,conditional semi-synthetic result; no causal claim
+B8 provenance/direction,BLOCKED,1311 increasing-loss steps vs 2 decreasing-loss steps; missing source notes,exclude from fit until metadata and direction are resolved
+A-B row linkage,BLOCKED,no documented row-level bridge key,no formal joint fit or identified p effect

@@ -1,0 +1,47 @@
+{
+  "schema_version": "q3.final.scenario.package.v1",
+  "run_id": "q3-final-scenario-package-20260926-r01",
+  "status": "CONDITIONAL_Q3_SCENARIO_PACKAGE_READY",
+  "inputs": {
+    "fixed_budget_frontier_summary": {
+      "path": "experiments/runs/q3-fixed-budget-frontier-20260926-r01/tables/fixed_budget_frontier_summary.csv",
+      "sha256": "7fb662f2dbb276b80309369e905d714eb6bcb172eed3669807f60b28a8c53823"
+    },
+    "p_fixed_budget_panel": {
+      "path": "experiments/runs/q3-p-fixed-budget-panel-20260926-r01/tables/p_fixed_budget_frontier_panel.csv",
+      "sha256": "53f6d1e058b325f6ce57590f14b2432ab5b77dc83f03d4931394b732c45aab2f"
+    },
+    "m0_uncertainty_summary": {
+      "path": "experiments/runs/q3-optimization-robustness-20260926-r01/tables/m0_uncertainty_summary.csv",
+      "sha256": "17ab6cc92d516ba63703c2fa4858053f2c71368f2fafb3d174d50533447e9d0e"
+    },
+    "m1_uncertainty_summary": {
+      "path": "experiments/runs/q3-optimization-robustness-20260926-r01/tables/m1_uncertainty_summary.csv",
+      "sha256": "5b1ab555753e2539256fe795015666dc60ff6dae7ee659bbe0c0dd91bafe67bb"
+    }
+  },
+  "counts": {
+    "recommendation_scenarios": 135,
+    "representative_scenarios": 9,
+    "p_candidates": 6,
+    "claim_rows": 7
+  },
+  "checks": {
+    "all_recommendations_inside_support": true,
+    "global_optimum_claims": false,
+    "formal_joint_fit": false,
+    "A_B_row_join": false,
+    "Q1_Q_A_p_used_in_objective": false
+  },
+  "limitations": [
+    "recommendations are conditional grid candidates, not global optima",
+    "p ranking is A-side only and is not used to select B-side N-D-Q settings",
+    "Q1 Q_A(p) and B6 Q_score remain separate variables"
+  ],
+  "output_sha256": {
+    "q3_conditional_recommendation_scenarios.csv": "3ae14b9d04664a85368d09d66a672b2505ac071aee2886f142157f001add4520",
+    "q3_representative_scenarios.csv": "f7e6d95b11f9405e45f069da9551736defe9f370d6041116c1934d089b729f74",
+    "q1_p_candidate_claim_bounded_ranking.csv": "7c7f13e5dd9ca170fdbafc4400d00c1c8b6a3ffbb362d57c54d85187766defa5",
+    "q3_claim_ledger.csv": "0106224c14540830fcae53c7b8668cc8dbfcda09162a48e916b39a8263e72f99"
+  }
+}

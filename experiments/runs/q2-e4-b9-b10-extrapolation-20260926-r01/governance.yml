@@ -1,0 +1,25 @@
+task_id: T-Q2-E4
+work_package: WP-B
+owner_actor: ACTOR-2
+peer_reviewer_actor: ACTOR-3
+release_integrator_actor: ACTOR-1
+status: REVIEW_BLOCKED
+execution_status: RUN_COMPLETE
+branch: wp/ACTOR-2/WP-B
+gate: G1
+gate_status: NOT_EVIDENCED
+feedback_ids:
+- FB-Q2-E4-GOV
+- FB-Q2-E4-COVERAGE
+preregister_commit: b44e51e
+code_commit: 5e31981174d9e4e93a7c05c0cdcbc8361d8ab900
+pr: https://github.com/xiaoyuankele/huawei-cup-2026-team/pull/41
+run_id: q2-e4-b9-b10-extrapolation-20260926-r01
+prompt_run_id: PR-Q2-E4-20260926
+manifest_ref: experiments/runs/q2-e4-b9-b10-extrapolation-20260926-r01/manifest.json
+manifest_sha256: e4c7c8952d2dd54dac0f2709faf33cbc08d4f300de1a08053e6999154b196113
+paper_draft: paper/sections/drafts/q2-e4-b9-b10-extrapolation.md
+handoff: docs/tasks/T-Q2-E4-handoff.md
+peer_decision: PENDING
+integrator_decision: PENDING
+role_assignment_status: ROUTING_PENDING_HUMAN_CONFIRMATION

@@ -1,0 +1,23 @@
+{
+  "figure_id": "fig_q3_context_cost_cn_single_v1",
+  "title": "上下文成本转移临界点（中文单图）",
+  "source_formula": "paper\\sections\\q3_subproblem2_m1_ndqb.tex",
+  "source_sha256": "1e5af62fe2995ee2787fe35deaecf157441654480795dd3ef685b3ff2fea0da2",
+  "eta": 0.0002,
+  "critical_context": 30000,
+  "outputs": [
+    "fig_q3_context_cost_cn_single_v1.pdf",
+    "fig_q3_context_cost_cn_single_v1.png",
+    "fig_q3_context_cost_cn_single_v1.svg",
+    "fig_q3_context_cost_cn_single_v1.tiff"
+  ],
+  "source_script": "scripts/plot_q3_context_cost_cn.py",
+  "source_script_sha256": "c8c0db10d1e9af556d7d6deb7f9c8f6cdc55122eb0e4547b108a1ad4d0ce7262",
+  "qa_status": "LOCAL_RENDERED_PENDING_PEER_REVIEW",
+  "output_sha256": {
+    "fig_q3_context_cost_cn_single_v1.pdf": "214b07d40b8c540c42c167e85030ad1f4f9ec2084cb3e25173d80a595a0df582",
+    "fig_q3_context_cost_cn_single_v1.png": "a63e2e3921a2752183a8dbfc3163cacb715d7bda17d09c6cec6256f8e4d1518f",
+    "fig_q3_context_cost_cn_single_v1.svg": "7d266175c6eb7aa78ffb08e5a3d5c92092d50b27748cd506195bf8e361da9f14",
+    "fig_q3_context_cost_cn_single_v1.tiff": "c9a367cf74283a2d1feb5537eaf77c2a785cac8d2769db73bbace58e70eeba00"
+  }
+}

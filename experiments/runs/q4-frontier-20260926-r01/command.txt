@@ -1,0 +1,2 @@
+python scripts/q4/hash_inputs.py --data-dir data/origin/C_efficiency_evolution
+python scripts/q4/run_all.py --data-dir data/origin/C_efficiency_evolution
