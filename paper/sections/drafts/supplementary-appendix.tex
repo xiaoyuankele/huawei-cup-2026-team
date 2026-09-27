@@ -1,0 +1,121 @@
+% 补充附件草稿：数据来源、冻结参数、模型诊断与主张边界。
+% 本文件暂不由 main.tex 自动引入；独立复核完成后再决定是否并入正式答卷。
+% 数值应与 deliverables/final/supplement/ 中的派生表和 run_id 对照。
+
+\section{补充附件：数据来源与证据边界}
+\label{app:supplementary-evidence}
+
+本附件用于帮助读者复核数据角色、参数来源、模型诊断和结论适用范围。
+它是证据追踪材料，不替代原始附件，也不把尚未完成独立复核的结果改写为已验证结论。
+原始文本、受控附件、个人信息和密钥不随公开附件提供；受控数据只在 manifest 中保留角色、规模和哈希信息。
+
+\subsection{数据预处理与数据角色}
+\label{app:supp-data-roles}
+
+质量评分使用 A1--A3 合并去重后的样本；A4--A15 用于配比拟合、同尺度诊断、配对诊断和规模外推审计。
+不同数据块不共享完整的 A--B 样本级连接键，因此跨来源组合结果必须解释为条件模型或情景分析。
+
+\begin{table}[htbp]
+\centering
+\caption{公开附件中的数据角色与证据边界}
+\label{tab:app-data-roles}
+\small
+\begin{tabular}{p{0.13\linewidth}p{0.18\linewidth}p{0.29\linewidth}p{0.29\linewidth}}
+\toprule
+数据块 & 规模/行数 & 分析角色 & 证据边界 \\
+\midrule
+A1--A3 & 261086 unique & 质量评分拟合、样本与领域聚合 & 受控观测；合并前需去重 \\
+A4/A5 & 512 & 17 域配比与 13 个 Loss 目标拟合 & 受控观测；配比模型训练集 \\
+A6/A7 & 256 & 同尺度外部验证 & 受控观测；不等同于跨来源联合验证 \\
+A8/A9 & 256 & 配对规模诊断 & 受控观测；用于区分配方与规模变化 \\
+A10/A11 & 64 & 大规模配方迁移诊断 & 受控观测；不是纯规模实验 \\
+A12--A15 & 63 each & 高规模外推/回顾性审计 & 估算或外推；不得作为独立验证 \\
+B1--B10 & 见源 manifest & 规模、质量和迁移分项 & 与 A 侧缺少完整联合观测 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{冻结参数与求解协议}
+\label{app:frozen-parameters}
+
+当前候选附件记录了以下参数。状态字段必须与运行索引保持一致；\texttt{REVIEW} 或
+\texttt{REVIEW\_BLOCKED} 只表示参数已经被记录，不能解释为独立复核已经完成。
+
+\begin{table}[htbp]
+\centering
+\caption{候选模型的参数摘要}
+\label{tab:app-parameters}
+\small
+\begin{tabular}{p{0.20\linewidth}p{0.27\linewidth}p{0.27\linewidth}p{0.15\linewidth}}
+\toprule
+模块 & 参数 & 当前值或网格 & 状态 \\
+\midrule
+Q1 质量评分 & CRITIC 拟合集 & 40919 条记录，16 个最终指标 & REVIEW \\
+Q1 冲突消解 & $\lambda$ & $0,0.1,0.25,0.5$；主展示值 $0.25$ & REVIEW\_BLOCKED \\
+配比模型 & 域数/目标数 & 17 / 13 & REVIEW \\
+配比模型 & 零替换 $\varepsilon$ & $10^{-4}$ & REVIEW \\
+Q2 标度律 & $(E,A,B)$ & $(1.689798,0.353980,1.240306)$ & REVIEW\_BLOCKED \\
+Q2 标度律 & $(\alpha,\beta)$ & $(0.339977,0.279878)$ & REVIEW\_BLOCKED \\
+Q3 预算接口 & $\eta$ & $2\times10^{-4}$ & REVIEW\_BLOCKED \\
+Q3 情景 & 上下文长度 & $2048,4096,8192,32768,131072$ & REVIEW\_BLOCKED \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Q2 的规模项、质量映射和配比残差项来自不同来源的数据块；Q3 冻结 Q2 候选参数后只进行条件情景求解。
+这些设定不构成对任意 $N,D,Q,\boldsymbol p$ 联合训练实验的全局识别。
+
+\subsection{模型诊断与敏感性结果}
+\label{app-diagnostics}
+
+建议在正式附件中至少报告以下诊断：质量评分方案的排序相关、指标方向与归一化边界；冲突人工标注和
+$\lambda$ 扰动；配比模型的同尺度外验与跨规模形状诊断；Q2 分项拟合的留出误差和跨来源残差；以及
+Q3 完整单纯形上的负预测 Loss。当前记录中，Q3 完整单纯形的 60 个情景均出现负预测 Loss，
+该现象应作为模型失效边界保留，不能通过截断为零来隐藏。
+
+\begin{table}[htbp]
+\centering
+\caption{诊断结果的允许解释}
+\label{tab:app-diagnostics}
+\small
+\begin{tabular}{p{0.28\linewidth}p{0.22\linewidth}p{0.37\linewidth}}
+\toprule
+诊断 & 当前记录 & 允许解释 \\
+\midrule
+质量评分方案秩相关 & 最低约 0.967 & 方案间总体排序较稳定 \\
+语料级质量变化 & 60.9471 $\rightarrow$ 54.2323 & 派生聚合变化，不能直接解释为因果提升 \\
+Q2 B1 留出 & MAE 约 0.000108 & B1 文件内部拟合表现 \\
+Q2 质量增量 & MAE 约 0.101965 $\rightarrow$ 0.057322 & 半合成条件检验中的增量 \\
+Q3 完整单纯形 & 60/60 出现负 Loss 预测 & 模型失效边界，不是可推荐方案 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{主张、证据与适用边界}
+\label{app-claim-boundaries}
+
+公开附件中的每个数字都应能够回链到 claim ledger、\texttt{run\_id}、数据 manifest、源文件路径和哈希。
+Q1 可在当前指标体系和数据范围内讨论相对排序、敏感性和条件配比关系；Q2/Q3 只能讨论已列明的分项验证、
+条件接口和情景敏感性。不得把跨来源校准写成共同观测下的因果效应，也不得把条件资源配置写成现实系统中的全局最优。
+
+\begin{table}[htbp]
+\centering
+\caption{主张类型与禁止外推}
+\label{tab:app-claim-boundaries}
+\small
+\begin{tabular}{p{0.22\linewidth}p{0.34\linewidth}p{0.29\linewidth}}
+\toprule
+主张类型 & 允许表述 & 禁止外推 \\
+\midrule
+Q1 质量评分 & 当前指标体系下的相对排序与敏感性 & 真实质量因果效应 \\
+Q1 配比模型 & 同尺度配比与 Loss 的条件关系 & 跨规模唯一最优配方 \\
+Q2 联合模型 & 条件接口和情景敏感性 & 已识别的普适广义标度律 \\
+Q3 资源配置 & 给定假设、支持域和预算下的条件解 & 现实系统的全局最优资源方案 \\
+Q4 前沿预测 & 独立短期验证范围内的比较 & 长期因果预测或精确置信区间 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+截至本草稿版本，claim ledger 中的 38 条主张仍为 \texttt{DRAFT}，Q2/Q3 相关运行状态仍含
+\texttt{REVIEW} 和 \texttt{REVIEW\_BLOCKED}。独立复核结束后，应先更新证据矩阵和哈希清单，再决定是否将本草稿
+从 \texttt{sections/drafts/} 移入正式附件入口。
